@@ -1,0 +1,974 @@
+[
+  {
+    "question": "Architecture design is the stage used to collect information to create the basic plan for the project",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "This statement is False. Architecture design comes after collecting requirements and is not primarily about collecting information but rather structuring the system's framework."
+  },
+  {
+    "question": "Preventative is a type of software maintenance stage.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. Preventative maintenance involves activities that prevent future problems, such as updating code or improving performance before issues arise."
+  },
+  {
+    "question": "A document (DDS) created during the defining requirements stage of SDLC.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "False. DDS stands for Design Document Specification, which is created during the design phase, not the requirement definition phase."
+  },
+  {
+    "question": "A Waterfall model is known as a linear-sequential life cycle model",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. The Waterfall model follows a sequential approach where each phase must be completed before the next begins, making it linear and sequential."
+  },
+  {
+    "question": "Business Requirements are the essential activities for developing the software",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. Business requirements define the goals and objectives of the system from the organization’s perspective and guide the development process."
+  },
+  {
+    "question": "Non-Functional Requirements describes what the software should do.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "False. Functional requirements describe what the software should do; non-functional requirements describe how the software should perform (e.g., speed, security)."
+  },
+  {
+    "question": "Stated Requirements provided by a user /customer at the beginning of a software development",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. Stated requirements are those explicitly mentioned by users or customers when initiating a project."
+  },
+  {
+    "question": "When determining the architectural design, Functional Requirements are more important than the Non-functional requirements.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "False. Both functional and non-functional requirements are critical in architectural design. In fact, non-functional requirements often heavily influence architectural decisions."
+  },
+  {
+    "question": "Patterns provide common language between developers to describe software properties",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. Design patterns offer a standardized way to solve recurring design problems and facilitate communication among developers."
+  },
+  {
+    "question": "When depositing money in the bank. An example of a business rule is that the amount of money must be more than 1000 dollars.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. A business rule defines constraints or conditions under which a business operates—in this case, setting a minimum deposit amount."
+  },
+  {
+    "question": "A rule is a task that a person or a computer might perform.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "False. A rule is a constraint or guideline, not a task. Tasks are performed, while rules govern how tasks are carried out."
+  },
+  {
+    "question": "The swim-lanes show the role that is responsible for each activity.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. Swim lanes in a BPMN diagram indicate who or what is responsible for each activity or step in a process."
+  },
+  {
+    "question": "Development is defining the organization of the system and implementing the system.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. The development phase includes both designing the system architecture and coding its implementation."
+  },
+  {
+    "question": "The testing stage eliminates the need for maintenance.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "False. Testing helps identify bugs, but maintenance is still needed after deployment to handle updates, fixes, and enhancements."
+  },
+  {
+    "question": "The software development life cycle ensures that the product meets customer expectations.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "True. The SDLC provides a structured approach to ensure all phases—from planning to maintenance—align with customer needs and expectations."
+  },
+  {
+    "question": "Why might the Waterfall Model not adapt well to uncertain projects?",
+    "options": [
+      "It is too simple",
+      "It requires stable requirements",
+      "It focuses on documentation"
+    ],
+    "correct": 1,
+    "explanation": "The Waterfall Model assumes that requirements are stable and clearly defined from the beginning. In uncertain projects, requirements may change frequently, making it difficult for the Waterfall Model to adapt."
+  },
+  {
+    "question": "What is the purpose of testing in the SDLC?",
+    "options": [
+      "To design the software",
+      "To ensure the software works as expected",
+      "To gather client requirements",
+      "To deploy the software"
+    ],
+    "correct": 1,
+    "explanation": "Testing ensures that the developed software functions correctly and meets the defined requirements."
+  },
+  {
+    "question": "What is the primary goal of perfective maintenance?",
+    "options": [
+      "Fixing bugs",
+      "Meeting new requirements",
+      "Reducing further maintenance",
+      "Adapting to changing environments"
+    ],
+    "correct": 1,
+    "explanation": "Perfective maintenance involves modifying software to meet new requirements or enhance performance."
+  },
+  {
+    "question": "Which statement is true about the relationship between testing and maintenance?",
+    "options": [
+      "Testing eliminates the need for maintenance",
+      "Maintenance begins after testing identifies issues",
+      "Testing and maintenance are unrelated",
+      "Maintenance replaces the testing phase"
+    ],
+    "correct": 1,
+    "explanation": "Maintenance typically begins after testing uncovers issues or after deployment to improve or fix the software."
+  },
+  {
+    "question": "…….. may range from a high-level abstract statement of a service to a detailed mathematical functional specification.",
+    "options": [
+      "Maintenance",
+      "Designning",
+      "Development",
+      "Requirement"
+    ],
+    "correct": 3,
+    "explanation": "Requirements may vary in detail, from abstract ideas to detailed technical specs."
+  },
+  {
+    "question": "……… describes software properties.",
+    "options": [
+      "User Engineering",
+      "Business Requirements",
+      "Functional Requirements",
+      "Non-Functional Requirements"
+    ],
+    "correct": 3,
+    "explanation": "Non-functional requirements define system properties such as performance, reliability, and usability."
+  },
+  {
+    "question": "………. describes constraints on the system from domain of operation",
+    "options": [
+      "User Engineering",
+      "Business Requirements",
+      "Functional Requirements",
+      "domain requirements"
+    ],
+    "correct": 3,
+    "explanation": "Domain requirements describe constraints that come from the application domain."
+  },
+  {
+    "question": "…….. is an outline of a reusable solution to a repeated problem run into in a particular context.",
+    "options": [
+      "Requirements Engineering",
+      "User Interface",
+      "pattern",
+      "Business processes"
+    ],
+    "correct": 2,
+    "explanation": "A pattern is a general reusable solution to a commonly occurring problem in software design."
+  },
+  {
+    "question": "………. get an understanding of what a business does",
+    "options": [
+      "Reuse",
+      "Business Rules",
+      "pattern",
+      "Business processes"
+    ],
+    "correct": 3,
+    "explanation": "Business processes help in understanding how a business operates and its workflow."
+  },
+  {
+    "question": "Borrowing a book from a library is an example of ………..",
+    "options": [
+      "Business processes",
+      "Business Rules",
+      "Reuse",
+      "Activity Diagrams"
+    ],
+    "correct": 0,
+    "explanation": "Borrowing a book is a business process that follows defined steps and rules."
+  },
+  {
+    "question": "……… shows a process as a set of activities, showing their sequences, and where activities can be carried out in parallel.",
+    "options": [
+      "Activity Diagram",
+      "Business Rules",
+      "Development",
+      "Reuse"
+    ],
+    "correct": 0,
+    "explanation": "Activity Diagrams model workflows of stepwise activities and actions."
+  },
+  {
+    "question": "The ……. is a link between what the users want and what the developers produce in response.",
+    "options": [
+      "Reuse",
+      "Business Rules",
+      "Business processes",
+      "Requirement"
+    ],
+    "correct": 3,
+    "explanation": "Requirements bridge the gap between user needs and developer implementation."
+  },
+  {
+    "question": "………. checking that the solution does what the customer wants",
+    "options": ["Maintenance", "Domain", "pattern", "Testing"],
+    "correct": 3,
+    "explanation": "Testing verifies that the solution meets customer expectations and requirements."
+  },
+  {
+    "question": "The subset of systems engineering with defining the system at successive levels abstraction.",
+    "options": [
+      "User Interface",
+      "Web development",
+      "Requirements engineering",
+      "Development"
+    ],
+    "correct": 2,
+    "explanation": "Requirements engineering defines the system in stages to ensure clarity and feasibility."
+  },
+  {
+    "question": "What is a disadvantage of the Waterfall Model?",
+    "options": [
+      "Clear Milestones",
+      "Flexibility to Changes",
+      "Stable Requirements",
+      "Activity Diagrams"
+    ],
+    "correct": 1,
+    "explanation": "The Waterfall Model lacks flexibility to accommodate changes once the process is underway."
+  },
+  {
+    "question": "Which stage of SDLC involves creating test cases and executing them?",
+    "options": [
+      "Planning and Requirement Analysis",
+      "Designing Architecture",
+      "Product Testing and Integration",
+      "Deployment and Maintenance"
+    ],
+    "correct": 2,
+    "explanation": "The testing phase in SDLC is where test cases are created and executed to ensure the software works correctly before deployment."
+  },
+  {
+    "question": "Which of the following is NOT a type of software maintenance?",
+    "options": ["Corrective", "Adaptive", "Perfective", "Predictive"],
+    "correct": 3,
+    "explanation": "The main types of software maintenance are Corrective, Adaptive, Perfective, and Preventative. 'Predictive' is not a recognized category in standard software maintenance models."
+  },
+  {
+    "question": "What is the purpose of the DDS document?",
+    "options": [
+      "To list down software requirements",
+      "To design the software architecture",
+      "To test the software",
+      "To deploy the software"
+    ],
+    "correct": 1,
+    "explanation": "DDS (Design Document Specification) outlines how the system will be built, including architectural decisions and design choices, not just listing requirements."
+  },
+  {
+    "question": "Which of the following is NOT a stage in the SDLC?",
+    "options": [
+      "Planning and Requirement Analysis",
+      "Client Feedback Collection",
+      "Designing Architecture",
+      "Developing Product"
+    ],
+    "correct": 1,
+    "explanation": "While collecting feedback is important, it is not a formal stage in the traditional Software Development Life Cycle (SDLC)."
+  },
+  {
+    "question": "Which stage involves gathering information to create the basic plan for the project?",
+    "options": [
+      "Stage-1: Planning and Requirement Analysis",
+      "Stage-2: Defining Requirements",
+      "Stage-3: Designing Architecture",
+      "Stage-4: Developing Product"
+    ],
+    "correct": 0,
+    "explanation": "The first stage of SDLC focuses on planning and analyzing requirements to form a clear understanding and strategy for the project."
+  },
+  {
+    "question": "What is the primary goal of perfective maintenance?",
+    "options": [
+      "Fixing bugs",
+      "Meeting new requirements",
+      "Reducing further maintenance",
+      "Adapting to changing environments"
+    ],
+    "correct": 1,
+    "explanation": "Perfective maintenance improves the software by adding new features or enhancing existing ones based on user feedback or evolving needs."
+  },
+  {
+    "question": "Why might the Waterfall Model not adapt well to uncertain projects?",
+    "options": [
+      "It is too simple",
+      "It requires stable requirements",
+      "It focuses on documentation",
+      "It emphasizes testing"
+    ],
+    "correct": 1,
+    "explanation": "The Waterfall model assumes that all requirements are known upfront and doesn't allow for frequent changes, making it unsuitable for uncertain or dynamic projects."
+  },
+  {
+    "question": "Which document contains different ideas for building the software?",
+    "options": [
+      "SRS (Software Requirement Specification)",
+      "DDS (Design Document Specification)",
+      "RFP (Request for Proposal)",
+      "UML (Unified Modeling Language)"
+    ],
+    "correct": 1,
+    "explanation": "The DDS includes various design options and strategies for implementing the software as described in the SRS."
+  },
+  {
+    "question": "What is the main purpose of the Planning and Requirement Analysis stage?",
+    "options": [
+      "To design the software",
+      "To understand what is needed for the project",
+      "To test the software",
+      "To deploy the software"
+    ],
+    "correct": 1,
+    "explanation": "This initial stage ensures that developers fully understand the problem, scope, and expectations of the project stakeholders."
+  },
+  {
+    "question": "Which stage involves selecting the best design idea from the DDS?",
+    "options": [
+      "Stage-1: Planning and Requirement Analysis",
+      "Stage-2: Defining Requirements",
+      "Stage-3: Designing Architecture",
+      "Stage-4: Developing Product"
+    ],
+    "correct": 2,
+    "explanation": "During the design phase, architects evaluate and choose the most suitable design approach from the DDS to implement in development."
+  },
+  {
+    "question": "Which model is known as a linear-sequential life cycle model?",
+    "options": ["Agile", "Waterfall", "Spiral", "Iterative"],
+    "correct": 1,
+    "explanation": "The Waterfall model follows a strict sequential flow where each phase must be completed before moving to the next one."
+  },
+  {
+    "question": "Which type of maintenance involves reducing further maintenance needs?",
+    "options": ["Corrective", "Adaptive", "Perfective", "Preventative"],
+    "correct": 3,
+    "explanation": "Preventative maintenance aims to reduce future issues by improving code quality, performance, and reliability before they cause problems."
+  },
+  {
+    "question": "Which statement is true about the relationship between testing and maintenance?",
+    "options": [
+      "Testing eliminates the need for maintenance",
+      "Maintenance begins after testing identifies issues",
+      "Testing and maintenance are unrelated",
+      "Maintenance replaces the testing phase"
+    ],
+    "correct": 1,
+    "explanation": "Issues found during testing often require fixes during maintenance, especially after the product is deployed."
+  },
+  {
+    "question": "Why is product testing compared to testing a car before selling it?",
+    "options": [
+      "To ensure the car runs smoothly",
+      "To ensure the software meets quality standards",
+      "To check the car's design",
+      "To verify the car's price"
+    ],
+    "correct": 1,
+    "explanation": "Just like a car must be tested before being sold, software must be tested to ensure it functions properly and meets user expectations."
+  },
+  {
+    "question": "What is the purpose of testing in the SDLC?",
+    "options": [
+      "To design the software",
+      "To ensure the software works as expected",
+      "To gather client requirements",
+      "To deploy the software"
+    ],
+    "correct": 1,
+    "explanation": "Testing validates that the software performs its intended functions correctly and reliably under specified conditions."
+  },
+  {
+    "question": "Requirement may range from a high-level abstract statement of a service to a detailed mathematical functional specification.",
+    "options": ["Maintenance", "Designing", "Development", "Requirement"],
+    "correct": 3,
+    "explanation": "Requirements can vary in detail—from general goals to precise technical descriptions—and are defined early in the development process."
+  },
+  {
+    "question": "The subset of systems engineering concerned with defining the system at successive levels of abstraction.",
+    "options": [
+      "Requirements Engineering",
+      "User Interface",
+      "Web development",
+      "Activity Diagrams"
+    ],
+    "correct": 0,
+    "explanation": "Requirements Engineering is the process of defining, documenting, and maintaining requirements for a system. It involves working through successive levels of abstraction to understand what the system must do."
+  },
+  {
+    "question": "Which are the essential activities for developing the software?",
+    "options": [
+      "Requirements Engineering",
+      "Business Requirements",
+      "User Requirements",
+      "Activity Diagrams"
+    ],
+    "correct": 1,
+    "explanation": "Business Requirements represent high-level goals and objectives that the software should fulfill and are considered essential in the early stages of software development."
+  },
+  {
+    "question": "What describes for the customers/users the services the system provides and its operational constraints?",
+    "options": [
+      "User Engineering",
+      "Business Requirements",
+      "Functional Requirements",
+      "Non-Functional Requirements"
+    ],
+    "correct": 0,
+    "explanation": "User Requirements describe the services the system should provide from the user's perspective and include operational constraints they expect the system to meet."
+  },
+  {
+    "question": "What describes what the software should do?",
+    "options": [
+      "User Engineering",
+      "Business Requirements",
+      "Functional Requirements",
+      "Non-Functional Requirements"
+    ],
+    "correct": 2,
+    "explanation": "Functional Requirements specify the behavior of the system — what the software should do in terms of functions and features it must perform."
+  },
+  {
+    "question": "What describes software properties?",
+    "options": [
+      "User Engineering",
+      "Business Requirements",
+      "Functional Requirements",
+      "Non-Functional Requirements"
+    ],
+    "correct": 3,
+    "explanation": "Non-Functional Requirements define how the system should perform, including attributes like usability, reliability, performance, and security."
+  },
+  {
+    "question": "What describes constraints on the system from domain of operation?",
+    "options": [
+      "User Engineering",
+      "Business Requirements",
+      "Functional Requirements",
+      "Domain requirements"
+    ],
+    "correct": 3,
+    "explanation": "Domain Requirements are specific to the industry or field in which the software operates and impose constraints based on that domain’s standards or regulations."
+  },
+  {
+    "question": "What is provided by a user/customer at the beginning of a software development?",
+    "options": [
+      "User Engineering",
+      "Business Requirements",
+      "Stated Requirements",
+      "Domain requirements"
+    ],
+    "correct": 2,
+    "explanation": "Stated Requirements are those explicitly communicated by the user or customer at the start of the project, reflecting their initial expectations."
+  },
+  {
+    "question": "What in Software Engineering is used to avoid duplication of effort for problems already have existing solutions?",
+    "options": ["Reuse", "Designing", "Business Rules", "Requirement"],
+    "correct": 0,
+    "explanation": "Reuse refers to using existing components, code, or solutions to solve known problems efficiently and reduce redundant work."
+  },
+  {
+    "question": "What is the outline of a reusable solution to a recurring problem encountered in a particular context?",
+    "options": [
+      "Requirements Engineering",
+      "User Interface",
+      "Pattern",
+      "Activity Diagrams"
+    ],
+    "correct": 2,
+    "explanation": "A Pattern is a general, reusable solution to a commonly occurring problem within a given context in software design."
+  },
+  {
+    "question": "Patterns provide a common language between developers to:",
+    "options": [
+      "Avoid duplication of effort for problems already have existing solutions",
+      "Describe what the software should do",
+      "Improve software quality and reduce development time",
+      "Describe software properties"
+    ],
+    "correct": 2,
+    "explanation": "Patterns help improve communication among developers, enhance software quality, and speed up development by offering proven solutions."
+  },
+  {
+    "question": "When determining the architectural design, Non-Functional Requirements are _____ the functional requirements:",
+    "options": [
+      "Less important than",
+      "More important than",
+      "Equally important",
+      "Not applicable"
+    ],
+    "correct": 1,
+    "explanation": "Non-functional requirements often influence architectural decisions more significantly as they affect scalability, security, performance, etc."
+  },
+  {
+    "question": "What defines what is done in a business, by whom, in what order, needing which resources, and with what consequences?",
+    "options": ["Business processes", "Business Rules", "Reuse", "Requirement"],
+    "correct": 0,
+    "explanation": "Business Processes describe the structured set of activities performed across roles and departments to achieve an organizational goal."
+  },
+  {
+    "question": "What constrains how a business is run?",
+    "options": ["Business processes", "Business Rules", "Reuse", "Requirement"],
+    "correct": 1,
+    "explanation": "Business Rules are guidelines, constraints, or conditions that dictate how business operations are conducted."
+  },
+  {
+    "question": "What provides quick and easy access whenever there is a change?",
+    "options": ["Business processes", "Business Rules", "Reuse", "Requirement"],
+    "correct": 1,
+    "explanation": "Business Rules can be updated independently and quickly when business conditions change, making them flexible and accessible."
+  },
+  {
+    "question": "Renting a car is an example of:",
+    "options": ["Reuse", "Business Rules", "Business processes", "Requirement"],
+    "correct": 2,
+    "explanation": "Renting a car represents a sequence of steps (reservation, payment, pickup, return) which is a typical example of a business process."
+  },
+  {
+    "question": "'The car allocated is the lowest mileage car that is available in the chosen group' is an example of:",
+    "options": ["Business processes", "Business Rules", "Reuse", "Requirement"],
+    "correct": 1,
+    "explanation": "This is a business rule that governs how cars are assigned to customers based on specific criteria."
+  },
+  {
+    "question": "What shows a process as a set of activities, showing their sequences, and where activities can be carried out in parallel?",
+    "options": ["Activity Diagram", "Business Rules", "Development", "Reuse"],
+    "correct": 0,
+    "explanation": "An Activity Diagram visually represents workflows, showing the flow of activities, their sequence, and possible parallel execution paths."
+  },
+  {
+    "question": "What could be a task that a person or a computer might perform?",
+    "options": ["Reuse", "Designing", "Development", "Activity"],
+    "correct": 3,
+    "explanation": "An Activity is a task or step that can be executed either manually by a person or automatically by a computer."
+  },
+  {
+    "question": "Borrowing a book from a library is an example of:",
+    "options": ["Business processes", "Business Rules", "Reuse", "Requirement"],
+    "correct": 0,
+    "explanation": "Borrowing a book follows a defined set of steps involving different actors (user, librarian, system), making it a clear example of a business process."
+  },
+  {
+    "question": "The _____ is a link between what the users want and what the developers produce in response.",
+    "options": [
+      "Reuse",
+      "Business Rules",
+      "Business processes",
+      "User Interface"
+    ],
+    "correct": 3,
+    "explanation": "The User Interface acts as the bridge between user needs and the functionality implemented by developers, enabling interaction with the system."
+  },
+  {
+    "question": "_____ checking that the solution does what the customer wants:",
+    "options": ["Maintenance", "Domain", "Pattern", "Testing"],
+    "correct": 3,
+    "explanation": "Testing is the process of verifying and validating that the software works as intended and meets the customer's requirements."
+  },
+  {
+    "question": "The subset of systems engineering with defining the system at successive levels abstraction:",
+    "options": [
+      "User Interface",
+      "Web development",
+      "Requirements engineering",
+      "Activity Diagrams"
+    ],
+    "correct": 2,
+    "explanation": "Requirements engineering involves identifying, analyzing, and documenting system requirements at various levels of abstraction."
+  },
+  {
+    "question": "In Agile processes, planning is characterized as:",
+    "options": [
+      "Fixed and rigid",
+      "Incremental and adaptable",
+      "Linear and sequential",
+      "Documentation-heavy"
+    ],
+    "correct": 1,
+    "explanation": "Agile processes emphasize flexibility and adaptability, allowing for incremental planning and adjustments throughout the project lifecycle."
+  },
+  {
+    "question": "What is the system of incremental development?",
+    "options": [
+      "A single version with all features",
+      "A series of versions with added functionality",
+      "A linear development process",
+      "A testing-only approach"
+    ],
+    "correct": 1,
+    "explanation": "Incremental development delivers software in parts or versions, each adding more functionality to the previous one."
+  },
+  {
+    "question": "Software engineering is concerned with:",
+    "options": [
+      "Only coding",
+      "All aspects of software production",
+      "Hardware design",
+      "Network configuration"
+    ],
+    "correct": 1,
+    "explanation": "Software engineering covers all phases of software development, including analysis, design, implementation, testing, and maintenance."
+  },
+  {
+    "question": "Business Rules Representation Techniques should be:",
+    "options": [
+      "Complex and technical",
+      "Well-defined and easy for business people to understand",
+      "Developer-focused only",
+      "Unstructured and flexible"
+    ],
+    "correct": 1,
+    "explanation": "Business rules must be clearly expressed so that both business stakeholders and developers can understand and apply them correctly."
+  },
+  {
+    "question": "A workflow is defined as:",
+    "options": [
+      "A single task",
+      "A sequence of activities producing a result",
+      "A business rule",
+      "A software requirement"
+    ],
+    "correct": 1,
+    "explanation": "A workflow represents a set of steps or activities performed in a specific order to achieve a particular outcome."
+  },
+  {
+    "question": "Use-Case Models primarily enable:",
+    "options": [
+      "Hardware design",
+      "Software development meeting user needs",
+      "Network setup",
+      "Database optimization"
+    ],
+    "correct": 1,
+    "explanation": "Use-case models help identify how users interact with the system, ensuring that software development aligns with user expectations."
+  },
+  {
+    "question": "Prototyping involves:",
+    "options": [
+      "Final software deployment",
+      "Rapid creation of trial software versions",
+      "Long-term maintenance",
+      "Requirement documentation"
+    ],
+    "correct": 1,
+    "explanation": "Prototyping is the process of creating early, simplified versions of a system to test ideas and gather feedback before full development."
+  },
+  {
+    "question": "Software Quality Factors refer to:",
+    "options": [
+      "Hardware specifications",
+      "Attributes of a software product",
+      "Network performance",
+      "User interface design only"
+    ],
+    "correct": 1,
+    "explanation": "Quality factors are characteristics such as reliability, usability, efficiency, and maintainability that define the quality of a software product."
+  },
+  {
+    "question": "In Product Operation Requirements, Efficiency is defined as:",
+    "options": [
+      "The effort to learn a program",
+      "The resources required to perform a function",
+      "The ability to fix errors",
+      "The security of data"
+    ],
+    "correct": 1,
+    "explanation": "Efficiency refers to how well a system uses resources like time and memory to perform its functions effectively."
+  },
+  {
+    "question": "Regression testing is used to:",
+    "options": [
+      "Design new features",
+      "Check that fixing one bug hasn't introduced others",
+      "Deploy software",
+      "Gather requirements"
+    ],
+    "correct": 1,
+    "explanation": "Regression testing ensures that changes or fixes do not break existing functionality in the software."
+  },
+  {
+    "question": "What is the primary purpose of validation testing?",
+    "options": [
+      "To optimize code performance",
+      "To check that software meets customer requirements",
+      "To design the software architecture",
+      "To deploy the software"
+    ],
+    "correct": 1,
+    "explanation": "Validation testing confirms that the final software product satisfies the actual needs and expectations of the customer."
+  },
+  {
+    "question": "What is the primary focus of maintenance and evolution in software engineering?",
+    "options": [
+      "Designing new systems",
+      "Changing the system to meet evolving customer needs",
+      "Testing the software",
+      "Gathering initial requirements"
+    ],
+    "correct": 1,
+    "explanation": "Software maintenance and evolution involve updating and adapting the system over time to match changing business or user requirements."
+  },
+  {
+    "question": "Why is it critical to ensure the software architecture satisfies both functional and nonfunctional requirements?",
+    "options": [
+      "To reduce development time",
+      "To ensure the software does what it should and how it should",
+      "To simplify testing",
+      "To minimize documentation"
+    ],
+    "correct": 1,
+    "explanation": "Both functional (what the system does) and nonfunctional (how it performs) requirements are essential for building a complete, usable, and effective system."
+  },
+  {
+    "question": "What role do Use-Case Models play in the relationship between customers and developers?",
+    "options": [
+      "They optimize code efficiency",
+      "They provide a basis for a contract",
+      "They design the user interface",
+      "They test the software"
+    ],
+    "correct": 1,
+    "explanation": "Use-case models serve as a shared understanding between developers and customers about what the system should do, acting as a communication tool and agreement basis."
+  },
+  {
+    "question": "How do Use-Case Models define the scope of a system?",
+    "options": [
+      "By detailing code structure",
+      "By representing system interactions with its environment",
+      "By optimizing performance",
+      "By listing hardware requirements"
+    ],
+    "correct": 1,
+    "explanation": "Use-case models show how the system interacts with external actors, helping define the boundaries and scope of the system."
+  },
+  {
+    "question": "What do Use-Case Models provide for agreeing on software functions?",
+    "options": [
+      "A programming language",
+      "A common language for customers and developers",
+      "A testing framework",
+      "A deployment plan"
+    ],
+    "correct": 1,
+    "explanation": "Use-case models offer a clear and understandable way for both technical and non-technical stakeholders to agree on software functionality."
+  },
+  {
+    "question": "What does a scenario in a Use-Case Model describe?",
+    "options": [
+      "Code optimization techniques",
+      "A sequence of interactions between the system and actors",
+      "Hardware specifications",
+      "Maintenance procedures"
+    ],
+    "correct": 1,
+    "explanation": "A scenario describes a specific path through a use case, showing how actors and the system interact step by step."
+  },
+  {
+    "question": "What characterizes iterative approaches in software development?",
+    "options": [
+      "Discarding early versions",
+      "Building upon early software versions",
+      "Linear development",
+      "Single-version deployment"
+    ],
+    "correct": 1,
+    "explanation": "Iterative development involves repeatedly refining and enhancing the software based on feedback from earlier versions."
+  },
+  {
+    "question": "What is the purpose of refactoring code in software development?",
+    "options": [
+      "To add new features",
+      "To improve structure, readability, or efficiency",
+      "To deploy the software",
+      "To gather requirements"
+    ],
+    "correct": 1,
+    "explanation": "Refactoring improves the internal structure of code without changing its external behavior, making it cleaner and easier to maintain."
+  },
+  {
+    "question": "What do Product Operation Requirements specify?",
+    "options": [
+      "How the product will be maintained",
+      "How the product will be used",
+      "How the product will be tested",
+      "How the product will be designed"
+    ],
+    "correct": 1,
+    "explanation": "Product Operation Requirements define how the product will operate in its environment, including aspects like usability, reliability, and integrity."
+  },
+  {
+    "question": "What are Product Revision Requirements concerned with?",
+    "options": [
+      "How the product will be used",
+      "How the product will change over time",
+      "How the product will be deployed",
+      "How the product will be coded"
+    ],
+    "correct": 1,
+    "explanation": "Product Revision Requirements focus on the ability to modify the software efficiently, such as through maintainability and flexibility."
+  },
+  {
+    "question": "What do Product Transition Requirements address?",
+    "options": [
+      "Modifying the product for different environments",
+      "Testing the product",
+      "Designing the product",
+      "Maintaining the product"
+    ],
+    "correct": 0,
+    "explanation": "Product Transition Requirements deal with issues related to portability, reusability, and interoperability of the software across systems or environments."
+  },
+  {
+    "question": "In Product Operation Requirements, what does reliability refer to?",
+    "options": [
+      "Ease of learning the software",
+      "Performing functions with required precision",
+      "Preventing unauthorized access",
+      "Effort to fix errors"
+    ],
+    "correct": 1,
+    "explanation": "Reliability refers to the ability of the software to perform its intended functions accurately under stated conditions for a specified period."
+  },
+  {
+    "question": "What does integrity mean in Product Operation Requirements?",
+    "options": [
+      "Optimizing resource usage",
+      "Preventing unauthorized access to software/data",
+      "Ensuring code readability",
+      "Testing software functions"
+    ],
+    "correct": 1,
+    "explanation": "Integrity ensures that the system protects data and programs from unauthorized access or modification, maintaining their accuracy and trustworthiness."
+  },
+  {
+    "question": "What does usability refer to in Product Operation Requirements?",
+    "options": [
+      "Effort to maintain the software",
+      "Effort to learn and operate the program",
+      "Effort to secure the software",
+      "Effort to design the software"
+    ],
+    "correct": 1,
+    "explanation": "Usability measures how easy it is for users to learn, understand, and effectively use the software for its intended purpose."
+  },
+  {
+    "question": "How is maintainability typically measured in software engineering?",
+    "options": [
+      "By code length",
+      "By Mean Time To Change (MTTC)",
+      "By user satisfaction",
+      "By development cost"
+    ],
+    "correct": 1,
+    "explanation": "Maintainability refers to how quickly and easily a software system can be modified to correct faults or improve performance, often measured by metrics like MTTC."
+  },
+  {
+    "question": "What is a disadvantage of the Waterfall Model?",
+    "options": [
+      "Clear Milestones",
+      "Inflexibility to Changes",
+      "Stable Requirements",
+      "None of the above"
+    ],
+    "correct": 1,
+    "explanation": "The Waterfall model is rigid and not suitable for projects where requirements may change frequently because each phase must be completed before the next begins."
+  },
+  {
+    "question": "What are the key processes and rules in an online login system?",
+    "options": [
+      "User enters credentials, system validates, login or error based on validity; rule: valid credentials required",
+      "User designs interface, system tests, login proceeds; rule: interface must be user-friendly",
+      "User submits code, system compiles, login or error; rule: code must compile",
+      "User enters data, system stores, login proceeds; rule: data must be stored"
+    ],
+    "correct": 0,
+    "explanation": "An online login system involves processes like entering credentials, validation, and granting access only if the credentials are valid. The core rule is having valid credentials."
+  },
+  {
+    "question": "Which component in an activity diagram for an online login system checks if the username and password are valid?",
+    "options": ["Start Node", "Activity Node", "Decision Node", "End Node"],
+    "correct": 2,
+    "explanation": "The Decision Node evaluates whether the entered credentials are valid and directs the flow to either successful login or error message."
+  },
+  {
+    "question": "What do Use-Case Models define to determine the people involved and events that initiate work?",
+    "options": [
+      "The software architecture",
+      "The initial set of user requirements",
+      "The testing strategy",
+      "The deployment plan"
+    ],
+    "correct": 1,
+    "explanation": "Use-case models help identify actors (people or systems) and the interactions they have with the system, which helps in defining initial user requirements."
+  },
+  {
+    "question": "In product revision requirements, what does testability refer to?",
+    "options": [
+      "Ease of learning the software",
+      "Ability to test a program to ensure it performs its function",
+      "Preventing unauthorized access",
+      "Modifying the software for new environments"
+    ],
+    "correct": 1,
+    "explanation": "Testability is the degree to which a system allows for testing its functionality to verify correctness, reliability, and conformance to specifications."
+  },
+  {
+    "question": "What does portability mean in product transition requirements?",
+    "options": [
+      "Effort to fix errors",
+      "Effort to transfer a program across hardware/software environments",
+      "Effort to secure the software",
+      "Effort to design the software"
+    ],
+    "correct": 1,
+    "explanation": "Portability measures how easily a software application can be transferred or adapted to different platforms or environments without requiring major changes."
+  },
+  {
+    "question": "In product transition requirements, reusability refers to:",
+    "options": [
+      "Testing software functions",
+      "Using software in other applications",
+      "Optimizing resource usage",
+      "Ensuring code readability"
+    ],
+    "correct": 1,
+    "explanation": "Reusability means that parts of the software can be reused in other systems or applications, reducing development effort and improving consistency."
+  },
+  {
+    "question": "What does interoperability mean in product transition requirements?",
+    "options": [
+      "Effort to maintain software",
+      "Effort to couple one system with another",
+      "Effort to learn the software",
+      "Effort to test the software"
+    ],
+    "correct": 1,
+    "explanation": "Interoperability is the ability of a system to communicate, exchange data, and function with other systems or components seamlessly."
+  },
+  {
+    "question": "Increasing integrity to enhance system security could impact:",
+    "options": ["Usability", "Efficiency", "Maintainability", "Portability"],
+    "correct": 1,
+    "explanation": "Enhancing integrity (e.g., adding more authentication steps) might make the system more secure but could also reduce efficiency due to additional processing overhead."
+  }
+]
