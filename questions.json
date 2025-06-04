@@ -50,7 +50,7 @@
   {
     "question": "Patterns provide common language between developers to describe software properties",
     "options": ["True", "False"],
-    "correct": 0,
+    "correct": 1,
     "explanation": "True. Design patterns offer a standardized way to solve recurring design problems and facilitate communication among developers."
   },
   {
