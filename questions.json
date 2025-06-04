@@ -506,7 +506,7 @@
       "Improve software quality and reduce development time",
       "Describe software properties"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Patterns help improve communication among developers, enhance software quality, and speed up development by offering proven solutions."
   },
   {
