@@ -109,7 +109,7 @@
 
         const start = page * QUESTIONS_PER_PAGE;
         const end = start + QUESTIONS_PER_PAGE;
-        const pageQuestions = shuffle(allQuestions.slice(start, end));
+        const pageQuestions = allQuestions.slice(start, end);
 
         pageQuestions.forEach((q, index) => {
           const div = document.createElement("div");
