@@ -1,178 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Software Engineering</title>
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script> 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Tajawal', sans-serif;
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    @keyframes fade-in-down {
-      0% { opacity: 0; transform: translateY(-10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in-down {
-      animation: fade-in-down 0.8s ease-out forwards;
-    }
-  </style>
-</head>
-<body class="bg-gradient-to-br from-gray-900 via-purple-950 to-black text-white min-h-screen">
-
-  <!-- Header -->
-  <header class="text-center py-10 px-4">
-
-    <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-fade-in-down">Software Engineering</h1> 
-    <p class="mt-3 text-sm text-yellow-400 animate-fade-in-down delay-100">
-      ⚠️ هذا العمل مجهود شخصي، ولا أتحمل مسؤولية أي أخطاء قد تظهر سواء كانت في الاجابات او غيرها. بالتوفيق للجميع.
-    </p>
-      </header>
-
-  <!-- Main Container -->
-  <main class="max-w-3xl mx-auto px-4 pb-16 space-y-6">
-    <div id="quiz-container" class="space-y-6"></div>
-
-    <!-- Pagination -->
-    <div class="flex justify-between items-center mt-8 p-4 glass-card rounded-xl shadow-lg">
-      <button id="prev-btn" class="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded disabled:opacity-40 disabled:cursor-not-allowed transition">السابق</button>
-      <span id="page-info" class="text-sm font-medium text-gray-300"></span>
-      <button id="next-btn" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded transition">التالي</button>
-    </div>
-    <div class="text-center mt-6 w-100">
-      <a href="tutorial.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">عرض المحتوى التعليمي</a>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="text-center text-xs text-gray-600 py-4">
-    © 2025 EgyTech | هندسة البرمجيات. جميع الحقوق محفوظة.
-  </footer>
-  
-
-  <script>
-    const QUESTIONS_PER_PAGE = 15;
-    let allQuestions = [];
-    let currentPage = 0;
-
-    function shuffle(array) {
-      return array.sort(() => Math.random() - 0.5);
-    }
-
-    async function loadQuestionsPage(page) {
-      if (allQuestions.length === 0) {
-        try {
-          const response = await fetch('questions.json');
-          if (!response.ok) throw new Error("فشل تحميل الأسئلة");
-          allQuestions = await response.json();
-        } catch (error) {
-          document.getElementById("quiz-container").innerHTML = 
-            `<div class="bg-red-900/30 text-red-300 p-4 rounded-lg">⚠️ ${error.message}</div>`;
-          return;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded System</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Tajawal", sans-serif;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      @keyframes fade-in-down {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
-      renderPage(page);
-    }
+      .animate-fade-in-down {
+        animation: fade-in-down 0.8s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 via-purple-950 to-black text-white min-h-screen"
+  >
+    <!-- Header -->
+    <header class="text-center py-10 px-4">
+      <h1
+        class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-fade-in-down"
+      >
+        Embedded System
+      </h1>
+      <p class="mt-3 text-sm text-yellow-400 animate-fade-in-down delay-100">
+        بالتوفيق للجميع
+      </p>
+    </header>
+    <!-- Main Container -->
+    <main class="max-w-3xl mx-auto px-4 pb-16 space-y-6">
+      <div id="quiz-container" class="space-y-6"></div>
+      <!-- Pagination -->
+      <div
+        class="flex justify-between items-center mt-8 p-4 glass-card rounded-xl shadow-lg"
+      >
+        <button
+          id="prev-btn"
+          class="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded disabled:opacity-40 disabled:cursor-not-allowed transition"
+        >
+          السابق
+        </button>
+        <span id="page-info" class="text-sm font-medium text-gray-300"></span>
+        <button
+          id="next-btn"
+          class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded transition"
+        >
+          التالي
+        </button>
+      </div>
+      <!-- <div class="text-center mt-6 w-100">
+      <a href="tutorial.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">عرض المحتوى التعليمي</a>
+    </div> -->
+    </main>
+    <!-- Footer -->
+    <footer class="text-center text-xs text-gray-600 py-4">
+      © 2025 EgyTech | الأنظمة المدمجه. جميع الحقوق محفوظة.
+    </footer>
+    <script>
+      const QUESTIONS_PER_PAGE = 15;
+      let allQuestions = [];
+      let currentPage = 0;
 
-    function renderPage(page) {
-      const container = document.getElementById("quiz-container");
-      container.innerHTML = '';
+      function shuffle(array) {
+        return array.sort(() => Math.random() - 0.5);
+      }
 
-      const start = page * QUESTIONS_PER_PAGE;
-      const end = start + QUESTIONS_PER_PAGE;
-      const pageQuestions = allQuestions.slice(start, end);
+      async function loadQuestionsPage(page) {
+        if (allQuestions.length === 0) {
+          try {
+            const response = await fetch("questions.json");
+            if (!response.ok) throw new Error("فشل تحميل الأسئلة");
+            allQuestions = await response.json();
+          } catch (error) {
+            document.getElementById(
+              "quiz-container"
+            ).innerHTML = `<div class="bg-red-900/30 text-red-300 p-4 rounded-lg">⚠️ ${error.message}</div>`;
+            return;
+          }
+        }
+        renderPage(page);
+      }
 
-      pageQuestions.forEach((q, index) => {
-        const div = document.createElement("div");
-        div.className = "glass-card rounded-xl p-5 shadow-lg hover:shadow-indigo-500/20 transition-all duration-300";
+      function renderPage(page) {
+        const container = document.getElementById("quiz-container");
+        container.innerHTML = "";
 
-        const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, idx: idx }));
-        const shuffledOptions = shuffle(optionsWithIndex);
+        const start = page * QUESTIONS_PER_PAGE;
+        const end = start + QUESTIONS_PER_PAGE;
+        const pageQuestions = shuffle(allQuestions.slice(start, end));
 
-        let optionsHTML = "";
-        shuffledOptions.forEach((item, i) => {
-          optionsHTML += `
+        pageQuestions.forEach((q, index) => {
+          const div = document.createElement("div");
+          div.className =
+            "glass-card rounded-xl p-5 shadow-lg hover:shadow-indigo-500/20 transition-all duration-300";
+
+          const optionsWithIndex = q.options.map((opt, idx) => ({
+            text: opt,
+            idx: idx,
+          }));
+          const shuffledOptions = shuffle(optionsWithIndex);
+
+          let optionsHTML = "";
+          shuffledOptions.forEach((item, i) => {
+            optionsHTML += `
             <label class="block py-1 cursor-pointer">
-              <input type="radio" name="q${start + index}" value="${item.idx}" class="ml-2 accent-indigo-500">
+              <input type="radio" name="q${start + index}" value="${
+              item.idx
+            }" class="ml-2 accent-indigo-500">
               ${String.fromCharCode(65 + i)}. ${item.text}
             </label>`;
-        });
+          });
 
-        div.innerHTML = `
-          <h2 class="font-semibold text-lg mb-3">${start + index + 1}. ${q.question}</h2>
+          div.innerHTML = `
+          <h2 class="font-semibold text-lg mb-3">${start + index + 1}. ${
+            q.question
+          }</h2>
           <div class="mb-4 space-y-2">${optionsHTML}</div>
-          <button onclick="checkAnswer(this, ${start + index})" class="w-full py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-lg transition">إرسال الإجابة</button>
+          <button onclick="checkAnswer(this, ${
+            start + index
+          })" class="w-full py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-lg transition">إرسال الإجابة</button>
           <div id="result-${start + index}" class="mt-4 hidden"></div>
         `;
-        container.appendChild(div);
-      });
+          container.appendChild(div);
+        });
 
-      updatePaginationButtons();
-    }
-
-    function updatePaginationButtons() {
-      const totalPages = Math.ceil(allQuestions.length / QUESTIONS_PER_PAGE);
-      document.getElementById("page-info").textContent = `الصفحة ${currentPage + 1} من ${totalPages}`;
-      document.getElementById("prev-btn").disabled = currentPage === 0;
-      document.getElementById("next-btn").disabled = (currentPage + 1) * QUESTIONS_PER_PAGE >= allQuestions.length;
-    }
-
-    function goToNextPage() {
-      if ((currentPage + 1) * QUESTIONS_PER_PAGE < allQuestions.length) {
-        currentPage++;
-        renderPage(currentPage);
-      }
-    }
-
-    function goToPrevPage() {
-      if (currentPage > 0) {
-        currentPage--;
-        renderPage(currentPage);
-      }
-    }
-
-    function checkAnswer(button, qIndex) {
-      const q = allQuestions[qIndex];
-      const selected = document.querySelector(`input[name="q${qIndex}"]:checked`);
-      const resultDiv = document.getElementById(`result-${qIndex}`);
-      resultDiv.classList.remove("hidden");
-
-      if (!selected) {
-        resultDiv.innerHTML = `<p class="text-red-400">⚠️ لم تقم باختيار إجابة.</p>`;
-        return;
+        updatePaginationButtons();
       }
 
-      const selectedIndex = parseInt(selected.value);
-      const correctOptionIdx = q.correct;
-
-      if (selectedIndex === correctOptionIdx) {
-        resultDiv.innerHTML = `
-          <p class="text-green-400 font-medium">✅ الإجابة صحيحة!</p>
-          <p class="mt-1 text-sm text-right">${q.explanation}</p>
-        `;
-      } else {
-        const correctOptionText = q.options[correctOptionIdx];
-        resultDiv.innerHTML = `
-          <p class="text-red-400 font-medium">❌ خطأ! الإجابة الصحيحة هي: (${String.fromCharCode(65 + correctOptionIdx)}) ${correctOptionText}</p>
-          <p class="mt-1 text-sm text-right">${q.explanation}</p>
-        `;
+      function updatePaginationButtons() {
+        const totalPages = Math.ceil(allQuestions.length / QUESTIONS_PER_PAGE);
+        document.getElementById("page-info").textContent = `الصفحة ${
+          currentPage + 1
+        } من ${totalPages}`;
+        document.getElementById("prev-btn").disabled = currentPage === 0;
+        document.getElementById("next-btn").disabled =
+          (currentPage + 1) * QUESTIONS_PER_PAGE >= allQuestions.length;
       }
 
-      button.disabled = true;
-      button.classList.add("opacity-60");
-    }
+      function goToNextPage() {
+        if ((currentPage + 1) * QUESTIONS_PER_PAGE < allQuestions.length) {
+          currentPage++;
+          renderPage(currentPage);
+        }
+      }
 
-    window.onload = () => loadQuestionsPage(currentPage);
-    document.getElementById("next-btn").addEventListener("click", goToNextPage);
-    document.getElementById("prev-btn").addEventListener("click", goToPrevPage);
-  </script>
-</body>
+      function goToPrevPage() {
+        if (currentPage > 0) {
+          currentPage--;
+          renderPage(currentPage);
+        }
+      }
+
+      function checkAnswer(button, qIndex) {
+        const q = allQuestions[qIndex];
+        const selected = document.querySelector(
+          `input[name="q${qIndex}"]:checked`
+        );
+        const resultDiv = document.getElementById(`result-${qIndex}`);
+        resultDiv.classList.remove("hidden");
+
+        if (!selected) {
+          resultDiv.innerHTML = `<p class="text-red-400">⚠️ لم تقم باختيار إجابة.</p>`;
+          return;
+        }
+
+        const selectedLabel = selected.labels[0].textContent.trim();
+
+        const selectedAnswerText = selectedLabel
+          .split(". ")
+          .slice(1)
+          .join(". ");
+
+        if (selectedAnswerText === q.correct) {
+          resultDiv.innerHTML = `
+      <p class="text-green-400 font-medium">✅ الإجابة صحيحة!</p>
+      <p class="mt-1 text-right">${q.explanation}</p>
+    `;
+        } else {
+          resultDiv.innerHTML = `
+      <p class="text-red-400 font-medium">❌ خطأ! الإجابة الصحيحة هي: ${q.correct}</p>
+      <p class="mt-1 text-right">${q.explanation}</p>
+    `;
+        }
+
+        button.disabled = true;
+        button.classList.add("opacity-60");
+      }
+
+      window.onload = () => loadQuestionsPage(currentPage);
+      document
+        .getElementById("next-btn")
+        .addEventListener("click", goToNextPage);
+      document
+        .getElementById("prev-btn")
+        .addEventListener("click", goToPrevPage);
+    </script>
+  </body>
 </html>
