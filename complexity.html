@@ -569,7 +569,7 @@
           });
 
           div.innerHTML = `
-          <h2 class="font-semibold text-lg mb-3">${qIndex + 1}. ${
+          <h2 class="font-semibold text-lg mb-3" dir="rtl">${qIndex + 1}. ${
             q.question
           }</h2>
           <pre><code>${q.code}</code></pre>
@@ -626,14 +626,14 @@
         if (selectedIndex === q.correct) {
           resultDiv.innerHTML = `
           <p class="text-green-400 font-medium">✅ الإجابة صحيحة!</p>
-          <p class="mt-1 text-sm text-right">${q.explanation}</p>
+          <p class="mt-1 text-sm text-right" dir="rtl">${q.explanation}</p>
         `;
         } else {
           resultDiv.innerHTML = `
           <p class="text-red-400 font-medium">❌ خطأ! الإجابة الصحيحة هي: (${String.fromCharCode(
             65 + q.correct
           )}) ${correctOptionText}</p>
-          <p class="mt-1 text-sm text-right">${q.explanation}</p>
+          <p class="mt-1 text-sm text-right" dir="rtl">${q.explanation}</p>
         `;
         }
 
