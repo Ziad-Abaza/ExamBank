@@ -79,8 +79,14 @@
 
   <!-- Header -->
   <header class="text-center py-10 px-4">
-    <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Educational Content</h1>
-  </header>
+
+    <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-fade-in-down">Algorithm</h1> 
+    <div class="text-center mt-6 w-100 flex gap-4 align-content-center justify-center animate-fade-in-down delay-200 ">
+      <a href="index.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">الرئيسية</a>
+      <span class="border-l mt-[22px] border-gray-600 h-[30px] flex align-content-center items-center justify-center text-gray-500"></span>
+      <a href="complexity.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">Complexity Question</a>
+    </div>
+      </header>
 
   <!-- Main Container -->
   <main class="max-w-6xl mx-auto px-4 pb-16 space-y-10">
@@ -93,32 +99,38 @@
           <thead class="bg-gray-700/50">
             <tr>
               <th class="px-4 py-2">Complexity</th>
+              <th class="px-4 py-2">Notation</th>
               <th class="px-4 py-2">Description</th>
               <th class="px-4 py-2">Example</th>
             </tr>
           </thead>
           <tbody>
             <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Constant</td>
               <td class="px-4 py-2"><span class="highlight">O(1)</span></td>
               <td class="px-4 py-2">Constant time, independent of input size</td>
               <td class="px-4 py-2">Accessing an array element</td>
             </tr>
             <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Logarithmic</td>
               <td class="px-4 py-2"><span class="highlight">O(log n)</span></td>
               <td class="px-4 py-2">Problem size is halved each step</td>
               <td class="px-4 py-2">Binary Search</td>
             </tr>
             <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Linear</td>
               <td class="px-4 py-2"><span class="highlight">O(n)</span></td>
               <td class="px-4 py-2">Time increases linearly with input size</td>
               <td class="px-4 py-2">Linear Search</td>
             </tr>
             <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Quadratic</td>
               <td class="px-4 py-2"><span class="highlight">O(n²)</span></td>
               <td class="px-4 py-2">Time grows quadratically with input size</td>
               <td class="px-4 py-2">Bubble Sort</td>
             </tr>
             <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Exponential</td>
               <td class="px-4 py-2"><span class="highlight">O(2ⁿ)</span></td>
               <td class="px-4 py-2">Exponential growth with input size</td>
               <td class="px-4 py-2">Recursive Fibonacci</td>
