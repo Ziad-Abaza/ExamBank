@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>محتوى تعليمي</title>
+  <title>Educational Content</title>
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script> 
+  <script src="https://cdn.tailwindcss.com"></script>       
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Prism.js for code highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
   <style>
     body {
-      font-family: 'Tajawal', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
     .glass-card {
       background: rgba(255, 255, 255, 0.05);
@@ -19,10 +23,55 @@
     }
     .highlight {
       background-color: transparent; 
-      color: #facc15;
+      color: #facc15;      
       padding: 2px 4px;
       border-radius: 4px;
       font-weight: bold;
+    }
+    pre[class*="language-"] {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      color: #e2e8f0; 
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Code", monospace;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      tab-size: 4;
+      hyphens: none;
+    }
+
+    .token.keyword {
+      color: #c084fc; /* Purple for keywords like def, for, if */
+    }
+    .token.function {
+      color: #38bdf8; /* Blue for function names */
+    }
+    .token.operator,
+    .token.punctuation {
+      color: #cbd5e1; /* Light gray for operators and punctuation */
+    }
+    .token.string {
+      color: #bef264; /* Green for strings */
+    }
+    .token.number {
+      color: #fca5a5; /* Red for numbers */
+    }
+    .token.comment {
+      color: #71717a; /* Gray for comments */
+      font-style: italic;
+    }
+    .token.variable {
+      color: #f8fafc; /* White-gray for variables */
     }
   </style>
 </head>
@@ -30,60 +79,260 @@
 
   <!-- Header -->
   <header class="text-center py-10 px-4">
-    <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">محتوى تعليمي</h1>
+    <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Educational Content</h1>
   </header>
 
   <!-- Main Container -->
-  <main class="max-w-3xl mx-auto px-4 pb-16 space-y-6">
-    <div id="tutorial-container" class="space-y-6"></div>
+  <main class="max-w-6xl mx-auto px-4 pb-16 space-y-10">
+
+    <!-- Section: Big O Notations -->
+    <section class="glass-card p-6 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 text-blue-400">Big O Time Complexity Table</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto text-sm text-left">
+          <thead class="bg-gray-700/50">
+            <tr>
+              <th class="px-4 py-2">Complexity</th>
+              <th class="px-4 py-2">Description</th>
+              <th class="px-4 py-2">Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2"><span class="highlight">O(1)</span></td>
+              <td class="px-4 py-2">Constant time, independent of input size</td>
+              <td class="px-4 py-2">Accessing an array element</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2"><span class="highlight">O(log n)</span></td>
+              <td class="px-4 py-2">Problem size is halved each step</td>
+              <td class="px-4 py-2">Binary Search</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2"><span class="highlight">O(n)</span></td>
+              <td class="px-4 py-2">Time increases linearly with input size</td>
+              <td class="px-4 py-2">Linear Search</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2"><span class="highlight">O(n²)</span></td>
+              <td class="px-4 py-2">Time grows quadratically with input size</td>
+              <td class="px-4 py-2">Bubble Sort</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2"><span class="highlight">O(2ⁿ)</span></td>
+              <td class="px-4 py-2">Exponential growth with input size</td>
+              <td class="px-4 py-2">Recursive Fibonacci</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section: Sorting & Searching Algorithms Comparison -->
+    <section class="glass-card p-6 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 text-blue-400">Comparison of Search and Sorting Algorithms</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto text-sm text-left">
+          <thead class="bg-gray-700/50">
+            <tr>
+              <th class="px-4 py-2">Algorithm</th>
+              <th class="px-4 py-2">Best</th>
+              <th class="px-4 py-2">Average</th>
+              <th class="px-4 py-2">Worst</th>
+              <th class="px-4 py-2">Space</th>
+              <th class="px-4 py-2">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Bubble Sort</td>
+              <td class="px-4 py-2">O(n)</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(1)</td>
+              <td class="px-4 py-2">Stable</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Insertion Sort</td>
+              <td class="px-4 py-2">O(n)</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(1)</td>
+              <td class="px-4 py-2">Stable</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Selection Sort</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(1)</td>
+              <td class="px-4 py-2">Unstable</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Quick Sort</td>
+              <td class="px-4 py-2">O(n log n)</td>
+              <td class="px-4 py-2">O(n log n)</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(log n) - O(n)</td>
+              <td class="px-4 py-2">Unstable (in-place)</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Merge Sort</td>
+              <td class="px-4 py-2">O(n log n)</td>
+              <td class="px-4 py-2">O(n log n)</td>
+              <td class="px-4 py-2">O(n log n)</td>
+              <td class="px-4 py-2">O(n)</td>
+              <td class="px-4 py-2">Stable</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Heap Sort</td>
+              <td class="px-4 py-2">O(n log n)</td>
+              <td class="px-4 py-2">O(n log n)</td>
+              <td class="px-4 py-2">O(n log n)</td>
+              <td class="px-4 py-2">O(1)</td>
+              <td class="px-4 py-2">Unstable</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Counting Sort</td>
+              <td class="px-4 py-2">O(n + k)</td>
+              <td class="px-4 py-2">O(n + k)</td>
+              <td class="px-4 py-2">O(n + k)</td>
+              <td class="px-4 py-2">O(k)</td>
+              <td class="px-4 py-2">Non-comparison sort</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Bucket Sort</td>
+              <td class="px-4 py-2">O(n + k)</td>
+              <td class="px-4 py-2">O(n + k)</td>
+              <td class="px-4 py-2">O(n²)</td>
+              <td class="px-4 py-2">O(n + k)</td>
+              <td class="px-4 py-2">Depends on uniform distribution</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Radix Sort</td>
+              <td class="px-4 py-2">O(d·n)</td>
+              <td class="px-4 py-2">O(d·n)</td>
+              <td class="px-4 py-2">O(d·n)</td>
+              <td class="px-4 py-2">O(n + b)</td>
+              <td class="px-4 py-2">Stable, non-comparison</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Linear Search</td>
+              <td class="px-4 py-2">O(1)</td>
+              <td class="px-4 py-2">O(n)</td>
+              <td class="px-4 py-2">O(n)</td>
+              <td class="px-4 py-2">O(1)</td>
+              <td class="px-4 py-2">Works on any data</td>
+            </tr>
+            <tr class="border-t border-gray-700">
+              <td class="px-4 py-2">Binary Search</td>
+              <td class="px-4 py-2">O(1)</td>
+              <td class="px-4 py-2">O(log n)</td>
+              <td class="px-4 py-2">O(log n)</td>
+              <td class="px-4 py-2">O(1)</td>
+              <td class="px-4 py-2">Requires sorted array</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section: Notes -->
+    <section class="glass-card p-6 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 text-blue-400">📌 Important Notes</h2>
+      <ul class="space-y-2 list-disc pl-5">
+        <li><span class="highlight">✅ Linear Search:</span> Does not require sorted data. Suitable for small or simple cases.</li>
+        <li><span class="highlight">✅ Binary Search:</span> Very fast but requires the array to be sorted beforehand.</li>
+        <li><span class="highlight">✅ Merge Sort vs Quick Sort:</span>
+          <ul class="list-disc ml-5 mt-1">
+            <li>Merge Sort always runs in O(n log n), but needs extra space.</li>
+            <li>Quick Sort is usually faster, but worst-case performance is O(n²).</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  <!-- New Section: Sample Functions -->
+  <section class="glass-card p-6 rounded-xl shadow-lg mt-10">
+    <h2 class="text-2xl font-bold mb-4 text-blue-400">Sample Python Functions</h2>
+    <p class="mb-4">Here are some sample Python functions demonstrating basic algorithms:</p>
+
+    <!-- Bubble Sort -->
+    <div class="mb-6">
+      <h3 class="text-xl font-bold mb-2">1. Bubble Sort</h3>
+      <p class="mb-2">This function sorts an array using the Bubble Sort algorithm.</p>
+      <pre><code class="language-python">
+def bubbleSort(arr):
+    n = len(arr)
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+      </code></pre>
+    </div>
+
+    <!-- Linear Search -->
+    <div class="mb-6">
+      <h3 class="text-xl font-bold mb-2">2. Linear Search</h3>
+      <p class="mb-2">This function searches for a target element in an array using Linear Search.</p>
+      <pre><code class="language-python">
+def linearSearch(arr, target):
+    n = len(arr)
+    for i in range(n):
+        if arr[i] == target:
+            return i
+    return -1
+      </code></pre>
+    </div>
+
+    <!-- Find Largest Number -->
+    <div class="mb-6">
+      <h3 class="text-xl font-bold mb-2">3. Find Largest Number</h3>
+      <p class="mb-2">This function finds the largest number in an array.</p>
+      <pre><code class="language-python">
+def largestNumber(arr):
+    n = len(arr)
+    largestNumber = arr[0]
+
+    for i in range(1, n):
+        if arr[i] > largestNumber:
+            largestNumber = arr[i]
+    return largestNumber
+      </code></pre>
+    </div>
+
+    <!-- Find Smallest Number -->
+    <div class="mb-6">
+      <h3 class="text-xl font-bold mb-2">4. Find Smallest Number</h3>
+      <p class="mb-2">This function finds the smallest number in an array.</p>
+      <pre><code class="language-python">
+def lowestNumber(arr):
+    n = len(arr)
+    lowestNumber = arr[0]
+
+    for i in range(1, n):
+        if arr[i] < lowestNumber:
+            lowestNumber = arr[i]
+    return lowestNumber
+      </code></pre>
+    </div>
+
+    <!-- Example Usage -->
+    <div>
+      <h3 class="text-xl font-bold mb-2">Example Usage</h3>
+      <p class="mb-2">Here's how you can use these functions:</p>
+      <pre><code class="language-python">
+arr = [60, 50, 20, 10, 40]
+print(largestNumber(arr))  # Output: 60
+      </code></pre>
+    </div>
+  </section>
   </main>
 
   <!-- Footer -->
   <footer class="text-center text-xs text-gray-600 py-4">
-    © 2025 EgyTech | هندسة البرمجيات. جميع الحقوق محفوظة.
+    © 2025 EgyTech | Software Engineering. All rights reserved.
   </footer>
 
-  <script>
-    async function loadTutorials() {
-      try {
-        const response = await fetch('tutorials.json');
-        if (!response.ok) throw new Error("فشل تحميل المحتوى");
-        const data = await response.json();
-        displayTutorials(data.tutorials);
-      } catch (error) {
-        document.getElementById("tutorial-container").innerHTML = 
-          `<div class="bg-red-900/30 text-red-300 p-4 rounded-lg">⚠️ ${error.message}</div>`;
-      }
-    }
-
-    function displayTutorials(tutorials) {
-      const container = document.getElementById("tutorial-container");
-      tutorials.forEach(tutorial => {
-        const titleDiv = document.createElement("div");
-        titleDiv.innerHTML = `
-          <h2 class="text-3xl font-extrabold mb-4 text-blue-400 drop-shadow-lg">${tutorial.title}</h2>
-        `;
-        container.appendChild(titleDiv);
-
-        tutorial.content.forEach(item => {
-          let highlightedText = item.text;
-
-          item.highlight.forEach(word => {
-            const regex = new RegExp(`(${word})`, 'gi');
-            highlightedText = highlightedText.replace(regex, `<span class="highlight">$1</span>`);
-          });
-
-          const div = document.createElement("div");
-          div.className = "glass-card p-4 rounded-lg shadow-md";
-          div.innerHTML = `
-            <p>${highlightedText}</p>
-          `;
-          container.appendChild(div);
-        });
-      });
-    }
-
-    window.onload = loadTutorials;
-  </script>
 </body>
 </html>

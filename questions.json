@@ -1,1589 +1,1096 @@
 [
   {
-    "question": "The cut-in voltage for silicon diode is approximately",
-    "options": [
-      "0.2 V",
-      "0.6 V",
-      "1.1 V",
-      "1.4 V"
-    ],
-    "correct": "0.6 V",
-    "explanation": "The cut-in voltage (also known as the forward voltage drop) for a silicon diode is typically around 0.6 to 0.7 volts."
+    "question": "What is a characteristic of a good algorithm?",
+    "options": ["Complexity", "Slowness", "Correctness", "High memory usage"],
+    "correct": 2,
+    "explanation": "A good algorithm must be correct, meaning it produces the right output for all valid inputs."
   },
   {
-    "question": "The PN junction diode is used as",
+    "question": "Which of the following is an example of algorithm application?",
     "options": [
-      "An amplifier",
-      "A rectifier",
-      "An oscillator"
+      "Sleeping",
+      "Cooking a dish",
+      "Driving randomly",
+      "Watching TV"
     ],
-    "correct": "A rectifier",
-    "explanation": "PN junction diodes are commonly used as rectifiers to convert alternating current (AC) to direct current (DC)."
+    "correct": 1,
+    "explanation": "Cooking a dish follows a step-by-step procedure, which is essentially an algorithm."
   },
   {
-    "question": "In the depletion region of an unbiased PN junction diode there are",
-    "options": [
-      "Only electrons",
-      "Only holes",
-      "Only fixed ions"
-    ],
-    "correct": "Only fixed ions",
-    "explanation": "In the depletion region, mobile charge carriers (electrons and holes) are absent, leaving only immobile ions behind."
+    "question": "What is the time complexity of the linear search algorithm?",
+    "options": ["O(1)", "O(n)", "O(n²)", "O(log n)"],
+    "correct": 1,
+    "explanation": "Linear search checks each element in sequence, so its time complexity is O(n)."
   },
   {
-    "question": "What is the primary function of a diode?",
+    "question": "Which method helps overcome the limitations of practical testing?",
     "options": [
-      "To store charge",
-      "To amplify signals",
-      "To allow current flow in one direction only",
-      "To generate AC voltage"
+      "Trial and error",
+      "Manual comparison",
+      "Theoretical analysis",
+      "Visualization"
     ],
-    "correct": "To allow current flow in one direction only",
-    "explanation": "The fundamental property of a diode is that it allows electric current to flow in one direction while blocking it in the opposite direction."
+    "correct": 2,
+    "explanation": "Theoretical analysis provides general performance insights without relying on specific hardware or input."
   },
   {
-    "question": "What is the main purpose of a Zener diode?",
-    "options": [
-      "To convert AC to DC",
-      "To regulate voltage",
-      "To amplify signals",
-      "To store energy"
-    ],
-    "correct": "To regulate voltage",
-    "explanation": "Zener diodes are designed to operate in the reverse breakdown region and are primarily used for voltage regulation."
+    "question": "Which Big-O notation represents quadratic time complexity?",
+    "options": ["O(1)", "O(n)", "O(n²)", "O(log n)"],
+    "correct": 2,
+    "explanation": "O(n²) represents algorithms where runtime increases quadratically with input size."
   },
   {
-    "question": "Which type of diode is used to convert light into an electrical signal?",
+    "question": "Which of the following is NOT a step in algorithmic problem-solving?",
     "options": [
-      "Zener diode",
-      "Light Emitting Diode (LED)",
-      "Photodiode",
-      "Schottky diode"
+      "Problem Definition",
+      "Algorithm Design",
+      "Guessing the Output",
+      "Testing"
     ],
-    "correct": "Photodiode",
-    "explanation": "Photodiodes generate current when exposed to light and are used in optical sensors and solar cells."
+    "correct": 2,
+    "explanation": "Guessing the output is not a systematic approach in algorithm design."
   },
   {
-    "question": "In a half-wave rectifier, how much of the AC signal is converted into DC?",
+    "question": "What is the main focus of asymptotic analysis?",
     "options": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
+      "Exact execution time",
+      "Worst-case machine behavior",
+      "Behavior as input size grows",
+      "Input data types"
     ],
-    "correct": "50%",
-    "explanation": "A half-wave rectifier uses only one half-cycle of the AC input, converting 50% of the waveform into pulsating DC."
+    "correct": 2,
+    "explanation": "Asymptotic analysis studies how an algorithm behaves as the input size approaches infinity."
   },
   {
-    "question": "The Op-Amp amplifies _______ between two input signals, known as the differential input voltage, in its open-loop operation.",
+    "question": "Which of the following best describes O(1) time complexity?",
     "options": [
-      "The sum",
-      "The product",
-      "The difference",
-      "The average"
+      "Time grows with input",
+      "Constant time regardless of input size",
+      "Exponential growth",
+      "Depends on loop depth"
     ],
-    "correct": "The difference",
-    "explanation": "An operational amplifier (Op-Amp) amplifies the voltage difference between its two inputs when operating in open-loop configuration."
+    "correct": 1,
+    "explanation": "O(1) means that the operation takes constant time, no matter how large the input is."
   },
   {
-    "question": "What is the phase shift between the input and output of an inverting Op-Amp?",
+    "question": "What is an advantage of theoretical analysis over practical testing?",
     "options": [
-      "0°",
-      "90°",
-      "180°",
-      "270°"
+      "Depends on specific hardware",
+      "Covers only one input",
+      "Predicts performance in general",
+      "Requires more memory"
     ],
-    "correct": "180°",
-    "explanation": "In an inverting Op-Amp configuration, the output signal is inverted relative to the input, resulting in a 180° phase shift."
+    "correct": 2,
+    "explanation": "Theoretical analysis allows us to predict how an algorithm will perform across different inputs and machines."
   },
   {
-    "question": "How many terminals does a standard operational amplifier (Op-Amp) have?",
+    "question": "Which algorithm is more efficient for large input sizes in finding the largest number?",
     "options": [
-      "2",
-      "3",
-      "5",
-      "8"
+      "Compare All Pairs",
+      "Linear Search",
+      "Guess and Check",
+      "Recursive Tree"
     ],
-    "correct": "5",
-    "explanation": "A standard Op-Amp has five terminals: two inputs (inverting and non-inverting), one output, and two power supply terminals (+Vcc and -Vcc)."
+    "correct": 1,
+    "explanation": "Linear search efficiently finds the largest number in O(n) time, better than O(n²) alternatives."
   },
   {
-    "question": "Which of the following is NOT a terminal of an operational amplifier (Op-Amp)?",
+    "question": "What is the primary reason for analyzing an algorithm?",
     "options": [
-      "Inverting input",
-      "Non-inverting input",
-      "Ground",
-      "Collector"
+      "To write more code",
+      "To make the program longer",
+      "To choose the best and most efficient solution",
+      "To confuse the programmer"
     ],
-    "correct": "Collector",
-    "explanation": "The collector is part of a BJT transistor, not an Op-Amp. Op-Amps do not have a collector terminal."
+    "correct": 2,
+    "explanation": "We analyze algorithms to compare their efficiency and choose the best option for solving a problem."
   },
   {
-    "question": "How many terminals does a Bipolar Junction Transistor (BJT) have?",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "correct": "3",
-    "explanation": "A BJT has three terminals: Emitter, Base, and Collector."
+    "question": "Which of the following defines how an algorithm’s performance grows with input size?",
+    "options": ["Pseudo-code", "Flowchart", "Big-O Notation", "Source Code"],
+    "correct": 2,
+    "explanation": "Big-O notation measures how an algorithm's runtime or space requirements grow as input size increases."
   },
   {
-    "question": "Which of the following are the terminals of a BJT?",
-    "options": [
-      "Anode, Cathode, Base",
-      "Drain, Source, Gate",
-      "Collector, Base, Emitter",
-      "Input, Output, Ground"
-    ],
-    "correct": "Collector, Base, Emitter",
-    "explanation": "The correct terminals of a Bipolar Junction Transistor (BJT) are Collector, Base, and Emitter."
+    "question": "What is the time complexity of comparing all pairs in a list of n numbers?",
+    "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+    "correct": 2,
+    "explanation": "Comparing all pairs involves nested loops, resulting in O(n²) time complexity."
   },
   {
-    "question": "What is the basic structure of a Bipolar Junction Transistor (BJT)?",
+    "question": "What does robustness in an algorithm mean?",
     "options": [
-      "Two P-type and one N-type semiconductor layers",
-      "Two N-type and one P-type semiconductor layers",
-      "A single P-N junction",
-      "Both a) and b)"
+      "It always gives a wrong output",
+      "It only works for specific input",
+      "It fails under edge cases",
+      "It handles unexpected inputs gracefully"
     ],
-    "correct": "Both a) and b)",
-    "explanation": "BJTs can be either NPN or PNP types, so they consist of both combinations: two P-type and one N-type (for PNP), or two N-type and one P-type (for NPN)."
+    "correct": 3,
+    "explanation": "Robustness refers to an algorithm's ability to handle invalid or unexpected inputs without crashing."
   },
   {
-    "question": "What is the main application of BJTs in embedded systems?",
+    "question": "What does 'space complexity' refer to?",
     "options": [
-      "Wireless communication",
-      "Power amplification and switching",
-      "Image processing",
-      "Data storage"
+      "Disk size",
+      "Screen resolution",
+      "Amount of memory used by the algorithm",
+      "The number of files"
     ],
-    "correct": "Power amplification and switching",
-    "explanation": "BJTs are commonly used in embedded systems for amplifying signals and acting as switches due to their high gain and fast response."
+    "correct": 2,
+    "explanation": "Space complexity measures the amount of memory an algorithm uses during execution."
   },
   {
-    "question": "What is the primary disadvantage of BJTs in embedded applications compared to MOSFETs?",
-    "options": [
-      "Lower switching speed and higher power dissipation",
-      "Higher input impedance",
-      "Requires fewer components"
-    ],
-    "correct": "Lower switching speed and higher power dissipation",
-    "explanation": "BJTs generally have slower switching speeds and consume more power than MOSFETs, making them less efficient in low-power applications."
+    "question": "Algorithms are only useful for computer programming tasks.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Algorithms are used in many areas beyond programming, such as cooking, navigation, and decision-making."
   },
   {
-    "question": "What is the main application of MOSFETs in embedded systems?",
-    "options": [
-      "Data storage",
-      "Power management and motor control",
-      "Display screens",
-      "RF signal reception"
-    ],
-    "correct": "Power management and motor control",
-    "explanation": "MOSFETs are widely used in embedded systems for power management, motor control, and switching applications due to their high efficiency and fast switching capabilities."
+    "question": "Big-O notation describes the exact execution time of an algorithm.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Big-O notation focuses on growth rate, not exact time."
   },
   {
-    "question": "Which of the following is NOT a MOSFET terminal?",
-    "options": [
-      "Gate",
-      "Collector",
-      "Drain",
-      "Source"
-    ],
-    "correct": "Collector",
-    "explanation": "Collector is a terminal of a BJT, not a MOSFET. The three terminals of a MOSFET are Gate, Drain, and Source."
+    "question": "Scalability is a key criterion in algorithm evaluation.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "An algorithm should scale well with increasing input size."
   },
   {
-    "question": "Which MOSFET terminal controls the current flow between source and drain?",
-    "options": [
-      "Gate",
-      "Drain",
-      "Source",
-      "Substrate"
-    ],
-    "correct": "Gate",
-    "explanation": "The Gate terminal controls the flow of current between the Source and Drain by applying a voltage, which creates an electric field in the channel."
+    "question": "Time complexity measures how memory usage grows with input size.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Time complexity measures runtime, while space complexity measures memory usage."
   },
   {
-    "question": "Which of the following best defines 'data objects'?",
-    "options": [
-      "A system of organizing files",
-      "The representation of real-world items in a database",
-      "A collection of operations performed on data",
-      "A set of executable functions"
-    ],
-    "correct": "The representation of real-world items in a database",
-    "explanation": "'Data objects' refer to entities or items that represent real-world concepts or things within a database."
+    "question": "The worst-case analysis considers the maximum time an algorithm will take.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Worst-case analysis gives an upper bound on the runtime."
   },
   {
-    "question": "In a database, what is an attribute?",
-    "options": [
-      "The relationship between two objects",
-      "The value or property of an object",
-      "A collection of related data objects",
-      "A method for querying the data"
-    ],
-    "correct": "The value or property of an object",
-    "explanation": "An attribute describes a characteristic or property of a data object (entity) in a database."
+    "question": "Big-O notation focuses on the best-case scenario of an algorithm.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Big-O is used to describe the upper bound (worst-case), not the best-case."
   },
   {
-    "question": "Which of the following can be considered an attribute in a customer database?",
-    "options": [
-      "Customer's first name",
-      "Customer's purchase history",
-      "Customer's membership level",
-      "All of the above"
-    ],
-    "correct": "All of the above",
-    "explanation": "All these values describe properties of a customer and can be stored as attributes in a database."
+    "question": "Space complexity includes both fixed and variable parts.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Space complexity accounts for both static and dynamic memory usage."
   },
   {
-    "question": "In the context of databases, an object is:",
-    "options": [
-      "A record representing a real-world entity",
-      "A function that manipulates data",
-      "A set of operations performed on data",
-      "A schema defining relationships between tables"
-    ],
-    "correct": "A record representing a real-world entity",
-    "explanation": "A data object in a database typically represents a real-world entity such as a person, place, or thing."
+    "question": "All efficient algorithms are always accurate.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "An algorithm can be fast but incorrect if it doesn’t produce the right output."
   },
   {
-    "question": "Which of the following is an operation that cannot be performed on nominal data?",
-    "options": [
-      "Sorting",
-      "Comparison",
-      "Arithmetic calculation",
-      "Classification"
-    ],
-    "correct": "Arithmetic calculation",
-    "explanation": "Nominal data are categorical and do not have a numerical meaning, so arithmetic operations like addition or subtraction are not meaningful."
+    "question": "Theoretical analysis helps avoid unnecessary coding.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "By analyzing algorithms beforehand, we can eliminate inefficient options early."
   },
   {
-    "question": "Which operation is valid for ordinal data?",
-    "options": [
-      "Finding the median",
-      "Finding the mean",
-      "Performing multiplication",
-      "Calculating ratios"
-    ],
-    "correct": "Finding the median",
-    "explanation": "Ordinal data has a meaningful order, so we can find the median, but not the mean, ratio, or multiplication since intervals aren't defined."
+    "question": "Time vs. Space is a common trade-off in algorithm design.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Improving speed may require more memory, and vice versa."
   },
   {
-    "question": "In interval data, which of the following is NOT meaningful?",
-    "options": [
-      "The difference between values",
-      "The addition of values",
-      "The ratio of two values",
-      "The comparison of differences between values"
-    ],
-    "correct": "The ratio of two values",
-    "explanation": "Interval data allows for differences and comparisons, but no true zero point exists, making ratios meaningless."
+    "question": "Practical testing of algorithms depends on the hardware used.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Performance in practice can vary based on system specs."
   },
   {
-    "question": "Which type of data can you perform all arithmetic operations, including addition, subtraction, multiplication, and division?",
-    "options": [
-      "Nominal",
-      "Ordinal",
-      "Interval",
-      "Ratio"
-    ],
-    "correct": "Ratio",
-    "explanation": "Ratio data has a true zero point, allowing all arithmetic operations including ratios and percentages."
+    "question": "Big-O notation considers minor constants and hardware speed.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Big-O ignores constants and hardware-specific details, focusing on growth rates."
   },
   {
-    "question": "Which of the following operations can be performed on nominal data?",
-    "options": [
-      "Addition",
-      "Multiplication",
-      "Comparison",
-      "Classification"
-    ],
-    "correct": "Classification",
-    "explanation": "Nominal data can only be categorized or classified; no mathematical operations are applicable."
+    "question": "The main goal of algorithm design is to use as many resources as possible.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Efficiency aims to minimize resource usage, not maximize it."
   },
   {
-    "question": "Which of the following is an example of an ordinal attribute?",
-    "options": [
-      "Customer's gender",
-      "Temperature in Celsius",
-      "Ranking of employees: 1st, 2nd, 3rd",
-      "Employee's age"
-    ],
-    "correct": "Ranking of employees: 1st, 2nd, 3rd",
-    "explanation": "Ordinal data has a meaningful order, such as rankings, where the sequence matters but the differences may not be uniform."
+    "question": "The 'Compare All Pairs' algorithm is more efficient than linear search.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Compare All Pairs has O(n²) time complexity, which is slower than linear search's O(n)."
   },
   {
-    "question": "Which of the following is an example of a ratio attribute?",
-    "options": [
-      "Height of a person",
-      "Customer satisfaction level",
-      "Rank in a race",
-      "Car model"
-    ],
-    "correct": "Height of a person",
-    "explanation": "Height has a true zero and allows all arithmetic operations, making it a ratio-level measurement."
+    "question": "Big-O notation helps compare two algorithms even before coding them.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, this is one of the main purposes of Big-O notation."
   },
+
   {
-    "question": "Ordinal attributes have a meaningful order or ranking, but the differences between values are not measurable.",
-    "options": [
-      "True",
-      "False"
-    ],
-    "correct": "True",
-    "explanation": "Ordinal data provides order, but the actual magnitude of differences between ranks is undefined."
+    "question": "What is the best-case time complexity of Bubble Sort?",
+    "options": ["O(N²)", "O(N)", "O(log N)", "O(N log N)"],
+    "correct": 1,
+    "explanation": "In the best case, where the array is already sorted, Bubble Sort performs only one pass with no swaps."
   },
   {
-    "question": "Which of the following is an example of a Nominal attribute?",
+    "question": "Which sorting algorithm divides the array into a sorted and unsorted subarray and selects the smallest element from the unsorted subarray?",
     "options": [
-      "Age",
-      "Blood type (A, B, AB, O)",
-      "Rank in a competition",
-      "Weight in kilograms"
+      "Bubble Sort",
+      "Selection Sort",
+      "Insertion Sort",
+      "Quick Sort"
     ],
-    "correct": "Blood type (A, B, AB, O)",
-    "explanation": "Nominal data consists of categories without any inherent order, such as blood types."
+    "correct": 1,
+    "explanation": "Selection Sort repeatedly finds the minimum element from the unsorted part and places it at the beginning."
   },
   {
-    "question": "Which of the following is an example of Ordinal data?",
-    "options": [
-      "Monthly income",
-      "Education level (High School, Bachelor’s, Master’s)",
-      "Age",
-      "Number of children"
-    ],
-    "correct": "Education level (High School, Bachelor’s, Master’s)",
-    "explanation": "Education levels show a clear order, making them ordinal data even though the gaps between levels are not quantifiable."
+    "question": "What is the space complexity of Insertion Sort?",
+    "options": ["O(N)", "O(N²)", "O(1)", "O(log N)"],
+    "correct": 2,
+    "explanation": "Insertion Sort sorts in-place and requires only a few temporary variables."
   },
   {
-    "question": "Which of the following is an example of Interval data?",
-    "options": [
-      "Salary of employees",
-      "Temperature in Celsius",
-      "Ranking in a contest",
-      "The number of children in a family"
-    ],
-    "correct": "Temperature in Celsius",
-    "explanation": "Celsius temperature has equal intervals but no true zero, so it's classified as interval data."
+    "question": "Which sorting algorithm has the worst-case time complexity of O(N²)?",
+    "options": ["Merge Sort", "Quick Sort", "Bubble Sort", "Heap Sort"],
+    "correct": 2,
+    "explanation": "Bubble Sort can have a worst-case time complexity of O(N²), especially when the list is in reverse order."
   },
   {
-    "question": "Which register in AVR microcontrollers is used to configure a pin as input or output?",
-    "options": [
-      "PORTx",
-      "PINx",
-      "DDRx",
-      "SPCR"
-    ],
-    "correct": "DDRx",
-    "explanation": "The DDRx register (Data Direction Register) is used to set the direction of the port pins: 1 for output, 0 for input."
+    "question": "What is the average-case time complexity of Quick Sort?",
+    "options": ["O(N²)", "O(N log N)", "O(N)", "O(log N)"],
+    "correct": 1,
+    "explanation": "Quick Sort uses divide-and-conquer and on average splits the data efficiently."
   },
   {
-    "question": "To read the current logic level of an input pin on PORTD, which register should be used?",
+    "question": "Which sorting algorithm is most efficient for nearly sorted arrays?",
     "options": [
-      "PORTD",
-      "DDRD",
-      "PIND",
-      "SPDR"
+      "Bubble Sort",
+      "Selection Sort",
+      "Insertion Sort",
+      "Radix Sort"
     ],
-    "correct": "PIND",
-    "explanation": "The PIND register reflects the actual logic levels present on the physical pins of PORTD."
+    "correct": 2,
+    "explanation": "Insertion Sort is fast for nearly sorted arrays because it shifts elements rather than swapping them all."
   },
   {
-    "question": "What is the function of the PORTx register when a pin is configured as output?",
-    "options": [
-      "It disables the pin",
-      "It reads analog values",
-      "It sets the output HIGH or LOW",
-      "It configures the direction"
-    ],
-    "correct": "It sets the output HIGH or LOW",
-    "explanation": "When a pin is configured as output using DDRx, writing to PORTx determines whether the pin is HIGH or LOW."
+    "question": "What is the space complexity of Merge Sort?",
+    "options": ["O(1)", "O(N)", "O(N log N)", "O(N²)"],
+    "correct": 1,
+    "explanation": "Merge Sort requires additional memory to merge the subarrays."
   },
   {
-    "question": "What will the following code do?\nDDRB = 0xFF;\nPORTB = 0x00;",
-    "options": [
-      "Configure all PORTB pins as inputs and set them LOW",
-      "Configure all PORTB pins as outputs and set them LOW",
-      "Configure all PORTB pins as outputs and set them HIGH",
-      "Configure all PORTB pins as inputs and set them HIGH"
-    ],
-    "correct": "Configure all PORTB pins as outputs and set them LOW",
-    "explanation": "DDRB = 0xFF sets all bits to 1 → output mode. PORTB = 0x00 sets all output pins to LOW."
+    "question": "Which sorting algorithm uses buckets to sort elements?",
+    "options": ["Counting Sort", "Bucket Sort", "Radix Sort", "Heap Sort"],
+    "correct": 1,
+    "explanation": "Bucket Sort distributes elements into buckets and then sorts each bucket individually."
   },
   {
-    "question": "What does the Timer/Counter register (e.g., TCNT0) do in AVR microcontrollers?",
-    "options": [
-      "Sets the baud rate for UART",
-      "Holds the current count value of the timer",
-      "Stores the ADC conversion result",
-      "Enables or disables external interrupts"
-    ],
-    "correct": "Holds the current count value of the timer",
-    "explanation": "TCNT0 is the Timer/Counter Register for Timer 0 and holds the current value of the timer."
+    "question": "What is the best-case time complexity of Selection Sort?",
+    "options": ["O(N²)", "O(N)", "O(log N)", "O(N log N)"],
+    "correct": 0,
+    "explanation": "Selection Sort always runs in O(N²) even if the array is already sorted."
   },
   {
-    "question": "In CTC mode, what happens when the timer value matches the OCR (Output Compare Register) value?",
+    "question": "Which sorting algorithm is based on the divide-and-conquer approach?",
     "options": [
-      "Timer stops",
-      "Timer resets to 0",
-      "Timer overflows",
-      "Interrupt is disabled"
+      "Bubble Sort",
+      "Merge Sort",
+      "Selection Sort",
+      "Insertion Sort"
     ],
-    "correct": "Timer resets to 0",
-    "explanation": "In Clear Timer on Compare Match (CTC) mode, the timer clears (resets to 0) when it matches the OCR value."
+    "correct": 1,
+    "explanation": "Merge Sort recursively divides the array into halves, sorts them, and merges them back together."
   },
   {
-    "question": "What is the primary advantage of using interrupts in a microcontroller-based system?",
-    "options": [
-      "Reduces the need for memory",
-      "Increases power consumption",
-      "Allows the CPU to respond immediately to external events",
-      "Makes the program run slower"
-    ],
-    "correct": "Allows the CPU to respond immediately to external events",
-    "explanation": "Interrupts allow the microcontroller to pause its current task and handle urgent events instantly."
+    "question": "What is the worst-case time complexity of Heap Sort?",
+    "options": ["O(N²)", "O(N log N)", "O(N)", "O(log N)"],
+    "correct": 1,
+    "explanation": "Heap Sort maintains a heap structure and extracts elements in order, resulting in O(N log N) performance."
   },
   {
-    "question": "What happens when an interrupt occurs in an AVR microcontroller?",
-    "options": [
-      "The microcontroller shuts down",
-      "The current program is permanently stopped",
-      "The microcontroller jumps to a special routine to handle the event",
-      "Nothing happens unless a timer is running"
-    ],
-    "correct": "The microcontroller jumps to a special routine to handle the event",
-    "explanation": "When an interrupt occurs, the processor saves its current state and executes the corresponding Interrupt Service Routine (ISR)."
+    "question": "Which sorting algorithm is non-comparison-based?",
+    "options": ["Quick Sort", "Counting Sort", "Bubble Sort", "Selection Sort"],
+    "correct": 1,
+    "explanation": "Counting Sort uses counting instead of comparisons between elements."
   },
   {
-    "question": "What is the name of the function that automatically executes when a specific interrupt occurs?",
-    "options": [
-      "Main routine",
-      "Watchdog",
-      "Interrupt Service Routine (ISR)",
-      "Polling function"
-    ],
-    "correct": "Interrupt Service Routine (ISR)",
-    "explanation": "An ISR is a special function that runs automatically when a specific interrupt is triggered."
+    "question": "What is the space complexity of Radix Sort?",
+    "options": ["O(N)", "O(N + k)", "O(N²)", "O(log N)"],
+    "correct": 1,
+    "explanation": "Radix Sort uses extra space proportional to the number of elements and possible values (k)."
   },
   {
-    "question": "What is the primary function of an ADC in AVR microcontrollers?",
-    "options": [
-      "Convert digital data to analog",
-      "Convert analog signals to digital values",
-      "Send data over serial",
-      "Control voltage levels"
-    ],
-    "correct": "Convert analog signals to digital values",
-    "explanation": "The Analog-to-Digital Converter (ADC) converts analog voltages into digital values that can be processed by the microcontroller."
+    "question": "Which sorting algorithm is most suitable for sorting large datasets with a small range of values?",
+    "options": ["Bubble Sort", "Counting Sort", "Quick Sort", "Merge Sort"],
+    "correct": 1,
+    "explanation": "Counting Sort is efficient when the range of input values is not significantly greater than the number of elements."
   },
   {
-    "question": "What is the default reference voltage used for ADC in Arduino/AVR?",
-    "options": [
-      "12V",
-      "3.3V",
-      "5V",
-      "9V"
-    ],
-    "correct": "5V",
-    "explanation": "By default, the internal reference voltage for the ADC in most AVR microcontrollers and Arduino boards is 5 volts."
+    "question": "What is the worst-case time complexity of Quick Sort?",
+    "options": ["O(N²)", "O(N log N)", "O(N)", "O(log N)"],
+    "correct": 0,
+    "explanation": "In the worst case (e.g., already sorted), Quick Sort degrades to O(N²) due to poor pivot selection."
   },
   {
-    "question": "Which Arduino function is used to read analog input?",
+    "question": "Which sorting algorithm repeatedly swaps adjacent elements if they are in the wrong order?",
     "options": [
-      "digitalRead()",
-      "analogRead()",
-      "readADC()",
-      "adcStart()"
+      "Bubble Sort",
+      "Selection Sort",
+      "Insertion Sort",
+      "Merge Sort"
     ],
-    "correct": "analogRead()",
-    "explanation": "The analogRead() function is used to read the value from an analog input pin connected to the ADC."
+    "correct": 0,
+    "explanation": "This describes the core mechanism of Bubble Sort."
   },
   {
-    "question": "What Arduino function is used to turn an LED ON or OFF?",
-    "options": [
-      "analogWrite()",
-      "digitalRead()",
-      "pinMode()",
-      "digitalWrite()"
-    ],
-    "correct": "digitalWrite()",
-    "explanation": "The digitalWrite() function is used to set a digital pin to either HIGH (ON) or LOW (OFF)."
+    "question": "What is the average-case time complexity of Bubble Sort?",
+    "options": ["O(N²)", "O(N)", "O(log N)", "O(N log N)"],
+    "correct": 0,
+    "explanation": "Bubble Sort typically makes multiple passes over the array, leading to quadratic time complexity."
   },
   {
-    "question": "What does the following code do?\ndigitalWrite(13, HIGH);\ndelay(1000);\ndigitalWrite(13, LOW);",
+    "question": "Which sorting algorithm builds a sorted array one element at a time?",
     "options": [
-      "Turns off the LED",
-      "Turns on the LED continuously",
-      "Blinks the LED for 1 second",
-      "Dims the LED"
+      "Bubble Sort",
+      "Selection Sort",
+      "Insertion Sort",
+      "Quick Sort"
     ],
-    "correct": "Blinks the LED for 1 second",
-    "explanation": "This code turns the LED on for 1 second and then turns it off."
+    "correct": 2,
+    "explanation": "Insertion Sort inserts each new element into its correct position within the sorted portion."
   },
   {
-    "question": "Before controlling an LED pin, you should configure it as:",
-    "options": [
-      "Input",
-      "Analog",
-      "Output",
-      "Interrupt"
-    ],
-    "correct": "Output",
-    "explanation": "To control an LED using digitalWrite(), the pin must be set as an output using pinMode()."
+    "question": "What is the best-case time complexity of Merge Sort?",
+    "options": ["O(N²)", "O(N log N)", "O(N)", "O(log N)"],
+    "correct": 1,
+    "explanation": "Merge Sort always divides and merges the array, so its best-case is still O(N log N)."
   },
   {
-    "question": "Why is a motor driver (like L298N) used with a microcontroller?",
-    "options": [
-      "To change signal types",
-      "To reduce power",
-      "To allow the microcontroller to handle high current safely",
-      "To read analog signals"
-    ],
-    "correct": "To allow the microcontroller to handle high current safely",
-    "explanation": "Microcontrollers cannot supply enough current to run motors directly, so a motor driver is used to protect them."
+    "question": "Which sorting algorithm is most efficient for sorting integers with a fixed range?",
+    "options": ["Radix Sort", "Quick Sort", "Bubble Sort", "Selection Sort"],
+    "correct": 0,
+    "explanation": "Radix Sort is efficient for fixed-range integers by sorting digit-by-digit."
   },
   {
-    "question": "What is the function of PWM in motor control?",
-    "options": [
-      "Turning motor ON/OFF only",
-      "Controlling motor speed",
-      "Changing motor type",
-      "Reversing direction"
-    ],
-    "correct": "Controlling motor speed",
-    "explanation": "PWM (Pulse Width Modulation) controls the average voltage applied to the motor, which adjusts its speed."
+    "question": "Bubble Sort has a space complexity of O(N).",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Bubble Sort is an in-place algorithm with a space complexity of O(1)."
   },
   {
-    "question": "What does a typical DC motor need for direction control?",
-    "options": [
-      "One signal wire",
-      "An analog input",
-      "Two digital pins (IN1 and IN2)",
-      "Only ground"
-    ],
-    "correct": "Two digital pins (IN1 and IN2)",
-    "explanation": "A DC motor's direction can be controlled by reversing the polarity using two control pins connected to a motor driver."
+    "question": "Selection Sort performs fewer swaps than Bubble Sort.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Selection Sort only swaps once per iteration, while Bubble Sort may swap many times."
   },
   {
-    "question": "What does '16x2 LCD' mean?",
-    "options": [
-      "16 pixels by 2 pixels",
-      "16 characters per row, 2 rows",
-      "16 lines and 2 columns",
-      "16-bit data and 2-line display"
-    ],
-    "correct": "16 characters per row, 2 rows",
-    "explanation": "A 16x2 LCD can display 16 characters per line across 2 lines."
+    "question": "Insertion Sort is more efficient for nearly sorted arrays.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, because it minimizes the number of comparisons and shifts needed."
   },
   {
-    "question": "Which library is commonly used to control a text LCD in Arduino?",
-    "options": [
-      "Wire.h",
-      "LiquidCrystal.h",
-      "Servo.h",
-      "LCDtext.h"
-    ],
-    "correct": "LiquidCrystal.h",
-    "explanation": "The LiquidCrystal library is used to interface with standard character LCD displays like the 16x2."
+    "question": "Quick Sort has a worst-case time complexity of O(N log N).",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, Quick Sort's worst-case is O(N²) when the pivot selection is poor."
   },
   {
-    "question": "What is the first step to display text on an LCD in Arduino?",
-    "options": [
-      "Use lcd.print()",
-      "Declare pins and initialize LCD with lcd.begin()",
-      "Call analogWrite()",
-      "Enable backlight"
-    ],
-    "correct": "Declare pins and initialize LCD with lcd.begin()",
-    "explanation": "You must initialize the LCD with pinMode() settings and begin communication before printing text."
+    "question": "Merge Sort is based on the divide-and-conquer approach.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, Merge Sort divides the array into halves, sorts them recursively, and merges them."
   },
   {
-    "question": "What is one advantage of using an OLED display over a standard LCD?",
-    "options": [
-      "Consumes more power",
-      "Requires backlight",
-      "Sharper, high-contrast graphics",
-      "Only works in bright light"
-    ],
-    "correct": "Sharper, high-contrast graphics",
-    "explanation": "OLED displays produce their own light and offer better contrast and visibility compared to backlit LCDs."
+    "question": "Counting Sort is a comparison-based sorting algorithm.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, Counting Sort uses counting and indexing instead of comparing elements."
   },
   {
-    "question": "What kind of information can be displayed on an OLED?",
-    "options": [
-      "Only numbers",
-      "Only sensor data",
-      "Text and graphics",
-      "Only voltage readings"
-    ],
-    "correct": "Text and graphics",
-    "explanation": "OLED displays support both text and custom graphics, making them versatile for various applications."
+    "question": "Radix Sort is suitable for sorting floating-point numbers.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, Radix Sort is typically used for integers or strings with fixed digits."
   },
   {
-    "question": "What is the role of pinMode() in Arduino C when programming AVR microcontrollers?",
-    "options": [
-      "It sets the voltage level",
-      "It sets a pin as input or output",
-      "It disables interrupts",
-      "It reads analog values"
-    ],
-    "correct": "It sets a pin as input or output",
-    "explanation": "The pinMode() function configures a specific pin to behave either as an input or output."
+    "question": "Heap Sort has a space complexity of O(N).",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, Heap Sort works in-place and has a space complexity of O(1)."
   },
   {
-    "question": "Which tool is commonly used to write and debug code for AVR microcontrollers?",
-    "options": [
-      "Photoshop",
-      "Arduino IDE or Atmel Studio",
-      "MS Word",
-      "MATLAB"
-    ],
-    "correct": "Arduino IDE or Atmel Studio",
-    "explanation": "Arduino IDE and Atmel Studio are popular development environments for writing and debugging code for AVR microcontrollers."
+    "question": "Bucket Sort is efficient for sorting elements with a uniform distribution.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, Bucket Sort performs well when data is uniformly distributed across the range."
   },
   {
-    "question": "1. What is a characteristic of record data?",
-    "options": [
-      "Each record has a different number of attributes",
-      "Each record has a fixed set of attributes",
-      "Records contain only textual descriptions",
-      "Each record varies in data type and structure"
-    ],
-    "correct": "Each record has a fixed set of attributes",
-    "explanation": "Record data, like a row in a database table, always has a predefined number and type of attributes (columns). This fixed structure allows for consistent data storage and retrieval."
+    "question": "The best-case time complexity of Selection Sort is O(N).",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, Selection Sort always takes O(N²) regardless of the initial arrangement."
   },
+
   {
-    "question": "2. In record data, a record is typically represented as:",
+    "question": "What does Big O notation measure?",
     "options": [
-      "A hierarchical tree",
-      "A collection of unrelated values",
-      "A row with fixed columns for attributes",
-      "A set of images"
+      "Best-case scenario",
+      "Average-case scenario",
+      "Worst-case scenario",
+      "None of the above"
     ],
-    "correct": "A row with fixed columns for attributes",
-    "explanation": "A record is fundamentally a single row in a table-like structure, with each column representing a specific attribute. This is the standard way to organize structured data."
+    "correct": 2,
+    "explanation": "Big O notation focuses on the worst-case scenario to describe the upper bound of an algorithm's runtime."
   },
   {
-    "question": "3. According to the data matrix description, how are data objects represented?",
-    "options": [
-      "As paragraphs of text",
-      "As points in a multi-dimensional space",
-      "As a sequence of unstructured records",
-      "As a list of unrelated items"
-    ],
-    "correct": "As points in a multi-dimensional space",
-    "explanation": "In a data matrix, each row typically represents a data object, and each column represents an attribute. This allows each object to be viewed as a point in a space defined by its attribute values."
+    "question": "Which of the following is ignored in Big O notation?",
+    "options": ["Dominant term", "Constants", "Input size", "Recursive calls"],
+    "correct": 1,
+    "explanation": "In Big O analysis, constants are dropped because they become insignificant for large input sizes."
   },
   {
-    "question": "4. In document data, what does each entry in the matrix represent?",
-    "options": [
-      "Number of attributes",
-      "Number of characters in a document",
-      "Number of times a term appears in a document",
-      "The length of the document in pages"
-    ],
-    "correct": "Number of times a term appears in a document",
-    "explanation": "For document data, a common representation is a 'term-document matrix,' where rows are terms (words) and columns are documents. Each cell indicates the frequency of a term in a given document."
+    "question": "What is the time complexity of accessing an array element?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
+    "correct": 2,
+    "explanation": "Arrays allow direct access to elements using their index, which takes constant time."
   },
   {
-    "question": "5. Which of the following is an example of record data?",
-    "options": [
-      "A list of customer names, ages, and addresses stored in a table",
-      "A collection of tweets without any structure",
-      "A folder of images",
-      "A random collection of words"
-    ],
-    "correct": "A list of customer names, ages, and addresses stored in a table",
-    "explanation": "Record data is characterized by its structured, tabular format, where each entry (customer) has a consistent set of attributes (name, age, address)."
+    "question": "What is the time complexity of a nested loop where both loops run n times?",
+    "options": ["O(n)", "O(n²)", "O(log n)", "O(n log n)"],
+    "correct": 1,
+    "explanation": "Each iteration of the outer loop causes n iterations of the inner loop, resulting in n * n = O(n²)."
   },
   {
-    "question": "6. What is a good example of document data?",
-    "options": [
-      "A text file containing the full text of several articles, with word counts stored for each article",
-      "A database with sales figures",
-      "A matrix of distances between cities",
-      "A list of employees and their salaries"
-    ],
-    "correct": "A text file containing the full text of several articles, with word counts stored for each article",
-    "explanation": "Document data refers to collections of text documents, often analyzed for content, keywords, or similarities, typically involving processing the text itself rather than fixed attributes."
+    "question": "What is the dominant term in O(n² + n)?",
+    "options": ["O(n)", "O(n²)", "O(1)", "O(log n)"],
+    "correct": 1,
+    "explanation": "As input size grows, the quadratic term dominates and other terms become negligible."
   },
   {
-    "question": "7. Which situation is an example of transaction data?",
-    "options": [
-      "A shopping cart that records items bought together, like milk, bread, and butter",
-      "A survey recording people's favorite color",
-      "A medical record with patient vitals",
-      "A matrix of student grades"
-    ],
-    "correct": "A shopping cart that records items bought together, like milk, bread, and butter",
-    "explanation": "Transaction data captures events (transactions) where items or actions are grouped together, often seen in retail (items purchased in one go) or web logs (sequence of user actions)."
+    "question": "What is the time complexity of binary search?",
+    "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+    "correct": 1,
+    "explanation": "Binary search reduces the search space by half at each step, leading to logarithmic time."
   },
   {
-    "question": "8. Which of the following best describes graph data?",
+    "question": "Which rule is used to combine complexities of sequential steps in an algorithm?",
     "options": [
-      "Data where objects are connected by links or edges",
-      "Data stored in a simple table",
-      "A collection of unrelated records",
-      "A set of isolated documents"
+      "Product Rule",
+      "Sum Rule",
+      "Dominant Term Rule",
+      "Constant Rule"
     ],
-    "correct": "Data where objects are connected by links or edges",
-    "explanation": "Graph data models relationships between entities (nodes) using connections (edges). This is ideal for representing networks and complex relationships."
+    "correct": 1,
+    "explanation": "The Sum Rule applies when steps are executed one after another."
   },
   {
-    "question": "9. Which is a good example of graph data?",
-    "options": [
-      "A molecule where atoms are nodes and chemical bonds are edges",
-      "A spreadsheet with student grades",
-      "A shopping receipt listing items",
-      "A text file full of tweets"
-    ],
-    "correct": "A molecule where atoms are nodes and chemical bonds are edges",
-    "explanation": "In a molecule, atoms are the individual components (nodes) and the chemical bonds between them represent the connections (edges), forming a classic graph structure."
+    "question": "What is the time complexity of a recursive algorithm with n recursive calls and O(1) work per call?",
+    "options": ["O(n)", "O(n²)", "O(log n)", "O(1)"],
+    "correct": 0,
+    "explanation": "Each recursive call performs constant-time work, so total work is proportional to the number of calls."
   },
   {
-    "question": "10. How does a set of webpages and their links form a graph?",
+    "question": "What is the input size (n) in a sorting algorithm?",
     "options": [
-      "Each webpage is a node and hyperlinks are edges",
-      "Each hyperlink is treated as a separate record",
-      "Pages are sorted alphabetically",
-      "Pages are just stored as plain text without relationships"
+      "Number of comparisons",
+      "Number of elements in the array",
+      "Number of recursive calls",
+      "Number of loops"
     ],
-    "correct": "Each webpage is a node and hyperlinks are edges",
-    "explanation": "The World Wide Web is a prime example of graph data, where each webpage is a node and the hyperlinks connecting them serve as the edges, defining relationships between pages."
+    "correct": 1,
+    "explanation": "Input size typically refers to the number of elements being processed."
   },
   {
-    "question": "11. Which of the following is NOT typically represented as graph data?",
-    "options": [
-      "Social networks like Facebook",
-      "Flight connections between airports",
-      "Shopping carts with multiple items",
-      "Webpages connected by hyperlinks"
-    ],
-    "correct": "Shopping carts with multiple items",
-    "explanation": "While items in a shopping cart are related by being part of the same transaction, the primary representation is usually transaction data, not a direct graph where items are nodes and a purchase is an edge between *every* item in the cart."
+    "question": "Which of the following complexities is considered the most efficient?",
+    "options": ["O(n²)", "O(n log n)", "O(log n)", "O(n)"],
+    "correct": 2,
+    "explanation": "Logarithmic time is more efficient than linear or higher-order complexities."
   },
   {
-    "question": "12. What characterizes ordered data in general?",
-    "options": [
-      "The sequence or position of data points is important",
-      "The data points are completely independent",
-      "Data points are organized randomly",
-      "Data is unstructured and chaotic"
-    ],
-    "correct": "The sequence or position of data points is important",
-    "explanation": "Ordered data means that the order in which data points appear carries significant meaning, such as time series data or sequential events."
+    "question": "What happens to the search space in binary search during each iteration?",
+    "options": ["Doubles", "Halves", "Remains constant", "Triples"],
+    "correct": 1,
+    "explanation": "Binary search divides the search space in half each time, reducing it exponentially fast."
   },
   {
-    "question": "13. Which is an example of spatial data?",
-    "options": [
-      "The list of students in a school",
-      "The locations of restaurants on a map",
-      "The number of books in a library",
-      "A set of random tweets"
-    ],
-    "correct": "The locations of restaurants on a map",
-    "explanation": "Spatial data refers to data that has a geographical or spatial component, typically represented by coordinates or geometric shapes on a map."
+    "question": "What is the time complexity of Merge Sort?",
+    "options": ["O(n)", "O(n²)", "O(n log n)", "O(log n)"],
+    "correct": 2,
+    "explanation": "Merge Sort splits the array and merges sorted halves, leading to O(n log n) performance."
   },
   {
-    "question": "14. Which situation best describes temporal data?",
+    "question": "Which property of Big O states that constants are ignored?",
     "options": [
-      "A table showing different countries and their capitals",
-      "Temperature recorded every hour during a day",
-      "Locations of cities on a world map",
-      "A list of favorite movies"
+      "Transitivity",
+      "Additivity",
+      "Constants are Ignored",
+      "Dominant Term"
     ],
-    "correct": "Temperature recorded every hour during a day",
-    "explanation": "Temporal data is data collected over time, where the timestamp or sequence of observations is crucial, like sensor readings or stock prices over a period."
+    "correct": 2,
+    "explanation": "Big O notation abstracts away constants since they don't significantly affect performance for large inputs."
   },
   {
-    "question": "15. Which of the following best describes noise in a dataset?",
-    "options": [
-      "Data points that are very similar",
-      "Random errors or meaningless data that distort the true values",
-      "Correct but incomplete data",
-      "Data that is neatly organized"
-    ],
-    "correct": "Random errors or meaningless data that distort the true values",
-    "explanation": "Noise in data refers to random errors, fluctuations, or irrelevant information that obscure the underlying patterns or true values."
+    "question": "What is the time complexity of a simple loop that runs n times?",
+    "options": ["O(n²)", "O(n)", "O(log n)", "O(1)"],
+    "correct": 1,
+    "explanation": "A single loop that iterates n times has linear time complexity."
   },
   {
-    "question": "16. What is an outlier in data?",
-    "options": [
-      "A value that is consistent with the majority of data",
-      "A missing value",
-      "A value significantly different from most other values",
-      "A duplicate of another record"
-    ],
-    "correct": "A value significantly different from most other values",
-    "explanation": "An outlier is a data point that deviates significantly from other observations, often indicating variability in measurement or an experimental error."
+    "question": "What is the time complexity of nested loops where the outer loop runs n times and the inner loop runs n times?",
+    "options": ["O(n)", "O(n²)", "O(log n)", "O(1)"],
+    "correct": 1,
+    "explanation": "This results in n * n = O(n²) operations."
   },
   {
-    "question": "17. In an embedded system, which of the following would be considered record data?",
+    "question": "Which rule is used to simplify O(5n) to O(n)?",
     "options": [
-      "Temperature, humidity, and pressure recorded together by a weather sensor",
-      "A random audio recording",
-      "A video stream from a drone",
-      "A simple blinking LED"
+      "Drop Constants",
+      "Drop Lower-Order Terms",
+      "Sum Rule",
+      "Product Rule"
     ],
-    "correct": "Temperature, humidity, and pressure recorded together by a weather sensor",
-    "explanation": "Sensor readings like temperature, humidity, and pressure, when collected together for a specific time, form a structured record, just like a row in a table."
+    "correct": 0,
+    "explanation": "Big O notation ignores constants, so O(5n) simplifies to O(n)."
   },
   {
-    "question": "18. In an embedded system, a data matrix could represent:",
-    "options": [
-      "A table of sensor readings over different time intervals",
-      "A single signal from a temperature sensor",
-      "A blinking pattern from an LED",
-      "A robot moving randomly without storing data"
-    ],
-    "correct": "A table of sensor readings over different time intervals",
-    "explanation": "A data matrix is suitable for representing multiple sensor readings (attributes) taken at various time points (data objects), forming rows and columns."
+    "question": "What is the time complexity of the factorial function?",
+    "options": ["O(n²)", "O(n)", "O(log n)", "O(1)"],
+    "correct": 1,
+    "explanation": "Factorial recursion makes n calls, each doing constant work, leading to O(n) complexity."
   },
   {
-    "question": "19. Which is an example of transaction data in an embedded retail system?",
-    "options": [
-      "A list of customer IDs",
-      "Data from multiple items scanned during a single purchase",
-      "A record of employee names",
-      "A random alarm activation log"
-    ],
-    "correct": "Data from multiple items scanned during a single purchase",
-    "explanation": "In a retail system, a single purchase event where several items are bought together constitutes a transaction, making it transaction data."
+    "question": "What is the time complexity of accessing an element in a linked list?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
+    "correct": 0,
+    "explanation": "Unlike arrays, linked lists require traversal from the head to reach a specific element."
   },
   {
-    "question": "20. What is an example of noise in an embedded sensor network?",
-    "options": [
-      "An occasional random spike in a temperature reading due to electrical interference",
-      "A missing temperature value",
-      "A repeated humidity record",
-      "A completely accurate measurement"
-    ],
-    "correct": "An occasional random spike in a temperature reading due to electrical interference",
-    "explanation": "Noise in sensor data often appears as random fluctuations or spurious readings caused by external factors like electrical interference, distorting the true signal."
+    "question": "Which of the following is an example of quadratic time complexity?",
+    "options": ["Binary search", "Nested loops", "Merge Sort", "Simple loop"],
+    "correct": 1,
+    "explanation": "Nested loops with both running n times result in O(n²) time complexity."
   },
   {
-    "question": "21. In an embedded medical device, missing data might happen when:",
-    "options": [
-      "The sensor temporarily disconnects and does not record heartbeats",
-      "The sensor records exactly the expected values",
-      "The same heart rate value is recorded twice",
-      "Noise causes minor fluctuations in readings"
-    ],
-    "correct": "The sensor temporarily disconnects and does not record heartbeats",
-    "explanation": "Missing data occurs when a sensor fails to capture a reading due to disconnections, malfunctions, or communication issues."
+    "question": "What is the time complexity of a loop that runs log n times?",
+    "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+    "correct": 1,
+    "explanation": "If the loop counter increases or decreases exponentially, the time complexity is logarithmic."
   },
   {
-    "question": "22. What is an example of wrong data from an embedded GPS device?",
-    "options": [
-      "Reporting a location that is hundreds of kilometers away from the actual position",
-      "Not recording any data",
-      "Recording correct locations with slight delays",
-      "Slight signal variations due to noise"
-    ],
-    "correct": "Reporting a location that is hundreds of kilometers away from the actual position",
-    "explanation": "Wrong data implies a significant and incorrect value, like a GPS reporting a completely erroneous location, rather than minor noise or delays."
+    "question": "Big O notation focuses on the best-case scenario.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Big O describes the worst-case growth rate of an algorithm."
   },
   {
-    "question": "23. Which of the following best defines 'data objects'?",
-    "options": [
-      "A system of organizing files",
-      "The representation of real-world items in a database",
-      "A collection of operations performed on data",
-      "A set of executable functions"
-    ],
-    "correct": "The representation of real-world items in a database",
-    "explanation": "Data objects are abstractions of real-world entities or concepts that are stored and managed in a database. Each object typically has a unique identity and attributes."
+    "question": "Constants are ignored in Big O notation.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, because they do not significantly impact performance for large input sizes."
   },
   {
-    "question": "24. In a database, what is an attribute?",
-    "options": [
-      "The relationship between two objects",
-      "The value or property of an object",
-      "A collection of related data objects",
-      "A method for querying the data"
-    ],
-    "correct": "The value or property of an object",
-    "explanation": "An attribute describes a specific characteristic or property of a data object. For example, 'name' is an attribute of a 'customer' object."
+    "question": "The dominant term in O(n² + n) is O(n).",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, O(n²) is the dominant term as it grows faster than O(n)."
   },
   {
-    "question": "25. Which of the following can be considered an attribute in a customer database?",
-    "options": [
-      "Customer's first name",
-      "Customer's purchase history",
-      "Customer's membership level",
-      "All of the above"
-    ],
-    "correct": "All of the above",
-    "explanation": "All listed options (first name, purchase history, membership level) are properties or characteristics that can describe a customer, making them valid attributes."
+    "question": "Binary search has a time complexity of O(log n).",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, binary search repeatedly halves the search space."
   },
   {
-    "question": "26. In the context of databases, an object is:",
-    "options": [
-      "A record representing a real-world entity",
-      "A function that manipulates data",
-      "A set of operations performed on data",
-      "A schema defining relationships between tables"
-    ],
-    "correct": "A record representing a real-world entity",
-    "explanation": "In database terms, an object is often synonymous with a record or tuple, representing a single instance of a real-world entity like a person, product, or event."
+    "question": "Nested loops with n iterations each have a time complexity of O(n²).",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, because the total number of operations is n × n."
   },
   {
-    "question": "27. Which of the following is an operation that cannot be performed on nominal data?",
-    "options": [
-      "Sorting",
-      "Comparison",
-      "Arithmetic calculation",
-      "Classification"
-    ],
-    "correct": "Arithmetic calculation",
-    "explanation": "Nominal data represents categories without any inherent order or numerical meaning (e.g., colors). Therefore, arithmetic operations (addition, subtraction) are not meaningful."
+    "question": "The sum rule is used for nested steps in an algorithm.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, the product rule is used for nested steps; the sum rule is for sequential steps."
   },
   {
-    "question": "28. Which operation is valid for ordinal data?",
-    "options": [
-      "Finding the median",
-      "Finding the mean",
-      "Performing multiplication",
-      "Calculating ratios"
-    ],
-    "correct": "Finding the median",
-    "explanation": "Ordinal data has a meaningful order (e.g., rankings), so you can determine the middle value (median). However, the differences between values are not uniform, so mean, multiplication, and ratios are not appropriate."
+    "question": "The product rule is used for sequential steps in an algorithm.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, the product rule is used for nested loops or recursive steps."
   },
   {
-    "question": "29. In interval data, which of the following is NOT meaningful?",
-    "options": [
-      "The difference between values",
-      "The addition of values",
-      "The ratio of two values",
-      "The comparison of differences between values"
-    ],
-    "correct": "The ratio of two values",
-    "explanation": "Interval data has ordered values with meaningful differences (e.g., temperature in Celsius), but no true zero point. Therefore, ratios are not meaningful (e.g., 20°C is not 'twice as hot' as 10°C)."
+    "question": "The time complexity of a simple loop is O(n).",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, if the loop runs n times without nested logic."
   },
   {
-    "question": "30. Which type of data can you perform all arithmetic operations, including addition, subtraction, multiplication, and division?",
-    "options": [
-      "Nominal",
-      "Ordinal",
-      "Interval",
-      "Ratio"
-    ],
-    "correct": "Ratio",
-    "explanation": "Ratio data has all the properties of interval data but also includes a true zero point, allowing for all arithmetic operations and meaningful ratios (e.g., height, weight, income)."
+    "question": "Merge Sort has a time complexity of O(n log n).",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, due to its divide-and-conquer approach."
   },
   {
-    "question": "31. Which of the following operations can be performed on nominal data?",
-    "options": [
-      "Addition",
-      "Multiplication",
-      "Classification",
-      "Subtraction"
-    ],
-    "correct": "Classification",
-    "explanation": "Nominal data represents categories, so it can be used for grouping or classifying items (e.g., classifying customers by their blood type)."
+    "question": "Recursive algorithms can be analyzed using the Master Theorem.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, the Master Theorem helps analyze recurrence relations common in recursive algorithms."
   },
+
   {
-    "question": "32. Which of the following is an example of an ordinal attribute?",
+    "question": "What is a characteristic of linear search?",
     "options": [
-      "Customer's gender",
-      "Temperature in Celsius",
-      "Ranking of employees: 1st, 2nd, 3rd",
-      "Employee's age"
+      "Requires sorted data",
+      "Iterates through each element one by one",
+      "Significantly faster for large datasets",
+      "Uses a divide-and-conquer approach"
     ],
-    "correct": "Ranking of employees: 1st, 2nd, 3rd",
-    "explanation": "Ordinal attributes have a defined order or ranking, but the intervals between ranks may not be uniform or precisely measurable."
+    "correct": 1,
+    "explanation": "Linear search checks each element sequentially until the target is found or the end of the list is reached."
   },
   {
-    "question": "33. Which of the following is an example of a ratio attribute?",
+    "question": "Which algorithm is more efficient for searching in sorted collections?",
     "options": [
-      "Height of a person",
-      "Customer satisfaction level",
-      "Rank in a race",
-      "Car model"
+      "Linear Search",
+      "Binary Search",
+      "Bubble Sort",
+      "Selection Sort"
     ],
-    "correct": "Height of a person",
-    "explanation": "Height is a ratio attribute because it has a true zero point (no height means no object) and ratios are meaningful (e.g., 2 meters is twice as tall as 1 meter)."
+    "correct": 1,
+    "explanation": "Binary search takes advantage of sorted data and reduces the search space by half at each step."
   },
   {
-    "question": "34. Ordinal attributes have a meaningful order or ranking, but the differences between values are not measurable.",
-    "options": [
-      "True",
-      "False"
-    ],
-    "correct": "True",
-    "explanation": "This statement accurately describes ordinal data. You know the order, but not the exact numerical difference between the ranks (e.g., the difference between 1st and 2nd isn't necessarily the same as between 2nd and 3rd)."
+    "question": "What is the time complexity of linear search in the worst case?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+    "correct": 1,
+    "explanation": "In the worst case, linear search may need to check all elements."
   },
   {
-    "question": "35. Which of the following is an example of a Nominal attribute?",
+    "question": "What is the primary advantage of binary search over linear search?",
     "options": [
-      "Age",
-      "Blood type (A, B, AB, O)",
-      "Rank in a competition",
-      "Weight in kilograms"
+      "Simplicity",
+      "Works with unsorted data",
+      "Faster for large datasets",
+      "Can be implemented recursively"
     ],
-    "correct": "Blood type (A, B, AB, O)",
-    "explanation": "Blood type is a nominal attribute as it categorizes individuals without any inherent order or numerical value."
+    "correct": 2,
+    "explanation": "Binary search has a logarithmic time complexity O(log n), making it much faster than linear search for large arrays."
   },
   {
-    "question": "36. Which of the following is an example of Ordinal data",
+    "question": "What type of dataset can linear search work with?",
     "options": [
-      "Monthly income",
-      "Education level (High School, Bachelor’s, Master’s)",
-      "Age"
+      "Only sorted",
+      "Only unsorted",
+      "Both sorted and unsorted",
+      "None of the above"
     ],
-    "correct": "Education level (High School, Bachelor’s, Master’s)",
-    "explanation": "Education levels have a clear order (Master's is higher than Bachelor's), but the 'distance' between these levels isn't necessarily equal or precisely measurable."
+    "correct": 2,
+    "explanation": "Unlike binary search, linear search does not require the array to be sorted."
   },
   {
-    "question": "37. Which of the following is an example of Interval data?",
+    "question": "In binary search, when is the search interval halved?",
     "options": [
-      "Salary of employees",
-      "Temperature in Celsius",
-      "Ranking in a contest",
-      "The number of children in a family"
+      "Each time the target is less than the middle element",
+      "Each time the target is greater than the middle element",
+      "Both A and B",
+      "Never"
     ],
-    "correct": "Temperature in Celsius",
-    "explanation": "Temperature in Celsius (or Fahrenheit) is interval data. Differences are meaningful (20°C is 10°C hotter than 10°C), but there's no true zero representing the absence of temperature."
+    "correct": 2,
+    "explanation": "The search interval is halved whether the target is smaller or larger than the current midpoint."
   },
   {
-    "question": "38. The cut-in voltage for silicon diode is approximately",
+    "question": "In the binary search algorithm, what happens when the target is found?",
     "options": [
-      "0.2 V",
-      "0.6 V",
-      "1.1 V",
-      "1.4 V"
+      "The algorithm stops",
+      "The search continues",
+      "The array is sorted",
+      "The index is reset"
     ],
-    "correct": "0.6 V",
-    "explanation": "Silicon diodes typically require approximately 0.6V to 0.7V to overcome the depletion region and start conducting current significantly."
+    "correct": 0,
+    "explanation": "Once the target is found, the algorithm returns its position and terminates."
   },
   {
-    "question": "39. The PN junction diode is used as",
+    "question": "The implementation of linear search returns -1 when:",
     "options": [
-      "An amplifier",
-      "A rectifier",
-      "An oscillator",
-      "A filter"
+      "The array is null",
+      "The target is the first element",
+      "The target is not found",
+      "The target is the last element"
     ],
-    "correct": "A rectifier",
-    "explanation": "A primary function of a PN junction diode is to allow current to flow predominantly in one direction, which is fundamental to converting AC (alternating current) to DC (direct current) in a process called rectification."
+    "correct": 2,
+    "explanation": "This is a common convention used to indicate that the target was not present in the array."
   },
   {
-    "question": "40. In the depletion region of an unbiased PN junction diode there are",
+    "question": "Which of the following statements is true about binary search?",
     "options": [
-      "Only electrons",
-      "Only holes",
-      "Only fixed ions",
-      "Equal numbers of electrons and holes"
+      "It can be performed on an unsorted array.",
+      "It requires less memory than linear search.",
+      "It is faster than linear search on average.",
+      "It involves checking each element one by one."
     ],
-    "correct": "Only fixed ions",
-    "explanation": "The depletion region is formed by the diffusion of charge carriers across the junction, leaving behind immobile, fixed positive and negative ions, creating an electric field."
+    "correct": 2,
+    "explanation": "Binary search is faster than linear search on average, especially for large datasets."
   },
   {
-    "question": "41. What is the primary function of a diode?",
+    "question": "An example of a situation where linear search would be preferable is:",
     "options": [
-      "To store charge",
-      "To amplify signals",
-      "To allow current flow in one direction only",
-      "To generate AC voltage"
+      "Searching in large sorted arrays",
+      "Searching small unsorted datasets",
+      "When time complexity is crucial",
+      "When data is in a binary search tree"
     ],
-    "correct": "To allow current flow in one direction only",
-    "explanation": "The key characteristic of a diode is its unidirectional conductivity, acting like a one-way valve for electrical current."
+    "correct": 1,
+    "explanation": "For small datasets, the overhead of sorting for binary search may outweigh its benefits."
   },
   {
-    "question": "42. What is the main purpose of a Zener diode?",
-    "options": [
-      "To convert AC to DC",
-      "To regulate voltage",
-      "To amplify signals",
-      "To store energy"
-    ],
-    "correct": "To regulate voltage",
-    "explanation": "Zener diodes are specifically designed to operate in reverse breakdown mode, maintaining a constant voltage across their terminals, making them ideal for voltage regulation."
+    "question": "Linear search is efficient for large datasets.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "Linear search has O(n) time complexity, which is inefficient for large arrays."
   },
   {
-    "question": "43. Which type of diode is used to convert light into an electrical signal?",
-    "options": [
-      "Zener diode",
-      "Light Emitting Diode (LED)",
-      "Photodiode",
-      "Schottky diode"
-    ],
-    "correct": "Photodiode",
-    "explanation": "Photodiodes are semiconductor devices that convert light energy into electrical current, typically used in light detection applications."
+    "question": "For binary search, the array must be sorted.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, binary search depends on the order of the elements to eliminate parts of the array."
   },
   {
-    "question": "44. In a half-wave rectifier, how much of the AC signal is converted into DC?",
-    "options": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ],
-    "correct": "50%",
-    "explanation": "A half-wave rectifier utilizes only one half (either positive or negative) of the incoming AC waveform, effectively converting 50% of the AC signal into a pulsating DC output."
+    "question": "The time complexity of binary search is O(n).",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, binary search runs in O(log n) time."
   },
   {
-    "question": "45. The Op-Amp amplifies _______ between two input signals, known as the differential input voltage, in its open-loop operation.",
-    "options": [
-      "The sum",
-      "The product",
-      "The difference",
-      "The average"
-    ],
-    "correct": "The difference",
-    "explanation": "An Operational Amplifier (Op-Amp) is designed to amplify the voltage difference between its two input terminals (inverting and non-inverting)."
+    "question": "Both linear search and binary search can return the index of the found element.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, both algorithms can be implemented to return the index of the target if found."
   },
   {
-    "question": "46. What is the phase shift between the input and output of an inverting Op-Amp?",
-    "options": [
-      "0°",
-      "90°",
-      "180°",
-      "270°"
-    ],
-    "correct": "180°",
-    "explanation": "An inverting Op-Amp circuit produces an output signal that is 180 degrees out of phase with its input signal, meaning it's inverted."
+    "question": "Binary search can be implemented using recursion.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, binary search is often implemented recursively due to its divide-and-conquer nature."
   },
   {
-    "question": "47. How many terminals does a standard operational amplifier (Op-Amp) have?",
-    "options": [
-      "2",
-      "3",
-      "5",
-      "8"
-    ],
-    "correct": "5",
-    "explanation": "A typical dual-in-line package (DIP) Op-Amp IC has 8 pins, including two inputs, one output, power supply pins, and often offset null pins."
+    "question": "Linear search is useful when the dataset is very large and sorted.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, binary search is more suitable for large sorted datasets."
   },
   {
-    "question": "48. Which of the following is NOT a terminal of an operational amplifier (Op-Amp)?",
-    "options": [
-      "Inverting input",
-      "Non-inverting input",
-      "Ground",
-      "Collector"
-    ],
-    "correct": "Collector",
-    "explanation": "The 'Collector' is a terminal associated with Bipolar Junction Transistors (BJTs), not operational amplifiers."
+    "question": "The element being searched for can be present more than once in an array, and linear search will find one of its occurrences.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, linear search finds the first occurrence unless modified to find all occurrences."
   },
   {
-    "question": "49. How many terminals does a Bipolar Junction Transistor (BJT) have?",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "correct": "3",
-    "explanation": "A BJT has three terminals: the Collector, Base, and Emitter."
+    "question": "Binary search can be implemented without knowing the length of the collection.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, binary search requires knowledge of the start and end indices."
   },
   {
-    "question": "50. Which of the following are the terminals of a BJT?",
-    "options": [
-      "Anode, Cathode, Base",
-      "Drain, Source, Gate",
-      "Collector, Base, Emitter",
-      "Input, Output, Ground"
-    ],
-    "correct": "Collector, Base, Emitter",
-    "explanation": "These are the three distinct regions and corresponding terminals of a BJT, through which current flows and is controlled."
+    "question": "Linear search can be optimized to give better performance for specific cases.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "While basic linear search cannot be significantly optimized, some variations exist for certain use cases."
   },
   {
-    "question": "51. What is the basic structure of a Bipolar Junction Transistor (BJT)?",
-    "options": [
-      "Two P-type and one N-type semiconductor layers",
-      "Two N-type and one P-type semiconductor layers",
-      "A single P-N junction",
-      "Both a) and b)"
-    ],
-    "correct": "Both a) and b)",
-    "explanation": "BJTs come in two main types: NPN (two N-type and one P-type layer) and PNP (two P-type and one N-type layer), both having three layers."
+    "question": "The mid-point calculation in a binary search can cause integer overflow in some programming languages.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, particularly in languages like Java or C++ where integer overflow can occur with large arrays."
   },
   {
-    "question": "52. What is the main application of BJTs in embedded systems?",
-    "options": [
-      "Wireless communication",
-      "Power amplification and switching",
-      "Image processing",
-      "Data storage"
-    ],
-    "correct": "Power amplification and switching",
-    "explanation": "BJTs are widely used as switches to turn currents on/off and as amplifiers to boost signal strength in embedded systems due to their ability to control larger currents with a small base current."
+    "question": "If the target element is less than the middle element in binary search, the right half of the collection is ignored.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, this is how binary search narrows down the search space."
   },
   {
-    "question": "53. What is the primary disadvantage of BJTs in embedded applications compared to MOSFETs?",
-    "options": [
-      "Lower switching speed and higher power dissipation",
-      "Higher input impedance",
-      "Requires fewer components",
-      "Easier to bias"
-    ],
-    "correct": "Lower switching speed and higher power dissipation",
-    "explanation": "Compared to MOSFETs, BJTs typically have a slower switching speed and can dissipate more power, especially in applications requiring high efficiency."
+    "question": "The main loop of a linear search terminates when the target element is found.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, the loop breaks as soon as the element is located."
   },
   {
-    "question": "54. What is the main application of MOSFETs in embedded systems?",
-    "options": [
-      "Data storage",
-      "Power management and motor control",
-      "Display screens",
-      "RF signal reception"
-    ],
-    "correct": "Power management and motor control",
-    "explanation": "MOSFETs are excellent switches and power controllers due to their high input impedance, low on-resistance, and fast switching speeds, making them ideal for power management and driving motors in embedded systems."
+    "question": "In a binary search, if the target is less than the last element, it is guaranteed to be in the left sub-array.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, only if the array is sorted and the comparison is made with the middle element."
   },
   {
-    "question": "55. Which of the following is NOT a MOSFET terminal?",
-    "options": [
-      "Gate",
-      "Collector",
-      "Drain",
-      "Source"
-    ],
-    "correct": "Collector",
-    "explanation": "The 'Collector' is a terminal of a BJT, not a MOSFET. MOSFETs have Gate, Drain, and Source terminals."
+    "question": "Both searching algorithms can be implemented in the same programming environment.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, both can be implemented in any language that supports basic loops and conditionals."
   },
   {
-    "question": "56. Which MOSFET terminal controls the current flow between source and drain?",
-    "options": [
-      "Gate",
-      "Drain",
-      "Source",
-      "Body"
-    ],
-    "correct": "Gate",
-    "explanation": "The Gate terminal acts like a control knob, and applying a voltage to it creates an electric field that modulates the current flow between the Source and Drain terminals."
+    "question": "Binary search is always the preferred method for searching, regardless of the dataset's state.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, linear search is preferred for small or unsorted datasets."
   },
   {
-    "question": "57. Which register in AVR microcontrollers is used to configure a pin as input or output?",
-    "options": [
-      "PORTx",
-      "PINx",
-      "DDRx",
-      "SPCR"
-    ],
-    "correct": "DDRx",
-    "explanation": "The Data Direction Register (DDRx, where x is the port letter) is used to set the direction of pins for a specific port (0 for input, 1 for output)."
+    "question": "A linear search can correctly identify if there are duplicates in an array.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, while linear search can detect duplicates during traversal, it doesn't inherently check for them."
   },
   {
-    "question": "58. To read the current logic level of an input pin on PORTD, which register should be used?",
-    "options": [
-      "PORTD",
-      "DDRD",
-      "PIND",
-      "SPDR"
-    ],
-    "correct": "PIND",
-    "explanation": "The PINx register (e.g., PIND) is used to read the current state of the input pins on a specific port."
+    "question": "The efficiency of a search algorithm is determined solely by its time complexity.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, other factors such as space complexity and real-world performance also matter."
   },
   {
-    "question": "59. What is the function of the PORTx register when a pin is configured as output?",
-    "options": [
-      "It disables the pin",
-      "It reads analog values",
-      "It sets the output HIGH or LOW",
-      "It configures the direction"
-    ],
-    "correct": "It sets the output HIGH or LOW",
-    "explanation": "When a pin is configured as an output, writing a 1 to the corresponding bit in PORTx sets the pin HIGH, and writing a 0 sets it LOW."
+    "question": "Linear search requires no additional data structure.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, it works directly on the input array without needing extra storage."
   },
   {
-    "question": "60. What will the following code do? DDRB = 0xFF; PORTB = 0x00;",
-    "options": [
-      "Configure all PORTB pins as inputs and set them LOW",
-      "Configure all PORTB pins as outputs and set them LOW",
-      "Configure all PORTB pins as outputs and set them HIGH",
-      "Configure all PORTB pins as inputs and set them HIGH"
-    ],
-    "correct": "Configure all PORTB pins as outputs and set them LOW",
-    "explanation": "DDRB = 0xFF sets all pins on Port B as outputs. PORTB = 0x00 sets all these output pins to a LOW logic level."
+    "question": "Binary search can find the target value faster than linear search for nearly all cases.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, for very small or unsorted datasets, linear search might be faster."
   },
   {
-    "question": "61. What does the Timer/Counter register (e.g., TCNT0) do in AVR microcontrollers?",
-    "options": [
-      "Sets the baud rate for UART",
-      "Holds the current count value of the timer",
-      "Stores the ADC conversion result",
-      "Enables or disables external interrupts"
-    ],
-    "correct": "Holds the current count value of the timer",
-    "explanation": "The TCNT (Timer/Counter) register stores the current count of the timer, which increments with each clock cycle or event."
+    "question": "The linear search algorithm is usually easier to implement than the binary search.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, linear search uses a simple loop without the need for dividing ranges."
   },
   {
-    "question": "62. In CTC mode, what happens when the timer value matches the OCR (Output Compare Register) value?",
+    "question": "What type of algorithm is Merge Sort?",
     "options": [
-      "Timer stops",
-      "Timer resets to 0",
-      "Timer overflows",
-      "Interrupt is disabled"
+      "Greedy",
+      "Divide and Conquer",
+      "Dynamic Programming",
+      "Backtracking"
     ],
-    "correct": "Timer resets to 0",
-    "explanation": "In Clear Timer on Compare Match (CTC) mode, the timer/counter register (TCNT) is cleared to 0 when its value matches the value in the Output Compare Register (OCR)."
+    "correct": 1,
+    "explanation": "Merge Sort follows a divide-and-conquer approach by splitting the array, sorting subarrays, and merging them back together."
   },
   {
-    "question": "63. What is the primary advantage of using interrupts in a microcontroller-based system?",
-    "options": [
-      "Reduces the need for memory",
-      "Increases power consumption",
-      "Allows the CPU to respond immediately to external events",
-      "Makes the program run slower"
-    ],
-    "correct": "Allows the CPU to respond immediately to external events",
-    "explanation": "Interrupts provide a mechanism for the microcontroller to temporarily suspend its current operation and respond to critical external or internal events in a timely manner."
+    "question": "How many elements are in each subarray when Merge Sort has completed its recursive division?",
+    "options": ["One", "Two", "Three", "Four"],
+    "correct": 0,
+    "explanation": "Merge Sort divides the array recursively until each subarray contains only one element."
   },
   {
-    "question": "64. What happens when an interrupt occurs in an AVR microcontroller?",
-    "options": [
-      "The microcontroller shuts down",
-      "The current program is permanently stopped",
-      "The microcontroller jumps to a special routine to handle the event",
-      "Nothing happens unless a timer is running"
-    ],
-    "correct": "The microcontroller jumps to a special routine to handle the event",
-    "explanation": "Upon an interrupt, the CPU saves its current context and branches to a specific Interrupt Service Routine (ISR) designed to handle that particular event."
+    "question": "What is the time complexity of Merge Sort?",
+    "options": ["O(n)", "O(n^2)", "O(log n)", "O(n log n)"],
+    "correct": 3,
+    "explanation": "Merge Sort runs in O(n log n) time for all cases due to its divide-and-conquer structure."
   },
   {
-    "question": "65. What is the name of the function that automatically executes when a specific interrupt occurs?",
+    "question": "During the merging phase, what does the algorithm primarily accomplish?",
     "options": [
-      "Main routine",
-      "Watchdog",
-      "Interrupt Service Routine (ISR)",
-      "Polling function"
+      "Divide the array further",
+      "Sort and merge the subarrays",
+      "Randomize the array",
+      "None of the above"
     ],
-    "correct": "Interrupt Service Routine (ISR)",
-    "explanation": "An Interrupt Service Routine (ISR) is a block of code specifically designed to execute when a corresponding interrupt event is triggered."
+    "correct": 1,
+    "explanation": "The merge step combines two sorted subarrays into a single sorted array."
   },
   {
-    "question": "66. What is the primary function of an ADC in AVR microcontrollers?",
+    "question": "What is required for the merging step in Merge Sort?",
     "options": [
-      "Convert digital data to analog",
-      "Convert analog signals to digital values",
-      "Send data over serial",
-      "Control voltage levels"
+      "Two temporary arrays",
+      "One temporary array",
+      "A sorting library",
+      "No extra space"
     ],
-    "correct": "Convert analog signals to digital values",
-    "explanation": "An Analog-to-Digital Converter (ADC) translates continuous analog voltage signals into discrete digital values that the microcontroller can process."
+    "correct": 0,
+    "explanation": "Typically, two temporary arrays are used to hold the left and right halves during the merge process."
   },
   {
-    "question": "67. What is the default reference voltage used for ADC in Arduino/AVR?",
-    "options": [
-      "12V",
-      "3.3V",
-      "5V",
-      "9V"
-    ],
-    "correct": "5V",
-    "explanation": "For most Arduino boards (which use AVR microcontrollers), the default ADC reference voltage is the board's operating voltage, typically 5V."
+    "question": "What is the space complexity of Merge Sort due to temporary arrays?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    "correct": 1,
+    "explanation": "Merge Sort requires additional memory proportional to the size of the input array."
   },
   {
-    "question": "68. Which Arduino function is used to read analog input?",
+    "question": "Merge Sort is well-suited for:",
     "options": [
-      "digitalRead()",
-      "analogRead()",
-      "readADC()",
-      "adcStart()"
+      "Small datasets",
+      "Large datasets",
+      "When memory is limited",
+      "Only for sorted data"
     ],
-    "correct": "analogRead()",
-    "explanation": "The `analogRead()` function in Arduino is used to read the value from a specified analog pin, converting the analog voltage to a digital number."
+    "correct": 1,
+    "explanation": "Its consistent O(n log n) performance makes it ideal for large datasets."
   },
   {
-    "question": "69. What Arduino function is used to turn an LED ON or OFF?",
+    "question": "In Merge Sort, the base case for recursion occurs when:",
     "options": [
-      "analogWrite()",
-      "digitalRead()",
-      "pinMode()",
-      "digitalWrite()"
+      "The array has multiple elements",
+      "The array is sorted",
+      "The subarray has only one element",
+      "The array is empty"
     ],
-    "correct": "digitalWrite()",
-    "explanation": "The `digitalWrite()` function sets the state of a digital pin to either HIGH (ON) or LOW (OFF)."
+    "correct": 2,
+    "explanation": "Recursion stops when the subarray contains only one element, which is inherently sorted."
   },
   {
-    "question": "70. What does the following code do? digitalWrite(13, HIGH); delay(1000); digitalWrite(13, LOW);",
+    "question": "Merge Sort is stable. What does this mean?",
     "options": [
-      "Turns off the LED",
-      "Turns on the LED continuously",
-      "Blinks the LED for 1 second",
-      "Dims the LED"
+      "It is faster than other algorithms",
+      "It preserves the relative order of equal elements",
+      "It requires less memory",
+      "It is not affected by input order"
     ],
-    "correct": "Blinks the LED for 1 second",
-    "explanation": "This code turns an LED connected to pin 13 ON for 1 second, then turns it OFF, creating a blink effect."
+    "correct": 1,
+    "explanation": "Stability ensures that equal elements retain their original order after sorting."
   },
   {
-    "question": "71. Before controlling an LED pin, you should configure it as:",
+    "question": "Which of the following steps is NOT part of the Merge Sort algorithm?",
     "options": [
-      "Input",
-      "Analog",
-      "Output",
-      "Interrupt"
+      "Splitting the array",
+      "Merging subarrays",
+      "Randomizing elements",
+      "Recursion"
     ],
-    "correct": "Output",
-    "explanation": "To control an LED (i.e., send a voltage out), the pin must be configured as an OUTPUT using `pinMode()`."
+    "correct": 2,
+    "explanation": "Merge Sort does not involve randomization; it's a deterministic algorithm."
   },
   {
-    "question": "72. Why is a motor driver (like L298N) used with a microcontroller?",
-    "options": [
-      "To change signal types",
-      "To reduce power",
-      "To allow the microcontroller to handle high current safely",
-      "To read analog signals"
-    ],
-    "correct": "To allow the microcontroller to handle high current safely",
-    "explanation": "Microcontrollers can only provide very small currents. Motor drivers act as an interface, allowing the microcontroller to switch larger currents required to drive motors without damage."
+    "question": "Merge Sort can be implemented using both recursion and iteration.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, although the recursive version is more common, an iterative version also exists."
   },
   {
-    "question": "73. What is the function of PWM in motor control?",
-    "options": [
-      "Turning motor ON/OFF only",
-      "Controlling motor speed",
-      "Changing motor type",
-      "Reversing direction"
-    ],
-    "correct": "Controlling motor speed",
-    "explanation": "Pulse Width Modulation (PWM) varies the effective voltage delivered to the motor by rapidly switching the power ON and OFF, thereby controlling its speed."
+    "question": "The merge step of Merge Sort takes O(1) time.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, the merge step takes O(n) time as it processes all elements in the subarrays."
   },
   {
-    "question": "74. What does a typical DC motor need for direction control?",
-    "options": [
-      "One signal wire",
-      "An analog input",
-      "Two digital pins (IN1 and IN2)",
-      "Only ground"
-    ],
-    "correct": "Two digital pins (IN1 and IN2)",
-    "explanation": "H-bridge motor drivers (like L298N) typically use two input pins (IN1 and IN2) to control the direction of the DC motor by changing the polarity of the voltage supplied to it."
+    "question": "Merge Sort can be used for linked lists more efficiently than for arrays.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, because linked lists allow efficient insertion and merging without needing extra space."
   },
   {
-    "question": "75. What does “16x2 LCD” mean?",
-    "options": [
-      "16 pixels by 2 pixels",
-      "16 characters per row, 2 rows",
-      "16 lines and 2 columns",
-      "16-bit data and 2-line display"
-    ],
-    "correct": "16 characters per row, 2 rows",
-    "explanation": "A 16x2 LCD display means it can display 16 characters on each of its 2 rows."
+    "question": "The space complexity of Merge Sort is O(log n).",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, the space complexity is O(n) due to the need for temporary arrays."
   },
   {
-    "question": "76. Which library is commonly used to control a text LCD in Arduino?",
-    "options": [
-      "Wire.h",
-      "LiquidCrystal.h",
-      "Servo.h",
-      "LCDtext.h"
-    ],
-    "correct": "LiquidCrystal.h",
-    "explanation": "The `LiquidCrystal.h` library is the standard Arduino library for interfacing with Hitachi HD44780 based character LCDs."
+    "question": "After the merge operation, the entire array is sorted correctly.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, the merge process ensures that all subarrays are combined into a fully sorted array."
   },
   {
-    "question": "77. What is the first step to display text on an LCD in Arduino?",
-    "options": [
-      "Use lcd.print()",
-      "Declare pins and initialize LCD with lcd.begin()",
-      "Call analogWrite()",
-      "Enable backlight"
-    ],
-    "correct": "Declare pins and initialize LCD with lcd.begin()",
-    "explanation": "Before printing anything, you must declare the pins connected to the LCD and initialize the LCD object using `lcd.begin()` in the `setup()` function."
+    "question": "Merge Sort requires more space than Quick Sort.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, Merge Sort uses O(n) space while Quick Sort is typically in-place with O(log n) stack space."
   },
   {
-    "question": "78. What is one advantage of using an OLED display over a standard LCD?",
-    "options": [
-      "Consumes more power",
-      "Requires backlight",
-      "Sharper, high-contrast graphics",
-      "Only works in bright light"
-    ],
-    "correct": "Sharper, high-contrast graphics",
-    "explanation": "OLED (Organic Light-Emitting Diode) displays generate their own light, resulting in deeper blacks, higher contrast, and wider viewing angles compared to traditional LCDs which require backlighting."
+    "question": "Merge Sort is faster than Bubble Sort for all input sizes.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, Bubble Sort has O(n²) time complexity, which is worse than Merge Sort's O(n log n)."
   },
   {
-    "question": "79. What kind of information can be displayed on an OLED?",
-    "options": [
-      "Only numbers",
-      "Only sensor data",
-      "Text and graphics",
-      "Only voltage readings"
-    ],
-    "correct": "Text and graphics",
-    "explanation": "OLED displays are versatile and can show both text and complex graphical elements, making them suitable for various embedded applications."
+    "question": "Merge Sort is not suitable for sorting a small number of items.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, for small datasets, simpler algorithms like Insertion Sort are often more efficient."
   },
   {
-    "question": "80. What is the role of pinMode() in Arduino C when programming AVR microcontrollers?",
-    "options": [
-      "It sets the voltage level",
-      "It sets a pin as input or output",
-      "It disables interrupts",
-      "It reads analog values"
-    ],
-    "correct": "It sets a pin as input or output",
-    "explanation": "The `pinMode()` function configures a specified pin to behave as either an INPUT or an OUTPUT."
+    "question": "The division step of Merge Sort cuts the array into three sections.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, Merge Sort divides the array into two halves at each step."
   },
   {
-    "question": "81. Which tool is commonly used to write and debug code for AVR microcontrollers?",
-    "options": [
-      "Photoshop",
-      "Arduino IDE or Atmel Studio",
-      "MS Word",
-      "MATLAB"
-    ],
-    "correct": "Arduino IDE or Atmel Studio",
-    "explanation": "The Arduino IDE provides a user-friendly environment for programming AVR-based boards, while Atmel Studio (now Microchip Studio) is a more comprehensive professional IDE for AVR microcontrollers."
+    "question": "Merge Sort can be adapted for external sorting where data is too large to fit into memory.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, Merge Sort is commonly used in external sorting applications due to its sequential access pattern."
   },
+
   {
-    "question": "What does the Entropy formula measure in a decision tree?",
+    "question": "In which scenario would Merge Sort generally perform worse?",
     "options": [
-      "The maximum probability of a class at a node",
-      "The probability that a randomly chosen element is incorrectly classified",
-      "The degree of impurity or disorder in a node",
-      "The number of classes present in the dataset"
+      "When the input is small",
+      "When the input is large",
+      "When the array is already sorted",
+      "When memory is not an issue"
     ],
-    "correct": "The degree of impurity or disorder in a node",
-    "explanation": "Entropy measures the amount of uncertainty or disorder in a node. Lower entropy indicates higher purity."
+    "correct": 0,
+    "explanation": "For small datasets, the overhead of recursion and memory usage makes it slower compared to simple algorithms."
   },
   {
-    "question": "Which impurity measure uses the formula 1 - max[pi(t)]?",
+    "question": "What is the main disadvantage of Merge Sort?",
     "options": [
-      "Gini Index",
-      "Entropy",
-      "Classification error",
-      "Variance reduction"
+      "It is not stable",
+      "It requires extra storage space",
+      "It has a high time complexity",
+      "It is difficult to implement"
     ],
-    "correct": "Classification error",
-    "explanation": "Classification error is calculated as 1 minus the maximum probability of any class at a node."
+    "correct": 1,
+    "explanation": "Merge Sort uses additional memory, making it less efficient in terms of space."
   },
   {
-    "question": "In the formulas shown, what does pi(t) represent?",
-    "options": [
-      "Total number of records in the dataset",
-      "Number of features",
-      "Frequency (probability) of class i at node t",
-      "Weight of the attribute in the tree"
-    ],
-    "correct": "Frequency (probability) of class i at node t",
-    "explanation": "pi(t) represents the proportion or probability of samples belonging to class i at a given node t."
+    "question": "In Merge Sort, how many levels does the recursion generate for an array of size n?",
+    "options": ["n", "log₂(n)", "n^2", "n log n"],
+    "correct": 1,
+    "explanation": "Each level splits the array in half, resulting in log₂(n) levels of recursion."
   },
   {
-    "question": "If a node contains samples from only one class, which of the following will be true?",
-    "options": [
-      "Entropy = 1",
-      "Gini Index = 1",
-      "Entropy = 0 and Gini Index = 0",
-      "Misclassification error = 1"
-    ],
-    "correct": "Entropy = 0 and Gini Index = 0",
-    "explanation": "When all samples in a node belong to the same class, there is no impurity, so both entropy and Gini index equal zero."
+    "question": "Merge Sort can sort elements in descending order by simply reversing the comparison during the merge step.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, by changing the comparison logic from '<' to '>', you can sort in descending order."
   },
   {
-    "question": "What is an itemset?",
-    "options": [
-      "A group of frequent transactions",
-      "A collection of one or more items",
-      "A single item in a transaction",
-      "A transaction with the least items"
-    ],
-    "correct": "A collection of one or more items",
-    "explanation": "An itemset is a set of one or more items that can appear together in a transaction, used in association rule mining."
+    "question": "Merge Sort is an in-place sorting algorithm.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, Merge Sort requires additional memory for merging, so it is not in-place."
+  },
+  {
+    "question": "The main component of Merge Sort is the divide step, which splits the array.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, the divide step is essential for breaking the problem into smaller subproblems."
+  },
+  {
+    "question": "All sorting algorithms are stable.",
+    "options": ["True", "False"],
+    "correct": 1,
+    "explanation": "No, some algorithms like Quick Sort are unstable unless specifically modified."
+  },
+  {
+    "question": "An array that is already sorted will still require O(n log n) operations for Merge Sort.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, Merge Sort always performs O(n log n) operations regardless of the initial order."
+  },
+  {
+    "question": "The merge function in Merge Sort can be optimized to use less memory.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, there are in-place variants and optimizations to reduce memory usage."
+  },
+  {
+    "question": "The overall performance of Merge Sort can be affected by the size of the input data.",
+    "options": ["True", "False"],
+    "correct": 0,
+    "explanation": "Yes, although the time complexity remains O(n log n), actual runtime increases with larger inputs."
   }
 ]
