@@ -284,21 +284,44 @@
       </div>
     </section>
 
-
-    <!-- Section: Notes -->
     <section class="glass-card p-6 rounded-xl shadow-lg">
       <h2 class="text-2xl font-bold mb-4 text-blue-400">📌 Important Notes</h2>
       <ul class="space-y-2 list-disc pl-5">
-        <li><span class="highlight">✅ Linear Search:</span> Does not require sorted data. Suitable for small or simple cases.</li>
-        <li><span class="highlight">✅ Binary Search:</span> Very fast but requires the array to be sorted beforehand.</li>
-        <li><span class="highlight">✅ Merge Sort vs Quick Sort:</span>
-          <ul class="list-disc ml-5 mt-1">
-            <li>Merge Sort always runs in O(n log n), but needs extra space.</li>
-            <li>Quick Sort is usually faster, but worst-case performance is O(n²).</li>
+        <li><span class="highlight">✅ Linear Search:</span> Does not require sorted data. Simple but inefficient for large arrays.</li>
+        
+        <li><span class="highlight">✅ Binary Search:</span> Very fast (logarithmic) but works only on sorted arrays.</li>
+        
+        <li><span class="highlight">✅ Bubble Sort:</span> Easy to implement. Best only for small or nearly sorted data. Inefficient for large data.</li>
+        
+        <li><span class="highlight">✅ Insertion Sort:</span> Efficient for small or nearly sorted datasets. Stable and in-place.</li>
+        
+        <li><span class="highlight">✅ Selection Sort:</span> Always performs the same number of comparisons, regardless of input order. Simple but inefficient. Unstable.</li>
+        
+        <li><span class="highlight">✅ Quick Sort:</span> Fast in practice and used in many libraries. Worst-case O(n²), but average O(n log n). Unstable, in-place.</li>
+        
+        <li><span class="highlight">✅ Merge Sort:</span> Always O(n log n). Stable but requires extra memory space. Good for linked lists and external sorting.</li>
+        
+        <li><span class="highlight">✅ Heap Sort:</span> In-place, O(n log n) in all cases. Not stable. Useful when memory usage is critical.</li>
+        
+        <li><span class="highlight">✅ Counting / Radix / Bucket:</span> Not based on comparisons. Very fast for known-range or integer-based data. Require extra space and sometimes limited to specific data types.</li>
+        
+        <li><span class="highlight">🟡 Stability:</span> A stable algorithm keeps equal elements in their original order. Useful in multi-level sorting (e.g., sorting by name then age).</li>
+    
+        <li><span class="highlight">🔁 In-place:</span> Algorithms that sort the data within the original structure without extra memory (e.g., Quick Sort, Heap Sort).</li>
+    
+        <li><span class="highlight">📦 Non-comparison sorts:</span> Algorithms like Counting, Radix, and Bucket Sort can beat O(n log n) but only under specific conditions (integers, small range, uniform distribution).</li>
+        
+        <li><span class="highlight">🧠 Recommendation:</span> 
+          <ul class="ml-5 list-disc">
+            <li><span class="text-green-400">Use Quick Sort</span> for average cases when speed matters and data fits in memory.</li>
+            <li><span class="text-green-400">Use Merge Sort</span> when stability is needed or sorting linked lists.</li>
+            <li><span class="text-yellow-300">Use Counting/Radix</span> if input is integers and range is known.</li>
+            <li><span class="text-red-400">Avoid Bubble/Selection</span> in real-world large datasets.</li>
           </ul>
         </li>
       </ul>
     </section>
+    
   <!-- New Section: Sample Functions -->
   <section class="glass-card p-6 rounded-xl shadow-lg mt-10">
     <h2 class="text-2xl font-bold mb-4 text-blue-400">Sample Python Functions</h2>
