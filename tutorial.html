@@ -79,331 +79,59 @@
 
   <!-- Header -->
   <header class="text-center py-10 px-4">
-
-    <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-fade-in-down">Algorithm</h1> 
-    <p class="mt-3 text-sm text-yellow-400 animate-fade-in-down delay-100">
-      A collection of algorithms and data structures with interactive quizzes to test your knowledge.
-    <div class="text-center mt-6 w-100 flex gap-4 align-content-center justify-center animate-fade-in-down delay-200 ">
-      <a href="index.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">الرئيسية</a>
+    <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-fade-in-down">C# Quiz</h1> 
+    <p class="mt-3 text-sm text-yellow-400 animate-fade-in-down delay-100">Test your knowledge: write your answer first, then check the correct answer.</p>
+    <div class="text-center mt-6 w-100 flex gap-4 align-content-center justify-center animate-fade-in-down delay-200">
+      <a href="index.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">Home</a>
       <span class="border-l mt-[22px] border-gray-600 h-[30px] flex align-content-center items-center justify-center text-gray-500"></span>
-      <a href="complexity.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">Complexity Question</a>
+      <a href="tutorial.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">Tutorial</a>
     </div>
-      </header>
+  </header>
 
   <!-- Main Container -->
   <main class="max-w-6xl mx-auto px-4 pb-16 space-y-10">
 
-    <!-- Section: Big O Notations -->
-    <section class="glass-card p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-blue-400">Big O Time Complexity Table</h2>
-      <div class="overflow-x-auto">
-        <table class="w-full table-auto text-sm text-left">
-          <thead class="bg-gray-700/50">
-            <tr>
-              <th class="px-4 py-2">Complexity</th>
-              <th class="px-4 py-2">Notation</th>
-              <th class="px-4 py-2">Description</th>
-              <th class="px-4 py-2">Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t border-gray-700">
-              <td class="px-4 py-2">Constant</td>
-              <td class="px-4 py-2"><span class="highlight">O(1)</span></td>
-              <td class="px-4 py-2">Constant time, independent of input size</td>
-              <td class="px-4 py-2">Accessing an array element</td>
-            </tr>
-            <tr class="border-t border-gray-700">
-              <td class="px-4 py-2">Logarithmic</td>
-              <td class="px-4 py-2"><span class="highlight">O(log n)</span></td>
-              <td class="px-4 py-2">Problem size is halved each step</td>
-              <td class="px-4 py-2">Binary Search</td>
-            </tr>
-            <tr class="border-t border-gray-700">
-              <td class="px-4 py-2">Linear</td>
-              <td class="px-4 py-2"><span class="highlight">O(n)</span></td>
-              <td class="px-4 py-2">Time increases linearly with input size</td>
-              <td class="px-4 py-2">Linear Search</td>
-            </tr>
-            <tr class="border-t border-gray-700">
-              <td class="px-4 py-2">Quadratic</td>
-              <td class="px-4 py-2"><span class="highlight">O(n²)</span></td>
-              <td class="px-4 py-2">Time grows quadratically with input size</td>
-              <td class="px-4 py-2">Bubble Sort</td>
-            </tr>
-            <tr class="border-t border-gray-700">
-              <td class="px-4 py-2">Exponential</td>
-              <td class="px-4 py-2"><span class="highlight">O(2ⁿ)</span></td>
-              <td class="px-4 py-2">Exponential growth with input size</td>
-              <td class="px-4 py-2">Recursive Fibonacci</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Section: Sorting & Searching Algorithms Comparison -->
-    <section class="glass-card p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-bold mb-6 text-blue-400">Comparison of Search and Sorting Algorithms</h2>
-
-      <!-- Sorting Algorithms -->
-      <h3 class="text-lg font-semibold text-yellow-300 mb-2">🔃 Sorting Algorithms</h3>
-      <div class="overflow-x-auto mb-6">
-        <table class="w-full table-auto text-sm text-left border border-gray-600 rounded-lg">
-          <thead class="bg-gray-700/50 text-white">
-            <tr>
-              <th class="px-3 py-2">Algorithm</th>
-              <th class="px-3 py-2">Best</th>
-              <th class="px-3 py-2">Average</th>
-              <th class="px-3 py-2">Worst</th>
-              <th class="px-3 py-2">Space</th>
-              <th class="px-3 py-2">Notes</th>
-            </tr>
-          </thead>
-          <tbody class="bg-gray-800/30 text-white">
-            <!-- Bubble Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Bubble Sort</td>
-              <td class="px-3 py-2 text-green-400">O(n)</td>
-              <td class="px-3 py-2">O(n²)</td>
-              <td class="px-3 py-2 text-red-400">O(n²)</td>
-              <td class="px-3 py-2">O(1)</td>
-              <td class="px-3 py-2 text-green-300">Stable</td>
-            </tr>
-            <!-- Insertion Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Insertion Sort</td>
-              <td class="px-3 py-2 text-green-400">O(n)</td>
-              <td class="px-3 py-2">O(n²)</td>
-              <td class="px-3 py-2 text-red-400">O(n²)</td>
-              <td class="px-3 py-2">O(1)</td>
-              <td class="px-3 py-2 text-green-300">Stable</td>
-            </tr>
-            <!-- Selection Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Selection Sort</td>
-              <td class="px-3 py-2 text-red-400">O(n²)</td>
-              <td class="px-3 py-2">O(n²)</td>
-              <td class="px-3 py-2 text-red-400">O(n²)</td>
-              <td class="px-3 py-2">O(1)</td>
-              <td class="px-3 py-2 text-red-300">Unstable</td>
-            </tr>
-            <!-- Quick Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Quick Sort</td>
-              <td class="px-3 py-2 text-green-400">O(n log n)</td>
-              <td class="px-3 py-2">O(n log n)</td>
-              <td class="px-3 py-2 text-red-400">O(n²)</td>
-              <td class="px-3 py-2">O(log n) - O(n)</td>
-              <td class="px-3 py-2">Unstable (in-place)</td>
-            </tr>
-            <!-- Merge Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Merge Sort</td>
-              <td class="px-3 py-2 text-green-400">O(n log n)</td>
-              <td class="px-3 py-2">O(n log n)</td>
-              <td class="px-3 py-2 text-green-400">O(n log n)</td>
-              <td class="px-3 py-2">O(n)</td>
-              <td class="px-3 py-2 text-green-300">Stable</td>
-            </tr>
-            <!-- Heap Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Heap Sort</td>
-              <td class="px-3 py-2 text-green-400">O(n log n)</td>
-              <td class="px-3 py-2">O(n log n)</td>
-              <td class="px-3 py-2 text-green-400">O(n log n)</td>
-              <td class="px-3 py-2">O(1)</td>
-              <td class="px-3 py-2 text-red-300">Unstable</td>
-            </tr>
-            <!-- Counting Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Counting Sort</td>
-              <td class="px-3 py-2 text-green-400">O(n + k)</td>
-              <td class="px-3 py-2">O(n + k)</td>
-              <td class="px-3 py-2">O(n + k)</td>
-              <td class="px-3 py-2">O(k)</td>
-              <td class="px-3 py-2 text-yellow-300">Non-comparison sort</td>
-            </tr>
-            <!-- Bucket Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Bucket Sort</td>
-              <td class="px-3 py-2 text-green-400">O(n + k)</td>
-              <td class="px-3 py-2">O(n + k)</td>
-              <td class="px-3 py-2 text-red-400">O(n²)</td>
-              <td class="px-3 py-2">O(n + k)</td>
-              <td class="px-3 py-2 text-yellow-300">Uniform distribution</td>
-            </tr>
-            <!-- Radix Sort -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Radix Sort</td>
-              <td class="px-3 py-2 text-green-400">O(d·n)</td>
-              <td class="px-3 py-2">O(d·n)</td>
-              <td class="px-3 py-2">O(d·n)</td>
-              <td class="px-3 py-2">O(n + b)</td>
-              <td class="px-3 py-2 text-green-300">Stable, non-comparison</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Searching Algorithms -->
-      <h3 class="text-lg font-semibold text-yellow-300 mb-2">🔍 Searching Algorithms</h3>
-      <div class="overflow-x-auto">
-        <table class="w-full table-auto text-sm text-left border border-gray-600 rounded-lg">
-          <thead class="bg-gray-700/50 text-white">
-            <tr>
-              <th class="px-3 py-2">Algorithm</th>
-              <th class="px-3 py-2">Best</th>
-              <th class="px-3 py-2">Average</th>
-              <th class="px-3 py-2">Worst</th>
-              <th class="px-3 py-2">Space</th>
-              <th class="px-3 py-2">Notes</th>
-            </tr>
-          </thead>
-          <tbody class="bg-gray-800/30 text-white">
-            <!-- Linear Search -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Linear Search</td>
-              <td class="px-3 py-2 text-green-400">O(1)</td>
-              <td class="px-3 py-2">O(n)</td>
-              <td class="px-3 py-2 text-red-400">O(n)</td>
-              <td class="px-3 py-2">O(1)</td>
-              <td class="px-3 py-2">Any data</td>
-            </tr>
-            <!-- Binary Search -->
-            <tr class="border-t border-gray-700">
-              <td class="px-3 py-2">Binary Search</td>
-              <td class="px-3 py-2 text-green-400">O(1)</td>
-              <td class="px-3 py-2">O(log n)</td>
-              <td class="px-3 py-2 text-green-400">O(log n)</td>
-              <td class="px-3 py-2">O(1)</td>
-              <td class="px-3 py-2 text-yellow-300">Requires sorted array</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="glass-card p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-blue-400">📌 Important Notes</h2>
-      <ul class="space-y-2 list-disc pl-5">
-        <li><span class="highlight">✅ Linear Search:</span> Does not require sorted data. Simple but inefficient for large arrays.</li>
-        
-        <li><span class="highlight">✅ Binary Search:</span> Very fast (logarithmic) but works only on sorted arrays.</li>
-        
-        <li><span class="highlight">✅ Bubble Sort:</span> Easy to implement. Best only for small or nearly sorted data. Inefficient for large data.</li>
-        
-        <li><span class="highlight">✅ Insertion Sort:</span> Efficient for small or nearly sorted datasets. Stable and in-place.</li>
-        
-        <li><span class="highlight">✅ Selection Sort:</span> Always performs the same number of comparisons, regardless of input order. Simple but inefficient. Unstable.</li>
-        
-        <li><span class="highlight">✅ Quick Sort:</span> Fast in practice and used in many libraries. Worst-case O(n²), but average O(n log n). Unstable, in-place.</li>
-        
-        <li><span class="highlight">✅ Merge Sort:</span> Always O(n log n). Stable but requires extra memory space. Good for linked lists and external sorting.</li>
-        
-        <li><span class="highlight">✅ Heap Sort:</span> In-place, O(n log n) in all cases. Not stable. Useful when memory usage is critical.</li>
-        
-        <li><span class="highlight">✅ Counting / Radix / Bucket:</span> Not based on comparisons. Very fast for known-range or integer-based data. Require extra space and sometimes limited to specific data types.</li>
-        
-        <li><span class="highlight">🟡 Stability:</span> A stable algorithm keeps equal elements in their original order. Useful in multi-level sorting (e.g., sorting by name then age).</li>
-    
-        <li><span class="highlight">🔁 In-place:</span> Algorithms that sort the data within the original structure without extra memory (e.g., Quick Sort, Heap Sort).</li>
-    
-        <li><span class="highlight">📦 Non-comparison sorts:</span> Algorithms like Counting, Radix, and Bucket Sort can beat O(n log n) but only under specific conditions (integers, small range, uniform distribution).</li>
-        
-        <li><span class="highlight">🧠 Recommendation:</span> 
-          <ul class="ml-5 list-disc">
-            <li><span class="text-green-400">Use Quick Sort</span> for average cases when speed matters and data fits in memory.</li>
-            <li><span class="text-green-400">Use Merge Sort</span> when stability is needed or sorting linked lists.</li>
-            <li><span class="text-yellow-300">Use Counting/Radix</span> if input is integers and range is known.</li>
-            <li><span class="text-red-400">Avoid Bubble/Selection</span> in real-world large datasets.</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-    
-  <!-- New Section: Sample Functions -->
-  <section class="glass-card p-6 rounded-xl shadow-lg mt-10">
-    <h2 class="text-2xl font-bold mb-4 text-blue-400">Sample Python Functions</h2>
-    <p class="mb-4">Here are some sample Python functions demonstrating basic algorithms:</p>
-
-    <!-- Bubble Sort -->
-    <div class="mb-6">
-      <h3 class="text-xl font-bold mb-2">1. Bubble Sort</h3>
-      <p class="mb-2">This function sorts an array using the Bubble Sort algorithm.</p>
-      <pre><code class="language-python">
-def bubbleSort(arr):
-    n = len(arr)
-
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-      </code></pre>
-    </div>
-
-    <!-- Linear Search -->
-    <div class="mb-6">
-      <h3 class="text-xl font-bold mb-2">2. Linear Search</h3>
-      <p class="mb-2">This function searches for a target element in an array using Linear Search.</p>
-      <pre><code class="language-python">
-def linearSearch(arr, target):
-    n = len(arr)
-    for i in range(n):
-        if arr[i] == target:
-            return i
-    return -1
-      </code></pre>
-    </div>
-
-    <!-- Find Largest Number -->
-    <div class="mb-6">
-      <h3 class="text-xl font-bold mb-2">3. Find Largest Number</h3>
-      <p class="mb-2">This function finds the largest number in an array.</p>
-      <pre><code class="language-python">
-def largestNumber(arr):
-    n = len(arr)
-    largestNumber = arr[0]
-
-    for i in range(1, n):
-        if arr[i] > largestNumber:
-            largestNumber = arr[i]
-    return largestNumber
-      </code></pre>
-    </div>
-
-    <!-- Find Smallest Number -->
-    <div class="mb-6">
-      <h3 class="text-xl font-bold mb-2">4. Find Smallest Number</h3>
-      <p class="mb-2">This function finds the smallest number in an array.</p>
-      <pre><code class="language-python">
-def lowestNumber(arr):
-    n = len(arr)
-    lowestNumber = arr[0]
-
-    for i in range(1, n):
-        if arr[i] < lowestNumber:
-            lowestNumber = arr[i]
-    return lowestNumber
-      </code></pre>
-    </div>
-
-    <!-- Example Usage -->
-    <div>
-      <h3 class="text-xl font-bold mb-2">Example Usage</h3>
-      <p class="mb-2">Here's how you can use these functions:</p>
-      <pre><code class="language-python">
-arr = [60, 50, 20, 10, 40]
-print(largestNumber(arr))  # Output: 60
-      </code></pre>
-    </div>
-  </section>
+<section id="quiz-section" class="glass-card p-6 rounded-xl shadow-lg mt-10">
+  <h2 class="text-2xl font-bold mb-4 text-blue-400">C# Quiz</h2>
+  <div id="quiz-container" class="space-y-6"></div>
+</section>
   </main>
 
   <!-- Footer -->
   <footer class="text-center text-xs text-gray-600 py-4">
     © 2025 EgyTech | All rights reserved.
   </footer>
+<script>
+  async function loadQuiz() {
+    try {
+      // Fetch questions from a JSON file
+      const response = await fetch('questions.json');
+      if (!response.ok) throw new Error("Failed to load questions");
+      const questions = await response.json();
 
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = '';
+
+      questions.forEach((q, index) => {
+        const div = document.createElement('div');
+        div.className = 'glass-card p-4 rounded-lg shadow-lg hover:shadow-indigo-500/20 transition';
+
+        div.innerHTML = `
+          <h3 class="font-semibold text-lg mb-2">${index + 1}. ${q.question}</h3>
+          <p class="mt-2 text-green-400 font-medium">Answer: ${q.answer}</p>
+        `;
+
+        container.appendChild(div);
+      });
+
+    } catch (error) {
+      document.getElementById('quiz-container').innerHTML = `
+        <div class="bg-red-900/30 text-red-300 p-4 rounded-lg">⚠️ ${error.message}</div>
+      `;
+    }
+  }
+
+  window.onload = loadQuiz;
+</script>
 </body>
 </html>
