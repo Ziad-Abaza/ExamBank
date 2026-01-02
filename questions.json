@@ -398,6 +398,205 @@
   {
     "question": "How do you implement proper exception propagation in a method?",
     "answer": "Use throw; inside catch or let exception bubble up"
+  },
+  {
+    "question": "What is the difference between .NET SDK and .NET Runtime?",
+    "answer": "SDK includes the compiler, templates, and tools needed to build and run applications locally. Runtime includes only the components required to run an already-built application."
+  },
+  {
+    "question": "How do you create a new Minimal API project using CLI?",
+    "answer": "dotnet new web -n MyApi\ncd MyApi\ndotnet run"
+  },
+  {
+    "question": "What does app.Run() do in Program.cs?",
+    "answer": "Starts the Kestrel web server and makes the application listen for incoming HTTP requests."
+  },
+  {
+    "question": "What is the difference between app.Use(), app.Run(), and app.Map()?",
+    "answer": "Use: Adds middleware and can call the next middleware (await next()). Run: Terminal middleware — does not call the next middleware. Map: Creates a branch in the pipeline for specific routes."
+  },
+  {
+    "question": "What is middleware “short-circuiting”?",
+    "answer": "When a middleware does not call await next(), stopping the pipeline early. Example: API key validation that returns 401 immediately."
+  },
+  {
+    "question": "What is Dependency Injection (DI) and why is it important?",
+    "answer": "A design pattern where required objects (dependencies) are provided by a container instead of being created manually. Improves testability, decoupling, and lifetime management."
+  },
+  {
+    "question": "Difference between AddSingleton, AddScoped, and AddTransient?",
+    "answer": "Singleton: One instance for the entire application lifetime. Scoped: One instance per HTTP request. Transient: New instance every time the service is requested."
+  },
+  {
+    "question": "Why must DbContext not be registered as Singleton?",
+    "answer": "Because DbContext is request-scoped; using it as Singleton causes concurrency issues and invalid shared state."
+  },
+  {
+    "question": "What do UseRouting() and UseEndpoints() do?",
+    "answer": "UseRouting() matches routes. UseEndpoints() runs matched endpoints."
+  },
+  {
+    "question": "Difference between Authentication and Authorization?",
+    "answer": "Authentication: Who the user is. Authorization: What the authenticated user is allowed to do."
+  },
+  {
+    "question": "What are OAuth2 and OpenID Connect?",
+    "answer": "OAuth2 → authorization. OpenID Connect → authentication built on OAuth2."
+  },
+  {
+    "question": "What happens if you forget await when calling async code?",
+    "answer": "The Task runs without being awaited → unexpected behavior and uncaught exceptions."
+  },
+  {
+    "question": "What is Kestrel?",
+    "answer": "The built-in cross-platform web server used by ASP.NET Core."
+  },
+  {
+    "question": "How to enable HTTPS locally?",
+    "answer": "dotnet dev-certs https --trust"
+  },
+  {
+    "question": "What is appsettings.json?",
+    "answer": "A configurable JSON file loaded into IConfiguration."
+  },
+  {
+    "question": "What is launchSettings.json for?",
+    "answer": "Configures local debugging: environment, URLs, profiles."
+  },
+  {
+    "question": "What does dotnet publish do?",
+    "answer": "Creates a deployable build with DLLs, views, static files."
+  },
+  {
+    "question": "What is Blazor?",
+    "answer": "Web UI framework that uses C# instead of JavaScript (Server/WASM modes)."
+  },
+  {
+    "question": "Difference between record and class?",
+    "answer": "record → immutable by default, value-based equality. class → mutable, reference-based equality."
+  },
+  {
+    "question": "What are Delegates and Events?",
+    "answer": "Delegate: type-safe function pointer. Event: pub/sub mechanism built on delegates."
+  },
+  {
+    "question": "How should passwords be stored securely?",
+    "answer": "Hash + salt using PBKDF2, BCrypt, or Argon2. Never store plaintext passwords."
+  },
+  {
+    "question": "What is ASP.NET Core Identity?",
+    "answer": "Framework for managing authentication, users, roles, and secure password storage."
+  },
+  {
+    "question": "What is a Minimal API?",
+    "answer": "A Minimal API is a lightweight way to build Web APIs using just a few lines of code inside Program.cs without controllers or heavy configuration."
+  },
+  {
+    "question": "Why is it called “Minimal”?",
+    "answer": "Because it uses minimal files, minimal routing, minimal configuration, and minimal setup."
+  },
+  {
+    "question": "What port does a Minimal API use when running locally?",
+    "answer": "It typically runs on something like https://localhost:5000/hello."
+  },
+  {
+    "question": "What does Kestrel do when the app starts?",
+    "answer": "It opens a listening port, waits for HTTP requests, parses them, passes them to the middleware pipeline, and returns responses."
+  },
+  {
+    "question": "When does Kestrel start listening?",
+    "answer": "When app.Run() executes."
+  },
+  {
+    "question": "What is the middleware pipeline?",
+    "answer": "It is the ordered flow through which every request and response passes in ASP.NET Core."
+  },
+  {
+    "question": "Why does ASP.NET Core use a pipeline?",
+    "answer": "To support logging, exception handling, routing, security, CORS, static files, and more."
+  },
+  {
+    "question": "What is the flow shape of the pipeline?",
+    "answer": "Request → Middleware 1 → Middleware 2 → Middleware 3 → Endpoint → Response returns back."
+  },
+  {
+    "question": "What is short-circuiting in middleware?",
+    "answer": "Stopping the pipeline by not calling next()."
+  },
+  {
+    "question": "Give an example of short-circuiting.",
+    "answer": "if (!ctx.Request.Headers.ContainsKey(\"X-API-Key\"))\n{\n ctx.Response.StatusCode = 401;\n return;\n}"
+  },
+  {
+    "question": "What is Dependency Injection (DI)?",
+    "answer": "A technique where classes receive their required objects (dependencies) from outside rather than creating them internally."
+  },
+  {
+    "question": "What does the DI container do?",
+    "answer": "Creates dependencies, injects them into classes, and manages their lifetimes."
+  },
+  {
+    "question": "How do you register a dependency in DI?",
+    "answer": "builder.Services.AddSingleton<ILogger, ConsoleLogger>();"
+  },
+  {
+    "question": "How do you register a service itself?",
+    "answer": "builder.Services.AddTransient();"
+  },
+  {
+    "question": "What is DbContext?",
+    "answer": "The EF Core class representing a session with the database used for querying, saving, and tracking changes."
+  },
+  {
+    "question": "What does SaveChanges() do?",
+    "answer": "Writes tracked changes to the database."
+  },
+  {
+    "question": "Are UseRouting() and UseEndpoints() required in Minimal APIs?",
+    "answer": "Usually no — Minimal APIs configure routing automatically unless advanced features are used."
+  },
+  {
+    "question": "Give a routing example with route parameters.",
+    "answer": "app.MapGet(\"/users/{id}\", (int id) => \"User ID = {id}\");"
+  },
+  {
+    "question": "Example of optional route parameter.",
+    "answer": "app.MapGet(\"/products/{id?}\", (int? id) => id == null ? \"All products\" : \"Product {id}\");"
+  },
+  {
+    "question": "Example of a default route parameter value.",
+    "answer": "app.MapGet(\"/city/{name=London}\", (string name) => name);"
+  },
+  {
+    "question": "What happens if you don't use UseRouting() before UseEndpoints()?",
+    "answer": "Endpoints will not be matched, so routing won’t work."
+  },
+  {
+    "question": "What is the effect of not calling next() inside middleware?",
+    "answer": "The pipeline stops and no further middleware runs."
+  },
+  {
+    "question": "What is the purpose of DI lifetimes?",
+    "answer": "To determine how long each created object lives (Singleton, Scoped, Transient)."
+  },
+  {
+    "question": "What is the purpose of the pipeline diagram shown?",
+    "answer": "To illustrate how requests flow down middleware and responses flow back up."
+  },
+  {
+    "question": "Why is DI important?",
+    "answer": "It decouples classes, improves testability, and allows easy swapping of implementations."
+  },
+  {
+    "question": "What is the difference between MapGet and MapPost in Minimal APIs?",
+    "answer": "MapGet handles HTTP GET requests (read-only operations), while MapPost handles HTTP POST requests (creating or modifying data)."
+  },
+  {
+    "question": "What does app.Map() do in the middleware pipeline?",
+    "answer": "app.Map() creates a branch in the pipeline. Requests matching the given path execute only the middleware inside that branch."
+  },
+  {
+    "question": "What happens if you place app.Run() before other middleware?",
+    "answer": "app.Run() is terminal middleware. If placed early, no middleware or endpoint after it will execute because it stops the pipeline."
   }
 ]
-

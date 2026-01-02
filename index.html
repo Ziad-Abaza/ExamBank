@@ -1,119 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>C# Quiz</title>
-  <script src="https://cdn.tailwindcss.com"></script> 
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C# Exam Bank - Premium Learning</title>
+  <meta name="description"
+    content="Master C# and .NET with our comprehensive bank of 600+ interview questions, time complexity challenges, and detailed tutorials.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
   <style>
-    body { font-family: 'Tajawal', sans-serif; }
-    .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-    @keyframes fade-in-down { 0% { opacity: 0; transform: translateY(-10px); } 100% { opacity: 1; transform: translateY(0); } }
-    .animate-fade-in-down { animation: fade-in-down 0.8s ease-out forwards; }
+    :root {
+      --primary: #8b5cf6;
+      --secondary: #d946ef;
+      --accent: #f59e0b;
+      --bg-dark: #0f172a;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: radial-gradient(circle at top right, #1e1b4b, #0f172a, #000000);
+      color: #f8fafc;
+    }
+
+    code,
+    pre {
+      font-family: 'Fira Code', monospace !important;
+    }
+
+    /* Syntax Highlighting Custom Colors */
+    .token.keyword {
+      color: #f472b6 !important;
+      font-weight: 600;
+    }
+
+    /* Pink-ish for Keywords */
+    .token.string {
+      color: #34d399 !important;
+    }
+
+    /* Emerald for Strings */
+    .token.function {
+      color: #60a5fa !important;
+    }
+
+    /* Blue for Built-in/Methods */
+    .token.class-name,
+    .token.type {
+      color: #fbbf24 !important;
+    }
+
+    /* Amber for Classes/Types */
+    .token.variable,
+    .token.property {
+      color: #e2e8f0 !important;
+    }
+
+    /* Slate for Variables */
+    .token.comment {
+      color: #64748b !important;
+      font-style: italic;
+    }
+
+    /* Gray for Comments */
+    .token.punctuation {
+      color: #94a3b8 !important;
+    }
+
+    .token.operator {
+      color: #f87171 !important;
+    }
+
+    /* Red-ish for Operators */
+
+    .answer-content code {
+      background: rgba(139, 92, 246, 0.1);
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.4rem;
+      color: #a78bfa;
+      font-size: 0.9em;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(139, 92, 246, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .search-input {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+      outline: none;
+    }
+
+    @keyframes slide-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-slide-up {
+      animation: slide-up 0.5s ease-out forwards;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    .category-pill {
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      padding: 2px 10px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      color: #a78bfa;
+    }
   </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-purple-950 to-black text-white min-h-screen">
 
-  <header class="text-center py-10 px-4">
-    <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-fade-in-down">C# Quiz</h1> 
-    <p class="mt-3 text-sm text-yellow-400 animate-fade-in-down delay-100">Test your knowledge: write your answer first, then check the correct answer.</p>
-    <div class="text-center mt-6 w-100 flex gap-4 align-content-center justify-center animate-fade-in-down delay-200">
-      <a href="index.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">Home</a>
-      <span class="border-l mt-[22px] border-gray-600 h-[30px] flex align-content-center items-center justify-center text-gray-500"></span>
-      <a href="tutorial.html" class="block text-center mt-6 text-indigo-400 hover:text-indigo-200 transition">Tutorial</a>
+<body class="min-h-screen selection:bg-purple-500/30">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-6 py-4 mb-8">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <i class="fas fa-code text-white text-xl"></i>
+        </div>
+        <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">ExamBank
+        </h1>
+      </div>
+
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-indigo-400 hover:text-white transition-colors flex items-center gap-2">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="tutorial.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+          <i class="fas fa-book"></i> Tutorial
+        </a>
+        <!-- <a href="complexity.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+          <i class="fas fa-bolt"></i> Complexity
+        </a> -->
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="max-w-3xl mx-auto px-4 pb-16 space-y-6">
-    <div id="quiz-container" class="space-y-6"></div>
+  <main class="max-w-4xl mx-auto px-4 pb-20">
+    <!-- Hero Section -->
+    <header class="text-center mb-12 animate-slide-up">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Master <span class="text-indigo-500">C#</span>
+        & <span class="text-purple-500">.NET</span></h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Explore over 600+ curated interview and exam questions. Track
+        your progress and sharpen your skills.</p>
+    </header>
 
-    <div class="flex justify-between items-center mt-8 p-4 glass-card rounded-xl shadow-lg">
-      <button id="prev-btn" class="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded disabled:opacity-40 disabled:cursor-not-allowed transition">Previous</button>
-      <span id="page-info" class="text-sm font-medium text-gray-300"></span>
-      <button id="next-btn" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded transition">Next</button>
+    <!-- Search & Filters -->
+    <div class="mb-10 animate-slide-up" style="animation-delay: 0.1s">
+      <div class="relative group">
+        <i
+          class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-indigo-500 transition-colors"></i>
+        <input type="text" id="search-input" placeholder="Search by topic, keyword, or question..."
+          class="w-full pl-12 pr-4 py-4 rounded-2xl search-input text-white text-lg">
+      </div>
+      <div class="flex flex-wrap gap-2 mt-4" id="category-filters">
+        <button
+          class="px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-600 text-white transition-all shadow-lg shadow-indigo-500/20"
+          onclick="filterByCategory('all')">All Questions</button>
+        <button
+          class="px-4 py-1.5 rounded-full text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
+          onclick="filterByCategory('basics')">Basics</button>
+        <button
+          class="px-4 py-1.5 rounded-full text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
+          onclick="filterByCategory('advanced')">Advanced</button>
+        <button
+          class="px-4 py-1.5 rounded-full text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
+          onclick="filterByCategory('api')">Minimal API</button>
+      </div>
+    </div>
+
+    <!-- Progress Tracker -->
+    <div class="mb-8 flex justify-between items-end animate-slide-up" style="animation-delay: 0.15s">
+      <div>
+        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Study Progress</h3>
+        <p class="text-2xl font-bold" id="progress-text">0/0 Questions Answered</p>
+      </div>
+      <div id="stat-badges" class="flex gap-4">
+        <div class="text-right">
+          <p class="text-xs text-green-400 font-bold uppercase">Mastered</p>
+          <p class="text-xl font-bold" id="mastered-count">0</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-white/5 h-2 rounded-full mb-12 overflow-hidden animate-slide-up"
+      style="animation-delay: 0.2s">
+      <div id="progress-bar"
+        class="h-full bg-gradient-to-r from-indigo-500 to-purple-600 transition-all duration-1000 w-0"></div>
+    </div>
+
+    <!-- Questions Container -->
+    <div id="quiz-container" class="space-y-6 animate-slide-up" style="animation-delay: 0.25s">
+      <!-- Questions will be injected here -->
+      <div class="flex flex-col items-center justify-center py-20 text-gray-500">
+        <i class="fas fa-circle-notch fa-spin text-4xl mb-4"></i>
+        <p>Loading questions library...</p>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-between items-center mt-12 p-6 glass-card rounded-3xl animate-slide-up"
+      style="animation-delay: 0.3s">
+      <button id="prev-btn"
+        class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 rounded-xl disabled:opacity-20 disabled:cursor-not-allowed transition-all font-semibold">
+        <i class="fas fa-arrow-left"></i> Previous
+      </button>
+      <span id="page-info" class="text-indigo-400 font-bold tracking-widest uppercase text-sm"></span>
+      <button id="next-btn"
+        class="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl disabled:opacity-20 transition-all font-bold shadow-lg shadow-indigo-500/20">
+        Next <i class="fas fa-arrow-right"></i>
+      </button>
     </div>
   </main>
 
-  <footer class="text-center text-xs text-gray-600 py-4">© 2025 EgyTech | All rights reserved</footer>
+  <footer class="text-center py-12 border-t border-white/5 mt-20">
+    <div class="flex justify-center gap-6 mb-4">
+      <i class="fab fa-github text-gray-600 hover:text-white transition-colors cursor-pointer text-xl"></i>
+      <i class="fab fa-linkedin text-gray-600 hover:text-white transition-colors cursor-pointer text-xl"></i>
+      <i class="fab fa-twitter text-gray-600 hover:text-white transition-colors cursor-pointer text-xl"></i>
+    </div>
+    <p class="text-sm text-gray-500 font-medium">© 2025 EgyTech Digital Library. All rights reserved.</p>
+  </footer>
 
   <script>
     const QUESTIONS_PER_PAGE = 15;
     let allQuestions = [];
+    let filteredQuestions = [];
     let currentPage = 0;
+    let masteredIds = JSON.parse(localStorage.getItem('masteredQuestions') || '[]');
 
-    async function loadQuestionsPage(page) {
-      if (allQuestions.length === 0) {
-        try {
-          const response = await fetch('questions.json');
-          if (!response.ok) throw new Error("Failed to load questions");
-          allQuestions = await response.json();
-        } catch (error) {
-          document.getElementById("quiz-container").innerHTML = `<div class="bg-red-900/30 text-red-300 p-4 rounded-lg">⚠️ ${error.message}</div>`;
-          return;
-        }
+    async function loadQuestions() {
+      try {
+        const response = await fetch('questions.json');
+        if (!response.ok) throw new Error("Failed to load repository");
+        const data = await response.json();
+
+        // Add ID to questions for tracking
+        allQuestions = data.map((q, idx) => ({ ...q, id: idx }));
+        filteredQuestions = [...allQuestions];
+
+        updateProgress();
+        renderPage(0);
+      } catch (error) {
+        document.getElementById("quiz-container").innerHTML = `
+          <div class="bg-red-500/10 border border-red-500/20 text-red-400 p-8 rounded-3xl text-center">
+            <i class="fas fa-exclamation-triangle text-3xl mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Connection Error</h3>
+            <p>${error.message}</p>
+          </div>`;
       }
-      renderPage(page);
     }
 
     function renderPage(page) {
+      currentPage = page;
       const container = document.getElementById("quiz-container");
       container.innerHTML = '';
 
-      const start = page * QUESTIONS_PER_PAGE;
-      const end = start + QUESTIONS_PER_PAGE;
-      const pageQuestions = allQuestions.slice(start, end);
+      if (filteredQuestions.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-20 text-gray-500">
+            <i class="fas fa-search text-5xl mb-4 opacity-20"></i>
+            <p class="text-xl font-medium">No results match your search</p>
+            <button onclick="resetSearch()" class="mt-4 text-indigo-400 underline hover:text-white transition">Clear all filters</button>
+          </div>`;
+        updatePaginationButtons();
+        return;
+      }
 
+      const start = page * QUESTIONS_PER_PAGE;
+      const end = Math.min(start + QUESTIONS_PER_PAGE, filteredQuestions.length);
+      const pageQuestions = filteredQuestions.slice(start, end);
+
+      const fragment = document.createDocumentFragment();
       pageQuestions.forEach((q, index) => {
+        const isMastered = masteredIds.includes(q.id);
         const div = document.createElement("div");
-        div.className = "glass-card rounded-xl p-5 shadow-lg hover:shadow-indigo-500/20 transition-all duration-300";
+        div.className = `glass-card rounded-3xl p-6 md:p-8 animate-slide-up`;
+        div.style.animationDelay = `${index * 0.05}s`;
 
         div.innerHTML = `
-          <h2 class="font-semibold text-lg mb-3">${start + index + 1}. ${q.question}</h2>
-          <input type="text" id="user-answer-${start + index}" placeholder="Type your answer here..." class="w-full p-2 mb-3 rounded text-black">
-          <button onclick="showAnswer(this, ${start + index})" class="w-full py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-lg transition">Show Answer</button>
-          <div id="answer-${start + index}" class="mt-4 hidden p-3 bg-gray-800 rounded text-green-300"></div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-indigo-500 font-bold text-sm tracking-tighter">QUESTION #${q.id + 1}</span>
+            ${isMastered ? '<span class="text-green-500 text-xs font-bold bg-green-500/10 px-3 py-1 rounded-full"><i class="fas fa-check-circle"></i> MASTERED</span>' : ''}
+          </div>
+          <h2 class="text-xl md:text-2xl font-bold mb-6 leading-tight">${q.question}</h2>
+          
+          <div class="space-y-4">
+            <textarea id="user-answer-${q.id}" placeholder="Type your answer or code here..." 
+                      class="w-full p-4 rounded-2xl bg-black/40 border border-white/5 focus:border-indigo-500/50 outline-none transition-all resize-none min-h-[100px] text-gray-300"></textarea>
+            
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button onclick="revealAnswer(${q.id})" id="reveal-btn-${q.id}" 
+                      class="flex-1 py-3 bg-white/5 hover:bg-white/10 rounded-xl font-bold transition-all border border-white/5">
+                <i class="fas fa-eye"></i> Show Answer
+              </button>
+              <button onclick="toggleMastery(${q.id})" id="master-btn-${q.id}"
+                      class="flex-1 py-3 ${isMastered ? 'bg-green-600 hover:bg-green-700' : 'bg-indigo-600 hover:bg-indigo-700'} rounded-xl font-bold transition-all shadow-lg active:scale-95">
+                ${isMastered ? '<i class="fas fa-check"></i> Mastered' : '<i class="fas fa-trophy"></i> Mark as Mastered'}
+              </button>
+            </div>
+            
+            <div id="answer-box-${q.id}" class="hidden p-6 bg-indigo-500/5 border border-indigo-500/20 rounded-2xl mt-4 animate-slide-up">
+              <p class="text-indigo-400 text-xs font-bold uppercase mb-2 tracking-widest">Correct Solution</p>
+              <div class="text-gray-200 leading-relaxed font-medium whitespace-pre-wrap answer-content">${formatAnswer(q.answer)}</div>
+            </div>
+          </div>
         `;
-        container.appendChild(div);
+        fragment.appendChild(div);
       });
-
+      container.appendChild(fragment);
       updatePaginationButtons();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function showAnswer(button, qIndex) {
-      const answerDiv = document.getElementById(`answer-${qIndex}`);
-      const correctAnswer = allQuestions[qIndex].answer;
+    function revealAnswer(id) {
+      const box = document.getElementById(`answer-box-${id}`);
+      const btn = document.getElementById(`reveal-btn-${id}`);
+      const isHidden = box.classList.contains('hidden');
 
-      answerDiv.textContent = `Correct Answer: ${correctAnswer}`;
-      answerDiv.classList.remove("hidden");
-      button.disabled = true;
-      button.classList.add("opacity-60");
+      if (isHidden) {
+        box.classList.remove('hidden');
+        btn.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Answer';
+        btn.classList.add('bg-white/20');
+        // Trigger Prism highlighting
+        Prism.highlightAllUnder(box);
+      } else {
+        box.classList.add('hidden');
+        btn.innerHTML = '<i class="fas fa-eye"></i> Show Answer';
+        btn.classList.remove('bg-white/20');
+      }
+    }
+
+    function formatAnswer(text) {
+      const codeRegex = /`([^`]+)`/g;
+
+      // Check if the whole answer should be treated as code
+      if (isCode(text)) {
+        return `<pre class="language-csharp"><code>${escapeHtml(text)}</code></pre>`;
+      }
+
+      // Otherwise replace backticks with styled code tags
+      return text.replace(codeRegex, (match, code) => `<code class="language-csharp">${escapeHtml(code)}</code>`);
+    }
+
+    function isCode(text) {
+      // Basic heuristic for C# code
+      const codePatterns = [
+        /\{[\s\S]*\}/, // Braces
+        /;\s*$/, // Ending semi-colon
+        /\b(public|private|protected|internal|static|class|interface|enum|void|string|int|var|return|new|async|await|using|foreach|if|while)\b/, // Keywords
+        /=>/, // Lambda
+        /\[.*\]/, // Indexers or attributes
+        /\(.*\)\s*\{/ // Method signatures
+      ];
+
+      // If it has multiple lines and code patterns
+      if (text.split('\n').length > 1) {
+        return codePatterns.some(p => p.test(text));
+      }
+
+      // Single line detection - check for keywords with symbols or method signatures
+      return (text.includes(';') && (text.includes('=') || text.includes('('))) ||
+        (text.includes('{') && text.includes('}')) ||
+        /^[a-zA-Z<>\[\]]+\s+[a-zA-Z]+\s*\(.*\)/.test(text) || // Method like returnType Name()
+        /^(app|builder|Console|File|FileStream)\./.test(text);
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function toggleMastery(id) {
+      const index = masteredIds.indexOf(id);
+      if (index > -1) {
+        masteredIds.splice(index, 1);
+      } else {
+        masteredIds.push(id);
+      }
+      localStorage.setItem('masteredQuestions', JSON.stringify(masteredIds));
+      updateProgress();
+      renderPage(currentPage);
+    }
+
+    function updateProgress() {
+      const total = allQuestions.length;
+      const count = masteredIds.length;
+      const percentage = total > 0 ? (count / total) * 100 : 0;
+
+      document.getElementById('progress-text').textContent = `${count}/${total} Mastered`;
+      document.getElementById('mastered-count').textContent = count;
+      document.getElementById('progress-bar').style.width = `${percentage}%`;
     }
 
     function updatePaginationButtons() {
-      const totalPages = Math.ceil(allQuestions.length / QUESTIONS_PER_PAGE);
-      document.getElementById("page-info").textContent = `Page ${currentPage + 1} of ${totalPages}`;
+      const totalPages = Math.ceil(filteredQuestions.length / QUESTIONS_PER_PAGE);
+      document.getElementById("page-info").textContent = filteredQuestions.length > 0 ? `Page ${currentPage + 1} / ${totalPages}` : 'No Results';
       document.getElementById("prev-btn").disabled = currentPage === 0;
-      document.getElementById("next-btn").disabled = (currentPage + 1) * QUESTIONS_PER_PAGE >= allQuestions.length;
+      document.getElementById("next-btn").disabled = (currentPage + 1) * QUESTIONS_PER_PAGE >= filteredQuestions.length;
     }
 
-    function goToNextPage() {
-      if ((currentPage + 1) * QUESTIONS_PER_PAGE < allQuestions.length) {
-        currentPage++;
-        renderPage(currentPage);
+    // Search Logic
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      filteredQuestions = allQuestions.filter(q =>
+        q.question.toLowerCase().includes(term) ||
+        q.answer.toLowerCase().includes(term)
+      );
+      renderPage(0);
+    });
+
+    function filterByCategory(cat) {
+      // Update buttons style
+      const buttons = document.querySelectorAll('#category-filters button');
+      buttons.forEach(btn => {
+        btn.className = 'px-4 py-1.5 rounded-full text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all';
+      });
+      event.target.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-600 text-white transition-all shadow-lg shadow-indigo-500/20';
+
+      if (cat === 'all') {
+        filteredQuestions = [...allQuestions];
+      } else if (cat === 'api') {
+        filteredQuestions = allQuestions.filter(q => q.id >= 490 || q.question.toLowerCase().includes('api'));
+      } else if (cat === 'advanced') {
+        filteredQuestions = allQuestions.filter(q => q.id >= 150 && q.id < 490);
+      } else {
+        filteredQuestions = allQuestions.filter(q => q.id < 150);
       }
+      renderPage(0);
     }
 
-    function goToPrevPage() {
-      if (currentPage > 0) {
-        currentPage--;
-        renderPage(currentPage);
-      }
+    function resetSearch() {
+      document.getElementById('search-input').value = '';
+      filterByCategory('all');
     }
 
-    window.onload = () => loadQuestionsPage(currentPage);
-    document.getElementById("next-btn").addEventListener("click", goToNextPage);
-    document.getElementById("prev-btn").addEventListener("click", goToPrevPage);
+    document.getElementById("next-btn").addEventListener("click", () => renderPage(currentPage + 1));
+    document.getElementById("prev-btn").addEventListener("click", () => renderPage(currentPage - 1));
+
+    window.onload = loadQuestions;
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
 </body>
+
 </html>
