@@ -30,11 +30,19 @@
       text-align: left;
       font-family: 'Fira Code', monospace;
       background: rgba(0, 0, 0, 0.3);
-      padding: 1.5rem;
-      border-radius: 1rem;
+      padding: 1rem;
+      border-radius: 0.75rem;
       border: 1px solid rgba(255, 255, 255, 0.05);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       overflow-x: auto;
+    }
+
+    @media (min-width: 768px) {
+      pre {
+        padding: 2rem;
+        border-radius: 1.5rem;
+        margin-bottom: 2rem;
+      }
     }
 
     .option-btn {
@@ -74,7 +82,7 @@
 
 <body class="min-h-screen">
 
-  <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-6 py-4 mb-8">
+  <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-4 md:px-8 py-4 mb-6 md:mb-12">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <div class="flex items-center gap-3">
         <div
@@ -94,15 +102,17 @@
   </nav>
 
   <main class="max-w-3xl mx-auto px-4 pb-20">
-    <header class="text-center mb-12">
+    <header class="text-center mb-8 md:mb-16">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">اختبر معلوماتك في <span class="text-indigo-500">التعقيد
           الزمني</span></h2>
       <p class="text-gray-400">حل المسائل البرمجية وحدد Big O notation لكل دالة.</p>
     </header>
 
-    <div id="quiz-container" class="space-y-8"></div>
+    <div id="quiz-container" class="space-y-6 md:space-y-12"></div>
 
-    <div class="flex justify-between items-center mt-12 p-6 glass-card rounded-3xl" dir="ltr">
+    <div
+      class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-10 md:mt-20 p-4 md:p-8 glass-card rounded-3xl"
+      dir="ltr">
       <button id="prev-btn"
         class="px-6 py-3 bg-white/5 hover:bg-white/10 rounded-xl disabled:opacity-20 transition-all font-bold">
         <i class="fas fa-arrow-left mr-2"></i> Previous
@@ -204,12 +214,12 @@
       questions.forEach((q, i) => {
         const qIdx = start + i;
         const div = document.createElement("div");
-        div.className = "glass-card rounded-3xl p-8 animate-fade";
+        div.className = "glass-card rounded-[2rem] p-5 md:p-10 animate-fade";
 
         let optionsHtml = q.options.map((opt, optIdx) => `
           <button onclick="handleSelect(${qIdx}, ${optIdx})" 
                   id="q${qIdx}-opt${optIdx}" 
-                  class="option-btn w-full p-4 rounded-xl text-right flex justify-between items-center mb-2">
+                  class="option-btn w-full p-3 md:p-5 rounded-xl text-right flex justify-between items-center mb-2">
             <span>${opt}</span>
             <span class="text-gray-500 font-bold opacity-30">${String.fromCharCode(65 + optIdx)}</span>
           </button>
@@ -226,7 +236,7 @@
                   class="w-full py-4 bg-white/5 hover:bg-white/10 rounded-xl font-bold transition-all border border-white/10">
             تحقق من الإجابة
           </button>
-          <div id="result-${qIdx}" class="hidden mt-6 p-6 rounded-2xl border"></div>
+          <div id="result-${qIdx}" class="hidden mt-6 p-4 md:p-8 rounded-2xl border"></div>
         `;
         container.appendChild(div);
       });

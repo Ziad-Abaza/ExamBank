@@ -29,9 +29,17 @@
     }
 
     /* Wrap text for non-code elements */
-    .answer-content div {
+    .answer-content {
       word-break: break-word;
       overflow-wrap: break-word;
+    }
+
+    @media (max-width: 640px) {
+
+      code,
+      pre {
+        font-size: 0.8rem !important;
+      }
     }
 
     /* Syntax Highlighting Custom Colors */
@@ -111,40 +119,45 @@
 
 <body class="min-h-screen">
 
-  <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-6 py-4 mb-8">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="flex items-center gap-3">
+  <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-4 py-3 mb-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
         <div
-          class="w-10 h-10 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-          <i class="fas fa-book-open text-white text-xl"></i>
+          class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <i class="fas fa-book-open text-white text-sm md:text-xl"></i>
         </div>
-        <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Knowledge
-          Base</h1>
+        <h1 class="text-lg md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+          Knowledge</h1>
       </div>
 
-      <div class="flex items-center gap-6 text-sm font-medium">
-        <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
-        <a href="tutorial.html" class="text-indigo-400 hover:text-white transition-colors">Tutorial</a>
-        <!-- <a href="complexity.html" class="text-gray-400 hover:text-white transition-colors">Complexity</a> -->
+      <div class="flex items-center gap-4 md:gap-6 text-xs md:text-sm font-medium">
+        <a href="index.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+          <i class="fas fa-home sm:hidden"></i><span class="hidden sm:inline">Home</span>
+        </a>
+        <a href="tutorial.html" class="text-indigo-400 hover:text-white transition-colors flex items-center gap-1.5">
+          <i class="fas fa-book sm:hidden"></i><span class="hidden sm:inline">Tutorial</span>
+        </a>
       </div>
     </div>
   </nav>
 
   <main class="max-w-5xl mx-auto px-4 pb-20">
-    <header class="mb-12">
-      <h2 class="text-4xl font-extrabold mb-4">Interview <span class="text-indigo-500">Cheat Sheet</span></h2>
-      <p class="text-gray-400 text-lg">Quick reference for all 600+ questions and answers in our database.</p>
+    <header class="mb-8 md:mb-16 px-2">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight">Interview <span class="text-indigo-500">Cheat
+          Sheet</span></h2>
+      <p class="text-gray-400 text-base md:text-lg leading-relaxed">Quick reference for all 600+ curated interview and
+        exam questions.</p>
     </header>
 
     <!-- Search bar -->
-    <div class="relative mb-10 group">
+    <div class="relative mb-8 group px-2">
       <i
-        class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-indigo-500 transition-colors"></i>
-      <input type="text" id="search-input" placeholder="Quick find a concept (e.g. 'Middleware', 'LINQ', 'Task')..."
-        class="w-full pl-12 pr-4 py-4 rounded-2xl bg-black/40 border border-white/10 focus:border-indigo-500/50 outline-none transition-all text-white">
+        class="fas fa-search absolute left-6 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-indigo-500 transition-colors text-sm"></i>
+      <input type="text" id="search-input" placeholder="Search topics/keywords..."
+        class="w-full pl-12 pr-4 py-3 md:py-4 rounded-xl md:rounded-2xl bg-black/40 border border-white/10 focus:border-indigo-500/50 outline-none transition-all text-white text-sm md:text-base">
     </div>
 
-    <div id="tutorial-container" class="flex flex-col gap-6 w-full">
+    <div id="tutorial-container" class="flex flex-col gap-4 md:gap-8 w-full">
       <div class="flex flex-col items-center justify-center py-20 text-gray-500">
         <i class="fas fa-spinner fa-spin text-3xl mb-4"></i>
         <p>Indexing all questions...</p>
@@ -186,18 +199,18 @@
       const fragment = document.createDocumentFragment();
       questions.forEach((q, index) => {
         const div = document.createElement('div');
-        div.className = 'glass-card topic-card p-6 rounded-3xl animate-slide w-full';
+        div.className = 'glass-card topic-card p-4 md:p-10 rounded-2xl md:rounded-[2rem] animate-slide w-full';
         div.style.animationDelay = `${Math.min(index * 0.05, 2)}s`;
 
         div.innerHTML = `
-          <div class="flex items-start gap-4 overflow-hidden">
-            <div class="bg-indigo-500 text-white w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-xs font-bold shadow-lg shadow-indigo-500/20">
+          <div class="flex flex-col sm:flex-row items-start gap-3 md:gap-5">
+            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-7 h-7 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0 text-[10px] md:text-sm font-black shadow-lg shadow-indigo-500/20">
               ${index + 1}
             </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="font-bold text-lg mb-2 text-gray-100 break-words">${q.question}</h3>
-              <div class="p-4 bg-black/20 rounded-xl border border-white/5 answer-content overflow-hidden">
-                <div class="text-green-400/90 font-medium leading-relaxed whitespace-pre-wrap break-words">${formatAnswer(q.answer)}</div>
+            <div class="flex-1 min-w-0 w-full">
+              <h3 class="font-bold text-base md:text-2xl mb-3 text-white leading-snug break-words tracking-tight">${q.question}</h3>
+              <div class="p-4 md:p-8 bg-white/5 rounded-xl md:rounded-3xl border border-white/5 answer-content backdrop-blur-sm">
+                <div class="text-indigo-100 font-medium leading-relaxed whitespace-pre-wrap break-words text-sm md:text-lg">${formatAnswer(q.answer)}</div>
               </div>
             </div>
           </div>

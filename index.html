@@ -159,85 +159,85 @@
 <body class="min-h-screen selection:bg-purple-500/30">
 
   <!-- Navigation -->
-  <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-6 py-4 mb-8">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="flex items-center gap-3">
+  <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-4 py-3 mb-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
         <div
-          class="w-10 h-10 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-          <i class="fas fa-code text-white text-xl"></i>
+          class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <i class="fas fa-code text-white text-sm md:text-xl"></i>
         </div>
-        <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">ExamBank
-        </h1>
+        <h1 class="text-lg md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+          ExamBank</h1>
       </div>
 
-      <div class="flex items-center gap-6 text-sm font-medium">
-        <a href="index.html" class="text-indigo-400 hover:text-white transition-colors flex items-center gap-2">
-          <i class="fas fa-home"></i> Home
+      <div class="flex items-center gap-4 md:gap-6 text-xs md:text-sm font-medium">
+        <a href="index.html" class="text-indigo-400 hover:text-white transition-colors flex items-center gap-1.5">
+          <i class="fas fa-home sm:hidden"></i><span class="hidden sm:inline">Home</span>
         </a>
-        <a href="tutorial.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
-          <i class="fas fa-book"></i> Tutorial
+        <a href="tutorial.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+          <i class="fas fa-book sm:hidden"></i><span class="hidden sm:inline">Tutorial</span>
         </a>
-        <!-- <a href="complexity.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
-          <i class="fas fa-bolt"></i> Complexity
-        </a> -->
       </div>
     </div>
   </nav>
 
   <main class="max-w-4xl mx-auto px-4 pb-20">
     <!-- Hero Section -->
-    <header class="text-center mb-12 animate-slide-up">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Master <span class="text-indigo-500">C#</span>
+    <header class="text-center mb-8 md:mb-20 animate-slide-up px-2">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight leading-tight">Master <span
+          class="text-indigo-500">C#</span>
         & <span class="text-purple-500">.NET</span></h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Explore over 600+ curated interview and exam questions. Track
-        your progress and sharpen your skills.</p>
+      <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">Explore 600+ curated interview
+        questions. Track your progress and sharpen your skills.</p>
     </header>
 
     <!-- Search & Filters -->
-    <div class="mb-10 animate-slide-up" style="animation-delay: 0.1s">
-      <div class="relative group">
+    <div class="mb-8 md:mb-16 animate-slide-up px-2" style="animation-delay: 0.1s">
+      <div class="relative group mb-4">
         <i
-          class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-indigo-500 transition-colors"></i>
-        <input type="text" id="search-input" placeholder="Search by topic, keyword, or question..."
-          class="w-full pl-12 pr-4 py-4 rounded-2xl search-input text-white text-lg">
+          class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-indigo-500 transition-colors text-sm"></i>
+        <input type="text" id="search-input" placeholder="Search questions..."
+          class="w-full pl-11 pr-4 py-3 md:py-4 rounded-xl md:rounded-2xl search-input text-white text-sm md:text-lg">
       </div>
-      <div class="flex flex-wrap gap-2 mt-4" id="category-filters">
+      <div class="flex flex-wrap gap-2 overflow-x-auto pb-2 scrollbar-none" id="category-filters">
         <button
-          class="px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-600 text-white transition-all shadow-lg shadow-indigo-500/20"
-          onclick="filterByCategory('all')">All Questions</button>
+          class="flex-shrink-0 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-semibold bg-indigo-600 text-white transition-all shadow-lg shadow-indigo-500/20"
+          onclick="filterByCategory('all')">All</button>
         <button
-          class="px-4 py-1.5 rounded-full text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
+          class="flex-shrink-0 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
           onclick="filterByCategory('basics')">Basics</button>
         <button
-          class="px-4 py-1.5 rounded-full text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
+          class="flex-shrink-0 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
           onclick="filterByCategory('advanced')">Advanced</button>
         <button
-          class="px-4 py-1.5 rounded-full text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
+          class="flex-shrink-0 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-semibold glass-card text-gray-400 hover:text-white transition-all"
           onclick="filterByCategory('api')">Minimal API</button>
       </div>
     </div>
 
     <!-- Progress Tracker -->
-    <div class="mb-8 flex justify-between items-end animate-slide-up" style="animation-delay: 0.15s">
-      <div>
-        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Study Progress</h3>
-        <p class="text-2xl font-bold" id="progress-text">0/0 Questions Answered</p>
+    <div class="mb-6 md:mb-10 flex flex-col sm:flex-row justify-between items-start sm:items-end animate-slide-up px-2"
+      style="animation-delay: 0.15s">
+      <div class="mb-4 sm:mb-0">
+        <h3 class="text-[10px] md:text-sm font-semibold text-gray-500 uppercase tracking-widest mb-1">Study Progress
+        </h3>
+        <p class="text-xl md:text-2xl font-black" id="progress-text">0/0 Mastered</p>
       </div>
       <div id="stat-badges" class="flex gap-4">
-        <div class="text-right">
-          <p class="text-xs text-green-400 font-bold uppercase">Mastered</p>
-          <p class="text-xl font-bold" id="mastered-count">0</p>
+        <div class="text-left sm:text-right">
+          <p class="text-[10px] text-green-500 font-bold uppercase tracking-wider">Completed</p>
+          <p class="text-xl md:text-2xl font-black" id="mastered-count">0</p>
         </div>
       </div>
     </div>
-    <div class="w-full bg-white/5 h-2 rounded-full mb-12 overflow-hidden animate-slide-up"
+    <div class="w-full bg-white/5 h-2 rounded-full mb-10 md:mb-16 overflow-hidden animate-slide-up"
       style="animation-delay: 0.2s">
       <div id="progress-bar"
         class="h-full bg-gradient-to-r from-indigo-500 to-purple-600 transition-all duration-1000 w-0"></div>
     </div>
 
     <!-- Questions Container -->
-    <div id="quiz-container" class="space-y-6 animate-slide-up" style="animation-delay: 0.25s">
+    <div id="quiz-container" class="space-y-4 md:space-y-8 animate-slide-up" style="animation-delay: 0.25s">
       <!-- Questions will be injected here -->
       <div class="flex flex-col items-center justify-center py-20 text-gray-500">
         <i class="fas fa-circle-notch fa-spin text-4xl mb-4"></i>
@@ -246,16 +246,17 @@
     </div>
 
     <!-- Pagination -->
-    <div class="flex justify-between items-center mt-12 p-6 glass-card rounded-3xl animate-slide-up"
+    <div
+      class="flex justify-between items-center mt-10 md:mt-20 p-4 md:p-8 glass-card rounded-2xl md:rounded-3xl animate-slide-up"
       style="animation-delay: 0.3s">
       <button id="prev-btn"
-        class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 rounded-xl disabled:opacity-20 disabled:cursor-not-allowed transition-all font-semibold">
-        <i class="fas fa-arrow-left"></i> Previous
+        class="flex items-center gap-2 px-4 md:px-6 py-2.5 md:py-3 bg-white/5 hover:bg-white/10 rounded-xl disabled:opacity-20 disabled:cursor-not-allowed transition-all font-semibold text-xs md:text-base">
+        <i class="fas fa-arrow-left"></i> <span class="hidden sm:inline">Previous</span>
       </button>
-      <span id="page-info" class="text-indigo-400 font-bold tracking-widest uppercase text-sm"></span>
+      <span id="page-info" class="text-indigo-400 font-bold tracking-widest uppercase text-[10px] md:text-sm"></span>
       <button id="next-btn"
-        class="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl disabled:opacity-20 transition-all font-bold shadow-lg shadow-indigo-500/20">
-        Next <i class="fas fa-arrow-right"></i>
+        class="flex items-center gap-2 px-4 md:px-6 py-2.5 md:py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl disabled:opacity-20 transition-all font-bold shadow-lg shadow-indigo-500/20 text-xs md:text-base">
+        <span class="hidden sm:inline">Next</span> <i class="fas fa-arrow-right"></i>
       </button>
     </div>
   </main>
@@ -322,34 +323,34 @@
       pageQuestions.forEach((q, index) => {
         const isMastered = masteredIds.includes(q.id);
         const div = document.createElement("div");
-        div.className = `glass-card rounded-3xl p-6 md:p-8 animate-slide-up`;
+        div.className = `glass-card rounded-[2rem] p-5 md:p-10 animate-slide-up`;
         div.style.animationDelay = `${index * 0.05}s`;
 
         div.innerHTML = `
-          <div class="flex justify-between items-start mb-4">
-            <span class="text-indigo-500 font-bold text-sm tracking-tighter">QUESTION #${q.id + 1}</span>
-            ${isMastered ? '<span class="text-green-500 text-xs font-bold bg-green-500/10 px-3 py-1 rounded-full"><i class="fas fa-check-circle"></i> MASTERED</span>' : ''}
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-indigo-500 font-black text-[10px] md:text-sm tracking-widest">QUESTION #${q.id + 1}</span>
+            ${isMastered ? '<span class="text-green-500 text-[10px] font-black bg-green-500/10 px-3 py-1 rounded-full"><i class="fas fa-check-circle"></i> MASTERED</span>' : ''}
           </div>
-          <h2 class="text-xl md:text-2xl font-bold mb-6 leading-tight">${q.question}</h2>
+          <h2 class="text-lg md:text-2xl font-bold mb-6 leading-snug break-words">${q.question}</h2>
           
           <div class="space-y-4">
-            <textarea id="user-answer-${q.id}" placeholder="Type your answer or code here..." 
-                      class="w-full p-4 rounded-2xl bg-black/40 border border-white/5 focus:border-indigo-500/50 outline-none transition-all resize-none min-h-[100px] text-gray-300"></textarea>
+            <textarea id="user-answer-${q.id}" placeholder="Type your answer..." 
+                      class="w-full p-4 rounded-xl md:rounded-2xl bg-black/40 border border-white/5 focus:border-indigo-500/50 outline-none transition-all resize-none min-h-[100px] text-gray-300 text-sm md:text-base"></textarea>
             
-            <div class="flex flex-col sm:flex-row gap-3">
+            <div class="flex flex-col sm:flex-row gap-2 md:gap-3">
               <button onclick="revealAnswer(${q.id})" id="reveal-btn-${q.id}" 
-                      class="flex-1 py-3 bg-white/5 hover:bg-white/10 rounded-xl font-bold transition-all border border-white/5">
+                      class="flex-1 py-3 bg-white/5 hover:bg-white/10 rounded-xl font-bold transition-all border border-white/5 text-sm md:text-base">
                 <i class="fas fa-eye"></i> Show Answer
               </button>
               <button onclick="toggleMastery(${q.id})" id="master-btn-${q.id}"
-                      class="flex-1 py-3 ${isMastered ? 'bg-green-600 hover:bg-green-700' : 'bg-indigo-600 hover:bg-indigo-700'} rounded-xl font-bold transition-all shadow-lg active:scale-95">
+                      class="flex-1 py-3 ${isMastered ? 'bg-green-600 hover:bg-green-700' : 'bg-indigo-600 hover:bg-indigo-700'} rounded-xl font-bold transition-all shadow-lg active:scale-95 text-sm md:text-base">
                 ${isMastered ? '<i class="fas fa-check"></i> Mastered' : '<i class="fas fa-trophy"></i> Mark as Mastered'}
               </button>
             </div>
             
-            <div id="answer-box-${q.id}" class="hidden p-6 bg-indigo-500/5 border border-indigo-500/20 rounded-2xl mt-4 animate-slide-up">
-              <p class="text-indigo-400 text-xs font-bold uppercase mb-2 tracking-widest">Correct Solution</p>
-              <div class="text-gray-200 leading-relaxed font-medium whitespace-pre-wrap answer-content">${formatAnswer(q.answer)}</div>
+            <div id="answer-box-${q.id}" class="hidden p-4 md:p-8 bg-indigo-500/5 border border-indigo-500/10 rounded-xl md:rounded-3xl mt-4 animate-slide-up">
+              <p class="text-indigo-400 text-[10px] md:text-xs font-black uppercase mb-3 tracking-widest">Correct Solution</p>
+              <div class="text-indigo-100/90 leading-relaxed font-medium whitespace-pre-wrap break-words text-sm md:text-lg answer-content">${formatAnswer(q.answer)}</div>
             </div>
           </div>
         `;
