@@ -9,7 +9,7 @@
   },
   {
     "question": "Explain the main difference between C# and C++.",
-    "answer": "C++ is low-level, more control;\n C# is high-level, easier, manages memory, works in .NET"
+    "answer": "C++ is low-level, more control;\nC# is high-level, easier, manages memory, works in .NET"
   },
   {
     "question": "What is the purpose of the using keyword in C#?",
@@ -25,7 +25,7 @@
   },
   {
     "question": "Describe the difference between a variable and a constant.",
-    "answer": "Variable can change;\n constant cannot be modified"
+    "answer": "Variable can change;\nconstant cannot be modified"
   },
   {
     "question": "How do you define a string variable in C#?",
@@ -45,7 +45,7 @@
   },
   {
     "question": "Explain the difference between == and = in C#.",
-    "answer": "= is for assign;\n == is for compare"
+    "answer": "= is for assign;\n== is for compare"
   },
   {
     "question": "What is an if statement used for?",
@@ -69,7 +69,7 @@
   },
   {
     "question": "What is the difference between while and do...while loops?",
-    "answer": "while checks first;\n do...while runs once before check"
+    "answer": "while checks first;\ndo...while runs once before check"
   },
   {
     "question": "How do you exit a loop before it finishes all iterations?",
@@ -93,7 +93,7 @@
   },
   {
     "question": "Explain the difference between void and non-void methods.",
-    "answer": "void gives no value back;\n non-void returns a value"
+    "answer": "void gives no value back;\nnon-void returns a value"
   },
   {
     "question": "What is method overloading in C#?",
@@ -109,7 +109,7 @@
   },
   {
     "question": "What is the difference between a class and a struct?",
-    "answer": "Class is reference type;\n struct is value type"
+    "answer": "Class is reference type;\nstruct is value type"
   },
   {
     "question": "How do you indicate inheritance when declaring a class in C#?",
@@ -129,7 +129,7 @@
   },
   {
     "question": "What is an interface in C#, and how does it differ from a class?",
-    "answer": "Interface has only rules (methods/properties), no code;\n class can have code"
+    "answer": "Interface has only rules (methods/properties), no code;\nclass can have code"
   },
   {
     "question": "How does a class implement an interface?",
@@ -137,15 +137,15 @@
   },
   {
     "question": "What is a property in C#, and how is it different from a field?",
-    "answer": "Property has get/set;\n field is normal variable"
+    "answer": "Property has get/set;\nfield is normal variable"
   },
   {
     "question": "How do you define an auto-implemented property?",
-    "answer": "public int Age { get;\n set;}"
+    "answer": "public int Age { get; set;}"
   },
   {
     "question": "How can you make a property readable from outside the class but writable only inside?",
-    "answer": "public int Age { get;\n private set;}"
+    "answer": "public int Age { get; private set;}"
   },
   {
     "question": "What is an indexer in C# and why would you use one?",
@@ -197,15 +197,15 @@
   },
   {
     "question": "What is a tuple, and how can it be used to return multiple values?",
-    "answer": "Simple way to store multiple values;\n return (name, age)"
+    "answer": "Simple way to store multiple values;\nreturn (name, age)"
   },
   {
     "question": "Explain the difference between ref and out parameters.",
-    "answer": "'ref' The variable must have a value before you pass it;\n 'out' The variable does not need to have a value before you pass it."
+    "answer": "'ref' The variable must have a value before you pass it;\n'out' The variable does not need to have a value before you pass it."
   },
   {
     "question": "How can you create a method that accepts a variable number of arguments?",
-    "answer": "Use params keyword;\n void Method(params int[] numbers){ }"
+    "answer": "Use params keyword;\nvoid Method(params int[] numbers){ }"
   },
   {
     "question": "What is the purpose of the params keyword?",
@@ -293,7 +293,7 @@
   },
   {
     "question": "What is the difference between shallow copy and deep copy?",
-    "answer": "Shallow: copy reference;\n deep: copy full object data"
+    "answer": "Shallow: copy reference;\ndeep: copy full object data"
   },
   {
     "question": "How do you override the ToString() method in a class?",
@@ -425,11 +425,11 @@
   },
   {
     "question": "Difference between AddSingleton, AddScoped, and AddTransient?",
-    "answer": "Singleton: One instance for the entire application lifetime (lives for the whole app).\nScoped: One instance per HTTP request.\n Transient: New instance every time the service is requested."
+    "answer": "Singleton: One instance for the entire application lifetime (lives for the whole app).\nScoped: One instance per HTTP request.\nTransient: New instance every time the service is requested."
   },
   {
     "question": "Why must DbContext not be registered as Singleton?",
-    "answer": "Because DbContext is request-scoped;\n use different instance every request to avoid concurrency issues and stale data. \n لأنه يحتفظ بالحاله الحالية لكل طلب وهيا تتغير مع كل طلب، وإذا شاركه أكثر من طلب في نفس الوقت يحدث تضارب وأخطاء وأيضا هذا غير أمن لانه يحتوي على بيانات الجلسة وغيرها"
+    "answer": "Because DbContext is request-scoped;\nuse different instance every request to avoid concurrency issues and stale data. \n لأنه يحتفظ بالحاله الحالية لكل طلب وهيا تتغير مع كل طلب، وإذا شاركه أكثر من طلب في نفس الوقت يحدث تضارب وأخطاء وأيضا هذا غير أمن لانه يحتوي على بيانات الجلسة وغيرها"
   },
   {
     "question": "What do UseRouting() and UseEndpoints() do?",
@@ -441,11 +441,11 @@
   },
   {
     "question": "What are OAuth2 and OpenID Connect?",
-    "answer": "OAuth2 → authorization. OpenID Connect → authentication built on OAuth2."
+    "answer": "OAuth2 → authorization. OpenID Connect → authentication built on OAuth2.\n(OAuth2 allows apps to access user resources safely, while OpenID Connect also verifies the user’s identity.)"
   },
   {
     "question": "What happens if you forget await when calling async code?",
-    "answer": "The Task runs without being awaited → unexpected behavior and uncaught exceptions."
+    "answer": "The Task runs without waiting for it to finish, which can lead to unexpected behavior or errors.\n(الكود بيشتغل في الخلفية بدون ما ينتظر النتيجة، وده ممكن يسبب مشاكل لو الكود اللي بعده بيعتمد على النتيجة دي)"
   },
   {
     "question": "What is Kestrel?",
@@ -473,15 +473,15 @@
   },
   {
     "question": "Difference between record and class?",
-    "answer": "record → immutable by default, value-based equality. class → mutable, reference-based equality."
+    "answer": "record → immutable by default, value-based equality. \nclass → mutable, reference-based equality.\n(السجل بيقارن القيم، أما الكلاس بيقارن المراجع)"
   },
   {
     "question": "What are Delegates and Events?",
-    "answer": "Delegate: type-safe function pointer. Event: pub/sub mechanism built on delegates."
+    "answer": "Delegate: type-safe function pointer. \nEvent: pub/sub mechanism built on delegates."
   },
   {
     "question": "How should passwords be stored securely?",
-    "answer": "Hash + salt using PBKDF2, BCrypt, or Argon2. Never store plaintext passwords."
+    "answer": "Hash + salt using PBKDF2, BCrypt, or Argon2. \nNever store plaintext passwords."
   },
   {
     "question": "What is ASP.NET Core Identity?",
@@ -525,15 +525,15 @@
   },
   {
     "question": "Give an example of short-circuiting.",
-    "answer": "if (!ctx.Request.Headers.ContainsKey(\"X-API-Key\"))\n{\n ctx.Response.StatusCode = 401;\n return;}"
+    "answer": "if (!ctx.Request.Headers.ContainsKey(\"X-API-Key\"))\n{\nctx.Response.StatusCode = 401;\nreturn; // Stop pipeline\n}"
   },
   {
     "question": "What is Dependency Injection (DI)?",
-    "answer": "A technique where classes receive their required objects (dependencies) from outside rather than creating them internally."
+    "answer": "A technique where classes receive their required objects (dependencies) from outside rather than creating them internally.\nهي طريقة بتخلي الكلاسات تاخد الأشياء اللي بتحتاجها من بره بدل ما تنشئها بنفسها."
   },
   {
     "question": "What does the DI container do?",
-    "answer": "Creates dependencies, injects them into classes, and manages their lifetimes."
+    "answer": "Creates dependencies, injects them into classes, and manages their lifetimes.\nبيوفر الأشياء اللي الكلاسات بتحتاجها ويدير عمرها"
   },
   {
     "question": "How do you register a dependency in DI?",
