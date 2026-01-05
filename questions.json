@@ -501,7 +501,7 @@
   },
   {
     "question": "What does Kestrel do when the app starts?",
-    "answer": "It opens a listening port, waits for HTTP requests, parses them, passes them to the middleware pipeline, and returns responses."
+    "answer": "Kestrel opens a port, receives HTTP requests, passes them through middleware, and sends back responses."
   },
   {
     "question": "When does Kestrel start listening?",
@@ -509,7 +509,7 @@
   },
   {
     "question": "What is the middleware pipeline?",
-    "answer": "It is the ordered flow through which every request and response passes in ASP.NET Core."
+    "answer": "It is the sequence of components that process HTTP requests and responses in order."
   },
   {
     "question": "Why does ASP.NET Core use a pipeline?",
