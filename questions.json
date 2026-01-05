@@ -425,11 +425,11 @@
   },
   {
     "question": "Difference between AddSingleton, AddScoped, and AddTransient?",
-    "answer": "Singleton: One instance for the entire application lifetime. Scoped: One instance per HTTP request. Transient: New instance every time the service is requested."
+    "answer": "Singleton: One instance for the entire application lifetime (lives for the whole app).\n Scoped: One instance per HTTP request.\n Transient: New instance every time the service is requested."
   },
   {
     "question": "Why must DbContext not be registered as Singleton?",
-    "answer": "Because DbContext is request-scoped;\n using it as Singleton causes concurrency issues and invalid shared state."
+    "answer": "Because DbContext is request-scoped;\n use different instance every request to avoid concurrency issues and stale data. \n لأنه يحتفظ بحالة (state) تتغير مع كل طلب، وإذا شاركه أكثر من طلب في نفس الوقت يحدث تضارب وأخطاء وأيضا هذا غير أمن لانه يحتوي على بيانات الجلسة وغيرها"
   },
   {
     "question": "What do UseRouting() and UseEndpoints() do?",
