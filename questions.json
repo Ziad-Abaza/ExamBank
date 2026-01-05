@@ -9,7 +9,7 @@
   },
   {
     "question": "Explain the main difference between C# and C++.",
-    "answer": "C++ is low-level, more control; C# is high-level, easier, manages memory, works in .NET"
+    "answer": "C++ is low-level, more control;\n C# is high-level, easier, manages memory, works in .NET"
   },
   {
     "question": "What is the purpose of the using keyword in C#?",
@@ -25,7 +25,7 @@
   },
   {
     "question": "Describe the difference between a variable and a constant.",
-    "answer": "Variable can change; constant cannot be modified"
+    "answer": "Variable can change;\n constant cannot be modified"
   },
   {
     "question": "How do you define a string variable in C#?",
@@ -45,7 +45,7 @@
   },
   {
     "question": "Explain the difference between == and = in C#.",
-    "answer": "= is for assign; == is for compare"
+    "answer": "= is for assign;\n == is for compare"
   },
   {
     "question": "What is an if statement used for?",
@@ -69,7 +69,7 @@
   },
   {
     "question": "What is the difference between while and do...while loops?",
-    "answer": "while checks first; do...while runs once before check"
+    "answer": "while checks first;\n do...while runs once before check"
   },
   {
     "question": "How do you exit a loop before it finishes all iterations?",
@@ -93,7 +93,7 @@
   },
   {
     "question": "Explain the difference between void and non-void methods.",
-    "answer": "void gives no value back; non-void returns a value"
+    "answer": "void gives no value back;\n non-void returns a value"
   },
   {
     "question": "What is method overloading in C#?",
@@ -109,7 +109,7 @@
   },
   {
     "question": "What is the difference between a class and a struct?",
-    "answer": "Class is reference type; struct is value type"
+    "answer": "Class is reference type;\n struct is value type"
   },
   {
     "question": "How do you indicate inheritance when declaring a class in C#?",
@@ -129,7 +129,7 @@
   },
   {
     "question": "What is an interface in C#, and how does it differ from a class?",
-    "answer": "Interface has only rules (methods/properties), no code; class can have code"
+    "answer": "Interface has only rules (methods/properties), no code;\n class can have code"
   },
   {
     "question": "How does a class implement an interface?",
@@ -137,15 +137,15 @@
   },
   {
     "question": "What is a property in C#, and how is it different from a field?",
-    "answer": "Property has get/set; field is normal variable"
+    "answer": "Property has get/set;\n field is normal variable"
   },
   {
     "question": "How do you define an auto-implemented property?",
-    "answer": "public int Age { get; set; }"
+    "answer": "public int Age { get;\n set;\n }"
   },
   {
     "question": "How can you make a property readable from outside the class but writable only inside?",
-    "answer": "public int Age { get; private set; }"
+    "answer": "public int Age { get;\n private set;\n }"
   },
   {
     "question": "What is an indexer in C# and why would you use one?",
@@ -173,7 +173,7 @@
   },
   {
     "question": "What is LINQ and which namespace is required to use it?",
-    "answer": "Easy way to read and query data; using System.Linq"
+    "answer": "Easy way to read and query data;\n using System.Linq"
   },
   {
     "question": "What does the async keyword do in a method declaration?",
@@ -197,15 +197,15 @@
   },
   {
     "question": "What is a tuple, and how can it be used to return multiple values?",
-    "answer": "Simple way to store multiple values; return (name, age)"
+    "answer": "Simple way to store multiple values;\n return (name, age)"
   },
   {
     "question": "Explain the difference between ref and out parameters.",
-    "answer": "'ref' The variable must have a value before you pass it; 'out' The variable does not need to have a value before you pass it."
+    "answer": "'ref' The variable must have a value before you pass it;\n 'out' The variable does not need to have a value before you pass it."
   },
   {
     "question": "How can you create a method that accepts a variable number of arguments?",
-    "answer": "Use params keyword; void Method(params int[] numbers){ }"
+    "answer": "Use params keyword;\n void Method(params int[] numbers){ }"
   },
   {
     "question": "What is the purpose of the params keyword?",
@@ -217,7 +217,7 @@
   },
   {
     "question": "What is the difference between try, catch, and finally blocks?",
-    "answer": "try runs code; catch handles error; finally always runs"
+    "answer": "try runs code;\n catch handles error;\n finally always runs"
   },
   {
     "question": "How do you explicitly throw an exception in C#?",
@@ -225,15 +225,15 @@
   },
   {
     "question": "What is the difference between throw and throw ex?",
-    "answer": "throw  keeps the original error info; throw ex loses it"
+    "answer": "throw  keeps the original error info;\n throw ex loses it"
   },
   {
     "question": "What is the purpose of the using statement with IDisposable objects?",
-    "answer": "Auto cleanup resources when done;  using (StreamReader reader = new StreamReader('file.txt'))"
+    "answer": "Auto cleanup resources when done;\n  using (StreamReader reader = new StreamReader('file.txt'))"
   },
   {
     "question": "What is the difference between public, private, and protected access modifiers?",
-    "answer": "public everywhere; private only inside class; protected in class and child"
+    "answer": "public everywhere;\n private only inside class;\n protected in class and child"
   },
   {
     "question": "What does the internal access modifier do?",
@@ -257,19 +257,19 @@
   },
   {
     "question": "What is the difference between abstract and virtual methods?",
-    "answer": "abstract just a definition, must override in child; virtual has a ready code, can override in child or not"
+    "answer": "abstract just a definition, must override in child;\n virtual has a ready code, can override in child or not"
   },
   {
     "question": "What is boxing and unboxing in C#?",
-    "answer": "Boxing: convert value type to object; Unboxing: convert object back to value type"
+    "answer": "Boxing: convert value type to object;\n Unboxing: convert object back to value type"
   },
   {
     "question": "Explain the difference between value types and reference types.",
-    "answer": "Value types store data directly; reference types store address of data"
+    "answer": "Value types store data directly;\n reference types store address of data"
   },
   {
     "question": "What is the difference between Array and List<T>?",
-    "answer": "Array fixed size; List<T> dynamic size"
+    "answer": "Array fixed size;\n List<T> dynamic size"
   },
   {
     "question": "How can you iterate over a collection using foreach?",
@@ -293,15 +293,15 @@
   },
   {
     "question": "What is the difference between shallow copy and deep copy?",
-    "answer": "Shallow: copy reference; deep: copy full object data"
+    "answer": "Shallow: copy reference;\n deep: copy full object data"
   },
   {
     "question": "How do you override the ToString() method in a class?",
-    "answer": "public override string ToString(){ return \"text\"; }"
+    "answer": "public override string ToString(){ return \"text\";\n }"
   },
   {
     "question": "What is the difference between == operator and .Equals() method?",
-    "answer": "== checks reference; .Equals() checks value"
+    "answer": "== checks reference;\n .Equals() checks value"
   },
   {
     "question": "How do you compare strings in C# ignoring case?",
@@ -321,7 +321,7 @@
   },
   {
     "question": "What is the difference between StringBuilder and string?",
-    "answer": "string immutable (cannot be changed after creation); StringBuilder changeable (can be modified without creating a new copy)."
+    "answer": "string immutable (cannot be changed after creation);\n StringBuilder changeable (can be modified without creating a new copy)."
   },
   {
     "question": "How do you format a date as a string in C#?",
@@ -329,7 +329,7 @@
   },
   {
     "question": "What is the difference between DateTime and TimeSpan?",
-    "answer": "DateTime is date & time (4 Jan 2026 17:00); TimeSpan is duration (2 hours, 30 minutes)"
+    "answer": "DateTime is date & time (4 Jan 2026 17:00);\n TimeSpan is duration (2 hours, 30 minutes)"
   },
   {
     "question": "How do you handle multiple exceptions in one catch block?",
@@ -357,7 +357,7 @@
   },
   {
     "question": "What is the difference between IEnumerable and IEnumerator?",
-    "answer": "IEnumerable can be looped; IEnumerator moves between items in collection"
+    "answer": "IEnumerable can be looped;\n IEnumerator moves between items in collection"
   },
   {
     "question": "What is covariance and contravariance in C#?",
@@ -369,7 +369,7 @@
   },
   {
     "question": "What is the difference between Task and 'Task<T>'?",
-    "answer": "Task no result; 'Task<T>' returns value"
+    "answer": "Task no result;\n 'Task<T>' returns value"
   },
   {
     "question": "What is the purpose of the ValueTask type?",
@@ -381,7 +381,7 @@
   },
   {
     "question": "What is the difference between IQueryable and IEnumerable in LINQ?",
-    "answer": "IEnumerable in-memory; IQueryable can build query for DB"
+    "answer": "IEnumerable in-memory;\n IQueryable can build query for DB"
   },
   {
     "question": "How do you create an anonymous type in C#?",
@@ -389,15 +389,15 @@
   },
   {
     "question": "What is the difference between dynamic and var?",
-    "answer": "var compile-time type; dynamic runtime"
+    "answer": "var compile-time type;\n dynamic runtime"
   },
   {
     "question": "What is the difference between throw and return in exception handling?",
-    "answer": "throw sends exception; return ends method normally"
+    "answer": "throw sends exception;\n return ends method normally"
   },
   {
     "question": "How do you implement proper exception propagation in a method?",
-    "answer": "Use throw; inside catch or let exception bubble up"
+    "answer": "Use throw;\n inside catch or let exception bubble up"
   },
   {
     "question": "What is the difference between .NET SDK and .NET Runtime?",
@@ -429,7 +429,7 @@
   },
   {
     "question": "Why must DbContext not be registered as Singleton?",
-    "answer": "Because DbContext is request-scoped; using it as Singleton causes concurrency issues and invalid shared state."
+    "answer": "Because DbContext is request-scoped;\n using it as Singleton causes concurrency issues and invalid shared state."
   },
   {
     "question": "What do UseRouting() and UseEndpoints() do?",
