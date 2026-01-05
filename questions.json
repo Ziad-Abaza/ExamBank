@@ -489,7 +489,7 @@
   },
   {
     "question": "What is a Minimal API?",
-    "answer": "A Minimal API is a lightweight way to build Web APIs using just a few lines of code inside Program.cs without controllers or heavy configuration."
+    "answer": "A Minimal API is a simple way to build Web APIs in Program.cs without controllers or heavy setup."
   },
   {
     "question": "Why is it called “Minimal”?",
