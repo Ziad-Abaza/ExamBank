@@ -473,7 +473,7 @@
   },
   {
     "question": "Difference between record and class?",
-    "answer": "record → immutable by default, value-based equality. \nclass → mutable, reference-based equality.\n(السجل بيقارن القيم، أما الكلاس بيقارن المراجع)"
+    "answer": "record → immutable by default, value-based equality. \nclass → mutable, reference-based equality.\n(A class compares objects by reference, while a record compares them by value and is mainly for data.)\n(السجل بيقارن القيم، أما الكلاس بيقارن المراجع)"
   },
   {
     "question": "What are Delegates and Events?",
