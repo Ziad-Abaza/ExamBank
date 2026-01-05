@@ -113,7 +113,7 @@
   },
   {
     "question": "How do you indicate inheritance when declaring a class in C#?",
-    "answer": "Use : like class Child : Parent { }"
+    "answer": "class Child : Parent { }"
   },
   {
     "question": "What keyword allows a method in a base class to be overridden in a derived class?",
@@ -133,7 +133,7 @@
   },
   {
     "question": "How does a class implement an interface?",
-    "answer": "Use : InterfaceName and write all its methods"
+    "answer": "Use : InterfaceName and write all its methods ( public class className : InterfaceName )"
   },
   {
     "question": "What is a property in C#, and how is it different from a field?",
@@ -157,15 +157,15 @@
   },
   {
     "question": "How is a const field different from a readonly field?",
-    "answer": "const fixed at compile time; readonly set in constructor or once"
+    "answer": "const is fixed at compile time, while readonly is fixed at runtime and can be assigned in the constructor."
   },
   {
     "question": "What is a delegate in C#?",
-    "answer": "Type that holds reference to a method"
+    "answer": "A delegate is a type that holds a reference to a method with a specific signature."
   },
   {
     "question": "How do you declare and use an event in C#?",
-    "answer": "Use event with delegate, then call it"
+    "answer": "An event is a way for a class tell other classes something happened. It uses a delegate to call methods"
   },
   {
     "question": "What is a lambda expression and give an example of its usage?",
@@ -173,19 +173,19 @@
   },
   {
     "question": "What is LINQ and which namespace is required to use it?",
-    "answer": "LINQ for querying data; need using System.Linq"
+    "answer": "Easy way to read and query data; using System.Linq"
   },
   {
     "question": "What does the async keyword do in a method declaration?",
-    "answer": "Marks method as asynchronous"
+    "answer": "makes the function work asynchronous, which means you can wait for long operations without stopping the program."
   },
   {
     "question": "What is the purpose of the await keyword in asynchronous programming?",
-    "answer": "Waits for task to finish without blocking"
+    "answer": "Waits for task to finish without stopping program"
   },
   {
     "question": "What is the Task type used for in C#?",
-    "answer": "Represents an async operation"
+    "answer": "Represents a process that runs in the background or asynchronously."
   },
   {
     "question": "How do you declare a nullable type in C#?",
@@ -201,11 +201,11 @@
   },
   {
     "question": "Explain the difference between ref and out parameters.",
-    "answer": "ref needs variable initialized; out does not need before call"
+    "answer": "'ref' The variable must have a value before you pass it; 'out' The variable does not need to have a value before you pass it."
   },
   {
     "question": "How can you create a method that accepts a variable number of arguments?",
-    "answer": "Use params keyword"
+    "answer": "Use params keyword; void Method(params int[] numbers){ }"
   },
   {
     "question": "What is the purpose of the params keyword?",
@@ -225,11 +225,11 @@
   },
   {
     "question": "What is the difference between throw and throw ex?",
-    "answer": "throw keeps original error info; throw ex loses it"
+    "answer": "throw  keeps the original error info; throw ex loses it"
   },
   {
     "question": "What is the purpose of the using statement with IDisposable objects?",
-    "answer": "Auto cleanup resources when done"
+    "answer": "Auto cleanup resources when done;  using (StreamReader reader = new StreamReader('file.txt'))"
   },
   {
     "question": "What is the difference between public, private, and protected access modifiers?",
@@ -245,7 +245,7 @@
   },
   {
     "question": "What does the override keyword do in a derived class?",
-    "answer": "Replaces base method implementation"
+    "answer": "Replaces base method implementation with new one (with its own version)"
   },
   {
     "question": "Explain what a virtual method is.",
@@ -253,15 +253,15 @@
   },
   {
     "question": "How do you prevent a method from being overridden?",
-    "answer": "Use sealed or remove virtual"
+    "answer": "Use 'sealed' keyword or 'remove' virtual keyword"
   },
   {
     "question": "What is the difference between abstract and virtual methods?",
-    "answer": "abstract has no code, must override; virtual has code, can override"
+    "answer": "abstract just a definition, must override in child; virtual has a ready code, can override in child or not"
   },
   {
     "question": "What is boxing and unboxing in C#?",
-    "answer": "Boxing: value type → object; Unboxing: object → value type"
+    "answer": "Boxing: convert value type to object; Unboxing: convert object back to value type"
   },
   {
     "question": "Explain the difference between value types and reference types.",
@@ -281,7 +281,7 @@
   },
   {
     "question": "What is the difference between ArrayList and List<T>?",
-    "answer": "ArrayList non-generic; List<T> generic"
+    "answer": "ArrayList can store any type, while List<T> stores a specific type and is safer and faster."
   },
   {
     "question": "How do you declare a multidimensional array?",
@@ -305,7 +305,7 @@
   },
   {
     "question": "How do you compare strings in C# ignoring case?",
-    "answer": "string.Equals(a, b, StringComparison.OrdinalIgnoreCase)"
+    "answer": "bool result = string.Equals(a, b, StringComparison.OrdinalIgnoreCase);"
   },
   {
     "question": "How do you convert a string to an integer?",
@@ -317,11 +317,11 @@
   },
   {
     "question": "What is string interpolation, and how is it used?",
-    "answer": "$\"Hello {name}\""
+    "answer": "is a way to insert variables directly into a string using {} and $. Example: $\"Hello {name}\""
   },
   {
     "question": "What is the difference between StringBuilder and string?",
-    "answer": "string immutable; StringBuilder changeable"
+    "answer": "string immutable (cannot be changed after creation); StringBuilder changeable (can be modified without creating a new copy)."
   },
   {
     "question": "How do you format a date as a string in C#?",
@@ -329,7 +329,7 @@
   },
   {
     "question": "What is the difference between DateTime and TimeSpan?",
-    "answer": "DateTime is date & time; TimeSpan is duration"
+    "answer": "DateTime is date & time (4 Jan 2026 17:00); TimeSpan is duration (2 hours, 30 minutes)"
   },
   {
     "question": "How do you handle multiple exceptions in one catch block?",
@@ -337,7 +337,7 @@
   },
   {
     "question": "What is the difference between throw inside catch vs outside?",
-    "answer": "Inside catch throws current error; outside rethrows context"
+    "answer": "throw inside catch keeps the original error location (stack trace), while throw ex reset the stack trace"
   },
   {
     "question": "How do you read from a text file in C#?",
@@ -349,7 +349,7 @@
   },
   {
     "question": "What is the difference between synchronous and asynchronous file I/O?",
-    "answer": "Sync waits; async does not block"
+    "answer": "Sync waits for the operation to finish, while async runs in the background without blocking the program."
   },
   {
     "question": "How do you implement an interface explicitly?",
@@ -357,23 +357,23 @@
   },
   {
     "question": "What is the difference between IEnumerable and IEnumerator?",
-    "answer": "IEnumerable can be looped; IEnumerator moves through collection"
+    "answer": "IEnumerable can be looped; IEnumerator moves between items in collection"
   },
   {
     "question": "What is covariance and contravariance in C#?",
-    "answer": "Covariance: return more derived; Contravariance: accept less derived"
+    "answer": "Covariance: return more derived;\n Contravariance: accept less derived"
   },
   {
     "question": "How do you define a generic class or method?",
     "answer": "class MyClass<T>{ } or void MyMethod<T>(){ }"
   },
   {
-    "question": "What is the difference between Task and Task<T>?",
-    "answer": "Task no result; Task<T> returns value"
+    "question": "What is the difference between Task and 'Task<T>'?",
+    "answer": "Task no result; 'Task<T>' returns value"
   },
   {
     "question": "What is the purpose of the ValueTask type?",
-    "answer": "Lightweight async return to reduce overhead"
+    "answer": "lightweight version of Task used for async operations that can be completed"
   },
   {
     "question": "How do you cancel an asynchronous operation?",
@@ -413,15 +413,15 @@
   },
   {
     "question": "What is the difference between app.Use(), app.Run(), and app.Map()?",
-    "answer": "Use: Adds middleware and can call the next middleware (await next()). Run: Terminal middleware — does not call the next middleware. Map: Creates a branch in the pipeline for specific routes."
+    "answer": "Use: Adds middleware and passes the request to the next middleware.\n Run: Terminal middleware — does not call the next middleware.\n Map: use to handles a specific path and creates a branch in the pipeline."
   },
   {
     "question": "What is middleware “short-circuiting”?",
-    "answer": "When a middleware does not call await next(), stopping the pipeline early. Example: API key validation that returns 401 immediately."
+    "answer": "stops the request pipeline by not calling next().\n Example: API key validation that returns 401 immediately."
   },
   {
     "question": "What is Dependency Injection (DI) and why is it important?",
-    "answer": "A design pattern where required objects (dependencies) are provided by a container instead of being created manually. Improves testability, decoupling, and lifetime management."
+    "answer": "Dependency Injection provides needed objects to a class instead of creating them inside it.\n It improves testability, maintainability, and decouples components."
   },
   {
     "question": "Difference between AddSingleton, AddScoped, and AddTransient?",
