@@ -497,7 +497,7 @@
   },
   {
     "question": "What port does a Minimal API use when running locally?",
-    "answer": "It typically runs on something like https://localhost:5000/hello."
+    "answer": "A Minimal API runs locally on https://localhost:5000 or https://localhost:5001 \nthe default port is 5000 or 5001."
   },
   {
     "question": "What does Kestrel do when the app starts?",
