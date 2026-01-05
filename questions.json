@@ -413,7 +413,7 @@
   },
   {
     "question": "What is the difference between app.Use(), app.Run(), and app.Map()?",
-    "answer": "Use: Adds middleware and passes the request to the next middleware.\n Run: Terminal middleware — does not call the next middleware.\n Map: use to handles a specific path and creates a branch in the pipeline."
+    "answer": "Use: Adds middleware and passes the request to the next middleware.\n Run: does not call the next middleware.\n Map: use to handles a specific path and creates a branch in the pipeline."
   },
   {
     "question": "What is middleware “short-circuiting”?",
@@ -421,7 +421,7 @@
   },
   {
     "question": "What is Dependency Injection (DI) and why is it important?",
-    "answer": "Dependency Injection provides needed objects to a class instead of creating them inside it.\n It improves testability, maintainability, and decouples components."
+    "answer": "Dependency Injection provides needed objects to a class instead of creating them inside it.\n It improves testability, maintainability, and decouples components. \n يعني أن الكلاس لا ينشئ الأشياء التي يحتاجها بنفسه، بل يتم إعطاؤها له من الخارج."
   },
   {
     "question": "Difference between AddSingleton, AddScoped, and AddTransient?",
