@@ -1096,13 +1096,13 @@ body {
 }
 
 .output-note {
-  color: #b45309;
+  color: #d97706;
   font-size: 12px;
   line-height: 1.6;
 }
 
-[data-theme="light"] .output-note {
-  color: #d97706;
+[data-theme="dark"] .output-note {
+  color: #fbbf24;
 }
 
 .output-code {
@@ -1294,7 +1294,6 @@ body {
 [data-theme="light"] .tk-bracket {
   color: #64748b;
 }
-
 /* --- Scrollbar for code blocks --- */
 .code-display-body::-webkit-scrollbar,
 .code-editor-body::-webkit-scrollbar,
