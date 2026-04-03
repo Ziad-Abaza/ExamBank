@@ -156,6 +156,60 @@
     <section class="question-section hidden" id="codeSection">
       <div class="section-header">
         <h2 class="section-title" data-en="Code Exercises" data-ar="تمارين البرمجة">Code Exercises</h2>
+        <div class="code-help-wrapper">
+          <button class="code-help-btn" id="codeHelpBtn" aria-label="How to use" title="كيفية استخدام تمارين البرمجة">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </button>
+          <!-- Help Tooltip -->
+          <div class="code-help-tooltip hidden" id="codeHelpTooltip">
+            <div class="tooltip-header">
+              <h4>كيفية استخدام دليل البيانات مع تمارين البرمجة</h4>
+              <button class="tooltip-close" id="tooltipClose">&times;</button>
+            </div>
+            <div class="tooltip-body">
+              <div class="tooltip-step">
+                <span class="step-number">١</span>
+                <p>اضغط على أيقونة <strong>دليل البيانات</strong> (📁) في الشريط العلوي لعرض مجموعات البيانات المتاحة.</p>
+              </div>
+              <div class="tooltip-step">
+                <span class="step-number">٢</span>
+                <p>اختر مجموعة البيانات التي تريد استخدامها (مثل: students.csv, sales.csv).</p>
+              </div>
+              <div class="tooltip-step">
+                <span class="step-number">٣</span>
+                <p>انسخ مسار الملف بالضغط على زر النسخ (📋) بجانب اسم الملف.</p>
+              </div>
+              <div class="tooltip-step">
+                <span class="step-number">٤</span>
+                <p>في تمرين البرمجة، اضغط على <strong>"جرّب بنفسك"</strong> لفتح محرر الأكواد.</p>
+              </div>
+              <div class="tooltip-step">
+                <span class="step-number">٥</span>
+                <p>استخدم <code>pd.read_csv("مسار/الملف.csv")</code> لقراءة مجموعة البيانات في بايثون.</p>
+              </div>
+              <div class="tooltip-step">
+                <span class="step-number">٦</span>
+                <p>قم بتحليل البيانات باستخدام أوامر مثل <code>df.head()</code>, <code>df.describe()</code>, أو <code>df.plot()</code>.</p>
+              </div>
+              <div class="tooltip-step">
+                <span class="step-number">٧</span>
+                <p>اضغط على زر <strong>"تشغيل"</strong> لتنفيذ الكود ورؤية النتائج فوراً.</p>
+              </div>
+              <div class="tooltip-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="16" x2="12" y2="12"/>
+                  <line x1="12" y1="8" x2="12.01" y2="8"/>
+                </svg>
+                <p>يمكنك تعديل الكود وإعادة التشغيل عدة مرات لتجربة أوامر مختلفة!</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="questions-container" id="codeQuestions"></div>
     </section>
