@@ -1896,9 +1896,18 @@ const App = (() => {
     });
 
     // Dataset Catalog
-    document.getElementById('catalogBtn').addEventListener('click', () => {
-      FileCatalog.toggle();
-    });
+    const catalogBtn = document.getElementById('catalogBtn');
+    if (catalogBtn) {
+      catalogBtn.addEventListener('click', () => {
+        try {
+          FileCatalog.toggle();
+        } catch (err) {
+          console.error('[ExamBank] Catalog error:', err);
+        }
+      });
+    } else {
+      console.warn('[ExamBank] catalogBtn not found in DOM');
+    }
 
     document.getElementById('modalClose').addEventListener('click', () => {
       document.getElementById('dashboardModal').classList.add('hidden');
