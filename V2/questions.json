@@ -1,0 +1,595 @@
+{
+  "true_false": [
+    {
+      "id": 1,
+      "question_en": "The growth of IoT devices is one of the main causes of the data explosion.",
+      "question_ar": "هل نمو أجهزة إنترنت الأشياء هو أحد الأسباب الرئيسية لانفجار البيانات؟",
+      "answer": true,
+      "explanation": "IoT devices continuously generate massive amounts of data, contributing to data explosion."
+    },
+    {
+      "id": 2,
+      "question_en": "Big Data only refers to structured data stored in relational databases.",
+      "question_ar": "هل البيانات الضخمة تقتصر فقط على البيانات المنظمة؟",
+      "answer": false,
+      "explanation": "Big Data includes structured, semi-structured, and unstructured data."
+    },
+    {
+      "id": 3,
+      "question_en": "Volume refers to the speed at which data is generated.",
+      "question_ar": "هل الحجم يشير إلى سرعة توليد البيانات؟",
+      "answer": false,
+      "explanation": "Volume refers to the amount of data, not speed."
+    },
+    {
+      "id": 4,
+      "question_en": "Velocity describes how fast data is generated and processed.",
+      "question_ar": "هل السرعة تصف مدى سرعة توليد ومعالجة البيانات؟",
+      "answer": true,
+      "explanation": "Velocity refers to the speed of data generation and processing."
+    },
+    {
+      "id": 5,
+      "question_en": "Variety refers to different formats such as text, images, and videos.",
+      "question_ar": "هل التنوع يشير إلى أنواع البيانات المختلفة؟",
+      "answer": true,
+      "explanation": "Variety represents different data formats."
+    },
+    {
+      "id": 6,
+      "question_en": "Veracity deals with data accuracy and reliability.",
+      "question_ar": "هل الموثوقية تتعلق بدقة البيانات؟",
+      "answer": true,
+      "explanation": "Veracity focuses on data quality and trustworthiness."
+    },
+    {
+      "id": 7,
+      "question_en": "Traditional systems are always sufficient for handling petabytes of data.",
+      "question_ar": "هل الأنظمة التقليدية كافية دائمًا لبيانات ضخمة؟",
+      "answer": false,
+      "explanation": "Traditional systems cannot efficiently handle very large-scale data."
+    },
+    {
+      "id": 8,
+      "question_en": "Distributed computing allows multiple machines to work together.",
+      "question_ar": "هل الحوسبة الموزعة تسمح لعدة أجهزة بالعمل معًا؟",
+      "answer": true,
+      "explanation": "Distributed computing uses multiple machines collaboratively."
+    },
+    {
+      "id": 9,
+      "question_en": "Big Data architecture includes ingestion, storage, processing, and analytics layers.",
+      "question_ar": "هل بنية البيانات الضخمة تشمل الإدخال والتخزين والمعالجة والتحليل؟",
+      "answer": true,
+      "explanation": "These are the core layers in Big Data architecture."
+    },
+    {
+      "id": 10,
+      "question_en": "Scalability is not a challenge in Big Data systems.",
+      "question_ar": "هل قابلية التوسع ليست تحديًا؟",
+      "answer": false,
+      "explanation": "Scalability is a major challenge in Big Data systems."
+    },
+    {
+      "id": 11,
+      "question_en": "Hadoop provides built-in fault tolerance.",
+      "question_ar": "هل Hadoop يوفر تحمل الأخطاء؟",
+      "answer": true,
+      "explanation": "Hadoop uses data replication for fault tolerance."
+    },
+    {
+      "id": 12,
+      "question_en": "NoSQL databases are limited to structured data only.",
+      "question_ar": "هل NoSQL تقتصر على البيانات المنظمة؟",
+      "answer": false,
+      "explanation": "NoSQL supports unstructured and semi-structured data."
+    },
+    {
+      "id": 13,
+      "question_en": "Hadoop Distributed File System is part of the Hadoop storage layer.",
+      "question_ar": "هل HDFS جزء من طبقة التخزين؟",
+      "answer": true,
+      "explanation": "HDFS is the storage component of Hadoop."
+    },
+    {
+      "id": 14,
+      "question_en": "Apache Spark is generally faster than MapReduce due to in-memory processing.",
+      "question_ar": "هل Spark أسرع من MapReduce؟",
+      "answer": true,
+      "explanation": "Spark processes data in memory, making it faster."
+    },
+    {
+      "id": 15,
+      "question_en": "Apache Hive belongs to the data querying layer of the Hadoop ecosystem.",
+      "question_ar": "هل Hive ضمن طبقة الاستعلام؟",
+      "answer": true,
+      "explanation": "Hive allows SQL-like querying on Hadoop."
+    },
+    {
+      "id": 16,
+      "question_en": "Hadoop cluster management can be performed using Apache Ambari.",
+      "question_ar": "هل يمكن إدارة Hadoop باستخدام Ambari؟",
+      "answer": true,
+      "explanation": "Ambari is used for monitoring and managing Hadoop clusters."
+    },
+    {
+      "id": 17,
+      "question_en": "Hadoop is only suitable for structured relational data.",
+      "question_ar": "هل Hadoop مناسب فقط للبيانات المنظمة؟",
+      "answer": false,
+      "explanation": "Hadoop supports all data types."
+    },
+    {
+      "id": 18,
+      "question_en": "A histogram is used for multivariate analysis only.",
+      "question_ar": "هل Histogram يستخدم فقط لتحليل متعدد المتغيرات؟",
+      "answer": false,
+      "explanation": "Histogram is used for univariate analysis."
+    },
+    {
+      "id": 19,
+      "question_en": "Box plots can help identify outliers in data.",
+      "question_ar": "هل Box Plot يساعد في اكتشاف القيم الشاذة؟",
+      "answer": true,
+      "explanation": "Box plots highlight outliers clearly."
+    },
+    {
+      "id": 20,
+      "question_en": "Correlation matrix is used to analyze relationships between multiple variables.",
+      "question_ar": "هل مصفوفة الارتباط تستخدم لتحليل العلاقات؟",
+      "answer": true,
+      "explanation": "It measures relationships between variables."
+    },
+    {
+      "id": 21,
+      "question_en": "Data visualization has no role in machine learning.",
+      "question_ar": "هل التصور البياني لا دور له؟",
+      "answer": false,
+      "explanation": "Visualization is essential in understanding data."
+    },
+    {
+      "id": 22,
+      "question_en": "Scatter plots are used for visualizing relationships between two variables.",
+      "question_ar": "هل Scatter Plot يستخدم لعلاقة بين متغيرين؟",
+      "answer": true,
+      "explanation": "Scatter plots show relationships between two variables."
+    },
+    {
+      "id": 23,
+      "question_en": "Data Visualization is used to represent data graphically for better understanding.",
+      "question_ar": "هل التصور البياني يستخدم لعرض البيانات؟",
+      "answer": true,
+      "explanation": "It represents data visually."
+    },
+    {
+      "id": 24,
+      "question_en": "Exploratory Data Analysis (EDA) is only performed after model deployment.",
+      "question_ar": "هل يتم EDA بعد نشر النموذج فقط؟",
+      "answer": false,
+      "explanation": "EDA is done before modeling."
+    },
+    {
+      "id": 25,
+      "question_en": "Data Visualization is used to represent data graphically for better understanding.",
+      "question_ar": "هل التصور البياني يستخدم لعرض البيانات؟",
+      "answer": true,
+      "explanation": "Same as question 23."
+    },
+    {
+      "id": 26,
+      "question_en": "Exploratory Data Analysis (EDA) is only performed after model deployment.",
+      "question_ar": "هل يتم EDA بعد نشر النموذج فقط؟",
+      "answer": false,
+      "explanation": "Same as question 24."
+    },
+    {
+      "id": 27,
+      "question_en": "EDA helps in identifying patterns, trends, and anomalies in data.",
+      "question_ar": "هل يساعد EDA في اكتشاف الأنماط؟",
+      "answer": true,
+      "explanation": "EDA is used to discover patterns and anomalies."
+    },
+    {
+      "id": 28,
+      "question_en": "Central tendency refers to measures like mean, median, and mode.",
+      "question_ar": "هل النزعة المركزية تشمل المتوسط والوسيط؟",
+      "answer": true,
+      "explanation": "These are standard central tendency measures."
+    },
+    {
+      "id": 29,
+      "question_en": "RDBMS systems are fully optimized for petabyte-scale Big Data workloads.",
+      "question_ar": "هل RDBMS مناسبة لبيانات ضخمة جدًا؟",
+      "answer": false,
+      "explanation": "They are not optimized for very large-scale distributed data."
+    },
+    {
+      "id": 30,
+      "question_en": "ETL loads data first and then transforms it.",
+      "question_ar": "هل ETL يقوم بالتحميل أولًا؟",
+      "answer": false,
+      "explanation": "ETL stands for Extract, Transform, Load."
+    }
+  ],
+  "mcq": [
+    {
+      "id": 1,
+      "question_en": "Which of the following contributes most to the data explosion?",
+      "question_ar": "أي مما يلي يساهم بشكل أكبر في انفجار البيانات؟",
+      "options": {
+        "a": "Manual record keeping",
+        "b": "IoT devices",
+        "c": "Typewriters",
+        "d": "Fax machines"
+      },
+      "correct_answer": "b",
+      "explanation": "IoT devices continuously generate massive real-time data, making them a primary driver of data explosion."
+    },
+    {
+      "id": 2,
+      "question_en": "Which “V” represents the scale of data?",
+      "question_ar": "أي من الـ V يمثل حجم البيانات؟",
+      "options": {
+        "a": "Velocity",
+        "b": "Value",
+        "c": "Volume",
+        "d": "Variety"
+      },
+      "correct_answer": "c",
+      "explanation": "Volume refers to the amount or scale of data."
+    },
+    {
+      "id": 3,
+      "question_en": "Which layer is responsible for collecting data from different sources?",
+      "question_ar": "أي طبقة مسؤولة عن جمع البيانات من مصادر مختلفة؟",
+      "options": {
+        "a": "Storage",
+        "b": "Analytics",
+        "c": "Ingestion",
+        "d": "Visualization"
+      },
+      "correct_answer": "c",
+      "explanation": "The ingestion layer collects and imports data from multiple sources."
+    },
+    {
+      "id": 4,
+      "question_en": "Which of the following is an example of unstructured data?",
+      "question_ar": "أي مما يلي مثال على بيانات غير منظمة؟",
+      "options": {
+        "a": "Excel table",
+        "b": "SQL database",
+        "c": "Social media image",
+        "d": "CSV file"
+      },
+      "correct_answer": "c",
+      "explanation": "Images are unstructured data as they do not follow a predefined schema."
+    },
+    {
+      "id": 5,
+      "question_en": "Traditional systems mainly rely on:",
+      "question_ar": "الأنظمة التقليدية تعتمد بشكل أساسي على:",
+      "options": {
+        "a": "Distributed clusters",
+        "b": "Single-server architecture",
+        "c": "Cloud-native systems",
+        "d": "Edge computing"
+      },
+      "correct_answer": "b",
+      "explanation": "Traditional systems are typically built on single-server architectures."
+    },
+    {
+      "id": 6,
+      "question_en": "Velocity mainly concerns:",
+      "question_ar": "السرعة (Velocity) تتعلق بـ:",
+      "options": {
+        "a": "Data size",
+        "b": "Data speed",
+        "c": "Data quality",
+        "d": "Data storage cost"
+      },
+      "correct_answer": "b",
+      "explanation": "Velocity refers to how fast data is generated and processed."
+    },
+    {
+      "id": 7,
+      "question_en": "Which industry uses Big Data for fraud detection?",
+      "question_ar": "أي قطاع يستخدم البيانات الضخمة لاكتشاف الاحتيال؟",
+      "options": {
+        "a": "Agriculture",
+        "b": "Finance",
+        "c": "Construction",
+        "d": "Manufacturing"
+      },
+      "correct_answer": "b",
+      "explanation": "The finance industry uses Big Data extensively for fraud detection."
+    },
+    {
+      "id": 8,
+      "question_en": "Veracity is related to:",
+      "question_ar": "الموثوقية (Veracity) تتعلق بـ:",
+      "options": {
+        "a": "Data truthfulness",
+        "b": "Data format",
+        "c": "Data speed",
+        "d": "Data duplication"
+      },
+      "correct_answer": "a",
+      "explanation": "Veracity refers to the accuracy and reliability of data."
+    },
+    {
+      "id": 9,
+      "question_en": "Distributed computing improves:",
+      "question_ar": "الحوسبة الموزعة تحسن:",
+      "options": {
+        "a": "Manual processing",
+        "b": "Scalability",
+        "c": "Paper documentation",
+        "d": "Data entry speed"
+      },
+      "correct_answer": "b",
+      "explanation": "Distributed systems improve scalability by spreading workloads."
+    },
+    {
+      "id": 10,
+      "question_en": "One key challenge in Big Data implementation is:",
+      "question_ar": "أحد التحديات الرئيسية في تطبيق البيانات الضخمة هو:",
+      "options": {
+        "a": "Low internet usage",
+        "b": "Data security",
+        "c": "Small datasets",
+        "d": "Limited software options"
+      },
+      "correct_answer": "b",
+      "explanation": "Security is a major concern due to large and sensitive datasets."
+    },
+    {
+      "id": 11,
+      "question_en": "Which layer is responsible for storing large volumes of data?",
+      "question_ar": "أي طبقة مسؤولة عن تخزين البيانات الضخمة؟",
+      "options": {
+        "a": "Ingestion",
+        "b": "Storage",
+        "c": "Analytics",
+        "d": "Monitoring"
+      },
+      "correct_answer": "b",
+      "explanation": "Storage layer handles data persistence."
+    },
+    {
+      "id": 12,
+      "question_en": "Which of the following is an example of streaming ingestion tool?",
+      "question_ar": "أي مما يلي أداة إدخال بيانات لحظية؟",
+      "options": {
+        "a": "Power BI",
+        "b": "Apache Kafka",
+        "c": "MySQL",
+        "d": "Excel"
+      },
+      "correct_answer": "b",
+      "explanation": "Kafka is widely used for real-time data streaming."
+    },
+    {
+      "id": 13,
+      "question_en": "Which storage option is commonly used in Hadoop ecosystems?",
+      "question_ar": "ما هو نظام التخزين المستخدم في Hadoop؟",
+      "options": {
+        "a": "HDFS",
+        "b": "FTP",
+        "c": "HTML",
+        "d": "SMTP"
+      },
+      "correct_answer": "a",
+      "explanation": "HDFS is Hadoop’s distributed storage system."
+    },
+    {
+      "id": 14,
+      "question_en": "ELT differs from ETL because transformation happens:",
+      "question_ar": "ما الفرق بين ELT و ETL؟",
+      "options": {
+        "a": "Before loading",
+        "b": "During ingestion",
+        "c": "After loading",
+        "d": "Outside the system"
+      },
+      "correct_answer": "c",
+      "explanation": "In ELT, data is loaded first, then transformed."
+    },
+    {
+      "id": 15,
+      "question_en": "Hadoop mainly solves problems related to:",
+      "question_ar": "Hadoop يعالج مشاكل:",
+      "options": {
+        "a": "Small datasets",
+        "b": "Distributed storage and processing",
+        "c": "Desktop computing",
+        "d": "Word processing"
+      },
+      "correct_answer": "b",
+      "explanation": "Hadoop is designed for distributed systems."
+    },
+    {
+      "id": 16,
+      "question_en": "Which tool belongs to the Hadoop ingestion layer?",
+      "question_ar": "أي أداة ضمن طبقة الإدخال؟",
+      "options": {
+        "a": "Hive",
+        "b": "Spark",
+        "c": "Flume",
+        "d": "HDFS"
+      },
+      "correct_answer": "c",
+      "explanation": "Flume is used for data ingestion."
+    },
+    {
+      "id": 17,
+      "question_en": "Which component is used for distributed storage?",
+      "question_ar": "ما المكون المستخدم للتخزين الموزع؟",
+      "options": {
+        "a": "HDFS",
+        "b": "Pig",
+        "c": "Hive",
+        "d": "Oozie"
+      },
+      "correct_answer": "a",
+      "explanation": "HDFS handles distributed storage."
+    },
+    {
+      "id": 18,
+      "question_en": "MapReduce primarily processes data in:",
+      "question_ar": "MapReduce يعالج البيانات في:",
+      "options": {
+        "a": "Real-time memory",
+        "b": "Distributed batch mode",
+        "c": "Manual mode",
+        "d": "Local spreadsheets"
+      },
+      "correct_answer": "b",
+      "explanation": "MapReduce is a batch processing model."
+    },
+    {
+      "id": 19,
+      "question_en": "Which language is commonly used with Hive?",
+      "question_ar": "ما اللغة المستخدمة مع Hive؟",
+      "options": {
+        "a": "SQL",
+        "b": "HQL",
+        "c": "Python",
+        "d": "C++"
+      },
+      "correct_answer": "b",
+      "explanation": "Hive uses Hive Query Language (HQL)."
+    },
+    {
+      "id": 20,
+      "question_en": "What is the main goal of EDA?",
+      "question_ar": "ما الهدف الأساسي من EDA؟",
+      "options": {
+        "a": "Data storage",
+        "b": "Data exploration and understanding",
+        "c": "Data deletion",
+        "d": "Data encryption"
+      },
+      "correct_answer": "b",
+      "explanation": "EDA focuses on understanding data patterns."
+    },
+    {
+      "id": 21,
+      "question_en": "Which measure represents central tendency?",
+      "question_ar": "أي مقياس يمثل النزعة المركزية؟",
+      "options": {
+        "a": "Variance",
+        "b": "Mean",
+        "c": "Range",
+        "d": "Standard deviation"
+      },
+      "correct_answer": "b",
+      "explanation": "Mean is a measure of central tendency."
+    },
+    {
+      "id": 22,
+      "question_en": "Which plot is used for distribution analysis?",
+      "question_ar": "أي رسم يستخدم لتحليل التوزيع؟",
+      "options": {
+        "a": "Histogram",
+        "b": "Pie chart",
+        "c": "Line chart",
+        "d": "Bar chart"
+      },
+      "correct_answer": "a",
+      "explanation": "Histogram shows data distribution."
+    },
+    {
+      "id": 23,
+      "question_en": "Which technique is used to detect outliers?",
+      "question_ar": "أي تقنية تستخدم لاكتشاف القيم الشاذة؟",
+      "options": {
+        "a": "Scatter plot",
+        "b": "Box plot",
+        "c": "Heatmap",
+        "d": "Line chart"
+      },
+      "correct_answer": "b",
+      "explanation": "Box plot highlights outliers."
+    },
+    {
+      "id": 24,
+      "question_en": "Correlation matrix is used to:",
+      "question_ar": "مصفوفة الارتباط تستخدم لـ:",
+      "options": {
+        "a": "Store data",
+        "b": "Measure relationships between variables",
+        "c": "Clean data",
+        "d": "Encode data"
+      },
+      "correct_answer": "b",
+      "explanation": "It measures relationships between variables."
+    },
+    {
+      "id": 25,
+      "question_en": "Which plot is used for multivariate analysis?",
+      "question_ar": "أي رسم يستخدم لتحليل متعدد المتغيرات؟",
+      "options": {
+        "a": "Histogram",
+        "b": "Box plot",
+        "c": "Scatter matrix",
+        "d": "Density plot"
+      },
+      "correct_answer": "c",
+      "explanation": "Scatter matrix visualizes relationships among multiple variables."
+    }
+  ],
+  "short_answer": [
+    {
+      "id": 1,
+      "question_en": "Why do traditional systems struggle with Big Data?",
+      "question_ar": "لماذا تواجه الأنظمة التقليدية صعوبة في التعامل مع البيانات الضخمة؟",
+      "answer": "Traditional systems struggle with Big Data because they rely on single-server architectures, have limited scalability, and cannot efficiently handle large volumes, high velocity, and diverse data types."
+    },
+    {
+      "id": 2,
+      "question_en": "Explain the main components of Big Data Architecture.",
+      "question_ar": "اشرح المكونات الرئيسية لبنية البيانات الضخمة.",
+      "answer": "Big Data Architecture consists of four main components: data ingestion (collecting data), storage (saving data), processing (analyzing data), and analytics (extracting insights)."
+    },
+    {
+      "id": 3,
+      "question_en": "What is the difference between ETL and ELT?",
+      "question_ar": "ما الفرق بين ETL و ELT؟",
+      "answer": "ETL transforms data before loading it into storage, while ELT loads data first and then performs transformation inside the storage system."
+    },
+    {
+      "id": 4,
+      "question_en": "Define Exploratory Data Analysis (EDA).",
+      "question_ar": "عرّف تحليل البيانات الاستكشافي (EDA).",
+      "answer": "EDA is the process of analyzing and summarizing datasets using statistical and visualization techniques to understand patterns, detect anomalies, and prepare data for modeling."
+    },
+    {
+      "id": 5,
+      "question_en": "Explain the difference between univariate and multivariate plots.",
+      "question_ar": "اشرح الفرق بين الرسوم أحادية المتغير ومتعددة المتغيرات.",
+      "answer": "Univariate plots analyze a single variable, while multivariate plots analyze relationships between two or more variables."
+    }
+  ],
+  "code": [
+    {
+      "id": 1,
+      "task": "Load a dataset and display basic statistical summary (mean, median, std).",
+      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.mean(numeric_only=True))\nprint(df.median(numeric_only=True))\nprint(df.std(numeric_only=True))"
+    },
+    {
+      "id": 2,
+      "task": "Create a histogram to visualize the distribution of a numeric column.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\ndf['column_name'].hist()\nplt.show()"
+    },
+    {
+      "id": 3,
+      "task": "Generate a box plot to detect outliers in a dataset.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\ndf.boxplot()\nplt.show()"
+    },
+    {
+      "id": 4,
+      "task": "Create a correlation matrix and visualize it.",
+      "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\nsns.heatmap(df.corr(numeric_only=True))\nplt.show()"
+    }
+  ]
+}
