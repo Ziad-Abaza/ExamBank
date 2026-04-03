@@ -1300,20 +1300,35 @@ body {
   }
 
   .category-nav {
-    padding: 0 var(--space-4);
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .category-nav .nav-container {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: var(--space-1);
+  }
+
+  .category-nav .nav-container::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-tab {
-    padding: var(--space-3) var(--space-4);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+    flex-shrink: 0;
   }
 
-  .tab-label {
+  .nav-tab .tab-label {
     display: none;
   }
 
   .nav-tab .tab-icon {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 
   .progress-section {
