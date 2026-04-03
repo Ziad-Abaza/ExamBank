@@ -115,158 +115,176 @@ const Utils = {
 // 3. SYNTAX HIGHLIGHTER (VS Code-like)
 // ========================================
 const SyntaxHighlighter = (() => {
-  const keywords = new Set([
-    'import', 'from', 'def', 'class', 'return', 'if', 'else', 'elif', 'for', 'while',
-    'in', 'not', 'and', 'or', 'is', 'True', 'False', 'None', 'try', 'except', 'finally',
-    'with', 'as', 'pass', 'break', 'continue', 'lambda', 'yield', 'global', 'nonlocal',
-    'assert', 'raise', 'del', 'print'
+  // Token definitions — JS + Python keywords
+  const KEYWORDS = new Set([
+    'function', 'class', 'return', 'if', 'else', 'elif', 'for', 'while',
+    'in', 'not', 'and', 'or', 'is', 'True', 'False', 'None', 'try', 'except',
+    'finally', 'with', 'as', 'pass', 'break', 'continue', 'lambda', 'yield',
+    'global', 'nonlocal', 'assert', 'raise', 'del', 'import', 'from',
+    'def', 'const', 'let', 'var', 'new', 'this', 'typeof', 'instanceof',
+    'async', 'await', 'catch', 'throw', 'do', 'switch', 'case', 'default',
+    'export', 'extends', 'super', 'yield', 'of', 'void', 'delete',
+    'print', 'True', 'False', 'None'
   ]);
 
-  const builtins = new Set([
-    'pd', 'plt', 'sns', 'np', 'print', 'len', 'range', 'int', 'str', 'float', 'list',
-    'dict', 'set', 'tuple', 'type', 'isinstance', 'enumerate', 'zip', 'map', 'filter',
-    'sorted', 'reversed', 'sum', 'min', 'max', 'abs', 'open', 'read_csv', 'show',
-    'hist', 'boxplot', 'heatmap', 'corr', 'mean', 'median', 'std'
+  const BUILTINS = new Set([
+    'console', 'document', 'window', 'Math', 'JSON', 'Array', 'Object', 'String',
+    'Number', 'Boolean', 'Promise', 'setTimeout', 'setInterval', 'parseInt',
+    'parseFloat', 'alert', 'fetch', 'Map', 'Set', 'Error', 'RegExp',
+    'pd', 'plt', 'sns', 'np', 'DataFrame', 'Series',
+    'print', 'len', 'range', 'int', 'str', 'float', 'list',
+    'dict', 'set', 'tuple', 'type', 'isinstance', 'enumerate', 'zip',
+    'sorted', 'reversed', 'sum', 'min', 'max', 'abs', 'open',
+    'read_csv', 'show', 'hist', 'boxplot', 'heatmap', 'corr', 'mean', 'median', 'std'
   ]);
 
-  const tokenize = (code) => {
-    const lines = code.split('\n');
-    return lines.map(line => {
-      let result = '';
-      let i = 0;
-      let inString = false;
-      let stringChar = '';
-      let inComment = false;
-      let currentToken = '';
-      let currentType = 'text';
+  /**
+   * Tokenize source code using a multi-pass regex approach.
+   * Returns an array of { type, value } tokens.
+   */
+  const tokenize = (source) => {
+    const tokens = [];
+    let remaining = source;
 
-      const flushToken = () => {
-        if (currentToken) {
-          const escaped = Utils.escapeHtml(currentToken);
-          if (currentType === 'keyword') {
-            result += `<span class="token-keyword">${escaped}</span>`;
-          } else if (currentType === 'string') {
-            result += `<span class="token-string">${escaped}</span>`;
-          } else if (currentType === 'comment') {
-            result += `<span class="token-comment">${escaped}</span>`;
-          } else if (currentType === 'number') {
-            result += `<span class="token-number">${escaped}</span>`;
-          } else if (currentType === 'function') {
-            result += `<span class="token-function">${escaped}</span>`;
-          } else if (currentType === 'builtin') {
-            result += `<span class="token-builtin">${escaped}</span>`;
-          } else if (currentType === 'operator') {
-            result += `<span class="token-operator">${escaped}</span>`;
-          } else {
-            result += escaped;
-          }
-          currentToken = '';
-          currentType = 'text';
-        }
-      };
+    // Regex patterns in priority order
+    const patterns = [
+      // Multi-line comments: /* ... */
+      { type: 'comment', regex: /^\/\*[\s\S]*?\*\// },
+      // Single-line comments: // or #
+      { type: 'comment', regex: /^(?:\/\/|#)[^\n]*/ },
+      // Triple-quoted strings (Python)
+      { type: 'string', regex: /^(?:"""[\s\S]*?"""|'''[\s\S]*?''')/ },
+      // Strings: "..." or '...' (handle escape)
+      { type: 'string', regex: /^"(?:[^"\\]|\\.)*"/ },
+      { type: 'string', regex: /^'(?:[^'\\]|\\.)*'/ },
+      // Template literals (JS): `...`
+      { type: 'string', regex: /^`(?:[^`\\]|\\.)*`/ },
+      // Numbers: 42, 3.14, 0xFF, 1e10
+      { type: 'number', regex: /^(?:0[xX][0-9a-fA-F]+|0[bB][01]+|\d+\.?\d*(?:[eE][+-]?\d+)?)/ },
+      // Multi-char operators
+      { type: 'operator', regex: /^(?:===|!==|==|!=|<=|>=|=>|&&|\|\||\?\?|\.\.\.|\*\*|<<|>>|\/\/|[+\-*/%=<>!&|^~?:])/ },
+      // Identifiers & dot notation
+      { type: 'ident', regex: /^[a-zA-Z_$][\w$]*/ },
+      // Dot access
+      { type: 'dot', regex: /^\./ },
+      // Brackets / punctuation
+      { type: 'bracket', regex: /^[{}()\[\];,]/ },
+      // Whitespace (preserve)
+      { type: 'ws', regex: /^[ \t]+/ },
+      // Newline
+      { type: 'nl', regex: /^\r?\n/ },
+      // Fallback — any single char
+      { type: 'text', regex: /^./ }
+    ];
 
-      while (i < line.length) {
-        const char = line[i];
-        const nextChar = line[i + 1] || '';
+    while (remaining.length > 0) {
+      let matched = false;
 
-        // Comment
-        if (!inString && char === '#') {
-          flushToken();
-          inComment = true;
-          currentToken = line.substring(i);
-          currentType = 'comment';
+      for (const { type, regex } of patterns) {
+        const m = remaining.match(regex);
+        if (m) {
+          tokens.push({ type, value: m[0] });
+          remaining = remaining.slice(m[0].length);
+          matched = true;
           break;
         }
-
-        // String
-        if (!inComment && !inString && (char === "'" || char === '"')) {
-          // Check for triple quote
-          if (line.substring(i, i + 3) === char.repeat(3)) {
-            flushToken();
-            const endIdx = line.indexOf(char.repeat(3), i + 3);
-            if (endIdx !== -1) {
-              currentToken = line.substring(i, endIdx + 3);
-              currentType = 'string';
-              i = endIdx + 2;
-            } else {
-              currentToken = line.substring(i);
-              currentType = 'string';
-              break;
-            }
-          } else {
-            flushToken();
-            inString = true;
-            stringChar = char;
-            currentToken = char;
-            currentType = 'string';
-          }
-        } else if (inString && char === stringChar && line[i - 1] !== '\\') {
-          currentToken += char;
-          flushToken();
-          inString = false;
-        } else if (inString) {
-          currentToken += char;
-        } else if (!inComment) {
-          // Numbers
-          if (/\d/.test(char) && (currentType === 'number' || currentType === 'text')) {
-            if (currentType === 'text') flushToken();
-            currentToken += char;
-            currentType = 'number';
-          }
-          // Identifiers
-          else if (/[a-zA-Z_]/.test(char)) {
-            if (currentType !== 'text' && currentType !== 'function' && currentType !== 'builtin' && currentType !== 'keyword') {
-              flushToken();
-            }
-            currentToken += char;
-          }
-          // Operators
-          else if ('=+-*/%<>!&|^~'.includes(char)) {
-            flushToken();
-            currentToken = char;
-            currentType = 'operator';
-          }
-          // Punctuation
-          else if ('(),.:;[]{}'.includes(char)) {
-            flushToken();
-            result += Utils.escapeHtml(char);
-          }
-          // Whitespace
-          else if (/\s/.test(char)) {
-            flushToken();
-            result += ' ';
-          }
-          else {
-            flushToken();
-            result += Utils.escapeHtml(char);
-          }
-        } else {
-          currentToken += char;
-        }
-        i++;
       }
 
-      // Handle last token
-      if (inComment) {
-        flushToken();
-      } else if (currentToken) {
-        // Determine type of final identifier token
-        if (keywords.has(currentToken)) {
-          currentType = 'keyword';
-        } else if (builtins.has(currentToken)) {
-          currentType = 'builtin';
-        }
-        flushToken();
+      if (!matched) {
+        tokens.push({ type: 'text', value: remaining[0] });
+        remaining = remaining.slice(1);
       }
+    }
 
-      return result;
-    });
+    return tokens;
   };
 
-  const highlight = (code) => {
-    const highlighted = tokenize(code);
-    const lineNumbers = highlighted.map((_, i) => i + 1).join('\n');
-    return { lineNumbers, highlighted: highlighted.join('\n') };
+  /**
+   * Classify an identifier token as keyword, builtin, variable, or function.
+   * Looks ahead to next non-ws/non-nl token — if it's '(' → function call.
+   */
+  const classifyIdent = (tokens, index) => {
+    const value = tokens[index].value;
+
+    if (KEYWORDS.has(value)) return 'keyword';
+    if (BUILTINS.has(value)) return 'builtin';
+
+    // Peek ahead for '(' to detect function calls
+    for (let j = index + 1; j < tokens.length; j++) {
+      const t = tokens[j];
+      if (t.type === 'ws' || t.type === 'nl') continue;
+      if (t.type === 'bracket' && t.value === '(') return 'function';
+      break;
+    }
+
+    return 'variable';
+  };
+
+  /**
+   * Escape HTML entities in a string.
+   */
+  const esc = (s) => s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+  /**
+   * Convert tokens array into highlighted HTML string.
+   */
+  const tokensToHtml = (tokens) => {
+    let html = '';
+
+    for (let i = 0; i < tokens.length; i++) {
+      const t = tokens[i];
+      const safe = esc(t.value);
+
+      switch (t.type) {
+        case 'comment':
+          html += `<span class="tk-comment">${safe}</span>`;
+          break;
+        case 'string':
+          html += `<span class="tk-string">${safe}</span>`;
+          break;
+        case 'number':
+          html += `<span class="tk-number">${safe}</span>`;
+          break;
+        case 'operator':
+          html += `<span class="tk-operator">${safe}</span>`;
+          break;
+        case 'bracket':
+          html += `<span class="tk-bracket">${safe}</span>`;
+          break;
+        case 'dot':
+          html += `<span class="tk-operator">${safe}</span>`;
+          break;
+        case 'ident':
+          const cls = classifyIdent(tokens, i);
+          html += `<span class="tk-${cls}">${safe}</span>`;
+          break;
+        case 'nl':
+          html += safe;
+          break;
+        case 'ws':
+          html += safe;
+          break;
+        default:
+          html += safe;
+      }
+    }
+
+    return html;
+  };
+
+  /**
+   * Public API — highlight source code.
+   * Returns { html, lineCount }.
+   */
+  const highlight = (source) => {
+    const tokens = tokenize(source);
+    const html = tokensToHtml(tokens);
+    const lineCount = source.split('\n').length;
+    return { html, lineCount };
   };
 
   return { highlight };
@@ -690,6 +708,13 @@ const ShortAnswerModule = (() => {
 // 8. CODE MODULE
 // ========================================
 const CodeModule = (() => {
+  /**
+   * Build a VS Code-like code card with:
+   *  - Highlighted read-only display (default view)
+   *  - "Try it yourself" toggle → reveals editable textarea
+   *  - Live output panel
+   *  - Reset button
+   */
   const render = (questions) => {
     const container = document.getElementById('codeQuestions');
     container.innerHTML = '';
@@ -697,121 +722,231 @@ const CodeModule = (() => {
     questions.forEach((q, index) => {
       const state = AppState.get();
       const isArabic = state.preferences.language === 'ar';
-      const { lineNumbers, highlighted } = SyntaxHighlighter.highlight(q.code);
+      const lang = detectLanguage(q.code);
+      const { html, lineCount } = SyntaxHighlighter.highlight(q.code);
+      const lineNumbersHtml = buildLineNumbers(lineCount);
 
       const card = document.createElement('div');
       card.className = 'code-card';
       card.id = `code-${q.id}`;
       card.innerHTML = `
+        <!-- Task Description -->
         <div class="code-task">
           <span class="code-task-label">${isArabic ? 'المهمة' : 'Task'} ${index + 1}</span>
           <p class="code-task-text">${Utils.escapeHtml(q.task)}</p>
         </div>
-        <div class="code-editor-container">
-          <div class="code-header">
-            <span class="code-lang">Python</span>
-            <div class="code-actions">
-              <button class="code-action-btn reset-code-btn" title="Reset to original">
-                ${isArabic ? 'إعادة تعيين' : 'Reset'}
-              </button>
+
+        <!-- Highlighted Code Display (default visible) -->
+        <div class="code-display-panel" data-mode="display">
+          <div class="code-panel-header">
+            <div class="code-panel-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
             </div>
+            <span class="code-lang-label">${lang}</span>
+            <button class="code-action-btn try-it-btn" title="Edit and run this code">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              </svg>
+              ${isArabic ? 'جرّب بنفسك' : 'Try it yourself'}
+            </button>
           </div>
-          <div class="code-editor-wrapper">
-            <div class="code-line-numbers">${lineNumbers}</div>
-            <textarea class="code-editor" spellcheck="false" data-original="${Utils.escapeHtml(q.code)}">${Utils.escapeHtml(q.code)}</textarea>
+          <div class="code-display-body">
+            <div class="code-line-numbers">${lineNumbersHtml}</div>
+            <pre class="code-highlighted">${html}</pre>
           </div>
         </div>
-        <div class="code-output-container">
-          <div class="code-output-header">
-            <span class="code-output-label">${isArabic ? 'المخرجات' : 'Output'}</span>
-            <div class="code-actions">
-              <button class="code-action-btn run-code-btn">
-                ▶ ${isArabic ? 'تشغيل' : 'Run'}
+
+        <!-- Editable Editor (hidden by default) -->
+        <div class="code-editor-panel" data-mode="editor" style="display:none">
+          <div class="code-panel-header">
+            <div class="code-panel-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="code-lang-label">${lang}</span>
+            <div class="code-panel-actions">
+              <button class="code-action-btn reset-code-btn" title="Reset to original">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="1 4 1 10 7 10"/>
+                  <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                </svg>
+                ${isArabic ? 'إعادة' : 'Reset'}
+              </button>
+              <button class="code-action-btn run-code-btn" title="Run code">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                ${isArabic ? 'تشغيل' : 'Run'}
               </button>
             </div>
           </div>
-          <div class="code-output">${isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output'}</div>
+          <div class="code-editor-body">
+            <div class="code-line-numbers">${lineNumbersHtml}</div>
+            <textarea class="code-textarea" spellcheck="false" data-original="${Utils.escapeHtml(q.code)}" aria-label="Code editor">${Utils.escapeHtml(q.code)}</textarea>
+          </div>
+        </div>
+
+        <!-- Output Panel -->
+        <div class="code-output-panel">
+          <div class="output-header">
+            <span class="output-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"/>
+                <line x1="12" y1="19" x2="20" y2="19"/>
+              </svg>
+              ${isArabic ? 'المخرجات' : 'Output'}
+            </span>
+            <button class="code-action-btn clear-output-btn" title="Clear output">
+              ${isArabic ? 'مسح' : 'Clear'}
+            </button>
+          </div>
+          <div class="code-output"><span class="output-placeholder">${isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output'}</span></div>
         </div>
       `;
 
       container.appendChild(card);
-
-      const editor = card.querySelector('.code-editor');
-      const lineNumbersEl = card.querySelector('.code-line-numbers');
-      const runBtn = card.querySelector('.run-code-btn');
-      const resetBtn = card.querySelector('.reset-code-btn');
-      const outputEl = card.querySelector('.code-output');
-
-      // Update line numbers on input
-      const updateLineNumbers = () => {
-        const lineCount = editor.value.split('\n').length;
-        lineNumbersEl.textContent = Array.from({ length: lineCount }, (_, i) => i + 1).join('\n');
-      };
-
-      editor.addEventListener('input', updateLineNumbers);
-      editor.addEventListener('scroll', () => {
-        lineNumbersEl.scrollTop = editor.scrollTop;
-      });
-
-      // Tab support
-      editor.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          e.preventDefault();
-          const start = editor.selectionStart;
-          const end = editor.selectionEnd;
-          editor.value = editor.value.substring(0, start) + '    ' + editor.value.substring(end);
-          editor.selectionStart = editor.selectionEnd = start + 4;
-        }
-      });
-
-      // Run code (JavaScript only for safety, with note for Python)
-      runBtn.addEventListener('click', () => {
-        const code = editor.value;
-        outputEl.classList.remove('error');
-        
-        // Check if it's Python code (which we can't run in browser)
-        const hasPythonImports = /import pandas|import matplotlib|import seaborn|import numpy/.test(code);
-        
-        if (hasPythonImports) {
-          outputEl.textContent = `Note: This is Python code and cannot be executed in the browser.\n\nOriginal code:\n\n${code}`;
-          return;
-        }
-
-        // Try to run as JavaScript
-        try {
-          const originalLog = console.log;
-          const logs = [];
-          console.log = (...args) => {
-            logs.push(args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)).join(' '));
-          };
-
-          // Safe eval with limited scope
-          const result = eval(code);
-          if (result !== undefined) {
-            logs.push(String(result));
-          }
-
-          console.log = originalLog;
-          outputEl.textContent = logs.length > 0 ? logs.join('\n') : '(no output)';
-        } catch (err) {
-          outputEl.classList.add('error');
-          outputEl.textContent = `Error: ${err.message}`;
-        }
-      });
-
-      // Reset code
-      resetBtn.addEventListener('click', () => {
-        editor.value = editor.dataset.original;
-        updateLineNumbers();
-        outputEl.textContent = isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output';
-        outputEl.classList.remove('error');
-      });
+      bindCardEvents(card, q, isArabic, lang);
 
       // Mark as viewed
       if (!AppState.getProgress('code')[q.id]) {
         AppState.setProgress('code', q.id, { viewed: true, correct: true });
         ProgressManager.updateProgress();
       }
+    });
+  };
+
+  /** Detect language from code content */
+  const detectLanguage = (code) => {
+    if (/import\s+pandas|import\s+matplotlib|import\s+seaborn|import\s+numpy|def\s+\w+|print\(|plt\./i.test(code)) return 'Python';
+    if (/console\.|document\.|let\s+|const\s+|var\s+|function\s+|=>|alert\(/i.test(code)) return 'JavaScript';
+    return 'Code';
+  };
+
+  /** Generate line numbers HTML */
+  const buildLineNumbers = (count) => {
+    let html = '';
+    for (let i = 1; i <= count; i++) {
+      html += `${i}\n`;
+    }
+    return html;
+  };
+
+  /** Bind all event listeners for a card */
+  const bindCardEvents = (card, question, isArabic, lang) => {
+    const tryItBtn = card.querySelector('.try-it-btn');
+    const displayPanel = card.querySelector('.code-display-panel');
+    const editorPanel = card.querySelector('.code-editor-panel');
+    const textarea = card.querySelector('.code-textarea');
+    const displayLineNums = displayPanel.querySelector('.code-line-numbers');
+    const editorLineNums = editorPanel.querySelector('.code-line-numbers');
+    const runBtn = card.querySelector('.run-code-btn');
+    const resetBtn = card.querySelector('.reset-code-btn');
+    const outputEl = card.querySelector('.code-output');
+    const clearBtn = card.querySelector('.clear-output-btn');
+
+    // --- Toggle editor view ---
+    tryItBtn.addEventListener('click', () => {
+      const isEditorVisible = editorPanel.style.display !== 'none';
+      if (isEditorVisible) {
+        editorPanel.style.display = 'none';
+        displayPanel.style.display = '';
+      } else {
+        displayPanel.style.display = 'none';
+        editorPanel.style.display = '';
+        // Focus textarea and scroll into view
+        setTimeout(() => textarea.focus(), 50);
+      }
+    });
+
+    // --- Sync line numbers ---
+    const updateLineNumbers = () => {
+      const lines = textarea.value.split('\n').length;
+      let nums = '';
+      for (let i = 1; i <= lines; i++) nums += `${i}\n`;
+      editorLineNums.textContent = nums;
+    };
+
+    textarea.addEventListener('input', updateLineNumbers);
+    textarea.addEventListener('scroll', () => {
+      editorLineNums.scrollTop = textarea.scrollTop;
+    });
+
+    // Tab key → 4 spaces
+    textarea.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        textarea.value = textarea.value.substring(0, start) + '    ' + textarea.value.substring(end);
+        textarea.selectionStart = textarea.selectionEnd = start + 4;
+        updateLineNumbers();
+      }
+    });
+
+    // --- Run code ---
+    runBtn.addEventListener('click', () => {
+      const code = textarea.value;
+      outputEl.classList.remove('error');
+      outputEl.classList.remove('success');
+
+      if (lang === 'Python') {
+        outputEl.innerHTML = `<span class="output-note">${isArabic
+          ? '⚠️ كود بايثون — لا يمكن تشغيله في المتصفح مباشرة. استخدم محرر بايثون خارجي.'
+          : '⚠️ Python code — cannot be executed directly in the browser. Use an external Python environment.'
+        }</span>\n\n<pre class="output-code">${Utils.escapeHtml(code)}</pre>`;
+        return;
+      }
+
+      try {
+        const logs = [];
+        const originalLog = console.log;
+        const originalWarn = console.warn;
+        const originalError = console.error;
+
+        console.log = (...args) => logs.push(args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)).join(' '));
+        console.warn = (...args) => logs.push('⚠ ' + args.join(' '));
+        console.error = (...args) => logs.push('✗ ' + args.join(' '));
+
+        // Sandboxed eval using Function constructor (no access to outer scope vars)
+        const sandboxed = new Function(code);
+        const result = sandboxed();
+
+        console.log = originalLog;
+        console.warn = originalWarn;
+        console.error = originalError;
+
+        if (result !== undefined) {
+          logs.push(typeof result === 'object' ? JSON.stringify(result, null, 2) : String(result));
+        }
+
+        if (logs.length > 0) {
+          outputEl.textContent = logs.join('\n');
+          outputEl.classList.add('success');
+        } else {
+          outputEl.innerHTML = '<span class="output-placeholder">(completed — no output)</span>';
+        }
+      } catch (err) {
+        outputEl.classList.add('error');
+        outputEl.textContent = `✗ ${err.name}: ${err.message}`;
+      }
+    });
+
+    // --- Reset code ---
+    resetBtn.addEventListener('click', () => {
+      textarea.value = textarea.dataset.original;
+      updateLineNumbers();
+      outputEl.innerHTML = '<span class="output-placeholder">' + (isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output') + '</span>';
+      outputEl.classList.remove('error', 'success');
+    });
+
+    // --- Clear output ---
+    clearBtn.addEventListener('click', () => {
+      outputEl.innerHTML = '<span class="output-placeholder">' + (isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output') + '</span>';
+      outputEl.classList.remove('error', 'success');
     });
   };
 
