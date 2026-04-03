@@ -579,7 +579,7 @@
     {
       "id": 2,
       "task": "Create a histogram to visualize the distribution of a numeric column.",
-      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\ndf['column_name'].hist()\nplt.show()"
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\ndf['score'].hist()\nplt.show()"
     },
     {
       "id": 3,

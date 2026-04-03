@@ -705,15 +705,240 @@ const ShortAnswerModule = (() => {
 })();
 
 // ========================================
-// 8. CODE MODULE
+// 8. PYODIDE RUNTIME — In-browser Python
+// ========================================
+const PythonRuntime = (() => {
+  // Sample CSV data for testing pandas operations
+  const CSV_CONTENT = `id,name,score,age
+1,Ahmed,85,20
+2,Sara,90,22
+3,John,75,19
+4,Mary,88,21
+5,Ali,92,23`;
+
+  let pyodide = null;
+  let loading = false;
+  let loaded = false;
+  let loadError = null;
+  let progressText = ''; // e.g., "Loading Pyodide...", "Loading pandas..."
+
+  // Callbacks for UI updates
+  const listeners = [];
+  const notify = () => listeners.forEach(fn => fn(getStatus()));
+
+  const getStatus = () => ({ loading, loaded, error: loadError, progressText });
+
+  const onStatus = (fn) => {
+    listeners.push(fn);
+    fn(getStatus());
+  };
+
+  /** Load Pyodide and packages (called once at startup) */
+  const init = async () => {
+    if (loaded || loading) return;
+    loading = true;
+    loadError = null;
+    progressText = 'Loading Python runtime...';
+    notify();
+
+    try {
+      // Dynamic import of Pyodide
+      const { loadPyodide } = await import('https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.mjs');
+
+      progressText = 'Starting Python engine...';
+      notify();
+
+      pyodide = await loadPyodide({
+        indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.25.1/full/'
+      });
+
+      progressText = 'Loading pandas & numpy...';
+      notify();
+
+      await pyodide.loadPackage(['pandas', 'numpy', 'matplotlib']);
+
+      loaded = true;
+      loading = false;
+      progressText = 'Python ready!';
+      notify();
+
+      console.log('[ExamBank] Pyodide loaded successfully.');
+    } catch (err) {
+      loading = false;
+      loadError = err.message;
+      progressText = 'Failed to load Python';
+      notify();
+      console.error('[ExamBank] Pyodide load error:', err);
+    }
+  };
+
+  /** Inject CSV data into Pyodide virtual filesystem */
+  const injectCSV = () => {
+    if (!pyodide) return;
+    pyodide.FS.writeFile('data.csv', CSV_CONTENT);
+  };
+
+  /** Run Python code, returns { stdout, error } */
+  const run = async (code) => {
+    if (!pyodide) {
+      return { error: 'Python runtime not loaded. ' + (loadError || 'Still loading...') };
+    }
+
+    // Reset virtual filesystem and inject CSV
+    try {
+      // Remove old file if exists
+      try { pyodide.FS.unlink('data.csv'); } catch (e) { /* ignore */ }
+      injectCSV();
+    } catch (e) {
+      console.warn('[ExamBank] FS reset failed:', e);
+      injectCSV();
+    }
+
+    // Redirect stdout
+    pyodide.runPython(`
+import sys
+from io import StringIO
+sys.stdout = StringIO()
+sys.stderr = StringIO()
+`);
+
+    try {
+      await pyodide.runPythonAsync(code);
+
+      // Capture output
+      const stdout = pyodide.runPython('sys.stdout.getvalue()');
+      const stderr = pyodide.runPython('sys.stderr.getvalue()');
+
+      // Reset stdout
+      pyodide.runPython(`
+sys.stdout = StringIO()
+sys.stderr = StringIO()
+`);
+
+      let output = '';
+      if (stdout) output += stdout;
+      if (stderr) output += (output ? '\n' : '') + stderr;
+
+      return { stdout: output || '(no output)', error: null };
+    } catch (err) {
+      // Capture partial output before error
+      let partialOut = '';
+      try {
+        partialOut = pyodide.runPython('sys.stdout.getvalue()');
+      } catch (e) { /* ignore */ }
+
+      pyodide.runPython(`
+sys.stdout = StringIO()
+sys.stderr = StringIO()
+`);
+
+      const error = err.message || String(err);
+      return { stdout: partialOut || null, error };
+    }
+  };
+
+  /** Check if ready */
+  const isReady = () => loaded;
+
+  /** Get CSV content */
+  const getCSV = () => CSV_CONTENT;
+
+  return { init, run, onStatus, isReady, getCSV, getStatus };
+})();
+
+// ========================================
+// 8b. ERROR PARSER — IDE-like error display
+// ========================================
+const ErrorParser = (() => {
+  /**
+   * Parse a Python traceback string into structured error info.
+   * Returns { type, message, line, filename, frames[] } or null.
+   */
+  const parsePythonTraceback = (traceback) => {
+    if (!traceback) return null;
+
+    const lines = traceback.split('\n');
+    const frames = [];
+    let errorType = 'Error';
+    let errorMessage = '';
+    let errorLine = null;
+
+    // Find the actual error line (last non-empty line that isn't a frame)
+    for (let i = lines.length - 1; i >= 0; i--) {
+      const line = lines[i].trim();
+      if (line && !line.startsWith('File ') && !line.startsWith('^')) {
+        // This is the error type + message: "KeyError: 'column_name'"
+        const match = line.match(/^(\w+Error|\w+Exception|\w+):\s*(.*)/);
+        if (match) {
+          errorType = match[1];
+          errorMessage = match[2].trim();
+        } else {
+          errorMessage = line;
+        }
+        break;
+      }
+    }
+
+    // Extract frames: File "...", line N, in ...
+    const frameRegex = /^File "([^"]+)", line (\d+)(?:, in (\S+))?/;
+    for (const line of lines) {
+      const match = line.match(frameRegex);
+      if (match) {
+        frames.push({
+          filename: match[1],
+          line: parseInt(match[2], 10),
+          function: match[3] || '<module>'
+        });
+      }
+    }
+
+    // Find the user's error line (last frame, typically in <exec> or user file)
+    for (let i = frames.length - 1; i >= 0; i--) {
+      if (frames[i].filename === '<exec>' || !frames[i].filename.includes('/lib/')) {
+        errorLine = frames[i].line;
+        break;
+      }
+    }
+
+    // Fallback: last frame
+    if (errorLine === null && frames.length > 0) {
+      errorLine = frames[frames.length - 1].line;
+    }
+
+    return {
+      type: errorType,
+      message: errorMessage,
+      line: errorLine,
+      frames,
+      raw: traceback
+    };
+  };
+
+  /** Parse JavaScript error */
+  const parseJSError = (err) => {
+    if (!err) return null;
+    return {
+      type: err.name || 'Error',
+      message: err.message || String(err),
+      line: err.lineNumber || null,
+      raw: err.stack || err.message
+    };
+  };
+
+  return { parsePythonTraceback, parseJSError };
+})();
+
+// ========================================
+// 9. CODE MODULE
 // ========================================
 const CodeModule = (() => {
   /**
    * Build a VS Code-like code card with:
    *  - Highlighted read-only display (default view)
    *  - "Try it yourself" toggle → reveals editable textarea
-   *  - Live output panel
+   *  - Live output panel with Python (Pyodide) + JS execution
    *  - Reset button
+   *  - Runtime loading indicator
    */
   const render = (questions) => {
     const container = document.getElementById('codeQuestions');
@@ -804,7 +1029,14 @@ const CodeModule = (() => {
               ${isArabic ? 'مسح' : 'Clear'}
             </button>
           </div>
-          <div class="code-output"><span class="output-placeholder">${isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output'}</span></div>
+          <div class="code-output">
+            <span class="output-placeholder">${isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output'}</span>
+          </div>
+          <!-- Runtime loading indicator -->
+          <div class="runtime-status" style="display:none">
+            <div class="runtime-spinner"></div>
+            <span class="runtime-text">Loading Python...</span>
+          </div>
         </div>
       `;
 
@@ -841,12 +1073,14 @@ const CodeModule = (() => {
     const displayPanel = card.querySelector('.code-display-panel');
     const editorPanel = card.querySelector('.code-editor-panel');
     const textarea = card.querySelector('.code-textarea');
-    const displayLineNums = displayPanel.querySelector('.code-line-numbers');
     const editorLineNums = editorPanel.querySelector('.code-line-numbers');
     const runBtn = card.querySelector('.run-code-btn');
     const resetBtn = card.querySelector('.reset-code-btn');
     const outputEl = card.querySelector('.code-output');
     const clearBtn = card.querySelector('.clear-output-btn');
+    const runtimeStatus = card.querySelector('.runtime-status');
+    const runtimeText = card.querySelector('.runtime-text');
+    const runtimeSpinner = card.querySelector('.runtime-spinner');
 
     // --- Toggle editor view ---
     tryItBtn.addEventListener('click', () => {
@@ -857,7 +1091,6 @@ const CodeModule = (() => {
       } else {
         displayPanel.style.display = 'none';
         editorPanel.style.display = '';
-        // Focus textarea and scroll into view
         setTimeout(() => textarea.focus(), 50);
       }
     });
@@ -887,51 +1120,80 @@ const CodeModule = (() => {
       }
     });
 
+    // --- Set run button state based on Python runtime ---
+    const updateRunButton = () => {
+      const status = PythonRuntime.getStatus();
+      if (lang === 'Python' && (status.loading || status.error)) {
+        runBtn.disabled = true;
+        runBtn.style.opacity = '0.5';
+        runBtn.style.cursor = status.loading ? 'wait' : 'not-allowed';
+      } else {
+        runBtn.disabled = false;
+        runBtn.style.opacity = '';
+        runBtn.style.cursor = '';
+      }
+    };
+
+    PythonRuntime.onStatus(updateRunButton);
+
     // --- Run code ---
-    runBtn.addEventListener('click', () => {
+    runBtn.addEventListener('click', async () => {
       const code = textarea.value;
       outputEl.classList.remove('error');
       outputEl.classList.remove('success');
+      clearEditorError(editorPanel);
 
-      if (lang === 'Python') {
-        outputEl.innerHTML = `<span class="output-note">${isArabic
-          ? '⚠️ كود بايثون — لا يمكن تشغيله في المتصفح مباشرة. استخدم محرر بايثون خارجي.'
-          : '⚠️ Python code — cannot be executed directly in the browser. Use an external Python environment.'
-        }</span>\n\n<pre class="output-code">${Utils.escapeHtml(code)}</pre>`;
+      // --- JavaScript execution ---
+      if (lang === 'JavaScript') {
+        executeJS(code, outputEl, isArabic);
         return;
       }
 
+      // --- Python execution via Pyodide ---
+      const status = PythonRuntime.getStatus();
+
+      if (status.error) {
+        outputEl.classList.add('error');
+        outputEl.innerHTML = `<span class="output-note">⚠️ Failed to load Python engine: ${status.error}</span>`;
+        return;
+      }
+
+      if (status.loading) {
+        outputEl.innerHTML = `<span class="output-note">⏳ Python is still loading... please wait.</span>`;
+        return;
+      }
+
+      // Show loading state
+      showLoading(runtimeStatus, runtimeText, runtimeSpinner, isArabic);
+      runBtn.disabled = true;
+
       try {
-        const logs = [];
-        const originalLog = console.log;
-        const originalWarn = console.warn;
-        const originalError = console.error;
+        const result = await PythonRuntime.run(code);
 
-        console.log = (...args) => logs.push(args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)).join(' '));
-        console.warn = (...args) => logs.push('⚠ ' + args.join(' '));
-        console.error = (...args) => logs.push('✗ ' + args.join(' '));
+        hideLoading(runtimeStatus);
 
-        // Sandboxed eval using Function constructor (no access to outer scope vars)
-        const sandboxed = new Function(code);
-        const result = sandboxed();
+        if (result.error) {
+          outputEl.classList.add('error');
+          const parsedError = ErrorParser.parsePythonTraceback(result.error);
 
-        console.log = originalLog;
-        console.warn = originalWarn;
-        console.error = originalError;
+          // Show clean error panel in output
+          outputEl.innerHTML = buildErrorHtml(parsedError, result.stdout);
 
-        if (result !== undefined) {
-          logs.push(typeof result === 'object' ? JSON.stringify(result, null, 2) : String(result));
-        }
-
-        if (logs.length > 0) {
-          outputEl.textContent = logs.join('\n');
-          outputEl.classList.add('success');
+          // Highlight error line in editor
+          if (parsedError && parsedError.line) {
+            highlightErrorLine(editorPanel, parsedError.line, textarea);
+          }
         } else {
-          outputEl.innerHTML = '<span class="output-placeholder">(completed — no output)</span>';
+          outputEl.textContent = result.stdout;
+          outputEl.classList.add('success');
         }
       } catch (err) {
+        hideLoading(runtimeStatus);
         outputEl.classList.add('error');
-        outputEl.textContent = `✗ ${err.name}: ${err.message}`;
+        const parsedError = ErrorParser.parseJSError(err);
+        outputEl.innerHTML = buildErrorHtml(parsedError, null);
+      } finally {
+        runBtn.disabled = false;
       }
     });
 
@@ -941,13 +1203,170 @@ const CodeModule = (() => {
       updateLineNumbers();
       outputEl.innerHTML = '<span class="output-placeholder">' + (isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output') + '</span>';
       outputEl.classList.remove('error', 'success');
+      hideLoading(runtimeStatus);
     });
 
     // --- Clear output ---
     clearBtn.addEventListener('click', () => {
       outputEl.innerHTML = '<span class="output-placeholder">' + (isArabic ? 'اضغط على تشغيل لرؤية المخرجات' : 'Press Run to see output') + '</span>';
       outputEl.classList.remove('error', 'success');
+      hideLoading(runtimeStatus);
     });
+  };
+
+  /** Show runtime loading indicator */
+  const showLoading = (el, textEl, spinnerEl, isArabic) => {
+    el.style.display = 'flex';
+    textEl.textContent = isArabic ? 'جاري تشغيل بايثون...' : 'Running Python...';
+
+    // Listen for status updates from Pyodide
+    const listener = (status) => {
+      textEl.textContent = status.progressText || (isArabic ? 'جاري التحميل...' : 'Loading...');
+    };
+    PythonRuntime.onStatus(listener);
+    el._statusListener = listener;
+  };
+
+  /** Hide runtime loading indicator */
+  const hideLoading = (el) => {
+    el.style.display = 'none';
+  };
+
+  /** Build IDE-style error HTML for the output panel */
+  const buildErrorHtml = (parsedError, partialOutput) => {
+    if (!parsedError) return `<pre class="error-raw">${Utils.escapeHtml(partialOutput || 'Unknown error')}</pre>`;
+
+    let html = '<div class="error-panel">';
+
+    // Error header with icon
+    html += `<div class="error-header">`;
+    html += `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`;
+    html += `<span class="error-type">${Utils.escapeHtml(parsedError.type)}</span>`;
+    if (parsedError.line) {
+      html += `<span class="error-location">Line ${parsedError.line}</span>`;
+    }
+    html += `</div>`;
+
+    // Error message
+    if (parsedError.message) {
+      html += `<div class="error-message">${Utils.escapeHtml(parsedError.message)}</div>`;
+    }
+
+    // Partial stdout before error
+    if (partialOutput) {
+      html += `<div class="error-output-label">Output before error:</div>`;
+      html += `<pre class="error-partial-output">${Utils.escapeHtml(partialOutput)}</pre>`;
+    }
+
+    // Stack frames (only user-relevant ones, max 3)
+    const userFrames = (parsedError.frames || [])
+      .filter(f => f.filename === '<exec>' || !f.filename.includes('/lib/'))
+      .slice(-3);
+
+    if (userFrames.length > 0) {
+      html += `<div class="error-stack">`;
+      html += `<div class="error-stack-label">Stack:</div>`;
+      for (const frame of userFrames) {
+        html += `<div class="error-frame">`;
+        html += `<span class="error-frame-fn">${Utils.escapeHtml(frame.function)}</span>`;
+        html += `<span class="error-frame-file">${Utils.escapeHtml(frame.filename)}</span>`;
+        html += `<span class="error-frame-line">:${frame.line}</span>`;
+        html += `</div>`;
+      }
+      html += `</div>`;
+    }
+
+    // Full traceback toggle
+    html += `<button class="error-toggle" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.nextElementSibling.classList.contains('show') ? 'Hide traceback' : 'Show full traceback';">Show full traceback</button>`;
+    html += `<pre class="error-traceback">${Utils.escapeHtml(parsedError.raw)}</pre>`;
+
+    html += '</div>';
+    return html;
+  };
+
+  /** Highlight the error line in the editor */
+  const highlightErrorLine = (editorPanel, lineNumber, textarea) => {
+    // Remove any existing error marker
+    clearEditorError(editorPanel);
+
+    const lines = textarea.value.split('\n');
+    if (lineNumber < 1 || lineNumber > lines.length) return;
+
+    const errorLineIndex = lineNumber - 1;
+
+    // Calculate pixel position based on line height
+    const computedStyle = window.getComputedStyle(textarea);
+    const lineHeight = parseFloat(computedStyle.lineHeight) || (13 * 1.7);
+    const paddingTop = parseFloat(computedStyle.paddingTop) || 16;
+    const topOffset = paddingTop + errorLineIndex * lineHeight;
+
+    // Add error marker overlay in the editor
+    const overlay = document.createElement('div');
+    overlay.className = 'error-line-marker';
+    overlay.setAttribute('data-line', lineNumber);
+
+    const gutterDot = document.createElement('div');
+    gutterDot.className = 'error-gutter-dot';
+    gutterDot.style.top = `${topOffset + 4}px`; // +4 for visual centering in line
+
+    const lineHighlight = document.createElement('div');
+    lineHighlight.className = 'error-line-highlight';
+    lineHighlight.style.top = `${topOffset}px`;
+    lineHighlight.style.height = `${lineHeight}px`;
+
+    overlay.appendChild(gutterDot);
+    overlay.appendChild(lineHighlight);
+    editorPanel.appendChild(overlay);
+
+    // Scroll to the error line
+    const editorBody = editorPanel.querySelector('.code-editor-body');
+    if (editorBody) {
+      editorBody.scrollTop = Math.max(0, topOffset - 60);
+    }
+
+    editorPanel.classList.add('has-error');
+  };
+
+  /** Clear error markers from the editor */
+  const clearEditorError = (editorPanel) => {
+    editorPanel.classList.remove('has-error');
+    const marker = editorPanel.querySelector('.error-line-marker');
+    if (marker) marker.remove();
+  };
+
+  /** Execute JavaScript safely */
+  const executeJS = (code, outputEl, isArabic) => {
+    try {
+      const logs = [];
+      const originalLog = console.log;
+      const originalWarn = console.warn;
+      const originalError = console.error;
+
+      console.log = (...args) => logs.push(args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)).join(' '));
+      console.warn = (...args) => logs.push('⚠ ' + args.join(' '));
+      console.error = (...args) => logs.push('✗ ' + args.join(' '));
+
+      const sandboxed = new Function(code);
+      const result = sandboxed();
+
+      console.log = originalLog;
+      console.warn = originalWarn;
+      console.error = originalError;
+
+      if (result !== undefined) {
+        logs.push(typeof result === 'object' ? JSON.stringify(result, null, 2) : String(result));
+      }
+
+      if (logs.length > 0) {
+        outputEl.textContent = logs.join('\n');
+        outputEl.classList.add('success');
+      } else {
+        outputEl.innerHTML = '<span class="output-placeholder">(completed — no output)</span>';
+      }
+    } catch (err) {
+      outputEl.classList.add('error');
+      outputEl.textContent = `✗ ${err.name}: ${err.message}`;
+    }
   };
 
   return { render };
@@ -1189,6 +1608,9 @@ const App = (() => {
     // Render initial category
     NavigationManager.renderCategory(state.currentCategory);
     ProgressManager.updateProgress();
+
+    // Start loading Pyodide Python runtime in background
+    PythonRuntime.init();
 
     // Set up event listeners
     setupEventListeners();

@@ -1118,7 +1118,264 @@ body {
   overflow-x: auto;
 }
 
-/* --- Action Buttons --- */
+/* --- Runtime Loading Indicator --- */
+.runtime-status {
+  display: none;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  background: var(--code-line-num-bg);
+  border-top: 1px solid var(--color-border-light);
+  font-family: var(--font-sans);
+}
+
+.runtime-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.runtime-text {
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .runtime-status {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .runtime-text {
+  color: var(--code-text-subtle);
+}
+
+/* ========================================
+   IDE-STYLE ERROR DISPLAY
+   ======================================== */
+
+/* Error Panel in output area */
+.error-panel {
+  padding: 0;
+}
+
+.error-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(239, 68, 68, 0.1);
+  border-bottom: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+[data-theme="dark"] .error-header {
+  background: rgba(239, 68, 68, 0.08);
+  border-bottom-color: rgba(239, 68, 68, 0.12);
+}
+
+.error-header svg {
+  color: var(--color-error);
+  flex-shrink: 0;
+}
+
+.error-type {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-error);
+}
+
+.error-location {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  margin-left: auto;
+  background: var(--color-bg-tertiary);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.error-message {
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border-light);
+  background: var(--color-bg-secondary);
+}
+
+.error-output-label {
+  padding: var(--space-2) var(--space-4);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.error-partial-output {
+  padding: var(--space-3) var(--space-4);
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-height: 120px;
+  overflow: auto;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Stack Frames */
+.error-stack {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.error-stack-label {
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+}
+
+.error-frame {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  margin-bottom: 2px;
+}
+
+.error-frame:hover {
+  background: var(--color-bg-tertiary);
+}
+
+.error-frame-fn {
+  color: var(--tk-function);
+  font-weight: var(--font-weight-medium);
+}
+
+.error-frame-file {
+  color: var(--color-text-tertiary);
+}
+
+.error-frame-line {
+  color: var(--color-error);
+  font-weight: var(--font-weight-medium);
+  margin-left: auto;
+}
+
+/* Traceback Toggle */
+.error-toggle {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  color: var(--color-text-link);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.error-toggle:hover {
+  background: var(--color-bg-tertiary);
+}
+
+.error-traceback {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 var(--space-4);
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+  background: var(--color-bg-deeper, #111);
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  opacity: 0;
+}
+
+.error-traceback.show {
+  max-height: 600px;
+  padding: var(--space-4);
+  overflow: auto;
+  opacity: 1;
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* --- Error Line Highlight in Editor --- */
+.code-editor-panel.has-error {
+  position: relative;
+}
+
+.error-line-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Red dot in gutter */
+.error-gutter-dot {
+  position: absolute;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-error);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.5);
+  animation: errorPulse 2s ease-in-out infinite;
+  z-index: 6;
+}
+
+@keyframes errorPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+/* Highlighted error line background */
+.error-line-highlight {
+  position: absolute;
+  left: 44px;
+  right: 0;
+  height: calc(13px * 1.7);
+  background: rgba(239, 68, 68, 0.12);
+  border-left: 3px solid var(--color-error);
+  pointer-events: none;
+}
+
+[data-theme="light"] .error-gutter-dot {
+  background: #dc2626;
+  box-shadow: 0 0 6px rgba(220, 38, 38, 0.4);
+}
+
+[data-theme="light"] .error-line-highlight {
+  background: rgba(220, 38, 38, 0.06);
+  border-left-color: #dc2626;
+}
+
+/* Action Buttons */
 .code-action-btn {
   display: inline-flex;
   align-items: center;
