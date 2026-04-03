@@ -1941,6 +1941,32 @@ const App = (() => {
 
     // Short Answer controls
     document.getElementById('saShuffleBtn').addEventListener('click', ShortAnswerModule.shuffle);
+
+    // Code Help Button
+    const codeHelpBtn = document.getElementById('codeHelpBtn');
+    const codeHelpTooltip = document.getElementById('codeHelpTooltip');
+    const tooltipClose = document.getElementById('tooltipClose');
+
+    if (codeHelpBtn && codeHelpTooltip) {
+      codeHelpBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        codeHelpTooltip.classList.toggle('hidden');
+      });
+
+      // Close tooltip
+      if (tooltipClose) {
+        tooltipClose.addEventListener('click', () => {
+          codeHelpTooltip.classList.add('hidden');
+        });
+      }
+
+      // Close tooltip when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!codeHelpTooltip.contains(e.target) && !codeHelpBtn.contains(e.target)) {
+          codeHelpTooltip.classList.add('hidden');
+        }
+      });
+    }
   };
 
   return { init };
