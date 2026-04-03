@@ -708,19 +708,93 @@ const ShortAnswerModule = (() => {
 // 8. PYODIDE RUNTIME — In-browser Python
 // ========================================
 const PythonRuntime = (() => {
-  // Sample CSV data for testing pandas operations
-  const CSV_CONTENT = `id,name,score,age
-1,Ahmed,85,20
-2,Sara,90,22
-3,John,75,19
-4,Mary,88,21
-5,Ali,92,23`;
+  // === Virtual File Catalog — Dataset Definitions ===
+  const DATASETS = [
+    {
+      id: 'students',
+      name: 'students.csv',
+      path: '/data/students.csv',
+      description: 'Student records with scores and classes',
+      columns: ['id', 'name', 'score', 'age', 'class'],
+      rows: 5,
+      usage: 'pd.read_csv("/data/students.csv")',
+      content: `id,name,score,age,class
+1,Ahmed,85,20,A
+2,Sara,90,22,B
+3,John,75,19,A
+4,Mary,88,21,C
+5,Ali,92,23,B`
+    },
+    {
+      id: 'sales',
+      name: 'sales.csv',
+      path: '/data/sales.csv',
+      description: 'Product sales with quantity and price',
+      columns: ['id', 'product', 'quantity', 'price'],
+      rows: 4,
+      usage: 'pd.read_csv("/data/sales.csv")',
+      content: `id,product,quantity,price
+1,Laptop,2,1200
+2,Mouse,10,25
+3,Keyboard,5,45
+4,Monitor,3,300`
+    },
+    {
+      id: 'weather',
+      name: 'weather.csv',
+      path: '/data/weather.csv',
+      description: 'Daily temperature and humidity readings',
+      columns: ['day', 'temp', 'humidity', 'city'],
+      rows: 4,
+      usage: 'pd.read_csv("/data/weather.csv")',
+      content: `day,temp,humidity,city
+Mon,30,70,Cairo
+Tue,32,65,Cairo
+Wed,28,60,Cairo
+Thu,31,72,Cairo`
+    },
+    {
+      id: 'users',
+      name: 'users.csv',
+      path: '/data/users.csv',
+      description: 'User profiles with activity metrics',
+      columns: ['id', 'username', 'posts', 'followers'],
+      rows: 5,
+      usage: 'pd.read_csv("/data/users.csv")',
+      content: `id,username,posts,followers
+1,ahmed_dev,42,350
+2,sara_data,67,890
+3,john_ml,23,120
+4,mary_code,55,670
+5,ali_web,38,410`
+    },
+    {
+      id: 'products',
+      name: 'products.csv',
+      path: '/data/products.csv',
+      description: 'Product inventory with categories and ratings',
+      columns: ['id', 'product', 'category', 'price', 'rating'],
+      rows: 6,
+      usage: 'pd.read_csv("/data/products.csv")',
+      content: `id,product,category,price,rating
+1,Phone A,Electronics,699,4.5
+2,Book B,Books,15,4.8
+3,Shoes C,Clothing,89,4.2
+4,Desk D,Furniture,250,4.0
+5,Headset E,Electronics,120,4.6
+6,Jacket F,Clothing,65,3.9`
+    }
+  ];
+
+  // Legacy backward-compat alias
+  const LEGACY_CSV_PATH = 'data.csv';
 
   let pyodide = null;
   let loading = false;
   let loaded = false;
   let loadError = null;
-  let progressText = ''; // e.g., "Loading Pyodide...", "Loading pandas..."
+  let progressText = '';
+  let filesInjected = false;
 
   // Callbacks for UI updates
   const listeners = [];
@@ -742,7 +816,6 @@ const PythonRuntime = (() => {
     notify();
 
     try {
-      // Dynamic import of Pyodide
       const { loadPyodide } = await import('https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.mjs');
 
       progressText = 'Starting Python engine...';
@@ -757,12 +830,15 @@ const PythonRuntime = (() => {
 
       await pyodide.loadPackage(['pandas', 'numpy', 'matplotlib']);
 
+      // Create /data/ directory and inject all files
+      injectAllFiles();
+
       loaded = true;
       loading = false;
       progressText = 'Python ready!';
       notify();
 
-      console.log('[ExamBank] Pyodide loaded successfully.');
+      console.log('[ExamBank] Pyodide loaded successfully. Files:', DATASETS.map(d => d.path));
     } catch (err) {
       loading = false;
       loadError = err.message;
@@ -772,10 +848,23 @@ const PythonRuntime = (() => {
     }
   };
 
-  /** Inject CSV data into Pyodide virtual filesystem */
-  const injectCSV = () => {
+  /** Create /data/ directory and inject all dataset files */
+  const injectAllFiles = () => {
     if (!pyodide) return;
-    pyodide.FS.writeFile('data.csv', CSV_CONTENT);
+    try { pyodide.FS.mkdir('/data'); } catch (e) { /* already exists */ }
+
+    for (const dataset of DATASETS) {
+      try {
+        pyodide.FS.writeFile(dataset.path, dataset.content);
+      } catch (e) {
+        console.warn(`[ExamBank] Failed to write ${dataset.path}:`, e);
+      }
+    }
+
+    // Also write legacy data.csv (alias to students) for backward compat
+    try { pyodide.FS.writeFile(LEGACY_CSV_PATH, DATASETS[0].content); } catch (e) { /* ignore */ }
+
+    filesInjected = true;
   };
 
   /** Run Python code, returns { stdout, error } */
@@ -784,17 +873,12 @@ const PythonRuntime = (() => {
       return { error: 'Python runtime not loaded. ' + (loadError || 'Still loading...') };
     }
 
-    // Reset virtual filesystem and inject CSV
-    try {
-      // Remove old file if exists
-      try { pyodide.FS.unlink('data.csv'); } catch (e) { /* ignore */ }
-      injectCSV();
-    } catch (e) {
-      console.warn('[ExamBank] FS reset failed:', e);
-      injectCSV();
+    // Ensure files are available (re-inject if needed)
+    if (!filesInjected) {
+      injectAllFiles();
     }
 
-    // Redirect stdout
+    // Redirect stdout/stderr
     pyodide.runPython(`
 import sys
 from io import StringIO
@@ -805,11 +889,10 @@ sys.stderr = StringIO()
     try {
       await pyodide.runPythonAsync(code);
 
-      // Capture output
       const stdout = pyodide.runPython('sys.stdout.getvalue()');
       const stderr = pyodide.runPython('sys.stderr.getvalue()');
 
-      // Reset stdout
+      // Reset streams
       pyodide.runPython(`
 sys.stdout = StringIO()
 sys.stderr = StringIO()
@@ -821,11 +904,8 @@ sys.stderr = StringIO()
 
       return { stdout: output || '(no output)', error: null };
     } catch (err) {
-      // Capture partial output before error
       let partialOut = '';
-      try {
-        partialOut = pyodide.runPython('sys.stdout.getvalue()');
-      } catch (e) { /* ignore */ }
+      try { partialOut = pyodide.runPython('sys.stdout.getvalue()'); } catch (e) { /* ignore */ }
 
       pyodide.runPython(`
 sys.stdout = StringIO()
@@ -837,13 +917,16 @@ sys.stderr = StringIO()
     }
   };
 
+  /** Get dataset catalog */
+  const getCatalog = () => [...DATASETS];
+
+  /** Get a specific dataset by ID */
+  const getDataset = (id) => DATASETS.find(d => d.id === id) || null;
+
   /** Check if ready */
   const isReady = () => loaded;
 
-  /** Get CSV content */
-  const getCSV = () => CSV_CONTENT;
-
-  return { init, run, onStatus, isReady, getCSV, getStatus };
+  return { init, run, onStatus, isReady, getCatalog, getDataset, getStatus };
 })();
 
 // ========================================
@@ -926,6 +1009,178 @@ const ErrorParser = (() => {
   };
 
   return { parsePythonTraceback, parseJSError };
+})();
+
+// ========================================
+// 8c. FILE CATALOG UI — VS Code Explorer Panel
+// ========================================
+const FileCatalog = (() => {
+  let panelEl = null;
+  let isVisible = false;
+
+  /** Build the catalog panel HTML */
+  const buildPanel = () => {
+    const datasets = PythonRuntime.getCatalog();
+    const status = PythonRuntime.getStatus();
+    const isLoading = status.loading;
+    const isLoaded = status.loaded;
+
+    let html = '<div class="catalog-panel">';
+
+    // Panel header
+    html += '<div class="catalog-header">';
+    html += '<div class="catalog-header-left">';
+    html += '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>';
+    html += '<span class="catalog-title">Dataset Catalog</span>';
+    html += '</div>';
+    html += '<button class="catalog-close" aria-label="Close catalog">&times;</button>';
+    html += '</div>';
+
+    // Panel body
+    html += '<div class="catalog-body">';
+
+    if (isLoading) {
+      html += '<div class="catalog-loading"><div class="catalog-spinner"></div><span>Loading datasets...</span></div>';
+    } else if (!isLoaded) {
+      html += '<div class="catalog-empty"><p>Python runtime not available.</p><p>Try refreshing the page.</p></div>';
+    } else {
+      // Directory tree header
+      html += '<div class="catalog-tree-header">';
+      html += '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>';
+      html += '<span>/data/</span>';
+      html += '</div>';
+
+      html += '<div class="catalog-file-list">';
+      for (const ds of datasets) {
+        html += `<div class="catalog-file-item" data-file="${ds.id}">`;
+        html += `<div class="file-icon">`;
+        html += `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
+        html += `</div>`;
+        html += `<div class="file-info">`;
+        html += `<div class="file-name">${ds.name}</div>`;
+        html += `<div class="file-stats">`;
+        html += `<span class="stat-badge stat-rows">${ds.rows} rows</span>`;
+        html += `<span class="stat-badge stat-cols">${ds.columns.length} columns</span>`;
+        html += `</div>`;
+        html += `<div class="file-columns">`;
+        html += `<span class="columns-label">Columns:</span>`;
+        html += ds.columns.map(col => `<code class="column-badge">${col}</code>`).join(' ');
+        html += `</div>`;
+        html += `<div class="file-usage">`;
+        html += `<code class="usage-code">${ds.usage}</code>`;
+        html += `<button class="file-copy-btn" title="Copy path to clipboard" data-path="${ds.path}">`;
+        html += `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+        html += `</button>`;
+        html += `</div>`;
+        html += `</div>`;
+        html += `</div>`;
+      }
+      html += '</div>';
+
+      // Hint
+      html += '<div class="catalog-hint">';
+      html += '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>';
+      html += '<span>Click "Copy path" then paste into <code>pd.read_csv()</code></span>';
+      html += '</div>';
+    }
+
+    html += '</div>'; // catalog-body
+    html += '</div>'; // catalog-panel
+    return html;
+  };
+
+  /** Show the catalog panel */
+  const show = () => {
+    if (panelEl) {
+      // Already open, bring to front
+      panelEl.classList.remove('closing');
+      return;
+    }
+
+    // Build and insert
+    const container = document.createElement('div');
+    container.className = 'catalog-overlay';
+    container.innerHTML = buildPanel();
+    document.body.appendChild(container);
+    panelEl = container.querySelector('.catalog-panel');
+    isVisible = true;
+
+    // Bind events
+    bindEvents(container);
+  };
+
+  /** Hide the catalog panel */
+  const hide = () => {
+    if (!panelEl) {
+      isVisible = false;
+      return;
+    }
+    panelEl.classList.add('closing');
+    isVisible = false;
+    setTimeout(() => {
+      if (panelEl && panelEl.parentElement) {
+        panelEl.parentElement.remove();
+      }
+      panelEl = null;
+    }, 200);
+  };
+
+  /** Toggle the catalog panel */
+  const toggle = () => {
+    isVisible ? hide() : show();
+  };
+
+  /** Check if visible */
+  const isOpen = () => isVisible;
+
+  /** Bind panel events */
+  const bindEvents = (container) => {
+    // Close button
+    container.querySelector('.catalog-close')?.addEventListener('click', hide);
+
+    // Click overlay to close
+    container.addEventListener('click', (e) => {
+      if (e.target === container) hide();
+    });
+
+    // Copy path buttons
+    container.querySelectorAll('.file-copy-btn').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        const path = btn.dataset.path;
+        try {
+          await navigator.clipboard.writeText(path);
+        } catch (err) {
+          // Fallback
+          const ta = document.createElement('textarea');
+          ta.value = path;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        // Visual feedback
+        btn.classList.add('copied');
+        btn.title = 'Copied!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.title = 'Copy path to clipboard';
+        }, 1500);
+      });
+    });
+  };
+
+  /** Refresh panel content (e.g., after loading completes) */
+  const refresh = () => {
+    if (!panelEl || !panelEl.parentElement) return;
+    const container = panelEl.parentElement;
+    panelEl.classList.remove('closing');
+    container.innerHTML = buildPanel();
+    panelEl = container.querySelector('.catalog-panel');
+    bindEvents(container);
+  };
+
+  return { show, hide, toggle, isOpen, refresh };
 })();
 
 // ========================================
@@ -1638,6 +1893,11 @@ const App = (() => {
     document.getElementById('dashboardBtn').addEventListener('click', () => {
       document.getElementById('dashboardModal').classList.remove('hidden');
       ProgressManager.updateProgress();
+    });
+
+    // Dataset Catalog
+    document.getElementById('catalogBtn').addEventListener('click', () => {
+      FileCatalog.toggle();
     });
 
     document.getElementById('modalClose').addEventListener('click', () => {
