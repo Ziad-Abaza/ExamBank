@@ -84,7 +84,54 @@ const AppState = (() => {
 })();
 
 // ========================================
-// 2. UTILITY FUNCTIONS
+// 2. KEYWORD MANAGER
+// ========================================
+const KeywordManager = (() => {
+  let keywords = [];
+  let keywordMap = new Map();
+  let loaded = false;
+
+  const load = async () => {
+    if (loaded) return keywords;
+    
+    try {
+      const response = await fetch('keywords.json');
+      const data = await response.json();
+      keywords = data.keywords || [];
+      
+      // Build a map for quick lookup (lowercase term -> keyword data)
+      keywordMap = new Map();
+      keywords.forEach(kw => {
+        keywordMap.set(kw.term.toLowerCase(), kw);
+      });
+      
+      loaded = true;
+      console.log(`[KeywordManager] Loaded ${keywords.length} keywords`);
+      return keywords;
+    } catch (e) {
+      console.warn('[KeywordManager] Failed to load keywords:', e);
+      return [];
+    }
+  };
+
+  const getKeywords = () => keywords;
+
+  const getByTerm = (term) => {
+    return keywordMap.get(term.toLowerCase()) || null;
+  };
+
+  const isLoaded = () => loaded;
+
+  return {
+    load,
+    getKeywords,
+    getByTerm,
+    isLoaded
+  };
+})();
+
+// ========================================
+// 3. UTILITY FUNCTIONS
 // ========================================
 const Utils = {
   shuffle: (array) => {
@@ -108,11 +155,155 @@ const Utils = {
       clearTimeout(timeout);
       timeout = setTimeout(() => func.apply(this, args), wait);
     };
+  },
+
+  /**
+   * Highlight keywords in text by wrapping them in span elements with tooltips.
+   * @param {string} text - The text to process
+   * @returns {string} - HTML string with highlighted keywords
+   */
+  highlightKeywords: (text) => {
+    if (!text || !KeywordManager.isLoaded()) {
+      return text;
+    }
+
+    let processedText = text;
+    const keywords = KeywordManager.getKeywords();
+
+    // Sort keywords by length (descending) to match longer terms first
+    const sortedKeywords = [...keywords].sort((a, b) => b.term.length - a.term.length);
+
+    // Create a regex pattern that matches any keyword (case-insensitive)
+    const escapedTerms = sortedKeywords
+      .map(kw => kw.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+      .join('|');
+
+    if (!escapedTerms) return processedText;
+
+    const regex = new RegExp(`\\b(${escapedTerms})\\b`, 'gi');
+
+    processedText = processedText.replace(regex, (match) => {
+      const keywordData = KeywordManager.getByTerm(match);
+      if (!keywordData) return match;
+
+      // Create a highlighted keyword element with tooltip
+      const escapedTerm = Utils.escapeHtml(match);
+      const escapedTranslation = Utils.escapeHtml(keywordData.translation_ar);
+      const escapedDefinition = Utils.escapeHtml(keywordData.definition);
+      const escapedDetails = Utils.escapeHtml(keywordData.details);
+
+      return `<span class="keyword-highlight" data-term="${escapedTerm}" data-translation="${escapedTranslation}" data-definition="${escapedDefinition}" data-details="${escapedDetails}">${escapedTerm}</span>`;
+    });
+
+    return processedText;
+  },
+
+  /**
+   * Initialize keyword tooltip event listeners on a container element.
+   * @param {HTMLElement} container - The container to attach listeners to
+   */
+  initKeywordTooltips: (container) => {
+    // Use event delegation on the document for better performance
+    // This avoids cloning and losing existing event listeners
+    if (!document._keywordTooltipInitialized) {
+      document.addEventListener('mouseenter', (e) => {
+        const keywordEl = e.target.closest('.keyword-highlight');
+        if (!keywordEl) return;
+        showTooltip(keywordEl);
+      }, true); // Use capture phase
+
+      document.addEventListener('mouseleave', (e) => {
+        const keywordEl = e.target.closest('.keyword-highlight');
+        if (!keywordEl) return;
+        hideTooltip();
+      }, true); // Use capture phase
+
+      document._keywordTooltipInitialized = true;
+      console.log('[KeywordTooltips] Global event listeners initialized');
+    }
   }
 };
 
 // ========================================
-// 3. SYNTAX HIGHLIGHTER (VS Code-like)
+// Tooltip Management
+// ========================================
+let activeTooltip = null;
+let activeKeywordEl = null;
+
+// Update tooltip position on scroll
+window.addEventListener('scroll', () => {
+  if (activeTooltip && activeKeywordEl) {
+    positionTooltip(activeKeywordEl);
+  }
+});
+
+const showTooltip = (keywordEl) => {
+  // Hide any existing tooltip
+  hideTooltip();
+
+  activeKeywordEl = keywordEl;
+  const term = keywordEl.dataset.term;
+  const translation = keywordEl.dataset.translation;
+  const definition = keywordEl.dataset.definition;
+  const details = keywordEl.dataset.details;
+
+  // Create tooltip element
+  const tooltip = document.createElement('div');
+  tooltip.className = 'keyword-tooltip';
+  tooltip.id = 'active-keyword-tooltip';
+  tooltip.innerHTML = `
+    <div class="tooltip-term">${term}</div>
+    <div class="tooltip-translation">${translation}</div>
+    <div class="tooltip-definition">${definition}</div>
+    <div class="tooltip-details">${details}</div>
+  `;
+
+  document.body.appendChild(tooltip);
+  activeTooltip = tooltip;
+
+  // Position tooltip
+  positionTooltip(keywordEl);
+};
+
+const hideTooltip = () => {
+  if (activeTooltip) {
+    activeTooltip.remove();
+    activeTooltip = null;
+    activeKeywordEl = null;
+  }
+};
+
+const positionTooltip = (keywordEl) => {
+  if (!activeTooltip) return;
+
+  const rect = keywordEl.getBoundingClientRect();
+  const tooltipRect = activeTooltip.getBoundingClientRect();
+
+  // Default position: below the keyword
+  let top = rect.bottom + 8;
+  let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+
+  // Adjust if tooltip goes off-screen
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+
+  if (left < 10) {
+    left = 10;
+  } else if (left + tooltipRect.width > viewportWidth - 10) {
+    left = viewportWidth - tooltipRect.width - 10;
+  }
+
+  if (top + tooltipRect.height > viewportHeight - 10) {
+    // Position above if not enough space below
+    top = rect.top - tooltipRect.height - 8;
+  }
+
+  activeTooltip.style.top = `${top + window.scrollY}px`;
+  activeTooltip.style.left = `${left}px`;
+};
+
+// ========================================
+// 4. SYNTAX HIGHLIGHTER (VS Code-like)
 // ========================================
 const SyntaxHighlighter = (() => {
   // Token definitions — JS + Python keywords
@@ -381,7 +572,7 @@ const TrueFalseModule = (() => {
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
         </div>
-        <p class="question-text">${Utils.escapeHtml(questionText)}</p>
+        <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(questionText))}</p>
         <div class="tf-options">
           <button class="tf-btn" data-answer="true" ${answered ? 'disabled' : ''}>
             ${isArabic ? 'صحيح' : 'True'}
@@ -394,7 +585,7 @@ const TrueFalseModule = (() => {
         <div class="explanation-container" style="display:none">
           <div class="explanation">
             <div class="explanation-label">${isArabic ? 'الشرح' : 'Explanation'}</div>
-            <div class="explanation-text">${Utils.escapeHtml(q.explanation || '')}</div>
+            <div class="explanation-text">${Utils.highlightKeywords(Utils.escapeHtml(q.explanation || ''))}</div>
           </div>
         </div>
       `;
@@ -465,6 +656,9 @@ const TrueFalseModule = (() => {
         });
       });
     });
+
+    // Initialize keyword tooltips
+    Utils.initKeywordTooltips(container);
   };
 
   const shuffle = () => {
@@ -512,7 +706,7 @@ const MCQModule = (() => {
         return `
           <button class="mcq-option" data-key="${originalKey}" ${answered ? 'disabled' : ''}>
             <span class="option-letter">${letter}</span>
-            <span class="option-text">${Utils.escapeHtml(value)}</span>
+            <span class="option-text">${Utils.highlightKeywords(Utils.escapeHtml(value))}</span>
           </button>
         `;
       }).join('');
@@ -521,7 +715,7 @@ const MCQModule = (() => {
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
         </div>
-        <p class="question-text">${Utils.escapeHtml(questionText)}</p>
+        <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(questionText))}</p>
         <div class="mcq-options">
           ${optionsHTML}
         </div>
@@ -529,7 +723,7 @@ const MCQModule = (() => {
         <div class="explanation-container" style="display:none">
           <div class="explanation">
             <div class="explanation-label">${isArabic ? 'الشرح' : 'Explanation'}</div>
-            <div class="explanation-text">${Utils.escapeHtml(q.explanation || '')}</div>
+            <div class="explanation-text">${Utils.highlightKeywords(Utils.escapeHtml(q.explanation || ''))}</div>
           </div>
         </div>
       `;
@@ -598,6 +792,9 @@ const MCQModule = (() => {
         });
       });
     });
+
+    // Initialize keyword tooltips
+    Utils.initKeywordTooltips(container);
   };
 
   const shuffle = () => {
@@ -637,9 +834,9 @@ const ShortAnswerModule = (() => {
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
         </div>
-        <p class="question-text">${Utils.escapeHtml(questionText)}</p>
-        <textarea 
-          class="short-answer-area" 
+        <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(questionText))}</p>
+        <textarea
+          class="short-answer-area"
           placeholder="${isArabic ? 'اكتب إجابتك هنا...' : 'Type your answer here...'}"
           ${answered ? 'disabled' : ''}
         >${answered ? Utils.escapeHtml(answered.userAnswer || '') : ''}</textarea>
@@ -651,7 +848,7 @@ const ShortAnswerModule = (() => {
         <div class="model-answer-container" style="display:none">
           <div class="model-answer">
             <div class="model-answer-label">${isArabic ? 'الإجابة النموذجية' : 'Model Answer'}</div>
-            <div class="model-answer-text">${Utils.escapeHtml(q.answer)}</div>
+            <div class="model-answer-text">${Utils.highlightKeywords(Utils.escapeHtml(q.answer))}</div>
           </div>
         </div>
       `;
@@ -693,6 +890,9 @@ const ShortAnswerModule = (() => {
         ProgressManager.updateProgress();
       });
     });
+
+    // Initialize keyword tooltips
+    Utils.initKeywordTooltips(container);
   };
 
   const shuffle = () => {
@@ -1213,7 +1413,7 @@ const CodeModule = (() => {
         <!-- Task Description -->
         <div class="code-task">
           <span class="code-task-label">${isArabic ? 'المهمة' : 'Task'} ${index + 1}</span>
-          <p class="code-task-text">${Utils.escapeHtml(q.task)}</p>
+          <p class="code-task-text">${Utils.highlightKeywords(Utils.escapeHtml(q.task))}</p>
         </div>
 
         <!-- Highlighted Code Display (default visible) -->
@@ -1304,6 +1504,9 @@ const CodeModule = (() => {
         ProgressManager.updateProgress();
       }
     });
+
+    // Initialize keyword tooltips
+    Utils.initKeywordTooltips(container);
   };
 
   /** Detect language from code content */
@@ -1836,6 +2039,9 @@ const DataLoader = (() => {
 // ========================================
 const App = (() => {
   const init = async () => {
+    // Load keywords first
+    await KeywordManager.load();
+
     // Load preferences
     AppState.loadFromStorage();
 

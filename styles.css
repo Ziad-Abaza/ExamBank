@@ -3212,3 +3212,140 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-text-secondary);
 }
+
+/* ========================================
+   KEYWORD HIGHLIGHTING STYLES
+   ======================================== */
+
+/* Keyword highlight base styles */
+.keyword-highlight {
+  display: inline;
+  padding: 0.1em 0.3em;
+  margin: 0 0.1em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+  position: relative;
+  
+  /* Eye-friendly color: soft teal/blue that stands out without being harsh */
+  background-color: rgba(56, 152, 136, 0.15);
+  color: var(--color-text-primary);
+  border-bottom: 2px solid rgba(56, 152, 136, 0.5);
+}
+
+/* Light mode specific styling */
+[data-theme="light"] .keyword-highlight {
+  background-color: rgba(56, 152, 136, 0.12);
+  border-bottom-color: rgba(56, 152, 136, 0.6);
+}
+
+[data-theme="light"] .keyword-highlight:hover {
+  background-color: rgba(56, 152, 136, 0.2);
+  border-bottom-color: rgba(56, 152, 136, 0.8);
+}
+
+/* Dark mode specific styling */
+[data-theme="dark"] .keyword-highlight {
+  background-color: rgba(74, 222, 128, 0.1);
+  border-bottom-color: rgba(74, 222, 128, 0.5);
+}
+
+[data-theme="dark"] .keyword-highlight:hover {
+  background-color: rgba(74, 222, 128, 0.18);
+  border-bottom-color: rgba(74, 222, 128, 0.7);
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.15);
+}
+
+/* Tooltip styles */
+.keyword-tooltip {
+  position: absolute;
+  z-index: 10000;
+  max-width: 380px;
+  min-width: 250px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: var(--space-4);
+  animation: keywordTooltipFadeIn 0.2s ease-out;
+  pointer-events: none;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+@keyframes keywordTooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.keyword-tooltip .tooltip-term {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.keyword-tooltip .tooltip-translation {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+  font-size: var(--font-size-base);
+}
+
+.keyword-tooltip .tooltip-definition {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+  line-height: var(--line-height-relaxed);
+}
+
+.keyword-tooltip .tooltip-details {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-xs);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border-light);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Dark mode tooltip adjustments */
+[data-theme="dark"] .keyword-tooltip {
+  background: var(--color-bg-elevated);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-xl), 0 0 20px rgba(129, 140, 248, 0.1);
+}
+
+/* Responsive tooltip for mobile */
+@media (max-width: 768px) {
+  .keyword-tooltip {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: calc(100vw - 32px) !important;
+    max-width: 350px !important;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}
+
+/* Print styles - hide highlights when printing */
+@media print {
+  .keyword-highlight {
+    background: none;
+    border-bottom: none;
+    font-weight: inherit;
+  }
+  
+  .keyword-tooltip {
+    display: none !important;
+  }
+}
+
