@@ -1066,6 +1066,47 @@ body {
   color: var(--color-text-tertiary);
 }
 
+/* --- Fill in the Blank --- */
+.fib-input-group {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  margin-top: var(--space-4);
+}
+
+.fib-input {
+  flex: 1;
+  padding: var(--space-4) var(--space-5);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  transition: border-color var(--transition-fast);
+}
+
+.fib-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.fib-input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.fib-input:disabled {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+}
+
+.fib-submit-btn {
+  white-space: nowrap;
+}
+
 .model-answer {
   margin-top: var(--space-5);
   padding: var(--space-5);

@@ -12,14 +12,16 @@ const AppState = (() => {
       true_false: [],
       mcq: [],
       short_answer: [],
-      code: []
+      code: [],
+      fill_in_the_blank: []
     },
     currentCategory: 'true_false',
     progress: {
       true_false: {},
       mcq: {},
       short_answer: {},
-      code: {}
+      code: {},
+      fill_in_the_blank: {}
     },
     preferences: {
       theme: 'light',
@@ -30,11 +32,14 @@ const AppState = (() => {
   const get = () => data;
   
   const setProgress = (category, questionId, result) => {
+    if (!data.progress[category]) {
+      data.progress[category] = {};
+    }
     data.progress[category][questionId] = result;
     saveToStorage();
   };
 
-  const getProgress = (category) => data.progress[category];
+  const getProgress = (category) => data.progress[category] || {};
 
   const setPreference = (key, value) => {
     data.preferences[key] = value;
@@ -491,10 +496,10 @@ const ProgressManager = (() => {
     let totalQuestions = 0;
     let totalCorrect = 0;
 
-    const categories = ['true_false', 'mcq', 'short_answer', 'code'];
+    const categories = ['true_false', 'mcq', 'short_answer', 'code', 'fill_in_the_blank'];
 
     categories.forEach(cat => {
-      const questions = state.questions[cat];
+      const questions = state.questions[cat] || [];
       const progress = AppState.getProgress(cat);
       const answered = Object.keys(progress).length;
       totalAnswered += answered;
@@ -506,7 +511,7 @@ const ProgressManager = (() => {
       });
 
       // Update dashboard rings
-      const ringId = cat === 'true_false' ? 'tf' : cat === 'mcq' ? 'mcq' : cat === 'short_answer' ? 'sa' : 'code';
+      const ringId = cat === 'true_false' ? 'tf' : cat === 'mcq' ? 'mcq' : cat === 'short_answer' ? 'sa' : cat === 'code' ? 'code' : 'fib';
       const ringEl = document.getElementById(`${ringId}Ring`);
       const ringTextEl = document.getElementById(`${ringId}RingText`);
       const answeredEl = document.getElementById(`${ringId}Answered`);
@@ -902,6 +907,129 @@ const ShortAnswerModule = (() => {
   };
 
   return { render, shuffle };
+})();
+
+// ========================================
+// 7b. FILL IN THE BLANK MODULE
+// ========================================
+const FillInTheBlankModule = (() => {
+  const render = (questions) => {
+    const container = document.getElementById('fibQuestions');
+    container.innerHTML = '';
+
+    questions.forEach((q, index) => {
+      const progress = AppState.getProgress('fill_in_the_blank');
+      const answered = progress[q.id];
+      const state = AppState.get();
+      const isArabic = state.preferences.language === 'ar';
+
+      const card = document.createElement('div');
+      card.className = `question-card${answered ? ' answered' : ''}`;
+      card.id = `fib-${q.id}`;
+      card.innerHTML = `
+        <div class="question-header">
+          <span class="question-number">Question ${index + 1}</span>
+        </div>
+        <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(q.question))}</p>
+        <div class="fib-input-group">
+          <input
+            type="text"
+            class="fib-input"
+            placeholder="${isArabic ? 'اكتب الإجابة هنا...' : 'Type your answer here...'}"
+            value="${answered ? Utils.escapeHtml(answered.userAnswer || '') : ''}"
+            ${answered ? 'disabled' : ''}
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="btn btn-primary fib-submit-btn" ${answered ? 'style="display:none"' : ''}>
+            ${isArabic ? 'تحقق' : 'Check'}
+          </button>
+        </div>
+        <div class="feedback-container"></div>
+        <div class="model-answer-container" style="display:none">
+          <div class="model-answer">
+            <div class="model-answer-label">${isArabic ? 'الإجابة الصحيحة' : 'Correct Answer'}</div>
+            <div class="model-answer-text">${Utils.highlightKeywords(Utils.escapeHtml(q.answer))}</div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+
+      const input = card.querySelector('.fib-input');
+      const submitBtn = card.querySelector('.fib-submit-btn');
+      const modelAnswerContainer = card.querySelector('.model-answer-container');
+      const feedbackContainer = card.querySelector('.feedback-container');
+
+      // Handle answered state
+      if (answered) {
+        input.disabled = true;
+        modelAnswerContainer.style.display = 'block';
+        feedbackContainer.innerHTML = `
+          <div class="feedback ${answered.correct ? 'feedback-correct' : 'feedback-incorrect'}">
+            ${answered.correct
+              ? (isArabic ? '✓ إجابة صحيحة!' : '✓ Correct!')
+              : (isArabic ? '✗ إجابة خاطئة' : '✗ Incorrect')}
+          </div>
+        `;
+      }
+
+      // Submit handler
+      const checkAnswer = () => {
+        if (answered) return;
+
+        const userAnswer = input.value.trim();
+        if (!userAnswer) return;
+
+        const isCorrect = userAnswer.toLowerCase() === q.answer.toLowerCase();
+
+        AppState.setProgress('fill_in_the_blank', q.id, { correct: isCorrect, userAnswer });
+
+        input.disabled = true;
+        submitBtn.style.display = 'none';
+        card.classList.add('answered');
+
+        feedbackContainer.innerHTML = `
+          <div class="feedback ${isCorrect ? 'feedback-correct' : 'feedback-incorrect'}">
+            ${isCorrect
+              ? (isArabic ? '✓ إجابة صحيحة!' : '✓ Correct!')
+              : (isArabic ? '✗ إجابة خاطئة' : '✗ Incorrect')}
+          </div>
+        `;
+
+        modelAnswerContainer.style.display = 'block';
+        ProgressManager.updateProgress();
+      };
+
+      submitBtn?.addEventListener('click', checkAnswer);
+
+      // Allow Enter key to submit
+      input?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !answered) {
+          e.preventDefault();
+          checkAnswer();
+        }
+      });
+    });
+
+    // Initialize keyword tooltips
+    Utils.initKeywordTooltips(container);
+  };
+
+  const shuffle = () => {
+    const container = document.getElementById('fibQuestions');
+    const cards = Array.from(container.children);
+    Utils.shuffle(cards).forEach(card => container.appendChild(card));
+  };
+
+  const reset = () => {
+    AppState.resetProgress('fill_in_the_blank');
+    const state = AppState.get();
+    render(state.questions.fill_in_the_blank);
+    ProgressManager.updateProgress();
+  };
+
+  return { render, shuffle, reset };
 })();
 
 // ========================================
@@ -1893,7 +2021,8 @@ const NavigationManager = (() => {
       true_false: 'trueFalseSection',
       mcq: 'mcqSection',
       short_answer: 'shortAnswerSection',
-      code: 'codeSection'
+      code: 'codeSection',
+      fill_in_the_blank: 'fibSection'
     };
 
     const sectionId = sectionMap[category];
@@ -1918,6 +2047,9 @@ const NavigationManager = (() => {
         break;
       case 'code':
         CodeModule.render(questions);
+        break;
+      case 'fill_in_the_blank':
+        FillInTheBlankModule.render(questions);
         break;
     }
 
@@ -2055,12 +2187,14 @@ const App = (() => {
     state.questions.mcq = data.mcq || [];
     state.questions.short_answer = data.short_answer || [];
     state.questions.code = data.code || [];
+    state.questions.fill_in_the_blank = data.fill_in_the_blank || [];
 
     // Update counts
     document.getElementById('tfCount').textContent = state.questions.true_false.length;
     document.getElementById('mcqCount').textContent = state.questions.mcq.length;
     document.getElementById('saCount').textContent = state.questions.short_answer.length;
     document.getElementById('codeCount').textContent = state.questions.code.length;
+    document.getElementById('fibCount').textContent = state.questions.fill_in_the_blank.length;
 
     // Apply saved preferences
     UIManager.applyTheme(state.preferences.theme);
@@ -2147,6 +2281,10 @@ const App = (() => {
 
     // Short Answer controls
     document.getElementById('saShuffleBtn').addEventListener('click', ShortAnswerModule.shuffle);
+
+    // Fill in the Blank controls
+    document.getElementById('fibShuffleBtn').addEventListener('click', FillInTheBlankModule.shuffle);
+    document.getElementById('fibResetBtn').addEventListener('click', FillInTheBlankModule.reset);
 
     // Code Help Button
     const codeHelpBtn = document.getElementById('codeHelpBtn');

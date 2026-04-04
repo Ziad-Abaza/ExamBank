@@ -95,6 +95,14 @@
       <span class="tab-label" data-en="Code" data-ar="البرمجة">Code</span>
       <span class="tab-count" id="codeCount">0</span>
     </button>
+    <button class="nav-tab" data-category="fill_in_the_blank">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 20h9"/>
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+      </svg>
+      <span class="tab-label" data-en="Fill in the Blank" data-ar="املأ الفراغ">Fill in the Blank</span>
+      <span class="tab-count" id="fibCount">0</span>
+    </button>
   </nav>
 
   <!-- Progress Bar -->
@@ -213,6 +221,18 @@
       </div>
       <div class="questions-container" id="codeQuestions"></div>
     </section>
+
+    <!-- Fill in the Blank Section -->
+    <section class="question-section hidden" id="fibSection">
+      <div class="section-header">
+        <h2 class="section-title" data-en="Fill in the Blank Questions" data-ar="أسئلة املأ الفراغ">Fill in the Blank Questions</h2>
+        <div class="section-controls">
+          <button class="btn btn-secondary" id="fibShuffleBtn" data-en="Shuffle" data-ar="خلط">Shuffle</button>
+          <button class="btn btn-secondary" id="fibResetBtn" data-en="Reset" data-ar="إعادة تعيين">Reset</button>
+        </div>
+      </div>
+      <div class="questions-container" id="fibQuestions"></div>
+    </section>
   </main>
 
   <!-- Dashboard Modal -->
@@ -274,6 +294,19 @@
                 <span class="ring-text" id="codeRingText">0%</span>
               </div>
               <p class="card-stats"><span id="codeAnswered">0</span> / <span id="codeTotal">0</span></p>
+            </div>
+          </div>
+          <div class="dashboard-card">
+            <h4 class="card-title" data-en="Fill in the Blank" data-ar="املأ الفراغ">Fill in the Blank</h4>
+            <div class="card-progress">
+              <div class="progress-ring">
+                <svg viewBox="0 0 36 36">
+                  <path class="progress-ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="progress-ring-fill" id="fibRing" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                </svg>
+                <span class="ring-text" id="fibRingText">0%</span>
+              </div>
+              <p class="card-stats"><span id="fibAnswered">0</span> / <span id="fibTotal">0</span></p>
             </div>
           </div>
         </div>
