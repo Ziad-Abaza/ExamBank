@@ -207,13 +207,13 @@ const Utils = {
     // This avoids cloning and losing existing event listeners
     if (!document._keywordTooltipInitialized) {
       document.addEventListener('mouseenter', (e) => {
-        const keywordEl = e.target.closest('.keyword-highlight');
+        const keywordEl = e.target instanceof Element && e.target.closest('.keyword-highlight');
         if (!keywordEl) return;
         showTooltip(keywordEl);
       }, true); // Use capture phase
 
       document.addEventListener('mouseleave', (e) => {
-        const keywordEl = e.target.closest('.keyword-highlight');
+        const keywordEl = e.target instanceof Element && e.target.closest('.keyword-highlight');
         if (!keywordEl) return;
         hideTooltip();
       }, true); // Use capture phase

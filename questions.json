@@ -590,6 +590,258 @@
       "id": 4,
       "task": "Create a correlation matrix and visualize it.",
       "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\nsns.heatmap(df.corr(numeric_only=True))\nplt.show()"
+    },
+    {
+      "id": 5,
+      "task": "Create a histogram using NumPy random data.",
+      "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\ndata = np.random.randn(1000)\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Example')\nplt.show()"
+    },
+    {
+      "id": 6,
+      "task": "Create a density plot (KDE) for a dataset.",
+      "code": "import seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = sns.load_dataset('iris')\nsns.kdeplot(data=df, x='sepal_length', fill=True)\nplt.xlabel('Sepal Length')\nplt.ylabel('Density')\nplt.title('Density Plot of Sepal Length')\nplt.show()"
+    },
+    {
+      "id": 7,
+      "task": "Generate a box and whisker plot using sample data.",
+      "code": "import matplotlib.pyplot as plt\n\ndata = [10, 15, 18, 20, 22, 25, 28, 30, 32, 35]\nfig, ax = plt.subplots()\nax.boxplot(data)\nax.set_title('Box and Whisker Plot')\nplt.show()"
+    },
+    {
+      "id": 8,
+      "task": "Create a correlation matrix heatmap with annotations.",
+      "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndata = {'A': [1, 2, 3, 4, 5], 'B': [5, 4, 3, 2, 1], 'C': [2, 3, 1, 4, 5]}\ndf = pd.DataFrame(data)\nc_matrix = df.corr()\nsns.heatmap(c_matrix, annot=True, cmap='coolwarm')\nplt.title('Correlation Matrix')\nplt.show()"
+    },
+    {
+      "id": 9,
+      "task": "Create a scatter matrix plot for multivariate analysis.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn import datasets\n\niris = datasets.load_iris()\ndf = pd.DataFrame(iris.data, columns=iris.feature_names)\npd.plotting.scatter_matrix(df, diagonal='hist', figsize=(8, 7))\nplt.show()"
+    },
+    {
+      "id": 10,
+      "task": "Simulate distributed storage by splitting a dataset into multiple files (HDFS-style).",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nchunk_size = len(df) // 3\nfor i in range(3):\n    chunk = df[i*chunk_size:(i+1)*chunk_size]\n    chunk.to_csv(f'block_{i}.csv', index=False)"
+    },
+    {
+      "id": 11,
+      "task": "Simulate MapReduce word count using Python.",
+      "code": "from collections import defaultdict\n\ntext = \"big data big data analytics\"\nwords = text.split()\n\n# Map phase\nmapped = [(word, 1) for word in words]\n\n# Reduce phase\nreduced = defaultdict(int)\nfor word, count in mapped:\n    reduced[word] += count\n\nprint(dict(reduced))"
+    },
+    {
+      "id": 12,
+      "task": "Simulate Spark-like in-memory processing with aggregation.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nresult = df.groupby('category')['value'].sum()\nprint(result)"
+    },
+    {
+      "id": 13,
+      "task": "Store structured and unstructured data separately.",
+      "code": "import json\n\nstructured_data = [{'id': 1, 'name': 'Ali'}, {'id': 2, 'name': 'Sara'}]\nunstructured_data = ['This is a text', 'Another random sentence']\n\nwith open('structured.json', 'w') as f:\n    json.dump(structured_data, f)\n\nwith open('unstructured.txt', 'w') as f:\n    for line in unstructured_data:\n        f.write(line + '\\n')"
+    },
+    {
+      "id": 14,
+      "task": "Simulate fault tolerance by creating data replicas.",
+      "code": "import shutil\n\noriginal_file = 'data.csv'\nreplica1 = 'data_replica1.csv'\nreplica2 = 'data_replica2.csv'\n\nshutil.copy(original_file, replica1)\nshutil.copy(original_file, replica2)\n\nprint('Replicas created successfully')"
+    }
+  ],
+  "fill_in_the_blank": [
+    {
+      "id": 1,
+      "question": "RDBMS systems are not optimized for ______-scale Big Data workloads.",
+      "answer": "petabyte"
+    },
+    {
+      "id": 2,
+      "question": "One limitation of traditional RDBMS in Big Data is limited ______.",
+      "answer": "scalability"
+    },
+    {
+      "id": 3,
+      "question": "Apache Hadoop is designed for ______ storage and processing.",
+      "answer": "distributed"
+    },
+    {
+      "id": 4,
+      "question": "Hadoop provides built-in ______ tolerance.",
+      "answer": "fault"
+    },
+    {
+      "id": 5,
+      "question": "NoSQL databases can handle ______ and semi-structured data.",
+      "answer": "unstructured"
+    },
+    {
+      "id": 6,
+      "question": "HDFS stands for Hadoop Distributed ______ System.",
+      "answer": "File"
+    },
+    {
+      "id": 7,
+      "question": "Apache Spark is faster than MapReduce because it uses ______ processing.",
+      "answer": "in-memory"
+    },
+    {
+      "id": 8,
+      "question": "Apache Hive uses ______ Query Language (HQL).",
+      "answer": "Hive"
+    },
+    {
+      "id": 9,
+      "question": "Hadoop clusters can be managed using Apache ______.",
+      "answer": "Ambari"
+    },
+    {
+      "id": 10,
+      "question": "Hadoop supports structured, semi-structured, and ______ data.",
+      "answer": "unstructured"
+    },
+    {
+      "id": 11,
+      "question": "EDA helps in identifying patterns, trends, and ______ in data.",
+      "answer": "anomalies"
+    },
+    {
+      "id": 12,
+      "question": "Measures like mean, median, and mode are called ______ tendency.",
+      "answer": "central"
+    },
+    {
+      "id": 13,
+      "question": "Dispersion measures the ______ of data.",
+      "answer": "spread"
+    },
+    {
+      "id": 14,
+      "question": "A ______ is used to visualize the distribution of a numeric variable.",
+      "answer": "histogram"
+    },
+    {
+      "id": 15,
+      "question": "Box plots are useful for detecting ______ in data.",
+      "answer": "outliers"
+    },
+    {
+      "id": 16,
+      "question": "A correlation matrix is used to analyze ______ between variables.",
+      "answer": "relationships"
+    },
+    {
+      "id": 17,
+      "question": "Scatter plots are used to visualize the relationship between ______ variables.",
+      "answer": "two"
+    },
+    {
+      "id": 18,
+      "question": "The main goal of EDA is data ______ and understanding.",
+      "answer": "exploration"
+    },
+    {
+      "id": 19,
+      "question": "Density plots show data distribution in a ______ curve.",
+      "answer": "smooth"
+    },
+    {
+      "id": 20,
+      "question": "Matplotlib is a popular Python library used for ______.",
+      "answer": "visualization"
+    },
+    {
+      "id": 21,
+      "question": "The growth of ______ devices is a major cause of data explosion.",
+      "answer": "IoT"
+    },
+    {
+      "id": 22,
+      "question": "Big Data includes structured, semi-structured, and ______ data.",
+      "answer": "unstructured"
+    },
+    {
+      "id": 23,
+      "question": "______ refers to the size or scale of data.",
+      "answer": "Volume"
+    },
+    {
+      "id": 24,
+      "question": "______ describes how fast data is generated and processed.",
+      "answer": "Velocity"
+    },
+    {
+      "id": 25,
+      "question": "______ refers to different data types like text, images, and videos.",
+      "answer": "Variety"
+    },
+    {
+      "id": 26,
+      "question": "______ is related to data accuracy and reliability.",
+      "answer": "Veracity"
+    },
+    {
+      "id": 27,
+      "question": "Traditional systems rely on ______-server architecture.",
+      "answer": "single"
+    },
+    {
+      "id": 28,
+      "question": "Distributed computing allows multiple ______ to work together.",
+      "answer": "machines"
+    },
+    {
+      "id": 29,
+      "question": "The ______ layer is responsible for collecting data from sources.",
+      "answer": "ingestion"
+    },
+    {
+      "id": 30,
+      "question": "Fraud detection is commonly used in the ______ industry.",
+      "answer": "finance"
+    },
+    {
+      "id": 31,
+      "question": "One major challenge in Big Data systems is data ______.",
+      "answer": "security"
+    },
+    {
+      "id": 32,
+      "question": "Apache Kafka is mainly used for ______ data ingestion.",
+      "answer": "streaming"
+    },
+    {
+      "id": 33,
+      "question": "HDFS is a ______ file system used for large-scale storage.",
+      "answer": "distributed"
+    },
+    {
+      "id": 34,
+      "question": "In ELT, transformation happens ______ loading the data.",
+      "answer": "after"
+    },
+    {
+      "id": 35,
+      "question": "Sharding is used for ______ data into smaller parts.",
+      "answer": "partitioning"
+    },
+    {
+      "id": 36,
+      "question": "Geo-replication improves geographic ______ of data.",
+      "answer": "availability"
+    },
+    {
+      "id": 37,
+      "question": "______ services help improve scalability and autoscaling.",
+      "answer": "stateless"
+    },
+    {
+      "id": 38,
+      "question": "Leader election is part of ______ availability mechanisms.",
+      "answer": "high"
+    },
+    {
+      "id": 39,
+      "question": "Encryption is part of the ______ layer in Big Data systems.",
+      "answer": "security"
+    },
+    {
+      "id": 40,
+      "question": "Automated failover ensures ______ recovery from failures.",
+      "answer": "immediate"
     }
   ]
 }
