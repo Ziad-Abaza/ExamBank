@@ -3217,44 +3217,33 @@ body {
    KEYWORD HIGHLIGHTING STYLES
    ======================================== */
 
-/* Keyword highlight base styles */
+/* Keyword highlight base styles — color only, no backgrounds or underlines */
 .keyword-highlight {
   display: inline;
-  padding: 0.1em 0.3em;
-  margin: 0 0.1em;
-  border-radius: var(--radius-sm);
   cursor: pointer;
-  font-weight: var(--font-weight-semibold);
   transition: all var(--transition-fast);
-  position: relative;
-  
-  /* Eye-friendly color: soft teal/blue that stands out without being harsh */
-  background-color: rgba(56, 152, 136, 0.15);
-  color: var(--color-text-primary);
-  border-bottom: 2px solid rgba(56, 152, 136, 0.5);
+  border-radius: 2px;
+  padding: 0 1px;
 }
 
-/* Light mode specific styling */
+/* Light mode — subtle warm brown color that's distinguishable but comfortable */
 [data-theme="light"] .keyword-highlight {
-  background-color: rgba(56, 152, 136, 0.12);
-  border-bottom-color: rgba(56, 152, 136, 0.6);
+  color: #5a4a3a;
 }
 
 [data-theme="light"] .keyword-highlight:hover {
-  background-color: rgba(56, 152, 136, 0.2);
-  border-bottom-color: rgba(56, 152, 136, 0.8);
+  color: #3d3228;
+  background-color: rgba(90, 74, 58, 0.05);
 }
 
-/* Dark mode specific styling */
+/* Dark mode — soft warm tone that stands out without being harsh */
 [data-theme="dark"] .keyword-highlight {
-  background-color: rgba(74, 222, 128, 0.1);
-  border-bottom-color: rgba(74, 222, 128, 0.5);
+  color: #c8b89a;
 }
 
 [data-theme="dark"] .keyword-highlight:hover {
-  background-color: rgba(74, 222, 128, 0.18);
-  border-bottom-color: rgba(74, 222, 128, 0.7);
-  box-shadow: 0 0 8px rgba(74, 222, 128, 0.15);
+  color: #e0d4bc;
+  background-color: rgba(200, 184, 154, 0.08);
 }
 
 /* Tooltip styles */
@@ -3336,12 +3325,12 @@ body {
   }
 }
 
-/* Print styles - hide highlights when printing */
+/* Print styles - remove keyword color differentiation for printing */
 @media print {
   .keyword-highlight {
-    background: none;
-    border-bottom: none;
-    font-weight: inherit;
+    color: inherit !important;
+    background: none !important;
+    cursor: default;
   }
   
   .keyword-tooltip {
