@@ -543,13 +543,13 @@
       "id": 1,
       "question_en": "Why do traditional systems struggle with Big Data?",
       "question_ar": "لماذا تواجه الأنظمة التقليدية صعوبة في التعامل مع البيانات الضخمة؟",
-      "answer": "Traditional systems struggle with Big Data because they rely on single-server architectures, have limited scalability, and cannot efficiently handle large volumes, high velocity, and diverse data types."
+      "answer": "Traditional systems struggle with Big Data because:\n\n• Limited scalability → rely on single-server (vertical scaling).\n• Cannot handle huge data volumes → performance drops with TB/PB data.\n• Poor support for unstructured data → designed for structured tables only.\n• Slow processing → lack distributed and parallel processing.\n• High cost → scaling hardware becomes expensive."
     },
     {
       "id": 2,
       "question_en": "Explain the main components of Big Data Architecture.",
       "question_ar": "اشرح المكونات الرئيسية لبنية البيانات الضخمة.",
-      "answer": "Big Data Architecture consists of four main components: data ingestion (collecting data), storage (saving data), processing (analyzing data), and analytics (extracting insights)."
+      "answer": "The main components of Big Data Architecture are:\n\nIngestion → Collects data from sources (batch or streaming).\nStorage → Stores large data in distributed systems (e.g., HDFS).\nProcessing → Transforms and analyzes data (batch or real-time).\nAnalytics → Presents insights via dashboards, queries, or ML models."
     },
     {
       "id": 3,
@@ -561,7 +561,7 @@
       "id": 4,
       "question_en": "Define Exploratory Data Analysis (EDA).",
       "question_ar": "عرّف تحليل البيانات الاستكشافي (EDA).",
-      "answer": "EDA is the process of analyzing and summarizing datasets using statistical and visualization techniques to understand patterns, detect anomalies, and prepare data for modeling."
+      "answer": "EDA is analyzing and visualizing data to understand patterns, find outliers, and gain insights before modeling."
     },
     {
       "id": 5,
