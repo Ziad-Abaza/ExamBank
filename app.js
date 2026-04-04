@@ -706,7 +706,7 @@ const MCQModule = (() => {
         return `
           <button class="mcq-option" data-key="${originalKey}" ${answered ? 'disabled' : ''}>
             <span class="option-letter">${letter}</span>
-            <span class="option-text">${Utils.highlightKeywords(Utils.escapeHtml(value))}</span>
+            <span class="option-text">${Utils.escapeHtml(value)}</span>
           </button>
         `;
       }).join('');
