@@ -1131,6 +1131,35 @@ body {
   line-height: var(--line-height-relaxed);
 }
 
+/* Formatted short answer lines and lists */
+.answer-line {
+  padding: var(--space-2) 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.answer-list {
+  margin: var(--space-2) 0;
+  padding-left: var(--space-6);
+  list-style: none;
+}
+
+.answer-list li {
+  position: relative;
+  padding: var(--space-2) 0 var(--space-2) var(--space-4);
+  line-height: var(--line-height-relaxed);
+}
+
+.answer-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
 /* ========================================
    CODE SECTION — VS Code-like Editor
    ======================================== */

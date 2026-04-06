@@ -226,6 +226,57 @@ const Utils = {
       document._keywordTooltipInitialized = true;
       console.log('[KeywordTooltips] Global event listeners initialized');
     }
+  },
+
+  /**
+   * Format short answer text into readable HTML with proper spacing and bullet points.
+   * @param {string} text - The answer text (may already contain HTML from keyword highlighting)
+   * @returns {string} - Formatted HTML string
+   */
+  formatShortAnswer: (text) => {
+    if (!text) return '';
+
+    // Split into lines
+    const lines = text.split('\n');
+    let result = '';
+    let inList = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmed = line.trim();
+
+      if (trimmed === '') {
+        // Close any open list
+        if (inList) {
+          result += '</ul>';
+          inList = false;
+        }
+        result += '<br>';
+      } else if (trimmed.startsWith('•') || trimmed.startsWith('-') || trimmed.startsWith('*')) {
+        // Bullet point
+        if (!inList) {
+          result += '<ul class="answer-list">';
+          inList = true;
+        }
+        // Remove the bullet character and trim
+        const content = trimmed.replace(/^[•\-*]\s*/, '');
+        result += `<li>${content}</li>`;
+      } else {
+        // Regular text line
+        if (inList) {
+          result += '</ul>';
+          inList = false;
+        }
+        result += `<div class="answer-line">${trimmed}</div>`;
+      }
+    }
+
+    // Close any remaining open list
+    if (inList) {
+      result += '</ul>';
+    }
+
+    return result;
   }
 };
 
@@ -853,7 +904,7 @@ const ShortAnswerModule = (() => {
         <div class="model-answer-container" style="display:none">
           <div class="model-answer">
             <div class="model-answer-label">${isArabic ? 'الإجابة النموذجية' : 'Model Answer'}</div>
-            <div class="model-answer-text">${Utils.highlightKeywords(Utils.escapeHtml(q.answer))}</div>
+            <div class="model-answer-text">${Utils.formatShortAnswer(Utils.highlightKeywords(Utils.escapeHtml(q.answer)))}</div>
           </div>
         </div>
       `;
