@@ -1032,27 +1032,27 @@
     {
       "id": 1,
       "task": "Create a simple Linear Regression model using scikit-learn.",
-      "code": "from sklearn.linear_model import LinearRegression\nimport numpy as np\n\nx = np.array([[1],[2],[3],[4]])\ny = np.array([2,4,6,8])\n\nmodel = LinearRegression()\nmodel.fit(x,y)\n\nprint(model.predict([[5]]))"
+      "code": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\nX = np.array([[1],[2],[3],[4]])\ny = np.array([2,4,6,8])\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\nprint(model.predict([[5]]))"
     },
     {
       "id": 2,
       "task": "Implement Gradient Descent for Linear Regression (simple version).",
-      "code": "import numpy as np\n\nx = np.array([1,2,3,4])\ny = np.array([2,4,6,8])\n\nt0 = t1 = 0\nlr = 0.01\n\nfor _ in range(1000):\n    yhat = t0 + t1*x\n    err = yhat - y\n    t0 -= lr * err.mean()\n    t1 -= lr * (err*x).mean()\n\nprint(t0, t1)"
+      "code": "import numpy as np\n\nX = np.array([1,2,3,4])\ny = np.array([2,4,6,8])\n\nt0, t1 = 0, 0\nlr = 0.01\n\nfor _ in range(1000):\n    y_pred = t0 + t1 * X\n    error = y_pred - y\n    t0 -= lr * error.mean()\n    t1 -= lr * (error * X).mean()\n\nprint(t0, t1)"
     },
     {
       "id": 3,
       "task": "Split data into training and testing sets and train Linear Regression.",
-      "code": "from sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\n\nx = np.array([[1],[2],[3],[4],[5]])\ny = np.array([2,4,6,8,10])\n\nx_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2)\n\nmodel = LinearRegression()\nmodel.fit(x_train,y_train)\n\nprint(model.score(x_test,y_test))"
+      "code": "import numpy as np\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\n\nX = np.array([[1],[2],[3],[4],[5]])\ny = np.array([2,4,6,8,10])\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\n\nprint(model.score(X_test, y_test))"
     },
     {
       "id": 4,
       "task": "Apply K-Means clustering on simple dataset.",
-      "code": "from sklearn.cluster import KMeans\nimport numpy as np\n\nx = np.array([[1,2],[1,4],[5,8],[6,9]])\n\nmodel = KMeans(n_clusters=2,n_init=10)\nmodel.fit(x)\n\nprint(model.labels_)"
+      "code": "import numpy as np\nfrom sklearn.cluster import KMeans\n\nX = np.array([[1,2],[1,4],[5,8],[6,9]])\n\nmodel = KMeans(n_clusters=2, n_init=10, random_state=42)\nmodel.fit(X)\n\nprint(model.labels_)"
     },
     {
       "id": 5,
       "task": "Simple Logistic Regression for binary classification.",
-      "code": "from sklearn.linear_model import LogisticRegression\nimport numpy as np\n\nx = np.array([[1],[2],[3],[4]])\ny = np.array([0,0,1,1])\n\nmodel = LogisticRegression()\nmodel.fit(x,y)\n\nprint(model.predict([[3.5]]))"
+      "code": "import numpy as np\nfrom sklearn.linear_model import LogisticRegression\n\nX = np.array([[1],[2],[3],[4]])\ny = np.array([0,0,1,1])\n\nmodel = LogisticRegression()\nmodel.fit(X, y)\n\nprint(model.predict([[3.5]]))"
     },
     {
       "id": 6,
@@ -1062,117 +1062,117 @@
     {
       "id": 7,
       "task": "Load Iris dataset using scikit-learn.",
-      "code": "from sklearn.datasets import load_iris\n\niris = load_iris()\n\nprint(iris.data[:5])\nprint(iris.target[:5])"
+      "code": "from sklearn.datasets import load_iris\n\n# Load dataset\niris = load_iris()\n\n# Display first 5 rows\nprint(iris.data[:5])\nprint(iris.target[:5])"
     },
     {
       "id": 8,
       "task": "Load dataset using HuggingFace datasets library.",
-      "code": "from datasets import load_dataset\n\n# Load iris dataset from HuggingFace\nds = load_dataset(\"scikit-learn/iris\")\n\nprint(ds)"
+      "code": "from datasets import load_dataset\n\n# Load iris dataset\nds = load_dataset(\"scikit-learn/iris\")\n\n# Display dataset structure\nprint(ds)\n\n# Show first 5 samples from train split\nprint(ds['train'][:5])"
     },
     {
       "id": 9,
       "task": "Perform One-Hot Encoding using pandas.",
-      "code": "import pandas as pd\n\n# Sample data\ndata = {'color': ['red', 'green', 'blue', 'red', 'green']}\ndf = pd.DataFrame(data)\n\n# One-hot encoding\nencoded = pd.get_dummies(df['color'], prefix='color')\n\n# Merge with original dataframe\ndf = pd.concat([df, encoded], axis=1)\n\n# Drop original column\ndf = df.drop('color', axis=1)\n\nprint(df)"
+      "code": "import pandas as pd\n\n# Sample data\ndata = {'color': ['red', 'green', 'blue', 'red', 'green']}\ndf = pd.DataFrame(data)\n\n# One-hot encoding\nencoded = pd.get_dummies(df['color'], prefix='color')\n\n# Combine and drop original column\ndf = pd.concat([df, encoded], axis=1).drop('color', axis=1)\n\nprint(df)"
     },
     {
       "id": 10,
       "task": "Apply Label Encoding on categorical data.",
-      "code": "from sklearn.preprocessing import LabelEncoder\n\n# Sample data\ndata = ['small', 'medium', 'large', 'small', 'large']\n\nencoder = LabelEncoder()\nencoded = encoder.fit_transform(data)\n\nprint(encoded)"
+      "code": "from sklearn.preprocessing import LabelEncoder\n\n# Sample data\ndata = ['small', 'medium', 'large', 'small', 'large']\n\n# Label encoding\nencoder = LabelEncoder()\nencoded = encoder.fit_transform(data)\n\nprint(encoded)"
     },
     {
       "id": 11,
       "task": "Apply Frequency Encoding using pandas.",
-      "code": "import pandas as pd\n\n# Sample data\ndata = {'color': ['red', 'green', 'blue', 'red', 'green']}\ndf = pd.DataFrame(data)\n\n# Calculate frequency\nfreq = df['color'].value_counts(normalize=True)\n\n# Map frequency\ndf['color_freq'] = df['color'].map(freq)\n\n# Drop original column\ndf = df.drop('color', axis=1)\n\nprint(df)"
+      "code": "import pandas as pd\n\n# Sample data\ndata = {'color': ['red', 'green', 'blue', 'red', 'green']}\ndf = pd.DataFrame(data)\n\n# Frequency encoding\nfreq = df['color'].value_counts(normalize=True)\ndf['color_freq'] = df['color'].map(freq)\n\n# Drop original column\ndf = df.drop('color', axis=1)\n\nprint(df)"
     },
     {
       "id": 12,
       "task": "Apply Target Encoding manually.",
-      "code": "import pandas as pd\n\n# Sample data\ndata = {'color': ['red', 'green', 'blue', 'red', 'green'],\n        'target': [1, 0, 1, 0, 1]}\ndf = pd.DataFrame(data)\n\n# Calculate mean target per category\nmean_encoding = df.groupby('color')['target'].mean()\n\n# Map encoding\ndf['color_encoded'] = df['color'].map(mean_encoding)\n\nprint(df)"
+      "code": "import pandas as pd\n\n# Sample data\ndata = {\n    'color': ['red', 'green', 'blue', 'red', 'green'],\n    'target': [1, 0, 1, 0, 1]\n}\ndf = pd.DataFrame(data)\n\n# Compute mean target per category\nmean_encoding = df.groupby('color')['target'].mean()\n\n# Map encoding\ndf['color_encoded'] = df['color'].map(mean_encoding)\n\nprint(df)"
     },
     {
       "id": 13,
       "task": "Apply Binary Encoding using category_encoders library.",
-      "code": "import pandas as pd\nimport category_encoders as ce\n\n# Sample data\ndata = {'color': ['red', 'green', 'blue', 'red', 'green']}\ndf = pd.DataFrame(data)\n\n# Binary Encoder\nencoder = ce.BinaryEncoder(cols=['color'])\nencoded = encoder.fit_transform(df)\n\nprint(encoded)"
+      "code": "import pandas as pd\nimport category_encoders as ce\n\n# Sample data\ndata = {'color': ['red', 'green', 'blue', 'red', 'green']}\ndf = pd.DataFrame(data)\n\n# Binary encoding\nencoder = ce.BinaryEncoder(cols=['color'])\nencoded = encoder.fit_transform(df)\n\nprint(encoded)"
     },
     {
       "id": 14,
-      "task": "Simple example of dataset preprocessing (cleaning and normalization).",
-      "code": "import pandas as pd\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Sample dataset\ndata = {'age': [20, 25, 30, 35, 40]}\ndf = pd.DataFrame(data)\n\n# Normalize data\nscaler = MinMaxScaler()\ndf['age_normalized'] = scaler.fit_transform(df[['age']])\n\nprint(df)"
+      "task": "Simple example of dataset preprocessing (normalization).",
+      "code": "import pandas as pd\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Sample data\ndata = {'age': [20, 25, 30, 35, 40]}\ndf = pd.DataFrame(data)\n\n# Normalize data\nscaler = MinMaxScaler()\ndf['age_normalized'] = scaler.fit_transform(df[['age']])\n\nprint(df)"
     },
     {
       "id": 15,
-      "task": "Load CSV using Python csv module.",
-      "code": "import csv\nfor r in csv.reader(open('data.csv')):\n    print(r)"
+      "task": "Data Loading - Load CSV using Python csv module.",
+      "code": "import csv\n\n# Open CSV file safely\nwith open('data.csv', 'r') as file:\n    reader = csv.reader(file)\n    for row in reader:\n        print(row)"
     },
     {
       "id": 16,
-      "task": "Load CSV using pandas.",
-      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.head())"
+      "task": "Data Loading - Load CSV using pandas.",
+      "code": "import pandas as pd\n\n# Load dataset into DataFrame\ndf = pd.read_csv('data.csv')\n\n# Display first 5 rows\nprint(df.head())"
     },
     {
       "id": 17,
-      "task": "Load CSV using numpy.",
-      "code": "import numpy as np\ndata = np.genfromtxt('data.csv', delimiter=',')\nprint(data[:5])"
+      "task": "Data Loading - Load CSV using numpy.",
+      "code": "import numpy as np\n\n# Load CSV into numpy array\ndata = np.genfromtxt('data.csv', delimiter=',', skip_header=1)\n\nprint(data[:5])"
     },
     {
       "id": 18,
-      "task": "Check dataset shape (rows, columns).",
-      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.shape)"
+      "task": "Data Understanding - Check dataset shape (rows, columns).",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\n# Print shape (rows, columns)\nprint(df.shape)"
     },
     {
       "id": 19,
-      "task": "Check data types of columns.",
-      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.dtypes)"
+      "task": "Data Understanding - Check data types of columns.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\n# Print data types\nprint(df.dtypes)"
     },
     {
       "id": 20,
-      "task": "Get statistical summary of dataset.",
-      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.describe())"
+      "task": "Data Understanding - Get statistical summary of dataset.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\n# Summary statistics\nprint(df.describe())"
     },
     {
       "id": 21,
-      "task": "Check class distribution.",
-      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.groupby('class').size())"
+      "task": "Data Understanding - Check class distribution.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\n# Count samples per class\nprint(df.groupby('class').size())"
     },
     {
       "id": 22,
-      "task": "Compute correlation matrix.",
-      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.corr())"
+      "task": "Data Understanding - Compute correlation matrix.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\n# Pearson correlation matrix\nprint(df.corr())"
     },
     {
       "id": 23,
-      "task": "Calculate skewness of dataset.",
-      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.skew())"
+      "task": "Data Understanding - Calculate skewness of dataset.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\n# Skewness of each column\nprint(df.skew())"
     },
     {
       "id": 24,
-      "task": "Apply MinMax Scaling.",
-      "code": "from sklearn.preprocessing import MinMaxScaler\nimport pandas as pd\ndf = pd.read_csv('data.csv')\nprint(MinMaxScaler().fit_transform(df))"
+      "task": "Data Preparation - Apply MinMax Scaling.",
+      "code": "import pandas as pd\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Load dataset\ndf = pd.read_csv('data.csv')\n\n# Initialize scaler\nscaler = MinMaxScaler()\n\n# Apply scaling\nscaled_data = scaler.fit_transform(df)\n\nprint(scaled_data[:5])"
     },
     {
       "id": 25,
-      "task": "Split dataset into train and test.",
-      "code": "from sklearn.model_selection import train_test_split\nX_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2)"
+      "task": "Data Preparation - Split dataset into train and test.",
+      "code": "from sklearn.model_selection import train_test_split\n\n# Assume X (features) and y (labels) are defined\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)"
     },
     {
       "id": 26,
-      "task": "Train Logistic Regression and predict.",
-      "code": "from sklearn.linear_model import LogisticRegression\nm=LogisticRegression(max_iter=10000).fit(X_train,y_train)\nprint(m.predict(X_test))"
+      "task": "Model Training - Train Logistic Regression and predict.",
+      "code": "from sklearn.linear_model import LogisticRegression\n\n# Create and train model\nmodel = LogisticRegression(max_iter=10000)\nmodel.fit(X_train, y_train)\n\n# Predict on test set\ny_pred = model.predict(X_test)\n\nprint(y_pred)"
     },
     {
       "id": 27,
-      "task": "Calculate accuracy score.",
-      "code": "from sklearn.metrics import accuracy_score\nprint(accuracy_score(y_test,y_pred))"
+      "task": "Performance Metrics - Calculate accuracy score.",
+      "code": "from sklearn.metrics import accuracy_score\n\n# Calculate accuracy\naccuracy = accuracy_score(y_test, y_pred)\n\nprint(accuracy)"
     },
     {
       "id": 28,
-      "task": "Generate confusion matrix.",
-      "code": "from sklearn.metrics import confusion_matrix\nprint(confusion_matrix(y_test,y_pred))"
+      "task": "Performance Metrics - Generate confusion matrix.",
+      "code": "from sklearn.metrics import confusion_matrix\n\n# Compute confusion matrix\ncm = confusion_matrix(y_test, y_pred)\n\nprint(cm)"
     },
     {
       "id": 29,
-      "task": "Generate classification report.",
-      "code": "from sklearn.metrics import classification_report\nprint(classification_report(y_test,y_pred))"
+      "task": "Performance Metrics - Generate classification report.",
+      "code": "from sklearn.metrics import classification_report\n\n# Generate report\nreport = classification_report(y_test, y_pred)\n\nprint(report)"
     }
   ],
   "fill_in_the_blank": [
