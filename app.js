@@ -804,6 +804,15 @@ const MCQModule = (() => {
       card.innerHTML = `
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
+          ${q.question_ar && q.question_en ? `
+            <span class="translate-icon" title="${isArabic ? 'عرض بالإنجليزية' : 'عرض بالعربية'}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span class="translate-tooltip">${Utils.escapeHtml(isArabic ? q.question_en : q.question_ar)}</span>
+            </span>
+          ` : ''}
         </div>
         <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(questionText))}</p>
         <div class="mcq-options">
@@ -923,6 +932,15 @@ const ShortAnswerModule = (() => {
       card.innerHTML = `
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
+          ${q.question_ar && q.question_en ? `
+            <span class="translate-icon" title="${isArabic ? 'عرض بالإنجليزية' : 'عرض بالعربية'}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span class="translate-tooltip">${Utils.escapeHtml(isArabic ? q.question_en : q.question_ar)}</span>
+            </span>
+          ` : ''}
         </div>
         <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(questionText))}</p>
         <textarea
@@ -1600,6 +1618,8 @@ const FileCatalog = (() => {
 // 9. CODE MODULE
 // ========================================
 const CodeModule = (() => {
+  let autoMarkEnabled = true; // Flag to control auto-marking during reset
+
   /**
    * Build a VS Code-like code card with:
    *  - Highlighted read-only display (default view)
@@ -1711,8 +1731,8 @@ const CodeModule = (() => {
       container.appendChild(card);
       bindCardEvents(card, q, isArabic, lang);
 
-      // Mark as viewed
-      if (!AppState.getProgress('code')[q.id]) {
+      // Mark as viewed (only if auto-marking is enabled)
+      if (autoMarkEnabled && !AppState.getProgress('code')[q.id]) {
         AppState.setProgress('code', q.id, { viewed: true, correct: true });
         ProgressManager.updateProgress();
       }
@@ -2040,7 +2060,15 @@ const CodeModule = (() => {
     }
   };
 
-  return { render };
+  const disableAutoMark = () => {
+    autoMarkEnabled = false;
+  };
+
+  const enableAutoMark = () => {
+    autoMarkEnabled = true;
+  };
+
+  return { render, disableAutoMark, enableAutoMark };
 })();
 
 // ========================================
@@ -2287,29 +2315,6 @@ const App = (() => {
 
     // Render initial category
     NavigationManager.renderCategory(state.currentCategory);
-    
-    // Diagnostic: verify DOM elements exist
-    setTimeout(() => {
-      const answeredEl = document.getElementById('answeredCount');
-      const totalEl = document.getElementById('totalCount');
-      const correctEl = document.getElementById('correctCount');
-      
-      console.log('[Diagnostic] DOM elements exist:', {
-        answered: !!answeredEl,
-        total: !!totalEl,
-        correct: !!correctEl
-      });
-      
-      console.log('[Diagnostic] Current progress:', AppState.get().progress);
-      
-      // Force update
-      ProgressManager.updateProgress();
-      
-      console.log('[Diagnostic] After update - answeredCount:', answeredEl?.textContent);
-      console.log('[Diagnostic] After update - totalCount:', totalEl?.textContent);
-      console.log('[Diagnostic] After update - correctCount:', correctEl?.textContent);
-    }, 500);
-    
     ProgressManager.updateProgress();
 
     // Start loading Pyodide Python runtime in background
@@ -2386,11 +2391,14 @@ const App = (() => {
       const message = isArabic ? 'هل أنت متأكد من إعادة تعيين كل التقدم؟' : 'Are you sure you want to reset all progress?';
       
       if (confirm(message)) {
+        // Temporarily disable auto-marking for Code module
+        CodeModule.disableAutoMark();
+        
+        // Clear localStorage and in-memory progress
         AppState.resetAllProgress();
         
-        // Clear in-memory progress for all categories
-        const fullState = AppState.get();
-        fullState.progress = {
+        // Also clear the in-memory state
+        state.progress = {
           true_false: {},
           mcq: {},
           short_answer: {},
@@ -2398,27 +2406,16 @@ const App = (() => {
           fill_in_the_blank: {}
         };
         
-        // Re-render current category WITHOUT auto-marking code questions
-        // We need to temporarily disable auto-marking during reset
-        const originalSetProgress = AppState.setProgress;
-        let skipAutoMark = true;
-        
-        // Override setProgress temporarily
-        AppState.setProgress = (cat, id, result) => {
-          if (skipAutoMark && cat === 'code' && result.viewed) {
-            return; // Skip auto-marking during reset
-          }
-          originalSetProgress(cat, id, result);
-        };
-        
+        // Re-render current category to reset all UI states
         NavigationManager.renderCategory(state.currentCategory);
+        
+        // Force progress update after render completes
         ProgressManager.updateProgress();
         
-        // Restore original setProgress after a short delay
+        // Re-enable auto-marking for future interactions
         setTimeout(() => {
-          AppState.setProgress = originalSetProgress;
-          skipAutoMark = false;
-        }, 100);
+          CodeModule.enableAutoMark();
+        }, 200);
       }
     });
 
