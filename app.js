@@ -77,6 +77,17 @@ const AppState = (() => {
     saveToStorage();
   };
 
+  const resetAllProgress = () => {
+    data.progress = {
+      true_false: {},
+      mcq: {},
+      short_answer: {},
+      code: {},
+      fill_in_the_blank: {}
+    };
+    saveToStorage();
+  };
+
   return {
     get,
     setProgress,
@@ -84,7 +95,8 @@ const AppState = (() => {
     setPreference,
     loadFromStorage,
     saveToStorage,
-    resetProgress
+    resetProgress,
+    resetAllProgress
   };
 })();
 
@@ -549,10 +561,16 @@ const ProgressManager = (() => {
 
     const categories = ['true_false', 'mcq', 'short_answer', 'code', 'fill_in_the_blank'];
 
+    console.log('[ProgressManager] Updating progress...');
+    console.log('[ProgressManager] Current state:', state.progress);
+
     categories.forEach(cat => {
       const questions = state.questions[cat] || [];
       const progress = AppState.getProgress(cat);
       const answered = Object.keys(progress).length;
+      
+      console.log(`[ProgressManager] ${cat}: ${answered} answered / ${questions.length} total`);
+      
       totalAnswered += answered;
       totalQuestions += questions.length;
 
@@ -590,6 +608,8 @@ const ProgressManager = (() => {
     if (answeredCount) answeredCount.textContent = totalAnswered;
     if (totalCount) totalCount.textContent = totalQuestions;
     if (correctCount) correctCount.textContent = totalCorrect;
+
+    console.log('[ProgressManager] Final totals - Answered:', totalAnswered, 'Total:', totalQuestions, 'Correct:', totalCorrect);
 
     // Accuracy
     const accuracyEl = document.getElementById('accuracyValue');
@@ -2320,6 +2340,21 @@ const App = (() => {
 
     document.getElementById('shortcutsClose').addEventListener('click', () => {
       document.getElementById('shortcutsModal').classList.add('hidden');
+    });
+
+    // Reset All Progress
+    document.getElementById('resetAllBtn').addEventListener('click', () => {
+      const state = AppState.get();
+      const isArabic = state.preferences.language === 'ar';
+      const message = isArabic ? 'هل أنت متأكد من إعادة تعيين كل التقدم؟' : 'Are you sure you want to reset all progress?';
+      
+      if (confirm(message)) {
+        AppState.resetAllProgress();
+        
+        // Re-render current category to reset UI
+        NavigationManager.renderCategory(state.currentCategory);
+        ProgressManager.updateProgress();
+      }
     });
 
     // True/False controls
