@@ -86,6 +86,13 @@ const AppState = (() => {
       fill_in_the_blank: {}
     };
     saveToStorage();
+    
+    // Also clear from localStorage directly
+    try {
+      localStorage.removeItem('exambank_progress');
+    } catch (e) {
+      console.warn('Failed to clear localStorage:', e);
+    }
   };
 
   return {
@@ -561,15 +568,10 @@ const ProgressManager = (() => {
 
     const categories = ['true_false', 'mcq', 'short_answer', 'code', 'fill_in_the_blank'];
 
-    console.log('[ProgressManager] Updating progress...');
-    console.log('[ProgressManager] Current state:', state.progress);
-
     categories.forEach(cat => {
       const questions = state.questions[cat] || [];
       const progress = AppState.getProgress(cat);
       const answered = Object.keys(progress).length;
-      
-      console.log(`[ProgressManager] ${cat}: ${answered} answered / ${questions.length} total`);
       
       totalAnswered += answered;
       totalQuestions += questions.length;
@@ -609,8 +611,6 @@ const ProgressManager = (() => {
     if (totalCount) totalCount.textContent = totalQuestions;
     if (correctCount) correctCount.textContent = totalCorrect;
 
-    console.log('[ProgressManager] Final totals - Answered:', totalAnswered, 'Total:', totalQuestions, 'Correct:', totalCorrect);
-
     // Accuracy
     const accuracyEl = document.getElementById('accuracyValue');
     const completedEl = document.getElementById('completedValue');
@@ -644,9 +644,23 @@ const TrueFalseModule = (() => {
       const card = document.createElement('div');
       card.className = `question-card${answered ? ' answered' : ''}`;
       card.id = `tf-${q.id}`;
+      
+      const alternateLang = isArabic ? 'en' : 'ar';
+      const alternateText = alternateLang === 'ar' ? (q.question_ar || '') : (q.question_en || '');
+      const tooltipLabel = isArabic ? 'عرض بالإنجليزية' : 'View in English';
+      
       card.innerHTML = `
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
+          ${alternateText ? `
+            <span class="translate-icon" title="${tooltipLabel}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span class="translate-tooltip">${Utils.escapeHtml(alternateText)}</span>
+            </span>
+          ` : ''}
         </div>
         <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(questionText))}</p>
         <div class="tf-options">
@@ -2273,6 +2287,29 @@ const App = (() => {
 
     // Render initial category
     NavigationManager.renderCategory(state.currentCategory);
+    
+    // Diagnostic: verify DOM elements exist
+    setTimeout(() => {
+      const answeredEl = document.getElementById('answeredCount');
+      const totalEl = document.getElementById('totalCount');
+      const correctEl = document.getElementById('correctCount');
+      
+      console.log('[Diagnostic] DOM elements exist:', {
+        answered: !!answeredEl,
+        total: !!totalEl,
+        correct: !!correctEl
+      });
+      
+      console.log('[Diagnostic] Current progress:', AppState.get().progress);
+      
+      // Force update
+      ProgressManager.updateProgress();
+      
+      console.log('[Diagnostic] After update - answeredCount:', answeredEl?.textContent);
+      console.log('[Diagnostic] After update - totalCount:', totalEl?.textContent);
+      console.log('[Diagnostic] After update - correctCount:', correctEl?.textContent);
+    }, 500);
+    
     ProgressManager.updateProgress();
 
     // Start loading Pyodide Python runtime in background
@@ -2351,9 +2388,37 @@ const App = (() => {
       if (confirm(message)) {
         AppState.resetAllProgress();
         
-        // Re-render current category to reset UI
+        // Clear in-memory progress for all categories
+        const fullState = AppState.get();
+        fullState.progress = {
+          true_false: {},
+          mcq: {},
+          short_answer: {},
+          code: {},
+          fill_in_the_blank: {}
+        };
+        
+        // Re-render current category WITHOUT auto-marking code questions
+        // We need to temporarily disable auto-marking during reset
+        const originalSetProgress = AppState.setProgress;
+        let skipAutoMark = true;
+        
+        // Override setProgress temporarily
+        AppState.setProgress = (cat, id, result) => {
+          if (skipAutoMark && cat === 'code' && result.viewed) {
+            return; // Skip auto-marking during reset
+          }
+          originalSetProgress(cat, id, result);
+        };
+        
         NavigationManager.renderCategory(state.currentCategory);
         ProgressManager.updateProgress();
+        
+        // Restore original setProgress after a short delay
+        setTimeout(() => {
+          AppState.setProgress = originalSetProgress;
+          skipAutoMark = false;
+        }, 100);
       }
     });
 
