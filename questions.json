@@ -1042,72 +1042,72 @@
     {
       "id": 3,
       "task": "Write a Python program to split data into training and testing sets using scikit-learn.",
-      "code": "from sklearn.model_selection import train_test_split\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)"
+      "code": "from sklearn.model_selection import train_test_split\n\n# Example data\nX = [[1], [2], [3], [4], [5]]\ny = [2, 4, 6, 8, 10]\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nprint('X_train:', X_train)\nprint('X_test:', X_test)\nprint('y_train:', y_train)\nprint('y_test:', y_test)"
     },
     {
       "id": 4,
       "task": "Train a simple Linear Regression model on sample data and print the model coefficients.",
-      "code": "from sklearn.linear_model import LinearRegression\n\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\nprint(model.coef_, model.intercept_)"
+      "code": "from sklearn.linear_model import LinearRegression\nimport numpy as np\n\n# Sample data\nX = np.array([[1], [2], [3], [4], [5]])\ny = np.array([2, 4, 6, 8, 10])\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\nprint('Coefficient:', model.coef_)\nprint('Intercept:', model.intercept_)"
     },
     {
       "id": 5,
       "task": "Write code to perform K-Means clustering on a dataset with 3 clusters.",
-      "code": "from sklearn.cluster import KMeans\n\nkmeans = KMeans(n_clusters=3, random_state=42, n_init=10)\nlabels = kmeans.fit_predict(X)\nprint(kmeans.cluster_centers_, labels)"
+      "code": "from sklearn.cluster import KMeans\nimport numpy as np\n\n# Sample data\nX = np.array([[1, 2], [1, 4], [1, 0],\n              [10, 2], [10, 4], [10, 0],\n              [5, 2], [6, 3]])\n\nkmeans = KMeans(n_clusters=3, random_state=42, n_init=10)\nkmeans.fit(X)\n\nprint('Cluster Centers:', kmeans.cluster_centers_)\nprint('Labels:', kmeans.labels_)"
     },
     {
       "id": 6,
       "task": "Write Python code to evaluate a classification model using accuracy score.",
-      "code": "from sklearn.metrics import accuracy_score\n\nprint(accuracy_score(y_test, y_pred))"
+      "code": "from sklearn.metrics import accuracy_score\n\n# Example values\ny_test = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 1, 0, 0]\n\naccuracy = accuracy_score(y_test, y_pred)\nprint('Accuracy:', accuracy)"
     },
     {
       "id": 7,
       "task": "Write a Python program to apply One-Hot Encoding to a categorical column.",
-      "code": "import pandas as pd\n\ndf = pd.get_dummies(df, columns=['category'])\nprint(df.head())"
+      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C']})\n\nencoded_df = pd.get_dummies(df, columns=['category'])\nprint(encoded_df)"
     },
     {
       "id": 8,
       "task": "Write code to perform Label Encoding on a dataset column.",
-      "code": "from sklearn.preprocessing import LabelEncoder\n\nle = LabelEncoder()\ndf['category'] = le.fit_transform(df['category'])"
+      "code": "from sklearn.preprocessing import LabelEncoder\nimport pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C']})\n\nle = LabelEncoder()\ndf['encoded'] = le.fit_transform(df['category'])\n\nprint(df)"
     },
     {
       "id": 9,
       "task": "Write a program to apply Frequency Encoding to a categorical feature.",
-      "code": "import pandas as pd\n\nfreq = df['category'].value_counts()\ndf['category_encoded'] = df['category'].map(freq)"
+      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C', 'B', 'A']})\n\nfreq = df['category'].value_counts()\ndf['encoded'] = df['category'].map(freq)\n\nprint(df)"
     },
     {
       "id": 10,
       "task": "Write Python code to split a dataset into features and labels.",
-      "code": "X = df.drop('target', axis=1)\ny = df['target']"
+      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'feature1': [1, 2, 3],\n    'feature2': [4, 5, 6],\n    'target': [0, 1, 0]\n})\n\nX = df.drop('target', axis=1)\ny = df['target']\n\nprint('Features:\\n', X)\nprint('Labels:\\n', y)"
     },
     {
       "id": 11,
       "task": "Write a simple program that builds a basic Artificial Neural Network using Keras.",
-      "code": "from tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense\n\nmodel = Sequential([\n    Dense(16, activation='relu', input_shape=(X_train.shape[1],)),\n    Dense(1, activation='sigmoid')\n])\n\nmodel.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])\nmodel.fit(X_train, y_train, epochs=10, batch_size=32)"
+      "code": "from tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense\nimport numpy as np\n\n# Sample data\nX = np.array([[0], [1], [2], [3]])\ny = np.array([0, 1, 1, 0])\n\nmodel = Sequential()\nmodel.add(Dense(8, activation='relu', input_shape=(1,)))\nmodel.add(Dense(1, activation='sigmoid'))\n\nmodel.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])\nmodel.fit(X, y, epochs=10, verbose=1)"
     },
     {
       "id": 12,
       "task": "Load a CSV dataset using pandas and display its first 5 rows.",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nprint(df.head())"
+      "code": "import pandas as pd\n\n# Load dataset\ndf = pd.read_csv('data.csv')\n\n# Display first 5 rows\nprint(df.head())"
     },
     {
       "id": 13,
       "task": "Write code to check dataset shape and data types.",
-      "code": "print(df.shape)\nprint(df.dtypes)"
+      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'A': [1, 2, 3],\n    'B': [4.0, 5.5, 6.1],\n    'C': ['x', 'y', 'z']\n})\n\nprint('Shape:', df.shape)\nprint('Data Types:\\n', df.dtypes)"
     },
     {
       "id": 14,
       "task": "Write Python code to display statistical summary of a dataset.",
-      "code": "print(df.describe())"
+      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'A': [1, 2, 3, 4, 5],\n    'B': [10, 20, 30, 40, 50]\n})\n\nprint(df.describe())"
     },
     {
       "id": 15,
       "task": "Write code to split a dataset into training and testing sets.",
-      "code": "from sklearn.model_selection import train_test_split\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)"
+      "code": "from sklearn.model_selection import train_test_split\nimport pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'feature': [1, 2, 3, 4, 5],\n    'target': [2, 4, 6, 8, 10]\n})\n\nX = df[['feature']]\ny = df['target']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nprint('X_train:\\n', X_train)\nprint('X_test:\\n', X_test)"
     },
     {
       "id": 16,
       "task": "Write Python code to evaluate a classification model using confusion matrix and accuracy.",
-      "code": "from sklearn.metrics import confusion_matrix, accuracy_score\n\nprint(confusion_matrix(y_test, y_pred))\nprint(accuracy_score(y_test, y_pred))"
+      "code": "from sklearn.metrics import confusion_matrix, accuracy_score\n\n# Example values\ny_test = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 1, 0, 0]\n\ncm = confusion_matrix(y_test, y_pred)\nacc = accuracy_score(y_test, y_pred)\n\nprint('Confusion Matrix:\\n', cm)\nprint('Accuracy:', acc)"
     }
   ],
   "fill_in_the_blank": [
