@@ -1204,10 +1204,10 @@ Thu,31,72,Cairo`
         indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.25.1/full/'
       });
 
-      progressText = 'Loading pandas & numpy...';
+      progressText = 'Loading pandas, numpy, matplotlib & scikit-learn...';
       notify();
 
-      await pyodide.loadPackage(['pandas', 'numpy', 'matplotlib']);
+      await pyodide.loadPackage(['pandas', 'numpy', 'matplotlib', 'scikit-learn']);
 
       // Create /data/ directory and inject all files
       injectAllFiles();
