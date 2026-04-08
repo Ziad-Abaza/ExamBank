@@ -2,1354 +2,810 @@
   "true_false": [
     {
       "id": 1,
-      "question_en": "Machine Learning became widely adopted only after big data and powerful GPUs became available.",
-      "question_ar": "هل أصبح تعلم الآلة واسع الانتشار فقط بعد توفر البيانات الضخمة ووحدات معالجة الرسوميات القوية؟",
+      "question_en": "",
+      "question_ar": "",
       "answer": true,
-      "explanation": "The major growth of ML, especially deep learning, occurred in the 2010s due to large datasets and GPU acceleration."
-    },
-    {
-      "id": 2,
-      "question_en": "Supervised learning works without labeled data.",
-      "question_ar": "هل التعلم الموجّه يعمل بدون بيانات معنونة؟",
-      "answer": false,
-      "explanation": "Supervised learning requires labeled data where input-output pairs are provided."
-    },
-    {
-      "id": 3,
-      "question_en": "Reinforcement learning is based on rewards and penalties.",
-      "question_ar": "هل التعلم المعزز يعتمد على المكافآت والعقوبات؟",
-      "answer": true,
-      "explanation": "Reinforcement learning improves performance using feedback in the form of rewards and penalties."
-    },
-    {
-      "id": 4,
-      "question_en": "Machine Learning and Traditional Programming follow the same logic-based approach.",
-      "question_ar": "هل يتبع تعلم الآلة والبرمجة التقليدية نفس النهج المنطقي؟",
-      "answer": false,
-      "explanation": "Traditional programming uses explicit rules, while ML learns patterns from data."
-    },
-    {
-      "id": 5,
-      "question_en": "Deep Learning is a specialized subset of Machine Learning.",
-      "question_ar": "هل التعلم العميق هو جزء متخصص من تعلم الآلة؟",
-      "answer": true,
-      "explanation": "Deep learning is a sub-field of machine learning using neural networks."
-    },
-    {
-      "id": 6,
-      "question_en": "Generative AI models can create new data based on patterns they learned.",
-      "question_ar": "هل يمكن لنماذج الذكاء التوليدي إنشاء بيانات جديدة بناءً على الأنماط التي تعلمتها؟",
-      "answer": true,
-      "explanation": "Generative AI focuses on creating new content such as text, images, and audio."
-    },
-    {
-      "id": 7,
-      "question_en": "Overfitting happens when a model performs well on training data but poorly on new data.",
-      "question_ar": "هل يحدث فرط التكيّف عندما ينجح النموذج على بيانات التدريب ويفشل على البيانات الجديدة؟",
-      "answer": true,
-      "explanation": "Overfitting occurs when the model memorizes training data instead of generalizing."
-    },
-    {
-      "id": 8,
-      "question_en": "Unsupervised learning is mainly used in clustering and dimensionality reduction.",
-      "question_ar": "هل يُستخدم التعلم غير الموجّه بشكل أساسي في التجميع وتقليل الأبعاد؟",
-      "answer": true,
-      "explanation": "Unsupervised learning identifies patterns without labels, such as clustering and PCA."
-    },
-    {
-      "id": 9,
-      "question_en": "ML Life Cycle includes steps such as data collection, cleaning, modeling, and evaluation.",
-      "question_ar": "هل دورة حياة تعلم الآلة تشمل جمع البيانات وتنظيفها والنمذجة والتقييم؟",
-      "answer": true,
-      "explanation": "These are core steps in the ML lifecycle before deployment."
-    },
-    {
-      "id": 10,
-      "question_en": "Machine Learning can solve all real-world problems without limitations.",
-      "question_ar": "هل يمكن لتعلم الآلة حل جميع مشاكل العالم الحقيقي بدون قيود؟",
-      "answer": false,
-      "explanation": "ML has limitations such as data dependency, bias, computational cost, and lack of interpretability."
-    },
-    {
-      "id": 11,
-      "question_en": "Artificial Intelligence is a broader field that includes Machine Learning as one of its subfields.",
-      "question_ar": "الذكاء الاصطناعي مجال أوسع يشمل تعلم الآلة كأحد فروعه.",
-      "answer": true,
-      "explanation": "According to the lecture, Machine Learning is a subset of Artificial Intelligence."
-    },
-    {
-      "id": 12,
-      "question_en": "Artificial Neural Networks (ANNs) are inspired by the structure of the human brain.",
-      "question_ar": "الشبكات العصبية الاصطناعية مستوحاة من تركيب دماغ الإنسان.",
-      "answer": true,
-      "explanation": "ANNs are designed to simulate how the human brain works using interconnected neurons."
-    },
-    {
-      "id": 13,
-      "question_en": "Deep Learning is a subset of Machine Learning that uses multiple neural network layers.",
-      "question_ar": "التعلم العميق هو جزء من تعلم الآلة ويستخدم طبقات متعددة من الشبكات العصبية.",
-      "answer": true,
-      "explanation": "Deep Learning uses multi-layer neural networks to process complex data."
-    },
-    {
-      "id": 14,
-      "question_en": "Machine Learning always requires Artificial Neural Networks.",
-      "question_ar": "تعلم الآلة يتطلب دائمًا استخدام الشبكات العصبية.",
-      "answer": false,
-      "explanation": "Machine Learning includes many algorithms, not only neural networks (e.g., decision trees, regression)."
-    },
-    {
-      "id": 15,
-      "question_en": "Classification and regression are examples of Machine Learning tasks.",
-      "question_ar": "التصنيف والانحدار أمثلة على مهام تعلم الآلة.",
-      "answer": true,
-      "explanation": "Both classification and regression are core supervised learning tasks."
-    },
-    {
-      "id": 16,
-      "question_en": "Quantitative data can be measured numerically.",
-      "question_ar": "البيانات الكمية يمكن قياسها بالأرقام.",
-      "answer": true,
-      "explanation": "Quantitative data represents measurable numerical values."
-    },
-    {
-      "id": 17,
-      "question_en": "Qualitative data represents categories or labels rather than numbers.",
-      "question_ar": "البيانات النوعية تمثل فئات أو تسميات بدلاً من أرقام.",
-      "answer": true,
-      "explanation": "Qualitative data is categorical and non-numeric."
-    },
-    {
-      "id": 18,
-      "question_en": "One-Hot Encoding increases the number of features in a dataset.",
-      "question_ar": "تقنية One-Hot Encoding تزيد عدد الخصائص في البيانات.",
-      "answer": true,
-      "explanation": "It creates a separate binary column for each category."
-    },
-    {
-      "id": 19,
-      "question_en": "Label Encoding is suitable for all categorical features without risk.",
-      "question_ar": "تقنية Label Encoding مناسبة لجميع البيانات الفئوية بدون مخاطر.",
-      "answer": false,
-      "explanation": "Label Encoding may introduce unintended ordinal relationships between categories."
-    },
-    {
-      "id": 20,
-      "question_en": "High-quality datasets improve the accuracy and reliability of ML models.",
-      "question_ar": "البيانات عالية الجودة تحسن دقة وموثوقية نماذج تعلم الآلة.",
-      "answer": true,
-      "explanation": "Better data quality leads to better model performance."
-    },
-    {
-      "id": 21,
-      "question_en": "Data loading is the first step before understanding and preparing the dataset.",
-      "question_ar": "هل تحميل البيانات هو الخطوة الأولى قبل فهم البيانات وتجهيزها؟",
-      "answer": true,
-      "explanation": "Data loading is the initial step in ML preprocessing before analysis and preparation."
-    },
-    {
-      "id": 22,
-      "question_en": "Raw data is always clean and ready to be used directly in machine learning models.",
-      "question_ar": "هل البيانات الخام تكون دائمًا نظيفة وجاهزة للاستخدام مباشرة؟",
-      "answer": false,
-      "explanation": "Raw data often contains missing values, noise, and inconsistencies."
-    },
-    {
-      "id": 23,
-      "question_en": "Checking data dimensions helps identify the number of features and records.",
-      "question_ar": "هل يساعد فحص أبعاد البيانات في معرفة عدد الصفوف والخصائص؟",
-      "answer": true,
-      "explanation": "Shape gives number of rows and columns."
-    },
-    {
-      "id": 24,
-      "question_en": "Statistical summaries include measures such as mean, median, and standard deviation.",
-      "question_ar": "هل الإحصائيات تشمل المتوسط والوسيط والانحراف المعياري؟",
-      "answer": true,
-      "explanation": "describe() function provides these metrics."
-    },
-    {
-      "id": 25,
-      "question_en": "Class distribution review is important only for regression problems.",
-      "question_ar": "هل توزيع الفئات مهم فقط في الانحدار؟",
-      "answer": false,
-      "explanation": "Class distribution is critical in classification problems."
-    },
-    {
-      "id": 26,
-      "question_en": "Feature engineering focuses on creating or transforming features to improve learning.",
-      "question_ar": "هل هندسة الخصائص تهدف إلى تحسين التعلم عبر إنشاء أو تعديل الميزات؟",
-      "answer": true,
-      "explanation": "Feature engineering improves model performance."
-    },
-    {
-      "id": 27,
-      "question_en": "Precision measures how many actual positive cases were correctly predicted.",
-      "question_ar": "هل الدقة Precision تقيس عدد الإيجابيات الفعلية التي تم التنبؤ بها؟",
-      "answer": false,
-      "explanation": "This is Recall, not Precision."
-    },
-    {
-      "id": 28,
-      "question_en": "Recall is also known as sensitivity.",
-      "question_ar": "هل Recall هو نفسه Sensitivity؟",
-      "answer": true,
-      "explanation": "Recall = Sensitivity = TPR."
-    },
-    {
-      "id": 29,
-      "question_en": "Logarithmic Loss penalizes confident but wrong predictions.",
-      "question_ar": "هل LogLoss يعاقب التنبؤات الخاطئة الواثقة؟",
-      "answer": true,
-      "explanation": "LogLoss heavily penalizes incorrect confident predictions."
-    },
-    {
-      "id": 31,
-      "question_en": "Linear regression is used to predict continuous numerical values.",
-      "question_ar": "هل الانحدار الخطي يستخدم للتنبؤ بقيم عددية مستمرة؟",
-      "answer": true,
-      "explanation": "Linear regression models continuous dependent variables."
-    },
-    {
-      "id": 32,
-      "question_en": "A linear equation represents a straight-line relationship between variables.",
-      "question_ar": "هل تمثل المعادلة الخطية علاقة خط مستقيم بين المتغيرات؟",
-      "answer": true,
-      "explanation": "Linear equations describe straight-line relationships."
-    },
-    {
-      "id": 33,
-      "question_en": "Gradient Descent is used to maximize the error in a machine learning model.",
-      "question_ar": "هل يستخدم Gradient Descent لتعظيم الخطأ؟",
-      "answer": false,
-      "explanation": "Gradient Descent minimizes error, not maximizes it."
-    },
-    {
-      "id": 34,
-      "question_en": "Matrix addition is possible only if the matrices have the same dimensions.",
-      "question_ar": "هل يمكن جمع المصفوفات فقط إذا كانت بنفس الأبعاد؟",
-      "answer": true,
-      "explanation": "Matrices must have identical dimensions for addition."
-    },
-    {
-      "id": 35,
-      "question_en": "Matrix subtraction requires both matrices to have identical sizes.",
-      "question_ar": "هل طرح المصفوفات يتطلب نفس الأبعاد؟",
-      "answer": true,
-      "explanation": "Subtraction requires matching dimensions."
-    },
-    {
-      "id": 36,
-      "question_en": "Scalar multiplication multiplies each element in the matrix by a constant value.",
-      "question_ar": "هل الضرب القياسي يضرب كل عنصر في ثابت؟",
-      "answer": true,
-      "explanation": "Each element is multiplied by a scalar."
-    },
-    {
-      "id": 37,
-      "question_en": "In dot matrix multiplication, the number of columns of the first matrix must equal the number of rows of the second matrix.",
-      "question_ar": "هل يجب أن يساوي عدد أعمدة الأولى عدد صفوف الثانية في ضرب المصفوفات؟",
-      "answer": true,
-      "explanation": "This is a requirement for matrix multiplication."
-    },
-    {
-      "id": 38,
-      "question_en": "The transpose of a matrix swaps rows with columns.",
-      "question_ar": "هل نقل المصفوفة يعني تبديل الصفوف بالأعمدة؟",
-      "answer": true,
-      "explanation": "Transpose flips rows and columns."
-    },
-    {
-      "id": 39,
-      "question_en": "A singular matrix has a determinant equal to zero.",
-      "question_ar": "هل المصفوفة المفردة محددها يساوي صفر؟",
-      "answer": true,
-      "explanation": "Singular matrices have zero determinant."
-    },
-    {
-      "id": 40,
-      "question_en": "An identity matrix contains ones on the main diagonal and zeros elsewhere.",
-      "question_ar": "هل مصفوفة الوحدة تحتوي على 1 في القطر الرئيسي وصفر في باقي العناصر؟",
-      "answer": true,
-      "explanation": "Identity matrix definition."
-    },
-    {
-      "id": 41,
-      "question_en": "Linear regression with multivariables uses more than one input feature to predict the output.",
-      "question_ar": "هل الانحدار الخطي متعدد المتغيرات يستخدم أكثر من مدخل للتنبؤ بالمخرجات؟",
-      "answer": true,
-      "explanation": "Multivariable linear regression uses multiple features (x1, x2, ..., xn) to predict y."
-    },
-    {
-      "id": 42,
-      "question_en": "In multivariable linear regression, the hypothesis function can include multiple parameters (θ values).",
-      "question_ar": "هل يمكن لدالة الفرضية أن تحتوي على عدة معاملات θ؟",
-      "answer": true,
-      "explanation": "The hypothesis includes θ0, θ1, ..., θn for each feature."
-    },
-    {
-      "id": 43,
-      "question_en": "The learning rate controls how large the update step is during Gradient Descent.",
-      "question_ar": "هل معدل التعلم يتحكم في حجم خطوة التحديث في Gradient Descent؟",
-      "answer": true,
-      "explanation": "Learning rate (alpha) defines step size in parameter updates."
-    },
-    {
-      "id": 44,
-      "question_en": "Increasing the number of iterations always guarantees the best model.",
-      "question_ar": "هل زيادة عدد التكرارات تضمن دائماً أفضل نموذج؟",
-      "answer": false,
-      "explanation": "More iterations may improve convergence but can lead to wasted computation or over-optimization."
-    },
-    {
-      "id": 45,
-      "question_en": "Data rescaling helps Gradient Descent converge faster.",
-      "question_ar": "هل إعادة تحجيم البيانات يساعد على تسريع التقارب؟",
-      "answer": true,
-      "explanation": "Feature scaling improves convergence speed in Gradient Descent."
-    },
-    {
-      "id": 46,
-      "question_en": "Polynomial regression can model nonlinear relationships between variables.",
-      "question_ar": "هل الانحدار متعدد الحدود يمكنه تمثيل علاقات غير خطية؟",
-      "answer": true,
-      "explanation": "Polynomial regression introduces nonlinear terms like x^2, x^3."
-    },
-    {
-      "id": 47,
-      "question_en": "The Normal Equation is an iterative optimization method.",
-      "question_ar": "هل المعادلة الطبيعية طريقة تكرارية؟",
-      "answer": false,
-      "explanation": "Normal Equation computes parameters directly without iteration."
-    },
-    {
-      "id": 48,
-      "question_en": "Gradient Descent requires selecting a learning rate parameter.",
-      "question_ar": "هل Gradient Descent يتطلب تحديد معدل تعلم؟",
-      "answer": true,
-      "explanation": "Alpha must be chosen to control convergence."
-    },
-    {
-      "id": 49,
-      "question_en": "The Normal Equation can compute theta values directly without iterations.",
-      "question_ar": "هل المعادلة الطبيعية تحسب θ مباشرة بدون تكرار؟",
-      "answer": true,
-      "explanation": "It uses matrix operations to compute theta directly."
-    },
-    {
-      "id": 50,
-      "question_en": "Gradient Descent is usually preferred for very large datasets.",
-      "question_ar": "هل Gradient Descent مفضل للبيانات الضخمة؟",
-      "answer": true,
-      "explanation": "It scales better than Normal Equation for large datasets."
+      "explanation": ""
     }
   ],
   "mcq": [
     {
       "id": 1,
-      "question_en": "Machine Learning became more successful mainly due to:",
-      "question_ar": "أصبح تعلم الآلة أكثر نجاحًا بشكل أساسي بسبب:",
+      "question_en": "Asymmetric crypto uses:",
+      "question_ar": "التشفير غير المتماثل يستخدم:",
       "options": {
-        "a": "Bigger screens",
-        "b": "More data + stronger GPUs",
-        "c": "New programming languages",
-        "d": "Cloud storage only"
+        "a": "One shared key",
+        "b": "No keys",
+        "c": "Public key + private key",
+        "d": "Only passwords"
       },
-      "correct_answer": "b",
-      "explanation": "The availability of big data and powerful GPUs significantly accelerated ML development."
+      "correct_answer": "c",
+      "explanation": "Asymmetric cryptography relies on a pair of keys: a public key for encryption and a private key for decryption."
     },
     {
       "id": 2,
-      "question_en": "Traditional programming focuses on:",
-      "question_ar": "تركز البرمجة التقليدية على:",
+      "question_en": "Signed firmware updates are important because they:",
+      "question_ar": "لماذا تعتبر تحديثات البرنامج الثابت الموقعة مهمة؟",
       "options": {
-        "a": "Data + rules → output",
-        "b": "Data + output → rules",
-        "c": "Rewards and penalties",
-        "d": "Random predictions"
+        "a": "Reduce file size",
+        "b": "Ensure updates come from the real manufacturer and were not modified",
+        "c": "Increase battery drain",
+        "d": "Remove the need for authentication"
       },
-      "correct_answer": "a",
-      "explanation": "Traditional programming uses explicit rules and input data to generate output."
+      "correct_answer": "b",
+      "explanation": "Digital signatures verify the authenticity and integrity of firmware updates, ensuring they are not tampered with."
     },
     {
       "id": 3,
-      "question_en": "Which ML type requires labeled data?",
-      "question_ar": "أي نوع من تعلم الآلة يحتاج إلى بيانات معنونة؟",
+      "question_en": "Why must IoT security be end-to-end?",
+      "question_ar": "لماذا يجب أن يكون أمن إنترنت الأشياء شاملاً من الطرف إلى الطرف؟",
       "options": {
-        "a": "Unsupervised",
-        "b": "Semi-Supervised",
-        "c": "Supervised",
-        "d": "Reinforcement"
+        "a": "Attacks only happen in the cloud",
+        "b": "Security must cover Device → Network → Cloud → App → Operations",
+        "c": "Only the app layer is important",
+        "d": "Only the device layer is important"
       },
-      "correct_answer": "c",
-      "explanation": "Supervised learning relies on labeled datasets."
+      "correct_answer": "b",
+      "explanation": "IoT systems span multiple layers, and vulnerabilities in any layer can compromise the entire system."
     },
     {
       "id": 4,
-      "question_en": "Clustering is an example of:",
-      "question_ar": "التجميع (Clustering) مثال على:",
+      "question_en": "STRIDE “D” stands for:",
+      "question_ar": "ماذا يشير الحرف D في نموذج STRIDE؟",
       "options": {
-        "a": "Supervised learning",
-        "b": "Unsupervised learning",
-        "c": "Reinforcement learning",
-        "d": "Deep learning"
+        "a": "Debugging",
+        "b": "Denial of Service",
+        "c": "Data Storage",
+        "d": "Device Discovery"
       },
       "correct_answer": "b",
-      "explanation": "Clustering groups data without labels, which is unsupervised learning."
+      "explanation": "In the STRIDE threat model, 'D' represents Denial of Service attacks."
     },
     {
       "id": 5,
-      "question_en": "“The model memorizes training data but fails on test data” refers to:",
-      "question_ar": "يشير 'النموذج يحفظ بيانات التدريب ويفشل في الاختبار' إلى:",
+      "question_en": "MQTT communication style is:",
+      "question_ar": "نمط الاتصال في MQTT هو:",
       "options": {
-        "a": "Underfitting",
-        "b": "Normal behavior",
-        "c": "Perfect generalization",
-        "d": "Overfitting"
+        "a": "File transfer",
+        "b": "Publish/Subscribe",
+        "c": "Email-based",
+        "d": "Peer-to-peer only"
       },
-      "correct_answer": "d",
-      "explanation": "This is the definition of overfitting."
+      "correct_answer": "b",
+      "explanation": "MQTT uses a publish/subscribe model where clients publish messages to topics and others subscribe to receive them."
     },
     {
       "id": 6,
-      "question_en": "Which of the following is a popular ML library in Python?",
-      "question_ar": "أي مما يلي مكتبة شهيرة لتعلم الآلة في بايثون؟",
+      "question_en": "“Hardcoded secret” means:",
+      "question_ar": "ماذا يعني \"سر مشفر داخل الكود\"؟",
       "options": {
-        "a": "NumPy",
-        "b": "TensorFlow",
-        "c": "OpenCV",
-        "d": "Flask"
+        "a": "A key stored safely in secure hardware",
+        "b": "A password/key written directly inside the source code",
+        "c": "A key stored only in the cloud",
+        "d": "A key that changes daily automatically"
       },
       "correct_answer": "b",
-      "explanation": "TensorFlow is a widely used machine learning and deep learning library."
+      "explanation": "Hardcoded secrets are embedded directly in code, making them vulnerable if the code is exposed."
     },
     {
       "id": 7,
-      "question_en": "Generative AI is mainly used for:",
-      "question_ar": "يُستخدم الذكاء التوليدي بشكل أساسي في:",
+      "question_en": "The main crypto goals are:",
+      "question_ar": "ما هي الأهداف الرئيسية للتشفير؟",
       "options": {
-        "a": "Predicting labels",
-        "b": "Creating new data (text/images/audio)",
-        "c": "Cleaning datasets",
-        "d": "Database indexing"
+        "a": "Speed, cost, size",
+        "b": "Confidentiality, integrity, authentication",
+        "c": "Wi-Fi, BLE, Zigbee",
+        "d": "Password, username, email"
       },
       "correct_answer": "b",
-      "explanation": "Generative AI creates new content based on learned patterns."
+      "explanation": "Core cryptographic goals include confidentiality, integrity, and authentication."
     },
     {
       "id": 8,
-      "question_en": "A challenge in Machine Learning is:",
-      "question_ar": "من تحديات تعلم الآلة:",
+      "question_en": "In IoT systems, telemetry usually means:",
+      "question_ar": "في أنظمة إنترنت الأشياء، ماذا تعني البيانات القياسية (Telemetry)؟",
       "options": {
-        "a": "Having too little data",
-        "b": "Data bias",
-        "c": "High computational cost",
-        "d": "All of the above"
+        "a": "Server → device actions",
+        "b": "Device → server measurements",
+        "c": "Device reset",
+        "d": "User login"
       },
-      "correct_answer": "d",
-      "explanation": "All listed options are known ML challenges."
+      "correct_answer": "b",
+      "explanation": "Telemetry refers to data sent from devices to servers, typically measurements or status information."
     },
     {
       "id": 9,
-      "question_en": "Which algorithm is used for classification?",
-      "question_ar": "أي خوارزمية تُستخدم للتصنيف؟",
+      "question_en": "In threat modeling, an asset is:",
+      "question_ar": "في نمذجة التهديدات، ما هو الأصل (Asset)؟",
       "options": {
-        "a": "K-Means",
-        "b": "Linear Regression",
-        "c": "Logistic Regression",
-        "d": "PCA"
+        "a": "A type of attack",
+        "b": "Something valuable to protect",
+        "c": "A bug in code",
+        "d": "A firewall rule"
       },
-      "correct_answer": "c",
-      "explanation": "Logistic Regression is used for classification tasks."
+      "correct_answer": "b",
+      "explanation": "An asset is any valuable resource that needs protection, such as data, systems, or devices."
     },
     {
       "id": 10,
-      "question_en": "The last step of the ML Life Cycle is usually:",
-      "question_ar": "آخر خطوة في دورة حياة تعلم الآلة عادةً هي:",
+      "question_en": "What is the best definition of IoT security?",
+      "question_ar": "ما هو أفضل تعريف لأمن إنترنت الأشياء؟",
       "options": {
-        "a": "Data collection",
-        "b": "Model deployment",
-        "c": "Feature engineering",
-        "d": "Model training"
+        "a": "Protecting only cloud databases from hackers",
+        "b": "Protecting devices that sense, communicate, and sometimes act on the physical world",
+        "c": "Protecting smartphones from malware only",
+        "d": "Protecting internet browsers from phishing"
       },
       "correct_answer": "b",
-      "explanation": "After building and evaluating the model, it is deployed into production."
+      "explanation": "IoT security involves protecting interconnected devices that interact with the physical environment."
     },
     {
       "id": 11,
-      "question_en": "Which statement best describes the relationship between AI and ML?",
-      "question_ar": "ما أفضل وصف للعلاقة بين الذكاء الاصطناعي وتعلم الآلة؟",
+      "question_en": "“Fail-safe behavior” means:",
+      "question_ar": "ماذا يعني سلوك \"الفشل الآمن\"؟",
       "options": {
-        "a": "AI is a subset of ML",
-        "b": "ML is a subset of AI",
-        "c": "AI and ML are identical",
-        "d": "ML is unrelated to AI"
+        "a": "Continue operation even with unsafe configuration",
+        "b": "If something is wrong, refuse unsafe actions and use safe defaults",
+        "c": "Delete all files",
+        "d": "Turn off validation"
       },
       "correct_answer": "b",
-      "explanation": "Machine Learning is a subset of Artificial Intelligence."
+      "explanation": "Fail-safe design ensures that systems default to a safe state when a failure occurs, preventing unsafe operations."
     },
     {
       "id": 12,
-      "question_en": "Which of the following is NOT an AI branch?",
-      "question_ar": "أي مما يلي ليس فرعًا من فروع الذكاء الاصطناعي؟",
+      "question_en": "TLS mainly provides:",
+      "question_ar": "ماذا يوفر بروتوكول TLS بشكل أساسي؟",
       "options": {
-        "a": "Machine Learning",
-        "b": "Robotics",
-        "c": "Computer Vision",
-        "d": "Database Management"
+        "a": "Compression",
+        "b": "Encryption + integrity + authentication",
+        "c": "Larger packets",
+        "d": "Faster CPU"
       },
-      "correct_answer": "d",
-      "explanation": "Database Management is not considered an AI branch."
+      "correct_answer": "b",
+      "explanation": "TLS secures communication by providing encryption, ensuring data integrity, and authenticating parties."
     },
     {
       "id": 13,
-      "question_en": "Artificial Neural Networks are mainly composed of:",
-      "question_ar": "مم تتكون الشبكات العصبية الاصطناعية بشكل أساسي؟",
+      "question_en": "A trust boundary is:",
+      "question_ar": "ما هو حد الثقة (Trust Boundary)؟",
       "options": {
-        "a": "Rules and logic",
-        "b": "Neurons and weighted connections",
-        "c": "Databases and tables",
-        "d": "Decision trees only"
+        "a": "A cable between sensors",
+        "b": "A place where trust level changes",
+        "c": "A router brand",
+        "d": "A database table"
       },
       "correct_answer": "b",
-      "explanation": "ANNs consist of neurons connected by weighted links."
+      "explanation": "A trust boundary represents a point where the level of trust changes, requiring validation or security controls."
     },
     {
       "id": 14,
-      "question_en": "Which ANN type is commonly used for image processing?",
-      "question_ar": "أي نوع من الشبكات العصبية يُستخدم غالبًا في معالجة الصور؟",
+      "question_en": "Digital signatures provide:",
+      "question_ar": "ماذا توفر التوقيعات الرقمية؟",
       "options": {
-        "a": "RNN",
-        "b": "CNN",
-        "c": "GAN",
-        "d": "SVM"
+        "a": "Confidentiality only",
+        "b": "Integrity + authentication",
+        "c": "Faster Wi-Fi",
+        "d": "Bigger storage"
       },
       "correct_answer": "b",
-      "explanation": "CNNs (Convolutional Neural Networks) are widely used for image processing tasks."
+      "explanation": "Digital signatures ensure that data has not been altered (integrity) and verify the sender's identity (authentication)."
     },
     {
       "id": 15,
-      "question_en": "What is the key difference between ML and ANN-based models?",
-      "question_ar": "ما الفرق الأساسي بين تعلم الآلة والنماذج المعتمدة على الشبكات العصبية؟",
+      "question_en": "Which is the correct typical IoT architecture order (end-to-end view)?",
+      "question_ar": "ما هو الترتيب الصحيح لبنية إنترنت الأشياء من طرف إلى طرف؟",
       "options": {
-        "a": "ML never uses data",
-        "b": "ANN is a specific ML approach",
-        "c": "ANN replaces ML completely",
-        "d": "ML cannot learn patterns"
+        "a": "Cloud → Device → App → Network → Operations",
+        "b": "Device → Network → Cloud → App → Operations",
+        "c": "App → Cloud → Network → Device → Operations",
+        "d": "Operations → Device → Cloud → Network → App"
       },
       "correct_answer": "b",
-      "explanation": "ANN is one type of Machine Learning algorithm."
+      "explanation": "Typical IoT architecture flows from devices through network to cloud, then to applications and operational layers."
     },
     {
       "id": 16,
-      "question_en": "Which data type represents categories such as 'Red, Blue, Green'?",
-      "question_ar": "أي نوع بيانات يمثل فئات مثل الأحمر والأزرق والأخضر؟",
+      "question_en": "Firmware is best described as:",
+      "question_ar": "كيف يمكن وصف البرنامج الثابت (Firmware) بشكل أفضل؟",
       "options": {
-        "a": "Quantitative",
-        "b": "Continuous",
-        "c": "Qualitative",
-        "d": "Numerical"
+        "a": "A mobile app",
+        "b": "Software running inside the device stored in flash",
+        "c": "A cloud database",
+        "d": "A network cable"
       },
-      "correct_answer": "c",
-      "explanation": "These are categorical (qualitative) values."
+      "correct_answer": "b",
+      "explanation": "Firmware is embedded software stored in non-volatile memory that controls device hardware."
     },
     {
       "id": 17,
-      "question_en": "Which encoding technique creates a separate binary column for each category?",
-      "question_ar": "أي تقنية ترميز تنشئ عمودًا ثنائيًا لكل فئة؟",
+      "question_en": "BLE is mainly used for:",
+      "question_ar": "فيما يُستخدم BLE بشكل أساسي؟",
       "options": {
-        "a": "Label Encoding",
-        "b": "Frequency Encoding",
-        "c": "One-Hot Encoding",
-        "d": "Target Encoding"
+        "a": "Long-range city networks",
+        "b": "Short-range communication and device onboarding",
+        "c": "Cloud databases",
+        "d": "Satellite internet"
       },
-      "correct_answer": "c",
-      "explanation": "One-Hot Encoding creates binary columns per category."
+      "correct_answer": "b",
+      "explanation": "Bluetooth Low Energy (BLE) is designed for low-power, short-range communication, often used in IoT onboarding."
     },
     {
       "id": 18,
-      "question_en": "Which encoding technique replaces categories with their occurrence frequency?",
-      "question_ar": "أي تقنية تستبدل الفئات بعدد مرات تكرارها؟",
+      "question_en": "Risk is mainly about:",
+      "question_ar": "المخاطر (Risk) تعتمد بشكل أساسي على:",
       "options": {
-        "a": "Binary Encoding",
-        "b": "Frequency Encoding",
-        "c": "One-Hot Encoding",
-        "d": "Label Encoding"
+        "a": "Only impact",
+        "b": "Only likelihood",
+        "c": "Likelihood and impact together",
+        "d": "Device cost"
       },
-      "correct_answer": "b",
-      "explanation": "Frequency Encoding uses the count or proportion of each category."
+      "correct_answer": "c",
+      "explanation": "Risk is evaluated based on both the likelihood of an event and its potential impact."
     },
     {
       "id": 19,
-      "question_en": "Which dataset source is considered reliable for ML projects?",
-      "question_ar": "أي مصدر بيانات يعتبر موثوقًا لمشاريع تعلم الآلة؟",
+      "question_en": "A hash function is mainly used for:",
+      "question_ar": "فيما تُستخدم دوال التجزئة (Hash Functions) بشكل أساسي؟",
       "options": {
-        "a": "Random internet comments",
-        "b": "Public datasets (e.g., Kaggle, UCI)",
-        "c": "Unverified social media posts",
-        "d": "Synthetic noise data only"
+        "a": "Hiding data so nobody reads it",
+        "b": "Detecting changes (integrity)",
+        "c": "Creating Wi-Fi connection",
+        "d": "Increasing battery life"
       },
       "correct_answer": "b",
-      "explanation": "Public datasets like Kaggle and UCI are reliable and widely used."
+      "explanation": "Hash functions produce a fixed output for input data, allowing detection of any changes to ensure integrity."
     },
     {
       "id": 20,
-      "question_en": "Which strategy improves dataset quality?",
-      "question_ar": "أي استراتيجية تحسن جودة البيانات؟",
+      "question_en": "Which goal is MOST related to keeping devices/services working during overload or DoS attacks?",
+      "question_ar": "أي هدف يرتبط أكثر بالحفاظ على عمل الأجهزة والخدمات أثناء الهجمات أو الضغط العالي (DoS)؟",
       "options": {
-        "a": "Removing labels",
-        "b": "Data cleaning and preprocessing",
-        "c": "Using small datasets",
-        "d": "Ignoring missing values"
+        "a": "Confidentiality",
+        "b": "Availability",
+        "c": "Integrity",
+        "d": "Safety"
       },
       "correct_answer": "b",
-      "explanation": "Cleaning and preprocessing improve data quality and model performance."
+      "explanation": "Availability ensures systems remain operational and accessible even under stress or attack conditions like DoS."
     },
     {
       "id": 21,
-      "question_en": "Which of the following is a common method for loading data in Python?",
-      "question_ar": "أي من الطرق التالية شائعة لتحميل البيانات في بايثون؟",
+      "question_en": "The best summary of device physical security is:",
+      "question_ar": "ما هو أفضل وصف لأمن الأجهزة الفيزيائي؟",
       "options": {
-        "a": "print()",
-        "b": "read_csv()",
-        "c": "load_data()",
-        "d": "input()"
+        "a": "Physical access never matters",
+        "b": "Physical access can bypass software controls, so reduce and protect physical attack paths",
+        "c": "Only network threats exist",
+        "d": "TLS prevents physical attacks"
       },
       "correct_answer": "b",
-      "explanation": "read_csv() is commonly used in pandas."
+      "explanation": "Physical access can allow attackers to bypass logical protections, so securing hardware and limiting access is critical."
     },
     {
       "id": 22,
-      "question_en": "Which function shows the first few rows of a dataset?",
-      "question_ar": "أي دالة تعرض أول صفوف من البيانات؟",
+      "question_en": "Network segmentation means:",
+      "question_ar": "ماذا يعني تقسيم الشبكة (Network Segmentation)؟",
       "options": {
-        "a": "info()",
-        "b": "describe()",
-        "c": "head()",
-        "d": "shape"
+        "a": "Faster internet",
+        "b": "Split network into zones",
+        "c": "Disable passwords",
+        "d": "One flat network for all"
       },
-      "correct_answer": "c",
-      "explanation": "head() displays first rows."
+      "correct_answer": "b",
+      "explanation": "Segmentation divides a network into isolated zones to limit attack spread and improve security."
     },
     {
       "id": 23,
-      "question_en": "Which method is used to check the number of rows and columns?",
-      "question_ar": "أي طريقة تُستخدم لمعرفة عدد الصفوف والأعمدة؟",
+      "question_en": "If likelihood = 3 and impact = 2, the risk score is:",
+      "question_ar": "إذا كان الاحتمال = 3 والتأثير = 2، فما هي قيمة المخاطر؟",
       "options": {
-        "a": "shape",
-        "b": "head()",
-        "c": "dtypes",
-        "d": "corr()"
+        "a": "5",
+        "b": "6",
+        "c": "8",
+        "d": "9"
       },
-      "correct_answer": "a",
-      "explanation": "shape returns dataset dimensions."
+      "correct_answer": "b",
+      "explanation": "Risk score is typically calculated as likelihood × impact = 3 × 2 = 6."
     },
     {
       "id": 24,
-      "question_en": "Which metric evaluates how well classes are balanced?",
-      "question_ar": "أي مقياس يقيس توازن الفئات؟",
+      "question_en": "If you change one character in a message, the SHA-256 hash will:",
+      "question_ar": "إذا تم تغيير حرف واحد في الرسالة، فإن ناتج SHA-256 سوف:",
       "options": {
-        "a": "Correlation",
-        "b": "Class distribution",
-        "c": "Skewness",
-        "d": "Feature scaling"
+        "a": "Stay similar",
+        "b": "Change completely",
+        "c": "Become shorter",
+        "d": "Become readable text"
       },
       "correct_answer": "b",
-      "explanation": "Class distribution shows balance between classes."
+      "explanation": "SHA-256 exhibits the avalanche effect, where a small input change produces a completely different hash."
     },
     {
       "id": 25,
-      "question_en": "Which step removes missing values and duplicates?",
-      "question_ar": "أي خطوة تقوم بإزالة القيم المفقودة والتكرارات؟",
+      "question_en": "Which baseline control directly helps prevent running malicious firmware permanently on a device?",
+      "question_ar": "أي إجراء أمني أساسي يمنع تشغيل برنامج ثابت خبيث بشكل دائم على الجهاز؟",
       "options": {
-        "a": "Data Reduction",
-        "b": "Data Splitting",
-        "c": "Data Cleaning",
-        "d": "Feature Engineering"
+        "a": "Segmentation",
+        "b": "Secure boot and signed firmware",
+        "c": "Monitoring and logging",
+        "d": "Vulnerability management process"
       },
-      "correct_answer": "c",
-      "explanation": "Data cleaning handles missing and duplicate values."
+      "correct_answer": "b",
+      "explanation": "Secure boot ensures only trusted, signed firmware can run, preventing persistent malicious code."
     },
     {
       "id": 26,
-      "question_en": "Feature engineering mainly aims to:",
-      "question_ar": "هندسة الخصائص تهدف إلى:",
+      "question_en": "A security event log is useful because it:",
+      "question_ar": "لماذا يعتبر سجل الأحداث الأمنية مفيدًا؟",
       "options": {
-        "a": "Reduce hardware cost",
-        "b": "Improve model learning",
-        "c": "Increase dataset size",
-        "d": "Remove labels"
+        "a": "Makes device faster",
+        "b": "Provides evidence of attacks and failures (audit trail)",
+        "c": "Replaces encryption",
+        "d": "Removes the need for authentication"
       },
       "correct_answer": "b",
-      "explanation": "Feature engineering improves learning performance."
+      "explanation": "Logs provide traceability and forensic evidence for detecting and analyzing incidents."
     },
     {
       "id": 27,
-      "question_en": "Which metric combines precision and recall?",
-      "question_ar": "أي مقياس يجمع بين Precision و Recall؟",
+      "question_en": "A secure channel is mainly needed to protect data:",
+      "question_ar": "القناة الآمنة تُستخدم أساسًا لحماية البيانات:",
       "options": {
-        "a": "Accuracy",
-        "b": "ROC AUC",
-        "c": "F1 Score",
-        "d": "Support"
+        "a": "Stored in flash",
+        "b": "While traveling on the network",
+        "c": "After deletion",
+        "d": "Only in RAM"
       },
-      "correct_answer": "c",
-      "explanation": "F1 score balances precision and recall."
+      "correct_answer": "b",
+      "explanation": "Secure channels like TLS protect data in transit from interception or tampering."
     },
     {
       "id": 28,
-      "question_en": "A Confusion Matrix is mainly used to evaluate:",
-      "question_ar": "Confusion Matrix تُستخدم لتقييم:",
+      "question_en": "STRIDE “S” stands for:",
+      "question_ar": "ماذا يشير الحرف S في نموذج STRIDE؟",
       "options": {
-        "a": "Regression models",
-        "b": "Clustering models",
-        "c": "Classification models",
-        "d": "Dimensionality reduction"
+        "a": "Security",
+        "b": "Spoofing",
+        "c": "Scanning",
+        "d": "Switching"
       },
-      "correct_answer": "c",
-      "explanation": "It evaluates classification performance."
+      "correct_answer": "b",
+      "explanation": "In STRIDE, 'S' refers to Spoofing identity attacks."
     },
     {
       "id": 29,
-      "question_en": "Which metric measures how many positive predictions were correct?",
-      "question_ar": "أي مقياس يقيس دقة التنبؤات الإيجابية؟",
+      "question_en": "Confidentiality means:",
+      "question_ar": "ماذا تعني السرية (Confidentiality)؟",
       "options": {
-        "a": "Recall",
-        "b": "Precision",
-        "c": "Accuracy",
-        "d": "Specificity"
+        "a": "Data cannot be changed",
+        "b": "Only authorized parties can read data",
+        "c": "Everyone can read data",
+        "d": "Data is always public"
       },
       "correct_answer": "b",
-      "explanation": "Precision measures correctness of positive predictions."
+      "explanation": "Confidentiality ensures that only authorized entities can access sensitive information."
     },
     {
       "id": 30,
-      "question_en": "ROC AUC Score measures:",
-      "question_ar": "ROC AUC يقيس:",
+      "question_en": "Which security goal focuses on preventing attackers from reading private data (video, location, health)?",
+      "question_ar": "أي هدف أمني يركز على منع المهاجمين من قراءة البيانات الخاصة؟",
       "options": {
-        "a": "Error rate",
-        "b": "Probability loss",
-        "c": "Model’s ability to separate classes",
-        "d": "Number of features"
+        "a": "Integrity",
+        "b": "Availability",
+        "c": "Confidentiality",
+        "d": "Auditability"
       },
       "correct_answer": "c",
-      "explanation": "ROC AUC measures class separability."
+      "explanation": "Confidentiality specifically protects data from unauthorized access."
     },
     {
       "id": 31,
-      "question_en": "Linear regression attempts to model the relationship between variables using:",
-      "question_ar": "الانحدار الخطي يحاول نمذجة العلاقة باستخدام:",
+      "question_en": "A “safe default” security rule means:",
+      "question_ar": "ماذا تعني قاعدة \"الإعدادات الآمنة افتراضيًا\"؟",
       "options": {
-        "a": "A curve",
-        "b": "A straight line",
-        "c": "A circle",
-        "d": "A polynomial only"
+        "a": "Allow everything by default",
+        "b": "Deny risky actions unless explicitly allowed",
+        "c": "Disable updates",
+        "d": "Use default passwords"
       },
       "correct_answer": "b",
-      "explanation": "Linear regression uses a straight line model."
+      "explanation": "Secure systems follow a deny-by-default principle, allowing only explicitly permitted actions."
     },
     {
       "id": 32,
-      "question_en": "The equation of a simple linear regression model is:",
-      "question_ar": "ما هي معادلة الانحدار الخطي البسيط؟",
+      "question_en": "In MQTT, the broker is:",
+      "question_ar": "في بروتوكول MQTT، ما هو الـ Broker؟",
       "options": {
-        "a": "y = ax² + bx + c",
-        "b": "y = mx + b",
-        "c": "y = mx²",
-        "d": "y = m/x"
+        "a": "The sensor",
+        "b": "The server that routes messages",
+        "c": "The router",
+        "d": "The mobile app"
       },
       "correct_answer": "b",
-      "explanation": "Standard linear equation form."
+      "explanation": "The broker is the central server responsible for receiving and distributing messages."
     },
     {
       "id": 33,
-      "question_en": "Gradient Descent is mainly used for:",
-      "question_ar": "يستخدم Gradient Descent بشكل أساسي لـ:",
+      "question_en": "A vulnerability is best described as:",
+      "question_ar": "كيف يمكن وصف الثغرة الأمنية (Vulnerability)؟",
       "options": {
-        "a": "Data cleaning",
-        "b": "Parameter optimization",
-        "c": "Sorting data",
-        "d": "Data visualization"
+        "a": "A weak point that can be exploited",
+        "b": "The attacker’s goal",
+        "c": "The final damage",
+        "d": "A security patch"
       },
-      "correct_answer": "b",
-      "explanation": "It optimizes model parameters."
+      "correct_answer": "a",
+      "explanation": "A vulnerability is a weakness that attackers can exploit to compromise a system."
     },
     {
       "id": 34,
-      "question_en": "Matrix addition requires:",
-      "question_ar": "جمع المصفوفات يتطلب:",
+      "question_en": "HMAC is used for:",
+      "question_ar": "فيما يُستخدم HMAC؟",
       "options": {
-        "a": "Same number of rows only",
-        "b": "Same number of columns only",
-        "c": "Same dimensions",
-        "d": "Same determinant"
+        "a": "Confidentiality",
+        "b": "Integrity + authenticity with shared key",
+        "c": "Compression",
+        "d": "Creating device IDs"
       },
-      "correct_answer": "c",
-      "explanation": "Dimensions must match."
+      "correct_answer": "b",
+      "explanation": "HMAC ensures message integrity and authenticity using a shared secret key."
     },
     {
       "id": 35,
-      "question_en": "The transpose of a matrix A is represented as:",
-      "question_ar": "يتم تمثيل نقل المصفوفة A بـ:",
+      "question_en": "Which attacker motivation is correctly matched?",
+      "question_ar": "أي دافع للمهاجم مرتبط بشكل صحيح؟",
       "options": {
-        "a": "A⁻¹",
-        "b": "Aᵀ",
-        "c": "A²",
-        "d": "A°"
+        "a": "Botnets → to improve user privacy",
+        "b": "Spying → to invade privacy using cameras/sensors",
+        "c": "Sabotage → to increase service availability",
+        "d": "Money → to reduce legal compliance risk"
       },
       "correct_answer": "b",
-      "explanation": "Transpose notation is Aᵀ."
+      "explanation": "Spying attacks aim to invade privacy by accessing sensitive data from sensors or cameras."
     },
     {
       "id": 36,
-      "question_en": "A vector is best described as:",
-      "question_ar": "المتجه هو:",
+      "question_en": "“Rollback protection” prevents:",
+      "question_ar": "ماذا يمنع \"Rollback Protection\"؟",
       "options": {
-        "a": "A single number",
-        "b": "A one-dimensional array of numbers",
-        "c": "A square matrix",
-        "d": "A random variable"
+        "a": "Firmware signing",
+        "b": "Downgrading to an old vulnerable firmware version",
+        "c": "Encrypting data",
+        "d": "Updating certificates"
       },
       "correct_answer": "b",
-      "explanation": "A vector is a 1D array."
+      "explanation": "Rollback protection ensures devices cannot be downgraded to insecure firmware versions."
     },
     {
       "id": 37,
-      "question_en": "Which matrix contains only zeros?",
-      "question_ar": "أي مصفوفة تحتوي على أصفار فقط؟",
+      "question_en": "A replay attack means the attacker:",
+      "question_ar": "ماذا يعني هجوم إعادة الإرسال (Replay Attack)؟",
       "options": {
-        "a": "Identity Matrix",
-        "b": "Diagonal Matrix",
-        "c": "Zero Matrix",
-        "d": "Scalar Matrix"
+        "a": "Records a valid message and sends it again later",
+        "b": "Deletes the message",
+        "c": "Compresses the message",
+        "d": "Creates a new key"
       },
-      "correct_answer": "c",
-      "explanation": "Zero matrix contains only zeros."
+      "correct_answer": "a",
+      "explanation": "A replay attack involves capturing a valid message and retransmitting it to deceive the system."
     },
     {
       "id": 38,
-      "question_en": "Which matrix has ones on the main diagonal?",
-      "question_ar": "أي مصفوفة تحتوي على 1 في القطر الرئيسي؟",
+      "question_en": "STRIDE “I” stands for:",
+      "question_ar": "ماذا يشير الحرف I في نموذج STRIDE؟",
       "options": {
-        "a": "Zero Matrix",
-        "b": "Identity Matrix",
-        "c": "Random Matrix",
-        "d": "Singular Matrix"
+        "a": "Injection",
+        "b": "Information Disclosure",
+        "c": "Inspection",
+        "d": "Initialization"
       },
       "correct_answer": "b",
-      "explanation": "Identity matrix definition."
+      "explanation": "In STRIDE, 'I' represents Information Disclosure, which involves unauthorized access to data."
     },
     {
       "id": 39,
-      "question_en": "If a matrix has no inverse, it is called:",
-      "question_ar": "إذا لم يكن للمصفوفة معكوس فهي تسمى:",
+      "question_en": "Symmetric crypto uses:",
+      "question_ar": "التشفير المتماثل يستخدم:",
       "options": {
-        "a": "Identity matrix",
-        "b": "Non-square matrix",
-        "c": "Singular matrix",
-        "d": "Diagonal matrix"
+        "a": "Two different keys",
+        "b": "One shared key",
+        "c": "Only public keys",
+        "d": "No keys"
       },
-      "correct_answer": "c",
-      "explanation": "Non-invertible matrices are singular."
+      "correct_answer": "b",
+      "explanation": "Symmetric cryptography uses a single shared key for both encryption and decryption."
     },
     {
       "id": 40,
-      "question_en": "In gradient descent, parameters are updated in the direction of:",
-      "question_ar": "في Gradient Descent يتم التحديث في اتجاه:",
+      "question_en": "Which is NOT a common reason IoT is hard to secure?",
+      "question_ar": "أي مما يلي ليس سببًا شائعًا لصعوبة تأمين إنترنت الأشياء؟",
       "options": {
-        "a": "Maximum gradient",
-        "b": "Zero gradient",
-        "c": "Negative gradient",
-        "d": "Random gradient"
+        "a": "Limited CPU/RAM/power",
+        "b": "Devices staying deployed for many years",
+        "c": "Devices are always protected in locked server rooms",
+        "d": "Physical exposure (tampering, theft, reset)"
       },
       "correct_answer": "c",
-      "explanation": "Gradient descent moves opposite the gradient."
+      "explanation": "IoT devices are often deployed in exposed environments, not secure server rooms."
     },
     {
       "id": 41,
-      "question_en": "Multivariable Linear Regression uses:",
-      "question_ar": "الانحدار الخطي متعدد المتغيرات يستخدم:",
+      "question_en": "Input validation means:",
+      "question_ar": "ماذا يعني التحقق من صحة المدخلات؟",
       "options": {
-        "a": "One feature only",
-        "b": "Multiple input features",
-        "c": "Only categorical variables",
-        "d": "Only binary variables"
+        "a": "Accept any input to avoid errors",
+        "b": "Check type, range, and format before using input",
+        "c": "Remove encryption",
+        "d": "Ignore user data"
       },
       "correct_answer": "b",
-      "explanation": "It uses multiple input features (x1, x2, ..., xn)."
+      "explanation": "Input validation ensures data meets expected criteria before processing, preventing vulnerabilities."
     },
     {
       "id": 42,
-      "question_en": "The general hypothesis equation for multivariable linear regression is:",
-      "question_ar": "ما هي معادلة الفرضية العامة؟",
+      "question_en": "In IoT systems, commands usually mean:",
+      "question_ar": "في أنظمة إنترنت الأشياء، ماذا تعني الأوامر عادةً؟",
       "options": {
-        "a": "h(x) = θ₀ + θ₁x₁ + θ₂x₂ + ... + θₙxₙ",
-        "b": "h(x) = x² + y²",
-        "c": "h(x) = θx²",
-        "d": "h(x) = x + y²"
+        "a": "Device → server readings",
+        "b": "Server/app → device actions",
+        "c": "Router → cloud logs",
+        "d": "File encryption"
       },
-      "correct_answer": "a",
-      "explanation": "Standard linear hypothesis with multiple parameters."
+      "correct_answer": "b",
+      "explanation": "Commands typically flow from applications or servers to devices to trigger actions."
     },
     {
       "id": 43,
-      "question_en": "The parameter that controls the step size in Gradient Descent is called:",
-      "question_ar": "ما اسم معامل التحكم في حجم الخطوة؟",
+      "question_en": "A threat is:",
+      "question_ar": "ما هو التهديد (Threat)؟",
       "options": {
-        "a": "Iteration number",
-        "b": "Learning rate",
-        "c": "Theta",
-        "d": "Bias"
+        "a": "A protection method",
+        "b": "A weakness",
+        "c": "A harmful event/action that could happen",
+        "d": "A device setting"
       },
-      "correct_answer": "b",
-      "explanation": "Learning rate controls update magnitude."
+      "correct_answer": "c",
+      "explanation": "A threat is a potential harmful event that could exploit a vulnerability."
     },
     {
       "id": 44,
-      "question_en": "If the learning rate is too large, Gradient Descent may:",
-      "question_ar": "إذا كان معدل التعلم كبيراً جداً، فقد:",
+      "question_en": "Integrity means:",
+      "question_ar": "ماذا تعني سلامة البيانات (Integrity)؟",
       "options": {
-        "a": "Converge slowly",
-        "b": "Fail to converge",
-        "c": "Always find the exact minimum",
-        "d": "Stop immediately"
+        "a": "Only the receiver can read the message",
+        "b": "Message changes can be detected",
+        "c": "Device is always online",
+        "d": "Password is hidden"
       },
       "correct_answer": "b",
-      "explanation": "Large alpha causes divergence."
+      "explanation": "Integrity ensures that any modification to data can be detected."
     },
     {
       "id": 45,
-      "question_en": "Polynomial regression is used when:",
-      "question_ar": "يستخدم الانحدار متعدد الحدود عندما:",
+      "question_en": "Why is IoT security “special” compared to normal IT security?",
+      "question_ar": "لماذا يعتبر أمن إنترنت الأشياء مميزًا مقارنة بأمن تكنولوجيا المعلومات التقليدي؟",
       "options": {
-        "a": "Data has a nonlinear pattern",
-        "b": "Data is always linear",
-        "c": "Only one variable exists",
-        "d": "Data is categorical"
+        "a": "IoT devices never use networks",
+        "b": "IoT security is only about privacy",
+        "c": "IoT connects digital systems to the physical world, so failures can cause real-world impact",
+        "d": "IoT devices cannot be attacked"
       },
-      "correct_answer": "a",
-      "explanation": "It models nonlinear relationships."
+      "correct_answer": "c",
+      "explanation": "IoT systems interact with the physical world, making security failures potentially dangerous beyond digital impact."
     },
     {
       "id": 46,
-      "question_en": "Data rescaling is mainly used to:",
-      "question_ar": "إعادة تحجيم البيانات تستخدم لـ:",
+      "question_en": "Secure boot means:",
+      "question_ar": "ماذا يعني الإقلاع الآمن (Secure Boot)؟",
       "options": {
-        "a": "Increase dataset size",
-        "b": "Improve convergence speed of Gradient Descent",
-        "c": "Remove noise",
-        "d": "Change labels"
+        "a": "Device boots faster",
+        "b": "Device runs only trusted/verified firmware",
+        "c": "Device never needs updates",
+        "d": "Device uses BLE only"
       },
       "correct_answer": "b",
-      "explanation": "Scaling improves optimization speed."
+      "explanation": "Secure boot ensures that only authenticated and trusted firmware is executed during startup."
     },
     {
       "id": 47,
-      "question_en": "Which method directly computes theta values without iterations?",
-      "question_ar": "أي طريقة تحسب θ مباشرة بدون تكرار؟",
+      "question_en": "A publisher in MQTT:",
+      "question_ar": "في MQTT، ما هو الـ Publisher؟",
       "options": {
-        "a": "Gradient Descent",
-        "b": "Normal Equation",
-        "c": "Logistic Regression",
-        "d": "Decision Tree"
+        "a": "Receives only",
+        "b": "Sends messages to a topic",
+        "c": "Generates certificates",
+        "d": "Blocks traffic"
       },
       "correct_answer": "b",
-      "explanation": "Normal Equation solves analytically."
+      "explanation": "A publisher sends messages to a specific topic in the MQTT system."
     },
     {
       "id": 48,
-      "question_en": "Which method requires selecting a learning rate?",
-      "question_ar": "أي طريقة تحتاج معدل تعلم؟",
+      "question_en": "STRIDE “E” stands for:",
+      "question_ar": "ماذا يشير الحرف E في نموذج STRIDE؟",
       "options": {
-        "a": "Normal Equation",
-        "b": "Gradient Descent",
-        "c": "Polynomial Equation",
-        "d": "Matrix Inverse"
+        "a": "Encryption",
+        "b": "Elevation of Privilege",
+        "c": "Endpoint",
+        "d": "Evaluation"
       },
       "correct_answer": "b",
-      "explanation": "Only Gradient Descent requires alpha."
+      "explanation": "In STRIDE, 'E' refers to Elevation of Privilege attacks."
     },
     {
       "id": 49,
-      "question_en": "Which of the following equation types represents a second-degree polynomial?",
-      "question_ar": "أي نوع يمثل كثير حدود من الدرجة الثانية؟",
+      "question_en": "Hashing is:",
+      "question_ar": "ما هو التجزئة (Hashing)؟",
       "options": {
-        "a": "Linear",
-        "b": "Quadratic",
-        "c": "Cubic",
-        "d": "Square Root"
+        "a": "Reversible",
+        "b": "One-way",
+        "c": "Always secret-key based",
+        "d": "Same as encryption"
       },
       "correct_answer": "b",
-      "explanation": "Second degree = quadratic (x^2)."
+      "explanation": "Hashing is a one-way function that cannot be reversed to obtain the original input."
     },
     {
       "id": 50,
-      "question_en": "For very large datasets, which method is generally more practical?",
-      "question_ar": "للمجموعات الكبيرة من البيانات، أي طريقة أفضل؟",
+      "question_en": "Which secure-by-design principle means “give only the permissions truly needed”?",
+      "question_ar": "أي مبدأ من مبادئ التصميم الآمن يعني إعطاء أقل صلاحيات ممكنة؟",
       "options": {
-        "a": "Normal Equation",
-        "b": "Gradient Descent",
-        "c": "Matrix Inversion Only",
-        "d": "Direct Calculation"
+        "a": "Patchability",
+        "b": "Defense in depth",
+        "c": "Least privilege",
+        "d": "Fail safely"
       },
-      "correct_answer": "b",
-      "explanation": "Gradient Descent scales better computationally."
+      "correct_answer": "c",
+      "explanation": "The principle of least privilege ensures that entities have only the permissions necessary to perform their tasks."
     }
   ],
   "short_answer": [
     {
       "id": 1,
-      "question_en": "What is Linear Regression?",
-      "question_ar": "ما هو الانحدار الخطي؟",
-      "answer": "Linear regression is a supervised learning method used to model the relationship between input and output variables using a straight line."
+      "question_en": "What is encryption? Explain it in simple words.",
+      "question_ar": "ما هو التشفير؟ اشرحه بكلمات بسيطة.",
+      "answer": "Encryption hides data and can be reversed with a key."
     },
     {
       "id": 2,
-      "question_en": "Write the general equation of a straight line used in Linear Regression.",
-      "question_ar": "اكتب المعادلة العامة للخط المستقيم في الانحدار الخطي.",
-      "answer": "y = mx + b"
+      "question_en": "Explain what IoT security is, and mention one example of an actuator (locks, motors, or alarms).",
+      "question_ar": "اشرح ما هو أمن إنترنت الأشياء، واذكر مثالًا واحدًا على المشغل (مثل الأقفال أو المحركات أو الإنذارات).",
+      "answer": "IoT security protects devices that sense the environment, communicate over networks, and act on the physical world. Example: a smart lock."
     },
     {
       "id": 3,
-      "question_en": "What is the purpose of Gradient Descent in machine learning?",
-      "question_ar": "ما الهدف من Gradient Descent في تعلم الآلة؟",
-      "answer": "It is used to minimize the cost function by updating model parameters iteratively."
+      "question_en": "Explain telemetry and commands with one IoT example for each.",
+      "question_ar": "اشرح البيانات القياسية (Telemetry) والأوامر مع مثال واحد لكل منهما.",
+      "answer": "Telemetry: Device → server data (e.g., temperature sensor sends 25°C). Commands: Server/app → device actions (e.g., app sends unlock command to a smart lock)."
     },
     {
       "id": 4,
-      "question_en": "What is a Matrix Transpose?",
-      "question_ar": "ما هو نقل المصفوفة؟",
-      "answer": "It is an operation that swaps rows and columns of a matrix."
+      "question_en": "Write one clear definition for each: asset, threat, vulnerability, risk, mitigation.",
+      "question_ar": "اكتب تعريفًا واضحًا لكل من: الأصل، التهديد، الثغرة، المخاطر، التخفيف.",
+      "answer": "Asset: valuable item to protect. Threat: harmful event. Vulnerability: weakness. Risk: likelihood × impact. Mitigation: control to reduce risk."
     },
     {
       "id": 5,
-      "question_en": "What is the difference between an Identity Matrix and a Zero Matrix?",
-      "question_ar": "ما الفرق بين مصفوفة الوحدة ومصفوفة الصفر؟",
-      "answer": "Identity matrix has ones on the diagonal, while zero matrix contains only zeros."
+      "question_en": "Give 3 examples of physical access threats in IoT devices.",
+      "question_ar": "اذكر 3 أمثلة على تهديدات الوصول الفيزيائي في أجهزة إنترنت الأشياء.",
+      "answer": "Reading flash memory to extract secrets; using UART/JTAG to bypass protections; hardware tampering to fake sensor readings."
+    },
+    {
+      "id": 6,
+      "question_en": "What is hashing? Explain it in simple words.",
+      "question_ar": "ما هو التجزئة (Hashing)؟ اشرحه بكلمات بسيطة.",
+      "answer": "Hashing creates a one-way fingerprint to detect changes."
+    },
+    {
+      "id": 7,
+      "question_en": "Why is IoT security special compared to normal computer security?",
+      "question_ar": "لماذا يُعد أمن إنترنت الأشياء مميزًا مقارنة بأمن الحواسيب التقليدي؟",
+      "answer": "Because IoT connects digital systems to the physical world, so failures can cause real-world impact."
+    },
+    {
+      "id": 8,
+      "question_en": "What does TLS protect, and what does it NOT fix by itself?",
+      "question_ar": "ماذا يحمي TLS، وماذا لا يعالجه بمفرده؟",
+      "answer": "TLS protects confidentiality, integrity, and authentication. It does not fix weak passwords, bad authorization, application bugs, or DoS attacks."
+    },
+    {
+      "id": 9,
+      "question_en": "Draw a simple IoT system diagram for: sensor → Wi-Fi → cloud API → mobile app. Label each part.",
+      "question_ar": "ارسم مخططًا بسيطًا لنظام إنترنت الأشياء: مستشعر → Wi-Fi → واجهة برمجة التطبيقات السحابية → تطبيق الهاتف.",
+      "answer": "Sensor/Device → Wi-Fi/Router/Internet → Cloud API/Server → Mobile App."
+    },
+    {
+      "id": 10,
+      "question_en": "Explain the 3 goals of secure storage (confidentiality, integrity, access control) with one example each.",
+      "question_ar": "اشرح الأهداف الثلاثة للتخزين الآمن (السرية، السلامة، التحكم في الوصول) مع مثال لكل منها.",
+      "answer": "Confidentiality: protect secrets (e.g., Wi-Fi password). Integrity: detect unauthorized changes (e.g., config file tampering). Access control: restrict who can access data (e.g., only update module can write firmware)."
+    }
+  ],
+  "code_analysis": [
+    {
+      "id": 1,
+      "question_en": "What is the function of the following code? Explain in detail.",
+      "question_ar": "ما وظيفة الكود التالي؟ اشرح بالتفصيل.",
+      "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")",
+      "answer": "Calculates Risk Score (Likelihood × Impact) and outputs priority and action.",
+      "explanation": "Implements risk scoring logic with input validation and categorization (Low/Medium/High)."
+    },
+    {
+      "id": 2,
+      "question_en": "What is the function of this code, and what does it demonstrate?",
+      "question_ar": "ما وظيفة هذا الكود، وماذا يوضح؟",
+      "code": "import hashlib\nmsg1 = \"temperature=25\"\nmsg2 = \"temperature=26\"  # tiny change\nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()\nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256  :\", h1)\nprint()\nprint(\"Message 2:\", msg2)\nprint(\"SHA-256  :\", h2)\nprint()\nprint(\"Are hashes equal?\", h1 == h2)",
+      "answer": "Demonstrates hashing and avalanche effect using SHA-256.",
+      "explanation": "Shows that small input change → completely different hash (integrity property)."
+    },
+    {
+      "id": 3,
+      "question_en": "Read the following MQTT protocol code. What is its primary function?",
+      "question_ar": "اقرأ كود MQTT التالي. ما هي وظيفته الأساسية؟",
+      "code": "import paho.mqtt.client as mqtt\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\ndef on_connect(client, userdata, flags, rc):\n    print(\"Connected with result code:\", rc)\n    client.subscribe(TOPIC)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"viewer_subscriber\")\nclient.on_connect = on_connect\nclient.on_message = on_message\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()",
+      "answer": "MQTT Subscriber that listens to a topic and prints messages.",
+      "explanation": "Connects to broker, subscribes to topic, and handles incoming telemetry messages."
+    },
+    {
+      "id": 4,
+      "question_en": "Explain what this code does and how it applies secure-coding principles.",
+      "question_ar": "اشرح ما يفعله هذا الكود وكيف يطبق مبادئ البرمجة الآمنة.",
+      "code": "def apply_pwm(value: int):\n    print(\"PWM applied:\", value)\n\ndef get_safe_speed():\n    raw = input(\"Enter motor speed (0-255): \").strip()\n    speed = 0\n    try:\n        candidate = int(raw)\n        if 0 <= candidate <= 255:\n            speed = candidate\n        else:\n            print(\"Unsafe speed -> using safe default (0)\")\n    except ValueError:\n        print(\"Invalid input -> using safe default (0)\")\n    return speed\n\nspeed = get_safe_speed()\napply_pwm(speed)",
+      "answer": "Controls motor speed using safe input validation and default value.",
+      "explanation": "Applies Input Validation (range check) and Safe Default (fallback = 0)."
+    },
+    {
+      "id": 5,
+      "question_en": "What is the purpose of executing the following code, and what does it generate?",
+      "question_ar": "ما الهدف من تنفيذ هذا الكود، وماذا ينتج؟",
+      "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\",\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)",
+      "answer": "Generates and saves a Device Identity JSON file.",
+      "explanation": "Creates unique device ID (UUID) and stores identity metadata in JSON."
     }
   ],
   "code": [
     {
       "id": 1,
-      "task": "Write a program that calculates Linear Regression using Gradient Descent for a simple dataset.",
-      "code": "import numpy as np\n\ndef gradient_descent(x, y, lr=0.01, epochs=1000):\n    m = len(x)\n    theta0 = 0\n    theta1 = 0\n\n    for _ in range(epochs):\n        y_pred = theta0 + theta1 * x\n        error = y_pred - y\n\n        theta0 -= lr * (1/m) * np.sum(error)\n        theta1 -= lr * (1/m) * np.sum(error * x)\n\n    return theta0, theta1\n\nx = np.array([100, 95, 90, 80])\ny = np.array([300, 285, 270, 240])\n\nprint(gradient_descent(x, y))"
+      "task": "Read a file in chunks of 4096 bytes and update SHA-256 hash to avoid memory overload.",
+      "code": "chunk = f.read(4096)\nif not chunk:\n    break\nsha.update(chunk)"
     },
     {
       "id": 2,
-      "task": "Write a Python program to load a dataset using pandas and display the first 5 rows.",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nprint(df.head())"
+      "task": "Generate an HMAC tag using a shared key and SHA-256, then convert to hex.",
+      "code": "tag = hmac.new(key, message, hashlib.sha256).hexdigest()"
     },
     {
       "id": 3,
-      "task": "Write a Python program to split data into training and testing sets using scikit-learn.",
-      "code": "from sklearn.model_selection import train_test_split\n\n# Example data\nX = [[1], [2], [3], [4], [5]]\ny = [2, 4, 6, 8, 10]\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nprint('X_train:', X_train)\nprint('X_test:', X_test)\nprint('y_train:', y_train)\nprint('y_test:', y_test)"
+      "task": "Convert dictionary data to JSON string and publish it to an MQTT topic.",
+      "code": "payload = json.dumps(data)\nclient.publish(TOPIC, payload)"
     },
     {
       "id": 4,
-      "task": "Train a simple Linear Regression model on sample data and print the model coefficients.",
-      "code": "from sklearn.linear_model import LinearRegression\nimport numpy as np\n\n# Sample data\nX = np.array([[1], [2], [3], [4], [5]])\ny = np.array([2, 4, 6, 8, 10])\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\nprint('Coefficient:', model.coef_)\nprint('Intercept:', model.intercept_)"
+      "task": "Add authentication to MQTT client using USERNAME and PASSWORD.",
+      "code": "client.username_pw_set(USERNAME, PASSWORD)"
     },
     {
       "id": 5,
-      "task": "Write code to perform K-Means clustering on a dataset with 3 clusters.",
-      "code": "from sklearn.cluster import KMeans\nimport numpy as np\n\n# Sample data\nX = np.array([[1, 2], [1, 4], [1, 0],\n              [10, 2], [10, 4], [10, 0],\n              [5, 2], [6, 3]])\n\nkmeans = KMeans(n_clusters=3, random_state=42, n_init=10)\nkmeans.fit(X)\n\nprint('Cluster Centers:', kmeans.cluster_centers_)\nprint('Labels:', kmeans.labels_)"
+      "task": "Enable TLS for MQTT client with certificates and enforce secure verification.",
+      "code": "client.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\nclient.tls_insecure_set(False)"
     },
     {
       "id": 6,
-      "task": "Write Python code to evaluate a classification model using accuracy score.",
-      "code": "from sklearn.metrics import accuracy_score\n\n# Example values\ny_test = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 1, 0, 0]\n\naccuracy = accuracy_score(y_test, y_pred)\nprint('Accuracy:', accuracy)"
+      "task": "Sort a list of dictionaries (threats) descending by 'score'.",
+      "code": "threats.sort(key=lambda x: x[\"score\"], reverse=True)"
     },
     {
       "id": 7,
-      "task": "Write a Python program to apply One-Hot Encoding to a categorical column.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C']})\n\nencoded_df = pd.get_dummies(df, columns=['category'])\nprint(encoded_df)"
-    },
-    {
-      "id": 8,
-      "task": "Write code to perform Label Encoding on a dataset column.",
-      "code": "from sklearn.preprocessing import LabelEncoder\nimport pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C']})\n\nle = LabelEncoder()\ndf['encoded'] = le.fit_transform(df['category'])\n\nprint(df)"
-    },
-    {
-      "id": 9,
-      "task": "Write a program to apply Frequency Encoding to a categorical feature.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C', 'B', 'A']})\n\nfreq = df['category'].value_counts()\ndf['encoded'] = df['category'].map(freq)\n\nprint(df)"
-    },
-    {
-      "id": 10,
-      "task": "Write Python code to split a dataset into features and labels.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'feature1': [1, 2, 3],\n    'feature2': [4, 5, 6],\n    'target': [0, 1, 0]\n})\n\nX = df.drop('target', axis=1)\ny = df['target']\n\nprint('Features:\\n', X)\nprint('Labels:\\n', y)"
-    },
-    {
-      "id": 11,
-      "task": "Write a simple program that builds a basic Artificial Neural Network using Keras.",
-      "code": "from tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense\nimport numpy as np\n\n# Sample data\nX = np.array([[0], [1], [2], [3]])\ny = np.array([0, 1, 1, 0])\n\nmodel = Sequential()\nmodel.add(Dense(8, activation='relu', input_shape=(1,)))\nmodel.add(Dense(1, activation='sigmoid'))\n\nmodel.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])\nmodel.fit(X, y, epochs=10, verbose=1)"
-    },
-    {
-      "id": 12,
-      "task": "Load a CSV dataset using pandas and display its first 5 rows.",
-      "code": "import pandas as pd\n\n# Load dataset\ndf = pd.read_csv('data.csv')\n\n# Display first 5 rows\nprint(df.head())"
-    },
-    {
-      "id": 13,
-      "task": "Write code to check dataset shape and data types.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'A': [1, 2, 3],\n    'B': [4.0, 5.5, 6.1],\n    'C': ['x', 'y', 'z']\n})\n\nprint('Shape:', df.shape)\nprint('Data Types:\\n', df.dtypes)"
-    },
-    {
-      "id": 14,
-      "task": "Write Python code to display statistical summary of a dataset.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'A': [1, 2, 3, 4, 5],\n    'B': [10, 20, 30, 40, 50]\n})\n\nprint(df.describe())"
-    },
-    {
-      "id": 15,
-      "task": "Write code to split a dataset into training and testing sets.",
-      "code": "from sklearn.model_selection import train_test_split\nimport pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'feature': [1, 2, 3, 4, 5],\n    'target': [2, 4, 6, 8, 10]\n})\n\nX = df[['feature']]\ny = df['target']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nprint('X_train:\\n', X_train)\nprint('X_test:\\n', X_test)"
-    },
-    {
-      "id": 16,
-      "task": "Write Python code to evaluate a classification model using confusion matrix and accuracy.",
-      "code": "from sklearn.metrics import confusion_matrix, accuracy_score\n\n# Example values\ny_test = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 1, 0, 0]\n\ncm = confusion_matrix(y_test, y_pred)\nacc = accuracy_score(y_test, y_pred)\n\nprint('Confusion Matrix:\\n', cm)\nprint('Accuracy:', acc)"
+      "task": "Load JSON config safely, and return SAFE_DEFAULTS if error occurs.",
+      "code": "try:\n    with open(path, \"r\", encoding=\"utf-8\") as f:\n        cfg = json.load(f)\nexcept Exception:\n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")\n    return SAFE_DEFAULTS.copy()"
     }
   ],
   "fill_in_the_blank": [
     {
       "id": 1,
-      "question": "Machine Learning success increased due to ______ and powerful GPUs.",
-      "answer": "big data"
-    },
-    {
-      "id": 2,
-      "question": "Traditional programming follows the formula: Data + ______ → Output.",
-      "answer": "rules"
-    },
-    {
-      "id": 3,
-      "question": "Supervised learning requires ______ data.",
-      "answer": "labeled"
-    },
-    {
-      "id": 4,
-      "question": "Clustering is a type of ______ learning.",
-      "answer": "unsupervised"
-    },
-    {
-      "id": 5,
-      "question": "When a model memorizes training data and fails on new data, it is called ______.",
-      "answer": "overfitting"
-    },
-    {
-      "id": 6,
-      "question": "TensorFlow is a popular ______ library in Python.",
-      "answer": "machine learning"
-    },
-    {
-      "id": 7,
-      "question": "Generative AI is used to create new ______ such as images and text.",
-      "answer": "data"
-    },
-    {
-      "id": 8,
-      "question": "Data bias and high computational cost are examples of ML ______.",
-      "answer": "challenges"
-    },
-    {
-      "id": 9,
-      "question": "Logistic Regression is used for ______ tasks.",
-      "answer": "classification"
-    },
-    {
-      "id": 10,
-      "question": "The final stage of ML lifecycle is model ______.",
-      "answer": "deployment"
-    },
-    {
-      "id": 11,
-      "question": "Machine Learning is a subset of ______.",
-      "answer": "Artificial Intelligence"
-    },
-    {
-      "id": 12,
-      "question": "______ is NOT considered an AI branch.",
-      "answer": "Database Management"
-    },
-    {
-      "id": 13,
-      "question": "Artificial Neural Networks are mainly composed of neurons and ______ connections.",
-      "answer": "weighted"
-    },
-    {
-      "id": 14,
-      "question": "Convolutional Neural Networks (CNN) are commonly used for ______ processing.",
-      "answer": "image"
-    },
-    {
-      "id": 15,
-      "question": "ANN is a specific type of ______ algorithm.",
-      "answer": "Machine Learning"
-    },
-    {
-      "id": 16,
-      "question": "Red, Blue, and Green are examples of ______ data.",
-      "answer": "qualitative"
-    },
-    {
-      "id": 17,
-      "question": "One-Hot Encoding creates a separate ______ column for each category.",
-      "answer": "binary"
-    },
-    {
-      "id": 18,
-      "question": "Frequency Encoding replaces categories with their occurrence ______.",
-      "answer": "frequency"
-    },
-    {
-      "id": 19,
-      "question": "Public datasets such as Kaggle and UCI are considered ______ sources.",
-      "answer": "reliable"
-    },
-    {
-      "id": 20,
-      "question": "Data cleaning and preprocessing improve dataset ______.",
-      "answer": "quality"
-    },
-    {
-      "id": 21,
-      "question": "A common Python function used to load CSV files into a DataFrame is ______.",
-      "answer": "read_csv"
-    },
-    {
-      "id": 22,
-      "question": "The function used to display the first rows of a dataset is ______.",
-      "answer": "head"
-    },
-    {
-      "id": 23,
-      "question": "The property used to check dataset shape (rows and columns) is ______.",
-      "answer": "shape"
-    },
-    {
-      "id": 24,
-      "question": "A technique used to evaluate class balance in datasets is ______.",
-      "answer": "class distribution"
-    },
-    {
-      "id": 25,
-      "question": "Removing missing values and duplicates is called data ______.",
-      "answer": "cleaning"
-    },
-    {
-      "id": 26,
-      "question": "Improving model performance by creating new features is called feature ______.",
-      "answer": "engineering"
-    },
-    {
-      "id": 27,
-      "question": "A metric that combines precision and recall is ______ score.",
-      "answer": "F1"
-    },
-    {
-      "id": 28,
-      "question": "A matrix used for evaluating classification performance is ______ matrix.",
-      "answer": "confusion"
-    },
-    {
-      "id": 29,
-      "question": "The ratio of correct positive predictions is called ______.",
-      "answer": "precision"
-    },
-    {
-      "id": 30,
-      "question": "A metric that evaluates class separation ability is ROC ______.",
-      "answer": "AUC"
-    },
-    {
-      "id": 31,
-      "question": "Linear regression predicts a ______ relationship between variables.",
-      "answer": "linear"
-    },
-    {
-      "id": 32,
-      "question": "The equation y = mx + b represents a ______ line.",
-      "answer": "straight"
-    },
-    {
-      "id": 33,
-      "question": "Gradient Descent is used to minimize the ______ function.",
-      "answer": "cost"
-    },
-    {
-      "id": 34,
-      "question": "Matrix addition requires same ______ for both matrices.",
-      "answer": "dimensions"
-    },
-    {
-      "id": 35,
-      "question": "The transpose of matrix A is written as A______.",
-      "answer": "T"
-    },
-    {
-      "id": 36,
-      "question": "A vector is a ______-dimensional array of numbers.",
-      "answer": "one"
-    },
-    {
-      "id": 37,
-      "question": "A zero matrix contains only ______ values.",
-      "answer": "zero"
-    },
-    {
-      "id": 38,
-      "question": "An identity matrix has ones on the main ______.",
-      "answer": "diagonal"
-    },
-    {
-      "id": 39,
-      "question": "A singular matrix has no ______.",
-      "answer": "inverse"
-    },
-    {
-      "id": 40,
-      "question": "Gradient Descent moves in the ______ gradient direction.",
-      "answer": "negative"
-    },
-    {
-      "id": 41,
-      "question": "Multivariable linear regression uses ____ input features.",
-      "answer": "multiple"
-    },
-    {
-      "id": 42,
-      "question": "The learning rate controls the ____ size in Gradient Descent.",
-      "answer": "step"
-    },
-    {
-      "id": 43,
-      "question": "Gradient Descent may fail to ____ if the learning rate is too large.",
-      "answer": "converge"
-    },
-    {
-      "id": 44,
-      "question": "Polynomial regression is used for ____ relationships.",
-      "answer": "nonlinear"
-    },
-    {
-      "id": 45,
-      "question": "Normal Equation computes theta values ____ without iterations.",
-      "answer": "directly"
-    },
-    {
-      "id": 46,
-      "question": "Data rescaling improves the ____ speed of Gradient Descent.",
-      "answer": "convergence"
-    },
-    {
-      "id": 47,
-      "question": "Gradient Descent requires choosing a ____ rate.",
-      "answer": "learning"
-    },
-    {
-      "id": 48,
-      "question": "In multivariable regression, the hypothesis includes multiple ____ parameters.",
-      "answer": "theta"
+      "question": "",
+      "answer": ""
     }
   ]
 }

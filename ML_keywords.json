@@ -1,0 +1,1036 @@
+{
+  "keywords": [
+    {
+      "term": "Machine Learning",
+      "translation_ar": "تعلم الآلة",
+      "definition": "فرع من الذكاء الاصطناعي يسمح للأنظمة بالتعلم من البيانات واتخاذ قرارات دون برمجة صريحة.",
+      "details": "يعتمد على النماذج الإحصائية والخوارزميات لاكتشاف الأنماط والتنبؤ."
+    },
+    {
+      "term": "GPU",
+      "translation_ar": "وحدة معالجة الرسوميات",
+      "definition": "معالج متخصص في تنفيذ العمليات الحسابية المتوازية بسرعة عالية.",
+      "details": "يُستخدم بكثرة في تدريب نماذج التعلم العميق بسبب قدرته على معالجة البيانات الكبيرة بسرعة."
+    },
+    {
+      "term": "Supervised Learning",
+      "translation_ar": "التعلم الموجّه",
+      "definition": "نوع من تعلم الآلة يستخدم بيانات معنونة لتدريب النموذج.",
+      "details": "كل مدخل له مخرج صحيح معروف مسبقًا، مثل التصنيف والتنبؤ."
+    },
+    {
+      "term": "Unsupervised Learning",
+      "translation_ar": "التعلم غير الموجّه",
+      "definition": "نوع من التعلم يستخدم بيانات بدون تسميات لاكتشاف الأنماط.",
+      "details": "يُستخدم في التجميع (Clustering) وتقليل الأبعاد."
+    },
+    {
+      "term": "Reinforcement Learning",
+      "translation_ar": "التعلم المعزز",
+      "definition": "نموذج تعلم يعتمد على التفاعل مع البيئة باستخدام المكافآت والعقوبات.",
+      "details": "يُستخدم في الروبوتات والألعاب واتخاذ القرار."
+    },
+    {
+      "term": "Deep Learning",
+      "translation_ar": "التعلم العميق",
+      "definition": "فرع متقدم من تعلم الآلة يعتمد على الشبكات العصبية العميقة.",
+      "details": "مناسب للمشاكل المعقدة مثل الرؤية الحاسوبية ومعالجة اللغة الطبيعية."
+    },
+    {
+      "term": "Generative AI",
+      "translation_ar": "الذكاء الاصطناعي التوليدي",
+      "definition": "نوع من الذكاء الاصطناعي قادر على إنشاء بيانات جديدة.",
+      "details": "ينتج نصوص وصور وصوت بناءً على الأنماط التي تعلمها."
+    },
+    {
+      "term": "Overfitting",
+      "translation_ar": "فرط التكيّف",
+      "definition": "حالة يتعلم فيها النموذج بيانات التدريب بشكل مفرط ويفشل في التعميم.",
+      "details": "يؤدي إلى أداء ضعيف على البيانات الجديدة (test data)."
+    },
+    {
+      "term": "Underfitting",
+      "translation_ar": "نقص التكيّف",
+      "definition": "حالة يكون فيها النموذج بسيطًا جدًا ولا يستطيع التقاط الأنماط.",
+      "details": "يؤدي إلى أداء ضعيف على التدريب والاختبار معًا."
+    },
+    {
+      "term": "Clustering",
+      "translation_ar": "التجميع",
+      "definition": "تقنية لتجميع البيانات المتشابهة في مجموعات.",
+      "details": "يُستخدم بدون بيانات معنونة مثل خوارزمية K-Means."
+    },
+    {
+      "term": "Dimensionality Reduction",
+      "translation_ar": "تقليل الأبعاد",
+      "definition": "تقليل عدد المتغيرات مع الحفاظ على أهم المعلومات.",
+      "details": "يُستخدم لتحسين الأداء وتقليل التعقيد مثل PCA."
+    },
+    {
+      "term": "PCA (Principal Component Analysis)",
+      "translation_ar": "تحليل المكونات الرئيسية",
+      "definition": "خوارزمية لتقليل الأبعاد مع الحفاظ على التباين.",
+      "details": "تُستخدم لتحليل البيانات الكبيرة وتبسيطها."
+    },
+    {
+      "term": "Logistic Regression",
+      "translation_ar": "الانحدار اللوجستي",
+      "definition": "خوارزمية تستخدم للتصنيف وليس للتنبؤ العددي.",
+      "details": "تعطي ناتجًا احتماليًا مثل (نعم/لا)."
+    },
+    {
+      "term": "Linear Regression",
+      "translation_ar": "الانحدار الخطي",
+      "definition": "خوارزمية تُستخدم للتنبؤ بقيم رقمية.",
+      "details": "تعتمد على العلاقة الخطية بين المتغيرات."
+    },
+    {
+      "term": "K-Means",
+      "translation_ar": "خوارزمية كيه-مينز",
+      "definition": "خوارزمية تجميع تقسم البيانات إلى مجموعات.",
+      "details": "تعتمد على تقليل المسافة بين النقاط ومراكز المجموعات."
+    },
+    {
+      "term": "ML Life Cycle",
+      "translation_ar": "دورة حياة تعلم الآلة",
+      "definition": "مراحل تطوير نموذج تعلم الآلة من البداية للنشر.",
+      "details": "تشمل جمع البيانات، المعالجة، التدريب، التقييم، والنشر."
+    },
+    {
+      "term": "Model Deployment",
+      "translation_ar": "نشر النموذج",
+      "definition": "وضع النموذج في بيئة الإنتاج لاستخدامه فعليًا.",
+      "details": "يتم دمجه في التطبيقات لاتخاذ قرارات حقيقية."
+    },
+    {
+      "term": "Data Bias",
+      "translation_ar": "تحيز البيانات",
+      "definition": "انحراف في البيانات يؤدي إلى نتائج غير عادلة أو غير دقيقة.",
+      "details": "قد يسبب أخطاء في التنبؤ أو تمييز غير عادل."
+    },
+    {
+      "term": "Computational Cost",
+      "translation_ar": "التكلفة الحسابية",
+      "definition": "الموارد المطلوبة لتشغيل وتدريب النموذج.",
+      "details": "تشمل الوقت والمعالجة والذاكرة."
+    },
+    {
+      "term": "TensorFlow",
+      "translation_ar": "تينسورفلو",
+      "definition": "مكتبة مفتوحة المصدر لتطوير نماذج تعلم الآلة.",
+      "details": "تُستخدم بشكل واسع في التعلم العميق وتدعم GPU."
+    },
+    {
+      "term": "Traditional",
+      "translation_ar": "تقليدي",
+      "definition": "شيء يتم بالطريقة القديمة أو المعتادة.",
+      "details": "يُستخدم لوصف البرمجة العادية التي تعتمد على قواعد ثابتة."
+    },
+    {
+      "term": "Approach",
+      "translation_ar": "نهج / طريقة",
+      "definition": "الطريقة أو الأسلوب المستخدم لحل مشكلة.",
+      "details": "مثل: approach to solving problems."
+    },
+    {
+      "term": "Penalties",
+      "translation_ar": "عقوبات",
+      "definition": "نتائج سلبية تُعطى عند الخطأ.",
+      "details": "في ML: تستخدم لتقليل السلوك الخاطئ."
+    },
+    {
+      "term": "Rewards",
+      "translation_ar": "مكافآت",
+      "definition": "نتائج إيجابية تُعطى عند السلوك الصحيح.",
+      "details": "أساس التعلم المعزز."
+    },
+    {
+      "term": "Became",
+      "translation_ar": "أصبح",
+      "definition": "تحول إلى حالة جديدة.",
+      "details": "Past tense من become."
+    },
+    {
+      "term": "Widely",
+      "translation_ar": "على نطاق واسع",
+      "definition": "بشكل منتشر أو كبير.",
+      "details": "Widely used = مستخدم بشكل واسع."
+    },
+    {
+      "term": "Adopted",
+      "translation_ar": "تم اعتماده",
+      "definition": "تم استخدامه أو قبوله.",
+      "details": "Adopted technology = تقنية تم تبنيها."
+    },
+    {
+      "term": "Available",
+      "translation_ar": "متاح",
+      "definition": "يمكن استخدامه أو الوصول إليه.",
+      "details": "Data available = بيانات متوفرة."
+    },
+    {
+      "term": "Provided",
+      "translation_ar": "تم توفيره",
+      "definition": "تم إعطاؤه أو تقديمه.",
+      "details": "Data is provided = تم توفير البيانات."
+    },
+    {
+      "term": "Based on",
+      "translation_ar": "يعتمد على",
+      "definition": "مبني على شيء آخر.",
+      "details": "Based on data = يعتمد على البيانات."
+    },
+    {
+      "term": "Patterns",
+      "translation_ar": "أنماط",
+      "definition": "أشكال أو تكرارات في البيانات.",
+      "details": "ML يتعلم الأنماط من البيانات."
+    },
+    {
+      "term": "Subset",
+      "translation_ar": "جزء من",
+      "definition": "جزء صغير من مجموعة أكبر.",
+      "details": "Deep Learning subset of ML."
+    },
+    {
+      "term": "Performs",
+      "translation_ar": "يؤدي / ينفذ",
+      "definition": "يقوم بعمل أو مهمة.",
+      "details": "Model performs well = يعمل بشكل جيد."
+    },
+    {
+      "term": "Poorly",
+      "translation_ar": "بشكل سيء",
+      "definition": "أداء ضعيف.",
+      "details": "Performs poorly = أداء ضعيف."
+    },
+    {
+      "term": "Generalizing",
+      "translation_ar": "التعميم",
+      "definition": "تطبيق ما تم تعلمه على بيانات جديدة.",
+      "details": "مهم لتقييم النموذج."
+    },
+    {
+      "term": "Identify",
+      "translation_ar": "يحدد / يتعرف",
+      "definition": "يكتشف أو يميز شيء.",
+      "details": "Identify patterns = اكتشاف الأنماط."
+    },
+    {
+      "term": "Includes",
+      "translation_ar": "يشمل",
+      "definition": "يحتوي على.",
+      "details": "Includes steps = يشمل خطوات."
+    },
+    {
+      "term": "Limitations",
+      "translation_ar": "قيود",
+      "definition": "أشياء تمنع النظام من العمل بشكل كامل.",
+      "details": "ML has limitations."
+    },
+    {
+      "term": "Bias",
+      "translation_ar": "تحيز",
+      "definition": "ميل غير عادل في البيانات أو النتائج.",
+      "details": "يسبب أخطاء في النماذج."
+    },
+    {
+      "term": "Deployment",
+      "translation_ar": "نشر",
+      "definition": "تشغيل النظام في الواقع.",
+      "details": "آخر مرحلة في ML."
+    },
+    {
+      "term": "Classification",
+      "translation_ar": "تصنيف",
+      "definition": "وضع البيانات في فئات.",
+      "details": "Spam / Not Spam مثال."
+    },
+    {
+      "term": "Regression",
+      "translation_ar": "انحدار",
+      "definition": "التنبؤ بقيمة رقمية.",
+      "details": "مثل توقع السعر."
+    },
+    {
+      "term": "Reduction",
+      "translation_ar": "تقليل",
+      "definition": "جعل الشيء أصغر أو أقل.",
+      "details": "Dimensionality reduction."
+    },
+    {
+      "term": "Artificial Neural Networks (ANNs)",
+      "translation_ar": "الشبكات العصبية الاصطناعية",
+      "definition": "نموذج حسابي مستوحى من الدماغ البشري يتكون من وحدات مترابطة.",
+      "details": "تُستخدم في التعلم العميق والتعرف على الأنماط."
+    },
+    {
+      "term": "Neurons",
+      "translation_ar": "عُقد / خلايا عصبية",
+      "definition": "الوحدات الأساسية في الشبكات العصبية التي تعالج المعلومات.",
+      "details": "كل neuron يستقبل مدخلات ويعطي مخرجات بعد حساب معين."
+    },
+    {
+      "term": "Weighted Connections",
+      "translation_ar": "روابط موزونة",
+      "definition": "روابط بين الخلايا العصبية تحمل أوزانًا تحدد أهمية كل مدخل.",
+      "details": "تُستخدم لتحديد تأثير كل مدخل في الناتج النهائي."
+    },
+    {
+      "term": "Computer Vision",
+      "translation_ar": "الرؤية الحاسوبية",
+      "definition": "مجال من الذكاء الاصطناعي يسمح للحواسيب بفهم الصور والفيديو.",
+      "details": "يُستخدم في التعرف على الصور والمراقبة الطبية."
+    },
+    {
+      "term": "Decision Trees",
+      "translation_ar": "أشجار القرار",
+      "definition": "خوارزمية تعلم آلة تعتمد على تقسيم البيانات إلى فروع قرارات.",
+      "details": "تُستخدم في التصنيف والانحدار."
+    },
+    {
+      "term": "SVM (Support Vector Machine)",
+      "translation_ar": "آلة المتجهات الداعمة",
+      "definition": "خوارزمية تصنيف تعتمد على إيجاد أفضل حد فاصل بين الفئات.",
+      "details": "تُستخدم في مشاكل التصنيف عالية الدقة."
+    },
+    {
+      "term": "Binary Column",
+      "translation_ar": "عمود ثنائي",
+      "definition": "عمود يحتوي على قيم 0 و 1 فقط لتمثيل الفئات.",
+      "details": "يُستخدم في One-Hot Encoding."
+    },
+    {
+      "term": "Occurrence Frequency",
+      "translation_ar": "تكرار الظهور",
+      "definition": "عدد مرات ظهور عنصر معين في البيانات.",
+      "details": "يستخدم في Frequency Encoding."
+    },
+    {
+      "term": "Model Performance",
+      "translation_ar": "أداء النموذج",
+      "definition": "مدى دقة وكفاءة نموذج تعلم الآلة.",
+      "details": "يُقاس باستخدام accuracy و metrics أخرى."
+    },
+    {
+      "term": "Accuracy",
+      "translation_ar": "الدقة",
+      "definition": "نسبة التوقعات الصحيحة من إجمالي التوقعات.",
+      "details": "مقياس شائع لتقييم النماذج."
+    },
+    {
+      "term": "Reliability",
+      "translation_ar": "الموثوقية",
+      "definition": "مدى اعتماد النتائج على النموذج بشكل ثابت.",
+      "details": "نموذج موثوق يعطي نتائج مستقرة."
+    },
+    {
+      "term": "Dataset",
+      "translation_ar": "مجموعة بيانات",
+      "definition": "مجموعة منظمة من البيانات تُستخدم في التدريب أو التحليل.",
+      "details": "تتكون عادة من صفوف (Records) وأعمدة (Features)."
+    },
+    {
+      "term": "Data Preprocessing",
+      "translation_ar": "معالجة البيانات المسبقة",
+      "definition": "مرحلة تجهيز البيانات قبل إدخالها للنموذج.",
+      "details": "تشمل التنظيف، التحويل، والتطبيع."
+    },
+    {
+      "term": "Raw Data",
+      "translation_ar": "بيانات خام",
+      "definition": "بيانات غير معالجة أو منظمة.",
+      "details": "قد تحتوي على أخطاء، قيم مفقودة، أو ضوضاء."
+    },
+    {
+      "term": "Missing Values",
+      "translation_ar": "قيم مفقودة",
+      "definition": "بيانات غير موجودة في بعض الخانات.",
+      "details": "تحتاج إلى معالجة مثل الحذف أو التعويض."
+    },
+    {
+      "term": "Noise",
+      "translation_ar": "ضوضاء البيانات",
+      "definition": "بيانات عشوائية أو غير دقيقة تؤثر على التحليل.",
+      "details": "تقلل من جودة النموذج ودقته."
+    },
+    {
+      "term": "Inconsistencies",
+      "translation_ar": "عدم الاتساق",
+      "definition": "وجود اختلافات أو تناقضات داخل البيانات.",
+      "details": "مثل اختلاف الصيغ أو القيم غير المتوافقة."
+    },
+    {
+      "term": "Data Dimensions",
+      "translation_ar": "أبعاد البيانات",
+      "definition": "عدد الصفوف والأعمدة في مجموعة البيانات.",
+      "details": "تُستخدم لفهم حجم وبنية البيانات."
+    },
+    {
+      "term": "Features",
+      "translation_ar": "الخصائص",
+      "definition": "المتغيرات المدخلة المستخدمة في النموذج.",
+      "details": "تمثل الأعمدة في البيانات."
+    },
+    {
+      "term": "Records",
+      "translation_ar": "السجلات",
+      "definition": "كل صف يمثل حالة أو عينة في البيانات.",
+      "details": "تُستخدم لتمثيل الأمثلة الفردية."
+    },
+    {
+      "term": "Statistical Summary",
+      "translation_ar": "ملخص إحصائي",
+      "definition": "مجموعة من المقاييس التي تصف البيانات.",
+      "details": "تشمل المتوسط، الوسيط، والانحراف المعياري."
+    },
+    {
+      "term": "Mean",
+      "translation_ar": "المتوسط",
+      "definition": "مجموع القيم مقسوم على عددها.",
+      "details": "مقياس شائع لمركز البيانات."
+    },
+    {
+      "term": "Median",
+      "translation_ar": "الوسيط",
+      "definition": "القيمة الوسطى في مجموعة بيانات مرتبة.",
+      "details": "أكثر مقاومة للقيم المتطرفة من المتوسط."
+    },
+    {
+      "term": "Standard Deviation",
+      "translation_ar": "الانحراف المعياري",
+      "definition": "قياس مدى تشتت البيانات حول المتوسط.",
+      "details": "كلما زادت القيمة زاد التشتت."
+    },
+    {
+      "term": "describe()",
+      "translation_ar": "دالة describe()",
+      "definition": "دالة في Pandas تعرض ملخصًا إحصائيًا للبيانات.",
+      "details": "تُظهر mean و std و min و max."
+    },
+    {
+      "term": "Class Distribution",
+      "translation_ar": "توزيع الفئات",
+      "definition": "نسبة توزيع كل فئة داخل البيانات.",
+      "details": "مهم في مشاكل التصنيف غير المتوازن."
+    },
+    {
+      "term": "Feature Engineering",
+      "translation_ar": "هندسة الخصائص",
+      "definition": "إنشاء أو تعديل الخصائص لتحسين أداء النموذج.",
+      "details": "يساعد على تحسين دقة التعلم."
+    },
+    {
+      "term": "Precision",
+      "translation_ar": "الدقة الإيجابية",
+      "definition": "نسبة التنبؤات الإيجابية الصحيحة.",
+      "details": "تقيس مدى صحة الإيجابيات المتوقعة."
+    },
+    {
+      "term": "Recall",
+      "translation_ar": "الاسترجاع",
+      "definition": "نسبة الإيجابيات الحقيقية التي تم اكتشافها.",
+      "details": "يعرف أيضًا بـ Sensitivity."
+    },
+    {
+      "term": "Sensitivity",
+      "translation_ar": "الحساسية",
+      "definition": "قدرة النموذج على اكتشاف الحالات الإيجابية.",
+      "details": "مرادف لـ Recall."
+    },
+    {
+      "term": "Logarithmic Loss",
+      "translation_ar": "الخسارة اللوغاريتمية",
+      "definition": "مقياس يعاقب التوقعات الخاطئة بثقة عالية.",
+      "details": "يستخدم في التصنيف الاحتمالي."
+    },
+    {
+      "term": "head()",
+      "translation_ar": "دالة head()",
+      "definition": "تعرض أول عدة صفوف من البيانات.",
+      "details": "تستخدم لفحص شكل البيانات بسرعة."
+    },
+    {
+      "term": "shape",
+      "translation_ar": "أبعاد الشكل",
+      "definition": "خاصية تعرض عدد الصفوف والأعمدة.",
+      "details": "تستخدم لفهم حجم البيانات."
+    },
+    {
+      "term": "info()",
+      "translation_ar": "دالة info()",
+      "definition": "تعرض معلومات عامة عن البيانات.",
+      "details": "تشمل أنواع البيانات والقيم المفقودة."
+    },
+    {
+      "term": "Outliers",
+      "translation_ar": "القيم الشاذة",
+      "definition": "قيم بعيدة جدًا عن باقي البيانات.",
+      "details": "قد تؤثر على دقة النموذج."
+    },
+    {
+      "term": "ROC AUC Score",
+      "translation_ar": "مساحة تحت منحنى ROC",
+      "definition": "مقياس لتقييم قدرة النموذج على التمييز بين الفئات.",
+      "details": "كلما اقترب من 1 كان أفضل."
+    },
+    {
+      "term": "Confusion Matrix",
+      "translation_ar": "مصفوفة الالتباس",
+      "definition": "جدول يوضح أداء نموذج التصنيف.",
+      "details": "يعرض TP و TN و FP و FN."
+    },
+    {
+      "term": "Matrix Addition",
+      "translation_ar": "جمع المصفوفات",
+      "definition": "عملية جمع مصفوفتين لهما نفس الأبعاد بإضافة العناصر المناظرة.",
+      "details": "يتطلب أن تكون المصفوفات بنفس عدد الصفوف والأعمدة."
+    },
+    {
+      "term": "Matrix Subtraction",
+      "translation_ar": "طرح المصفوفات",
+      "definition": "عملية طرح مصفوفتين لهما نفس الأبعاد عن طريق طرح العناصر المناظرة.",
+      "details": "يجب أن تكون المصفوفات متطابقة في الحجم."
+    },
+    {
+      "term": "Scalar Multiplication",
+      "translation_ar": "الضرب القياسي للمصفوفة",
+      "definition": "ضرب كل عنصر في المصفوفة في قيمة ثابتة (Scalar).",
+      "details": "يتم تطبيق نفس القيمة على جميع عناصر المصفوفة."
+    },
+    {
+      "term": "Matrix Multiplication",
+      "translation_ar": "ضرب المصفوفات",
+      "definition": "عملية رياضية تعتمد على ضرب الصفوف في الأعمدة وفق شروط توافق الأبعاد.",
+      "details": "يتطلب أن يساوي عدد أعمدة المصفوفة الأولى عدد صفوف الثانية."
+    },
+    {
+      "term": "Transpose",
+      "translation_ar": "نقل المصفوفة",
+      "definition": "عملية تبديل الصفوف بالأعمدة في المصفوفة.",
+      "details": "تحول العنصر a[i][j] إلى a[j][i]."
+    },
+    {
+      "term": "Singular Matrix",
+      "translation_ar": "مصفوفة مفردة",
+      "definition": "مصفوفة يكون محددها يساوي صفر ولا تمتلك معكوسًا.",
+      "details": "غير قابلة للعكس (Non-invertible)."
+    },
+    {
+      "term": "Identity Matrix",
+      "translation_ar": "مصفوفة الوحدة",
+      "definition": "مصفوفة تحتوي على 1 في القطر الرئيسي و0 في باقي العناصر.",
+      "details": "تعمل كعنصر محايد في ضرب المصفوفات."
+    },
+    {
+      "term": "Zero Matrix",
+      "translation_ar": "مصفوفة الصفر",
+      "definition": "مصفوفة جميع عناصرها تساوي صفر.",
+      "details": "تعمل كعنصر صفري في العمليات الجبرية."
+    },
+    {
+      "term": "Vector",
+      "translation_ar": "متجه",
+      "definition": "مصفوفة أحادية البعد تمثل مجموعة من القيم العددية.",
+      "details": "تستخدم لتمثيل الاتجاه أو البيانات ذات البعد الواحد."
+    },
+    {
+      "term": "Cost Function",
+      "translation_ar": "دالة التكلفة",
+      "definition": "دالة تقيس مقدار الخطأ بين القيم المتوقعة والقيم الحقيقية.",
+      "details": "يتم تقليلها أثناء تدريب النماذج."
+    },
+    {
+      "term": "Gradient Descent",
+      "translation_ar": "الانحدار التدرجي",
+      "definition": "خوارزمية تحسين تُستخدم لتقليل دالة التكلفة بشكل تدريجي.",
+      "details": "تعمل عن طريق تحديث المعاملات باتجاه أقل قيمة للخطأ."
+    },
+    {
+      "term": "Parameter Optimization",
+      "translation_ar": "تحسين المعاملات",
+      "definition": "عملية تعديل معاملات النموذج للحصول على أفضل أداء.",
+      "details": "تُستخدم في تدريب نماذج تعلم الآلة."
+    },
+    {
+      "term": "Linear Equation",
+      "translation_ar": "معادلة خطية",
+      "definition": "معادلة تمثل علاقة خطية بين متغيرين أو أكثر.",
+      "details": "تمثل خطًا مستقيمًا عند الرسم البياني."
+    },
+    {
+      "term": "Straight Line",
+      "translation_ar": "خط مستقيم",
+      "definition": "خط هندسي ثابت الاتجاه لا يحتوي على انحناء.",
+      "details": "يمثل الشكل الأساسي للمعادلات الخطية."
+    },
+    {
+      "term": "Diagonal Matrix",
+      "translation_ar": "مصفوفة قطرية",
+      "definition": "مصفوفة تحتوي على عناصر غير صفرية فقط على القطر الرئيسي.",
+      "details": "جميع العناصر خارج القطر الرئيسي تساوي صفر."
+    },
+    {
+      "term": "Multivariable Linear Regression",
+      "translation_ar": "الانحدار الخطي متعدد المتغيرات",
+      "definition": "نموذج انحدار خطي يستخدم أكثر من متغير إدخال للتنبؤ بالقيمة الناتجة.",
+      "details": "يعتمد على دمج عدة features في معادلة واحدة للتنبؤ."
+    },
+    {
+      "term": "Hypothesis Function",
+      "translation_ar": "دالة الفرضية",
+      "definition": "الدالة التي تمثل النموذج الرياضي المستخدم للتنبؤ بالمخرجات.",
+      "details": "في الانحدار الخطي تكون على شكل h(x) = θ0 + θ1x1 + ... + θnxn."
+    },
+    {
+      "term": "Theta",
+      "translation_ar": "معاملات ثيتا",
+      "definition": "المعاملات (weights) التي تحدد تأثير كل feature في النموذج.",
+      "details": "يتم تعديلها أثناء التدريب لتقليل الخطأ."
+    },
+    {
+      "term": "Learning Rate",
+      "translation_ar": "معدل التعلم",
+      "definition": "قيمة تتحكم في حجم الخطوة أثناء تحديث المعاملات في خوارزمية التحسين.",
+      "details": "قيمة كبيرة قد تسبب divergence وقيمة صغيرة تسبب بطء التعلم."
+    },
+    {
+      "term": "Iteration",
+      "translation_ar": "تكرار",
+      "definition": "عملية واحدة من تحديث النموذج أثناء التدريب.",
+      "details": "عدد iterations يؤثر على سرعة التقارب ودقة النموذج."
+    },
+    {
+      "term": "Feature Scaling",
+      "translation_ar": "تحجيم الخصائص",
+      "definition": "عملية إعادة ضبط نطاق القيم لتكون ضمن مدى موحد.",
+      "details": "يساعد في تحسين أداء خوارزميات التحسين."
+    },
+    {
+      "term": "Polynomial Regression",
+      "translation_ar": "الانحدار متعدد الحدود",
+      "definition": "نموذج انحدار يستخدم حدود غير خطية مثل x² و x³ لتمثيل العلاقات.",
+      "details": "يستخدم لتمثيل العلاقات غير الخطية بين المتغيرات."
+    },
+    {
+      "term": "Normal Equation",
+      "translation_ar": "المعادلة الطبيعية",
+      "definition": "طريقة تحليلية لحساب معاملات الانحدار مباشرة دون استخدام التكرار.",
+      "details": "تعتمد على العمليات الجبرية والمصفوفات."
+    },
+    {
+      "term": "Convergence",
+      "translation_ar": "التقارب",
+      "definition": "حالة وصول خوارزمية التحسين إلى أقل قيمة ممكنة لدالة التكلفة.",
+      "details": "تعني استقرار القيم وعدم تغيرها بشكل كبير."
+    },
+    {
+      "term": "Divergence",
+      "translation_ar": "التباعد",
+      "definition": "حالة فشل الخوارزمية في الوصول إلى حل مستقر.",
+      "details": "غالبًا يحدث بسبب learning rate كبير جدًا."
+    },
+    {
+      "term": "Nonlinear Relationship",
+      "translation_ar": "علاقة غير خطية",
+      "definition": "علاقة بين متغيرين لا يمكن تمثيلها بخط مستقيم.",
+      "details": "تحتاج نماذج مثل polynomial regression لتمثيلها."
+    },
+    {
+      "term": "Direct Computation",
+      "translation_ar": "حساب مباشر",
+      "definition": "طريقة حساب القيم النهائية بدون خطوات تكرارية.",
+      "details": "مثل استخدام Normal Equation لحساب θ."
+    },
+    {
+      "term": "Update Step",
+      "translation_ar": "خطوة التحديث",
+      "definition": "العملية التي يتم فيها تعديل المعاملات أثناء التدريب.",
+      "details": "تعتمد على learning rate و gradient."
+    },
+    {
+      "term": "Parameter Update",
+      "translation_ar": "تحديث المعاملات",
+      "definition": "عملية تعديل قيم θ أثناء التدريب لتحسين النموذج.",
+      "details": "تتم بشكل متكرر في كل iteration."
+    },
+    {
+      "term": "Optimization Method",
+      "translation_ar": "طريقة تحسين",
+      "definition": "خوارزمية تستخدم لتقليل الخطأ وتحسين أداء النموذج.",
+      "details": "مثل Gradient Descent و Normal Equation."
+    },
+    {
+      "term": "Matrix Operations",
+      "translation_ar": "عمليات المصفوفات",
+      "definition": "عمليات رياضية تشمل الجمع والطرح والضرب والنقل.",
+      "details": "تستخدم بكثافة في تعلم الآلة."
+    },
+    {
+      "term": "Feature Input",
+      "translation_ar": "مدخلات الخصائص",
+      "definition": "المتغيرات التي يتم إدخالها إلى النموذج.",
+      "details": "تمثل x1, x2, ..., xn في النماذج."
+    },
+    {
+      "term": "Output Prediction",
+      "translation_ar": "الناتج المتوقع",
+      "definition": "القيمة التي يتوقعها النموذج بناءً على المدخلات.",
+      "details": "تمثل y-hat في نماذج الانحدار."
+    },
+    {
+      "term": "Cost Minimization",
+      "translation_ar": "تقليل التكلفة",
+      "definition": "عملية تقليل قيمة دالة الخطأ في النموذج.",
+      "details": "الهدف الأساسي في التدريب."
+    },
+    {
+      "term": "computationally",
+      "translation_ar": "حسابيًا / من ناحية المعالجة الحسابية",
+      "type": "adverb",
+      "difficulty_reason": "نادر الاستخدام في اللغة العامة ويظهر في السياق الأكاديمي"
+    },
+    {
+      "term": "iteratively",
+      "translation_ar": "بشكل تكراري",
+      "type": "adverb",
+      "difficulty_reason": "مصطلح أكاديمي يستخدم في الخوارزميات"
+    },
+    {
+      "term": "effectively",
+      "translation_ar": "بفعالية / بشكل فعّال",
+      "type": "adverb",
+      "difficulty_reason": "يستخدم بمعنى تقني غير مباشر في السياق العلمي"
+    },
+    {
+      "term": "significantly",
+      "translation_ar": "بشكل ملحوظ / بشكل كبير",
+      "type": "adverb",
+      "difficulty_reason": "يستخدم بكثرة في التحليل الإحصائي والأبحاث"
+    },
+    {
+      "term": "approximately",
+      "translation_ar": "تقريبًا",
+      "type": "adverb",
+      "difficulty_reason": "مصطلح علمي شائع في الحسابات التقريبية"
+    },
+    {
+      "term": "guarantee",
+      "translation_ar": "يضمن",
+      "type": "verb",
+      "difficulty_reason": "يستخدم أكاديميًا بمعنى رياضي صارم وليس يومي فقط"
+    },
+    {
+      "term": "determine",
+      "translation_ar": "يحدد",
+      "type": "verb",
+      "difficulty_reason": "يستخدم بكثرة في الرياضيات والعلوم بمعنى استنتاجي"
+    },
+    {
+      "term": "adjustment",
+      "translation_ar": "تعديل",
+      "type": "noun",
+      "difficulty_reason": "يستخدم في النماذج الرياضية بمعنى تقني"
+    },
+    {
+      "term": "magnitude",
+      "translation_ar": "مقدار / حجم",
+      "type": "noun",
+      "difficulty_reason": "مصطلح رياضي/فيزيائي غير مباشر الاستخدام"
+    },
+    {
+      "term": "implicitly",
+      "translation_ar": "ضمنيًا",
+      "type": "adverb",
+      "difficulty_reason": "يستخدم في الرياضيات بمعنى غير مباشر"
+    },
+    {
+      "term": "explicitly",
+      "translation_ar": "صراحة / بشكل مباشر",
+      "type": "adverb",
+      "difficulty_reason": "يستخدم في البرمجة والرياضيات بشكل خاص"
+    },
+    {
+      "term": "Quadratic",
+      "translation_ar": "من الدرجة الثانية",
+      "definition": "نوع من المعادلات متعددة الحدود ذات الحد الأعلى من الدرجة الثانية.",
+      "details": "مثل x^2."
+    },
+    {
+      "term": "Artificial Intelligence",
+      "translation_ar": "الذكاء الاصطناعي",
+      "definition": "مجال واسع يهدف إلى إنشاء أنظمة قادرة على محاكاة الذكاء البشري.",
+      "details": "يشمل فروعًا مثل تعلم الآلة، الروبوتات، والرؤية الحاسوبية."
+    },
+    {
+      "term": "Big Data",
+      "translation_ar": "البيانات الضخمة",
+      "definition": "مجموعات بيانات ضخمة ومعقدة يصعب معالجتها بالطرق التقليدية.",
+      "details": "أحد العوامل الرئيسية التي ساهمت في نجاح تعلم الآلة الحديث."
+    },
+    {
+      "term": "CNN",
+      "translation_ar": "الشبكات العصبية التلافيفية",
+      "definition": "نوع من الشبكات العصبية مصمم خصيصًا لمعالجة الصور والبيانات المكانية.",
+      "details": "تُستخدم على نطاق واسع في مهام معالجة الصور والرؤية الحاسوبية."
+    },
+    {
+      "term": "RNN",
+      "translation_ar": "الشبكات العصبية المتكررة",
+      "definition": "نوع من الشبكات العصبية مصمم لمعالجة البيانات المتسلسلة.",
+      "details": "تُستخدم في معالجة النصوص والسلاسل الزمنية."
+    },
+    {
+      "term": "GAN",
+      "translation_ar": "الشبكات التوليدية التنافسية",
+      "definition": "نموذج توليدي يتكون من شبكتين تتنافسان لإنشاء بيانات جديدة واقعية.",
+      "details": "تُستخدم في توليد الصور والنصوص والبيانات."
+    },
+    {
+      "term": "F1 Score",
+      "translation_ar": "مقياس F1",
+      "definition": "مقياس يجمع بين Precision و Recall في قيمة واحدة متوازنة.",
+      "details": "يُستخدم عندما يكون هناك عدم توازن بين الفئات."
+    },
+    {
+      "term": "Data Cleaning",
+      "translation_ar": "تنظيف البيانات",
+      "definition": "عملية إزالة القيم المفقودة والتكرارات والأخطاء من البيانات.",
+      "details": "خطوة أساسية في معالجة البيانات لتحسين جودة النموذج."
+    },
+    {
+      "term": "Data Quality",
+      "translation_ar": "جودة البيانات",
+      "definition": "مدى دقة واكتمال وموثوقية البيانات المستخدمة في النموذج.",
+      "details": "البيانات عالية الجودة تؤدي إلى أداء أفضل للنموذج."
+    },
+    {
+      "term": "Labeled Data",
+      "translation_ar": "البيانات المعنونة",
+      "definition": "بيانات تحتوي على أزواج مدخلات ومخرجات صحيحة معروفة مسبقًا.",
+      "details": "ضرورية في التعلم الموجّه (Supervised Learning)."
+    },
+    {
+      "term": "Training Data",
+      "translation_ar": "بيانات التدريب",
+      "definition": "مجموعة البيانات المستخدمة لتدريب النموذج وتعليمه الأنماط.",
+      "details": "يتم استخدام جزء من البيانات للتدريب وجزء آخر للاختبار."
+    },
+    {
+      "term": "Test Data",
+      "translation_ar": "بيانات الاختبار",
+      "definition": "مجموعة بيانات جديدة تُستخدم لتقييم قدرة النموذج على التعميم.",
+      "details": "تساعد في اكتشاف مشكلة فرط التكيّف (Overfitting)."
+    },
+    {
+      "term": "Generalization",
+      "translation_ar": "التعميم",
+      "definition": "قدرة النموذج على الأداء الجيد على بيانات جديدة لم يرها من قبل.",
+      "details": "الهدف الأساسي من تدريب النماذج، عكس الحفظ (Memorization)."
+    },
+    {
+      "term": "Memorization",
+      "translation_ar": "الحفظ / الاستذكار",
+      "definition": "عندما يحفظ النموذج بيانات التدريب بدلاً من تعلم الأنماط العامة.",
+      "details": "يؤدي إلى فرط التكيّف وضعف الأداء على البيانات الجديدة."
+    },
+    {
+      "term": "Data Dependency",
+      "translation_ar": "الاعتماد على البيانات",
+      "definition": "حاجة نماذج تعلم الآلة لكميات كبيرة من البيانات لتعمل بشكل جيد.",
+      "details": "أحد قيود تعلم الآلة الرئيسية."
+    },
+    {
+      "term": "Interpretability",
+      "translation_ar": "القابلية للتفسير",
+      "definition": "مدى قدرة الإنسان على فهم سبب اتخاذ النموذج لقرار معين.",
+      "details": "نقص القابلية للتفسير أحد تحديات تعلم الآلة."
+    },
+    {
+      "term": "Label Encoding",
+      "translation_ar": "الترميز بالتسميات",
+      "definition": "تقنية تحويل الفئات إلى أرقام صحيحة متسلسلة.",
+      "details": "قد تسبب علاقات ترتيبية غير مقصودة بين الفئات."
+    },
+    {
+      "term": "One-Hot Encoding",
+      "translation_ar": "الترميز الأحادي",
+      "definition": "تقنية إنشاء عمود ثنائي منفصل لكل فئة في البيانات الفئوية.",
+      "details": "تزيد عدد الخصائص لكنها تحافظ على استقلالية الفئات."
+    },
+    {
+      "term": "Frequency Encoding",
+      "translation_ar": "الترميز بالتكرار",
+      "definition": "تقنية استبدال كل فئة بعدد مرات ظهورها في البيانات.",
+      "details": "يستخدم التكرار أو النسبة المئوية لكل فئة."
+    },
+    {
+      "term": "Target Encoding",
+      "translation_ar": "الترميم بالهدف",
+      "definition": "تقنية استبدال الفئات بمتوسط قيمة الهدف لكل فئة.",
+      "details": "تُستخدم في معالجة البيانات الفئوية عالية الأبعاد."
+    },
+    {
+      "term": "Quantitative Data",
+      "translation_ar": "البيانات الكمية",
+      "definition": "بيانات يمكن قياسها رقميًا مثل الأرقام والقيم.",
+      "details": "تشمل البيانات المستمرة والمنفصلة."
+    },
+    {
+      "term": "Qualitative Data",
+      "translation_ar": "البيانات النوعية",
+      "definition": "بيانات فئوية غير رقمية تمثل تصنيفات أو تسميات.",
+      "details": "مثل الألوان (أحمر، أزرق، أخضر) والأنواع."
+    },
+    {
+      "term": "Continuous Data",
+      "translation_ar": "البيانات المستمرة",
+      "definition": "بيانات رقمية يمكن أن تأخذ أي قيمة ضمن نطاق معين.",
+      "details": "مثل الطول والوزن ودرجة الحرارة."
+    },
+    {
+      "term": "Categorical Variables",
+      "translation_ar": "المتغيرات الفئوية",
+      "definition": "متغيرات تأخذ قيمًا من مجموعة محدودة من الفئات.",
+      "details": "تحتاج إلى ترميز قبل إدخالها للنموذج."
+    },
+    {
+      "term": "Binary Variables",
+      "translation_ar": "المتغيرات الثنائية",
+      "definition": "متغيرات تأخذ قيمتين فقط (0 أو 1).",
+      "details": "تُستخدم في تمثيل الفئات الثنائية مثل نعم/لا."
+    },
+    {
+      "term": "Class Separability",
+      "translation_ar": "قابلية فصل الفئات",
+      "definition": "مدى قدرة النموذج على التمييز والفصل بين الفئات المختلفة.",
+      "details": "يُقاس بمقياس ROC AUC."
+    },
+    {
+      "term": "Negative Gradient",
+      "translation_ar": "التدرج السالب",
+      "definition": "اتجاه عكس التدرج الذي يتحرك نحوه Gradient Descent لتقليل الخطأ.",
+      "details": "يتم تحديث المعاملات في اتجاه التدرج السالب."
+    },
+    {
+      "term": "Neural Network Layers",
+      "translation_ar": "طبقات الشبكة العصبية",
+      "definition": "مستويات متعددة من الخلايا العصبية في الشبكات العميقة.",
+      "details": "التعلم العميق يستخدم شبكات متعددة الطبقات لمعالجة البيانات المعقدة."
+    },
+    {
+      "term": "Ordinal Relationships",
+      "translation_ar": "العلاقات الترتيبية",
+      "definition": "علاقات ترتيبية غير مقصودة بين الفئات عند استخدام Label Encoding.",
+      "details": "مشكلة قد تنتج عند ترميز فئات لا يوجد بينها ترتيب طبيعي."
+    },
+    {
+      "term": "TPR",
+      "translation_ar": "معدل الإيجابيات الحقيقية",
+      "definition": "نسبة الحالات الإيجابية التي تم اكتشافها بشكل صحيح.",
+      "details": "مرادف لـ Recall و Sensitivity."
+    },
+    {
+      "term": "Determinant",
+      "translation_ar": "المحدد",
+      "definition": "قيمة عددية تُحسب من عناصر المصفوفة المربعة.",
+      "details": "المصفوفة المفردة محددها يساوي صفر ولا تمتلك معكوسًا."
+    },
+    {
+      "term": "Non-invertible",
+      "translation_ar": "غير قابلة للعكس",
+      "definition": "مصفوفة لا تملك معكوسًا (محددها يساوي صفر).",
+      "details": "تُعرف أيضًا بالمصفوفة المفردة (Singular Matrix)."
+    },
+    {
+      "term": "Dependent Variables",
+      "translation_ar": "المتغيرات التابعة",
+      "definition": "المتغيرات التي يتم التنبؤ بها بناءً على المتغيرات المستقلة.",
+      "details": "في الانحدار الخطي تمثل القيمة y."
+    },
+    {
+      "term": "Nonlinear Terms",
+      "translation_ar": "الحدود غير الخطية",
+      "definition": "حدود في المعادلة ذات أسس أعلى من 1 مثل x² و x³.",
+      "details": "تُستخدم في الانحدار متعدد الحدود لتمثيل العلاقات غير الخطية."
+    },
+    {
+      "term": "Alpha",
+      "translation_ar": "ألفا (معدل التعلم)",
+      "definition": "اسم المعامل الذي يتحكم في حجم خطوة التحديث في Gradient Descent.",
+      "details": "قيمة كبيرة تسبب التباعد وقيمة صغيرة تسبب بطء التعلم."
+    },
+    {
+      "term": "Data Splitting",
+      "translation_ar": "تقسيم البيانات",
+      "definition": "عملية تقسيم البيانات إلى مجموعات تدريب واختبار.",
+      "details": "خطوة مهمة في تقييم أداء النموذج."
+    },
+    {
+      "term": "Correlation",
+      "translation_ar": "الارتباط",
+      "definition": "مقياس قوة واتجاه العلاقة بين متغيرين.",
+      "details": "يُستخدم في تحليل البيانات لفهم العلاقات بين الخصائص."
+    },
+    {
+      "term": "Skewness",
+      "translation_ar": "الالتواء / الانحراف",
+      "definition": "مقياس لعدم تماثل توزيع البيانات حول المتوسط.",
+      "details": "يُستخدم في التحليل الإحصائي للبيانات."
+    },
+    {
+      "term": "Specificity",
+      "translation_ar": "النوعية",
+      "definition": "قدرة النموذج على التعرف على الحالات السلبية الحقيقية.",
+      "details": "مكمل لـ Recall (الحساسية) في تقييم النماذج."
+    },
+    {
+      "term": "Slope",
+      "translation_ar": "الميل",
+      "definition": "معامل y = mx + b الذي يحدد ميل الخط المستقيم.",
+      "details": "في الانحدار الخطي يمثل تأثير المتغير المستقل."
+    },
+    {
+      "term": "Intercept",
+      "translation_ar": "القاطع",
+      "definition": "النقطة التي يقطع فيها الخط المستقيم محور Y.",
+      "details": "في y = mx + b هو الثابت b."
+    },
+    {
+      "term": "Cost Function Minimization",
+      "translation_ar": "تقليل دالة التكلفة",
+      "definition": "الهدف الأساسي في تدريب النماذج لتقليل الخطأ.",
+      "details": "يتم باستخدام خوارزميات مثل Gradient Descent."
+    },
+    {
+      "term": "Analytical Method",
+      "translation_ar": "الطريقة التحليلية",
+      "definition": "طريقة حل مباشرة بدون خطوات تكرارية.",
+      "details": "مثل Normal Equation التي تحسب θ مباشرة."
+    },
+    {
+      "term": "Kaggle",
+      "translation_ar": "كاجل",
+      "definition": "منصة شهيرة توفر مجموعات بيانات عامة لمشاريع تعلم الآلة.",
+      "details": "مصدر موثوق للحصول على بيانات للتدريب والاختبار."
+    },
+    {
+      "term": "UCI",
+      "translation_ar": "مستودع UCI للبيانات",
+      "definition": "مستودع أكاديمي يحتوي على مجموعات بيانات متنوعة.",
+      "details": "مصدر موثوق وواسع الاستخدام في أبحاث تعلم الآلة."
+    },
+    {
+      "term": "Input-Output Pairs",
+      "translation_ar": "أزواج المدخلات والمخرجات",
+      "definition": "بيانات التدريب التي تحتوي على المدخلات والمخرجات الصحيحة.",
+      "details": "أساسية في التعلم الموجّه."
+    },
+    {
+      "term": "Production Environment",
+      "translation_ar": "بيئة الإنتاج",
+      "definition": "البيئة الحقيقية التي يُنشر فيها النموذج للاستخدام الفعلي.",
+      "details": "المرحلة الأخيرة بعد بناء وتقييم النموذج."
+    }
+  ]
+}
