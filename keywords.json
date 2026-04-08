@@ -1582,12 +1582,42 @@
       "term": "STRIDE",
       "translation_ar": "سترايد",
       "definition": "إطار عمل لنمذجة التهديدات الأمنية.",
-      "details": "يمثل: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege."
+      "details": "يمثل: التزييف، التلاعب، الإنكار، كشف المعلومات، رفض الخدمة، رفع الصلاحيات."
+    },
+    {
+      "term": "STRIDE \"S\"",
+      "translation_ar": "سترايد \"س\"",
+      "definition": "حرف S في STRIDE يمثل التزييف.",
+      "details": "التزييف يتضمن التظاهر بأنك مستخدم أو نظام آخر."
+    },
+    {
+      "term": "STRIDE \"C\"",
+      "translation_ar": "سترايد \"ت\"",
+      "definition": "حرف C في STRIDE يمثل التلاعب.",
+      "details": "التلاعب يتضمن تعديل غير مصرح به للبيانات أو الأنظمة."
+    },
+    {
+      "term": "STRIDE \"R\"",
+      "translation_ar": "سترايد \"ر\"",
+      "definition": "حرف R في STRIDE يمثل الإنكار.",
+      "details": "الإنكار يتضمن إنكار تنفيذ إجراء معين."
+    },
+    {
+      "term": "STRIDE \"I\"",
+      "translation_ar": "سترايد \"ع\"",
+      "definition": "حرف I في STRIDE يمثل كشف المعلومات.",
+      "details": "كشف المعلومات يتضمن الوصول غير المصرح به للبيانات."
+    },
+    {
+      "term": "STRIDE \"E\"",
+      "translation_ar": "سترايد \"ص\"",
+      "definition": "حرف E في STRIDE يمثل رفع الصلاحيات.",
+      "details": "رفع الصلاحيات يتضمن الحصول على صلاحيات أعلى."
     },
     {
       "term": "STRIDE \"D\"",
       "translation_ar": "سترايد \"د\"",
-      "definition": "حرف D في STRIDE يمثل Denial of Service.",
+      "definition": "حرف D في STRIDE يمثل رفض الخدمة.",
       "details": "هجمات رفض الخدمة تهدف إلى جعل الموارد غير متاحة."
     },
     {
