@@ -565,9 +565,6 @@ const SyntaxHighlighter = (() => {
 const ProgressManager = (() => {
   const updateProgress = () => {
     const state = AppState.get();
-    let totalAnswered = 0;
-    let totalQuestions = 0;
-    let totalCorrect = 0;
 
     const categories = ['true_false', 'mcq', 'short_answer', 'code', 'code_analysis', 'fill_in_the_blank'];
 
@@ -575,55 +572,24 @@ const ProgressManager = (() => {
       const questions = state.questions[cat] || [];
       const progress = AppState.getProgress(cat);
       const answered = Object.keys(progress).length;
-      
-      totalAnswered += answered;
-      totalQuestions += questions.length;
 
-      // Count correct
-      Object.values(progress).forEach(p => {
-        if (p.correct) totalCorrect++;
-      });
+      // Update dashboard rings (only if category has questions)
+      if (questions.length > 0) {
+        const ringId = cat === 'true_false' ? 'tf' : cat === 'mcq' ? 'mcq' : cat === 'short_answer' ? 'sa' : cat === 'code' ? 'code' : cat === 'code_analysis' ? 'ca' : 'fib';
+        const ringEl = document.getElementById(`${ringId}Ring`);
+        const ringTextEl = document.getElementById(`${ringId}RingText`);
+        const answeredEl = document.getElementById(`${ringId}Answered`);
+        const totalEl = document.getElementById(`${ringId}Total`);
 
-      // Update dashboard rings
-      const ringId = cat === 'true_false' ? 'tf' : cat === 'mcq' ? 'mcq' : cat === 'short_answer' ? 'sa' : cat === 'code' ? 'code' : cat === 'code_analysis' ? 'ca' : 'fib';
-      const ringEl = document.getElementById(`${ringId}Ring`);
-      const ringTextEl = document.getElementById(`${ringId}RingText`);
-      const answeredEl = document.getElementById(`${ringId}Answered`);
-      const totalEl = document.getElementById(`${ringId}Total`);
-
-      if (ringEl && questions.length > 0) {
-        const percent = Math.round((answered / questions.length) * 100);
-        ringEl.setAttribute('stroke-dasharray', `${percent}, 100`);
-        ringTextEl.textContent = `${percent}%`;
+        if (ringEl && questions.length > 0) {
+          const percent = Math.round((answered / questions.length) * 100);
+          ringEl.setAttribute('stroke-dasharray', `${percent}, 100`);
+          ringTextEl.textContent = `${percent}%`;
+        }
+        if (answeredEl) answeredEl.textContent = answered;
+        if (totalEl) totalEl.textContent = questions.length;
       }
-      if (answeredEl) answeredEl.textContent = answered;
-      if (totalEl) totalEl.textContent = questions.length;
     });
-
-    // Update progress bar
-    const percent = totalQuestions > 0 ? Math.round((totalAnswered / totalQuestions) * 100) : 0;
-    const progressFill = document.getElementById('progressFill');
-    const progressValue = document.getElementById('progressValue');
-    const answeredCount = document.getElementById('answeredCount');
-    const totalCount = document.getElementById('totalCount');
-    const correctCount = document.getElementById('correctCount');
-
-    if (progressFill) progressFill.style.width = `${percent}%`;
-    if (progressValue) progressValue.textContent = `${percent}%`;
-    if (answeredCount) answeredCount.textContent = totalAnswered;
-    if (totalCount) totalCount.textContent = totalQuestions;
-    if (correctCount) correctCount.textContent = totalCorrect;
-
-    // Accuracy
-    const accuracyEl = document.getElementById('accuracyValue');
-    const completedEl = document.getElementById('completedValue');
-    if (accuracyEl) {
-      const accuracy = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
-      accuracyEl.textContent = `${accuracy}%`;
-    }
-    if (completedEl) {
-      completedEl.textContent = `${totalAnswered} / ${totalQuestions}`;
-    }
   };
 
   return { updateProgress };
@@ -2259,6 +2225,13 @@ const UIManager = (() => {
 const NavigationManager = (() => {
   const switchCategory = (category) => {
     const state = AppState.get();
+    
+    // Don't switch to a category with no questions
+    if (!state.questions[category] || state.questions[category].length === 0) {
+      console.warn(`[NavigationManager] Cannot switch to empty category: ${category}`);
+      return;
+    }
+    
     state.currentCategory = category;
 
     // Update tabs
@@ -2290,6 +2263,12 @@ const NavigationManager = (() => {
   const renderCategory = (category) => {
     const state = AppState.get();
     const questions = state.questions[category];
+
+    // Don't render if no questions exist for this category
+    if (!questions || questions.length === 0) {
+      console.warn(`[NavigationManager] No questions found for category: ${category}`);
+      return;
+    }
 
     switch (category) {
       case 'true_false':
@@ -2449,50 +2428,97 @@ const App = (() => {
     state.questions.code_analysis = data.code_analysis || [];
     state.questions.fill_in_the_blank = data.fill_in_the_blank || [];
 
-    // Update counts and hide empty question type tabs
-    const categoryTabMap = {
-      true_false: { countId: 'tfCount', tabSelector: '[data-category="true_false"]' },
-      mcq: { countId: 'mcqCount', tabSelector: '[data-category="mcq"]' },
-      short_answer: { countId: 'saCount', tabSelector: '[data-category="short_answer"]' },
-      code: { countId: 'codeCount', tabSelector: '[data-category="code"]' },
-      code_analysis: { countId: 'caCount', tabSelector: '[data-category="code_analysis"]' },
-      fill_in_the_blank: { countId: 'fibCount', tabSelector: '[data-category="fill_in_the_blank"]' }
+    // Update counts and hide empty question type tabs, dashboard cards, and sections
+    const categoryMap = {
+      true_false: { 
+        countId: 'tfCount', 
+        tabSelector: '[data-category="true_false"]',
+        dashboardCardId: 'dashboardCardTF',
+        sectionId: 'trueFalseSection'
+      },
+      mcq: { 
+        countId: 'mcqCount', 
+        tabSelector: '[data-category="mcq"]',
+        dashboardCardId: 'dashboardCardMCQ',
+        sectionId: 'mcqSection'
+      },
+      short_answer: { 
+        countId: 'saCount', 
+        tabSelector: '[data-category="short_answer"]',
+        dashboardCardId: 'dashboardCardSA',
+        sectionId: 'shortAnswerSection'
+      },
+      code: { 
+        countId: 'codeCount', 
+        tabSelector: '[data-category="code"]',
+        dashboardCardId: 'dashboardCardCode',
+        sectionId: 'codeSection'
+      },
+      code_analysis: { 
+        countId: 'caCount', 
+        tabSelector: '[data-category="code_analysis"]',
+        dashboardCardId: 'dashboardCardCA',
+        sectionId: 'codeAnalysisSection'
+      },
+      fill_in_the_blank: { 
+        countId: 'fibCount', 
+        tabSelector: '[data-category="fill_in_the_blank"]',
+        dashboardCardId: 'dashboardCardFIB',
+        sectionId: 'fibSection'
+      }
     };
 
     const availableCategories = [];
 
-    Object.entries(categoryTabMap).forEach(([category, ids]) => {
+    Object.entries(categoryMap).forEach(([category, ids]) => {
       const questions = state.questions[category] || [];
       const countEl = document.getElementById(ids.countId);
       const tabEl = document.querySelector(ids.tabSelector);
+      const dashboardCard = document.getElementById(ids.dashboardCardId);
+      const section = document.getElementById(ids.sectionId);
 
       if (countEl) {
         countEl.textContent = questions.length;
       }
 
-      // Hide tab if no questions exist for this category
+      // Hide tab, dashboard card, and section if no questions exist
+      const isEmpty = questions.length === 0;
+      
       if (tabEl) {
-        if (questions.length === 0) {
-          tabEl.style.display = 'none';
-        } else {
-          tabEl.style.display = '';
-          availableCategories.push(category);
-        }
+        tabEl.style.display = isEmpty ? 'none' : '';
+      }
+      
+      if (dashboardCard) {
+        dashboardCard.style.display = isEmpty ? 'none' : '';
+      }
+      
+      if (section) {
+        section.style.display = isEmpty ? 'none' : '';
+      }
+
+      if (!isEmpty) {
+        availableCategories.push(category);
       }
     });
 
-    // If current category is empty, switch to first available category
-    if (!state.questions[state.currentCategory] || state.questions[state.currentCategory].length === 0) {
-      if (availableCategories.length > 0) {
-        state.currentCategory = availableCategories[0];
-      }
+    // Force current category to first available if it's empty or doesn't exist
+    const currentQuestions = state.questions[state.currentCategory] || [];
+    if (currentQuestions.length === 0 && availableCategories.length > 0) {
+      const oldCategory = state.currentCategory;
+      state.currentCategory = availableCategories[0];
+      console.log(`[App] Switched from empty category "${oldCategory}" to "${state.currentCategory}"`);
+    } else if (currentQuestions.length === 0 && availableCategories.length === 0) {
+      console.warn('[App] No questions found for any category!');
     }
+
+    console.log(`[App] Starting with category: ${state.currentCategory} (${state.questions[state.currentCategory]?.length || 0} questions)`);
 
     // Apply saved preferences
     UIManager.applyTheme(state.preferences.theme);
     UIManager.applyLanguage(state.preferences.language);
 
-    // Render initial category
+    // Switch to initial category (updates tabs and shows section)
+    NavigationManager.switchCategory(state.currentCategory);
     NavigationManager.renderCategory(state.currentCategory);
     ProgressManager.updateProgress();
 
@@ -2561,42 +2587,6 @@ const App = (() => {
 
     document.getElementById('shortcutsClose').addEventListener('click', () => {
       document.getElementById('shortcutsModal').classList.add('hidden');
-    });
-
-    // Reset All Progress
-    document.getElementById('resetAllBtn').addEventListener('click', () => {
-      const state = AppState.get();
-      const isArabic = state.preferences.language === 'ar';
-      const message = isArabic ? 'هل أنت متأكد من إعادة تعيين كل التقدم؟' : 'Are you sure you want to reset all progress?';
-      
-      if (confirm(message)) {
-        // Temporarily disable auto-marking for Code module
-        CodeModule.disableAutoMark();
-        
-        // Clear localStorage and in-memory progress
-        AppState.resetAllProgress();
-        
-        // Also clear the in-memory state
-        state.progress = {
-          true_false: {},
-          mcq: {},
-          short_answer: {},
-          code: {},
-          code_analysis: {},
-          fill_in_the_blank: {}
-        };
-        
-        // Re-render current category to reset all UI states
-        NavigationManager.renderCategory(state.currentCategory);
-        
-        // Force progress update after render completes
-        ProgressManager.updateProgress();
-        
-        // Re-enable auto-marking for future interactions
-        setTimeout(() => {
-          CodeModule.enableAutoMark();
-        }, 200);
-      }
     });
 
     // True/False controls

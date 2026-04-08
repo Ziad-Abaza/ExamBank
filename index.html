@@ -113,31 +113,6 @@
     </button>
   </nav>
 
-  <!-- Progress Bar -->
-  <div class="progress-section">
-    <div class="progress-container">
-      <div class="progress-info">
-        <span class="progress-label" data-en="Session Progress" data-ar="تقدم الجلسة">Session Progress</span>
-        <span class="progress-value" id="progressValue">0%</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-      <div class="progress-stats">
-        <span class="stat" data-en="Answered" data-ar="تمت الإجابة">Answered: <strong id="answeredCount">0</strong></span>
-        <span class="stat" data-en="Total" data-ar="المجموع">Total: <strong id="totalCount">0</strong></span>
-        <span class="stat" data-en="Correct" data-ar="صحيح">Correct: <strong id="correctCount">0</strong></span>
-        <button class="btn btn-secondary reset-all-btn" id="resetAllBtn" data-en="Reset All Progress" data-ar="إعادة تعيين كل التقدم">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="1 4 1 10 7 10"/>
-            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
-          </svg>
-          Reset All Progress
-        </button>
-      </div>
-    </div>
-  </div>
-
   <!-- Main Content -->
   <main class="main-content">
     <!-- True/False Section -->
@@ -271,7 +246,7 @@
       </div>
       <div class="modal-body">
         <div class="dashboard-grid">
-          <div class="dashboard-card">
+          <div class="dashboard-card" id="dashboardCardTF">
             <h4 class="card-title" data-en="True / False" data-ar="صحيح / خطأ">True / False</h4>
             <div class="card-progress">
               <div class="progress-ring">
@@ -284,7 +259,7 @@
               <p class="card-stats"><span id="tfAnswered">0</span> / <span id="tfTotal">0</span></p>
             </div>
           </div>
-          <div class="dashboard-card">
+          <div class="dashboard-card" id="dashboardCardMCQ">
             <h4 class="card-title" data-en="Multiple Choice" data-ar="اختيار من متعدد">Multiple Choice</h4>
             <div class="card-progress">
               <div class="progress-ring">
@@ -297,7 +272,7 @@
               <p class="card-stats"><span id="mcqAnswered">0</span> / <span id="mcqTotal">0</span></p>
             </div>
           </div>
-          <div class="dashboard-card">
+          <div class="dashboard-card" id="dashboardCardSA">
             <h4 class="card-title" data-en="Short Answer" data-ar="إجابة قصيرة">Short Answer</h4>
             <div class="card-progress">
               <div class="progress-ring">
@@ -310,7 +285,7 @@
               <p class="card-stats"><span id="saAnswered">0</span> / <span id="saTotal">0</span></p>
             </div>
           </div>
-          <div class="dashboard-card">
+          <div class="dashboard-card" id="dashboardCardCode">
             <h4 class="card-title" data-en="Code" data-ar="البرمجة">Code</h4>
             <div class="card-progress">
               <div class="progress-ring">
@@ -323,7 +298,7 @@
               <p class="card-stats"><span id="codeAnswered">0</span> / <span id="codeTotal">0</span></p>
             </div>
           </div>
-          <div class="dashboard-card">
+          <div class="dashboard-card" id="dashboardCardCA">
             <h4 class="card-title" data-en="Code Analysis" data-ar="تحليل الكود">Code Analysis</h4>
             <div class="card-progress">
               <div class="progress-ring">
@@ -336,7 +311,7 @@
               <p class="card-stats"><span id="caAnswered">0</span> / <span id="caTotal">0</span></p>
             </div>
           </div>
-          <div class="dashboard-card">
+          <div class="dashboard-card" id="dashboardCardFIB">
             <h4 class="card-title" data-en="Fill in the Blank" data-ar="املأ الفراغ">Fill in the Blank</h4>
             <div class="card-progress">
               <div class="progress-ring">
@@ -348,17 +323,6 @@
               </div>
               <p class="card-stats"><span id="fibAnswered">0</span> / <span id="fibTotal">0</span></p>
             </div>
-          </div>
-        </div>
-        <div class="overall-stats">
-          <h4 class="stats-title" data-en="Overall Performance" data-ar="الأداء العام">Overall Performance</h4>
-          <div class="stats-row">
-            <span class="stats-label" data-en="Accuracy" data-ar="الدقة">Accuracy</span>
-            <span class="stats-value" id="accuracyValue">0%</span>
-          </div>
-          <div class="stats-row">
-            <span class="stats-label" data-en="Questions Completed" data-ar="الأسئلة المكتملة">Questions Completed</span>
-            <span class="stats-value" id="completedValue">0 / 0</span>
           </div>
         </div>
       </div>
