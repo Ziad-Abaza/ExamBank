@@ -1178,6 +1178,145 @@ html[dir="rtl"] .translate-tooltip {
   color: var(--color-text-tertiary);
 }
 
+/* --- Code Analysis --- */
+.code-analysis-card {
+  border-left: 4px solid var(--color-accent);
+}
+
+.code-analysis-code-block {
+  margin-top: var(--space-6);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--code-bg);
+}
+
+.code-analysis-code-display {
+  display: flex;
+  overflow: auto;
+  max-height: 400px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--code-scrollbar-thumb) var(--code-scrollbar-track);
+}
+
+.code-analysis-code-display::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.code-analysis-code-display::-webkit-scrollbar-track {
+  background: var(--code-scrollbar-track);
+}
+
+.code-analysis-code-display::-webkit-scrollbar-thumb {
+  background: var(--code-scrollbar-thumb);
+  border-radius: 5px;
+}
+
+.code-analysis-code-display::-webkit-scrollbar-thumb:hover {
+  background: var(--code-scrollbar-thumb-hover);
+}
+
+.code-analysis-code-display .code-line-numbers {
+  padding: var(--space-4) 0;
+  background: var(--code-bg-deeper);
+  color: var(--code-line-num-text);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  line-height: 1.7;
+  text-align: right;
+  user-select: none;
+  min-width: 50px;
+  padding-right: var(--space-3);
+  padding-left: var(--space-3);
+  border-right: 1px solid var(--color-border);
+  white-space: pre;
+}
+
+.code-analysis-highlighted {
+  margin: 0;
+  padding: var(--space-4);
+  background: transparent;
+  color: var(--code-text);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  line-height: 1.7;
+  white-space: pre;
+  overflow: visible;
+  flex: 1;
+}
+
+.code-analysis-answer-section {
+  margin-top: var(--space-6);
+}
+
+.code-analysis-answer-section .show-answer-btn {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.code-analysis-answer-section .model-answer {
+  padding: var(--space-5);
+  background: var(--color-success-light);
+  border: 2px solid var(--color-success-border);
+  border-radius: var(--radius-lg);
+  animation: slideDown var(--transition-base);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 2000px;
+    transform: translateY(0);
+  }
+}
+
+.code-analysis-answer-section .model-answer-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-success);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.code-analysis-answer-section .model-answer-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  white-space: pre-wrap;
+}
+
+.code-analysis-answer-section .explanation {
+  padding: var(--space-4);
+  background: var(--color-accent-light);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-4);
+}
+
+.code-analysis-answer-section .explanation-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.code-analysis-answer-section .explanation-text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
 /* --- Fill in the Blank --- */
 .fib-input-group {
   display: flex;
@@ -3208,6 +3347,45 @@ html[dir="rtl"] .translate-tooltip {
     font-size: 12px;
     min-height: 50px;
     line-height: 1.6;
+  }
+
+  /* Code Analysis — compact code block */
+  .code-analysis-code-block {
+    margin-top: var(--space-4);
+  }
+
+  .code-analysis-code-display {
+    max-height: 300px;
+  }
+
+  .code-analysis-code-display .code-line-numbers {
+    min-width: 40px;
+    font-size: 11px;
+    padding: var(--space-3) 4px;
+  }
+
+  .code-analysis-highlighted {
+    font-size: 12px;
+    padding: var(--space-3);
+    line-height: 1.6;
+  }
+
+  .code-analysis-answer-section .show-answer-btn {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-sm);
+  }
+
+  .code-analysis-answer-section .model-answer {
+    padding: var(--space-4);
+  }
+
+  .code-analysis-answer-section .model-answer-label {
+    font-size: 11px;
+  }
+
+  .code-analysis-answer-section .model-answer-text {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
   }
 
   /* Dashboard — single column */

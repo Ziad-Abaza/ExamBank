@@ -13,6 +13,7 @@ const AppState = (() => {
       mcq: [],
       short_answer: [],
       code: [],
+      code_analysis: [],
       fill_in_the_blank: []
     },
     currentCategory: 'true_false',
@@ -21,6 +22,7 @@ const AppState = (() => {
       mcq: {},
       short_answer: {},
       code: {},
+      code_analysis: {},
       fill_in_the_blank: {}
     },
     preferences: {
@@ -83,6 +85,7 @@ const AppState = (() => {
       mcq: {},
       short_answer: {},
       code: {},
+      code_analysis: {},
       fill_in_the_blank: {}
     };
     saveToStorage();
@@ -566,7 +569,7 @@ const ProgressManager = (() => {
     let totalQuestions = 0;
     let totalCorrect = 0;
 
-    const categories = ['true_false', 'mcq', 'short_answer', 'code', 'fill_in_the_blank'];
+    const categories = ['true_false', 'mcq', 'short_answer', 'code', 'code_analysis', 'fill_in_the_blank'];
 
     categories.forEach(cat => {
       const questions = state.questions[cat] || [];
@@ -582,7 +585,7 @@ const ProgressManager = (() => {
       });
 
       // Update dashboard rings
-      const ringId = cat === 'true_false' ? 'tf' : cat === 'mcq' ? 'mcq' : cat === 'short_answer' ? 'sa' : cat === 'code' ? 'code' : 'fib';
+      const ringId = cat === 'true_false' ? 'tf' : cat === 'mcq' ? 'mcq' : cat === 'short_answer' ? 'sa' : cat === 'code' ? 'code' : cat === 'code_analysis' ? 'ca' : 'fib';
       const ringEl = document.getElementById(`${ringId}Ring`);
       const ringTextEl = document.getElementById(`${ringId}RingText`);
       const answeredEl = document.getElementById(`${ringId}Answered`);
@@ -2072,6 +2075,145 @@ const CodeModule = (() => {
 })();
 
 // ========================================
+// 8b. CODE ANALYSIS MODULE
+// ========================================
+const CodeAnalysisModule = (() => {
+  const render = (questions) => {
+    const container = document.getElementById('caQuestions');
+    container.innerHTML = '';
+
+    questions.forEach((q, index) => {
+      const progress = AppState.getProgress('code_analysis');
+      const answered = progress[q.id];
+      const state = AppState.get();
+      const isArabic = state.preferences.language === 'ar';
+      const questionText = isArabic && q.question_ar ? q.question_ar : q.question_en;
+
+      // Detect code language
+      const lang = detectLanguage(q.code);
+      const { html, lineCount } = SyntaxHighlighter.highlight(q.code);
+      const lineNumbersHtml = buildLineNumbers(lineCount);
+
+      const card = document.createElement('div');
+      card.className = `question-card code-analysis-card${answered ? ' answered' : ''}`;
+      card.id = `ca-${q.id}`;
+
+      card.innerHTML = `
+        <div class="question-header">
+          <span class="question-number">Question ${index + 1}</span>
+          ${q.question_ar && q.question_en ? `
+            <span class="translate-icon" title="${isArabic ? 'عرض بالإنجليزية' : 'عرض بالعربية'}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span class="translate-tooltip">${Utils.escapeHtml(isArabic ? q.question_en : q.question_ar)}</span>
+            </span>
+          ` : ''}
+        </div>
+        <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(questionText))}</p>
+        
+        <!-- Code Display -->
+        <div class="code-analysis-code-block">
+          <div class="code-panel-header">
+            <div class="code-panel-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="code-lang-label">${lang}</span>
+          </div>
+          <div class="code-analysis-code-display">
+            <div class="code-line-numbers">${lineNumbersHtml}</div>
+            <pre class="code-analysis-highlighted">${html}</pre>
+          </div>
+        </div>
+
+        <!-- Answer Section -->
+        <div class="code-analysis-answer-section">
+          <button class="btn btn-primary show-answer-btn" ${answered ? 'style="display:none"' : ''}>
+            ${isArabic ? 'إظهار الإجابة' : 'Show Answer'}
+          </button>
+          
+          <div class="model-answer-container" style="display:${answered ? 'block' : 'none'}">
+            <div class="model-answer">
+              <div class="model-answer-label">${isArabic ? 'الإجابة' : 'Answer'}</div>
+              <div class="model-answer-text">${Utils.highlightKeywords(Utils.escapeHtml(q.answer))}</div>
+            </div>
+            ${q.explanation ? `
+              <div class="explanation" style="margin-top: 12px;">
+                <div class="explanation-label">${isArabic ? 'الشرح' : 'Explanation'}</div>
+                <div class="explanation-text">${Utils.highlightKeywords(Utils.escapeHtml(q.explanation))}</div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+
+      // Handle answered state
+      if (answered) {
+        const showBtn = card.querySelector('.show-answer-btn');
+        if (showBtn) showBtn.style.display = 'none';
+        const modelContainer = card.querySelector('.model-answer-container');
+        modelContainer.style.display = 'block';
+      }
+
+      // Show answer button handler
+      const showBtn = card.querySelector('.show-answer-btn');
+      const modelContainer = card.querySelector('.model-answer-container');
+
+      showBtn?.addEventListener('click', () => {
+        if (!answered) {
+          AppState.setProgress('code_analysis', q.id, { viewed: true, correct: true });
+          card.classList.add('answered');
+        }
+
+        modelContainer.style.display = 'block';
+        showBtn.style.display = 'none';
+
+        ProgressManager.updateProgress();
+      });
+    });
+
+    // Initialize keyword tooltips
+    Utils.initKeywordTooltips(container);
+  };
+
+  /** Detect language from code content */
+  const detectLanguage = (code) => {
+    if (/import\s+pandas|import\s+matplotlib|import\s+seaborn|import\s+numpy|def\s+\w+|print\(|plt\./i.test(code)) return 'Python';
+    if (/console\.|document\.|let\s+|const\s+|var\s+|function\s+|=>|alert\(/i.test(code)) return 'JavaScript';
+    return 'Code';
+  };
+
+  /** Generate line numbers HTML */
+  const buildLineNumbers = (count) => {
+    let html = '';
+    for (let i = 1; i <= count; i++) {
+      html += `${i}\n`;
+    }
+    return html;
+  };
+
+  const shuffle = () => {
+    const container = document.getElementById('caQuestions');
+    const cards = Array.from(container.children);
+    Utils.shuffle(cards).forEach(card => container.appendChild(card));
+  };
+
+  const reset = () => {
+    AppState.resetProgress('code_analysis');
+    const state = AppState.get();
+    render(state.questions.code_analysis);
+    ProgressManager.updateProgress();
+  };
+
+  return { render, shuffle, reset };
+})();
+
+// ========================================
 // 9. THEME & LANGUAGE MANAGER
 // ========================================
 const UIManager = (() => {
@@ -2135,6 +2277,7 @@ const NavigationManager = (() => {
       mcq: 'mcqSection',
       short_answer: 'shortAnswerSection',
       code: 'codeSection',
+      code_analysis: 'codeAnalysisSection',
       fill_in_the_blank: 'fibSection'
     };
 
@@ -2160,6 +2303,9 @@ const NavigationManager = (() => {
         break;
       case 'code':
         CodeModule.render(questions);
+        break;
+      case 'code_analysis':
+        CodeAnalysisModule.render(questions);
         break;
       case 'fill_in_the_blank':
         FillInTheBlankModule.render(questions);
@@ -2300,14 +2446,47 @@ const App = (() => {
     state.questions.mcq = data.mcq || [];
     state.questions.short_answer = data.short_answer || [];
     state.questions.code = data.code || [];
+    state.questions.code_analysis = data.code_analysis || [];
     state.questions.fill_in_the_blank = data.fill_in_the_blank || [];
 
-    // Update counts
-    document.getElementById('tfCount').textContent = state.questions.true_false.length;
-    document.getElementById('mcqCount').textContent = state.questions.mcq.length;
-    document.getElementById('saCount').textContent = state.questions.short_answer.length;
-    document.getElementById('codeCount').textContent = state.questions.code.length;
-    document.getElementById('fibCount').textContent = state.questions.fill_in_the_blank.length;
+    // Update counts and hide empty question type tabs
+    const categoryTabMap = {
+      true_false: { countId: 'tfCount', tabSelector: '[data-category="true_false"]' },
+      mcq: { countId: 'mcqCount', tabSelector: '[data-category="mcq"]' },
+      short_answer: { countId: 'saCount', tabSelector: '[data-category="short_answer"]' },
+      code: { countId: 'codeCount', tabSelector: '[data-category="code"]' },
+      code_analysis: { countId: 'caCount', tabSelector: '[data-category="code_analysis"]' },
+      fill_in_the_blank: { countId: 'fibCount', tabSelector: '[data-category="fill_in_the_blank"]' }
+    };
+
+    const availableCategories = [];
+
+    Object.entries(categoryTabMap).forEach(([category, ids]) => {
+      const questions = state.questions[category] || [];
+      const countEl = document.getElementById(ids.countId);
+      const tabEl = document.querySelector(ids.tabSelector);
+
+      if (countEl) {
+        countEl.textContent = questions.length;
+      }
+
+      // Hide tab if no questions exist for this category
+      if (tabEl) {
+        if (questions.length === 0) {
+          tabEl.style.display = 'none';
+        } else {
+          tabEl.style.display = '';
+          availableCategories.push(category);
+        }
+      }
+    });
+
+    // If current category is empty, switch to first available category
+    if (!state.questions[state.currentCategory] || state.questions[state.currentCategory].length === 0) {
+      if (availableCategories.length > 0) {
+        state.currentCategory = availableCategories[0];
+      }
+    }
 
     // Apply saved preferences
     UIManager.applyTheme(state.preferences.theme);
@@ -2403,6 +2582,7 @@ const App = (() => {
           mcq: {},
           short_answer: {},
           code: {},
+          code_analysis: {},
           fill_in_the_blank: {}
         };
         
@@ -2433,6 +2613,10 @@ const App = (() => {
     // Fill in the Blank controls
     document.getElementById('fibShuffleBtn').addEventListener('click', FillInTheBlankModule.shuffle);
     document.getElementById('fibResetBtn').addEventListener('click', FillInTheBlankModule.reset);
+
+    // Code Analysis controls
+    document.getElementById('caShuffleBtn').addEventListener('click', CodeAnalysisModule.shuffle);
+    document.getElementById('caResetBtn').addEventListener('click', CodeAnalysisModule.reset);
 
     // Code Help Button
     const codeHelpBtn = document.getElementById('codeHelpBtn');

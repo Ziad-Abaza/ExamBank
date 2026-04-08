@@ -92,6 +92,17 @@
       <span class="tab-label" data-en="Code" data-ar="البرمجة">Code</span>
       <span class="tab-count" id="codeCount">0</span>
     </button>
+    <button class="nav-tab" data-category="code_analysis">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </svg>
+      <span class="tab-label" data-en="Code Analysis" data-ar="تحليل الكود">Code Analysis</span>
+      <span class="tab-count" id="caCount">0</span>
+    </button>
     <button class="nav-tab" data-category="fill_in_the_blank">
       <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M12 20h9"/>
@@ -226,6 +237,18 @@
       <div class="questions-container" id="codeQuestions"></div>
     </section>
 
+    <!-- Code Analysis Section -->
+    <section class="question-section hidden" id="codeAnalysisSection">
+      <div class="section-header">
+        <h2 class="section-title" data-en="Code Analysis Questions" data-ar="أسئلة تحليل الكود">Code Analysis Questions</h2>
+        <div class="section-controls">
+          <button class="btn btn-secondary" id="caShuffleBtn" data-en="Shuffle" data-ar="خلط">Shuffle</button>
+          <button class="btn btn-secondary" id="caResetBtn" data-en="Reset" data-ar="إعادة تعيين">Reset</button>
+        </div>
+      </div>
+      <div class="questions-container" id="caQuestions"></div>
+    </section>
+
     <!-- Fill in the Blank Section -->
     <section class="question-section hidden" id="fibSection">
       <div class="section-header">
@@ -298,6 +321,19 @@
                 <span class="ring-text" id="codeRingText">0%</span>
               </div>
               <p class="card-stats"><span id="codeAnswered">0</span> / <span id="codeTotal">0</span></p>
+            </div>
+          </div>
+          <div class="dashboard-card">
+            <h4 class="card-title" data-en="Code Analysis" data-ar="تحليل الكود">Code Analysis</h4>
+            <div class="card-progress">
+              <div class="progress-ring">
+                <svg viewBox="0 0 36 36">
+                  <path class="progress-ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="progress-ring-fill" id="caRing" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                </svg>
+                <span class="ring-text" id="caRingText">0%</span>
+              </div>
+              <p class="card-stats"><span id="caAnswered">0</span> / <span id="caTotal">0</span></p>
             </div>
           </div>
           <div class="dashboard-card">

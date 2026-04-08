@@ -1,13 +1,4 @@
 {
-  "true_false": [
-    {
-      "id": 1,
-      "question_en": "",
-      "question_ar": "",
-      "answer": true,
-      "explanation": ""
-    }
-  ],
   "mcq": [
     {
       "id": 1,
@@ -799,13 +790,6 @@
       "id": 7,
       "task": "Load JSON config safely, and return SAFE_DEFAULTS if error occurs.",
       "code": "try:\n    with open(path, \"r\", encoding=\"utf-8\") as f:\n        cfg = json.load(f)\nexcept Exception:\n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")\n    return SAFE_DEFAULTS.copy()"
-    }
-  ],
-  "fill_in_the_blank": [
-    {
-      "id": 1,
-      "question": "",
-      "answer": ""
     }
   ]
 }
