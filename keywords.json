@@ -1571,6 +1571,1296 @@
       "translation_ar": "الخادم المركزي",
       "definition": "خادم رئيسي يدير الخدمة.",
       "details": "الوسيط في MQTT."
+    },
+    {
+      "term": "Signed firmware",
+      "translation_ar": "البرنامج الثابت الموقّع",
+      "definition": "برنامج ثابت تم التوقيع عليه رقمياً للتحقق من مصدره وسلامته.",
+      "details": "يضمن أن البرنامج الثابت أصلي ولم يتم تعديله."
+    },
+    {
+      "term": "STRIDE",
+      "translation_ar": "سترايد",
+      "definition": "إطار عمل لنمذجة التهديدات الأمنية.",
+      "details": "يمثل: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege."
+    },
+    {
+      "term": "STRIDE \"D\"",
+      "translation_ar": "سترايد \"د\"",
+      "definition": "حرف D في STRIDE يمثل Denial of Service.",
+      "details": "هجمات رفض الخدمة تهدف إلى جعل الموارد غير متاحة."
+    },
+    {
+      "term": "MQTT",
+      "translation_ar": "MQTT",
+      "definition": "بروتوكول مراسلة خفيف لأجهزة IoT.",
+      "details": "Message Queuing Telemetry Transport - يستخدم النشر/الاشتراك."
+    },
+    {
+      "term": "Hardcoded",
+      "translation_ar": "مضمن في الكود",
+      "definition": "قيم أو بيانات مكتوبة مباشرة في الكود المصدر.",
+      "details": "ممارسة أمنية سيئة للأسرار والبيانات الحساسة."
+    },
+    {
+      "term": "Confidentiality",
+      "translation_ar": "السرية",
+      "definition": "حماية البيانات من القراءة غير المصرّح بها.",
+      "details": "واحدة من أهداف الأمن الأساسية مع السلامة والتوافر."
+    },
+    {
+      "term": "Integrity",
+      "translation_ar": "السلامة",
+      "definition": "ضمان أن البيانات لم يتم تعديلها.",
+      "details": "يتم تحقيقها بالتجزئة والتوقيعات الرقمية."
+    },
+    {
+      "term": "Authentication",
+      "translation_ar": "المصادقة",
+      "definition": "التحقق من هوية الكيانات.",
+      "details": "تضمن أن المستخدم أو الجهاز هو من يدعي."
+    },
+    {
+      "term": "Telemetry",
+      "translation_ar": "القياس عن بُعد",
+      "definition": "جمع بيانات القياسات والحالة من الأجهزة البعيدة.",
+      "details": "يشمل قراءات المستشعرات ومعلومات الأداء."
+    },
+    {
+      "term": "Threat modeling",
+      "translation_ar": "نمذجة التهديدات",
+      "definition": "عملية تحديد التهديدات المحتملة للنظام.",
+      "details": "تستخدم أطر عمل مثل STRIDE."
+    },
+    {
+      "term": "Fail-safe behavior",
+      "translation_ar": "السلوك الآمن عند الفشل",
+      "definition": "تصرف النظام عند الفشل بطريقة آمنة.",
+      "details": "يمنع الضرر عند حدوث أعطال."
+    },
+    {
+      "term": "TLS",
+      "translation_ar": "TLS",
+      "definition": "بروتوكول أمان طبقة النقل.",
+      "details": "Transport Layer Security - يوفر تشفير ومصادقة للاتصالات."
+    },
+    {
+      "term": "Trust boundary",
+      "translation_ar": "حد الثقة",
+      "definition": "خط فاصل بين منطقتين بمستويات ثقة مختلفة.",
+      "details": "حيث يتم تطبيق ضوابط أمنية إضافية."
+    },
+    {
+      "term": "Risk",
+      "translation_ar": "المخاطرة",
+      "definition": "احتمالية وتأثير حدث ضار.",
+      "details": "تُحسب بالصيغة: المخاطرة = الاحتمال × التأثير."
+    },
+    {
+      "term": "BLE",
+      "translation_ar": "BLE",
+      "definition": "بلوتوث منخفض الطاقة.",
+      "details": "Bluetooth Low Energy - بروتوكول اتصال لاسلكي منخفض الطاقة."
+    },
+    {
+      "term": "Firmware",
+      "translation_ar": "البرنامج الثابت",
+      "definition": "برنامج مدمج في الأجهزة.",
+      "details": "يُخزّن في ذاكرة غير قابلة للتطاير ويُنفّذ عند الإقلاع."
+    },
+    {
+      "term": "Digital signatures",
+      "translation_ar": "التوقيعات الرقمية",
+      "definition": "قيم مشفرة تتحقق من مصدر وسلامة البيانات.",
+      "details": "تستخدم المفاتيح الخاصة للتوقيع والمفاتيح العامة للتحقق."
+    },
+    {
+      "term": "Encryption",
+      "translation_ar": "التشفير",
+      "definition": "تحويل البيانات إلى شكل غير قابل للقراءة.",
+      "details": "يحمي البيانات من الوصول غير المصرّح به."
+    },
+    {
+      "term": "Decryption",
+      "translation_ar": "فك التشفير",
+      "definition": "إعادة البيانات المشفرة إلى شكلها الأصلي.",
+      "details": "يتطلب المفتاح الصحيح للنجاح."
+    },
+    {
+      "term": "Hashing",
+      "translation_ar": "التجزئة",
+      "definition": "تحويل البيانات إلى قيمة ثابتة الطول.",
+      "details": "دالة أحادية الاتجاه لا يمكن عكسها."
+    },
+    {
+      "term": "Certificate",
+      "translation_ar": "الشهادة",
+      "definition": "وثيقة رقمية تثبت هوية الكيان.",
+      "details": "تصدرها جهات موثوقة وتحتوي على المفتاح العام."
+    },
+    {
+      "term": "Public key",
+      "translation_ar": "المفتاح العام",
+      "definition": "مفتاح تشفير يمكن مشاركته علناً.",
+      "details": "يُستخدم للتشفير والتحقق من التوقيعات."
+    },
+    {
+      "term": "Private key",
+      "translation_ar": "المفتاح الخاص",
+      "definition": "مفتاح تشفير سري يجب حمايته.",
+      "details": "يُستخدم لفك التشفير والتوقيع الرقمي."
+    },
+    {
+      "term": "Symmetric encryption",
+      "translation_ar": "التشفير المتماثل",
+      "definition": "تشفير باستخدام نفس المفتاح للتشفير وفك التشفير.",
+      "details": "أسرع من التشفير غير المتماثل."
+    },
+    {
+      "term": "Asymmetric encryption",
+      "translation_ar": "التشفير غير المتماثل",
+      "definition": "تشفير باستخدام مفتاحين مختلفين.",
+      "details": "مفتاح عام للتشفير ومفتاح خاص لفك التشفير."
+    },
+    {
+      "term": "Vulnerability",
+      "translation_ar": "الثغرة الأمنية",
+      "definition": "ضعف أو خلل يمكن استغلاله.",
+      "details": "نقطة دخول محتملة للمهاجمين."
+    },
+    {
+      "term": "Exploit",
+      "translation_ar": "المُستغَل",
+      "definition": "كود أو تقنية تستغل ثغرة أمنية.",
+      "details": "الأداة التي يستخدمها المهاجم."
+    },
+    {
+      "term": "Penetration testing",
+      "translation_ar": "اختبار الاختراق",
+      "definition": "محاكاة الهجمات للكشف عن الثغرات.",
+      "details": "اختبار أمني منظم للأنظمة."
+    },
+    {
+      "term": "Security audit",
+      "translation_ar": "التدقيق الأمني",
+      "definition": "فحص شامل للضوابط الأمنية.",
+      "details": "يقيّم مدى فعالية الإجراءات الأمنية."
+    },
+    {
+      "term": "Access control",
+      "translation_ar": "التحكم في الوصول",
+      "definition": "تحديد من يمكنه الوصول إلى الموارد.",
+      "details": "يشمل المصادقة والتفويض."
+    },
+    {
+      "term": "Authorization",
+      "translation_ar": "التفويض",
+      "definition": "تحديد الصلاحيات الممنوحة للمستخدم.",
+      "details": "يأتي بعد المصادقة الناجحة."
+    },
+    {
+      "term": "Non-repudiation",
+      "translation_ar": "عدم الإنكار",
+      "definition": "ضمان أن المرسل لا يمكن إنكار الإرسال.",
+      "details": "يتم تحقيقه بالتوقيعات الرقمية."
+    },
+    {
+      "term": "Availability",
+      "translation_ar": "التوافر",
+      "definition": "ضمان أن الخدمات متاحة عند الحاجة.",
+      "details": "واحدة من أهداف الأمن الأساسية."
+    },
+    {
+      "term": "Zero-day exploit",
+      "translation_ar": "مُستغَل اليوم الصفري",
+      "definition": "استغلال ثغرة غير معروفة للجمهور.",
+      "details": "خطير جداً لأن لا يوجد له إصلاح."
+    },
+    {
+      "term": "Patch management",
+      "translation_ar": "إدارة التصحيحات",
+      "definition": "عملية تطبيق التحديثات الأمنية.",
+      "details": "أساسي لإغلاق الثغرات المعروفة."
+    },
+    {
+      "term": "Intrusion detection",
+      "translation_ar": "كشف الاختراق",
+      "definition": "تحديد الأنشطة الضارة في النظام.",
+      "details": "يستخدم أنظمة IDS للمراقبة."
+    },
+    {
+      "term": "Firewall",
+      "translation_ar": "جدار الحماية",
+      "definition": "نظام يتحكم في حركة الشبكة.",
+      "details": "يمنع الاتصالات غير المصرح بها."
+    },
+    {
+      "term": "VPN",
+      "translation_ar": "VPN",
+      "definition": "شبكة خاصة افتراضية.",
+      "details": "Virtual Private Network - تشفير الاتصالات عبر الإنترنت."
+    },
+    {
+      "term": "Two-factor authentication",
+      "translation_ar": "المصادقة بعاملين",
+      "definition": "التحقق من الهوية باستخدام عاملين.",
+      "details": "مثل كلمة المرور + رمز من الهاتف."
+    },
+    {
+      "term": "Biometric authentication",
+      "translation_ar": "المصادقة البيومترية",
+      "definition": "التحقق من الهوية باستخدام الخصائص البيولوجية.",
+      "details": "مثل البصمة، الوجه، صوت العين."
+    },
+    {
+      "term": "Secure boot",
+      "translation_ar": "الإقلاع الآمن",
+      "definition": "عملية التحقق من البرنامج الثابت عند بدء التشغيل.",
+      "details": "يمنع تشغيل البرامج الخبيثة."
+    },
+    {
+      "term": "Rollback protection",
+      "translation_ar": "حماية التراجع",
+      "definition": "منع العودة إلى إصدارات أقدم.",
+      "details": "يحمي من استغلال الثغرات القديمة."
+    },
+    {
+      "term": "Device provisioning",
+      "translation_ar": "تجهيز الأجهزة",
+      "definition": "عملية إعداد جهاز جديد للشبكة.",
+      "details": "يشمل تثبيت الشهادات والإعدادات."
+    },
+    {
+      "term": "Over-the-air update",
+      "translation_ar": "التحديث عبر الهواء",
+      "definition": "تحديث البرنامج الثابت لاسلكياً.",
+      "details": "OTA update - يسمح بتحديث الأجهزة البعيدة."
+    },
+    {
+      "term": "Embedded system",
+      "translation_ar": "النظام المدمج",
+      "definition": "كمبيوتر مصمم لوظيفة محددة.",
+      "details": "مدمج في جهاز أكبر."
+    },
+    {
+      "term": "Microcontroller",
+      "translation_ar": "المتحكم الدقيق",
+      "definition": "كمبيوتر صغير على شريحة واحدة.",
+      "details": "يستخدم في أجهزة IoT."
+    },
+    {
+      "term": "Sensor",
+      "translation_ar": "المستشعر",
+      "definition": "جهاز يقيس ظاهرة فيزيائية.",
+      "details": "يحول الإشارات الفيزيائية إلى بيانات رقمية."
+    },
+    {
+      "term": "Actuator",
+      "translation_ar": "المشغل",
+      "definition": "جهاز ينفذ إجراء مادي.",
+      "details": "يحول الإشارات الرقمية إلى حركة مادية."
+    },
+    {
+      "term": "Gateway",
+      "translation_ar": "البوابة",
+      "definition": "جهاز يربط بين شبكات مختلفة.",
+      "details": "يترجم بين البروتوكولات المختلفة."
+    },
+    {
+      "term": "Protocol",
+      "translation_ar": "البروتوكول",
+      "definition": "مجموعة قواعد للاتصال.",
+      "details": "يحدد كيفية تبادل البيانات."
+    },
+    {
+      "term": "Latency",
+      "translation_ar": "زمن الاستجابة",
+      "definition": "الوقت المستغرق لإرسال واستقبال البيانات.",
+      "details": "مهم في تطبيقات الوقت الفعلي."
+    },
+    {
+      "term": "Bandwidth",
+      "translation_ar": "عرض النطاق",
+      "definition": "كمية البيانات التي يمكن نقلها.",
+      "details": "يُقاس بالبت في الثانية."
+    },
+    {
+      "term": "Throughput",
+      "translation_ar": "معدل النقل",
+      "definition": "كمية البيانات الفعلية المنقولة.",
+      "details": "يختلف عن عرض النطاق الترددي."
+    },
+    {
+      "term": "Packet",
+      "translation_ar": "الحزمة",
+      "definition": "وحدة بيانات تُرسل عبر الشبكة.",
+      "details": "تحتوي على البيانات ومعلومات التحكم."
+    },
+    {
+      "term": "Payload",
+      "translation_ar": "الحمولة",
+      "definition": "البيانات الفعلية في الحزمة.",
+      "details": "تستثني معلومات التحكم."
+    },
+    {
+      "term": "Header",
+      "translation_ar": "الترويسة",
+      "definition": "معلومات التحكم في الحزمة.",
+      "details": "تحتوي على عناوين ومعلومات التوجيه."
+    },
+    {
+      "term": "Checksum",
+      "translation_ar": "مجموع التحقق",
+      "definition": "قيمة تُستخدم للتحقق من سلامة البيانات.",
+      "details": "يكتشف الأخطاء في الإرسال."
+    },
+    {
+      "term": "CRC",
+      "translation_ar": "CRC",
+      "definition": "رمز التحقق الدوري.",
+      "details": "Cyclic Redundancy Check - طريقة قوية للكشف عن الأخطاء."
+    },
+    {
+      "term": "Buffer overflow",
+      "translation_ar": "فيضان المخزن المؤقت",
+      "definition": "كتابة بيانات تتجاوز حجم المخزن.",
+      "details": "ثغرة أمنية شائعة وخطيرة."
+    },
+    {
+      "term": "SQL injection",
+      "translation_ar": "حقن SQL",
+      "definition": "إدخال أكواد SQL ضارة في الاستعلامات.",
+      "details": "يستهدف قواعد البيانات."
+    },
+    {
+      "term": "Cross-site scripting",
+      "translation_ar": "البرمجة النصية العابرة للمواقع",
+      "definition": "إدخال أكواد JavaScript ضارة في صفحات الويب.",
+      "details": "XSS - يستهدف مستخدمي الموقع."
+    },
+    {
+      "term": "Denial of service",
+      "translation_ar": "رفض الخدمة",
+      "definition": "هجوم يهدف إلى جعل الخدمة غير متاحة.",
+      "details": "DoS - يغمر النظام بطلبات زائفة."
+    },
+    {
+      "term": "Distributed denial of service",
+      "translation_ar": "رفض الخدمة الموزع",
+      "definition": "هجوم من مصادر متعددة.",
+      "details": "DDoS - أصعب منعه من DoS العادي."
+    },
+    {
+      "term": "Man-in-the-middle",
+      "translation_ar": "الرجل في المنتصف",
+      "definition": "اعتراض وتعديل الاتصالات.",
+      "details": "MITM - المهاجم يتظاهر بأنه الطرف الآخر."
+    },
+    {
+      "term": "Social engineering",
+      "translation_ar": "الهندسة الاجتماعية",
+      "definition": "خداع البشر للحصول على معلومات.",
+      "details": "يستغل الثقة البشرية."
+    },
+    {
+      "term": "Malware analysis",
+      "translation_ar": "تحليل البرمجيات الخبيثة",
+      "definition": "دراسة البرامج الضارة لفهم سلوكها.",
+      "details": "يساعد في تطوير الحماية."
+    },
+    {
+      "term": "Reverse engineering",
+      "translation_ar": "الهندسة العكسية",
+      "definition": "تحليل النظام لفهم كيفية عمله.",
+      "details": "يُستخدم في الأمن وتطوير البرمجيات."
+    },
+    {
+      "term": "Forensics",
+      "translation_ar": "الطب الشرعي الرقمي",
+      "definition": "جمع وتحليل الأدلة الرقمية.",
+      "details": "يُستخدم في التحقيقات الأمنية."
+    },
+    {
+      "term": "Incident response",
+      "translation_ar": "الاستجابة للحوادث",
+      "definition": "التعامل مع الحوادث الأمنية.",
+      "details": "يشمل الكشف والاحتواء والتعافي."
+    },
+    {
+      "term": "Security policy",
+      "translation_ar": "السياسة الأمنية",
+      "definition": "مجموعة القواعد والإجراءات الأمنية.",
+      "details": "تحدد كيفية حماية الأصول."
+    },
+    {
+      "term": "Compliance",
+      "translation_ar": "الامتثال",
+      "definition": "الالتزام بالمعايير والقوانين.",
+      "details": "مثل GDPR, HIPAA, PCI-DSS."
+    },
+    {
+      "term": "Audit trail",
+      "translation_ar": "سجل التدقيق",
+      "definition": "سجل chronologically للأحداث.",
+      "details": "يساعد في تتبع الأنشطة."
+    },
+    {
+      "term": "Redundancy",
+      "translation_ar": "التكرار",
+      "definition": "وجود مكونات إضافية كنسخ احتياطية.",
+      "details": "يحسن التوافر والموثوقية."
+    },
+    {
+      "term": "Failover",
+      "translation_ar": "التحول الاحتياطي",
+      "definition": "التحول التلقائي لنظام احتياطي.",
+      "details": "يحدث عند فشل النظام الأساسي."
+    },
+    {
+      "term": "Load balancing",
+      "translation_ar": "موازنة التحميل",
+      "definition": "توزيع الأحمال على خوادم متعددة.",
+      "details": "يحسن الأداء والتوافر."
+    },
+    {
+      "term": "Clustering",
+      "translation_ar": "التجميع",
+      "definition": "ربط خوادم متعددة للعمل كوحدة واحدة.",
+      "details": "يحسن التوافر والأداء."
+    },
+    {
+      "term": "Virtualization",
+      "translation_ar": "الافتراضية",
+      "definition": "إنشاء نسخ افتراضية من الموارد.",
+      "details": "مثل الأجهزة الافتراضية."
+    },
+    {
+      "term": "Containerization",
+      "translation_ar": "التعبئة في حاويات",
+      "definition": "تغليف التطبيقات مع اعتمادياتها.",
+      "details": "مثل Docker."
+    },
+    {
+      "term": "Orchestration",
+      "translation_ar": "التنسيق",
+      "definition": "إدارة الحاويات والتطبيقات الموزعة.",
+      "details": "مثل Kubernetes."
+    },
+    {
+      "term": "API",
+      "translation_ar": "API",
+      "definition": "واجهة برمجة التطبيقات.",
+      "details": "Application Programming Interface - تسمح بالتفاعل بين البرامج."
+    },
+    {
+      "term": "REST API",
+      "translation_ar": "REST API",
+      "definition": "نمط معماري لواجهات برمجة التطبيقات.",
+      "details": "يستخدم HTTP و JSON."
+    },
+    {
+      "term": "JSON",
+      "translation_ar": "JSON",
+      "definition": "تنسيق بيانات خفيف.",
+      "details": "JavaScript Object Notation."
+    },
+    {
+      "term": "XML",
+      "translation_ar": "XML",
+      "definition": "لغة ترميز قابلة للامتداد.",
+      "details": "eXtensible Markup Language."
+    },
+    {
+      "term": "YAML",
+      "translation_ar": "YAML",
+      "definition": "تنسيق بيانات قابل للقراءة.",
+      "details": "YAML Ain't Markup Language."
+    },
+    {
+      "term": "Database",
+      "translation_ar": "قاعدة البيانات",
+      "definition": "مجموعة منظمة من البيانات.",
+      "details": "تسمح بالتخزين والاسترجاع الفعال."
+    },
+    {
+      "term": "SQL",
+      "translation_ar": "SQL",
+      "definition": "لغة الاستعلامات البنيوية.",
+      "details": "Structured Query Language."
+    },
+    {
+      "term": "NoSQL",
+      "translation_ar": "NoSQL",
+      "definition": "قواعد بيانات غير علائقية.",
+      "details": "مثل MongoDB, Cassandra."
+    },
+    {
+      "term": "Cache",
+      "translation_ar": "الذاكرة المؤقتة",
+      "definition": "ذاكرة سريعة لتخزين البيانات المؤقتة.",
+      "details": "تحسن من الأداء."
+    },
+    {
+      "term": "Session",
+      "translation_ar": "الجلسة",
+      "definition": "تفاعل مستخدم واحد مع النظام.",
+      "details": "تحتفظ بحالة المستخدم."
+    },
+    {
+      "term": "Cookie",
+      "translation_ar": "الكوكيز",
+      "definition": "بيانات صغيرة تُخزّن في المتصفح.",
+      "details": "تُستخدم لتتبع الجلسات."
+    },
+    {
+      "term": "Token",
+      "translation_ar": "الرمز",
+      "definition": "بيانات تمثل حق الوصول.",
+      "details": "يُستخدم في المصادقة والتفويض."
+    },
+    {
+      "term": "OAuth",
+      "translation_ar": "OAuth",
+      "definition": "بروتوكول تفويض مفتوح.",
+      "details": "يسمح بالوصول المحدود للموارد."
+    },
+    {
+      "term": "JWT",
+      "translation_ar": "JWT",
+      "definition": "رمز ويب JSON.",
+      "details": "JSON Web Token - يحتوي على بيانات موقعة."
+    },
+    {
+      "term": "Rate limiting",
+      "translation_ar": "تحديد المعدل",
+      "definition": "تقييد عدد الطلبات في فترة زمنية.",
+      "details": "يحمي من هجمات DoS."
+    },
+    {
+      "term": "Throttling",
+      "translation_ar": "الخنق",
+      "definition": "إبطاء الطلبات عند تجاوز الحد.",
+      "details": "شكل من أشكال تحديد المعدل."
+    },
+    {
+      "term": "Circuit breaker",
+      "translation_ar": "قاطع الدائرة",
+      "definition": "نمط لمنع فشل الخدمات.",
+      "details": "يوقف الطلبات عند فشل متكرر."
+    },
+    {
+      "term": "Retry mechanism",
+      "translation_ar": "آلية إعادة المحاولة",
+      "definition": "إعادة تنفيذ العملية الفاشلة.",
+      "details": "يحسن من الموثوقية."
+    },
+    {
+      "term": "Timeout",
+      "translation_ar": "انتهاء المهلة",
+      "definition": "الحد الأقصى لوقت الانتظار.",
+      "details": "يمنع انتظاراً لا نهائياً."
+    },
+    {
+      "term": "Heartbeat",
+      "translation_ar": "نبض القلب",
+      "definition": "إشارات دورية للتأكد من الحياة.",
+      "details": "تُستخدم لمراقبة صحة النظام."
+    },
+    {
+      "term": "Health check",
+      "translation_ar": "فحص الصحة",
+      "definition": "فحص دوري لحالة النظام.",
+      "details": "يكتشف المشاكل مبكراً."
+    },
+    {
+      "term": "Metrics",
+      "translation_ar": "المقاييس",
+      "definition": "بيانات رقمية عن أداء النظام.",
+      "details": "تُستخدم للمراقبة والتحليل."
+    },
+    {
+      "term": "Logging",
+      "translation_ar": "تسجيل الأحداث",
+      "definition": "تسجيل أحداث النظام.",
+      "details": "مهم للتشخيص والمراجعة."
+    },
+    {
+      "term": "Monitoring",
+      "translation_ar": "المراقبة",
+      "definition": "مراقبة أداء النظام بشكل مستمر.",
+      "details": "تساعد في الكشف عن المشاكل."
+    },
+    {
+      "term": "Alerting",
+      "translation_ar": "التنبيه",
+      "definition": "إرسال إشعارات عند حدوث مشاكل.",
+      "details": "يسمح بالاستجابة السريعة."
+    },
+    {
+      "term": "Dashboard",
+      "translation_ar": "لوحة التحكم",
+      "definition": "واجهة عرض بصرية للمقاييس.",
+      "details": "تسهل مراقبة النظام."
+    },
+    {
+      "term": "Analytics",
+      "translation_ar": "التحليلات",
+      "definition": "تحليل البيانات لاستخراج رؤى.",
+      "details": "تُستخدم لاتخاذ القرارات."
+    },
+    {
+      "term": "Machine learning",
+      "translation_ar": "التعلم الآلي",
+      "definition": "خوارزميات تتعلم من البيانات.",
+      "details": "تُستخدم في التنبؤ والتصنيف."
+    },
+    {
+      "term": "Artificial intelligence",
+      "translation_ar": "الذكاء الاصطناعي",
+      "definition": "محاكاة الذكاء البشري في الآلات.",
+      "details": "يشمل التعلم الآلي والمعالجة الطبيعية."
+    },
+    {
+      "term": "Neural network",
+      "translation_ar": "الشبكة العصبية",
+      "definition": "نموذج مستوحى من الدماغ البشري.",
+      "details": "تُستخدم في التعلم العميق."
+    },
+    {
+      "term": "Deep learning",
+      "translation_ar": "التعلم العميق",
+      "definition": "تعلم الآلي باستخدام شبكات عصبية عميقة.",
+      "details": "يحقق نتائج ممتازة في مجالات متعددة."
+    },
+    {
+      "term": "Algorithm",
+      "translation_ar": "الخوارزمية",
+      "definition": "مجموعة خطوات لحل مشكلة.",
+      "details": "أساس البرمجة وعلوم الحاسوب."
+    },
+    {
+      "term": "Data structure",
+      "translation_ar": "بنية البيانات",
+      "definition": "طريقة تنظيم وتخزين البيانات.",
+      "details": "تؤثر على كفاءة الخوارزميات."
+    },
+    {
+      "term": "Time complexity",
+      "translation_ar": "التعقيد الزمني",
+      "definition": "قياس أداء الخوارزمية زمنياً.",
+      "details": "يُعبر بالتدوين O()."
+    },
+    {
+      "term": "Space complexity",
+      "translation_ar": "التعقيد المكاني",
+      "definition": "قياس استهلاك الخوارزمية للذاكرة.",
+      "details": "مهم للأجهزة محدودة الموارد."
+    },
+    {
+      "term": "Optimization",
+      "translation_ar": "التحسين",
+      "definition": "تحسين أداء النظام.",
+      "details": "يشمل السرعة واستهلاك الموارد."
+    },
+    {
+      "term": "Scalability",
+      "translation_ar": "قابلية التوسع",
+      "definition": "قدرة النظام على التعامل مع النمو.",
+      "details": "أفقياً أو عمودياً."
+    },
+    {
+      "term": "Performance",
+      "translation_ar": "الأداء",
+      "definition": "قياس كفاءة النظام.",
+      "details": "يشمل السرعة والاستجابة."
+    },
+    {
+      "term": "Reliability",
+      "translation_ar": "الموثوقية",
+      "definition": "قدرة النظام على العمل بشكل صحيح.",
+      "details": "بدون أخطاء أو انقطاع."
+    },
+    {
+      "term": "Maintainability",
+      "translation_ar": "قابلية الصيانة",
+      "definition": "سهولة تعديل وتحديث النظام.",
+      "details": "مهمة للتطور المستمر."
+    },
+    {
+      "term": "Usability",
+      "translation_ar": "قابلية الاستخدام",
+      "definition": "سهولة استخدام النظام.",
+      "details": "من منظور المستخدم."
+    },
+    {
+      "term": "User experience",
+      "translation_ar": "تجربة المستخدم",
+      "definition": "الانطباع العام للمستخدم عن النظام.",
+      "details": "UX - يشمل جميع جوانب التفاعل."
+    },
+    {
+      "term": "User interface",
+      "translation_ar": "واجهة المستخدم",
+      "definition": "الواجهة البصرية للتفاعل مع النظام.",
+      "details": "UI - تصميم الشاشات والعناصر."
+    },
+    {
+      "term": "Responsive design",
+      "translation_ar": "التصميم المتجاوب",
+      "definition": "تصميم يتكيف مع أحجام الشاشات المختلفة.",
+      "details": "مهم للأجهزة المحمولة."
+    },
+    {
+      "term": "Progressive web app",
+      "translation_ar": "تطبيق الويب التدريجي",
+      "definition": "تطبيق ويب يعمل مثل التطبيق الأصلي.",
+      "details": "PWA - يعمل بدون اتصال بالإنترنت."
+    },
+    {
+      "term": "Single page application",
+      "translation_ar": "تطبيق الصفحة الواحدة",
+      "definition": "تطبيق ويب يعمل في صفحة واحدة.",
+      "details": "SPA - يعيد تحميل المحتوى ديناميكياً."
+    },
+    {
+      "term": "Microservices",
+      "translation_ar": "الخدمات المصغرة",
+      "definition": "بنية قائمة على خدمات صغيرة مستقلة.",
+      "details": "كل خدمة تؤدي وظيفة محددة."
+    },
+    {
+      "term": "Monolithic",
+      "translation_ar": "البنية الأحادية",
+      "definition": "تطبيق مدمج في وحدة واحدة.",
+      "details": "عكس الخدمات المصغرة."
+    },
+    {
+      "term": "Serverless",
+      "translation_ar": "بدون خادم",
+      "definition": "تشغيل الكود بدون إدارة الخوادم.",
+      "details": "مثل AWS Lambda."
+    },
+    {
+      "term": "Cloud computing",
+      "translation_ar": "الحوسبة السحابية",
+      "definition": "توفير موارد الحوسبة عبر الإنترنت.",
+      "details": "IaaS, PaaS, SaaS."
+    },
+    {
+      "term": "Infrastructure as code",
+      "translation_ar": "البنية التحتية ككود",
+      "definition": "إدارة البنية التحتية بالكود.",
+      "details": "IaC - أتمتة إدارة الموارد."
+    },
+    {
+      "term": "DevOps",
+      "translation_ar": "DevOps",
+      "definition": "دمج التطوير والعمليات.",
+      "details": "ثقافة وممارسات لتسريع التسليم."
+    },
+    {
+      "term": "Continuous integration",
+      "translation_ar": "التكامل المستمر",
+      "definition": "دمج التغييرات بشكل مستمر.",
+      "details": "CI - اختبار تلقائي للتغييرات."
+    },
+    {
+      "term": "Continuous deployment",
+      "translation_ar": "النشر المستمر",
+      "definition": "نشر التغييرات تلقائياً.",
+      "details": "CD - بعد اجتياز الاختبارات."
+    },
+    {
+      "term": "Version control",
+      "translation_ar": "التحكم في الإصدارات",
+      "definition": "تتبع التغييرات في الكود.",
+      "details": "مثل Git."
+    },
+    {
+      "term": "Repository",
+      "translation_ar": "المستودع",
+      "definition": "مكان تخزين الكود وتاريخه.",
+      "details": "مثل GitHub repository."
+    },
+    {
+      "term": "Branch",
+      "translation_ar": "الفرع",
+      "definition": "نسخة مستقلة من الكود.",
+      "details": "يُستخدم للتطوير الموازي."
+    },
+    {
+      "term": "Merge",
+      "translation_ar": "الدمج",
+      "definition": "دمج التغييرات من فرع لآخر.",
+      "details": "عملية أساسية في Git."
+    },
+    {
+      "term": "Pull request",
+      "translation_ar": "طلب السحب",
+      "definition": "طلب دمج التغييرات.",
+      "details": "PR - يسمح بمراجعة الكود."
+    },
+    {
+      "term": "Code review",
+      "translation_ar": "مراجعة الكود",
+      "definition": "فحص الكود من قبل المطورين الآخرين.",
+      "details": "يحسن جودة الكود."
+    },
+    {
+      "term": "Refactoring",
+      "translation_ar": "إعادة الهيكلة",
+      "definition": "تحسين الكود بدون تغيير الوظيفة.",
+      "details": "يحسن القراءة والصيانة."
+    },
+    {
+      "term": "Technical debt",
+      "translation_ar": "الدين التقني",
+      "definition": "تكلفة إعادة العمل في المستقبل.",
+      "details": "بسبب القرارات السريعة."
+    },
+    {
+      "term": "Legacy system",
+      "translation_ar": "النظام القديم",
+      "definition": "نظام قديم لا يزال قيد الاستخدام.",
+      "details": "صعب الصيانة والتحديث."
+    },
+    {
+      "term": "Migration",
+      "translation_ar": "الترحيل",
+      "definition": "نقل البيانات أو الأنظمة.",
+      "details": "من نظام قديم إلى جديد."
+    },
+    {
+      "term": "Backup",
+      "translation_ar": "النسخ الاحتياطي",
+      "definition": "نسخة احتياطية من البيانات.",
+      "details": "مهم للاسترداد عند الفشل."
+    },
+    {
+      "term": "Recovery",
+      "translation_ar": "الاسترداد",
+      "definition": "استعادة النظام بعد الفشل.",
+      "details": "يستخدم النسخ الاحتياطية."
+    },
+    {
+      "term": "Disaster recovery",
+      "translation_ar": "استرداد الكوارث",
+      "definition": "خطط للاسترداد من كوارث كبيرة.",
+      "details": "DR - يشمل مواقع بديلة."
+    },
+    {
+      "term": "Business continuity",
+      "translation_ar": "استمرارية الأعمال",
+      "definition": "ضمان استمرار العمليات.",
+      "details": "أثناء وبعد الكوارث."
+    },
+    {
+      "term": "Service level agreement",
+      "translation_ar": "اتفاقية مستوى الخدمة",
+      "definition": "عقد يحدد مستوى الخدمة المطلوب.",
+      "details": "SLA - يحدد التوافر والأداء."
+    },
+    {
+      "term": "Service level objective",
+      "translation_ar": "هدف مستوى الخدمة",
+      "definition": "مقاييس محددة لأداء الخدمة.",
+      "details": "SLO - جزء من SLA."
+    },
+    {
+      "term": "Service level indicator",
+      "translation_ar": "مؤشر مستوى الخدمة",
+      "definition": "مقاييس محددة لمراقبة الخدمة.",
+      "details": "SLI - تُستخدم لقياس SLO."
+    },
+    {
+      "term": "Asset",
+      "translation_ar": "الأصل",
+      "definition": "شيء ذي قيمة يحتاج للحماية.",
+      "details": "مثل البيانات، الأجهزة، أو الأنظمة."
+    },
+    {
+      "term": "Threat",
+      "translation_ar": "التهديد",
+      "definition": "حدث ضار محتمل يمكن استغلال ثغرة.",
+      "details": "يمثل خطراً أمنياً يجب معالجته."
+    },
+    {
+      "term": "Mitigation",
+      "translation_ar": "التخفيف",
+      "definition": "إجراء أو تحكم لتقليل المخاطر.",
+      "details": "يقلل من احتمالية أو تأثير التهديد."
+    },
+    {
+      "term": "UART",
+      "translation_ar": "UART",
+      "definition": "جهاز إرسال واستقبال غير متزامن عالمي.",
+      "details": "Universal Asynchronous Receiver/Transmitter - واجهة تسلسلية للأجهزة."
+    },
+    {
+      "term": "JTAG",
+      "translation_ar": "JTAG",
+      "definition": "مجموعة اختبار الوصول المشترك.",
+      "details": "Joint Test Action Group - واجهة لتصحيح أخطاء الأجهزة."
+    },
+    {
+      "term": "PWM",
+      "translation_ar": "PWM",
+      "definition": "تعديل عرض النبضة.",
+      "details": "Pulse Width Modulation - تقنية التحكم في الطاقة."
+    },
+    {
+      "term": "UUID",
+      "translation_ar": "UUID",
+      "definition": "معرف فريد عالمي.",
+      "details": "Universally Unique Identifier - معرف 128 بت فريد globally."
+    },
+    {
+      "term": "PSK",
+      "translation_ar": "PSK",
+      "definition": "مفتاح مشترك مسبق.",
+      "details": "Pre-Shared Key - مفتاح سري متفق عليه مسبقاً."
+    },
+    {
+      "term": "Subscriber",
+      "translation_ar": "المشترك",
+      "definition": "عميل MQTT يستقبل الرسائل.",
+      "details": "يشترك في موضوع لاستقبال البيانات."
+    },
+    {
+      "term": "Topic",
+      "translation_ar": "الموضوع",
+      "definition": "قناة تصنيف في MQTT.",
+      "details": "يُنشر إليها ويُشترك فيها."
+    },
+    {
+      "term": "Chunk",
+      "translation_ar": "الجزء",
+      "definition": "قطعة من البيانات تُعالج بشكل منفصل.",
+      "details": "يُستخدم لمعالجة الملفات الكبيرة."
+    },
+    {
+      "term": "HMAC tag",
+      "translation_ar": "علامة HMAC",
+      "definition": "قيمة مصادقة للرسالة.",
+      "details": "تُستخدم للتحقق من سلامة الرسالة."
+    },
+    {
+      "term": "JSON dump",
+      "translation_ar": "تفريغ JSON",
+      "definition": "تحويل كائن Python إلى سلسلة JSON.",
+      "details": "يُستخدم لتخزين البيانات المهيكلة."
+    },
+    {
+      "term": "TLS enforcement",
+      "translation_ar": "فرض TLS",
+      "definition": "إلزام استخدام TLS للاتصالات.",
+      "details": "يمنع الاتصالات غير الآمنة."
+    },
+    {
+      "term": "Threat scoring",
+      "translation_ar": "تسجيل التهديدات",
+      "definition": "تقييم التهديدات حسب الأولوية.",
+      "details": "يُستخدم لترتيب التهديدات حسب الخطورة."
+    },
+    {
+      "term": "Safe defaults",
+      "translation_ar": "الإعدادات الآمنة الافتراضية",
+      "definition": "قيم آمنة تُستخدم عند الفشل.",
+      "details": "تضمن سلوك آمن عند الأخطاء."
+    },
+    {
+      "term": "Keepalive",
+      "translation_ar": "الحفاظ على الاتصال",
+      "definition": "إشارات دورية للحفاظ على الاتصال نشطاً.",
+      "details": "تمنع انقطاع الاتصال بسبب الخمول."
+    },
+    {
+      "term": "Client ID",
+      "translation_ar": "معرف العميل",
+      "definition": "معرف فريد للعميل في MQTT.",
+      "details": "يُستخدم للتعرف على العملاء."
+    },
+    {
+      "term": "Loop forever",
+      "translation_ar": "تكرار لا نهائي",
+      "definition": "استمرار تنفيذ الحلقة indefinitely.",
+      "details": "يُستخدم في برامج MQTT للاستمرار في الاستماع."
+    },
+    {
+      "term": "Input validation",
+      "translation_ar": "التحقق من صحة المدخلات",
+      "definition": "فحص البيانات المدخلة قبل المعالجة.",
+      "details": "يمنع الأخطاء والثغرات الأمنية."
+    },
+    {
+      "term": "Range check",
+      "translation_ar": "فحص النطاق",
+      "definition": "التحقق من أن القيمة ضمن النطاق المسموح.",
+      "details": "جزء من التحقق من صحة المدخلات."
+    },
+    {
+      "term": "Safe default",
+      "translation_ar": "القيمة الآمنة الافتراضية",
+      "definition": "قيمة آمنة تُستخدم عند فشل التحقق.",
+      "details": "تمنع السلوك غير الآمن."
+    },
+    {
+      "term": "Fallback",
+      "translation_ar": "التراجع",
+      "definition": "العودة إلى خطة بديلة عند الفشل.",
+      "details": "يُستخدم لزيادة الموثوقية."
+    },
+    {
+      "term": "Device identity",
+      "translation_ar": "هوية الجهاز",
+      "definition": "معلومات تعريف الجهاز الفريدة.",
+      "details": "تُستخدم للمصادقة والتفويض."
+    },
+    {
+      "term": "Certificate placeholder",
+      "translation_ar": "حامل مكان الشهادة",
+      "definition": "نص مؤقت يحل محل الشهادة الحقيقية.",
+      "details": "يُستخدم في قوالب التكوين."
+    },
+    {
+      "term": "Revoked",
+      "translation_ar": "ملغاة",
+      "definition": "تم إلغاء صلاحية الشهادة.",
+      "details": "لا يمكن استخدام الشهادة الملغاة."
+    },
+    {
+      "term": "Memory overload",
+      "translation_ar": "إجهاد الذاكرة",
+      "definition": "استهلاك الذاكرة بشكل مفرط.",
+      "details": "يُتجنب بمعالجة البيانات أجزاء."
+    },
+    {
+      "term": "Shared key",
+      "translation_ar": "المفتاح المشترك",
+      "definition": "مفتاح سري معروف بين الطرفين.",
+      "details": "يُستخدم في HMAC والتشفير المتماثل."
+    },
+    {
+      "term": "Hexadecimal",
+      "translation_ar": "ست عشري",
+      "definition": "نظام عد أساسه 16.",
+      "details": "يُستخدم لتمثيل البيانات الثنائية."
+    },
+    {
+      "term": "Descending order",
+      "translation_ar": "ترتيب تنازلي",
+      "definition": "من الأكبر إلى الأصغر.",
+      "details": "يُستخدم في ترتيب التهديدات حسب الأولوية."
+    },
+    {
+      "term": "Lambda function",
+      "translation_ar": "دالة لامدا",
+      "definition": "دالة مجهولة صغيرة.",
+      "details": "يُستخدم في Python للعمليات السريعة."
+    },
+    {
+      "term": "Exception handling",
+      "translation_ar": "معالجة الاستثناءات",
+      "definition": "التعامل مع الأخطاء وقت التشغيل.",
+      "details": "يمنع انهيار البرنامج."
+    },
+    {
+      "term": "Configuration file",
+      "translation_ar": "ملف التكوين",
+      "definition": "ملف يحتوي على إعدادات النظام.",
+      "details": "يُستخدم لتخصيص سلوك البرنامج."
+    },
+    {
+      "term": "Encoding",
+      "translation_ar": "الترميز",
+      "definition": "تحويل النص إلى بايتات.",
+      "details": "مثل UTF-8 encoding."
+    },
+    {
+      "term": "Decoding",
+      "translation_ar": "فك الترميز",
+      "definition": "تحويل البايتات إلى نص.",
+      "details": "عكس عملية الترميز."
+    },
+    {
+      "term": "ISO format",
+      "translation_ar": "تنسيق ISO",
+      "definition": "تنسيق تاريخ ووقت قياسي.",
+      "details": "ISO 8601 - YYYY-MM-DDTHH:MM:SSZ."
+    },
+    {
+      "term": "UTC time",
+      "translation_ar": "التوقيت العالمي المنسق",
+      "definition": "توقيت قياسي عالمي.",
+      "details": "Coordinated Universal Time - مرجع زمني عالمي."
+    },
+    {
+      "term": "Indentation",
+      "translation_ar": "المسافة البادئة",
+      "definition": "المسافات في بداية الأسطر.",
+      "details": "تُستخدم في JSON للتنسيق."
+    },
+    {
+      "term": "Risk priority",
+      "translation_ar": "أولوية المخاطرة",
+      "definition": "تصنيف المخاطر حسب الأهمية.",
+      "details": "Low, Medium, High."
+    },
+    {
+      "term": "Risk action",
+      "translation_ar": "إجراء المخاطرة",
+      "definition": "الإجراء المطلوب للتعامل مع المخاطرة.",
+      "details": "Monitor, Fix Soon, Fix Now."
+    },
+    {
+      "term": "Integer input",
+      "translation_ar": "مدخل رقم صحيح",
+      "definition": "قيمة عددية صحيحة.",
+      "details": "يُتحقق من النوع الصحيح."
+    },
+    {
+      "term": "Value error",
+      "translation_ar": "خطأ القيمة",
+      "definition": "خطأ في تحويل القيم.",
+      "details": "يحدث عند إدخال نص بدلاً من رقم."
+    },
+    {
+      "term": "Avalanche effect",
+      "translation_ar": "تأثير الانهيار الجليدي",
+      "definition": "تغير كبير في المخرج لتغير صغير في المدخل.",
+      "details": "خاصية دوال التجزئة الجيدة."
+    },
+    {
+      "term": "Fingerprint",
+      "translation_ar": "البصمة الرقمية",
+      "definition": "قيمة فريدة تمثل البيانات.",
+      "details": "مثل ناتج دالة التجزئة."
+    },
+    {
+      "term": "One-way function",
+      "translation_ar": "دالة أحادية الاتجاه",
+      "definition": "دالة لا يمكن عكسها.",
+      "details": "مثل دوال التجزئة."
+    },
+    {
+      "term": "Connection result code",
+      "translation_ar": "رمز نتيجة الاتصال",
+      "definition": "رمز يشير إلى حالة الاتصال.",
+      "details": "في MQTT، 0 يعني نجاح الاتصال."
+    },
+    {
+      "term": "Payload decode",
+      "translation_ar": "فك تشفير الحمولة",
+      "definition": "تحويل الحمولة من بايتات إلى نص.",
+      "details": "يُستخدم لقراءة محتوى الرسالة."
+    },
+    {
+      "term": "Motor speed",
+      "translation_ar": "سرعة المحرك",
+      "definition": "سرعة دوران المحرك.",
+      "details": "يُتحكم فيها عبر PWM."
+    },
+    {
+      "term": "Strip input",
+      "translation_ar": "تنظيف المدخل",
+      "definition": "إزالة المسافات الزائدة من المدخل.",
+      "details": "جزء من تنظيف البيانات."
+    },
+    {
+      "term": "Candidate value",
+      "translation_ar": "القيمة المرشحة",
+      "definition": "قيمة مؤقتة للتحقق.",
+      "details": "تُستخدم في التحقق من الصحة."
+    },
+    {
+      "term": "Physical access threats",
+      "translation_ar": "تهديدات الوصول الفيزيائي",
+      "definition": "مخاطر تتعلق بالوصول المادي للأجهزة.",
+      "details": "مثل قراءة الذاكرة أو التلاعب بالأجهزة."
+    },
+    {
+      "term": "Flash memory",
+      "translation_ar": "ذاكرة الفلاش",
+      "definition": "ذاكرة غير قابلة للتطاير.",
+      "details": "تُستخدم لتخزين البرنامج الثابت."
+    },
+    {
+      "term": "Bypass protections",
+      "translation_ar": "تجاوز الحمايات",
+      "definition": "الالتفاف حول الضوابط الأمنية.",
+      "details": "مثل استخدام UART/JTAG."
+    },
+    {
+      "term": "Hardware tampering",
+      "translation_ar": "التلاعب بالأجهزة",
+      "definition": "تعديل مكونات الأجهزة.",
+      "details": "لإرسال بيانات مزيفة."
+    },
+    {
+      "term": "Secure storage goals",
+      "translation_ar": "أهداف التخزين الآمن",
+      "definition": "أهداف حماية البيانات المخزنة.",
+      "details": "السرية، السلامة، التحكم في الوصول."
+    },
+    {
+      "term": "Config file tampering",
+      "translation_ar": "التلاعب بملف التكوين",
+      "definition": "تعديل غير مصرح به لإعدادات النظام.",
+      "details": "يُكتشف بالتحقق من السلامة."
+    },
+    {
+      "term": "Update module",
+      "translation_ar": "وحدة التحديث",
+      "definition": "الجزء المسؤول عن تحديث البرنامج.",
+      "details": "يحتاج صلاحيات الكتابة."
+    },
+    {
+      "term": "Smart lock",
+      "translation_ar": "القفل الذكي",
+      "definition": "قفل يمكن التحكم فيه إلكترونياً.",
+      "details": "مثال على جهاز IoT."
+    },
+    {
+      "term": "Temperature sensor",
+      "translation_ar": "مستشعر الحرارة",
+      "definition": "جهاز يقيس درجة الحرارة.",
+      "details": "مثال على مستشعر IoT."
+    },
+    {
+      "term": "Unlock command",
+      "translation_ar": "أمر الفتح",
+      "definition": "إرسال إشارة لفتح القفل.",
+      "details": "مثال على أمر IoT."
+    },
+    {
+      "term": "IoT diagram",
+      "translation_ar": "مخطط إنترنت الأشياء",
+      "definition": "تمثيل مرئي لنظام IoT.",
+      "details": "يوضح تدفق البيانات والمكونات."
+    },
+    {
+      "term": "Network router",
+      "translation_ar": "موجه الشبكة",
+      "definition": "جهاز يوجه حركة البيانات.",
+      "details": "جزء من بنية الشبكة."
+    },
+    {
+      "term": "Cloud API",
+      "translation_ar": "واجهة برمجة التطبيقات السحابية",
+      "definition": "واجهة للخدمات السحابية.",
+      "details": "تسمح بالتفاعل مع السحابة."
+    },
+    {
+      "term": "TLS verification",
+      "translation_ar": "التحقق من TLS",
+      "definition": "التحقق من صحة شهادات TLS.",
+      "details": "يمنع هجمات الرجل في المنتصف."
+    },
+    {
+      "term": "Insecure setting",
+      "translation_ar": "الإعداد غير الآمن",
+      "definition": "تكوين يعرض النظام للخطر.",
+      "details": "مثل تعطيل التحقق من TLS."
     }
   ]
 }
