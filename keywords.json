@@ -1,10 +1,1576 @@
 {
   "keywords": [
     {
-      "term": "",
-      "translation_ar": "",
-      "definition": "",
-      "details": ""
+      "term": "Asymmetric",
+      "translation_ar": "غير متماثل",
+      "definition": "يستخدم عنصرين مختلفين (مثل مفتاحين مختلفين) بدلاً من عنصر واحد مشترك.",
+      "details": "في التشفير غير المتماثل، المفتاح المستخدم للتشفير يختلف عن المفتاح المستخدم لفك التشفير."
+    },
+    {
+      "term": "Crypto",
+      "translation_ar": "تشفير (اختصار)",
+      "definition": "اختصار لكلمة Cryptography. يشير إلى علم وتقنيات التشفير.",
+      "details": "مصطلح عام يشمل جميع تقنيات حماية المعلومات بالتشفير."
+    },
+    {
+      "term": "Tampered",
+      "translation_ar": "مُتلاعب به",
+      "definition": "تم تغييره أو تعديله بشكل غير مصرّح به وبطريقة ضارة.",
+      "details": "التحديثات الموقّعة تضمن أنها لم تتعرض للتعديل من المصدر الأصلي."
+    },
+    {
+      "term": "Endpoints",
+      "translation_ar": "نقاط النهاية",
+      "definition": "أجهزة أو تطبيقات طرفية في الشبكة تتواصل مع بعضها.",
+      "details": "في IoT: المستشعرات، المشغلات، الخوادم كلها نقاط نهاية."
+    },
+    {
+      "term": "Credentials",
+      "translation_ar": "بيانات الاعتماد",
+      "definition": "معلومات تُستخدم للتحقق من الهوية، مثل أسماء المستخدم وكلمات المرور.",
+      "details": "يجب حمايتها من التخزين غير الآمن في الكود."
+    },
+    {
+      "term": "Phishing",
+      "translation_ar": "التصيد الاحتيالي",
+      "definition": "هجوم يحاول فيه المهاجم خداع المستخدمين للكشف عن معلومات حساسة.",
+      "details": "ليس تهديد مباشر لأجهزة IoT لكن يستهدف المستخدمين."
+    },
+    {
+      "term": "Malware",
+      "translation_ar": "البرمجيات الخبيثة",
+      "definition": "برامج ضارة مصممة لإلحاق الضرر بالأنظمة أو سرقة البيانات.",
+      "details": "يشمل الفيروسات، برامج الفدية، وأحصنة طروادة."
+    },
+    {
+      "term": "Hackers",
+      "translation_ar": "المتسللون / القراصنة",
+      "definition": "أشخاص يحاولون الوصول غير المصرّح به إلى الأنظمة.",
+      "details": "يمكن أن يكونوا مهاجمين خارجيين أو مخترقين داخليين."
+    },
+    {
+      "term": "Databases",
+      "translation_ar": "قواعد البيانات",
+      "definition": "مجموعات منظمة من البيانات المخزنة والمنظمة للاسترجاع السريع.",
+      "details": "في السحابة، تخزن بيانات أجهزة IoT وبيانات المستخدمين."
+    },
+    {
+      "term": "Default passwords",
+      "translation_ar": "كلمات المرور الافتراضية",
+      "definition": "كلمات مرور يتم تعيينها مسبقًا من المصنّع ولم يتم تغييرها.",
+      "details": "ممارسة أمنية سيئة. يجب تغييرها عند الإعداد الأولي."
+    },
+    {
+      "term": "Updates",
+      "translation_ar": "التحديثات",
+      "definition": "إصدارات جديدة من البرمجيات تحتوي على إصلاحات أو تحسينات.",
+      "details": "يجب توقيعها رقميًا لضمان أنها من مصدر موثوق."
+    },
+    {
+      "term": "Explicitly",
+      "translation_ar": "صراحةً / بشكل واضح",
+      "definition": "بشكل مباشر وواضح بدون أي غموض.",
+      "details": "في الأمن: السماح صراحةً يعني تحديد ما هو مسموح بشكل واضح."
+    },
+    {
+      "term": "Permitted actions",
+      "translation_ar": "الإجراءات المسموحة",
+      "definition": "العمليات أو الأنشطة التي تم السماح بها بشكل رسمي.",
+      "details": "في مبدأ deny-by-default، فقط هذه الإجراءات مسموحة."
+    },
+    {
+      "term": "Risky actions",
+      "translation_ar": "الإجراءات الخطرة",
+      "definition": "عمليات قد تسبب ضررًا أمنيًا أو تشغيليًا.",
+      "details": "يجب رفضها ما لم يتم السماح بها بشكل صريح."
+    },
+    {
+      "term": "Refuse",
+      "translation_ar": "يرفض",
+      "definition": "يمنع أو لا يسمح بتنفيذ إجراء معين.",
+      "details": "السلوك الآمن يرفض الإجراءات غير الموثوقة."
+    },
+    {
+      "term": "Unsafe actions",
+      "translation_ar": "الإجراءات غير الآمنة",
+      "definition": "عمليات قد تسبب ضررًا أمنيًا أو تعطل النظام.",
+      "details": "يجب رفضها عند فشل التحقق."
+    },
+    {
+      "term": "Continue operation",
+      "translation_ar": "متابعة التشغيل",
+      "definition": "الاستمرار في العمل بشكل طبيعي.",
+      "details": "ليس دائمًا آمنًا عند وجود تكوين غير آمن."
+    },
+    {
+      "term": "Configuration",
+      "translation_ar": "التكوين / الإعدادات",
+      "definition": "مجموعة الإعدادات التي تحدد كيف يعمل النظام.",
+      "details": "إعدادات غير آمنة تترك النظام عرضة للهجوم."
+    },
+    {
+      "term": "Secures",
+      "translation_ar": "يؤمن / يحمي",
+      "definition": "يجعل شيء ما آمنًا ومحميًا من التهديدات.",
+      "details": "TLS يؤمن الاتصالات الشبكية."
+    },
+    {
+      "term": "Communication",
+      "translation_ar": "الاتصال",
+      "definition": "تبادل البيانات بين جهازين أو أكثر.",
+      "details": "يجب تأمينه بالتشفير لمنع الاعتراض."
+    },
+    {
+      "term": "Represent",
+      "translation_ar": "يمثل",
+      "definition": "يشير إلى أو يدل على شيء معين.",
+      "details": "في STRIDE، كل حرف يمثل نوع تهديد."
+    },
+    {
+      "term": "Clients",
+      "translation_ar": "العملاء",
+      "definition": "أجهزة أو تطبيقات تتصل بخادم أو خدمة.",
+      "details": "في MQTT، العملاء هم الناشرين والمشتركين."
+    },
+    {
+      "term": "Messages",
+      "translation_ar": "الرسائل",
+      "definition": "وحدات بيانات يتم إرسالها بين الأنظمة.",
+      "details": "في MQTT، الرسائل تحتوي على البيانات والموضوع."
+    },
+    {
+      "term": "Receive",
+      "translation_ar": "يستقبل",
+      "definition": "يحصل على بيانات أو رسائل من مصدر آخر.",
+      "details": "المشتركين يستقبلون الرسائل من المواضيع."
+    },
+    {
+      "term": "Safely",
+      "translation_ar": "بأمان",
+      "definition": "بطريقة تحمي من الخطر أو الكشف.",
+      "details": "يجب تخزين المفاتيح بشكل آمن."
+    },
+    {
+      "term": "Secure hardware",
+      "translation_ar": "العتاد الآمن",
+      "definition": "مكونات مادية مصممة لحماية البيانات الحساسة.",
+      "details": "أمثلة: TPM، Secure Element، HSM."
+    },
+    {
+      "term": "Written directly",
+      "translation_ar": "مكتوب مباشرةً",
+      "definition": "مضمن بدون استخدام وسائل حماية.",
+      "details": "الأسرار المكتوبة مباشرة في الكود معرضة للخطر."
+    },
+    {
+      "term": "Changes daily",
+      "translation_ar": "يتغير يوميًا",
+      "definition": "يتجدد أو يتغير كل يوم.",
+      "details": "المفاتيح الجيدة يجب أن تتغير دوريًا."
+    },
+    {
+      "term": "Automatically",
+      "translation_ar": "تلقائيًا",
+      "definition": "بدون تدخل يدوي.",
+      "details": "تغيير المفاتيح تلقائيًا يحسن الأمن."
+    },
+    {
+      "term": "Core goals",
+      "translation_ar": "الأهداف الأساسية",
+      "definition": "الأغراض أو الأهداف الرئيسية لنظام أو تقنية.",
+      "details": "الأهداف الأساسية للتشفير: السرية، السلامة، المصادقة."
+    },
+    {
+      "term": "Zigbee",
+      "translation_ar": "زيجبي",
+      "definition": "بروتوكول اتصال لاسلكي منخفض الطاقة لأجهزة IoT.",
+      "details": "يُستخدم في الشبكات المنزلية الذكية."
+    },
+    {
+      "term": "Wi-Fi",
+      "translation_ar": "واي فاي",
+      "definition": "تقنية اتصال لاسلكي شائعة للشبكات المحلية.",
+      "details": "يُستخدم في أجهزة IoT للاتصال بالإنترنت."
+    },
+    {
+      "term": "Username",
+      "translation_ar": "اسم المستخدم",
+      "definition": "معرف فريد للمستخدم في نظام.",
+      "details": "جزء من بيانات الاعتماد مع كلمة المرور."
+    },
+    {
+      "term": "Email",
+      "translation_ar": "البريد الإلكتروني",
+      "definition": "نظام لإرسال الرسائل عبر الإنترنت.",
+      "details": "ليس هدف تشفير مباشر."
+    },
+    {
+      "term": "Reset",
+      "translation_ar": "إعادة تعيين",
+      "definition": "إرجاع النظام إلى حالته الافتراضية أو الأولية.",
+      "details": "زر Reset الفيزيائي يمكن استخدامه لاستعادة الجهاز."
+    },
+    {
+      "term": "Login",
+      "translation_ar": "تسجيل الدخول",
+      "definition": "عملية الدخول إلى نظام باستخدام بيانات الاعتماد.",
+      "details": "ليس وظيفة القياس عن بُعد (Telemetry)."
+    },
+    {
+      "term": "Resource",
+      "translation_ar": "المورد",
+      "definition": "أي شيء ذي قيمة يحتاج للحماية.",
+      "details": "البيانات، الأجهزة، والسمعة كلها موارد."
+    },
+    {
+      "term": "Protection",
+      "translation_ar": "الحماية",
+      "definition": "إجراءات وتقنيات لمنع الضرر أو الوصول غير المصرّح به.",
+      "details": "هدف نمذجة التهديدات هو تحديد ما يجب حمايته."
+    },
+    {
+      "term": "Bug",
+      "translation_ar": "خطأ برمجي",
+      "definition": "خطأ أو عيب في الكود يسبب سلوك غير متوقع.",
+      "details": "يمكن أن يكون ثغرة أمنية إذا تم استغلاله."
+    },
+    {
+      "term": "Firewall rule",
+      "translation_ar": "قاعدة الجدار الناري",
+      "definition": "قاعدة تحدد حركة الشبكة المسموحة أو المرفوضة.",
+      "details": "ليست أصلًا (Asset) لكن أداة حماية."
+    },
+    {
+      "term": "Sense",
+      "translation_ar": "يستشعر",
+      "definition": "يكتشف أو يقيس ظواهر فيزيائية.",
+      "details": "أجهزة IoT تستشعر البيئة المحيطة."
+    },
+    {
+      "term": "Communicate",
+      "translation_ar": "يتواصل",
+      "definition": "يتبادل البيانات مع أجهزة أو أنظمة أخرى.",
+      "details": "وظيفة أساسية في أجهزة IoT."
+    },
+    {
+      "term": "Act",
+      "translation_ar": "يتخذ إجراءً",
+      "definition": "ينفذ فعلًا أو تغييرًا في العالم المادي.",
+      "details": "المشغلات تتصرف بناءً على الأوامر."
+    },
+    {
+      "term": "Smartphones",
+      "translation_ar": "الهواتف الذكية",
+      "definition": "أجهزة محمولة متعددة الوظائف.",
+      "details": "ليست التركيز الرئيسي لأمن IoT."
+    },
+    {
+      "term": "Browsers",
+      "translation_ar": "المتصفحات",
+      "definition": "برامج لعرض مواقع الويب.",
+      "details": "ليست جزء من نظام IoT."
+    },
+    {
+      "term": "Involved",
+      "translation_ar": "يتضمن / يشمل",
+      "definition": "يشترك أو يدخل في شيء.",
+      "details": "أمن IoT يتضمن حماية الأجهزة المترابطة."
+    },
+    {
+      "term": "Interact",
+      "translation_ar": "يتفاعل",
+      "definition": "يؤثر ويتأثر بشيء آخر.",
+      "details": "أنظمة IoT تتفاعل مع العالم المادي."
+    },
+    {
+      "term": "Design",
+      "translation_ar": "التصميم",
+      "definition": "خطة أو هيكل نظام قبل بنائه.",
+      "details": "التصميم الآمن يمنع المشاكل قبل حدوثها."
+    },
+    {
+      "term": "Default state",
+      "translation_ar": "الحالة الافتراضية",
+      "definition": "الحالة التي ينتقل إليها النظام عند الفشل.",
+      "details": "يجب أن تكون آمنة في التصميم الآمن."
+    },
+    {
+      "term": "Failure",
+      "translation_ar": "الفشل",
+      "definition": "عدم القدرة على العمل بشكل صحيح.",
+      "details": "التصميم الآمن يتعامل مع الفشل بشكل آمن."
+    },
+    {
+      "term": "Preventing",
+      "translation_ar": "منع",
+      "definition": "وقف شيء من الحدوث.",
+      "details": "السلوك الآمن يمنع العمليات غير الآمنة."
+    },
+    {
+      "term": "Operations",
+      "translation_ar": "العمليات",
+      "definition": "أعمال أو أنشطة يقوم بها النظام.",
+      "details": "يجب أن تكون آمنة ومراقبة."
+    },
+    {
+      "term": "Compression",
+      "translation_ar": "الضغط",
+      "definition": "تقليل حجم البيانات.",
+      "details": "ليس وظيفة TLS الأساسية."
+    },
+    {
+      "term": "Larger packets",
+      "translation_ar": "حزم أكبر",
+      "definition": "وحدات بيانات بحجم أكبر.",
+      "details": "ليس فائدة TLS."
+    },
+    {
+      "term": "Faster CPU",
+      "translation_ar": "معالج أسرع",
+      "definition": "وحدة معالجة ذات أداء أعلى.",
+      "details": "ليس وظيفة بروتوكول أمان."
+    },
+    {
+      "term": "Cable",
+      "translation_ar": "الكابل",
+      "definition": "سلك مادي لنقل البيانات أو الطاقة.",
+      "details": "ليس حد ثقة."
+    },
+    {
+      "term": "Brand",
+      "translation_ar": "العلامة التجارية",
+      "definition": "اسم تجاري لمنتج أو شركة.",
+      "details": "ليس مفهوم أمني."
+    },
+    {
+      "term": "Database table",
+      "translation_ar": "جدول قاعدة البيانات",
+      "definition": "هيكل منظم لتخزين البيانات في قاعدة بيانات.",
+      "details": "ليس حد ثقة."
+    },
+    {
+      "term": "Altered",
+      "translation_ar": "مُعدّل",
+      "definition": "تم تغييره من حالته الأصلية.",
+      "details": "التوقيعات الرقمية تكشف التغيير."
+    },
+    {
+      "term": "Verify",
+      "translation_ar": "يتحقق",
+      "definition": "يتأكد من صحة شيء ما.",
+      "details": "التوقيعات تتحقق من هوية المرسل."
+    },
+    {
+      "term": "Architecture",
+      "translation_ar": "الهندسة المعمارية",
+      "definition": "هيكل وتصميم النظام ومكوناته.",
+      "details": "ترتيب طبقات IoT جزء من الهندسة المعمارية."
+    },
+    {
+      "term": "Typical",
+      "translation_ar": "نموذجي / شائع",
+      "definition": "ما هو معتاد أو عادي في حالة معينة.",
+      "details": "الترتيب النموذجي: جهاز ← شبكة ← سحابة ← تطبيق."
+    },
+    {
+      "term": "Order",
+      "translation_ar": "الترتيب",
+      "definition": "التسلسل الذي تأتي به العناصر.",
+      "details": "ترتيب طبقات IoT مهم للأمن."
+    },
+    {
+      "term": "Mobile app",
+      "translation_ar": "تطبيق الهاتف المحمول",
+      "definition": "برنامج يعمل على الهواتف الذكية.",
+      "details": "طبقة في هندسة IoT."
+    },
+    {
+      "term": "Software",
+      "translation_ar": "البرمجيات",
+      "definition": "برامج وتعليمات تعمل على الأجهزة.",
+      "details": "البرنامج الثابت نوع من البرمجيات."
+    },
+    {
+      "term": "Running inside",
+      "translation_ar": "يعمل داخل",
+      "definition": "يتم تنفيذه ضمن جهاز معين.",
+      "details": "البرنامج الثابت يعمل داخل الجهاز."
+    },
+    {
+      "term": "Stored",
+      "translation_ar": "مخزّن",
+      "definition": "محفوظ في ذاكرة أو وسيط تخزين.",
+      "details": "البرنامج الثابت يُخزّن في Flash."
+    },
+    {
+      "term": "Cloud database",
+      "translation_ar": "قاعدة البيانات السحابية",
+      "definition": "قاعدة بيانات مستضافة على خدمات سحابية.",
+      "details": "ليست برنامج ثابت."
+    },
+    {
+      "term": "Network cable",
+      "translation_ar": "كابل الشبكة",
+      "definition": "سلك مادي يربط أجهزة الشبكة.",
+      "details": "ليس برنامج ثابت."
+    },
+    {
+      "term": "Low-power",
+      "translation_ar": "منخفض الطاقة",
+      "definition": "يستهلك كمية قليلة من الطاقة.",
+      "details": "BLE مصمم ليكون منخفض الطاقة."
+    },
+    {
+      "term": "Short-range",
+      "translation_ar": "قصير المدى",
+      "definition": "يعمل على مسافات قريبة.",
+      "details": "BLE يعمل على مسافة أمتار قليلة."
+    },
+    {
+      "term": "Long-range",
+      "translation_ar": "طويل المدى",
+      "description": "يعمل على مسافات بعيدة.",
+      "details": "BLE ليس طويل المدى."
+    },
+    {
+      "term": "City networks",
+      "translation_ar": "شبكات المدينة",
+      "definition": "شبكات تغطي منطقة مدينة كاملة.",
+      "details": "BLE لا يغطي هذه المسافات."
+    },
+    {
+      "term": "Satellite internet",
+      "translation_ar": "الإنترنت عبر الأقمار الصناعية",
+      "definition": "اتصال إنترنت عبر الأقمار الصناعية.",
+      "details": "ليس استخدام BLE."
+    },
+    {
+      "term": "Evaluated",
+      "translation_ar": "يُقيَّم",
+      "definition": "يتم حساب أو تقدير قيمته.",
+      "details": "المخاطر تُقيّم بالاحتمال والتأثير."
+    },
+    {
+      "term": "Potential",
+      "translation_ar": "المحتمل",
+      "definition": "ما يمكن أن يحدث في المستقبل.",
+      "details": "التأثير المحتمل جزء من حساب المخاطر."
+    },
+    {
+      "term": "Hiding data",
+      "translation_ar": "إخفاء البيانات",
+      "definition": "جعل البيانات غير قابلة للقراءة.",
+      "details": "وظيفة التشفير، ليس التجزئة."
+    },
+    {
+      "term": "Detecting changes",
+      "translation_ar": "اكتشاف التغييرات",
+      "definition": "التعرف على أي تعديل في البيانات.",
+      "details": "وظيفة دوال التجزئة."
+    },
+    {
+      "term": "Connection",
+      "translation_ar": "الاتصال",
+      "definition": "ربط بين جهازين أو أكثر.",
+      "details": "التجزئة لا تنشئ اتصالات."
+    },
+    {
+      "term": "Battery life",
+      "translation_ar": "عمر البطارية",
+      "definition": "المدة التي تعمل فيها البطارية.",
+      "details": "لا تتأثر بالتجزئة."
+    },
+    {
+      "term": "Produces",
+      "translation_ar": "تنتج",
+      "definition": "تنشئ أو تولد نتيجة.",
+      "details": "دوال التجزئة تنتج تجزئة ثابتة الطول."
+    },
+    {
+      "term": "Fixed output",
+      "translation_ar": "مخرج ثابت الطول",
+      "definition": "نتيجة بحجم محدد مهما كان حجم المدخل.",
+      "details": "SHA-256 ينتج دائمًا 256 بت."
+    },
+    {
+      "term": "Allowing detection",
+      "translation_ar": "السماح بالاكتشاف",
+      "definition": "تمكين التعرف على شيء معين.",
+      "details": "التجزئة تتيح اكتشاف التغيير."
+    },
+    {
+      "term": "Keeping",
+      "translation_ar": "الحفاظ على",
+      "definition": "الاستمرار في حالة معينة.",
+      "details": "التوافر يحافظ على عمل الخدمات."
+    },
+    {
+      "term": "Services",
+      "translation_ar": "الخدمات",
+      "definition": "وظائف أو موارد مقدمة للمستخدمين.",
+      "details": "يجب أن تبقى متاحة."
+    },
+    {
+      "term": "During",
+      "translation_ar": "أثناء",
+      "definition": "في فترة حدوث شيء.",
+      "details": "أثناء الهجمات أو الضغط."
+    },
+    {
+      "term": "Attack conditions",
+      "translation_ar": "ظروف الهجوم",
+      "definition": "البيئة أو الوضع أثناء الهجوم.",
+      "details": "التوافر مهم أثناء هذه الظروف."
+    },
+    {
+      "term": "Remain operational",
+      "translation_ar": "تبقى قيد التشغيل",
+      "definition": "تستمر في العمل بشكل طبيعي.",
+      "details": "هدف التوافر."
+    },
+    {
+      "term": "Accessible",
+      "translation_ar": "متاحة الوصول",
+      "definition": "يمكن الوصول إليها من المستخدمين الشرعيين.",
+      "details": "جزء من التوافر."
+    },
+    {
+      "term": "Under stress",
+      "translation_ar": "تحت الضغط",
+      "definition": "في ظروف تشغيل صعبة.",
+      "details": "يشمل الحمل الزائد أو الهجمات."
+    },
+    {
+      "term": "Summary",
+      "translation_ar": "الملخص",
+      "definition": "عرض موجز للنقاط الرئيسية.",
+      "details": "ملخص الأمن الفيزيائي."
+    },
+    {
+      "term": "Bypass",
+      "translation_ar": "تجاوز",
+      "definition": "تخطي أو التغلب على ضوابط أمنية.",
+      "details": "الوصول الفيزيائي يمكنه تجاوز الحماية البرمجية."
+    },
+    {
+      "term": "Software controls",
+      "translation_ar": "الضوابط البرمجية",
+      "definition": "حمايات تقنية مثل المصادقة والتشفير.",
+      "details": "يمكن تجاوزها بالوصول الفيزيائي."
+    },
+    {
+      "term": "Reduce",
+      "translation_ar": "تقليل",
+      "definition": "جعل شيء أصغر أو أقل.",
+      "details": "يجب تقليل مسارات الهجوم الفيزيائي."
+    },
+    {
+      "term": "Attack paths",
+      "translation_ar": "مسارات الهجوم",
+      "definition": "طرق يمكن للمهاجم استخدامها للدخول.",
+      "details": "الفيزيائية والشبكية."
+    },
+    {
+      "term": "Exist",
+      "translation_ar": "توجد",
+      "definition": "موجودة أو حاضرة.",
+      "details": "تهديدات الشبكة ليست الوحيدة."
+    },
+    {
+      "term": "Prevents",
+      "translation_ar": "يمنع",
+      "definition": "يوقف أو يحول دون حدوث شيء.",
+      "details": "TLS لا يمنع الهجمات الفيزيائية."
+    },
+    {
+      "term": "Split",
+      "translation_ar": "تقسيم",
+      "definition": "تجزئة شيء إلى أجزاء أصغر.",
+      "details": "تقسيم الشبكة إلى مناطق."
+    },
+    {
+      "term": "Zones",
+      "translation_ar": "مناطق",
+      "definition": "أقسام منفصلة من الشبكة.",
+      "details": "كل منطقة معزولة عن الأخرى."
+    },
+    {
+      "term": "Disable",
+      "translation_ar": "تعطيل",
+      "definition": "إيقاف أو إلغاء تفعيل شيء.",
+      "details": "ليس فائدة تقسيم الشبكة."
+    },
+    {
+      "term": "Flat network",
+      "translation_ar": "شبكة مسطحة",
+      "definition": "شبكة بدون تقسيم أو عزل.",
+      "details": "غير آمنة لأن الهجوم ينتشر بسهولة."
+    },
+    {
+      "term": "Calculated",
+      "translation_ar": "تُحسب",
+      "definition": "يتم إيجاد قيمتها رياضياً.",
+      "details": "درجة المخاطر = الاحتمال × التأثير."
+    },
+    {
+      "term": "Character",
+      "translation_ar": "حرف",
+      "definition": "رمز واحد في نص.",
+      "details": "تغيير حرف واحد يغير التجزئة كليًا."
+    },
+    {
+      "term": "Stay similar",
+      "translation_ar": "تبقى متشابهة",
+      "definition": "لا تتغير بشكل كبير.",
+      "details": "التجزئة لا تبقى متشابهة."
+    },
+    {
+      "term": "Change completely",
+      "translation_ar": "تتغير كليًا",
+      "definition": "تصبح مختلفة تمامًا.",
+      "details": "SHA-256 يظهر تأثير الانهيار الجليدي."
+    },
+    {
+      "term": "Become shorter",
+      "translation_ar": "تصبح أقصر",
+      "definition": "يقل طولها.",
+      "details": "التجزئة ثابتة الطول."
+    },
+    {
+      "term": "Readable text",
+      "translation_ar": "نص قابل للقراءة",
+      "definition": "نص يمكن فهمه بواسطة البشر.",
+      "details": "التجزئة لا تصبح نص مقروء."
+    },
+    {
+      "term": "Exhibits",
+      "translation_ar": "يُظهر",
+      "definition": "يظهر أو يبرز خاصية معينة.",
+      "details": "SHA-256 يُظهر تأثير الانهيار الجليدي."
+    },
+    {
+      "term": "Small input change",
+      "translation_ar": "تغيير بسيط في المدخل",
+      "definition": "تعديل صغير في البيانات المدخلة.",
+      "details": "ينتج تجزئة مختلفة تمامًا."
+    },
+    {
+      "term": "Baseline control",
+      "translation_ar": "ضبط أمني أساسي",
+      "definition": "إجراء أمني أساسي يجب تطبيقه.",
+      "details": "مثل الإقلاع الآمن والتوقيع."
+    },
+    {
+      "term": "Directly",
+      "translation_ar": "مباشرةً",
+      "definition": "بدون وسيط أو خطوة إضافية.",
+      "details": "يساعد مباشرةً في منع البرامج الخبيثة."
+    },
+    {
+      "term": "Prevent",
+      "translation_ar": "يمنع",
+      "definition": "يوقف أو يحول دون حدوث شيء.",
+      "details": "Secure boot يمنع تشغيل البرامج الخبيثة."
+    },
+    {
+      "term": "Running",
+      "translation_ar": "تشغيل",
+      "definition": "تنفيذ برنامج على جهاز.",
+      "details": "تشغيل برنامج ثابت خبيث."
+    },
+    {
+      "term": "Malicious",
+      "translation_ar": "خبيث",
+      "definition": "ضار أو مصمم لإلحاق الضرر.",
+      "details": "برنامج ثابت خبيث."
+    },
+    {
+      "term": "Permanently",
+      "translation_ar": "بشكل دائم",
+      "definition": "إلى أجل غير مسمى أو لفترة طويلة.",
+      "details": "تشغيل دائم للبرامج الخبيثة."
+    },
+    {
+      "term": "Process",
+      "translation_ar": "عملية",
+      "definition": "سلسلة من الخطوات المنظمة.",
+      "details": "إدارة الثغرات الأمنية عملية مستمرة."
+    },
+    {
+      "term": "Trusted",
+      "translation_ar": "موثوق",
+      "definition": "تم التحقق منه ومأمون.",
+      "details": "Secure boot ينفّذ البرنامج الموثوق فقط."
+    },
+    {
+      "term": "Verified",
+      "translation_ar": "تم التحقق منه",
+      "definition": "تم التأكد من صحته وأمانه.",
+      "details": "البرنامج الثابت يجب أن يكون موثقًا."
+    },
+    {
+      "term": "Evidence",
+      "translation_ar": "أدلة",
+      "definition": "معلومات تُستخدم لإثبات شيء ما.",
+      "details": "السجلات توفر أدلة على الهجمات."
+    },
+    {
+      "term": "Attacks",
+      "translation_ar": "الهجمات",
+      "definition": "محاولات ضارة لاختراق الأنظمة.",
+      "details": "السجلات توثق محاولات الهجوم."
+    },
+    {
+      "term": "Failures",
+      "translation_ar": "حالات الفشل",
+      "definition": "أعطال أو مشاكل في النظام.",
+      "details": "يتم تسجيلها للتحقيق."
+    },
+    {
+      "term": "Replaces",
+      "translation_ar": "يستبدل",
+      "definition": "يأخذ مكان شيء آخر.",
+      "details": "السجلات لا تستبدل التشفير."
+    },
+    {
+      "term": "Removes need",
+      "translation_ar": "يزيل الحاجة",
+      "definition": "يجعل شيء غير ضروري.",
+      "details": "السجلات لا تزيل حاجة المصادقة."
+    },
+    {
+      "term": "Traceability",
+      "translation_ar": "إمكانية التتبع",
+      "definition": "القدرة على تتبع الأحداث إلى مصادرها.",
+      "details": "السجلات توفر إمكانية التتبع."
+    },
+    {
+      "term": "Analyzing incidents",
+      "translation_ar": "تحليل الحوادث",
+      "definition": "فحص الأحداث الأمنية لفهمها.",
+      "details": "السجلات تساعد في التحليل."
+    },
+    {
+      "term": "Traveling",
+      "translation_ar": "أثناء الانتقال",
+      "definition": "تنتقل من مكان لآخر.",
+      "details": "البيانات تحتاج حماية أثناء الانتقال."
+    },
+    {
+      "term": "After deletion",
+      "translation_ar": "بعد الحذف",
+      "definition": "بعد إزالة البيانات.",
+      "details": "البيانات المحذوفة لا تحتاج قناة آمنة."
+    },
+    {
+      "term": "Only in RAM",
+      "translation_ar": "فقط في الذاكرة المؤقتة",
+      "definition": "مخزنة في الذاكرة العشوائية فقط.",
+      "details": "RAM تفقد البيانات عند الانقطاع."
+    },
+    {
+      "term": "Scanning",
+      "translation_ar": "المسح",
+      "definition": "فحص الأنظمة بحثًا عن ثغرات.",
+      "details": "ليس حرف S في STRIDE."
+    },
+    {
+      "term": "Switching",
+      "translation_ar": "التبديل",
+      "definition": "تغيير من شيء لآخر.",
+      "details": "ليس مفهوم في STRIDE."
+    },
+    {
+      "term": "Identity attacks",
+      "translation_ar": "هجمات الهوية",
+      "definition": "محاولات انتحال هوية مستخدم أو جهاز.",
+      "details": "Spoofing هو هجوم على الهوية."
+    },
+    {
+      "term": "Cannot be changed",
+      "translation_ar": "لا يمكن تغييرها",
+      "definition": "ثابتة ولا تقبل التعديل.",
+      "details": "السرية لا تعني عدم التغيير."
+    },
+    {
+      "term": "Authorized parties",
+      "translation_ar": "الأطراف المصرّح لها",
+      "definition": "الكيانات المسموح لها بالوصول.",
+      "details": "فقط هذه الأطراف يمكنها قراءة البيانات."
+    },
+    {
+      "term": "Everyone",
+      "translation_ar": "الجميع",
+      "definition": "كل الأشخاص أو الأنظمة.",
+      "details": "السرية تمنع الوصول العام."
+    },
+    {
+      "term": "Always public",
+      "translation_ar": "عامة دائمًا",
+      "definition": "متاحة للجميع في جميع الأوقات.",
+      "details": "البيانات السرية ليست عامة."
+    },
+    {
+      "term": "Focuses on",
+      "translation_ar": "يركز على",
+      "definition": "يهتم بشكل أساسي بـ.",
+      "details": "السرية تركز على منع القراءة."
+    },
+    {
+      "term": "Preventing attackers",
+      "translation_ar": "منع المهاجمين",
+      "definition": "وقف المهاجمين من القيام بشيء.",
+      "details": "السرية تمنع قراءة البيانات."
+    },
+    {
+      "term": "Private data",
+      "translation_ar": "البيانات الخاصة",
+      "definition": "معلومات شخصية أو حساسة.",
+      "details": "فيديو، موقع، صحة."
+    },
+    {
+      "term": "Unauthorized access",
+      "translation_ar": "الوصول غير المصرّح به",
+      "definition": "الدخول إلى بيانات بدون إذن.",
+      "details": "السرية تمنع هذا الوصول."
+    },
+    {
+      "term": "Allow everything",
+      "translation_ar": "السماح بكل شيء",
+      "definition": "عدم رفض أي إجراء.",
+      "details": "نهج غير آمن."
+    },
+    {
+      "term": "Disable updates",
+      "translation_ar": "تعطيل التحديثات",
+      "definition": "إيقاف تحديثات البرامج.",
+      "details": "ممارسة أمنية سيئة."
+    },
+    {
+      "term": "Use default passwords",
+      "translation_ar": "استخدام كلمات المرور الافتراضية",
+      "definition": "البقاء على كلمات المرور الأصلية.",
+      "details": "ممارسة أمنية سيئة."
+    },
+    {
+      "term": "Follow",
+      "translation_ar": "يتبع",
+      "definition": "يطبق أو يلتزم بـ.",
+      "details": "الأنظمة الآمنة تتبع مبدأ الرفض الافتراضي."
+    },
+    {
+      "term": "Deny-by-default",
+      "translation_ar": "الرفض الافتراضي",
+      "definition": "رفض كل شيء ما لم يُسمح به صراحةً.",
+      "details": "مبدأ أمني أساسي."
+    },
+    {
+      "term": "Responsible for",
+      "translation_ar": "مسؤول عن",
+      "definition": "مكلف أو مسؤول عن شيء.",
+      "details": "الوسيط مسؤول عن توجيه الرسائل."
+    },
+    {
+      "term": "Receiving",
+      "translation_ar": "استقبال",
+      "definition": "الحصول على رسائل أو بيانات.",
+      "details": "وظيفة الوسيط."
+    },
+    {
+      "term": "Distributing",
+      "translation_ar": "توزيع",
+      "definition": "إرسال الرسائل إلى المشتركين.",
+      "details": "وظيفة الوسيط."
+    },
+    {
+      "term": "Exploit",
+      "translation_ar": "استغلال",
+      "definition": "استخدام ثغرة لتحقيق هدف ضار.",
+      "details": "المهاجمون يستغلون الثغرات."
+    },
+    {
+      "term": "Compromise system",
+      "translation_ar": "اختراق النظام",
+      "definition": "النجاح في تجاوز الأمن.",
+      "details": "هدف المهاجم."
+    },
+    {
+      "term": "Authenticity",
+      "translation_ar": "صحة المصدر",
+      "definition": "ضمان أن الرسالة من المصدر المزعوم.",
+      "details": "HMAC يضمن الصحة مع المفتاح المشترك."
+    },
+    {
+      "term": "Creating device IDs",
+      "translation_ar": "إنشاء معرفات الجهاز",
+      "definition": "توليد معرفات فريدة للأجهزة.",
+      "details": "ليس وظيفة HMAC."
+    },
+    {
+      "term": "Motivation",
+      "translation_ar": "الدافع",
+      "definition": "السبب أو الباعث لفعل شيء.",
+      "details": "دوافع المهاجمين مختلفة."
+    },
+    {
+      "term": "Improve privacy",
+      "translation_ar": "تحسين الخصوصية",
+      "definition": "جعل الخصوصية أفضل.",
+      "details": "ليس دافع للمهاجم."
+    },
+    {
+      "term": "Invade privacy",
+      "translation_ar": "غزو الخصوصية",
+      "definition": "انتهاك خصوصية الأشخاص.",
+      "details": "دافع التجسس."
+    },
+    {
+      "term": "Increase availability",
+      "translation_ar": "زيادة التوافر",
+      "definition": "جعل الخدمات أكثر توفرًا.",
+      "details": "ليس دافع للتخريب."
+    },
+    {
+      "term": "Reduce legal risk",
+      "translation_ar": "تقليل المخاطر القانونية",
+      "definition": "خفض التعرض للمساءلة القانونية.",
+      "details": "ليس دافع للمهاجم."
+    },
+    {
+      "term": "Cameras",
+      "translation_ar": "الكاميرات",
+      "definition": "أجهزة تصوير فيديو.",
+      "details": "يمكن استخدامها للتجسس."
+    },
+    {
+      "term": "Encrypting data",
+      "translation_ar": "تشفير البيانات",
+      "definition": "تحويل البيانات إلى شكل مشفر.",
+      "details": "ليس ما يمنعه Rollback Protection."
+    },
+    {
+      "term": "Updating certificates",
+      "translation_ar": "تحديث الشهادات",
+      "definition": "تجديد أو تحديث الشهادات الرقمية.",
+      "details": "ليس ما يمنعه Rollback Protection."
+    },
+    {
+      "term": "Downgrading",
+      "translation_ar": "الترقية العكسية",
+      "definition": "العودة إلى إصدار أقدم.",
+      "details": "يمنعه Rollback Protection."
+    },
+    {
+      "term": "Old vulnerable version",
+      "translation_ar": "إصدار قديم غير آمن",
+      "definition": "نسخة سابقة تحتوي على ثغرات.",
+      "details": "لا يجب الرجوع إليها."
+    },
+    {
+      "term": "Insecure",
+      "translation_ar": "غير آمن",
+      "definition": "لا يوفر حماية كافية.",
+      "details": "الإصدارات القديمة غير آمنة."
+    },
+    {
+      "term": "Capturing",
+      "translation_ar": "التقاط",
+      "definition": "الحصول على أو تسجيل بيانات.",
+      "details": "المهاجم يلتقط الرسائل الصحيحة."
+    },
+    {
+      "term": "Valid message",
+      "translation_ar": "رسالة صحيحة",
+      "definition": "رسالة مقبولة ومشروعة.",
+      "details": "يتم إعادة إرسالها في هجوم Replay."
+    },
+    {
+      "term": "Sends again later",
+      "translation_ar": "يرسلها مرة أخرى لاحقًا",
+      "definition": "إعادة استخدام الرسالة في وقت آخر.",
+      "details": "هجوم إعادة الإرسال."
+    },
+    {
+      "term": "Deletes",
+      "translation_ar": "يحذف",
+      "definition": "يزيل أو يمسح.",
+      "details": "ليس وظيفة هجوم إعادة الإرسال."
+    },
+    {
+      "term": "Compresses",
+      "translation_ar": "يضغط",
+      "definition": "يقلل الحجم.",
+      "details": "ليس وظيفة هجوم إعادة الإرسال."
+    },
+    {
+      "term": "Creates new key",
+      "translation_ar": "ينشئ مفتاح جديد",
+      "definition": "يولد مفتاح تشفير جديد.",
+      "details": "ليس وظيفة هجوم إعادة الإرسال."
+    },
+    {
+      "term": "Retransmitting",
+      "translation_ar": "إعادة الإرسال",
+      "definition": "إرسال نفس البيانات مرة أخرى.",
+      "details": "وظيفة هجوم إعادة الإرسال."
+    },
+    {
+      "term": "Deceive",
+      "translation_ar": "خداع",
+      "definition": "إيهام بشيء غير صحيح.",
+      "details": "هدف هجوم إعادة الإرسال."
+    },
+    {
+      "term": "Injection",
+      "translation_ar": "الحقن",
+      "definition": "إدخال كود ضار في تطبيق.",
+      "details": "ليس حرف I في STRIDE."
+    },
+    {
+      "term": "Inspection",
+      "translation_ar": "التفتيش",
+      "definition": "فحص دقيق.",
+      "details": "ليس مفهوم في STRIDE."
+    },
+    {
+      "term": "Initialization",
+      "translation_ar": "التهيئة",
+      "definition": "إعداد أو بدء تشغيل.",
+      "details": "ليس مفهوم في STRIDE."
+    },
+    {
+      "term": "Unauthorized access to data",
+      "translation_ar": "الوصول غير المصرّح به للبيانات",
+      "definition": "قراءة أو تعديل بيانات بدون إذن.",
+      "details": "Information Disclosure يتضمن هذا."
+    },
+    {
+      "term": "Two different keys",
+      "translation_ar": "مفتاحان مختلفان",
+      "definition": "استخدام مفتاحين مختلفين.",
+      "details": "ليس في التشفير المتماثل."
+    },
+    {
+      "term": "Only public keys",
+      "translation_ar": "المفاتيح العامة فقط",
+      "definition": "استخدام المفاتيح العامة فقط.",
+      "details": "ليس في التشفير المتماثل."
+    },
+    {
+      "term": "No keys",
+      "translation_ar": "بدون مفاتيح",
+      "definition": "عدم استخدام أي مفاتيح.",
+      "details": "ليس في التشفير المتماثل."
+    },
+    {
+      "term": "Single shared key",
+      "translation_ar": "مفتاح مشترك واحد",
+      "definition": "مفتاح واحد يستخدم للتشفير وفك التشفير.",
+      "details": "أساس التشفير المتماثل."
+    },
+    {
+      "term": "Common reason",
+      "translation_ar": "سبب شائع",
+      "definition": "سبب متكرر أو عادي.",
+      "details": "ليست سبب شائع."
+    },
+    {
+      "term": "Hard to secure",
+      "translation_ar": "صعب التأمين",
+      "definition": "تأمينه يمثل تحديًا.",
+      "details": "أجهزة IoT صعبة التأمين."
+    },
+    {
+      "term": "Limited resources",
+      "translation_ar": "موارد محدودة",
+      "definition": "معالجة، ذاكرة، وطاقة محدودة.",
+      "details": "سبب صعوبة تأمين IoT."
+    },
+    {
+      "term": "Deployed",
+      "translation_ar": "مُنشَر",
+      "definition": "موضوع أو مثبت في موقع.",
+      "details": "الأجهزة تبقى منشورة لسنوات."
+    },
+    {
+      "term": "Many years",
+      "translation_ar": "سنوات عديدة",
+      "definition": "فترة طويلة من الزمن.",
+      "details": "أجهزة IoT تبقى منشورة لسنوات."
+    },
+    {
+      "term": "Always protected",
+      "translation_ar": "محمية دائمًا",
+      "definition": "مؤمنة في جميع الأوقات.",
+      "details": "ليس صحيحًا لأجهزة IoT."
+    },
+    {
+      "term": "Locked server rooms",
+      "translation_ar": "غرف الخوادم المؤمَنة",
+      "definition": "غرف مقفلة تحتوي على خوادم.",
+      "details": "أجهزة IoT نادرًا ما تكون فيها."
+    },
+    {
+      "term": "Physical exposure",
+      "translation_ar": "التعرض الفيزيائي",
+      "definition": "كون الجهاز معرضًا للوصول المادي.",
+      "details": "سبب صعوبة تأمين IoT."
+    },
+    {
+      "term": "Tampering",
+      "translation_ar": "التلاعب",
+      "definition": "تعديل غير مصرّح به.",
+      "details": "خطر فيزيائي."
+    },
+    {
+      "term": "Theft",
+      "translation_ar": "السرقة",
+      "definition": "أخذ الجهاز بدون إذن.",
+      "details": "خطر فيزيائي."
+    },
+    {
+      "term": "Exposed environments",
+      "translation_ar": "بيئات معرضة",
+      "definition": "أماكن غير محمية أو مؤمَنة.",
+      "details": "أجهزة IoT تُنشَر فيها."
+    },
+    {
+      "term": "Accept any input",
+      "translation_ar": "قبول أي مدخل",
+      "definition": "عدم التحقق من البيانات المدخلة.",
+      "details": "ممارسة غير آمنة."
+    },
+    {
+      "term": "Avoid errors",
+      "translation_ar": "تجنب الأخطاء",
+      "definition": "منع حدوث مشاكل.",
+      "details": "ليس سبب لقبول أي مدخل."
+    },
+    {
+      "term": "Check type",
+      "translation_ar": "التحقق من النوع",
+      "definition": "التأكد من نوع البيانات.",
+      "details": "جزء من التحقق من المدخلات."
+    },
+    {
+      "term": "Range",
+      "translation_ar": "النطاق",
+      "definition": "المدى أو الحدود المقبولة.",
+      "details": "جزء من التحقق من المدخلات."
+    },
+    {
+      "term": "Format",
+      "translation_ar": "التنسيق",
+      "definition": "الهيكل أو الشكل المطلوب.",
+      "details": "جزء من التحقق من المدخلات."
+    },
+    {
+      "term": "Before using",
+      "translation_ar": "قبل الاستخدام",
+      "definition": "أثناء المعالجة.",
+      "details": "يجب التحقق قبل استخدام المدخلات."
+    },
+    {
+      "term": "Remove encryption",
+      "translation_ar": "إزالة التشفير",
+      "definition": "إيقاف حماية التشفير.",
+      "details": "ليس وظيفة التحقق من المدخلات."
+    },
+    {
+      "term": "Ignore user data",
+      "translation_ar": "تجاهل بيانات المستخدم",
+      "definition": "عدم الاهتمام بالبيانات.",
+      "details": "ليس وظيفة التحقق من المدخلات."
+    },
+    {
+      "term": "Expected criteria",
+      "translation_ar": "المعايير المتوقعة",
+      "definition": "المتطلبات أو الشروط المحددة.",
+      "details": "البيانات يجب أن تطابقها."
+    },
+    {
+      "term": "Processing",
+      "translation_ar": "المعالجة",
+      "definition": "تنفيذ عمليات على البيانات.",
+      "details": "يجب التحقق قبل المعالجة."
+    },
+    {
+      "term": "Trigger actions",
+      "translation_ar": "تنفيذ إجراءات",
+      "definition": "تسبب في حدوث أفعال.",
+      "details": "الأوامر تُنفذ إجراءات على الأجهزة."
+    },
+    {
+      "term": "Typically",
+      "translation_ar": "عادةً",
+      "definition": "في الغالب أو بشكل عادي.",
+      "details": "الأوامر عادةً تتدفق من السحابة للجهاز."
+    },
+    {
+      "term": "Applications",
+      "translation_ar": "التطبيقات",
+      "definition": "برامج تعمل على أجهزة المستخدمين.",
+      "details": "ترسل أوامر إلى الأجهزة."
+    },
+    {
+      "term": "Protection method",
+      "translation_ar": "طريقة حماية",
+      "definition": "تقنية أو إجراء للحماية.",
+      "details": "ليس تعريف التهديد."
+    },
+    {
+      "term": "Weakness",
+      "translation_ar": "نقطة ضعف",
+      "definition": "ثغرة أو خلل أمني.",
+      "details": "ليس تعريف التهديد."
+    },
+    {
+      "term": "Device setting",
+      "translation_ar": "إعداد الجهاز",
+      "definition": "تكوين أو خيار في الجهاز.",
+      "details": "ليس تعريف التهديد."
+    },
+    {
+      "term": "Harmful event",
+      "translation_ar": "حدث ضار",
+      "definition": "واقع يمكن أن يسبب ضررًا.",
+      "details": "تعريف التهديد."
+    },
+    {
+      "term": "Exploit vulnerability",
+      "translation_ar": "استغلال الثغرة",
+      "definition": "استخدام نقطة ضعف للهجوم.",
+      "details": "التهديد يستغل الثغرة."
+    },
+    {
+      "term": "Receiver",
+      "translation_ar": "المستقبِل",
+      "definition": "الجهاز أو الشخص الذي يستقبل الرسالة.",
+      "details": "ليس معناه السلامة."
+    },
+    {
+      "term": "Always online",
+      "translation_ar": "متصل دائمًا",
+      "definition": "يعمل بشكل مستمر على الشبكة.",
+      "details": "ليس معنى السلامة."
+    },
+    {
+      "term": "Password hidden",
+      "translation_ar": "كلمة المرور مخفية",
+      "definition": "غير مرئية للمستخدمين.",
+      "details": "ليس معنى السلامة."
+    },
+    {
+      "term": "Modification",
+      "translation_ar": "التعديل",
+      "definition": "تغيير في البيانات.",
+      "details": "السلامة تكشف التعديل."
+    },
+    {
+      "term": "Detected",
+      "translation_ar": "يتم اكتشافه",
+      "definition": "يتم التعرف عليه.",
+      "details": "السلامة تكشف التعديلات."
+    },
+    {
+      "term": "Normal IT security",
+      "translation_ar": "أمن تكنولوجيا المعلومات التقليدي",
+      "definition": "أمن الحواسيب والشبكات التقليدية.",
+      "details": "IoT أوسع من هذا."
+    },
+    {
+      "term": "Never use networks",
+      "translation_ar": "لا تستخدم الشبكات أبدًا",
+      "definition": "عدم الاتصال بالشبكات.",
+      "details": "غير صحيح لأجهزة IoT."
+    },
+    {
+      "term": "Only about privacy",
+      "translation_ar": "فقط حول الخصوصية",
+      "definition": "التركز فقط على حماية الخصوصية.",
+      "details": "IoT أوسع من الخصوصية فقط."
+    },
+    {
+      "term": "Cannot be attacked",
+      "translation_ar": "لا يمكن مهاجمتها",
+      "definition": "محصنة ضد الهجمات.",
+      "details": "غير صحيح لأجهزة IoT."
+    },
+    {
+      "term": "Digital systems",
+      "translation_ar": "الأنظمة الرقمية",
+      "definition": "أنظمة حاسوبية ومعلوماتية.",
+      "details": "IoT تربطها بالعالم المادي."
+    },
+    {
+      "term": "Physical world",
+      "translation_ar": "العالم المادي",
+      "definition": "البيئة الملموسة والحقيقية.",
+      "details": "IoT تتفاعل معه."
+    },
+    {
+      "term": "Real-world impact",
+      "translation_ar": "تأثير في العالم الحقيقي",
+      "definition": "عواقب مادية فعلية.",
+      "details": "فشل IoT يسبب ضرر مادي."
+    },
+    {
+      "term": "Boots faster",
+      "translation_ar": "يقلع بشكل أسرع",
+      "definition": "يبدأ التشغيل بسرعة أكبر.",
+      "details": "ليس وظيفة Secure Boot."
+    },
+    {
+      "term": "Never needs updates",
+      "translation_ar": "لا يحتاج تحديثات أبدًا",
+      "definition": "يعمل بدون تحديثات.",
+      "details": "غير صحيح مع Secure Boot."
+    },
+    {
+      "term": "Uses BLE only",
+      "translation_ar": "يستخدم BLE فقط",
+      "definition": "يعمل فقط ببلوتوث منخفض الطاقة.",
+      "details": "ليس وظيفة Secure Boot."
+    },
+    {
+      "term": "Executed",
+      "translation_ar": "يُنفَّذ",
+      "definition": "يتم تشغيله أو تنفيذه.",
+      "details": "البرنامج الثابت يُنفَّذ عند الإقلاع."
+    },
+    {
+      "term": "Startup",
+      "translation_ar": "بدء التشغيل",
+      "definition": "عملية إقلاع الجهاز.",
+      "details": "Secure Boot يحمي هذه العملية."
+    },
+    {
+      "term": "Receives only",
+      "translation_ar": "يستقبل فقط",
+      "definition": "لا يرسل بيانات.",
+      "details": "ليس وظيفة Publisher."
+    },
+    {
+      "term": "Generates certificates",
+      "translation_ar": "يولد الشهادات",
+      "definition": "ينشئ شهادات رقمية.",
+      "details": "ليس وظيفة Publisher."
+    },
+    {
+      "term": "Blocks traffic",
+      "translation_ar": "يحظر حركة المرور",
+      "definition": "يمنع الاتصالات الشبكية.",
+      "details": "ليس وظيفة Publisher."
+    },
+    {
+      "term": "Sends messages",
+      "translation_ar": "يرسل الرسائل",
+      "definition": "ينشر البيانات إلى المواضيع.",
+      "details": "وظيفة Publisher."
+    },
+    {
+      "term": "Specific topic",
+      "translation_ar": "موضوع محدد",
+      "definition": "قناة تصنيف في MQTT.",
+      "details": "الناشر يرسل إلى موضوع معين."
+    },
+    {
+      "term": "Encryption",
+      "translation_ar": "التشفير",
+      "definition": "تحويل البيانات إلى شكل مشفر.",
+      "details": "ليس حرف E في STRIDE."
+    },
+    {
+      "term": "Endpoint",
+      "translation_ar": "نقطة النهاية",
+      "definition": "جهاز أو تطبيق في الشبكة.",
+      "details": "ليس حرف E في STRIDE."
+    },
+    {
+      "term": "Evaluation",
+      "translation_ar": "التقييم",
+      "definition": "تقدير أو قياس شيء.",
+      "details": "ليس حرف E في STRIDE."
+    },
+    {
+      "term": "Privilege attacks",
+      "translation_ar": "هجمات الصلاحيات",
+      "definition": "محاولات الحصول على صلاحيات أعلى.",
+      "details": "Elevation of Privilege."
+    },
+    {
+      "term": "Reversible",
+      "translation_ar": "قابل للعكس",
+      "definition": "يمكن استعادة البيانات الأصلية منه.",
+      "details": "التجزئة غير قابلة للعكس."
+    },
+    {
+      "term": "One-way",
+      "translation_ar": "اتجاه واحد",
+      "definition": "لا يمكن عكسه.",
+      "details": "التجزئة دالة ذات اتجاه واحد."
+    },
+    {
+      "term": "Secret-key based",
+      "translation_ar": "قائم على المفتاح السري",
+      "definition": "يعتمد على مفتاح سري.",
+      "details": "التجزئة ليست كذلك."
+    },
+    {
+      "term": "Same as encryption",
+      "translation_ar": "نفس التشفير",
+      "definition": "مطابق لعملية التشفير.",
+      "details": "التجزئة مختلفة عن التشفير."
+    },
+    {
+      "term": "Obtain original input",
+      "translation_ar": "الحصول على المدخل الأصلي",
+      "definition": "استعادة البيانات الأولية.",
+      "details": "غير ممكن مع التجزئة."
+    },
+    {
+      "term": "Permissions",
+      "translation_ar": "الصلاحيات",
+      "definition": "حقوق الوصول أو الإجراءات المسموحة.",
+      "details": "مبدأ أقل صلاحية يحددها."
+    },
+    {
+      "term": "Truly needed",
+      "translation_ar": "مطلوبة حقًا",
+      "definition": "ضرورية بشكل فعلي.",
+      "details": "فقط هذه الصلاحيات يجب منحها."
+    },
+    {
+      "term": "Defense in depth",
+      "translation_ar": "الدفاع المتعمق",
+      "definition": "استراتيجية طبقات متعددة من الحماية.",
+      "details": "ليس مبدأ أقل صلاحية."
+    },
+    {
+      "term": "Fail safely",
+      "translation_ar": "الفشل الآمن",
+      "definition": "الفشل بطريقة لا تسبب ضررًا.",
+      "details": "ليس مبدأ أقل صلاحية."
+    },
+    {
+      "term": "Entities",
+      "translation_ar": "الكيانات",
+      "definition": "مستخدمون، أجهزة، أو تطبيقات.",
+      "details": "يتم منحها صلاحيات."
+    },
+    {
+      "term": "Necessary",
+      "translation_ar": "ضرورية",
+      "definition": "مطلوبة أو لازمة.",
+      "details": "الصلاحيات الضرورية للمهام."
+    },
+    {
+      "term": "Perform tasks",
+      "translation_ar": "أداء المهام",
+      "definition": "تنفيذ الأعمال المطلوبة.",
+      "details": "الصلاحيات تُمنح لهذا الغرض."
+    },
+    {
+      "term": "Likelihood",
+      "translation_ar": "الاحتمالية",
+      "definition": "فرصة وقوع حدث ضار.",
+      "details": "جزء من حساب المخاطر."
+    },
+    {
+      "term": "Impact",
+      "translation_ar": "التأثير",
+      "definition": "مدى الضرر الناتج عن الحدث.",
+      "details": "جزء من حساب المخاطر."
+    },
+    {
+      "term": "Together",
+      "translation_ar": "معًا",
+      "definition": "مجتمعين أو مترابطين.",
+      "details": "الاحتمال والتأثير معًا."
+    },
+    {
+      "term": "Device cost",
+      "translation_ar": "تكلفة الجهاز",
+      "definition": "السعر المادي للجهاز.",
+      "details": "ليس جزء من المخاطر."
+    },
+    {
+      "term": "Measurements",
+      "translation_ar": "القياسات",
+      "definition": "قراءات من المستشعرات.",
+      "details": "نوع من Telemetry."
+    },
+    {
+      "term": "Status information",
+      "translation_ar": "معلومات الحالة",
+      "definition": "بيانات عن حالة الجهاز.",
+      "details": "نوع من Telemetry."
+    },
+    {
+      "term": "Interact",
+      "translation_ar": "يتفاعل",
+      "definition": "يؤثر ويتأثر بشيء.",
+      "details": "IoT يتفاعل مع العالم المادي."
+    },
+    {
+      "term": "Physical environment",
+      "translation_ar": "البيئة المادية",
+      "definition": "العالم الحقيقي الملموس.",
+      "details": "IoT يتفاعل معه."
+    },
+    {
+      "term": "Potentially dangerous",
+      "translation_ar": "خطير محتمل",
+      "definition": "يمكن أن يسبب ضررًا.",
+      "details": "فشل IoT يمكن أن يكون خطيرًا."
+    },
+    {
+      "term": "Beyond digital",
+      "translation_ar": "أبعد من الرقمي",
+      "definition": "يتجاوز العالم الرقمي.",
+      "details": "تأثير IoT في العالم المادي."
+    },
+    {
+      "term": "Embedded",
+      "translation_ar": "مدمج",
+      "definition": "مضمن داخل شيء آخر.",
+      "details": "البرنامج الثابت مدمج في الجهاز."
+    },
+    {
+      "term": "Non-volatile memory",
+      "translation_ar": "ذاكرة غير قابلة للتطاير",
+      "definition": "ذاكرة تحتفظ بالبيانات بدون طاقة.",
+      "details": "تُخزّن البرنامج الثابت."
+    },
+    {
+      "term": "Controls hardware",
+      "translation_ar": "يتحكم في العتاد",
+      "definition": "يدير المكونات المادية.",
+      "details": "وظيفة البرنامج الثابت."
+    },
+    {
+      "term": "Onboarding",
+      "translation_ar": "الإعداد الأولي",
+      "definition": "عملية إضافة جهاز جديد للشبكة.",
+      "details": "BLE يُستخدم فيها."
+    },
+    {
+      "term": "Flash",
+      "translation_ar": "فلاش",
+      "definition": "نوع من الذاكرة غير القابلة للتطاير.",
+      "details": "تُخزّن البرنامج الثابت."
+    },
+    {
+      "term": "Router",
+      "translation_ar": "الموجّه",
+      "definition": "جهاز شبكة يربط بين الشبكات.",
+      "details": "ليس Broker."
+    },
+    {
+      "term": "Central server",
+      "translation_ar": "الخادم المركزي",
+      "definition": "خادم رئيسي يدير الخدمة.",
+      "details": "الوسيط في MQTT."
     }
   ]
 }
