@@ -668,19 +668,19 @@
       "id": 3,
       "question_en": "Explain telemetry and commands with one IoT example for each.",
       "question_ar": "اشرح البيانات القياسية (Telemetry) والأوامر مع مثال واحد لكل منهما.",
-      "answer": "Telemetry: Device → server data (e.g., temperature sensor sends 25°C). Commands: Server/app → device actions (e.g., app sends unlock command to a smart lock)."
+      "answer": "Telemetry:  Data the device sends out to report its status or sensor readings (Device → server data) - e.g., temperature sensor sends 25°C to the cloud every 5 seconds. \nCommands: Instructions the server/app sends to the device to change what it does ( Server/app → device actions ) - e.g., app sends unlock command to a smart lock)."
     },
     {
       "id": 4,
       "question_en": "Write one clear definition for each: asset, threat, vulnerability, risk, mitigation.",
       "question_ar": "اكتب تعريفًا واضحًا لكل من: الأصل، التهديد، الثغرة، المخاطر، التخفيف.",
-      "answer": "Asset: valuable item to protect. Threat: harmful event. Vulnerability: weakness. Risk: likelihood × impact. Mitigation: control to reduce risk."
+      "answer": "Asset: valuable item to protect. \nThreat: harmful event. \nVulnerability: A weakness that allows a threat to succeed. \nRisk: How bad something can be, based on likelihood × impact. \nMitigation: control to reduce risk."
     },
     {
       "id": 5,
       "question_en": "Give 3 examples of physical access threats in IoT devices.",
       "question_ar": "اذكر 3 أمثلة على تهديدات الوصول الفيزيائي في أجهزة إنترنت الأشياء.",
-      "answer": "Reading flash memory to extract secrets; using UART/JTAG to bypass protections; hardware tampering to fake sensor readings."
+      "answer": "Reading flash memory to extract secrets; \nusing UART/JTAG to bypass protections; \nhardware tampering to fake sensor readings."
     },
     {
       "id": 6,
@@ -698,7 +698,7 @@
       "id": 8,
       "question_en": "What does TLS protect, and what does it NOT fix by itself?",
       "question_ar": "ماذا يحمي TLS، وماذا لا يعالجه بمفرده؟",
-      "answer": "TLS protects confidentiality, integrity, and authentication. It does not fix weak passwords, bad authorization, application bugs, or DoS attacks."
+      "answer": "TLS protects confidentiality, integrity, and authentication. \nIt does not fix weak passwords, bad authorization, application bugs, or DoS attacks."
     },
     {
       "id": 9,
@@ -710,7 +710,7 @@
       "id": 10,
       "question_en": "Explain the 3 goals of secure storage (confidentiality, integrity, access control) with one example each.",
       "question_ar": "اشرح الأهداف الثلاثة للتخزين الآمن (السرية، السلامة، التحكم في الوصول) مع مثال لكل منها.",
-      "answer": "Confidentiality: protect secrets (e.g., Wi-Fi password). Integrity: detect unauthorized changes (e.g., config file tampering). Access control: restrict who can access data (e.g., only update module can write firmware)."
+      "answer": "Confidentiality: protect secrets (e.g., Wi-Fi password). \nIntegrity: detect unauthorized changes (e.g., config file tampering). \nAccess control: restrict who can access data (e.g., only update module can write firmware)."
     }
   ],
   "code_analysis": [
