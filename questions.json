@@ -2,794 +2,855 @@
   "mcq": [
     {
       "id": 1,
-      "question_en": "Asymmetric crypto uses:",
-      "question_ar": "التشفير غير المتماثل يستخدم:",
+      "question_en": "",
+      "question_ar": "أى مما يلى يعد من الخصائص الديمغرافية المؤثرة في رائد الأعمال؟",
       "options": {
-        "a": "One shared key",
-        "b": "No keys",
-        "c": "Public key + private key",
-        "d": "Only passwords"
+        "a": "الإبتكار",
+        "b": "العمر",
+        "c": "القيمة المقدمة للعميل",
+        "d": "لاشئ مما سبق"
       },
-      "correct_answer": "c",
-      "explanation": "Asymmetric cryptography relies on a pair of keys: a public key for encryption and a private key for decryption."
+      "correct_answer": "b",
+      "explanation": ""
     },
     {
       "id": 2,
-      "question_en": "Signed firmware updates are important because they:",
-      "question_ar": "لماذا تعتبر تحديثات البرنامج الثابت الموقعة مهمة؟",
+      "question_en": "",
+      "question_ar": "أي مما يلى يعد من السمات الشخصية المؤثرة في رائد الأعمال؟",
       "options": {
-        "a": "Reduce file size",
-        "b": "Ensure updates come from the real manufacturer and were not modified",
-        "c": "Increase battery drain",
-        "d": "Remove the need for authentication"
+        "a": "المستوى التعليمي",
+        "b": "النوع",
+        "c": "الإستقلالية",
+        "d": "لاشئ مما سبق"
       },
-      "correct_answer": "b",
-      "explanation": "Digital signatures verify the authenticity and integrity of firmware updates, ensuring they are not tampered with."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 3,
-      "question_en": "Why must IoT security be end-to-end?",
-      "question_ar": "لماذا يجب أن يكون أمن إنترنت الأشياء شاملاً من الطرف إلى الطرف؟",
+      "question_en": "",
+      "question_ar": "أي مما يلى يعد من العوامل القانونية المؤثرة في رائد الأعمال؟",
       "options": {
-        "a": "Attacks only happen in the cloud",
-        "b": "Security must cover Device → Network → Cloud → App → Operations",
-        "c": "Only the app layer is important",
-        "d": "Only the device layer is important"
+        "a": "العملاء المستهدفين",
+        "b": "حماية الملكية الفكرية",
+        "c": "حجم السوق ومعدل نموه",
+        "d": "لاشئ مما سبق"
       },
       "correct_answer": "b",
-      "explanation": "IoT systems span multiple layers, and vulnerabilities in any layer can compromise the entire system."
+      "explanation": ""
     },
     {
       "id": 4,
-      "question_en": "STRIDE “D” stands for:",
-      "question_ar": "ماذا يشير الحرف D في نموذج STRIDE؟",
+      "question_en": "",
+      "question_ar": "تتسم .................... بدرجة عالية من الإبتكار.",
       "options": {
-        "a": "Debugging",
-        "b": "Denial of Service",
-        "c": "Data Storage",
-        "d": "Device Discovery"
+        "a": "ريادة الأعمال المطورة من تقنيات متاحة",
+        "b": "ريادة أعمال تنظيمية",
+        "c": "ريادة الأعمال عبر مشروع قائم",
+        "d": "ريادة الأعمال الإبتكارية البحتة"
       },
-      "correct_answer": "b",
-      "explanation": "In the STRIDE threat model, 'D' represents Denial of Service attacks."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 5,
-      "question_en": "MQTT communication style is:",
-      "question_ar": "نمط الاتصال في MQTT هو:",
+      "question_en": "",
+      "question_ar": "تتسم .................... بدرجة متوسطة من الإبتكار.",
       "options": {
-        "a": "File transfer",
-        "b": "Publish/Subscribe",
-        "c": "Email-based",
-        "d": "Peer-to-peer only"
+        "a": "ريادة الأعمال المطورة من تقنيات متاحة",
+        "b": "ريادة أعمال تنظيمية",
+        "c": "ريادة الأعمال عبر مشروع قائم",
+        "d": "ريادة الأعمال الإبتكارية البحتة"
       },
-      "correct_answer": "b",
-      "explanation": "MQTT uses a publish/subscribe model where clients publish messages to topics and others subscribe to receive them."
+      "correct_answer": "a",
+      "explanation": ""
     },
     {
       "id": 6,
-      "question_en": "“Hardcoded secret” means:",
-      "question_ar": "ماذا يعني \"سر مشفر داخل الكود\"؟",
+      "question_en": "",
+      "question_ar": "مشروع قدّم خدمة حجز مواعيد العيادات إلكترونيًا بدل الذهاب شخصيًا، وأصبح العميل يحجز ويتلقى تنبيها تلقائيا بالموعد. ما الخاصية/الخصائص التي تعبر عنها هذه الحالة؟",
       "options": {
-        "a": "A key stored safely in secure hardware",
-        "b": "A password/key written directly inside the source code",
-        "c": "A key stored only in the cloud",
-        "d": "A key that changes daily automatically"
+        "a": "توليد الفرص دون التقيد بالموارد",
+        "b": "تغيير الأوضاع السائدة وخلق نشاط جديد",
+        "c": "مخاطرة وعدم يقين",
+        "d": "اليقين التام بالنجاح"
       },
       "correct_answer": "b",
-      "explanation": "Hardcoded secrets are embedded directly in code, making them vulnerable if the code is exposed."
+      "explanation": ""
     },
     {
       "id": 7,
-      "question_en": "The main crypto goals are:",
-      "question_ar": "ما هي الأهداف الرئيسية للتشفير؟",
+      "question_en": "",
+      "question_ar": "إن ريادة الأعمال المحلية تعني..................",
       "options": {
-        "a": "Speed, cost, size",
-        "b": "Confidentiality, integrity, authentication",
-        "c": "Wi-Fi, BLE, Zigbee",
-        "d": "Password, username, email"
+        "a": "أنشطة تتجاوز الحدود الوطنية",
+        "b": "شركة عالمية بالضرورة",
+        "c": "مشروع يستهدف سوقًا محليًا",
+        "d": "شراء مشروع قائم"
       },
-      "correct_answer": "b",
-      "explanation": "Core cryptographic goals include confidentiality, integrity, and authentication."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 8,
-      "question_en": "In IoT systems, telemetry usually means:",
-      "question_ar": "في أنظمة إنترنت الأشياء، ماذا تعني البيانات القياسية (Telemetry)؟",
+      "question_en": "",
+      "question_ar": "مثال يوضح الريادة الدولية ...................",
       "options": {
-        "a": "Server → device actions",
-        "b": "Device → server measurements",
-        "c": "Device reset",
-        "d": "User login"
+        "a": "Talabat",
+        "b": "Chatgpt",
+        "c": "Amazon",
+        "d": "ب وج معا"
       },
-      "correct_answer": "b",
-      "explanation": "Telemetry refers to data sent from devices to servers, typically measurements or status information."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 9,
-      "question_en": "In threat modeling, an asset is:",
-      "question_ar": "في نمذجة التهديدات، ما هو الأصل (Asset)؟",
+      "question_en": "",
+      "question_ar": "إن ريادة الأعمال التنظيمية/شركات (Intrapreneurship) هي................",
       "options": {
-        "a": "A type of attack",
-        "b": "Something valuable to protect",
-        "c": "A bug in code",
-        "d": "A firewall rule"
+        "a": "تطبيقات البنوك لتحويل الأموال والسحب",
+        "b": "نشاط ريادي داخل منظمة قائمة لتطوير منتج/خدمة أو دخول سوق جديد",
+        "c": "شراء مطعم قائم",
+        "d": "أ وب معا"
       },
       "correct_answer": "b",
-      "explanation": "An asset is any valuable resource that needs protection, such as data, systems, or devices."
+      "explanation": ""
     },
     {
       "id": 10,
-      "question_en": "What is the best definition of IoT security?",
-      "question_ar": "ما هو أفضل تعريف لأمن إنترنت الأشياء؟",
+      "question_en": "",
+      "question_ar": "إن معيار تصنيف ريادة الأعمال \"من حيث التبني\" يقارن بين...............",
       "options": {
-        "a": "Protecting only cloud databases from hackers",
-        "b": "Protecting devices that sense, communicate, and sometimes act on the physical world",
-        "c": "Protecting smartphones from malware only",
-        "d": "Protecting internet browsers from phishing"
+        "a": "نطاق محلي/دولي",
+        "b": "تقنيات/معارف موجودة مقابل ابتكار جديد للسوق أو شراء قائم",
+        "c": "فردي/شركات",
+        "d": "ربح/خسارة"
       },
       "correct_answer": "b",
-      "explanation": "IoT security involves protecting interconnected devices that interact with the physical environment."
+      "explanation": ""
     },
     {
       "id": 11,
-      "question_en": "“Fail-safe behavior” means:",
-      "question_ar": "ماذا يعني سلوك \"الفشل الآمن\"؟",
+      "question_en": "",
+      "question_ar": "ريادة ابتكارية بحتة/جديدة إلى السوق (Radical/New-to-the-market) تتسم بـ..............",
       "options": {
-        "a": "Continue operation even with unsafe configuration",
-        "b": "If something is wrong, refuse unsafe actions and use safe defaults",
-        "c": "Delete all files",
-        "d": "Turn off validation"
+        "a": "عدم يقين منخفض",
+        "b": "ابتكار منخفض دائمًا",
+        "c": "عدم الحاجة للمرونة مع السوق",
+        "d": "اعتماد أكبر على البحث والتطوير وعدم يقين أعلى"
       },
-      "correct_answer": "b",
-      "explanation": "Fail-safe design ensures that systems default to a safe state when a failure occurs, preventing unsafe operations."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 12,
-      "question_en": "TLS mainly provides:",
-      "question_ar": "ماذا يوفر بروتوكول TLS بشكل أساسي؟",
+      "question_en": "",
+      "question_ar": "إن الريادة عبر امتلاك مشروع قائم (Buyout/Acquisition) تعني.........",
       "options": {
-        "a": "Compression",
-        "b": "Encryption + integrity + authentication",
-        "c": "Larger packets",
-        "d": "Faster CPU"
+        "a": "تأسيس مشروع من الصفر",
+        "b": "إلغاء التشغيل",
+        "c": "شراء/امتلاك مشروع قائم ثم تطويره وتحسين أدائه",
+        "d": "عمل بلا إدارة"
       },
-      "correct_answer": "b",
-      "explanation": "TLS secures communication by providing encryption, ensuring data integrity, and authenticating parties."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 13,
-      "question_en": "A trust boundary is:",
-      "question_ar": "ما هو حد الثقة (Trust Boundary)؟",
+      "question_en": "",
+      "question_ar": ".................. هى أحد الخصائص الديمغرافية، والتى تؤثر على إمكانية التمويل الذاتي أو تحمل تكلفة البداية.",
       "options": {
-        "a": "A cable between sensors",
-        "b": "A place where trust level changes",
-        "c": "A router brand",
-        "d": "A database table"
+        "a": "العمر",
+        "b": "القدرة المالية",
+        "c": "المستوى التعليمي",
+        "d": "النوع"
       },
       "correct_answer": "b",
-      "explanation": "A trust boundary represents a point where the level of trust changes, requiring validation or security controls."
+      "explanation": ""
     },
     {
       "id": 14,
-      "question_en": "Digital signatures provide:",
-      "question_ar": "ماذا توفر التوقيعات الرقمية؟",
+      "question_en": "",
+      "question_ar": "...................... هى أحد العوامل المؤثرة في رائد الأعمال والتي تشير إلى السمات العامة للفرد التي قد تسهم في تشكيل اتجاهاته نحو العمل الحر وفرصه في بدء مشروع.",
       "options": {
-        "a": "Confidentiality only",
-        "b": "Integrity + authentication",
-        "c": "Faster Wi-Fi",
-        "d": "Bigger storage"
+        "a": "العوامل القانونية",
+        "b": "عوامل المشروع نفسه",
+        "c": "عوامل السوق",
+        "d": "الخصائص الديمغرافية"
       },
-      "correct_answer": "b",
-      "explanation": "Digital signatures ensure that data has not been altered (integrity) and verify the sender's identity (authentication)."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 15,
-      "question_en": "Which is the correct typical IoT architecture order (end-to-end view)?",
-      "question_ar": "ما هو الترتيب الصحيح لبنية إنترنت الأشياء من طرف إلى طرف؟",
+      "question_en": "",
+      "question_ar": "أي مما يلى يعبر عن السمات الشخصية كأحد العوامل المؤثرة في رائد الأعمال؟",
       "options": {
-        "a": "Cloud → Device → App → Network → Operations",
-        "b": "Device → Network → Cloud → App → Operations",
-        "c": "App → Cloud → Network → Device → Operations",
-        "d": "Operations → Device → Cloud → Network → App"
+        "a": "قبول المخاطرة",
+        "b": "شدة المنافسة",
+        "c": "العمر",
+        "d": "التسويق والوصول للعملاء"
       },
-      "correct_answer": "b",
-      "explanation": "Typical IoT architecture flows from devices through network to cloud, then to applications and operational layers."
+      "correct_answer": "a",
+      "explanation": ""
     },
     {
       "id": 16,
-      "question_en": "Firmware is best described as:",
-      "question_ar": "كيف يمكن وصف البرنامج الثابت (Firmware) بشكل أفضل؟",
+      "question_en": "",
+      "question_ar": "إن عوامل المشروع نفسه كأحد العوامل المؤثرة على رائد الأعمال تهتم بدراسة:",
       "options": {
-        "a": "A mobile app",
-        "b": "Software running inside the device stored in flash",
-        "c": "A cloud database",
-        "d": "A network cable"
+        "a": "الظروف الخارجية",
+        "b": "حجم السوق",
+        "c": "قبول المخاطرة",
+        "d": "نموذج العمل"
       },
-      "correct_answer": "b",
-      "explanation": "Firmware is embedded software stored in non-volatile memory that controls device hardware."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 17,
-      "question_en": "BLE is mainly used for:",
-      "question_ar": "فيما يُستخدم BLE بشكل أساسي؟",
+      "question_en": "",
+      "question_ar": "إن تطبيق Talabat يعد مثال على......................",
       "options": {
-        "a": "Long-range city networks",
-        "b": "Short-range communication and device onboarding",
-        "c": "Cloud databases",
-        "d": "Satellite internet"
+        "a": "المشروع الرقمي الكامل",
+        "b": "التحول الرقمي",
+        "c": "المشروع الرقمي الجزئي",
+        "d": "لا شئ مما سبق"
       },
-      "correct_answer": "b",
-      "explanation": "Bluetooth Low Energy (BLE) is designed for low-power, short-range communication, often used in IoT onboarding."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 18,
-      "question_en": "Risk is mainly about:",
-      "question_ar": "المخاطر (Risk) تعتمد بشكل أساسي على:",
+      "question_en": "",
+      "question_ar": "إن موقع ChatGPT يعد مثال على........................",
       "options": {
-        "a": "Only impact",
-        "b": "Only likelihood",
-        "c": "Likelihood and impact together",
-        "d": "Device cost"
+        "a": "المشروع الرقمي الكامل",
+        "b": "التحول الرقمي",
+        "c": "المشروع الرقمي الجزئي",
+        "d": "لا شئ مما سبق"
       },
-      "correct_answer": "c",
-      "explanation": "Risk is evaluated based on both the likelihood of an event and its potential impact."
+      "correct_answer": "a",
+      "explanation": ""
     },
     {
       "id": 19,
-      "question_en": "A hash function is mainly used for:",
-      "question_ar": "فيما تُستخدم دوال التجزئة (Hash Functions) بشكل أساسي؟",
+      "question_en": "",
+      "question_ar": "إن الفرق الجوهرى بين الفكرة والفرصة هو أن ..............",
       "options": {
-        "a": "Hiding data so nobody reads it",
-        "b": "Detecting changes (integrity)",
-        "c": "Creating Wi-Fi connection",
-        "d": "Increasing battery life"
+        "a": "الفكرة تكون قابلة للتنفيذ دائما",
+        "b": "الفرصة تعد رأى أو حل محتمل للمشكلة على عكس الفكرة تنتقل إلى مستوى قابليتها للتنفيذ",
+        "c": "الفكرة هي الحالة التي يتوافر فيها عناصر السوق والعميل والقيمة المضافة",
+        "d": "الفكرة هي مجرد رأى بعكس الفرصة تعتبر قابليتها للتنفيذ في الواقع"
       },
-      "correct_answer": "b",
-      "explanation": "Hash functions produce a fixed output for input data, allowing detection of any changes to ensure integrity."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 20,
-      "question_en": "Which goal is MOST related to keeping devices/services working during overload or DoS attacks?",
-      "question_ar": "أي هدف يرتبط أكثر بالحفاظ على عمل الأجهزة والخدمات أثناء الهجمات أو الضغط العالي (DoS)؟",
+      "question_en": "",
+      "question_ar": "يعتبر تطبيق Zoom للإجتماعات عبر الإنترنت وللإستفادة من التحول للتواصل الرقمي والعمل/التعلم عن بعد مثالا على .......................... كأحد إستراتيجيات توليد الأفكار الريادية.",
       "options": {
-        "a": "Confidentiality",
-        "b": "Availability",
-        "c": "Integrity",
-        "d": "Safety"
+        "a": "تحسين المنتجات / الخدمات",
+        "b": "تحليل المشكلات اليومية",
+        "c": "إستغلال الإتجاهات الحديثة",
+        "d": "العصف الذهني"
       },
-      "correct_answer": "b",
-      "explanation": "Availability ensures systems remain operational and accessible even under stress or attack conditions like DoS."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 21,
-      "question_en": "The best summary of device physical security is:",
-      "question_ar": "ما هو أفضل وصف لأمن الأجهزة الفيزيائي؟",
+      "question_en": "",
+      "question_ar": ".......................... هو أسلوب تفكير جماعي منظم يهدف إلى توسيع مساحة الحلول الممكنة.",
       "options": {
-        "a": "Physical access never matters",
-        "b": "Physical access can bypass software controls, so reduce and protect physical attack paths",
-        "c": "Only network threats exist",
-        "d": "TLS prevents physical attacks"
+        "a": "تحسين المنتجات / الخدمات",
+        "b": "تحليل المشكلات اليومية",
+        "c": "إستغلال الإتجاهات الحديثة",
+        "d": "العصف الذهني"
       },
-      "correct_answer": "b",
-      "explanation": "Physical access can allow attackers to bypass logical protections, so securing hardware and limiting access is critical."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 22,
-      "question_en": "Network segmentation means:",
-      "question_ar": "ماذا يعني تقسيم الشبكة (Network Segmentation)؟",
+      "question_en": "",
+      "question_ar": ".............. هي أداة بحث كمي تستخدم لجمع بيانات قابلة للقياس من عينة من الجمهور المستهدف، بهدف اختبار افتراضات الفكرة الريادية وتحويلها من \"انطباعات\" إلى أدلة رقمية تساعد في اتخاذ القرار.",
       "options": {
-        "a": "Faster internet",
-        "b": "Split network into zones",
-        "c": "Disable passwords",
-        "d": "One flat network for all"
+        "a": "العصف الذهني",
+        "b": "مقابلة العملاء المحتلمين",
+        "c": "قائمة الإستقصاء",
+        "d": "لاشئ مما سبق"
       },
-      "correct_answer": "b",
-      "explanation": "Segmentation divides a network into isolated zones to limit attack spread and improve security."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 23,
-      "question_en": "If likelihood = 3 and impact = 2, the risk score is:",
-      "question_ar": "إذا كان الاحتمال = 3 والتأثير = 2، فما هي قيمة المخاطر؟",
+      "question_en": "",
+      "question_ar": "تعد ................ منهجية بحث ميداني تهدف إلى التحقق من صحة افتراضات الفكرة قبل الاستثمار في التنفيذ.",
       "options": {
-        "a": "5",
-        "b": "6",
-        "c": "8",
-        "d": "9"
+        "a": "العصف الذهني",
+        "b": "مقابلة العملاء المحتلمين",
+        "c": "إستغلال الإتجاهات الحديثة",
+        "d": "لاشئ مما سبق"
       },
       "correct_answer": "b",
-      "explanation": "Risk score is typically calculated as likelihood × impact = 3 × 2 = 6."
+      "explanation": ""
     },
     {
       "id": 24,
-      "question_en": "If you change one character in a message, the SHA-256 hash will:",
-      "question_ar": "إذا تم تغيير حرف واحد في الرسالة، فإن ناتج SHA-256 سوف:",
+      "question_en": "",
+      "question_ar": "............... هي تعبر عن المشكلة التي يحلها أو الحاجة التي يلبيها، وما الفائدة التي يحصل عليها العميل مقارنة بالبدائل.",
       "options": {
-        "a": "Stay similar",
-        "b": "Change completely",
-        "c": "Become shorter",
-        "d": "Become readable text"
+        "a": "القيمة المقترحة",
+        "b": "شريحة العملاء",
+        "c": "قنوات التوزيع",
+        "d": "العلاقات مع العملاء"
       },
-      "correct_answer": "b",
-      "explanation": "SHA-256 exhibits the avalanche effect, where a small input change produces a completely different hash."
+      "correct_answer": "a",
+      "explanation": ""
     },
     {
       "id": 25,
-      "question_en": "Which baseline control directly helps prevent running malicious firmware permanently on a device?",
-      "question_ar": "أي إجراء أمني أساسي يمنع تشغيل برنامج ثابت خبيث بشكل دائم على الجهاز؟",
+      "question_en": "",
+      "question_ar": "................ تمثل الفئات التي يستهدفها المشروع.",
       "options": {
-        "a": "Segmentation",
-        "b": "Secure boot and signed firmware",
-        "c": "Monitoring and logging",
-        "d": "Vulnerability management process"
+        "a": "القيمة المقترحة",
+        "b": "شريحة العملاء",
+        "c": "قنوات التوزيع",
+        "d": "العلاقات مع العملاء"
       },
       "correct_answer": "b",
-      "explanation": "Secure boot ensures only trusted, signed firmware can run, preventing persistent malicious code."
+      "explanation": ""
     },
     {
       "id": 26,
-      "question_en": "A security event log is useful because it:",
-      "question_ar": "لماذا يعتبر سجل الأحداث الأمنية مفيدًا؟",
+      "question_en": "",
+      "question_ar": ".................. هي الطرق التي يصل بها المنتج أو الخدمة إلى العميل.",
       "options": {
-        "a": "Makes device faster",
-        "b": "Provides evidence of attacks and failures (audit trail)",
-        "c": "Replaces encryption",
-        "d": "Removes the need for authentication"
+        "a": "القيمة المقترحة",
+        "b": "شريحة العملاء",
+        "c": "قنوات التوزيع",
+        "d": "العلاقات مع العملاء"
       },
-      "correct_answer": "b",
-      "explanation": "Logs provide traceability and forensic evidence for detecting and analyzing incidents."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 27,
-      "question_en": "A secure channel is mainly needed to protect data:",
-      "question_ar": "القناة الآمنة تُستخدم أساسًا لحماية البيانات:",
+      "question_en": "",
+      "question_ar": "............. تصف أسلوب بناء العلاقة مع العملاء وإدارتها والمحافظة عليهم.",
       "options": {
-        "a": "Stored in flash",
-        "b": "While traveling on the network",
-        "c": "After deletion",
-        "d": "Only in RAM"
+        "a": "القيمة المقترحة",
+        "b": "شريحة العملاء",
+        "c": "قنوات التوزيع",
+        "d": "العلاقات مع العملاء"
       },
-      "correct_answer": "b",
-      "explanation": "Secure channels like TLS protect data in transit from interception or tampering."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 28,
-      "question_en": "STRIDE “S” stands for:",
-      "question_ar": "ماذا يشير الحرف S في نموذج STRIDE؟",
+      "question_en": "",
+      "question_ar": "................ توضح كيف يحقق المشروع المال.",
       "options": {
-        "a": "Security",
-        "b": "Spoofing",
-        "c": "Scanning",
-        "d": "Switching"
+        "a": "مصادر التكاليف",
+        "b": "مصادر الإيرادات",
+        "c": "العملاء",
+        "d": "الشركاء الرئيسيين"
       },
       "correct_answer": "b",
-      "explanation": "In STRIDE, 'S' refers to Spoofing identity attacks."
+      "explanation": ""
     },
     {
       "id": 29,
-      "question_en": "Confidentiality means:",
-      "question_ar": "ماذا تعني السرية (Confidentiality)؟",
+      "question_en": "",
+      "question_ar": "....... هي الأصول الضرورية لتقديم القيمة وتشغيل النموذج، مثل الفريق والخبرة التقنية والمنصة، البيانات.",
       "options": {
-        "a": "Data cannot be changed",
-        "b": "Only authorized parties can read data",
-        "c": "Everyone can read data",
-        "d": "Data is always public"
+        "a": "الموارد الأساسية",
+        "b": "الشركاء الرئيسيين",
+        "c": "مصادر الإيرادات",
+        "d": "قنوات التوزيع"
       },
-      "correct_answer": "b",
-      "explanation": "Confidentiality ensures that only authorized entities can access sensitive information."
+      "correct_answer": "a",
+      "explanation": ""
     },
     {
       "id": 30,
-      "question_en": "Which security goal focuses on preventing attackers from reading private data (video, location, health)?",
-      "question_ar": "أي هدف أمني يركز على منع المهاجمين من قراءة البيانات الخاصة؟",
+      "question_en": "",
+      "question_ar": "......... هي أهم الأعمال التي يجب أن يقوم بها المشروع ليعمل بنجاح، مثل تطوير المنتج، التشغيل، التسويق والمبيعات.",
       "options": {
-        "a": "Integrity",
-        "b": "Availability",
-        "c": "Confidentiality",
-        "d": "Auditability"
+        "a": "الموارد الأساسية",
+        "b": "الشركاء الرئيسيين",
+        "c": "مصادر الإيرادات",
+        "d": "الأنشطة الرئيسية"
       },
-      "correct_answer": "c",
-      "explanation": "Confidentiality specifically protects data from unauthorized access."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 31,
-      "question_en": "A “safe default” security rule means:",
-      "question_ar": "ماذا تعني قاعدة \"الإعدادات الآمنة افتراضيًا\"؟",
+      "question_en": "",
+      "question_ar": "............. يمثل أهم التكاليف اللازمة لتشغيل المشروع، مثل الرواتب التطوير التقني، التسويق التشغيل الإيجارات.",
       "options": {
-        "a": "Allow everything by default",
-        "b": "Deny risky actions unless explicitly allowed",
-        "c": "Disable updates",
-        "d": "Use default passwords"
+        "a": "مصادر التكاليف",
+        "b": "مصادر الإيرادات",
+        "c": "العملاء",
+        "d": "الشركاء الرئيسيين"
       },
-      "correct_answer": "b",
-      "explanation": "Secure systems follow a deny-by-default principle, allowing only explicitly permitted actions."
+      "correct_answer": "a",
+      "explanation": ""
     },
     {
       "id": 32,
-      "question_en": "In MQTT, the broker is:",
-      "question_ar": "في بروتوكول MQTT، ما هو الـ Broker؟",
+      "question_en": "",
+      "question_ar": "........... هم الجهات التي يتعاون معها المشروع لتقليل المخاطر أو خفض التكلفة أو الحصول على موارد/قدرات لا يمتلكها داخليا، مثل الموردين شركات التوزيع، منصات الدفع.",
       "options": {
-        "a": "The sensor",
-        "b": "The server that routes messages",
-        "c": "The router",
-        "d": "The mobile app"
+        "a": "مصادر التكاليف",
+        "b": "العملاء",
+        "c": "الموارد الأساسية",
+        "d": "الشركاء الرئيسيين"
       },
-      "correct_answer": "b",
-      "explanation": "The broker is the central server responsible for receiving and distributing messages."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 33,
-      "question_en": "A vulnerability is best described as:",
-      "question_ar": "كيف يمكن وصف الثغرة الأمنية (Vulnerability)؟",
+      "question_en": "",
+      "question_ar": "أي موقف من المواقف الآتية يُعد خطرًا وليس مشكلة أو أزمة؟",
       "options": {
-        "a": "A weak point that can be exploited",
-        "b": "The attacker’s goal",
-        "c": "The final damage",
-        "d": "A security patch"
+        "a": "توقف الخدمة بشكل كامل لمدة يومين",
+        "b": "احتمال دخول منافس جديد إلى السوق خلال الأشهر القادمة",
+        "c": "انخفاض المبيعات بالفعل هذا الشهر",
+        "d": "حدوث هجوم إعلامي مفاجئ على المشروع"
       },
-      "correct_answer": "a",
-      "explanation": "A vulnerability is a weakness that attackers can exploit to compromise a system."
+      "correct_answer": "b",
+      "explanation": ""
     },
     {
       "id": 34,
-      "question_en": "HMAC is used for:",
-      "question_ar": "فيما يُستخدم HMAC؟",
+      "question_en": "",
+      "question_ar": "الفرق الأدق بين المشكلة والأزمة هو أن:",
       "options": {
-        "a": "Confidentiality",
-        "b": "Integrity + authenticity with shared key",
-        "c": "Compression",
-        "d": "Creating device IDs"
+        "a": "المشكلة مستقبلية والأزمة حالية",
+        "b": "الأزمة أقل تأثيرا من المشكلة",
+        "c": "المشكلة حدثت بالفعل، أما الأزمة فهي موقف شديد ومفاجئ يهدد استقرار المشروع",
+        "d": "لا يوجد فرق جوهري بينهما"
       },
-      "correct_answer": "b",
-      "explanation": "HMAC ensures message integrity and authenticity using a shared secret key."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 35,
-      "question_en": "Which attacker motivation is correctly matched?",
-      "question_ar": "أي دافع للمهاجم مرتبط بشكل صحيح؟",
+      "question_en": "",
+      "question_ar": "أي من الآتي يُعد مثالا على عدم التأكد؟",
       "options": {
-        "a": "Botnets → to improve user privacy",
-        "b": "Spying → to invade privacy using cameras/sensors",
-        "c": "Sabotage → to increase service availability",
-        "d": "Money → to reduce legal compliance risk"
+        "a": "تعطل ماكينة الإنتاج",
+        "b": "خسارة عميل رئيسي",
+        "c": "عدم القدرة على التنبؤ برد فعل السوق تجاه منتج جديد",
+        "d": "تأخر المورد في تسليم شحنة متفق عليها"
       },
-      "correct_answer": "b",
-      "explanation": "Spying attacks aim to invade privacy by accessing sensitive data from sensors or cameras."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 36,
-      "question_en": "“Rollback protection” prevents:",
-      "question_ar": "ماذا يمنع \"Rollback Protection\"؟",
+      "question_en": "",
+      "question_ar": "عندما يواجه المشروع نقصا في التمويل وضعفًا في التدفق النقدي وزيادة التكاليف، فهذا يشير أساسا إلى:",
       "options": {
-        "a": "Firmware signing",
-        "b": "Downgrading to an old vulnerable firmware version",
-        "c": "Encrypting data",
-        "d": "Updating certificates"
+        "a": "مخاطر سوقية",
+        "b": "مخاطر تشغيلية",
+        "c": "مخاطر مالية",
+        "d": "مخاطر قانونية"
       },
-      "correct_answer": "b",
-      "explanation": "Rollback protection ensures devices cannot be downgraded to insecure firmware versions."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 37,
-      "question_en": "A replay attack means the attacker:",
-      "question_ar": "ماذا يعني هجوم إعادة الإرسال (Replay Attack)؟",
+      "question_en": "",
+      "question_ar": "اعتماد المشروع على مورد واحد فقط، ثم تأخر هذا المورد في التسليم، يمثل في الأساس:",
       "options": {
-        "a": "Records a valid message and sends it again later",
-        "b": "Deletes the message",
-        "c": "Compresses the message",
-        "d": "Creates a new key"
+        "a": "خطرًا تشغيليا",
+        "b": "خطرًا قانونيا",
+        "c": "خطرًا تكنولوجيا",
+        "d": "خطرا بينيا"
       },
       "correct_answer": "a",
-      "explanation": "A replay attack involves capturing a valid message and retransmitting it to deceive the system."
+      "explanation": ""
     },
     {
       "id": 38,
-      "question_en": "STRIDE “I” stands for:",
-      "question_ar": "ماذا يشير الحرف I في نموذج STRIDE؟",
+      "question_en": "",
+      "question_ar": "أي من الآتي يرتبط أكثر بـ المخاطر السوقية؟",
       "options": {
-        "a": "Injection",
-        "b": "Information Disclosure",
-        "c": "Inspection",
-        "d": "Initialization"
+        "a": "اختراق بيانات العملاء",
+        "b": "تغير احتياجات العملاء وزيادة المنافسة",
+        "c": "عدم استخراج التراخيص",
+        "d": "تعطل الأجهزة الداخلية"
       },
       "correct_answer": "b",
-      "explanation": "In STRIDE, 'I' represents Information Disclosure, which involves unauthorized access to data."
+      "explanation": ""
     },
     {
       "id": 39,
-      "question_en": "Symmetric crypto uses:",
-      "question_ar": "التشفير المتماثل يستخدم:",
+      "question_en": "",
+      "question_ar": "يستخدم تحليل PESTEL أساسا من أجل:",
       "options": {
-        "a": "Two different keys",
-        "b": "One shared key",
-        "c": "Only public keys",
-        "d": "No keys"
+        "a": "قياس الأداء المالي للمشروع",
+        "b": "تحليل البيئة الخارجية واكتشاف التهديدات والفرص",
+        "c": "تحديد المشكلات الداخلية فقط",
+        "d": "اختيار العاملين في المشروع"
       },
       "correct_answer": "b",
-      "explanation": "Symmetric cryptography uses a single shared key for both encryption and decryption."
+      "explanation": ""
     },
     {
       "id": 40,
-      "question_en": "Which is NOT a common reason IoT is hard to secure?",
-      "question_ar": "أي مما يلي ليس سببًا شائعًا لصعوبة تأمين إنترنت الأشياء؟",
+      "question_en": "",
+      "question_ar": "أي أداة تساعد على الإجابة عن سؤال: ما المخاطر الموجودة بشكل منظم ومباشر؟",
       "options": {
-        "a": "Limited CPU/RAM/power",
-        "b": "Devices staying deployed for many years",
-        "c": "Devices are always protected in locked server rooms",
-        "d": "Physical exposure (tampering, theft, reset)"
+        "a": "مصفوفة الخطر",
+        "b": "تحليل السيناريوهات",
+        "c": "قائمة التحقق",
+        "d": "دراسة الجدوى"
       },
       "correct_answer": "c",
-      "explanation": "IoT devices are often deployed in exposed environments, not secure server rooms."
+      "explanation": ""
     },
     {
       "id": 41,
-      "question_en": "Input validation means:",
-      "question_ar": "ماذا يعني التحقق من صحة المدخلات؟",
+      "question_en": "",
+      "question_ar": "عند إعداد سيناريو متفائل، متوقع، متشائم لمستقبل المشروع، فإن الأداة المستخدمة هي:",
       "options": {
-        "a": "Accept any input to avoid errors",
-        "b": "Check type, range, and format before using input",
-        "c": "Remove encryption",
-        "d": "Ignore user data"
+        "a": "تحليل السيناريوهات",
+        "b": "قائمة التحقق",
+        "c": "التحليل المالي",
+        "d": "خرائط التدفق"
       },
-      "correct_answer": "b",
-      "explanation": "Input validation ensures data meets expected criteria before processing, preventing vulnerabilities."
+      "correct_answer": "a",
+      "explanation": ""
     },
     {
       "id": 42,
-      "question_en": "In IoT systems, commands usually mean:",
-      "question_ar": "في أنظمة إنترنت الأشياء، ماذا تعني الأوامر عادةً؟",
+      "question_en": "",
+      "question_ar": "تعتمد مصفوفة الخطر على معيارين أساسيين هما:",
       "options": {
-        "a": "Device → server readings",
-        "b": "Server/app → device actions",
-        "c": "Router → cloud logs",
-        "d": "File encryption"
+        "a": "التكلفة والربح",
+        "b": "الوقت والجودة",
+        "c": "الاحتمال والتأثير",
+        "d": "العرض والطلب"
       },
-      "correct_answer": "b",
-      "explanation": "Commands typically flow from applications or servers to devices to trigger actions."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 43,
-      "question_en": "A threat is:",
-      "question_ar": "ما هو التهديد (Threat)؟",
+      "question_en": "",
+      "question_ar": "إذا كان خطر اختراق البيانات احتماله متوسط وتأثيره مرتفع، فإنه في الغالب:",
       "options": {
-        "a": "A protection method",
-        "b": "A weakness",
-        "c": "A harmful event/action that could happen",
-        "d": "A device setting"
+        "a": "يكون منخفض الأولوية",
+        "b": "يحتاج متابعة فقط دون تدخل",
+        "c": "يعد من المخاطر ذات الأولوية المرتفعة",
+        "d": "يتم تجاهله لأنه غير مؤكد"
       },
       "correct_answer": "c",
-      "explanation": "A threat is a potential harmful event that could exploit a vulnerability."
+      "explanation": ""
     },
     {
       "id": 44,
-      "question_en": "Integrity means:",
-      "question_ar": "ماذا تعني سلامة البيانات (Integrity)؟",
+      "question_en": "",
+      "question_ar": "عندما يقرر المشروع عدم الدخول إلى سوق جديد بسبب تعقيداته القانونية، فإن ذلك يمثل استراتيجية:",
       "options": {
-        "a": "Only the receiver can read the message",
-        "b": "Message changes can be detected",
-        "c": "Device is always online",
-        "d": "Password is hidden"
+        "a": "قبول الخطر",
+        "b": "نقل الخطر",
+        "c": "تقليل الخطر",
+        "d": "تجنب الخطر"
       },
-      "correct_answer": "b",
-      "explanation": "Integrity ensures that any modification to data can be detected."
+      "correct_answer": "d",
+      "explanation": ""
     },
     {
       "id": 45,
-      "question_en": "Why is IoT security “special” compared to normal IT security?",
-      "question_ar": "لماذا يعتبر أمن إنترنت الأشياء مميزًا مقارنة بأمن تكنولوجيا المعلومات التقليدي؟",
+      "question_en": "",
+      "question_ar": "تدريب العاملين وتحسين الجودة ووضع إجراءات رقابة يندرج تحت استراتيجية:",
       "options": {
-        "a": "IoT devices never use networks",
-        "b": "IoT security is only about privacy",
-        "c": "IoT connects digital systems to the physical world, so failures can cause real-world impact",
-        "d": "IoT devices cannot be attacked"
+        "a": "نقل الخطر",
+        "b": "تقليل الخطر",
+        "c": "قبول الخطر",
+        "d": "تجاهل الخطر"
       },
-      "correct_answer": "c",
-      "explanation": "IoT systems interact with the physical world, making security failures potentially dangerous beyond digital impact."
+      "correct_answer": "b",
+      "explanation": ""
     },
     {
       "id": 46,
-      "question_en": "Secure boot means:",
-      "question_ar": "ماذا يعني الإقلاع الآمن (Secure Boot)؟",
+      "question_en": "",
+      "question_ar": "التأمين على المعدات أو التعاقد مع جهة متخصصة للتوصيل يعد مثالا على:",
       "options": {
-        "a": "Device boots faster",
-        "b": "Device runs only trusted/verified firmware",
-        "c": "Device never needs updates",
-        "d": "Device uses BLE only"
+        "a": "تجنب الخطر",
+        "b": "تقليل الخطر",
+        "c": "نقل الخطر",
+        "d": "قبول الخطر"
       },
-      "correct_answer": "b",
-      "explanation": "Secure boot ensures that only authenticated and trusted firmware is executed during startup."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 47,
-      "question_en": "A publisher in MQTT:",
-      "question_ar": "في MQTT، ما هو الـ Publisher؟",
+      "question_en": "",
+      "question_ar": "يكون قبول الخطر مناسبًا غالبًا عندما:",
       "options": {
-        "a": "Receives only",
-        "b": "Sends messages to a topic",
-        "c": "Generates certificates",
-        "d": "Blocks traffic"
+        "a": "يكون الخطر شديدًا جدا",
+        "b": "تكون تكلفة المنع أقل من الخسارة",
+        "c": "يكون الخطر بسيطا أو تكلفة منعه أعلى من أثره",
+        "d": "يكون الخطر قانونيا فقط"
       },
-      "correct_answer": "b",
-      "explanation": "A publisher sends messages to a specific topic in the MQTT system."
+      "correct_answer": "c",
+      "explanation": ""
     },
     {
       "id": 48,
-      "question_en": "STRIDE “E” stands for:",
-      "question_ar": "ماذا يشير الحرف E في نموذج STRIDE؟",
+      "question_en": "",
+      "question_ar": "أي من الآتي يُعد من العوامل السياسية في تحليل PESTEL ؟",
       "options": {
-        "a": "Encryption",
-        "b": "Elevation of Privilege",
-        "c": "Endpoint",
-        "d": "Evaluation"
+        "a": "أسعار الفائدة",
+        "b": "القوانين الحكومية والاستقرار السياسي",
+        "c": "مستوى الدخل",
+        "d": "التكنولوجيا الحديثة"
       },
       "correct_answer": "b",
-      "explanation": "In STRIDE, 'E' refers to Elevation of Privilege attacks."
+      "explanation": ""
     },
     {
       "id": 49,
-      "question_en": "Hashing is:",
-      "question_ar": "ما هو التجزئة (Hashing)؟",
+      "question_en": "",
+      "question_ar": "ارتفاع معدل التضخم يُصنف ضمن العوامل:",
       "options": {
-        "a": "Reversible",
-        "b": "One-way",
-        "c": "Always secret-key based",
-        "d": "Same as encryption"
+        "a": "السياسية",
+        "b": "الاقتصادية",
+        "c": "الاجتماعية",
+        "d": "القانونية"
       },
       "correct_answer": "b",
-      "explanation": "Hashing is a one-way function that cannot be reversed to obtain the original input."
+      "explanation": ""
     },
     {
       "id": 50,
-      "question_en": "Which secure-by-design principle means “give only the permissions truly needed”?",
-      "question_ar": "أي مبدأ من مبادئ التصميم الآمن يعني إعطاء أقل صلاحيات ممكنة؟",
+      "question_en": "",
+      "question_ar": "إن تغير عادات المستهلكين وسلوكهم يعد من العوامل:",
       "options": {
-        "a": "Patchability",
-        "b": "Defense in depth",
-        "c": "Least privilege",
-        "d": "Fail safely"
+        "a": "الاجتماعية",
+        "b": "البيئية",
+        "c": "القانونية",
+        "d": "التكنولوجية"
+      },
+      "correct_answer": "a",
+      "explanation": ""
+    },
+    {
+      "id": 51,
+      "question_en": "",
+      "question_ar": "إن ظهور تكنولوجيا جديدة تؤثر على طريقة الإنتاج يُصنف ضمن العوامل:",
+      "options": {
+        "a": "الاقتصادية",
+        "b": "السياسية",
+        "c": "التكنولوجية",
+        "d": "البيئية"
       },
       "correct_answer": "c",
-      "explanation": "The principle of least privilege ensures that entities have only the permissions necessary to perform their tasks."
+      "explanation": ""
+    },
+    {
+      "id": 52,
+      "question_en": "",
+      "question_ar": "إن القوانين الخاصة بحماية المستهلك تعد من العوامل:",
+      "options": {
+        "a": "القانونية",
+        "b": "الاجتماعية",
+        "c": "الاقتصادية",
+        "d": "البيئية"
+      },
+      "correct_answer": "a",
+      "explanation": ""
+    }
+  ],
+"fill_in_the_blank": [
+    {
+      "id": 1,
+      "question": "............. هى أحد أنواع ريادة الأعمال من حيث التبنى و التى تشير إلى تحويل فكرة/تقنية غير مسبوقة في السوق المستهدف إلى منتج أو خدمة جديدة وبناء نشاط اقتصادي حولها. وتتميز بدرجة إبتكار عالية.",
+      "answer": "ريادة إبتكارية بحتة"
+    },
+    {
+      "id": 2,
+      "question": "................. هو المشروع الذى يهدف غالبًا إلى إنشاء نشاط يوفّر دخلًا ثابتًا واستقرارًا، على عكس ................ الذي يسعى إلى استغلال فرصة جديدة من خلال ابتكار منتج/خدمة أو نموذج عمل مختلف.",
+      "answer": "المشروع الصغير - المشروع الريادي"
+    },
+    {
+      "id": 3,
+      "question": "تشير .......................... إلى الشكل الحديث من الريادة و التى تعتمد على توظيف التكنولوجيا والإنترنت في ابتكار مشروعات جديدة أو تطوير مشروعات قائمة أى أنها تستخدم المنصات الرقمية ووسائل الاتصال الحديثة للوصول إلى العملاء وتسويق المنتجات والخدمات وتوزيعها بكفاءة أعلى.",
+      "answer": "ريادة الأعمال الرقمية"
+    },
+    {
+      "id": 4,
+      "question": "إن ............................ هى أحد العوامل المؤثرة فى رائد الأعمال و التى يرتبط بـ قواعد الدولة ومؤسساتها التي إمّا تُسهّل تأسيس المشروع ونموّه أو تُعطّله.",
+      "answer": "العوامل القانونية"
+    },
+    {
+      "id": 5,
+      "question": "إن النموذج الرقمى بالكامل يشير إلى المشروعات التي تكون فيها القيمة المقدمة ......................، كما تتم عمليات الإنتاج/التقديم والتسويق والدفع والتوصيل داخل بيئة رقمية دون اعتماد جوهري على بنية تشغيل مادية.",
+      "answer": "رقمية بالكامل"
+    },
+    {
+      "id": 6,
+      "question": "أما المشروع الرقمى الجزئى هو تلك المشروعات التي تقدم قيمة .......................، لكنها تعتمد على التكنولوجيا في إدارة العمليات والوصول للعملاء وتنظيم تجربة الخدمة.",
+      "answer": "مادية (أو غير رقمية)"
+    },
+    {
+      "id": 7,
+      "question": "يُعد ..................................... أداة استراتيجية مبسطة تتكون من صفحة واحدة، تساعد رائد الأعمال على النظر إلى فكرته بصورة شاملة ، بحيث يرى جميع عناصر المشروع مترابطة ومنظمة بشكل واضح ، و يستطيع تحويل الفكرة إلى نموذج أعمال، و يتكون من 9 عناصر.",
+      "answer": "نموذج مخطط الأعمال (BMC)"
+    },
+    {
+      "id": 8,
+      "question": ".................................. هي الأصول الضرورية لتقديم القيمة وتشغيل النموذج، مثل الفريق والخبرة، التقنية والمنصة، البيانات، المعدات، العلامة التجارية، أو التمويل.",
+      "answer": "الموارد الأساسية"
+    },
+    {
+      "id": 9,
+      "question": "................................... هم الجهات التي يتعاون معها المشروع لتقليل المخاطر أو خفض التكلفة أو الحصول على موارد/قدرات لا يمتلكها داخليًا، مثل الموردين، شركات التوزيع، منصات الدفع، أو جهات تقنية.",
+      "answer": "الشركاء الأساسيون"
+    },
+    {
+      "id": 10,
+      "question": "تُعد ...................................... منهجية بحث ميداني تهدف إلى التحقق من صحة افتراضات الفكرة قبل الاستثمار في التنفيذ.",
+      "answer": "مقابلة العملاء المحتملين"
+    },
+    {
+      "id": 11,
+      "question": "..................... هو احتمال حدوث حدث مستقبلى قد يؤثر سلبًا على المشروع.",
+      "answer": "الخطر"
+    },
+    {
+      "id": 12,
+      "question": "الموقف الذي حدث بالفعل وأثر على سير العمل يسمى .......................",
+      "answer": "المشكلة"
+    },
+    {
+      "id": 13,
+      "question": "الموقف المفاجئ والشديد الذي يهدد استقرار المشروع يسمى .......................",
+      "answer": "الأزمة"
+    },
+    {
+      "id": 14,
+      "question": "من أهم أنواع المخاطر التي تواجه المشروعات الناشئة: المخاطر المالية، والمخاطر التشغيلية، والمخاطر السوقية، والمخاطر القانونية، والمخاطر .......................",
+      "answer": "التكنولوجية"
+    },
+    {
+      "id": 15,
+      "question": "أداة تحليل البيئة الخارجية للمشروع تسمى تحليل .......................",
+      "answer": "PESTEL"
+    },
+    {
+      "id": 16,
+      "question": "يتكون تحليل PESTEL من 6 جوانب، منها: السياسي، الاقتصادي، الاجتماعي، التكنولوجي، البيئي، و.......................",
+      "answer": "القانوني"
+    },
+    {
+      "id": 17,
+      "question": "تعتمد مصفوفة الخطر على معيارين هما: احتمال الحدوث و.......................",
+      "answer": "حجم التأثير"
+    },
+    {
+      "id": 18,
+      "question": "من السيناريوهات الرئيسية في تحليل السيناريوهات: المتفائل، المتوقع، و.......................",
+      "answer": "المتشائم"
+    },
+    {
+      "id": 19,
+      "question": "تحويل عبء الخطر إلى طرف آخر من خلال التأمين أو العقود يسمى .......................",
+      "answer": "نقل الخطر"
+    },
+    {
+      "id": 20,
+      "question": "عندما يتحمل المشروع نتائج الخطر دون اتخاذ إجراءات كبيرة لتجنبه أو نقله أو تقليله، فهذا يسمى .......................",
+      "answer": "قبول الخطر"
     }
   ],
   "short_answer": [
     {
       "id": 1,
-      "question_en": "What is encryption? Explain it in simple words.",
-      "question_ar": "ما هو التشفير؟ اشرحه بكلمات بسيطة.",
-      "answer": "Encryption hides data and can be reversed with a key."
+      "question_en": "Define or compare between: Risk, Problem, Crisis, Uncertainty.",
+      "question_ar": "اذكر أو قارن بين: الخطر، المشكلة، الأزمة، عدم التأكد.",
+      "answer": "أ. الخطر: هو احتمال حدوث حدث مستقبلي قد يؤثر سلبًا على المشروع. ب. المشكلة: هي موقف أو خلل حدث بالفعل وأثر على سير العمل. ج. الأزمة: هي موقف مفاجئ وشديد يهدد استقرار المشروع أو سمعته ويحتاج لاستجابة سريعة. د. عدم التأكد: هو حالة من نقص المعلومات أو عدم وضوح المستقبل."
     },
     {
       "id": 2,
-      "question_en": "Explain what IoT security is, and mention one example of an actuator (locks, motors, or alarms).",
-      "question_ar": "اشرح ما هو أمن إنترنت الأشياء، واذكر مثالًا واحدًا على المشغل (مثل الأقفال أو المحركات أو الإنذارات).",
-      "answer": "IoT security protects devices that sense the environment, communicate over networks, and act on the physical world. Example: a smart lock."
+      "question_en": "Compare the types of risks that entrepreneurial projects may face.",
+      "question_ar": "قارن بين أنواع المخاطر التي يمكن أن تواجه المشروعات الريادية.",
+      "answer": "تشمل: المخاطر المالية (مرتبطة بالأموال والتمويل)، المخاطر التشغيلية (في العمليات اليومية)، المخاطر السوقية (مرتبطة بالسوق والعملاء والمنافسين)، المخاطر التكنولوجية (المتعلقة باستخدام التقنية)، والمخاطر القانونية (الناتجة عن القوانين واللوائح)."
     },
     {
       "id": 3,
-      "question_en": "Explain telemetry and commands with one IoT example for each.",
-      "question_ar": "اشرح البيانات القياسية (Telemetry) والأوامر مع مثال واحد لكل منهما.",
-      "answer": "Telemetry:  Data the device sends out to report its status or sensor readings (Device → server data) - e.g., temperature sensor sends 25°C to the cloud every 5 seconds. \nCommands: Instructions the server/app sends to the device to change what it does ( Server/app → device actions ) - e.g., app sends unlock command to a smart lock)."
+      "question_en": "Compare risk management strategies.",
+      "question_ar": "قارن بين إستراتيجيات إدارة المخاطر.",
+      "answer": "أ. تجنب الخطر: الابتعاد عن النشاط المسبب للخطر. ب. تقليل الخطر: اتخاذ إجراءات لتقليل احتمالية حدوثه أو أثره. ج. نقل الخطر: تحويل عبء الخطر لطرف آخر مثل التأمين. د. قبول الخطر: الاعتراف بوجوده وتحمل نتائجه."
     },
     {
       "id": 4,
-      "question_en": "Write one clear definition for each: asset, threat, vulnerability, risk, mitigation.",
-      "question_ar": "اكتب تعريفًا واضحًا لكل من: الأصل، التهديد، الثغرة، المخاطر، التخفيف.",
-      "answer": "Asset: valuable item to protect. \nThreat: harmful event. \nVulnerability: A weakness that allows a threat to succeed. \nRisk: How bad something can be, based on likelihood × impact. \nMitigation: control to reduce risk."
+      "question_en": "State the importance of risk management in startups.",
+      "question_ar": "اذكر أهمية إدارة المخاطر في المشروعات الناشئة.",
+      "answer": "تساعد على تقليل الخسائر المحتملة، تحسن جودة اتخاذ القرار، تزيد القدرة على التكيف مع التغيرات، تدعم ثقة المستثمرين والشركاء، وترفع فرص الاستمرارية والنمو."
     },
     {
       "id": 5,
-      "question_en": "Give 3 examples of physical access threats in IoT devices.",
-      "question_ar": "اذكر 3 أمثلة على تهديدات الوصول الفيزيائي في أجهزة إنترنت الأشياء.",
-      "answer": "Reading flash memory to extract secrets; \nusing UART/JTAG to bypass protections; \nhardware tampering to fake sensor readings."
+      "question_en": "Mention the types of risks that a startup might face with an example for each.",
+      "question_ar": "اذكر أنواع المخاطر التي قد تواجه المشروع الناشئ مع توضيح مثال لكل نوع.",
+      "answer": "المخاطر المالية (مثال: زيادة التكاليف)، التشغيلية (مثال: أعطال فنية)، السوقية (مثال: دخول منافس جديد)، التكنولوجية (مثال: اختراق البيانات)، والقانونية (مثال: عدم الالتزام بالتراخيص)."
     },
     {
       "id": 6,
-      "question_en": "What is hashing? Explain it in simple words.",
-      "question_ar": "ما هو التجزئة (Hashing)؟ اشرحه بكلمات بسيطة.",
-      "answer": "Hashing creates a one-way fingerprint to detect changes."
+      "question_en": "State the components of the risk matrix and explain how it helps in prioritizing risks.",
+      "question_ar": "اذكر مكونات مصفوفة الخطر، ووضح كيف تساعد في ترتيب أولويات المخاطر.",
+      "answer": "مصفوفة المخاطر أداة تستخدم لتقييم وترتيب المخاطر حسب معيارين أساسيين هما: احتمالية الحدوث ودرجة التأثير."
     },
     {
       "id": 7,
-      "question_en": "Why is IoT security special compared to normal computer security?",
-      "question_ar": "لماذا يُعد أمن إنترنت الأشياء مميزًا مقارنة بأمن الحواسيب التقليدي؟",
-      "answer": "Because IoT connects digital systems to the physical world, so failures can cause real-world impact."
+      "question_en": "Mention a practical situation where each can be used: Risk avoidance, risk reduction, risk transfer, risk acceptance.",
+      "question_ar": "اذكر موقفًا عمليًا يمكن فيه استخدام كل من: تجنب الخطر، تقليل الخطر، نقل الخطر، قبول الخطر.",
+      "answer": "تجنب الخطر: عدم دخول سوق غير واضح قانونيًا. تقليل الخطر: تدريب العاملين لتقليل أخطاء الإنتاج. نقل الخطر: التأمين على المعدات ضد الحريق. قبول الخطر: قبول تأخير بسيط غير مؤثر في مرحلة غير حرجة."
     },
     {
       "id": 8,
-      "question_en": "What does TLS protect, and what does it NOT fix by itself?",
-      "question_ar": "ماذا يحمي TLS، وماذا لا يعالجه بمفرده؟",
-      "answer": "TLS protects confidentiality, integrity, and authentication. \nIt does not fix weak passwords, bad authorization, application bugs, or DoS attacks."
+      "question_en": "Types of entrepreneurship in terms of scope, responsibility, and adoption.",
+      "question_ar": "اذكر أنواع ريادة الأعمال من حيث النطاق والمسؤولية والتبني.",
+      "answer": "من حيث النطاق: محلية أو دولية. من حيث المسؤولية: تنظيمية أو فردية. من حيث التبني: ابتكارية بحتة، مطورة من تقنيات متاحة، أو عبر امتلاك مشروع قائم."
     },
     {
       "id": 9,
-      "question_en": "Draw a simple IoT system diagram for: sensor → Wi-Fi → cloud API → mobile app. Label each part.",
-      "question_ar": "ارسم مخططًا بسيطًا لنظام إنترنت الأشياء: مستشعر → Wi-Fi → واجهة برمجة التطبيقات السحابية → تطبيق الهاتف.",
-      "answer": "Sensor/Device → Wi-Fi/Router/Internet → Cloud API/Server → Mobile App."
+      "question_en": "State the factors affecting an entrepreneur.",
+      "question_ar": "اذكر العوامل المؤثرة في رائد الأعمال.",
+      "answer": "الخصائص الديمغرافية، السمات الشخصية، العوامل القانونية، عوامل السوق، وعوامل المشروع نفسه."
     },
     {
       "id": 10,
-      "question_en": "Explain the 3 goals of secure storage (confidentiality, integrity, access control) with one example each.",
-      "question_ar": "اشرح الأهداف الثلاثة للتخزين الآمن (السرية، السلامة، التحكم في الوصول) مع مثال لكل منها.",
-      "answer": "Confidentiality: protect secrets (e.g., Wi-Fi password). \nIntegrity: detect unauthorized changes (e.g., config file tampering). \nAccess control: restrict who can access data (e.g., only update module can write firmware)."
-    }
-  ],
-  "code_analysis": [
-    {
-      "id": 1,
-      "question_en": "What is the function of the following code? Explain in detail.",
-      "question_ar": "ما وظيفة الكود التالي؟ اشرح بالتفصيل.",
-      "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")",
-      "answer": "Calculates Risk Score (Likelihood × Impact) and outputs priority and action.",
-      "explanation": "Implements risk scoring logic with input validation and categorization (Low/Medium/High)."
+      "question_en": "Compare between digital entrepreneurship models and the differences between them.",
+      "question_ar": "قارن بين نماذج ريادة الأعمال الرقمية مع الاختلاف بينهم.",
+      "answer": "النموذج الرقمي الكامل: رقمية بالكامل في الإنتاج والتسويق والدفع. النموذج الرقمي الجزئي: خدمة أساسية غير رقمية تعتمد على التكنولوجيا في العمليات. التحول الرقمي: إعادة تصميم نموذج تشغيلي تقليدي باستخدام التكنولوجيا."
     },
     {
-      "id": 2,
-      "question_en": "What is the function of this code, and what does it demonstrate?",
-      "question_ar": "ما وظيفة هذا الكود، وماذا يوضح؟",
-      "code": "import hashlib\nmsg1 = \"temperature=25\"\nmsg2 = \"temperature=26\"  # tiny change\nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()\nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256  :\", h1)\nprint()\nprint(\"Message 2:\", msg2)\nprint(\"SHA-256  :\", h2)\nprint()\nprint(\"Are hashes equal?\", h1 == h2)",
-      "answer": "Demonstrates hashing and avalanche effect using SHA-256.",
-      "explanation": "Shows that small input change → completely different hash (integrity property)."
+      "id": 11,
+      "question_en": "List the success criteria for a business idea.",
+      "question_ar": "اذكر معايير نجاح فكرة المشروع.",
+      "answer": "تتضمن: معالجة مشكلة حقيقية، قيمة مضافة واضحة، استهداف شريحة محددة، قابلة للتنفيذ، قابلة للقياس، قابلة للاختبار، وجود ميزة تنافسية، ملاءمة التوقيت، ومعرفة المخاطر."
     },
     {
-      "id": 3,
-      "question_en": "Read the following MQTT protocol code. What is its primary function?",
-      "question_ar": "اقرأ كود MQTT التالي. ما هي وظيفته الأساسية؟",
-      "code": "import paho.mqtt.client as mqtt\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\ndef on_connect(client, userdata, flags, rc):\n    print(\"Connected with result code:\", rc)\n    client.subscribe(TOPIC)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"viewer_subscriber\")\nclient.on_connect = on_connect\nclient.on_message = on_message\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()",
-      "answer": "MQTT Subscriber that listens to a topic and prints messages.",
-      "explanation": "Connects to broker, subscribes to topic, and handles incoming telemetry messages."
-    },
-    {
-      "id": 4,
-      "question_en": "Explain what this code does and how it applies secure-coding principles.",
-      "question_ar": "اشرح ما يفعله هذا الكود وكيف يطبق مبادئ البرمجة الآمنة.",
-      "code": "def apply_pwm(value: int):\n    print(\"PWM applied:\", value)\n\ndef get_safe_speed():\n    raw = input(\"Enter motor speed (0-255): \").strip()\n    speed = 0\n    try:\n        candidate = int(raw)\n        if 0 <= candidate <= 255:\n            speed = candidate\n        else:\n            print(\"Unsafe speed -> using safe default (0)\")\n    except ValueError:\n        print(\"Invalid input -> using safe default (0)\")\n    return speed\n\nspeed = get_safe_speed()\napply_pwm(speed)",
-      "answer": "Controls motor speed using safe input validation and default value.",
-      "explanation": "Applies Input Validation (range check) and Safe Default (fallback = 0)."
-    },
-    {
-      "id": 5,
-      "question_en": "What is the purpose of executing the following code, and what does it generate?",
-      "question_ar": "ما الهدف من تنفيذ هذا الكود، وماذا ينتج؟",
-      "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\",\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)",
-      "answer": "Generates and saves a Device Identity JSON file.",
-      "explanation": "Creates unique device ID (UUID) and stores identity metadata in JSON."
-    }
-  ],
-  "code": [
-    {
-      "id": 1,
-      "task": "Read a file in chunks of 4096 bytes and update SHA-256 hash to avoid memory overload.",
-      "code": "chunk = f.read(4096)\nif not chunk:\n    break\nsha.update(chunk)"
-    },
-    {
-      "id": 2,
-      "task": "Generate an HMAC tag using a shared key and SHA-256, then convert to hex.",
-      "code": "tag = hmac.new(key, message, hashlib.sha256).hexdigest()"
-    },
-    {
-      "id": 3,
-      "task": "Convert dictionary data to JSON string and publish it to an MQTT topic.",
-      "code": "payload = json.dumps(data)\nclient.publish(TOPIC, payload)"
-    },
-    {
-      "id": 4,
-      "task": "Add authentication to MQTT client using USERNAME and PASSWORD.",
-      "code": "client.username_pw_set(USERNAME, PASSWORD)"
-    },
-    {
-      "id": 5,
-      "task": "Enable TLS for MQTT client with certificates and enforce secure verification.",
-      "code": "client.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\nclient.tls_insecure_set(False)"
-    },
-    {
-      "id": 6,
-      "task": "Sort a list of dictionaries (threats) descending by 'score'.",
-      "code": "threats.sort(key=lambda x: x[\"score\"], reverse=True)"
-    },
-    {
-      "id": 7,
-      "task": "Load JSON config safely, and return SAFE_DEFAULTS if error occurs.",
-      "code": "try:\n    with open(path, \"r\", encoding=\"utf-8\") as f:\n        cfg = json.load(f)\nexcept Exception:\n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")\n    return SAFE_DEFAULTS.copy()"
+      "id": 12,
+      "question_en": "Elements of the Business Model Canvas.",
+      "question_ar": "اذكر عناصر مخطط نموذج الأعمال (Business Model Canvas).",
+      "answer": "القيمة المقترحة، شرائح العملاء، قنوات التوزيع، علاقات العملاء، مصادر الإيرادات، الموارد الأساسية، الأنشطة الأساسية، هيكل التكاليف، والشركاء الأساسيون."
     }
   ]
 }

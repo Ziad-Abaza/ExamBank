@@ -1,0 +1,795 @@
+{
+  "mcq": [
+    {
+      "id": 1,
+      "question_en": "Asymmetric crypto uses:",
+      "question_ar": "التشفير غير المتماثل يستخدم:",
+      "options": {
+        "a": "One shared key",
+        "b": "No keys",
+        "c": "Public key + private key",
+        "d": "Only passwords"
+      },
+      "correct_answer": "c",
+      "explanation": "Asymmetric cryptography relies on a pair of keys: a public key for encryption and a private key for decryption."
+    },
+    {
+      "id": 2,
+      "question_en": "Signed firmware updates are important because they:",
+      "question_ar": "لماذا تعتبر تحديثات البرنامج الثابت الموقعة مهمة؟",
+      "options": {
+        "a": "Reduce file size",
+        "b": "Ensure updates come from the real manufacturer and were not modified",
+        "c": "Increase battery drain",
+        "d": "Remove the need for authentication"
+      },
+      "correct_answer": "b",
+      "explanation": "Digital signatures verify the authenticity and integrity of firmware updates, ensuring they are not tampered with."
+    },
+    {
+      "id": 3,
+      "question_en": "Why must IoT security be end-to-end?",
+      "question_ar": "لماذا يجب أن يكون أمن إنترنت الأشياء شاملاً من الطرف إلى الطرف؟",
+      "options": {
+        "a": "Attacks only happen in the cloud",
+        "b": "Security must cover Device → Network → Cloud → App → Operations",
+        "c": "Only the app layer is important",
+        "d": "Only the device layer is important"
+      },
+      "correct_answer": "b",
+      "explanation": "IoT systems span multiple layers, and vulnerabilities in any layer can compromise the entire system."
+    },
+    {
+      "id": 4,
+      "question_en": "STRIDE “D” stands for:",
+      "question_ar": "ماذا يشير الحرف D في نموذج STRIDE؟",
+      "options": {
+        "a": "Debugging",
+        "b": "Denial of Service",
+        "c": "Data Storage",
+        "d": "Device Discovery"
+      },
+      "correct_answer": "b",
+      "explanation": "In the STRIDE threat model, 'D' represents Denial of Service attacks."
+    },
+    {
+      "id": 5,
+      "question_en": "MQTT communication style is:",
+      "question_ar": "نمط الاتصال في MQTT هو:",
+      "options": {
+        "a": "File transfer",
+        "b": "Publish/Subscribe",
+        "c": "Email-based",
+        "d": "Peer-to-peer only"
+      },
+      "correct_answer": "b",
+      "explanation": "MQTT uses a publish/subscribe model where clients publish messages to topics and others subscribe to receive them."
+    },
+    {
+      "id": 6,
+      "question_en": "“Hardcoded secret” means:",
+      "question_ar": "ماذا يعني \"سر مشفر داخل الكود\"؟",
+      "options": {
+        "a": "A key stored safely in secure hardware",
+        "b": "A password/key written directly inside the source code",
+        "c": "A key stored only in the cloud",
+        "d": "A key that changes daily automatically"
+      },
+      "correct_answer": "b",
+      "explanation": "Hardcoded secrets are embedded directly in code, making them vulnerable if the code is exposed."
+    },
+    {
+      "id": 7,
+      "question_en": "The main crypto goals are:",
+      "question_ar": "ما هي الأهداف الرئيسية للتشفير؟",
+      "options": {
+        "a": "Speed, cost, size",
+        "b": "Confidentiality, integrity, authentication",
+        "c": "Wi-Fi, BLE, Zigbee",
+        "d": "Password, username, email"
+      },
+      "correct_answer": "b",
+      "explanation": "Core cryptographic goals include confidentiality, integrity, and authentication."
+    },
+    {
+      "id": 8,
+      "question_en": "In IoT systems, telemetry usually means:",
+      "question_ar": "في أنظمة إنترنت الأشياء، ماذا تعني البيانات القياسية (Telemetry)؟",
+      "options": {
+        "a": "Server → device actions",
+        "b": "Device → server measurements",
+        "c": "Device reset",
+        "d": "User login"
+      },
+      "correct_answer": "b",
+      "explanation": "Telemetry refers to data sent from devices to servers, typically measurements or status information."
+    },
+    {
+      "id": 9,
+      "question_en": "In threat modeling, an asset is:",
+      "question_ar": "في نمذجة التهديدات، ما هو الأصل (Asset)؟",
+      "options": {
+        "a": "A type of attack",
+        "b": "Something valuable to protect",
+        "c": "A bug in code",
+        "d": "A firewall rule"
+      },
+      "correct_answer": "b",
+      "explanation": "An asset is any valuable resource that needs protection, such as data, systems, or devices."
+    },
+    {
+      "id": 10,
+      "question_en": "What is the best definition of IoT security?",
+      "question_ar": "ما هو أفضل تعريف لأمن إنترنت الأشياء؟",
+      "options": {
+        "a": "Protecting only cloud databases from hackers",
+        "b": "Protecting devices that sense, communicate, and sometimes act on the physical world",
+        "c": "Protecting smartphones from malware only",
+        "d": "Protecting internet browsers from phishing"
+      },
+      "correct_answer": "b",
+      "explanation": "IoT security involves protecting interconnected devices that interact with the physical environment."
+    },
+    {
+      "id": 11,
+      "question_en": "“Fail-safe behavior” means:",
+      "question_ar": "ماذا يعني سلوك \"الفشل الآمن\"؟",
+      "options": {
+        "a": "Continue operation even with unsafe configuration",
+        "b": "If something is wrong, refuse unsafe actions and use safe defaults",
+        "c": "Delete all files",
+        "d": "Turn off validation"
+      },
+      "correct_answer": "b",
+      "explanation": "Fail-safe design ensures that systems default to a safe state when a failure occurs, preventing unsafe operations."
+    },
+    {
+      "id": 12,
+      "question_en": "TLS mainly provides:",
+      "question_ar": "ماذا يوفر بروتوكول TLS بشكل أساسي؟",
+      "options": {
+        "a": "Compression",
+        "b": "Encryption + integrity + authentication",
+        "c": "Larger packets",
+        "d": "Faster CPU"
+      },
+      "correct_answer": "b",
+      "explanation": "TLS secures communication by providing encryption, ensuring data integrity, and authenticating parties."
+    },
+    {
+      "id": 13,
+      "question_en": "A trust boundary is:",
+      "question_ar": "ما هو حد الثقة (Trust Boundary)؟",
+      "options": {
+        "a": "A cable between sensors",
+        "b": "A place where trust level changes",
+        "c": "A router brand",
+        "d": "A database table"
+      },
+      "correct_answer": "b",
+      "explanation": "A trust boundary represents a point where the level of trust changes, requiring validation or security controls."
+    },
+    {
+      "id": 14,
+      "question_en": "Digital signatures provide:",
+      "question_ar": "ماذا توفر التوقيعات الرقمية؟",
+      "options": {
+        "a": "Confidentiality only",
+        "b": "Integrity + authentication",
+        "c": "Faster Wi-Fi",
+        "d": "Bigger storage"
+      },
+      "correct_answer": "b",
+      "explanation": "Digital signatures ensure that data has not been altered (integrity) and verify the sender's identity (authentication)."
+    },
+    {
+      "id": 15,
+      "question_en": "Which is the correct typical IoT architecture order (end-to-end view)?",
+      "question_ar": "ما هو الترتيب الصحيح لبنية إنترنت الأشياء من طرف إلى طرف؟",
+      "options": {
+        "a": "Cloud → Device → App → Network → Operations",
+        "b": "Device → Network → Cloud → App → Operations",
+        "c": "App → Cloud → Network → Device → Operations",
+        "d": "Operations → Device → Cloud → Network → App"
+      },
+      "correct_answer": "b",
+      "explanation": "Typical IoT architecture flows from devices through network to cloud, then to applications and operational layers."
+    },
+    {
+      "id": 16,
+      "question_en": "Firmware is best described as:",
+      "question_ar": "كيف يمكن وصف البرنامج الثابت (Firmware) بشكل أفضل؟",
+      "options": {
+        "a": "A mobile app",
+        "b": "Software running inside the device stored in flash",
+        "c": "A cloud database",
+        "d": "A network cable"
+      },
+      "correct_answer": "b",
+      "explanation": "Firmware is embedded software stored in non-volatile memory that controls device hardware."
+    },
+    {
+      "id": 17,
+      "question_en": "BLE is mainly used for:",
+      "question_ar": "فيما يُستخدم BLE بشكل أساسي؟",
+      "options": {
+        "a": "Long-range city networks",
+        "b": "Short-range communication and device onboarding",
+        "c": "Cloud databases",
+        "d": "Satellite internet"
+      },
+      "correct_answer": "b",
+      "explanation": "Bluetooth Low Energy (BLE) is designed for low-power, short-range communication, often used in IoT onboarding."
+    },
+    {
+      "id": 18,
+      "question_en": "Risk is mainly about:",
+      "question_ar": "المخاطر (Risk) تعتمد بشكل أساسي على:",
+      "options": {
+        "a": "Only impact",
+        "b": "Only likelihood",
+        "c": "Likelihood and impact together",
+        "d": "Device cost"
+      },
+      "correct_answer": "c",
+      "explanation": "Risk is evaluated based on both the likelihood of an event and its potential impact."
+    },
+    {
+      "id": 19,
+      "question_en": "A hash function is mainly used for:",
+      "question_ar": "فيما تُستخدم دوال التجزئة (Hash Functions) بشكل أساسي؟",
+      "options": {
+        "a": "Hiding data so nobody reads it",
+        "b": "Detecting changes (integrity)",
+        "c": "Creating Wi-Fi connection",
+        "d": "Increasing battery life"
+      },
+      "correct_answer": "b",
+      "explanation": "Hash functions produce a fixed output for input data, allowing detection of any changes to ensure integrity."
+    },
+    {
+      "id": 20,
+      "question_en": "Which goal is MOST related to keeping devices/services working during overload or DoS attacks?",
+      "question_ar": "أي هدف يرتبط أكثر بالحفاظ على عمل الأجهزة والخدمات أثناء الهجمات أو الضغط العالي (DoS)؟",
+      "options": {
+        "a": "Confidentiality",
+        "b": "Availability",
+        "c": "Integrity",
+        "d": "Safety"
+      },
+      "correct_answer": "b",
+      "explanation": "Availability ensures systems remain operational and accessible even under stress or attack conditions like DoS."
+    },
+    {
+      "id": 21,
+      "question_en": "The best summary of device physical security is:",
+      "question_ar": "ما هو أفضل وصف لأمن الأجهزة الفيزيائي؟",
+      "options": {
+        "a": "Physical access never matters",
+        "b": "Physical access can bypass software controls, so reduce and protect physical attack paths",
+        "c": "Only network threats exist",
+        "d": "TLS prevents physical attacks"
+      },
+      "correct_answer": "b",
+      "explanation": "Physical access can allow attackers to bypass logical protections, so securing hardware and limiting access is critical."
+    },
+    {
+      "id": 22,
+      "question_en": "Network segmentation means:",
+      "question_ar": "ماذا يعني تقسيم الشبكة (Network Segmentation)؟",
+      "options": {
+        "a": "Faster internet",
+        "b": "Split network into zones",
+        "c": "Disable passwords",
+        "d": "One flat network for all"
+      },
+      "correct_answer": "b",
+      "explanation": "Segmentation divides a network into isolated zones to limit attack spread and improve security."
+    },
+    {
+      "id": 23,
+      "question_en": "If likelihood = 3 and impact = 2, the risk score is:",
+      "question_ar": "إذا كان الاحتمال = 3 والتأثير = 2، فما هي قيمة المخاطر؟",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "8",
+        "d": "9"
+      },
+      "correct_answer": "b",
+      "explanation": "Risk score is typically calculated as likelihood × impact = 3 × 2 = 6."
+    },
+    {
+      "id": 24,
+      "question_en": "If you change one character in a message, the SHA-256 hash will:",
+      "question_ar": "إذا تم تغيير حرف واحد في الرسالة، فإن ناتج SHA-256 سوف:",
+      "options": {
+        "a": "Stay similar",
+        "b": "Change completely",
+        "c": "Become shorter",
+        "d": "Become readable text"
+      },
+      "correct_answer": "b",
+      "explanation": "SHA-256 exhibits the avalanche effect, where a small input change produces a completely different hash."
+    },
+    {
+      "id": 25,
+      "question_en": "Which baseline control directly helps prevent running malicious firmware permanently on a device?",
+      "question_ar": "أي إجراء أمني أساسي يمنع تشغيل برنامج ثابت خبيث بشكل دائم على الجهاز؟",
+      "options": {
+        "a": "Segmentation",
+        "b": "Secure boot and signed firmware",
+        "c": "Monitoring and logging",
+        "d": "Vulnerability management process"
+      },
+      "correct_answer": "b",
+      "explanation": "Secure boot ensures only trusted, signed firmware can run, preventing persistent malicious code."
+    },
+    {
+      "id": 26,
+      "question_en": "A security event log is useful because it:",
+      "question_ar": "لماذا يعتبر سجل الأحداث الأمنية مفيدًا؟",
+      "options": {
+        "a": "Makes device faster",
+        "b": "Provides evidence of attacks and failures (audit trail)",
+        "c": "Replaces encryption",
+        "d": "Removes the need for authentication"
+      },
+      "correct_answer": "b",
+      "explanation": "Logs provide traceability and forensic evidence for detecting and analyzing incidents."
+    },
+    {
+      "id": 27,
+      "question_en": "A secure channel is mainly needed to protect data:",
+      "question_ar": "القناة الآمنة تُستخدم أساسًا لحماية البيانات:",
+      "options": {
+        "a": "Stored in flash",
+        "b": "While traveling on the network",
+        "c": "After deletion",
+        "d": "Only in RAM"
+      },
+      "correct_answer": "b",
+      "explanation": "Secure channels like TLS protect data in transit from interception or tampering."
+    },
+    {
+      "id": 28,
+      "question_en": "STRIDE “S” stands for:",
+      "question_ar": "ماذا يشير الحرف S في نموذج STRIDE؟",
+      "options": {
+        "a": "Security",
+        "b": "Spoofing",
+        "c": "Scanning",
+        "d": "Switching"
+      },
+      "correct_answer": "b",
+      "explanation": "In STRIDE, 'S' refers to Spoofing identity attacks."
+    },
+    {
+      "id": 29,
+      "question_en": "Confidentiality means:",
+      "question_ar": "ماذا تعني السرية (Confidentiality)؟",
+      "options": {
+        "a": "Data cannot be changed",
+        "b": "Only authorized parties can read data",
+        "c": "Everyone can read data",
+        "d": "Data is always public"
+      },
+      "correct_answer": "b",
+      "explanation": "Confidentiality ensures that only authorized entities can access sensitive information."
+    },
+    {
+      "id": 30,
+      "question_en": "Which security goal focuses on preventing attackers from reading private data (video, location, health)?",
+      "question_ar": "أي هدف أمني يركز على منع المهاجمين من قراءة البيانات الخاصة؟",
+      "options": {
+        "a": "Integrity",
+        "b": "Availability",
+        "c": "Confidentiality",
+        "d": "Auditability"
+      },
+      "correct_answer": "c",
+      "explanation": "Confidentiality specifically protects data from unauthorized access."
+    },
+    {
+      "id": 31,
+      "question_en": "A “safe default” security rule means:",
+      "question_ar": "ماذا تعني قاعدة \"الإعدادات الآمنة افتراضيًا\"؟",
+      "options": {
+        "a": "Allow everything by default",
+        "b": "Deny risky actions unless explicitly allowed",
+        "c": "Disable updates",
+        "d": "Use default passwords"
+      },
+      "correct_answer": "b",
+      "explanation": "Secure systems follow a deny-by-default principle, allowing only explicitly permitted actions."
+    },
+    {
+      "id": 32,
+      "question_en": "In MQTT, the broker is:",
+      "question_ar": "في بروتوكول MQTT، ما هو الـ Broker؟",
+      "options": {
+        "a": "The sensor",
+        "b": "The server that routes messages",
+        "c": "The router",
+        "d": "The mobile app"
+      },
+      "correct_answer": "b",
+      "explanation": "The broker is the central server responsible for receiving and distributing messages."
+    },
+    {
+      "id": 33,
+      "question_en": "A vulnerability is best described as:",
+      "question_ar": "كيف يمكن وصف الثغرة الأمنية (Vulnerability)؟",
+      "options": {
+        "a": "A weak point that can be exploited",
+        "b": "The attacker’s goal",
+        "c": "The final damage",
+        "d": "A security patch"
+      },
+      "correct_answer": "a",
+      "explanation": "A vulnerability is a weakness that attackers can exploit to compromise a system."
+    },
+    {
+      "id": 34,
+      "question_en": "HMAC is used for:",
+      "question_ar": "فيما يُستخدم HMAC؟",
+      "options": {
+        "a": "Confidentiality",
+        "b": "Integrity + authenticity with shared key",
+        "c": "Compression",
+        "d": "Creating device IDs"
+      },
+      "correct_answer": "b",
+      "explanation": "HMAC ensures message integrity and authenticity using a shared secret key."
+    },
+    {
+      "id": 35,
+      "question_en": "Which attacker motivation is correctly matched?",
+      "question_ar": "أي دافع للمهاجم مرتبط بشكل صحيح؟",
+      "options": {
+        "a": "Botnets → to improve user privacy",
+        "b": "Spying → to invade privacy using cameras/sensors",
+        "c": "Sabotage → to increase service availability",
+        "d": "Money → to reduce legal compliance risk"
+      },
+      "correct_answer": "b",
+      "explanation": "Spying attacks aim to invade privacy by accessing sensitive data from sensors or cameras."
+    },
+    {
+      "id": 36,
+      "question_en": "“Rollback protection” prevents:",
+      "question_ar": "ماذا يمنع \"Rollback Protection\"؟",
+      "options": {
+        "a": "Firmware signing",
+        "b": "Downgrading to an old vulnerable firmware version",
+        "c": "Encrypting data",
+        "d": "Updating certificates"
+      },
+      "correct_answer": "b",
+      "explanation": "Rollback protection ensures devices cannot be downgraded to insecure firmware versions."
+    },
+    {
+      "id": 37,
+      "question_en": "A replay attack means the attacker:",
+      "question_ar": "ماذا يعني هجوم إعادة الإرسال (Replay Attack)؟",
+      "options": {
+        "a": "Records a valid message and sends it again later",
+        "b": "Deletes the message",
+        "c": "Compresses the message",
+        "d": "Creates a new key"
+      },
+      "correct_answer": "a",
+      "explanation": "A replay attack involves capturing a valid message and retransmitting it to deceive the system."
+    },
+    {
+      "id": 38,
+      "question_en": "STRIDE “I” stands for:",
+      "question_ar": "ماذا يشير الحرف I في نموذج STRIDE؟",
+      "options": {
+        "a": "Injection",
+        "b": "Information Disclosure",
+        "c": "Inspection",
+        "d": "Initialization"
+      },
+      "correct_answer": "b",
+      "explanation": "In STRIDE, 'I' represents Information Disclosure, which involves unauthorized access to data."
+    },
+    {
+      "id": 39,
+      "question_en": "Symmetric crypto uses:",
+      "question_ar": "التشفير المتماثل يستخدم:",
+      "options": {
+        "a": "Two different keys",
+        "b": "One shared key",
+        "c": "Only public keys",
+        "d": "No keys"
+      },
+      "correct_answer": "b",
+      "explanation": "Symmetric cryptography uses a single shared key for both encryption and decryption."
+    },
+    {
+      "id": 40,
+      "question_en": "Which is NOT a common reason IoT is hard to secure?",
+      "question_ar": "أي مما يلي ليس سببًا شائعًا لصعوبة تأمين إنترنت الأشياء؟",
+      "options": {
+        "a": "Limited CPU/RAM/power",
+        "b": "Devices staying deployed for many years",
+        "c": "Devices are always protected in locked server rooms",
+        "d": "Physical exposure (tampering, theft, reset)"
+      },
+      "correct_answer": "c",
+      "explanation": "IoT devices are often deployed in exposed environments, not secure server rooms."
+    },
+    {
+      "id": 41,
+      "question_en": "Input validation means:",
+      "question_ar": "ماذا يعني التحقق من صحة المدخلات؟",
+      "options": {
+        "a": "Accept any input to avoid errors",
+        "b": "Check type, range, and format before using input",
+        "c": "Remove encryption",
+        "d": "Ignore user data"
+      },
+      "correct_answer": "b",
+      "explanation": "Input validation ensures data meets expected criteria before processing, preventing vulnerabilities."
+    },
+    {
+      "id": 42,
+      "question_en": "In IoT systems, commands usually mean:",
+      "question_ar": "في أنظمة إنترنت الأشياء، ماذا تعني الأوامر عادةً؟",
+      "options": {
+        "a": "Device → server readings",
+        "b": "Server/app → device actions",
+        "c": "Router → cloud logs",
+        "d": "File encryption"
+      },
+      "correct_answer": "b",
+      "explanation": "Commands typically flow from applications or servers to devices to trigger actions."
+    },
+    {
+      "id": 43,
+      "question_en": "A threat is:",
+      "question_ar": "ما هو التهديد (Threat)؟",
+      "options": {
+        "a": "A protection method",
+        "b": "A weakness",
+        "c": "A harmful event/action that could happen",
+        "d": "A device setting"
+      },
+      "correct_answer": "c",
+      "explanation": "A threat is a potential harmful event that could exploit a vulnerability."
+    },
+    {
+      "id": 44,
+      "question_en": "Integrity means:",
+      "question_ar": "ماذا تعني سلامة البيانات (Integrity)؟",
+      "options": {
+        "a": "Only the receiver can read the message",
+        "b": "Message changes can be detected",
+        "c": "Device is always online",
+        "d": "Password is hidden"
+      },
+      "correct_answer": "b",
+      "explanation": "Integrity ensures that any modification to data can be detected."
+    },
+    {
+      "id": 45,
+      "question_en": "Why is IoT security “special” compared to normal IT security?",
+      "question_ar": "لماذا يعتبر أمن إنترنت الأشياء مميزًا مقارنة بأمن تكنولوجيا المعلومات التقليدي؟",
+      "options": {
+        "a": "IoT devices never use networks",
+        "b": "IoT security is only about privacy",
+        "c": "IoT connects digital systems to the physical world, so failures can cause real-world impact",
+        "d": "IoT devices cannot be attacked"
+      },
+      "correct_answer": "c",
+      "explanation": "IoT systems interact with the physical world, making security failures potentially dangerous beyond digital impact."
+    },
+    {
+      "id": 46,
+      "question_en": "Secure boot means:",
+      "question_ar": "ماذا يعني الإقلاع الآمن (Secure Boot)؟",
+      "options": {
+        "a": "Device boots faster",
+        "b": "Device runs only trusted/verified firmware",
+        "c": "Device never needs updates",
+        "d": "Device uses BLE only"
+      },
+      "correct_answer": "b",
+      "explanation": "Secure boot ensures that only authenticated and trusted firmware is executed during startup."
+    },
+    {
+      "id": 47,
+      "question_en": "A publisher in MQTT:",
+      "question_ar": "في MQTT، ما هو الـ Publisher؟",
+      "options": {
+        "a": "Receives only",
+        "b": "Sends messages to a topic",
+        "c": "Generates certificates",
+        "d": "Blocks traffic"
+      },
+      "correct_answer": "b",
+      "explanation": "A publisher sends messages to a specific topic in the MQTT system."
+    },
+    {
+      "id": 48,
+      "question_en": "STRIDE “E” stands for:",
+      "question_ar": "ماذا يشير الحرف E في نموذج STRIDE؟",
+      "options": {
+        "a": "Encryption",
+        "b": "Elevation of Privilege",
+        "c": "Endpoint",
+        "d": "Evaluation"
+      },
+      "correct_answer": "b",
+      "explanation": "In STRIDE, 'E' refers to Elevation of Privilege attacks."
+    },
+    {
+      "id": 49,
+      "question_en": "Hashing is:",
+      "question_ar": "ما هو التجزئة (Hashing)؟",
+      "options": {
+        "a": "Reversible",
+        "b": "One-way",
+        "c": "Always secret-key based",
+        "d": "Same as encryption"
+      },
+      "correct_answer": "b",
+      "explanation": "Hashing is a one-way function that cannot be reversed to obtain the original input."
+    },
+    {
+      "id": 50,
+      "question_en": "Which secure-by-design principle means “give only the permissions truly needed”?",
+      "question_ar": "أي مبدأ من مبادئ التصميم الآمن يعني إعطاء أقل صلاحيات ممكنة؟",
+      "options": {
+        "a": "Patchability",
+        "b": "Defense in depth",
+        "c": "Least privilege",
+        "d": "Fail safely"
+      },
+      "correct_answer": "c",
+      "explanation": "The principle of least privilege ensures that entities have only the permissions necessary to perform their tasks."
+    }
+  ],
+  "short_answer": [
+    {
+      "id": 1,
+      "question_en": "What is encryption? Explain it in simple words.",
+      "question_ar": "ما هو التشفير؟ اشرحه بكلمات بسيطة.",
+      "answer": "Encryption hides data and can be reversed with a key."
+    },
+    {
+      "id": 2,
+      "question_en": "Explain what IoT security is, and mention one example of an actuator (locks, motors, or alarms).",
+      "question_ar": "اشرح ما هو أمن إنترنت الأشياء، واذكر مثالًا واحدًا على المشغل (مثل الأقفال أو المحركات أو الإنذارات).",
+      "answer": "IoT security protects devices that sense the environment, communicate over networks, and act on the physical world. Example: a smart lock."
+    },
+    {
+      "id": 3,
+      "question_en": "Explain telemetry and commands with one IoT example for each.",
+      "question_ar": "اشرح البيانات القياسية (Telemetry) والأوامر مع مثال واحد لكل منهما.",
+      "answer": "Telemetry:  Data the device sends out to report its status or sensor readings (Device → server data) - e.g., temperature sensor sends 25°C to the cloud every 5 seconds. \nCommands: Instructions the server/app sends to the device to change what it does ( Server/app → device actions ) - e.g., app sends unlock command to a smart lock)."
+    },
+    {
+      "id": 4,
+      "question_en": "Write one clear definition for each: asset, threat, vulnerability, risk, mitigation.",
+      "question_ar": "اكتب تعريفًا واضحًا لكل من: الأصل، التهديد، الثغرة، المخاطر، التخفيف.",
+      "answer": "Asset: valuable item to protect. \nThreat: harmful event. \nVulnerability: A weakness that allows a threat to succeed. \nRisk: How bad something can be, based on likelihood × impact. \nMitigation: control to reduce risk."
+    },
+    {
+      "id": 5,
+      "question_en": "Give 3 examples of physical access threats in IoT devices.",
+      "question_ar": "اذكر 3 أمثلة على تهديدات الوصول الفيزيائي في أجهزة إنترنت الأشياء.",
+      "answer": "Reading flash memory to extract secrets; \nusing UART/JTAG to bypass protections; \nhardware tampering to fake sensor readings."
+    },
+    {
+      "id": 6,
+      "question_en": "What is hashing? Explain it in simple words.",
+      "question_ar": "ما هو التجزئة (Hashing)؟ اشرحه بكلمات بسيطة.",
+      "answer": "Hashing creates a one-way fingerprint to detect changes."
+    },
+    {
+      "id": 7,
+      "question_en": "Why is IoT security special compared to normal computer security?",
+      "question_ar": "لماذا يُعد أمن إنترنت الأشياء مميزًا مقارنة بأمن الحواسيب التقليدي؟",
+      "answer": "Because IoT connects digital systems to the physical world, so failures can cause real-world impact."
+    },
+    {
+      "id": 8,
+      "question_en": "What does TLS protect, and what does it NOT fix by itself?",
+      "question_ar": "ماذا يحمي TLS، وماذا لا يعالجه بمفرده؟",
+      "answer": "TLS protects confidentiality, integrity, and authentication. \nIt does not fix weak passwords, bad authorization, application bugs, or DoS attacks."
+    },
+    {
+      "id": 9,
+      "question_en": "Draw a simple IoT system diagram for: sensor → Wi-Fi → cloud API → mobile app. Label each part.",
+      "question_ar": "ارسم مخططًا بسيطًا لنظام إنترنت الأشياء: مستشعر → Wi-Fi → واجهة برمجة التطبيقات السحابية → تطبيق الهاتف.",
+      "answer": "Sensor/Device → Wi-Fi/Router/Internet → Cloud API/Server → Mobile App."
+    },
+    {
+      "id": 10,
+      "question_en": "Explain the 3 goals of secure storage (confidentiality, integrity, access control) with one example each.",
+      "question_ar": "اشرح الأهداف الثلاثة للتخزين الآمن (السرية، السلامة، التحكم في الوصول) مع مثال لكل منها.",
+      "answer": "Confidentiality: protect secrets (e.g., Wi-Fi password). \nIntegrity: detect unauthorized changes (e.g., config file tampering). \nAccess control: restrict who can access data (e.g., only update module can write firmware)."
+    }
+  ],
+  "code_analysis": [
+    {
+      "id": 1,
+      "question_en": "What is the function of the following code? Explain in detail.",
+      "question_ar": "ما وظيفة الكود التالي؟ اشرح بالتفصيل.",
+      "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")",
+      "answer": "Calculates Risk Score (Likelihood × Impact) and outputs priority and action.",
+      "explanation": "Implements risk scoring logic with input validation and categorization (Low/Medium/High)."
+    },
+    {
+      "id": 2,
+      "question_en": "What is the function of this code, and what does it demonstrate?",
+      "question_ar": "ما وظيفة هذا الكود، وماذا يوضح؟",
+      "code": "import hashlib\nmsg1 = \"temperature=25\"\nmsg2 = \"temperature=26\"  # tiny change\nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()\nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256  :\", h1)\nprint()\nprint(\"Message 2:\", msg2)\nprint(\"SHA-256  :\", h2)\nprint()\nprint(\"Are hashes equal?\", h1 == h2)",
+      "answer": "Demonstrates hashing and avalanche effect using SHA-256.",
+      "explanation": "Shows that small input change → completely different hash (integrity property)."
+    },
+    {
+      "id": 3,
+      "question_en": "Read the following MQTT protocol code. What is its primary function?",
+      "question_ar": "اقرأ كود MQTT التالي. ما هي وظيفته الأساسية؟",
+      "code": "import paho.mqtt.client as mqtt\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\ndef on_connect(client, userdata, flags, rc):\n    print(\"Connected with result code:\", rc)\n    client.subscribe(TOPIC)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"viewer_subscriber\")\nclient.on_connect = on_connect\nclient.on_message = on_message\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()",
+      "answer": "MQTT Subscriber that listens to a topic and prints messages.",
+      "explanation": "Connects to broker, subscribes to topic, and handles incoming telemetry messages."
+    },
+    {
+      "id": 4,
+      "question_en": "Explain what this code does and how it applies secure-coding principles.",
+      "question_ar": "اشرح ما يفعله هذا الكود وكيف يطبق مبادئ البرمجة الآمنة.",
+      "code": "def apply_pwm(value: int):\n    print(\"PWM applied:\", value)\n\ndef get_safe_speed():\n    raw = input(\"Enter motor speed (0-255): \").strip()\n    speed = 0\n    try:\n        candidate = int(raw)\n        if 0 <= candidate <= 255:\n            speed = candidate\n        else:\n            print(\"Unsafe speed -> using safe default (0)\")\n    except ValueError:\n        print(\"Invalid input -> using safe default (0)\")\n    return speed\n\nspeed = get_safe_speed()\napply_pwm(speed)",
+      "answer": "Controls motor speed using safe input validation and default value.",
+      "explanation": "Applies Input Validation (range check) and Safe Default (fallback = 0)."
+    },
+    {
+      "id": 5,
+      "question_en": "What is the purpose of executing the following code, and what does it generate?",
+      "question_ar": "ما الهدف من تنفيذ هذا الكود، وماذا ينتج؟",
+      "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\",\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)",
+      "answer": "Generates and saves a Device Identity JSON file.",
+      "explanation": "Creates unique device ID (UUID) and stores identity metadata in JSON."
+    }
+  ],
+  "code": [
+    {
+      "id": 1,
+      "task": "Read a file in chunks of 4096 bytes and update SHA-256 hash to avoid memory overload.",
+      "code": "chunk = f.read(4096)\nif not chunk:\n    break\nsha.update(chunk)"
+    },
+    {
+      "id": 2,
+      "task": "Generate an HMAC tag using a shared key and SHA-256, then convert to hex.",
+      "code": "tag = hmac.new(key, message, hashlib.sha256).hexdigest()"
+    },
+    {
+      "id": 3,
+      "task": "Convert dictionary data to JSON string and publish it to an MQTT topic.",
+      "code": "payload = json.dumps(data)\nclient.publish(TOPIC, payload)"
+    },
+    {
+      "id": 4,
+      "task": "Add authentication to MQTT client using USERNAME and PASSWORD.",
+      "code": "client.username_pw_set(USERNAME, PASSWORD)"
+    },
+    {
+      "id": 5,
+      "task": "Enable TLS for MQTT client with certificates and enforce secure verification.",
+      "code": "client.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\nclient.tls_insecure_set(False)"
+    },
+    {
+      "id": 6,
+      "task": "Sort a list of dictionaries (threats) descending by 'score'.",
+      "code": "threats.sort(key=lambda x: x[\"score\"], reverse=True)"
+    },
+    {
+      "id": 7,
+      "task": "Load JSON config safely, and return SAFE_DEFAULTS if error occurs.",
+      "code": "try:\n    with open(path, \"r\", encoding=\"utf-8\") as f:\n        cfg = json.load(f)\nexcept Exception:\n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")\n    return SAFE_DEFAULTS.copy()"
+    }
+  ]
+}
