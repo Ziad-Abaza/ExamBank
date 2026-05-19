@@ -27,7 +27,7 @@ const AppState = (() => {
     },
     preferences: {
       theme: 'light',
-      language: 'en'
+      language: 'ar'
     }
   };
 
