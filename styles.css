@@ -3608,4 +3608,83 @@ html[dir="rtl"] .translate-tooltip {
   }
 }
 
-$rtlStyles
+/* ========================================
+   RTL Support (Arabic)
+   ======================================== */
+
+html[dir="rtl"], .rtl {
+  direction: rtl;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html[dir="rtl"] .question-header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .tf-options {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .mcq-option {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .option-letter {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .answer-list {
+  padding-left: 0;
+  padding-right: var(--space-6);
+}
+
+html[dir="rtl"] .answer-list li {
+  padding: var(--space-2) var(--space-4) var(--space-2) 0;
+}
+
+html[dir="rtl"] .answer-list li::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .translate-tooltip {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .section-header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .section-controls {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .controls-group {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .fib-input-group {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .code-help-btn {
+  margin-left: auto;
+}
+
+html[dir="rtl"] .code-help-tooltip {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .code-help-tooltip::before {
+  right: auto;
+  left: 8px;
+}
+
+/* Fix for keyword highlighting in RTL */
+html[dir="rtl"] .keyword-highlight {
+  display: inline-block;
+}
+
