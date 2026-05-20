@@ -299,6 +299,45 @@ const Utils = {
     }
 
     return result;
+  },
+
+  /**
+   * Get localized text with automatic fallback to alternative language.
+   * If the current language text is empty, automatically use the alternative language.
+   * @param {string} arText - Arabic text
+   * @param {string} enText - English text
+   * @param {boolean} isArabic - Current language is Arabic
+   * @returns {string} - The text to display
+   */
+  getLocalizedText: (arText, enText, isArabic) => {
+    // If Arabic is preferred
+    if (isArabic) {
+      // If Arabic text exists, use it
+      if (arText && arText.trim()) return arText;
+      // Otherwise, fallback to English
+      if (enText && enText.trim()) return enText;
+      return '';
+    }
+    // If English is preferred
+    else {
+      // If English text exists, use it
+      if (enText && enText.trim()) return enText;
+      // Otherwise, fallback to Arabic
+      if (arText && arText.trim()) return arText;
+      return '';
+    }
+  },
+
+  /**
+   * Get alternate language text (for showing in tooltips).
+   * Returns the text in the other language if it exists.
+   * @param {string} arText - Arabic text
+   * @param {string} enText - English text
+   * @param {boolean} isArabic - Current language is Arabic
+   * @returns {string} - The alternate language text
+   */
+  getAlternateText: (arText, enText, isArabic) => {
+    return isArabic ? (enText || '') : (arText || '');
   }
 };
 
@@ -608,15 +647,13 @@ const TrueFalseModule = (() => {
       const answered = progress[q.id];
       const state = AppState.get();
       const isArabic = state.preferences.language === 'ar';
-      const questionText = isArabic && q.question_ar ? q.question_ar : q.question_en;
-
+      const questionText = Utils.getLocalizedText(q.question_ar, q.question_en, isArabic);
+      const alternateText = Utils.getAlternateText(q.question_ar, q.question_en, isArabic);
+      const tooltipLabel = isArabic ? 'عرض بالإنجليزية' : 'View in English';
+      
       const card = document.createElement('div');
       card.className = `question-card${answered ? ' answered' : ''}`;
       card.id = `tf-${q.id}`;
-      
-      const alternateLang = isArabic ? 'en' : 'ar';
-      const alternateText = alternateLang === 'ar' ? (q.question_ar || '') : (q.question_en || '');
-      const tooltipLabel = isArabic ? 'عرض بالإنجليزية' : 'View in English';
       
       card.innerHTML = `
         <div class="question-header">
@@ -749,7 +786,9 @@ const MCQModule = (() => {
       const answered = progress[q.id];
       const state = AppState.get();
       const isArabic = state.preferences.language === 'ar';
-      const questionText = isArabic && q.question_ar ? q.question_ar : q.question_en;
+      const questionText = Utils.getLocalizedText(q.question_ar, q.question_en, isArabic);
+      const alternateText = Utils.getAlternateText(q.question_ar, q.question_en, isArabic);
+      const hasAlternate = alternateText.trim().length > 0;
 
       // Randomize options
       const optionEntries = Object.entries(q.options);
@@ -773,13 +812,13 @@ const MCQModule = (() => {
       card.innerHTML = `
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
-          ${q.question_ar && q.question_en ? `
+          ${hasAlternate ? `
             <span class="translate-icon" title="${isArabic ? 'عرض بالإنجليزية' : 'عرض بالعربية'}">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
-              <span class="translate-tooltip">${Utils.escapeHtml(isArabic ? q.question_en : q.question_ar)}</span>
+              <span class="translate-tooltip">${Utils.escapeHtml(alternateText)}</span>
             </span>
           ` : ''}
         </div>
@@ -893,7 +932,9 @@ const ShortAnswerModule = (() => {
       const answered = progress[q.id];
       const state = AppState.get();
       const isArabic = state.preferences.language === 'ar';
-      const questionText = isArabic && q.question_ar ? q.question_ar : q.question_en;
+      const questionText = Utils.getLocalizedText(q.question_ar, q.question_en, isArabic);
+      const alternateText = Utils.getAlternateText(q.question_ar, q.question_en, isArabic);
+      const hasAlternate = alternateText.trim().length > 0;
 
       const card = document.createElement('div');
       card.className = `question-card${answered ? ' answered' : ''}`;
@@ -901,13 +942,13 @@ const ShortAnswerModule = (() => {
       card.innerHTML = `
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
-          ${q.question_ar && q.question_en ? `
+          ${hasAlternate ? `
             <span class="translate-icon" title="${isArabic ? 'عرض بالإنجليزية' : 'عرض بالعربية'}">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
-              <span class="translate-tooltip">${Utils.escapeHtml(isArabic ? q.question_en : q.question_ar)}</span>
+              <span class="translate-tooltip">${Utils.escapeHtml(alternateText)}</span>
             </span>
           ` : ''}
         </div>
@@ -2060,7 +2101,9 @@ const CodeAnalysisModule = (() => {
       const answered = progress[q.id];
       const state = AppState.get();
       const isArabic = state.preferences.language === 'ar';
-      const questionText = isArabic && q.question_ar ? q.question_ar : q.question_en;
+      const questionText = Utils.getLocalizedText(q.question_ar, q.question_en, isArabic);
+      const alternateText = Utils.getAlternateText(q.question_ar, q.question_en, isArabic);
+      const hasAlternate = alternateText.trim().length > 0;
 
       // Detect code language
       const lang = detectLanguage(q.code);
@@ -2074,13 +2117,13 @@ const CodeAnalysisModule = (() => {
       card.innerHTML = `
         <div class="question-header">
           <span class="question-number">Question ${index + 1}</span>
-          ${q.question_ar && q.question_en ? `
+          ${hasAlternate ? `
             <span class="translate-icon" title="${isArabic ? 'عرض بالإنجليزية' : 'عرض بالعربية'}">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
-              <span class="translate-tooltip">${Utils.escapeHtml(isArabic ? q.question_en : q.question_ar)}</span>
+              <span class="translate-tooltip">${Utils.escapeHtml(alternateText)}</span>
             </span>
           ` : ''}
         </div>
