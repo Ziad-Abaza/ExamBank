@@ -195,7 +195,11 @@ const Utils = {
       .replace(/[أإآ]/g, "ا") // Normalize Alef
       .replace(/ة/g, "ه")     // Normalize Teh Marbuta
       .replace(/ى/g, "ي")     // Normalize Alef Maksura
-      .replace(/[^\u0000-\u007E\u0621-\u064A\u0660-\u0669\s]/g, ""); // Remove diacritics/non-essential marks
+      .replace(/[^\u0000-\u007E\u0621-\u064A\u0660-\u0669\s]/g, ""); // Remove diacritics
+    
+    // Remove Arabic 'Al-' prefix (ال) from the start of words
+    // Use a regex that matches 'ال' at the start of the string or after a space
+    normalized = normalized.replace(/(^|\s)ال/g, "$1");
     
     // Replace multiple spaces with a single space
     normalized = normalized.replace(/\s+/g, " ");
@@ -212,13 +216,26 @@ const Utils = {
     
     if (!norm1 || !norm2) return false;
     
-    // Exact match after normalization
+    // 1. Exact match after normalization
     if (norm1 === norm2) return true;
     
-    // Basic inclusion check (one is part of the other)
-    // This handles cases like "The Internet of Things" vs "Internet of Things"
-    if (norm1.length > 3 && norm2.length > 3) {
-      if (norm1.includes(norm2) || norm2.includes(norm1)) return true;
+    // 2. Word-based coverage check
+    const words1 = norm1.split(' ').filter(w => w.length > 1);
+    const words2 = norm2.split(' ').filter(w => w.length > 1);
+    
+    if (words1.length > 0 && words2.length > 0) {
+      // Calculate how many words from the correct answer (words2) are in the user's answer (words1)
+      const matches = words2.filter(w => words1.includes(w));
+      const coverage = matches.length / words2.length;
+      
+      // If the correct answer is short (1-2 words), require 100% match
+      if (words2.length <= 2) {
+        return coverage === 1;
+      }
+      
+      // For longer answers, require at least 80% coverage to prevent single-word matches
+      // This allows for missing one minor word in a long phrase but rejects "ريادة" for "ريادة ابتكارية بحتة"
+      return coverage >= 0.8;
     }
     
     return false;
