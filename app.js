@@ -27,7 +27,8 @@ const AppState = (() => {
     },
     preferences: {
       theme: 'light',
-      language: 'ar'
+      language: 'ar',
+      mcqDisableShuffle: false
     }
   };
 
@@ -906,7 +907,14 @@ const MCQModule = (() => {
 
   const shuffle = () => {
     const state = AppState.get();
-    render(Utils.shuffle(state.questions.mcq));
+    // Check if shuffle is disabled
+    if (state.preferences.mcqDisableShuffle) {
+      // Just render without shuffling
+      render(state.questions.mcq);
+    } else {
+      // Render with shuffled questions
+      render(Utils.shuffle(state.questions.mcq));
+    }
   };
 
   const reset = () => {
@@ -2646,6 +2654,15 @@ const App = (() => {
     // MCQ controls
     document.getElementById('mcqShuffleBtn').addEventListener('click', MCQModule.shuffle);
     document.getElementById('mcqResetBtn').addEventListener('click', MCQModule.reset);
+
+    // MCQ Disable Shuffle Toggle
+    const mcqDisableShuffleToggle = document.getElementById('mcqDisableShuffle');
+    mcqDisableShuffleToggle.addEventListener('change', (e) => {
+      AppState.setPreference('mcqDisableShuffle', e.target.checked);
+    });
+    // Sync toggle with stored preference
+    const state = AppState.get();
+    mcqDisableShuffleToggle.checked = state.preferences.mcqDisableShuffle;
 
     // Short Answer controls
     document.getElementById('saShuffleBtn').addEventListener('click', ShortAnswerModule.shuffle);
