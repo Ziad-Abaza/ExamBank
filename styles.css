@@ -3688,3 +3688,8 @@ html[dir="rtl"] .keyword-highlight {
   display: inline-block;
 }
 
+/* Disable transitions during theme switch to prevent flicker */
+.no-transition, .no-transition * {
+  transition: none !important;
+}
+

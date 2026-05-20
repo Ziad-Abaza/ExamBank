@@ -2,6 +2,24 @@
 <html lang="ar" data-theme="light" data-lang="ar">
 <head>
   <meta charset="UTF-8">
+  <script>
+    // Critical: Apply theme & language immediately to prevent FOUC
+    (function() {
+      try {
+        const prefs = JSON.parse(localStorage.getItem('exambank_prefs') || '{}');
+        const isDark = prefs.theme === 'dark';
+        const html = document.documentElement;
+        
+        if (isDark) html.setAttribute('data-theme', 'dark');
+        html.style.backgroundColor = isDark ? '#0f0f1a' : '#f8f9fc';
+        
+        if (prefs.language) {
+          html.setAttribute('data-lang', prefs.language);
+          if (prefs.language === 'ar') html.setAttribute('dir', 'rtl');
+        }
+      } catch (e) { console.error('Theme init failed', e); }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ExamBank — Universal Revision System</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">

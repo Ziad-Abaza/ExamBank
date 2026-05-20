@@ -2307,8 +2307,25 @@ const CodeAnalysisModule = (() => {
 // ========================================
 const UIManager = (() => {
   const applyTheme = (theme) => {
+    // Prevent transition flicker
+    document.body.classList.add('no-transition');
+
     document.documentElement.setAttribute('data-theme', theme);
     AppState.setPreference('theme', theme);
+
+    // Update icons
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+    if (sunIcon && moonIcon) {
+      sunIcon.style.display = theme === 'dark' ? 'none' : 'inline-block';
+      moonIcon.style.display = theme === 'dark' ? 'inline-block' : 'none';
+    }
+
+    // Force repaint then remove the class
+    window.getComputedStyle(document.body).opacity;
+    setTimeout(() => {
+      document.body.classList.remove('no-transition');
+    }, 50);
   };
 
   const applyLanguage = (lang) => {
