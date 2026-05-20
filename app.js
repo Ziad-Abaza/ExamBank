@@ -978,7 +978,14 @@ const ShortAnswerModule = (() => {
     Utils.shuffle(cards).forEach(card => container.appendChild(card));
   };
 
-  return { render, shuffle };
+  const reset = () => {
+    AppState.resetProgress('short_answer');
+    const state = AppState.get();
+    render(state.questions.short_answer);
+    ProgressManager.updateProgress();
+  };
+
+  return { render, shuffle, reset };
 })();
 
 // ========================================
@@ -2599,6 +2606,7 @@ const App = (() => {
 
     // Short Answer controls
     document.getElementById('saShuffleBtn').addEventListener('click', ShortAnswerModule.shuffle);
+    document.getElementById('saResetBtn').addEventListener('click', ShortAnswerModule.reset);
 
     // Fill in the Blank controls
     document.getElementById('fibShuffleBtn').addEventListener('click', FillInTheBlankModule.shuffle);
