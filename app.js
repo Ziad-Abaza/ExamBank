@@ -2251,6 +2251,15 @@ const UIManager = (() => {
     document.documentElement.setAttribute('data-lang', lang);
     AppState.setPreference('language', lang);
 
+    // Toggle RTL support
+    if (lang === 'ar') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.body.classList.add('rtl');
+    } else {
+      document.documentElement.removeAttribute('dir');
+      document.body.classList.remove('rtl');
+    }
+
     // Update all translatable elements
     document.querySelectorAll('[data-en][data-ar]').forEach(el => {
       el.textContent = lang === 'ar' ? el.dataset.ar : el.dataset.en;
