@@ -791,9 +791,10 @@ const MCQModule = (() => {
       const alternateText = Utils.getAlternateText(q.question_ar, q.question_en, isArabic);
       const hasAlternate = alternateText.trim().length > 0;
 
-      // Randomize options
+      // Randomize options unless shuffle is disabled or the question was already answered
       const optionEntries = Object.entries(q.options);
-      const shuffledOptions = answered ? optionEntries : Utils.shuffle(optionEntries);
+      const shouldDisableOptionShuffle = state.preferences.mcqDisableShuffle;
+      const shuffledOptions = answered || shouldDisableOptionShuffle ? optionEntries : Utils.shuffle(optionEntries);
 
       const card = document.createElement('div');
       card.className = `question-card${answered ? ' answered' : ''}`;
@@ -2659,6 +2660,11 @@ const App = (() => {
     const mcqDisableShuffleToggle = document.getElementById('mcqDisableShuffle');
     mcqDisableShuffleToggle.addEventListener('change', (e) => {
       AppState.setPreference('mcqDisableShuffle', e.target.checked);
+      const state = AppState.get();
+      // If MCQ section is visible, refresh current MCQ render so option order updates immediately
+      if (state.currentCategory === 'mcq') {
+        MCQModule.render(state.questions.mcq);
+      }
     });
     // Sync toggle with stored preference
     const state = AppState.get();
