@@ -177,6 +177,53 @@ const Utils = {
     return div.innerHTML;
   },
 
+  /**
+   * Normalize a string for comparison (English & Arabic).
+   * Removes punctuation, extra spaces, and normalizes Arabic characters.
+   */
+  normalizeString: (str) => {
+    if (!str) return '';
+    
+    // Convert to lowercase and trim
+    let normalized = str.toLowerCase().trim();
+    
+    // Remove punctuation and special characters
+    normalized = normalized.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()؟?،!]/g, "");
+    
+    // Normalize Arabic characters
+    normalized = normalized
+      .replace(/[أإآ]/g, "ا") // Normalize Alef
+      .replace(/ة/g, "ه")     // Normalize Teh Marbuta
+      .replace(/ى/g, "ي")     // Normalize Alef Maksura
+      .replace(/[^\u0000-\u007E\u0621-\u064A\u0660-\u0669\s]/g, ""); // Remove diacritics/non-essential marks
+    
+    // Replace multiple spaces with a single space
+    normalized = normalized.replace(/\s+/g, " ");
+    
+    return normalized.trim();
+  },
+
+  /**
+   * Check if two strings are similar enough to be considered a match.
+   */
+  areStringsSimilar: (str1, str2) => {
+    const norm1 = Utils.normalizeString(str1);
+    const norm2 = Utils.normalizeString(str2);
+    
+    if (!norm1 || !norm2) return false;
+    
+    // Exact match after normalization
+    if (norm1 === norm2) return true;
+    
+    // Basic inclusion check (one is part of the other)
+    // This handles cases like "The Internet of Things" vs "Internet of Things"
+    if (norm1.length > 3 && norm2.length > 3) {
+      if (norm1.includes(norm2) || norm2.includes(norm1)) return true;
+    }
+    
+    return false;
+  },
+
   debounce: (func, wait) => {
     let timeout;
     return (...args) => {
@@ -1110,7 +1157,7 @@ const FillInTheBlankModule = (() => {
         const userAnswer = input.value.trim();
         if (!userAnswer) return;
 
-        const isCorrect = userAnswer.toLowerCase() === q.answer.toLowerCase();
+        const isCorrect = Utils.areStringsSimilar(userAnswer, q.answer);
 
         AppState.setProgress('fill_in_the_blank', q.id, { correct: isCorrect, userAnswer });
 
