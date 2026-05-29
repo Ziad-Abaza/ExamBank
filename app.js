@@ -27,7 +27,7 @@ const AppState = (() => {
     },
     preferences: {
       theme: 'light',
-      language: 'ar',
+      language: 'en',
       mcqDisableShuffle: false
     }
   };
@@ -2343,7 +2343,7 @@ const UIManager = (() => {
 
     // Update all translatable elements
     document.querySelectorAll('[data-en][data-ar]').forEach(el => {
-      el.textContent = lang === 'ar' ? el.dataset.ar : el.dataset.en;
+      el.innerHTML = lang === 'ar' ? el.dataset.ar : el.dataset.en;
     });
 
     // Update language label

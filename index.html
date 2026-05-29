@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" data-theme="light" data-lang="ar">
+<html lang="en" data-theme="light" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <script>
@@ -13,9 +13,12 @@
         if (isDark) html.setAttribute('data-theme', 'dark');
         html.style.backgroundColor = isDark ? '#0f0f1a' : '#f8f9fc';
         
-        if (prefs.language) {
-          html.setAttribute('data-lang', prefs.language);
-          if (prefs.language === 'ar') html.setAttribute('dir', 'rtl');
+        const lang = prefs.language || 'en';
+        html.setAttribute('data-lang', lang);
+        if (lang === 'ar') {
+          html.setAttribute('dir', 'rtl');
+        } else {
+          html.removeAttribute('dir');
         }
       } catch (e) { console.error('Theme init failed', e); }
     })();
@@ -44,7 +47,7 @@
             <circle cx="12" cy="12" r="10"/>
             <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
-          <span class="control-label" id="langLabel">AR</span>
+          <span class="control-label" id="langLabel">EN</span>
         </button>
 
         <!-- Theme Toggle -->
@@ -191,37 +194,37 @@
           <!-- Help Tooltip -->
           <div class="code-help-tooltip hidden" id="codeHelpTooltip">
             <div class="tooltip-header">
-              <h4>كيفية استخدام دليل البيانات مع تمارين البرمجة</h4>
+              <h4 data-en="How to use Data Catalog with Code Exercises" data-ar="كيفية استخدام دليل البيانات مع تمارين البرمجة">How to use Data Catalog with Code Exercises</h4>
               <button class="tooltip-close" id="tooltipClose">&times;</button>
             </div>
             <div class="tooltip-body">
               <div class="tooltip-step">
-                <span class="step-number">١</span>
-                <p>اضغط على أيقونة <strong>دليل البيانات</strong> (📁) في الشريط العلوي لعرض مجموعات البيانات المتاحة.</p>
+                <span class="step-number" data-en="1" data-ar="١">1</span>
+                <p data-en="Click on the <strong>Data Catalog</strong> icon (📁) in the top bar to view available datasets." data-ar="اضغط على أيقونة <strong>دليل البيانات</strong> (📁) في الشريط العلوي لعرض مجموعات البيانات المتاحة.">Click on the <strong>Data Catalog</strong> icon (📁) in the top bar to view available datasets.</p>
               </div>
               <div class="tooltip-step">
-                <span class="step-number">٢</span>
-                <p>اختر مجموعة البيانات التي تريد استخدامها (مثل: students.csv, sales.csv).</p>
+                <span class="step-number" data-en="2" data-ar="٢">2</span>
+                <p data-en="Choose the dataset you want to use (e.g., students.csv, sales.csv)." data-ar="اختر مجموعة البيانات التي تريد استخدامها (مثل: students.csv, sales.csv).">Choose the dataset you want to use (e.g., students.csv, sales.csv).</p>
               </div>
               <div class="tooltip-step">
-                <span class="step-number">٣</span>
-                <p>انسخ مسار الملف بالضغط على زر النسخ (📋) بجانب اسم الملف.</p>
+                <span class="step-number" data-en="3" data-ar="٣">3</span>
+                <p data-en="Copy the file path by clicking the copy button (📋) next to the filename." data-ar="انسخ مسار الملف بالضغط على زر النسخ (📋) بجانب اسم الملف.">Copy the file path by clicking the copy button (📋) next to the filename.</p>
               </div>
               <div class="tooltip-step">
-                <span class="step-number">٤</span>
-                <p>في تمرين البرمجة، اضغط على <strong>"جرّب بنفسك"</strong> لفتح محرر الأكواد.</p>
+                <span class="step-number" data-en="4" data-ar="٤">4</span>
+                <p data-en="In the code exercise, click <strong>&quot;Try it yourself&quot;</strong> to open the code editor." data-ar="في تمرين البرمجة، اضغط على <strong>&quot;جرّب بنفسك&quot;</strong> لفتح محرر الأكواد.">In the code exercise, click <strong>&quot;Try it yourself&quot;</strong> to open the code editor.</p>
               </div>
               <div class="tooltip-step">
-                <span class="step-number">٥</span>
-                <p>استخدم <code>pd.read_csv("مسار/الملف.csv")</code> لقراءة مجموعة البيانات في بايثون.</p>
+                <span class="step-number" data-en="5" data-ar="٥">5</span>
+                <p data-en="Use <code>pd.read_csv(&quot;path/to/file.csv&quot;)</code> to read the dataset in Python." data-ar="استخدم <code>pd.read_csv(&quot;مسار/الملف.csv&quot;)</code> لقراءة مجموعة البيانات في بايثون.">Use <code>pd.read_csv(&quot;path/to/file.csv&quot;)</code> to read the dataset in Python.</p>
               </div>
               <div class="tooltip-step">
-                <span class="step-number">٦</span>
-                <p>قم بتحليل البيانات باستخدام أوامر مثل <code>df.head()</code>, <code>df.describe()</code>, أو <code>df.plot()</code>.</p>
+                <span class="step-number" data-en="6" data-ar="٦">6</span>
+                <p data-en="Analyze the data using commands like <code>df.head()</code>, <code>df.describe()</code>, or <code>df.plot()</code>." data-ar="قم بتحليل البيانات باستخدام أوامر مثل <code>df.head()</code>, <code>df.describe()</code>, أو <code>df.plot()</code>.">Analyze the data using commands like <code>df.head()</code>, <code>df.describe()</code>, or <code>df.plot()</code>.</p>
               </div>
               <div class="tooltip-step">
-                <span class="step-number">٧</span>
-                <p>اضغط على زر <strong>"تشغيل"</strong> لتنفيذ الكود ورؤية النتائج فوراً.</p>
+                <span class="step-number" data-en="7" data-ar="٧">7</span>
+                <p data-en="Click the <strong>&quot;Run&quot;</strong> button to execute the code and see results immediately." data-ar="اضغط على زر <strong>&quot;تشغيل&quot;</strong> لتنفيذ الكود ورؤية النتائج فوراً.">Click the <strong>&quot;Run&quot;</strong> button to execute the code and see results immediately.</p>
               </div>
               <div class="tooltip-hint">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -229,7 +232,7 @@
                   <line x1="12" y1="16" x2="12" y2="12"/>
                   <line x1="12" y1="8" x2="12.01" y2="8"/>
                 </svg>
-                <p>يمكنك تعديل الكود وإعادة التشغيل عدة مرات لتجربة أوامر مختلفة!</p>
+                <p data-en="You can modify the code and rerun it multiple times to try different commands!" data-ar="يمكنك تعديل الكود وإعادة التشغيل عدة مرات لتجربة أوامر مختلفة!">You can modify the code and rerun it multiple times to try different commands!</p>
               </div>
             </div>
           </div>
@@ -359,19 +362,19 @@
   <div class="modal-overlay hidden" id="shortcutsModal">
     <div class="modal">
       <div class="modal-header">
-        <h3 class="modal-title">Keyboard Shortcuts</h3>
+        <h3 class="modal-title" data-en="Keyboard Shortcuts" data-ar="اختصارات لوحة المفاتيح">Keyboard Shortcuts</h3>
         <button class="modal-close" id="shortcutsClose">&times;</button>
       </div>
       <div class="modal-body">
         <div class="shortcuts-list">
-          <div class="shortcut-row"><kbd>1</kbd><span>True / False — Select True</span></div>
-          <div class="shortcut-row"><kbd>2</kbd><span>True / False — Select False</span></div>
-          <div class="shortcut-row"><kbd>1-4</kbd><span>MCQ — Select option</span></div>
-          <div class="shortcut-row"><kbd>Enter</kbd><span>Submit answer / Show answer</span></div>
-          <div class="shortcut-row"><kbd>N</kbd><span>Next question</span></div>
-          <div class="shortcut-row"><kbd>P</kbd><span>Previous question</span></div>
-          <div class="shortcut-row"><kbd>D</kbd><span>Toggle dark mode</span></div>
-          <div class="shortcut-row"><kbd>?</kbd><span>Show shortcuts</span></div>
+          <div class="shortcut-row"><kbd>1</kbd><span data-en="True / False — Select True" data-ar="صحيح / خطأ — اختيار صحيح">True / False — Select True</span></div>
+          <div class="shortcut-row"><kbd>2</kbd><span data-en="True / False — Select False" data-ar="صحيح / خطأ — اختيار خطأ">True / False — Select False</span></div>
+          <div class="shortcut-row"><kbd>1-4</kbd><span data-en="MCQ — Select option" data-ar="اختيار من متعدد — اختيار الإجابة">MCQ — Select option</span></div>
+          <div class="shortcut-row"><kbd>Enter</kbd><span data-en="Submit answer / Show answer" data-ar="إرسال الإجابة / عرض الإجابة">Submit answer / Show answer</span></div>
+          <div class="shortcut-row"><kbd>N</kbd><span data-en="Next question" data-ar="السؤال التالي">Next question</span></div>
+          <div class="shortcut-row"><kbd>P</kbd><span data-en="Previous question" data-ar="السؤال السابق">Previous question</span></div>
+          <div class="shortcut-row"><kbd>D</kbd><span data-en="Toggle dark mode" data-ar="تبديل الوضع الداكن">Toggle dark mode</span></div>
+          <div class="shortcut-row"><kbd>?</kbd><span data-en="Show shortcuts" data-ar="عرض الاختصارات">Show shortcuts</span></div>
         </div>
       </div>
     </div>
