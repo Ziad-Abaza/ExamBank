@@ -342,6 +342,216 @@
       "question_ar": "هل Gradient Descent مفضل للبيانات الضخمة؟",
       "answer": true,
       "explanation": "It scales better than Normal Equation for large datasets."
+    },
+    {
+      "id": 51,
+      "question_en": "Classification is used when the output variable y is continuous.",
+      "question_ar": "يُستخدم التصنيف عندما يكون متغير المخرجات y مستمراً.",
+      "answer": false,
+      "explanation": "Classification is used for discrete/categorical values, while Regression is used for continuous values."
+    },
+    {
+      "id": 52,
+      "question_en": "The Sigmoid function value is 0.5 when its input z is 0.",
+      "question_ar": "تكون قيمة دالة السيجمويد 0.5 عندما يكون المدخل z يساوي 0.",
+      "answer": true,
+      "explanation": "At z = 0, g(z) = 1 / (1 + e^0) = 1/2 = 0.5."
+    },
+    {
+      "id": 53,
+      "question_en": "In Binary Classification, y can only take two values, usually 0 and 1.",
+      "question_ar": "في التصنيف الثنائي، يمكن لـ y أن يأخذ قيمتين فقط، عادة 0 و 1.",
+      "answer": true,
+      "explanation": "Binary classification involves categorizing data into one of two distinct classes."
+    },
+    {
+      "id": 54,
+      "question_en": "Logistic Regression uses the same Cost Function as Linear Regression.",
+      "question_ar": "يستخدم الانحدار اللوجستي نفس دالة التكلفة التي يستخدمها الانحدار الخطي.",
+      "answer": false,
+      "explanation": "Logistic Regression uses a logarithmic cost function to ensure it is convex and can be optimized via Gradient Descent."
+    },
+    {
+      "id": 55,
+      "question_en": "A 'Balanced' model is one that captures the general trend without memorizing noise.",
+      "question_ar": "النموذج 'المتوازن' هو الذي يستوعب الاتجاه العام دون حفظ الضوضاء.",
+      "answer": true,
+      "explanation": "A balanced model generalizes well to new, unseen data."
+    },
+    {
+      "id": 56,
+      "question_en": "Overfitting makes the model perform excellently on new, unseen data.",
+      "question_ar": "الضبط الزائد يجعل النموذج يؤدي بشكل ممتاز على البيانات الجديدة غير المرئية.",
+      "answer": false,
+      "explanation": "Overfitting results in high training accuracy but poor performance on new data because the model memorized noise."
+    },
+    {
+      "id": 57,
+      "question_en": "Regularization involves adding a penalty term to the cost function to keep parameters small.",
+      "question_ar": "يتضمن التنعيم إضافة معامل عقوبة إلى دالة التكلفة لإبقاء المعاملات صغيرة.",
+      "answer": true,
+      "explanation": "Penalty terms like Lambda help reduce model complexity and prevent overfitting."
+    },
+    {
+      "id": 58,
+      "question_en": "In Multi-class classification, the 'One-vs-All' approach treats each class against all others combined.",
+      "question_ar": "في التصنيف متعدد الفئات، تتعامل طريقة 'الواحد ضد الجميع' مع كل فئة ضد جميع الفئات الأخرى مجتمعة.",
+      "answer": true,
+      "explanation": "OVA breaks down multi-class problems into multiple binary classification tasks."
+    },
+    {
+      "id": 59,
+      "question_en": "Underfitting happens because the mathematical equation is too complex for the data.",
+      "question_ar": "يحدث الضبط الناقص لأن المعادلة الرياضية معقدة جداً بالنسبة للبيانات.",
+      "answer": false,
+      "explanation": "Underfitting occurs when the model is too simple (high bias) to capture the underlying pattern."
+    },
+    {
+      "id": 60,
+      "question_en": "Regularization should be applied to all parameters, including theta zero.",
+      "question_ar": "يجب تطبيق التنعيم على جميع المعاملات، بما في ذلك theta zero.",
+      "answer": false,
+      "explanation": "Conventionally, theta zero is excluded from regularization as it does not contribute to model complexity."
+    },
+    {
+      "id": 61,
+      "question_en": "Artificial Neural Networks have no relationship to the biological structure of the human brain.",
+      "question_ar": "الشبكات العصبية الاصطناعية ليس لها أي علاقة بالتركيب البيولوجي لدماغ الإنسان.",
+      "answer": false,
+      "explanation": "ANNs are biologically inspired; nodes mimic neurons, and inputs mimic dendrites."
+    },
+    {
+      "id": 62,
+      "question_en": "A Neural Network can have multiple hidden layers.",
+      "question_ar": "يمكن أن تحتوي الشبكة العصبية على طبقات خفية متعددة.",
+      "answer": true,
+      "explanation": "Networks can have many hidden layers; more layers increase the network's ability to learn complex patterns (Deep Learning)."
+    },
+    {
+      "id": 63,
+      "question_en": "In a Neural Network layer, x0 is always equal to 0.",
+      "question_ar": "في طبقة الشبكة العصبية، x0 تساوي دائماً 0.",
+      "answer": false,
+      "explanation": "x0 is the bias unit and is always equal to 1, not 0."
+    },
+    {
+      "id": 64,
+      "question_en": "The logical function AND outputs 1 only when both inputs are 1.",
+      "question_ar": "الدالة المنطقية AND تخرج 1 فقط عندما يكون كلا المدخلين 1.",
+      "answer": true,
+      "explanation": "This is the core definition of the AND gate."
+    },
+    {
+      "id": 65,
+      "question_en": "To implement an OR gate mathematically, the bias weight (Theta_0) must be a large positive number.",
+      "question_ar": "لتطبيق بوابة OR رياضياً، يجب أن يكون وزن الانحراف (ثيتا_0) رقماً موجباً كبيراً.",
+      "answer": false,
+      "explanation": "For an OR gate, the bias weight is typically a small negative number (e.g., -10) to allow either input (with large positive weights) to push the output to 1."
+    },
+    {
+      "id": 66,
+      "question_en": "Delta (Δ) in Neural Networks measures the exact accuracy of the hidden layers.",
+      "question_ar": "دلتا (Δ) في الشبكات العصبية تقيس الدقة التامة للطبقات الخفية.",
+      "answer": false,
+      "explanation": "Delta measures the error or the difference between the predicted value and the actual target, not the accuracy."
+    },
+    {
+      "id": 67,
+      "question_en": "The value 'a' (Activation) represents the output of a specific neuron after applying the Sigmoid function.",
+      "question_ar": "تمثل القيمة 'a' (التنشيط) مخرجات خلية عصبية معينة بعد تطبيق دالة السيجمويد.",
+      "answer": true,
+      "explanation": "The activation value 'a' is the result of passing the weighted sum of inputs through the activation function."
+    },
+    {
+      "id": 68,
+      "question_en": "The NOT gate reverses the input, outputting 1 if the input is 0, and 0 if the input is 1.",
+      "question_ar": "بوابة NOT تعكس المدخل، فتخرج 1 إذا كان المدخل 0، و 0 إذا كان المدخل 1.",
+      "answer": true,
+      "explanation": "The NOT gate is a simple inverter."
+    },
+    {
+      "id": 69,
+      "question_en": "The XOR gate outputs 1 only when both inputs are identical.",
+      "question_ar": "بوابة XOR تخرج 1 فقط عندما يكون كلا المدخلين متطابقين.",
+      "answer": false,
+      "explanation": "The XOR (Exclusive OR) gate outputs 1 when the inputs are different (e.g., 1 and 0), and 0 when they are identical."
+    },
+    {
+      "id": 70,
+      "question_en": "When a computer analyzes an image using Neural Networks, it first converts the image into a matrix of numbers.",
+      "question_ar": "عندما يقوم الكمبيوتر بتحليل صورة باستخدام الشبكات العصبية، فإنه يقوم أولاً بتحويل الصورة إلى مصفوفة من الأرقام.",
+      "answer": true,
+      "explanation": "Images are interpreted by computers as grids (matrices) of pixel intensity values."
+    },
+    {
+      "id": 71,
+      "question_en": "For binary classification, a Neural Network needs at least two output units.",
+      "question_ar": "للتصنيف الثنائي، تحتاج الشبكة العصبية إلى وحدتي مخرج على الأقل.",
+      "answer": false,
+      "explanation": "One output unit is sufficient to represent binary classes (0 or 1)."
+    },
+    {
+      "id": 72,
+      "question_en": "In the cost function equation, the 'Regularization' part helps prevent overfitting.",
+      "question_ar": "في معادلة دالة التكلفة، يساعد جزء 'التنعيم' (Regularization) في منع الضبط الزائد.",
+      "answer": true,
+      "explanation": "Regularization penalizes large weights, simplifying the model to generalize better."
+    },
+    {
+      "id": 73,
+      "question_en": "Forward propagation is performed after backpropagation in every training iteration.",
+      "question_ar": "يتم تنفيذ المسار الأمامي بعد المسار الخلفي في كل تكرار تدريبي.",
+      "answer": false,
+      "explanation": "Forward propagation must happen first to produce a prediction, followed by backpropagation to calculate error."
+    },
+    {
+      "id": 74,
+      "question_en": "The symbol Delta represents the error for a specific neuron.",
+      "question_ar": "الرمز Delta يمثل الخطأ لخلية عصبية معينة.",
+      "answer": true,
+      "explanation": "Delta (δ) captures the difference between activation and target values for gradient calculation."
+    },
+    {
+      "id": 75,
+      "question_en": "Randomly initializing weights with very large numbers makes the training faster.",
+      "question_ar": "تهيئة الأوزان عشوائياً بأرقام كبيرة جداً يجعل التدريب أسرع.",
+      "answer": false,
+      "explanation": "Large weights can cause gradients to explode or saturate activation functions, slowing down or preventing convergence."
+    },
+    {
+      "id": 76,
+      "question_en": "Gradient Checking should be turned off during the actual training process because it is slow.",
+      "question_ar": "يجب إيقاف الفحص الاشتقاقي أثناء عملية التدريب الفعلية لأنه بطيء.",
+      "answer": true,
+      "explanation": "Gradient checking is a debugging tool only; numerical gradient calculation is computationally expensive."
+    },
+    {
+      "id": 77,
+      "question_en": "A 'Zero Matrix' used for initialization ensures the best starting point for Neural Networks.",
+      "question_ar": "تضمن 'المصفوفة الصفرية' المستخدمة للتهيئة أفضل نقطة بداية للشبكات العصبية.",
+      "answer": false,
+      "explanation": "Zero initialization leads to the symmetry problem where all neurons learn the same features."
+    },
+    {
+      "id": 78,
+      "question_en": "In a CNN, layers often consist of specialized units like ReLU and Pooling.",
+      "question_ar": "في شبكة CNN، تتكون الطبقات غالباً من وحدات متخصصة مثل ReLU و Pooling.",
+      "answer": true,
+      "explanation": "These layers help in feature extraction and dimensionality reduction in images."
+    },
+    {
+      "id": 79,
+      "question_en": "Modular Neural Networks (MNN) consist of several independent networks working in parallel.",
+      "question_ar": "الشبكات العصبية الوحدة (MNN) تتكون من عدة شبكات مستقلة تعمل بالتوازي.",
+      "answer": true,
+      "explanation": "MNNs use a 'divide and conquer' approach by splitting tasks across multiple sub-networks."
+    },
+    {
+      "id": 80,
+      "question_en": "A 'Global Minimum' is the lowest possible value of the Cost Function across all parameters.",
+      "question_ar": "'النهاية الصغرى العالمية' هي أقل قيمة ممكنة لدالة التكلفة عبر جميع المعاملات.",
+      "answer": true,
+      "explanation": "It is the optimal point where the model's error is minimized globally."
     }
   ],
   "mcq": [
@@ -994,6 +1204,591 @@
       },
       "correct_answer": "b",
       "explanation": "Gradient Descent scales better computationally."
+    },
+    {
+      "id": 51,
+      "question_en": "Which of the following is a primary task for Classification?",
+      "question_ar": "أي مما يلي هو المهمة الأساسية للتصنيف؟",
+      "options": {
+        "a": "Predicting house prices",
+        "b": "Assigning an email to 'Spam' or 'Not Spam'",
+        "c": "Calculating the average temperature",
+        "d": "Estimating stock market trends"
+      },
+      "correct_answer": "b",
+      "explanation": "Classification deals with assigning labels to data points, like identifying spam emails."
+    },
+    {
+      "id": 52,
+      "question_en": "The output of the Sigmoid (Logistic) function always falls between:",
+      "question_ar": "مخرجات دالة السيجمويد (اللوجستية) تقع دائماً بين:",
+      "options": {
+        "a": "-1 and 1",
+        "b": "0 and infinity",
+        "c": "0 and 1",
+        "d": "-infinity and +infinity"
+      },
+      "correct_answer": "c",
+      "explanation": "The Sigmoid function maps any real-valued number into the range [0, 1]."
+    },
+    {
+      "id": 53,
+      "question_en": "In Logistic Regression, the hypothesis function h(x) represents:",
+      "question_ar": "في الانحدار اللوجستي، تمثل دالة الفرضية h(x) التالي:",
+      "options": {
+        "a": "The absolute predicted value",
+        "b": "The probability that y = 1",
+        "c": "The error rate of the model",
+        "d": "The slope of the line"
+      },
+      "correct_answer": "b",
+      "explanation": "h(x) gives the estimated probability that the output is 1 for a given input."
+    },
+    {
+      "id": 54,
+      "question_en": "Which function is used to 'squash' a linear result into a range of 0 to 1?",
+      "question_ar": "ما هي الدالة المستخدمة لتحويل النتيجة الخطية إلى نطاق بين 0 و 1؟",
+      "options": {
+        "a": "Linear Function",
+        "b": "Polynomial Function",
+        "c": "Sigmoid Function",
+        "d": "Normal Equation"
+      },
+      "correct_answer": "c",
+      "explanation": "The Sigmoid function is specifically used to compress outputs into a probability range."
+    },
+    {
+      "id": 55,
+      "question_en": "The line that separates different classes in a classification plot is called:",
+      "question_ar": "الخط الذي يفصل بين الفئات المختلفة في مخطط التصنيف يسمى:",
+      "options": {
+        "a": "Regression Line",
+        "b": "Decision Boundary",
+        "c": "Cost Curve",
+        "d": "Lambda line"
+      },
+      "correct_answer": "b",
+      "explanation": "The decision boundary is the line or plane that partitions the feature space into classes."
+    },
+    {
+      "id": 56,
+      "question_en": "If h(x) >= 0.5, we typically predict the class as:",
+      "question_ar": "إذا كانت h(x) >= 0.5، فإننا نتوقع عادةً أن تكون الفئة:",
+      "options": {
+        "a": "y = 0",
+        "b": "y = 1",
+        "c": "y = 0.5",
+        "d": "Undefined"
+      },
+      "correct_answer": "b",
+      "explanation": "0.5 is the standard threshold for predicting the positive class (1)."
+    },
+    {
+      "id": 57,
+      "question_en": "The Cost Function for Logistic Regression is designed to be:",
+      "question_ar": "تم تصميم دالة التكلفة للانحدار اللوجستي لتكون:",
+      "options": {
+        "a": "Non-convex",
+        "b": "Linear",
+        "c": "Convex",
+        "d": "Random"
+      },
+      "correct_answer": "c",
+      "explanation": "A convex cost function ensures that Gradient Descent can find the global minimum."
+    },
+    {
+      "id": 58,
+      "question_en": "Multi-class classification can be solved using:",
+      "question_ar": "يمكن حل التصنيف متعدد الفئات باستخدام:",
+      "options": {
+        "a": "Simple Linear Regression",
+        "b": "One-vs-All",
+        "c": "Underfitting",
+        "d": "Scalar Multiplication"
+      },
+      "correct_answer": "b",
+      "explanation": "One-vs-All (OVA) is a strategy that trains one binary classifier per class."
+    },
+    {
+      "id": 59,
+      "question_en": "'Underfitting' (UF) occurs when the model is:",
+      "question_ar": "يحدث 'الضبط الناقص' (UF) عندما يكون النموذج:",
+      "options": {
+        "a": "Too complex",
+        "b": "Too simple to capture data patterns",
+        "c": "Perfectly balanced",
+        "d": "Using too many features"
+      },
+      "correct_answer": "b",
+      "explanation": "Underfitting means the model is too simple to represent the underlying structure of the data."
+    },
+    {
+      "id": 60,
+      "question_en": "'Overfitting' (OF) is characterized by:",
+      "question_ar": "يتميز 'الضبط الزائد' (OF) بـ:",
+      "options": {
+        "a": "High bias",
+        "b": "High variance",
+        "c": "Low training accuracy",
+        "d": "Simplicity"
+      },
+      "correct_answer": "b",
+      "explanation": "Overfitting happens when a model captures noise, resulting in high variance."
+    },
+    {
+      "id": 61,
+      "question_en": "Regularization helps to solve the problem of:",
+      "question_ar": "تساعد عملية التنعيم (Regularization) في حل مشكلة:",
+      "options": {
+        "a": "Underfitting",
+        "b": "Overfitting",
+        "c": "Data collection",
+        "d": "Matrix multiplication"
+      },
+      "correct_answer": "b",
+      "explanation": "Regularization penalizes large parameter values to prevent the model from overfitting."
+    },
+    {
+      "id": 62,
+      "question_en": "The parameter used to control the strength of regularization is:",
+      "question_ar": "المعامل المستخدم للتحكم في قوة التنعيم هو:",
+      "options": {
+        "a": "Alpha",
+        "b": "Theta",
+        "c": "Lambda",
+        "d": "Gamma"
+      },
+      "correct_answer": "c",
+      "explanation": "Lambda is the regularization parameter that balances fitting the data and keeping weights small."
+    },
+    {
+      "id": 63,
+      "question_en": "In the One-vs-All (OVA) method, for K classes, we train:",
+      "question_ar": "في طريقة 'الواحد ضد الجميع' (OVA)، لعدد K من الفئات، نقوم بتدريب:",
+      "options": {
+        "a": "1 classifier",
+        "b": "K classifiers",
+        "c": "K-1 classifiers",
+        "d": "0 classifiers"
+      },
+      "correct_answer": "b",
+      "explanation": "In OVA, we train one classifier for each class to distinguish it from all other classes."
+    },
+    {
+      "id": 64,
+      "question_en": "Which technique involves selecting only the most relevant features to prevent OF?",
+      "question_ar": "أي تقنية تتضمن اختيار الخصائص الأكثر أهمية فقط لمنع الضبط الزائد؟",
+      "options": {
+        "a": "Feature Selection / Data Selection",
+        "b": "Gradient Maximization",
+        "c": "Random Guessing",
+        "d": "Increasing Lambda to infinity"
+      },
+      "correct_answer": "a",
+      "explanation": "Feature selection reduces complexity by removing non-essential inputs."
+    },
+    {
+      "id": 65,
+      "question_en": "If we set Lambda to an extremely large value, what happens to the parameters?",
+      "question_ar": "إذا قمنا بضبط لمدا على قيمة كبيرة جداً، ماذا يحدث للمعاملات؟",
+      "options": {
+        "a": "They become very large",
+        "b": "They approach zero",
+        "c": "They stay the same",
+        "d": "They become negative"
+      },
+      "correct_answer": "b",
+      "explanation": "A very large Lambda heavily penalizes all parameters, forcing them to become very small (near zero)."
+    },
+    {
+      "id": 66,
+      "question_en": "In a Neural Network, which biological component inspired the inputs (x)?",
+      "question_ar": "في الشبكة العصبية، ما هو المكون البيولوجي الذي استوحيت منه المدخلات (x)؟",
+      "options": {
+        "a": "Nucleus (النواة)",
+        "b": "Dendrites (الزوائد الشجرية)",
+        "c": "Axon (المحور العصبي)",
+        "d": "Schwann cell (خلية شوان)"
+      },
+      "correct_answer": "b",
+      "explanation": "Dendrites are the receiving part of a biological neuron, analogous to the inputs (x) in an artificial neural network."
+    },
+    {
+      "id": 67,
+      "question_en": "What is the purpose of the Bias Unit in a Neural Network layer?",
+      "question_ar": "ما هو الغرض من وحدة الانحراف (Bias Unit) في طبقة الشبكة العصبية؟",
+      "options": {
+        "a": "It calculates the final error",
+        "b": "It is a constant input always set to 1 (x0 = 1)",
+        "c": "It removes missing values",
+        "d": "It multiplies all weights by zero"
+      },
+      "correct_answer": "b",
+      "explanation": "The bias unit (x0) is an extra input added to a layer, always equal to 1, which helps shift the activation function."
+    },
+    {
+      "id": 68,
+      "question_en": "In Neural Networks, 'Weights' (W or Theta) represent:",
+      "question_ar": "في الشبكات العصبية، 'الأوزان' (W أو Theta) تمثل:",
+      "options": {
+        "a": "The number of hidden layers",
+        "b": "The final output classification",
+        "c": "The parameters linking one layer's neurons to the next",
+        "d": "The amount of training data"
+      },
+      "correct_answer": "c",
+      "explanation": "Weights (Thetas) are the mathematical parameters that determine the strength of the connection between neurons across layers."
+    },
+    {
+      "id": 69,
+      "question_en": "Which mathematical function is commonly used in this lecture to calculate activation values?",
+      "question_ar": "ما هي الدالة الرياضية الشائعة الاستخدام في هذه المحاضرة لحساب قيم التنشيط؟",
+      "options": {
+        "a": "Polynomial Function",
+        "b": "Linear Regression",
+        "c": "Sigmoid Function",
+        "d": "Standard Deviation"
+      },
+      "correct_answer": "c",
+      "explanation": "The Sigmoid function, g(z), is used to calculate the activation values in the neurons."
+    },
+    {
+      "id": 70,
+      "question_en": "A Neural Network must have at least how many layers?",
+      "question_ar": "ما هو الحد الأدنى لعدد الطبقات في الشبكة العصبية؟",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3 (Input, Hidden, Output)",
+        "d": "10"
+      },
+      "correct_answer": "c",
+      "explanation": "A standard minimum neural network consists of 3 layers: an Input layer, at least one Hidden layer, and an Output layer."
+    },
+    {
+      "id": 71,
+      "question_en": "In the notation for Neural Networks, what does the superscript (top number) on Theta typically indicate?",
+      "question_ar": "في ترميز الشبكات العصبية، ماذا يشير الرقم العلوي (Superscript) على المعامل ثيتا عادةً؟",
+      "options": {
+        "a": "The layer number (رقم الطبقة)",
+        "b": "The neuron number (رقم الخلية)",
+        "c": "The iteration count (عدد التكرارات)",
+        "d": "The learning rate (معدل التعلم)"
+      },
+      "correct_answer": "a",
+      "explanation": "The superscript indicates the layer number from which the weights are originating."
+    },
+    {
+      "id": 72,
+      "question_en": "To mathematically implement an AND logical gate, the weight for Theta_0 (bias) should be:",
+      "question_ar": "لتطبيق البوابة المنطقية AND رياضياً، يجب أن يكون وزن ثيتا_0 (الانحراف):",
+      "options": {
+        "a": "A large positive number",
+        "b": "Zero",
+        "c": "A large negative number",
+        "d": "Equal to Theta_1"
+      },
+      "correct_answer": "c",
+      "explanation": "For an AND gate, Theta_0 is a large negative number (e.g., -30) so that the output is only positive when both x1 and x2 are 1."
+    },
+    {
+      "id": 73,
+      "question_en": "Which logical function requires ONLY ONE of its inputs to be 1 to output 1?",
+      "question_ar": "أي دالة منطقية تتطلب أن يكون أحد مدخلاتها فقط 1 لكي يكون المخرج 1؟",
+      "options": {
+        "a": "AND",
+        "b": "OR",
+        "c": "NAND",
+        "d": "XNOR"
+      },
+      "correct_answer": "b",
+      "explanation": "The OR gate outputs 1 if at least one of the inputs (x1 or x2) is 1."
+    },
+    {
+      "id": 74,
+      "question_en": "The NOT logical function:",
+      "question_ar": "الدالة المنطقية NOT:",
+      "options": {
+        "a": "Requires two inputs to compare",
+        "b": "Outputs the exact same value as the input",
+        "c": "Inverts the input value",
+        "d": "Always outputs 0"
+      },
+      "correct_answer": "c",
+      "explanation": "The NOT gate is an inverter; it outputs the opposite of the input value."
+    },
+    {
+      "id": 75,
+      "question_en": "To construct an XOR gate in a Neural Network, you typically combine:",
+      "question_ar": "لبناء بوابة XOR في شبكة عصبية، عادةً ما تقوم بدمج:",
+      "options": {
+        "a": "Only AND gates",
+        "b": "Only OR gates",
+        "c": "OR, NAND, and AND gates",
+        "d": "A single linear equation"
+      },
+      "correct_answer": "c",
+      "explanation": "XOR cannot be represented by a single standard logic gate's equation; it requires combining OR and NAND outputs into a final AND gate."
+    },
+    {
+      "id": 76,
+      "question_en": "If a Neural Network performs poorly on the 'Test Sample', it implies:",
+      "question_ar": "إذا كان أداء الشبكة العصبية ضعيفاً في 'عينة الاختبار'، فهذا يعني:",
+      "options": {
+        "a": "The model is perfect",
+        "b": "The training sample might have been too small or the algorithm inappropriate",
+        "c": "The CPU is too slow",
+        "d": "The input data is quantitative"
+      },
+      "correct_answer": "b",
+      "explanation": "Poor test performance indicates a failure to generalize, often due to insufficient training data or a poor algorithmic choice."
+    },
+    {
+      "id": 77,
+      "question_en": "What does 'Delta' represent in the context of Neural Networks?",
+      "question_ar": "ماذا تمثل 'دلتا' (Delta) في سياق الشبكات العصبية؟",
+      "options": {
+        "a": "The learning rate",
+        "b": "The error or difference between predicted and actual values",
+        "c": "The number of hidden layers",
+        "d": "The final probability"
+      },
+      "correct_answer": "b",
+      "explanation": "Delta represents the error for a specific element, calculating the difference between the prediction and the actual truth."
+    },
+    {
+      "id": 78,
+      "question_en": "Image processing in Neural Networks involves:",
+      "question_ar": "معالجة الصور في الشبكات العصبية تتضمن:",
+      "options": {
+        "a": "Converting pixels into large matrices of numbers",
+        "b": "Deleting all colors from the image",
+        "c": "Only analyzing images smaller than 10x10 pixels",
+        "d": "Using simple linear regression"
+      },
+      "correct_answer": "a",
+      "explanation": "Images are processed by converting each pixel's brightness (or RGB values) into a numerical matrix."
+    },
+    {
+      "id": 79,
+      "question_en": "Increasing the number of 'Hidden Layers' in a Neural Network:",
+      "question_ar": "زيادة عدد 'الطبقات الخفية' في الشبكة العصبية:",
+      "options": {
+        "a": "Decreases the model's accuracy",
+        "b": "Increases both the capability and the complexity of the network",
+        "c": "Turns it into traditional programming",
+        "d": "Removes the need for weights"
+      },
+      "correct_answer": "b",
+      "explanation": "More hidden layers allow the network to learn more complex patterns, but also increase computational complexity."
+    },
+    {
+      "id": 80,
+      "question_en": "In a biological context, the Neural Rewiring Experiment demonstrated that:",
+      "question_ar": "في السياق البيولوجي، أثبتت تجربة إعادة التوصيل العصبي أن:",
+      "options": {
+        "a": "The brain cannot process new information",
+        "b": "The brain can adapt and learn to process visual data through the auditory cortex",
+        "c": "Animals do not use neural networks",
+        "d": "Vision is entirely disconnected from the brain"
+      },
+      "correct_answer": "b",
+      "explanation": "The experiment showed that the auditory cortex could learn to 'see' when connected to optic nerves, proving the brain's adaptable learning ability."
+    },
+    {
+      "id": 81,
+      "question_en": "In Multi-class classification with K classes, the output layer should have:",
+      "question_ar": "في التصنيف متعدد الفئات (K classes)، يجب أن تحتوي طبقة المخرجات على:",
+      "options": {
+        "a": "1 output unit",
+        "b": "2 output units",
+        "c": "K output units",
+        "d": "K-1 output units"
+      },
+      "correct_answer": "c",
+      "explanation": "Each output unit represents the probability of one of the K classes."
+    },
+    {
+      "id": 82,
+      "question_en": "The 'Cost Function' in Neural Networks primarily measures:",
+      "question_ar": "دالة التكلفة في الشبكات العصبية تقيس بشكل أساسي:",
+      "options": {
+        "a": "The speed of the network",
+        "b": "The distance between predicted and actual values",
+        "c": "The number of hidden layers",
+        "d": "The size of the dataset"
+      },
+      "correct_answer": "b",
+      "explanation": "The cost function quantifies the error between the network's prediction and the true label."
+    },
+    {
+      "id": 83,
+      "question_en": "Which process involves calculating the output 'y' from inputs 'x' using current weights?",
+      "question_ar": "أي عملية تتضمن حساب المخرجات 'y' من المدخلات 'x' باستخدام الأوزان الحالية؟",
+      "options": {
+        "a": "Backpropagation",
+        "b": "Forward Propagation",
+        "c": "Gradient Checking",
+        "d": "Random Initialization"
+      },
+      "correct_answer": "b",
+      "explanation": "Forward propagation is the pass where inputs are transformed into a final prediction."
+    },
+    {
+      "id": 84,
+      "question_en": "In the weight notation, what does the superscript usually refer to?",
+      "question_ar": "في ترميز الأوزان، ماذا يشير الرقم العلوي عادةً؟",
+      "options": {
+        "a": "The neuron number",
+        "b": "The layer number",
+        "c": "The sample index",
+        "d": "The weight squared"
+      },
+      "correct_answer": "b",
+      "explanation": "Superscripts in Theta notation typically denote the layer level."
+    },
+    {
+      "id": 85,
+      "question_en": "Backpropagation is used specifically to:",
+      "question_ar": "يُستخدم المسار الخلفي (Backpropagation) خصيصاً لـ:",
+      "options": {
+        "a": "Initialize weights to zero",
+        "b": "Find the error (Delta) and its partial derivatives",
+        "c": "Increase the number of features",
+        "d": "Plot the decision boundary"
+      },
+      "correct_answer": "b",
+      "explanation": "Backpropagation calculates the gradients needed to update the weights."
+    },
+    {
+      "id": 86,
+      "question_en": "Why shouldn't weights be initialized to all zeros in a Neural Network?",
+      "question_ar": "لماذا لا ينبغي تهيئة الأوزان كلها بأصفار في الشبكة العصبية؟",
+      "options": {
+        "a": "The network becomes too fast",
+        "b": "It prevents symmetry breaking",
+        "c": "All neurons in a layer will learn the same thing",
+        "d": "It causes memory errors"
+      },
+      "correct_answer": "c",
+      "explanation": "Zero initialization leads to symmetry where all hidden units remain identical during training."
+    },
+    {
+      "id": 87,
+      "question_en": "The ideal range for Random Initialization of weights is typically:",
+      "question_ar": "النطاق المثالي للتهيئة العشوائية للأوزان يتراوح عادة بين:",
+      "options": {
+        "a": "[-100, 100]",
+        "b": "Small values near zero (e.g. [-0.01, 0.01])",
+        "c": "[0, 1]",
+        "d": "[10, 20]"
+      },
+      "correct_answer": "b",
+      "explanation": "Small random values break symmetry without causing slow optimization or divergence."
+    },
+    {
+      "id": 88,
+      "question_en": "Gradient Checking is performed to verify that:",
+      "question_ar": "يتم إجراء الفحص الاشتقاقي للتأكد من أن:",
+      "options": {
+        "a": "The dataset is clean",
+        "b": "The backpropagation implementation is bug-free",
+        "c": "The computer is fast enough",
+        "d": "The images are high resolution"
+      },
+      "correct_answer": "b",
+      "explanation": "It compares analytical gradients with numerical approximations to catch code errors."
+    },
+    {
+      "id": 89,
+      "question_en": "If the difference between Numerical and Analytical gradients is very small (e.g. < 1e-7):",
+      "question_ar": "إذا كان الفرق بين الاشتقاق العددي والتحليلي صغيراً جداً (مثلاً < 1e-7):",
+      "options": {
+        "a": "The network has a major bug",
+        "b": "The backpropagation implementation is likely correct",
+        "c": "You must increase the learning rate",
+        "d": "The bias unit is missing"
+      },
+      "correct_answer": "b",
+      "explanation": "A very small difference confirms that the derivation and code are correct."
+    },
+    {
+      "id": 90,
+      "question_en": "Which NN type is primarily used for image and video analysis?",
+      "question_ar": "أي نوع من الشبكات العصبية يستخدم بشكل أساسي لتحليل الصور والفيديو؟",
+      "options": {
+        "a": "RNN",
+        "b": "CNN (Convolutional)",
+        "c": "SOM",
+        "d": "RBF"
+      },
+      "correct_answer": "b",
+      "explanation": "CNNs are designed to process grid-like data such as pixels in images."
+    },
+    {
+      "id": 91,
+      "question_en": "Recurrent Neural Networks (RNN) are best suited for:",
+      "question_ar": "الشبكات العصبية المتكررة (RNN) هي الأنسب لـ:",
+      "options": {
+        "a": "Static image classification",
+        "b": "Text translation and sequences",
+        "c": "Calculating house prices",
+        "d": "Sorting matrices"
+      },
+      "correct_answer": "b",
+      "explanation": "RNNs handle sequential data where the order of information is critical."
+    },
+    {
+      "id": 92,
+      "question_en": "In the Backward Pass, the error of the output layer (Delta L) is calculated as:",
+      "question_ar": "في المسار الخلفي، يتم حساب خطأ الطبقة الأخيرة (Delta L) كـ:",
+      "options": {
+        "a": "Activation + y",
+        "b": "Activation - y",
+        "c": "Theta * x",
+        "d": "Sigmoid(z)"
+      },
+      "correct_answer": "b",
+      "explanation": "The output error is the difference between predicted activation and actual target value."
+    },
+    {
+      "id": 93,
+      "question_en": "Numerical Gradient is calculated using a small value called:",
+      "question_ar": "يتم حساب الاشتقاق العددي باستخدام قيمة صغيرة تسمى:",
+      "options": {
+        "a": "Alpha",
+        "b": "Lambda",
+        "c": "Epsilon",
+        "d": "Theta"
+      },
+      "correct_answer": "c",
+      "explanation": "Epsilon is the tiny offset used to approximate the derivative numerically."
+    },
+    {
+      "id": 94,
+      "question_en": "Which NN type is associated with Unsupervised Learning?",
+      "question_ar": "أي نوع من الشبكات العصبية يرتبط بالتعلم بدون إشراف؟",
+      "options": {
+        "a": "FNN",
+        "b": "CNN",
+        "c": "SOM (Self-Organizing Maps)",
+        "d": "MNN"
+      },
+      "correct_answer": "c",
+      "explanation": "SOMs are used to map high-dimensional data without explicit labels."
+    },
+    {
+      "id": 95,
+      "question_en": "The primary goal of the 'Update Step' in training is to:",
+      "question_ar": "الهدف الأساسي من 'خطوة التحديث' في التدريب هو:",
+      "options": {
+        "a": "Add more neurons",
+        "b": "Adjust weight values to minimize the cost function",
+        "c": "Delete the bias unit",
+        "d": "Save the dataset"
+      },
+      "correct_answer": "b",
+      "explanation": "Optimization updates the weights to move towards the global minimum of the error function."
     }
   ],
   "short_answer": [
@@ -1026,6 +1821,60 @@
       "question_en": "What is the difference between an Identity Matrix and a Zero Matrix?",
       "question_ar": "ما الفرق بين مصفوفة الوحدة ومصفوفة الصفر؟",
       "answer": "Identity matrix has ones on the diagonal, while zero matrix contains only zeros."
+    },
+    {
+      "id": 6,
+      "question_en": "Explain the main difference between Regression and Classification.",
+      "question_ar": "اشرح الفرق الرئيسي بين الانحدار والتصنيف.",
+      "answer": "Regression predicts continuous numerical values (e.g., house prices), while Classification predicts discrete categories or labels (e.g., Spam or Not Spam)."
+    },
+    {
+      "id": 7,
+      "question_en": "What is the primary role of the Sigmoid function in Logistic Regression?",
+      "question_ar": "ما هو الدور الأساسي لدالة السيجمويد في الانحدار اللوجستي؟",
+      "answer": "The Sigmoid function maps any input value into a range between 0 and 1, allowing the output to be interpreted as a probability."
+    },
+    {
+      "id": 8,
+      "question_en": "How does Regularization help in preventing Overfitting?",
+      "question_ar": "كيف تساعد عملية التنعيم (Regularization) في منع الضبط الزائد؟",
+      "answer": "Regularization adds a penalty term (Lambda) to the cost function, which discourages the model from assigning excessively large weights to features, thereby simplifying the model and improving generalization."
+    },
+    {
+      "id": 9,
+      "question_en": "Explain the concept of 'Hidden Layers' in a Neural Network.",
+      "question_ar": "اشرح مفهوم 'الطبقات الخفية' في الشبكة العصبية.",
+      "answer": "Hidden layers are the layers of neurons between the input and output layers. They receive inputs from the previous layer, apply weights and activation functions, and pass the results to the next layer. Increasing their number allows the network to learn more complex patterns."
+    },
+    {
+      "id": 10,
+      "question_en": "How are images processed as inputs in a Neural Network?",
+      "question_ar": "كيف يتم معالجة الصور كمدخلات في الشبكة العصبية؟",
+      "answer": "Images are converted into a matrix of numbers where each number represents a pixel's value (e.g., brightness or RGB channels). These matrices are then fed as inputs (features) into the neural network."
+    },
+    {
+      "id": 11,
+      "question_en": "Briefly describe the Neural Rewiring Experiment and its significance to Neural Networks.",
+      "question_ar": "صف باختصار تجربة إعادة التوصيل العصبي وأهميتها بالنسبة للشبكات العصبية.",
+      "answer": "The experiment connected optic nerves to the brain's auditory cortex, showing that the animal could still 'see'. This demonstrated the brain's ability to learn and adapt to new input types, inspiring the adaptable, data-driven learning architecture of Artificial Neural Networks."
+    },
+    {
+      "id": 12,
+      "question_en": "Why is it necessary to perform 'Gradient Checking' during the development of a Neural Network?",
+      "question_ar": "لماذا من الضروري إجراء 'الفحص الاشتقاقي' أثناء تطوير الشبكة العصبية؟",
+      "answer": "Neural Networks often have hidden bugs that allow the code to run but produce inaccurate results. Gradient checking compares the Analytical gradient (from backpropagation) with a Numerical gradient approximation to ensure the mathematical implementation is correct."
+    },
+    {
+      "id": 13,
+      "question_en": "Explain the difference between Forward Propagation and Backward Propagation in the training cycle.",
+      "question_ar": "اشرح الفرق بين المسار الأمامي والمسار الخلفي في دورة التدريب.",
+      "answer": "Forward Propagation passes input data through the layers to generate a prediction (output). Backward Propagation calculates the error between that prediction and the true label, then propagates that error backward through the layers to determine how to adjust the weights."
+    },
+    {
+      "id": 14,
+      "question_en": "What is the consequence of using 'Zero Initialization' for all weights in a Neural Network?",
+      "question_ar": "ما هي نتيجة استخدام 'التهيئة الصفرية' لجميع الأوزان في الشبكة العصبية؟",
+      "answer": "If all weights start at zero, all hidden units in a layer will calculate the exact same activation and error values. This results in 'symmetry' where all neurons learn identical features, effectively making multiple neurons behave like a single one and preventing the network from learning complex patterns."
     }
   ],
   "code": [
@@ -1350,6 +2199,111 @@
       "id": 48,
       "question": "In multivariable regression, the hypothesis includes multiple ____ parameters.",
       "answer": "theta"
+    },
+    {
+      "id": 49,
+      "question": "The mathematical function used to map input values to probabilities in Logistic Regression is the ______ function.",
+      "answer": "Sigmoid"
+    },
+    {
+      "id": 50,
+      "question": "When y belongs to {0, 1, 2, 3}, this is called ______ classification.",
+      "answer": "multi-class"
+    },
+    {
+      "id": 51,
+      "question": "The line (or surface) that separates different classes in a dataset is called the ______ Boundary.",
+      "answer": "Decision"
+    },
+    {
+      "id": 52,
+      "question": "A model with 'High Bias' is likely suffering from ______.",
+      "answer": "underfitting"
+    },
+    {
+      "id": 53,
+      "question": "The technique of adding a penalty term to the cost function is called ______.",
+      "answer": "regularization"
+    },
+    {
+      "id": 54,
+      "question": "In the cost function for y=1, as h(x) approaches 0, the cost approaches ______.",
+      "answer": "infinity"
+    },
+    {
+      "id": 55,
+      "question": "To handle Overfitting without removing features, we can use ______.",
+      "answer": "regularization"
+    },
+    {
+      "id": 56,
+      "question": "In a biological neuron, the ______ act as the inputs to the cell.",
+      "answer": "dendrites"
+    },
+    {
+      "id": 57,
+      "question": "The layers between the input and output layers in an ANN are called ______ layers.",
+      "answer": "hidden"
+    },
+    {
+      "id": 58,
+      "question": "The constant input added to a neural network layer, usually equal to 1, is called the ______ unit.",
+      "answer": "bias"
+    },
+    {
+      "id": 59,
+      "question": "The mathematical function used to calculate the activation value (a) is the ______ function.",
+      "answer": "Sigmoid"
+    },
+    {
+      "id": 60,
+      "question": "The logical ______ gate outputs 1 only if BOTH inputs are 1.",
+      "answer": "AND"
+    },
+    {
+      "id": 61,
+      "question": "The difference between the predicted value and the actual value in a neural network is represented by the symbol ______.",
+      "answer": "Delta"
+    },
+    {
+      "id": 62,
+      "question": "In the mathematical notation of a neural network, the superscript number on Theta indicates the ______ number.",
+      "answer": "layer"
+    },
+    {
+      "id": 63,
+      "question": "The process of calculating errors from the output layer back to the input layer is called ______.",
+      "answer": "Backpropagation"
+    },
+    {
+      "id": 64,
+      "question": "To ensure all neurons learn different features, we use ______ initialization of weights.",
+      "answer": "random"
+    },
+    {
+      "id": 65,
+      "question": "The small value added/subtracted to calculate the Numerical Gradient is ______.",
+      "answer": "Epsilon"
+    },
+    {
+      "id": 66,
+      "question": "______ Neural Networks are the standard choice for face recognition and medical image analysis.",
+      "answer": "CNN"
+    },
+    {
+      "id": 67,
+      "question": "If a Neural Network has only one output unit, it is usually performing ______ classification.",
+      "answer": "binary"
+    },
+    {
+      "id": 68,
+      "question": "The final step in the NN training cycle after backpropagation is the ______ of weights.",
+      "answer": "update"
+    },
+    {
+      "id": 69,
+      "question": "______ Neural Networks are used for tasks where the sequence of data matters, like translation.",
+      "answer": "RNN"
     }
   ]
 }
