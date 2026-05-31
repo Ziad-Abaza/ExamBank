@@ -1027,10 +1027,125 @@
       "details": "أساسية في التعلم الموجّه."
     },
     {
-      "term": "Production Environment",
-      "translation_ar": "بيئة الإنتاج",
-      "definition": "البيئة الحقيقية التي يُنشر فيها النموذج للاستخدام الفعلي.",
-      "details": "المرحلة الأخيرة بعد بناء وتقييم النموذج."
+      "term": "Sigmoid Function",
+      "translation_ar": "دالة السيجمويد",
+      "definition": "A mathematical function used to map real-valued numbers to a range between 0 and 1.",
+      "details": "Simplified: A tool that squashes any number into a probability-like percentage. Context: Activation function in Logistic Regression and ANNs."
+    },
+    {
+      "term": "Decision Boundary",
+      "translation_ar": "حد القرار",
+      "definition": "The surface or line that partitions the feature space into different classes.",
+      "details": "Simplified: The 'border' that separates one category from another on a graph. Context: Classification models."
+    },
+    {
+      "term": "Convex Function",
+      "translation_ar": "دالة محدبة",
+      "definition": "A function where any local minimum is also the global minimum, resembling a bowl shape.",
+      "details": "Simplified: A shape that has only one bottom point, making it easy for AI to find the best answer. Context: Optimization and Cost Functions."
+    },
+    {
+      "term": "One-vs-All (OVA)",
+      "translation_ar": "الواحد ضد الجميع",
+      "definition": "A strategy for multi-class classification that trains a single binary classifier for each class.",
+      "details": "Simplified: Picking one category and comparing it against 'everything else' repeatedly. Context: Multi-class classification."
+    },
+    {
+      "term": "Regularization",
+      "translation_ar": "التنعيم / المعايرة",
+      "definition": "A technique that adds a penalty term to the cost function to prevent overfitting by keeping weights small.",
+      "details": "Simplified: A rule that stops the AI from becoming too complex or 'memorizing' the data. Context: Model optimization."
+    },
+    {
+      "term": "Lambda (λ)",
+      "translation_ar": "لمدا",
+      "definition": "The regularization parameter that controls the trade-off between fitting the data and keeping the weights small.",
+      "details": "Simplified: A dial that determines how much we want to simplify the model. Context: Cost functions with regularization."
+    },
+    {
+      "term": "Feature Selection",
+      "translation_ar": "انتقاء الخصائص",
+      "definition": "The process of selecting a subset of relevant features for use in model construction.",
+      "details": "Simplified: Choosing only the most important information and throwing away the rest to avoid confusion. Context: Preventing overfitting."
+    },
+    {
+      "term": "Dendrites",
+      "translation_ar": "الزوائد الشجرية",
+      "definition": "The part of a biological neuron that receives signals from other neurons.",
+      "details": "Simplified: The 'ears' of the brain cell that listen for incoming data. Context: Inspiration for ANN inputs (x)."
+    },
+    {
+      "term": "Bias Unit",
+      "translation_ar": "وحدة الانحراف",
+      "definition": "An extra input added to a neural network layer that is always set to 1 (x0 = 1).",
+      "details": "Simplified: A constant 'starting point' that helps the model adjust its predictions more flexibly. Context: Neural Network architecture."
+    },
+    {
+      "term": "Activation Value (a)",
+      "translation_ar": "قيمة التنشيط",
+      "definition": "The output of a specific neuron after the activation function has been applied.",
+      "details": "Simplified: The final signal sent out by a brain cell after it processes its inputs. Context: Layer-by-layer computation in ANNs."
+    },
+    {
+      "term": "Hidden Layer",
+      "translation_ar": "الطبقة الخفية",
+      "definition": "A layer of neurons between the input and output layers that performs intermediate computations.",
+      "details": "Simplified: The 'middle engine' of the AI where it does the hard thinking. Context: Multi-layer Neural Networks."
+    },
+    {
+      "term": "Backpropagation",
+      "translation_ar": "المسار الخلفي",
+      "definition": "The process of calculating the gradient of the error from the output layer back to the input layer.",
+      "details": "Simplified: Working backward from a mistake to figure out which part of the brain was wrong. Context: Training Neural Networks."
+    },
+    {
+      "term": "Forward Propagation",
+      "translation_ar": "المسار الأمامي",
+      "definition": "The process where input data is passed through the network layers to produce a final output.",
+      "details": "Simplified: The journey of information from the 'eyes' to the 'final decision'. Context: Inference and training iterations."
+    },
+    {
+      "term": "Gradient Checking",
+      "translation_ar": "الفحص الاشتقاقي",
+      "definition": "A debugging technique used to verify the correctness of the analytical gradients calculated by backpropagation.",
+      "details": "Simplified: Double-checking the AI's math using a slower but more reliable method. Context: Development and debugging of NNs."
+    },
+    {
+      "term": "Epsilon (ε)",
+      "translation_ar": "ابسلون",
+      "definition": "A very small numerical value used to approximate the derivative in numerical gradient checking.",
+      "details": "Simplified: A tiny nudge used to see how much the answer changes. Context: Numerical approximation of gradients."
+    },
+    {
+      "term": "CNN (Convolutional Neural Network)",
+      "translation_ar": "الشبكات العصبية الملتفة",
+      "definition": "A type of deep neural network primarily used for analyzing visual imagery.",
+      "details": "Simplified: An AI specifically built to 'see' and understand pictures and videos. Context: Image recognition and medical scans."
+    },
+    {
+      "term": "RNN (Recurrent Neural Network)",
+      "translation_ar": "الشبكات العصبية المتكررة",
+      "definition": "A type of neural network where connections form a directed graph along a temporal sequence.",
+      "details": "Simplified: An AI that has a memory of what happened before, perfect for understanding language or music. Context: Natural Language Processing (NLP)."
+    },
+    {
+      "term": "Symmetry Breaking",
+      "translation_ar": "كسر التماثل",
+      "definition": "The process of initializing weights randomly so that different neurons in the same layer learn different features.",
+      "details": "Simplified: Making sure every brain cell starts slightly differently so they don't all learn the same thing. Context: Random Initialization of weights."
+    },
+    {
+      "term": "Global Minimum",
+      "translation_ar": "النهاية الصغرى العالمية",
+      "definition": "The absolute lowest point of the cost function, representing the best possible model parameters.",
+      "details": "Simplified: The perfect answer where the AI makes the fewest possible mistakes. Context: Optimization goals."
+    },
+    {
+      "term": "Delta (Δ)",
+      "translation_ar": "دلتا",
+      "definition": "The calculated error of a specific neuron or layer in a neural network.",
+      "details": "Simplified: A measurement of 'how wrong' a specific part of the network is. Context: Backpropagation calculations."
     }
   ]
 }
+
