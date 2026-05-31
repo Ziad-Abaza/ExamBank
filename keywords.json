@@ -1145,6 +1145,312 @@
       "translation_ar": "دلتا",
       "definition": "The calculated error of a specific neuron or layer in a neural network.",
       "details": "Simplified: A measurement of 'how wrong' a specific part of the network is. Context: Backpropagation calculations."
+    },
+    {
+      "term": "Consist of",
+      "translation_ar": "يتكون من",
+      "definition": "To be made up of or composed of specific parts.",
+      "details": "Simplified: To have different parts inside it. Example: A network consists of layers."
+    },
+    {
+      "term": "Often",
+      "translation_ar": "غالباً",
+      "definition": "Frequently or many times; a common occurrence.",
+      "details": "Simplified: Something that happens many times or is very common."
+    },
+    {
+      "term": "Biological",
+      "translation_ar": "بيولوجي / حيوي",
+      "definition": "Relating to living organisms and their physiological processes.",
+      "details": "Simplified: Something that is part of a living thing like a human or animal. Example: A biological brain."
+    },
+    {
+      "term": "Identical",
+      "translation_ar": "متطابق",
+      "definition": "Exactly the same in every detail; being one and the same.",
+      "details": "Simplified: Two things that are exactly the same with no differences."
+    },
+    {
+      "term": "Involve",
+      "translation_ar": "يتضمن / يشمل",
+      "definition": "To include or contain as a necessary part or result.",
+      "details": "Simplified: To have something as a part of an activity or process."
+    },
+    {
+      "term": "Calculate",
+      "translation_ar": "يحسب",
+      "definition": "To determine a mathematical result using numbers or logic.",
+      "details": "Simplified: To do math to find an answer."
+    },
+    {
+      "term": "Represent",
+      "translation_ar": "يمثل",
+      "definition": "To stand for or symbolize something else.",
+      "details": "Simplified: To be a sign or a symbol for something. Example: x represents the input."
+    },
+    {
+      "term": "Primary",
+      "translation_ar": "أساسي / أولي",
+      "definition": "Of first importance; principal or main.",
+      "details": "Simplified: The most important or the first thing."
+    },
+    {
+      "term": "Significance",
+      "translation_ar": "أهمية / مغزى",
+      "definition": "The quality of being worthy of attention; importance.",
+      "details": "Simplified: Why something is important or special."
+    },
+    {
+      "term": "ReLU (Rectified Linear Unit)",
+      "translation_ar": "وحدة خطية تصحيحية",
+      "definition": "A common activation function that outputs the input directly if it is positive, and zero otherwise.",
+      "details": "Simplified: A simple rule that lets positive signals pass through but stops negative ones. Context: CNNs and deep networks."
+    },
+    {
+      "term": "MNN (Modular Neural Network)",
+      "translation_ar": "الشبكات العصبية الوحدة",
+      "definition": "A network architecture consisting of several independent neural networks working in parallel.",
+      "details": "Simplified: A group of small AI brains working together to solve a big problem. Context: Complex architecture types."
+    },
+    {
+      "term": "Theta_0",
+      "translation_ar": "ثيتا صفر",
+      "definition": "The bias weight parameter in a hypothesis function.",
+      "details": "Simplified: The specific weight that controls the 'starting point' or bias of the prediction. Context: Linear and Logistic Regression."
+    },
+    {
+      "term": "Logical Gate",
+      "translation_ar": "بوابة منطقية",
+      "definition": "A basic building block of a digital circuit or algorithm that performs a logical operation (AND, OR, NOT).",
+      "details": "Simplified: A simple 'switch' that follows rules to give an answer (Yes/No). Context: Neural Network logic modeling."
+    },
+    {
+      "term": "Inspired by",
+      "translation_ar": "مستوحى من",
+      "definition": "To be given an idea or influence from a specific source.",
+      "details": "Simplified: To get a new idea from looking at something else. Example: ANNs are inspired by the brain."
+    },
+    {
+      "term": "Analogous to",
+      "translation_ar": "مشابه لـ / مناظر لـ",
+      "definition": "Comparable in certain respects, typically in a way which makes clearer the nature of the things compared.",
+      "details": "Simplified: Being very similar to something else in the way it works."
+    },
+    {
+      "term": "Originate from",
+      "translation_ar": "ينبع من / ينشأ من",
+      "definition": "To have a specified beginning or starting point.",
+      "details": "Simplified: To start or come from a specific place or thing."
+    },
+    {
+      "term": "Generalize",
+      "translation_ar": "يعمم",
+      "definition": "The ability of a model to perform well on new, unseen data rather than just the training data.",
+      "details": "Simplified: To take what you learned in school and use it correctly in the real world."
+    },
+    {
+      "term": "Numerical",
+      "translation_ar": "عددي",
+      "definition": "Relating to or expressed as a number or numbers.",
+      "details": "Simplified: Anything that uses numbers instead of words."
+    },
+    {
+      "term": "Analytical",
+      "translation_ar": "تحليلي",
+      "definition": "Using logical reasoning or mathematical derivation to find a solution.",
+      "details": "Simplified: Using math rules and logic to find an exact answer."
+    },
+    {
+      "term": "Bug-free",
+      "translation_ar": "خالٍ من الأخطاء",
+      "definition": "Referring to software or code that contains no errors or 'bugs'.",
+      "details": "Simplified: Code that works perfectly without any hidden mistakes."
+    },
+    {
+      "term": "Sequential",
+      "translation_ar": "متسلسل",
+      "definition": "Forming or following in a logical order or sequence.",
+      "details": "Simplified: Things that happen one after another in a specific order."
+    },
+    {
+      "term": "Temporal",
+      "translation_ar": "زمني",
+      "definition": "Relating to time or the passage of time.",
+      "details": "Simplified: Something that is related to time or history."
+    },
+    {
+      "term": "Initialization",
+      "translation_ar": "تهيئة",
+      "definition": "The process of setting starting values for variables or parameters.",
+      "details": "Simplified: Giving the AI its first set of values before it starts learning."
+    },
+    {
+      "term": "Squash",
+      "translation_ar": "يعتصر / يضغط",
+      "definition": "To squeeze or press something into a smaller space or range.",
+      "details": "Simplified: To force a large range of numbers into a very small range like 0 to 1."
+    },
+    {
+      "term": "Partition",
+      "translation_ar": "يقسم / يجزئ",
+      "definition": "To divide into parts or sections.",
+      "details": "Simplified: To split a large area into smaller rooms or sections."
+    },
+    {
+      "term": "Threshold",
+      "translation_ar": "عتبة / حد أدنى",
+      "definition": "The magnitude or intensity that must be exceeded for a certain reaction or result to occur.",
+      "details": "Simplified: The 'border line' where a change happens. Example: 0.5 is the threshold for y=1."
+    },
+    {
+      "term": "Standard",
+      "translation_ar": "قياسي / معيار",
+      "definition": "Used or accepted as normal or average.",
+      "details": "Simplified: The normal way that everyone agrees on."
+    },
+    {
+      "term": "Strategy",
+      "translation_ar": "استراتيجية / خطة",
+      "definition": "A plan of action designed to achieve a long-term or overall aim.",
+      "details": "Simplified: A smart plan to reach a goal."
+    },
+    {
+      "term": "Capture",
+      "translation_ar": "يلتقط / يستوعب",
+      "definition": "To record or represent accurately.",
+      "details": "Simplified: To find and hold onto an important pattern."
+    },
+    {
+      "term": "Penalty",
+      "translation_ar": "عقوبة / جزاء",
+      "definition": "A punishment imposed for breaking a rule or for an error.",
+      "details": "Simplified: A negative score given when something goes wrong."
+    },
+    {
+      "term": "Trade-off",
+      "translation_ar": "مقايضة",
+      "definition": "A balance achieved between two desirable but incompatible features.",
+      "details": "Simplified: Giving up a little bit of one thing to get more of another thing."
+    },
+    {
+      "term": "Relevant",
+      "translation_ar": "ذو صلة / مهم",
+      "definition": "Closely connected or appropriate to the matter at hand.",
+      "details": "Simplified: Something that actually matters for the problem you are solving."
+    },
+    {
+      "term": "Mimic",
+      "translation_ar": "يحاكي",
+      "definition": "To imitate or copy the behavior or appearance of something else.",
+      "details": "Simplified: To act exactly like something else to learn from it."
+    },
+    {
+      "term": "Constant",
+      "translation_ar": "ثابت",
+      "definition": "A situation or value that does not change.",
+      "details": "Simplified: Something that stays the same all the time."
+    },
+    {
+      "term": "Inverter",
+      "translation_ar": "عاكس",
+      "definition": "A device or logic gate that reverses the input signal.",
+      "details": "Simplified: A switch that turns 'Yes' into 'No' and 'No' into 'Yes'."
+    },
+    {
+      "term": "Grid",
+      "translation_ar": "شبكة / مربعات",
+      "definition": "A network of lines that cross each other to form a series of squares or rectangles.",
+      "details": "Simplified: A pattern of squares like a chess board or a graph."
+    },
+    {
+      "term": "Intensity",
+      "translation_ar": "كثافة / قوة",
+      "definition": "The measurable amount of a property, such as brightness or force.",
+      "details": "Simplified: How strong or bright something is."
+    },
+    {
+      "term": "Adapt",
+      "translation_ar": "يتكيف",
+      "definition": "To become adjusted to new conditions.",
+      "details": "Simplified: To change yourself so you can work better in a new situation."
+    },
+    {
+      "term": "Rewiring",
+      "translation_ar": "إعادة توصيل",
+      "definition": "The process of changing the electrical or neural connections in a system.",
+      "details": "Simplified: Changing the way things are connected to each other."
+    },
+    {
+      "term": "Offset",
+      "translation_ar": "إزاحة / تعويض",
+      "definition": "A small amount or distance by which something is out of line.",
+      "details": "Simplified: A tiny change in position to help find an answer."
+    },
+    {
+      "term": "Several independent",
+      "translation_ar": "عدة (أجزاء) مستقلة",
+      "definition": "Referring to multiple parts that function on their own without relying on each other.",
+      "details": "Simplified: Many separate things working at the same time but not touching. Context: Modular Neural Networks."
+    },
+    {
+      "term": "Parallel",
+      "translation_ar": "موازي / بالتوازي",
+      "definition": "Occurring or existing at the same time or in a similar way.",
+      "details": "Simplified: Doing many things at the exact same time instead of one after another. Context: Parallel computing in GPUs/MNNs."
+    },
+    {
+      "term": "Modular",
+      "translation_ar": "وحداتي / مركّب من وحدات",
+      "definition": "Consisting of separate modules that can be connected together.",
+      "details": "Simplified: Built like Lego blocks, where you can combine different parts to make a big system."
+    },
+    {
+      "term": "Pooling",
+      "translation_ar": "تجميع / اختزال",
+      "definition": "A layer in CNNs used to reduce the spatial size of the representation.",
+      "details": "Simplified: Shrinking a big picture into a smaller summary while keeping the important parts. Context: CNN architecture."
+    },
+    {
+      "term": "Balanced",
+      "translation_ar": "متوازن",
+      "definition": "A state where different elements are in the correct proportions.",
+      "details": "Simplified: A model that is not too simple and not too complex; it's just right. Context: Underfitting vs Overfitting."
+    },
+    {
+      "term": "General trend",
+      "translation_ar": "الاتجاه العام",
+      "definition": "The overall direction or pattern in which something is changing or developing.",
+      "details": "Simplified: The 'big picture' pattern in the data, ignoring the small mistakes or noise."
+    },
+    {
+      "term": "Preferred",
+      "translation_ar": "مفضل",
+      "definition": "Liked or wanted more than something else; chosen as the best option.",
+      "details": "Simplified: The better choice when you have two or more options."
+    },
+    {
+      "term": "Associated with",
+      "translation_ar": "مرتبط بـ",
+      "definition": "Connected with something else in thought or action.",
+      "details": "Simplified: Two things that always go together or are related to each other."
+    },
+    {
+      "term": "Delta L (δL)",
+      "translation_ar": "دلتا الطبقة الأخيرة",
+      "definition": "The error calculated specifically for the final output layer of a neural network.",
+      "details": "Simplified: The measurement of how wrong the final answer was. Context: Backpropagation."
+    },
+    {
+      "term": "Backward Pass",
+      "translation_ar": "المسار الخلفي",
+      "definition": "The phase in training where errors are sent back through the network to update weights.",
+      "details": "Simplified: The 'learning from mistakes' step where the AI goes backward to fix itself. Context: Training NNs."
+    },
+    {
+      "term": "Best suited",
+      "translation_ar": "الأنسب / الأكثر ملاءمة",
+      "definition": "Most appropriate or right for a particular purpose or situation.",
+      "details": "Simplified: The perfect tool or method for a specific job."
     }
   ]
 }
