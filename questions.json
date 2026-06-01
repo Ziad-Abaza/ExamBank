@@ -2127,7 +2127,7 @@
     },
     {
       "id": 34,
-      "question": "What is the name of the error term, denoted by \u03b4 (Delta), which measures the difference between activation and target values during backpropagation?",
+      "question": "What is the name of the error term, denoted by δ (Delta), which measures the difference between activation and target values during backpropagation?",
       "answer": "Layer error"
     },
     {
