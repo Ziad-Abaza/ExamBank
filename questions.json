@@ -209,6 +209,76 @@
       "question_ar": "هل ETL يقوم بالتحميل أولًا؟",
       "answer": false,
       "explanation": "ETL stands for Extract, Transform, Load."
+    },
+    {
+      "id": 31,
+      "question_en": "Batch processing handles data in large chunks collected over time.",
+      "question_ar": "هل المعالجة الدفعية تتعامل مع البيانات على شكل دفعات كبيرة يتم جمعها مع مرور الوقت؟",
+      "answer": true,
+      "explanation": "Batch processing collects data over a period and processes it in large groups."
+    },
+    {
+      "id": 32,
+      "question_en": "Streaming processing handles data in real time as it arrives.",
+      "question_ar": "هل المعالجة اللحظية تتعامل مع البيانات فور وصولها؟",
+      "answer": true,
+      "explanation": "Streaming systems process data continuously as it is generated."
+    },
+    {
+      "id": 33,
+      "question_en": "Apache Kafka can be used for real-time data ingestion.",
+      "question_ar": "هل يمكن استخدام Apache Kafka لإدخال البيانات في الوقت الحقيقي؟",
+      "answer": true,
+      "explanation": "Kafka is a popular platform for streaming and real-time data ingestion."
+    },
+    {
+      "id": 34,
+      "question_en": "Apache Flume is mainly used for dashboard visualization.",
+      "question_ar": "هل Apache Flume يستخدم أساسًا لعرض لوحات المعلومات؟",
+      "answer": false,
+      "explanation": "Flume is used for data ingestion, not visualization."
+    },
+    {
+      "id": 35,
+      "question_en": "Data warehouses are optimized for analytical queries.",
+      "question_ar": "هل مستودعات البيانات مُحسّنة للاستعلامات التحليلية؟",
+      "answer": true,
+      "explanation": "Data warehouses are designed to support analytics and reporting workloads."
+    },
+    {
+      "id": 36,
+      "question_en": "Cloud object storage is less scalable than local storage.",
+      "question_ar": "هل التخزين الكائني السحابي أقل قابلية للتوسع من التخزين المحلي؟",
+      "answer": false,
+      "explanation": "Cloud object storage is highly scalable and can handle massive data growth."
+    },
+    {
+      "id": 37,
+      "question_en": "Stateless services simplify horizontal scaling.",
+      "question_ar": "هل الخدمات عديمة الحالة تسهل التوسع الأفقي؟",
+      "answer": true,
+      "explanation": "Stateless services can be replicated easily because they do not store session state locally."
+    },
+    {
+      "id": 38,
+      "question_en": "Geo-replication helps systems recover from regional failures.",
+      "question_ar": "هل النسخ الجغرافي يساعد الأنظمة على التعافي من الأعطال الإقليمية؟",
+      "answer": true,
+      "explanation": "Geo-replication keeps copies of data across regions to improve disaster recovery."
+    },
+    {
+      "id": 39,
+      "question_en": "Autoscaling automatically adjusts system resources based on workload.",
+      "question_ar": "هل التوسع التلقائي يعدل الموارد تلقائيًا حسب الحمل؟",
+      "answer": true,
+      "explanation": "Autoscaling increases or decreases resources according to demand."
+    },
+    {
+      "id": 40,
+      "question_en": "Monitoring tools are unnecessary if replication is implemented.",
+      "question_ar": "هل أدوات المراقبة غير ضرورية عند تطبيق النسخ المتماثل؟",
+      "answer": false,
+      "explanation": "Monitoring remains essential for detecting failures, performance issues, and system health."
     }
   ],
   "mcq": [
@@ -536,6 +606,136 @@
       },
       "correct_answer": "c",
       "explanation": "Scatter matrix visualizes relationships among multiple variables."
+    },
+    {
+      "id": 26,
+      "question_en": "Which layer performs machine learning model development?",
+      "question_ar": "أي طبقة تقوم بتطوير نماذج تعلم الآلة؟",
+      "options": {
+        "a": "Storage",
+        "b": "Analytics",
+        "c": "Ingestion",
+        "d": "Replication"
+      },
+      "correct_answer": "b",
+      "explanation": "The analytics layer is responsible for data analysis, reporting, and machine learning."
+    },
+    {
+      "id": 27,
+      "question_en": "Which is an example of NoSQL storage?",
+      "question_ar": "أي مما يلي مثال على تخزين NoSQL؟",
+      "options": {
+        "a": "MySQL",
+        "b": "MongoDB",
+        "c": "Excel",
+        "d": "PowerPoint"
+      },
+      "correct_answer": "b",
+      "explanation": "MongoDB is a document-oriented NoSQL database."
+    },
+    {
+      "id": 28,
+      "question_en": "ETL stands for:",
+      "question_ar": "ماذا تعني ETL؟",
+      "options": {
+        "a": "Extract Transform Load",
+        "b": "Enter Transfer Log",
+        "c": "Execute Test Load",
+        "d": "Export Table Link"
+      },
+      "correct_answer": "a",
+      "explanation": "ETL stands for Extract, Transform, and Load."
+    },
+    {
+      "id": 29,
+      "question_en": "Sharding distributes data based on:",
+      "question_ar": "بماذا يعتمد تقسيم البيانات (Sharding)؟",
+      "options": {
+        "a": "Encryption",
+        "b": "Partition keys",
+        "c": "Monitoring",
+        "d": "Logging"
+      },
+      "correct_answer": "b",
+      "explanation": "Sharding uses partition keys to distribute data across multiple nodes."
+    },
+    {
+      "id": 30,
+      "question_en": "Synchronous replication ensures:",
+      "question_ar": "ماذا يضمن النسخ المتماثل المتزامن؟",
+      "options": {
+        "a": "Faster writes with possible data loss",
+        "b": "Data consistency before acknowledgment",
+        "c": "No network traffic",
+        "d": "No replication"
+      },
+      "correct_answer": "b",
+      "explanation": "Synchronous replication confirms data is written to replicas before acknowledging success."
+    },
+    {
+      "id": 31,
+      "question_en": "A Data Lake stores:",
+      "question_ar": "ماذا يخزن Data Lake؟",
+      "options": {
+        "a": "Only structured data",
+        "b": "Structured and unstructured data",
+        "c": "Only text files",
+        "d": "Only relational tables"
+      },
+      "correct_answer": "b",
+      "explanation": "Data lakes can store structured, semi-structured, and unstructured data."
+    },
+    {
+      "id": 32,
+      "question_en": "High availability reduces:",
+      "question_ar": "ماذا يقلل التوفر العالي؟",
+      "options": {
+        "a": "System uptime",
+        "b": "System cost",
+        "c": "Downtime",
+        "d": "Storage size"
+      },
+      "correct_answer": "c",
+      "explanation": "High availability minimizes service interruptions and downtime."
+    },
+    {
+      "id": 33,
+      "question_en": "Which tool is used for monitoring metrics?",
+      "question_ar": "أي أداة تستخدم لمراقبة المقاييس؟",
+      "options": {
+        "a": "Prometheus",
+        "b": "Kafka",
+        "c": "Flume",
+        "d": "Hadoop"
+      },
+      "correct_answer": "a",
+      "explanation": "Prometheus is widely used for metrics collection and monitoring."
+    },
+    {
+      "id": 34,
+      "question_en": "ELT is common in:",
+      "question_ar": "أين يُستخدم ELT بشكل شائع؟",
+      "options": {
+        "a": "Traditional small systems",
+        "b": "Modern cloud architectures",
+        "c": "Manual processing",
+        "d": "Offline storage"
+      },
+      "correct_answer": "b",
+      "explanation": "ELT is commonly used in modern cloud-based data platforms."
+    },
+    {
+      "id": 35,
+      "question_en": "Backup & restore mechanisms are part of:",
+      "question_ar": "تندرج آليات النسخ الاحتياطي والاستعادة ضمن:",
+      "options": {
+        "a": "Ingestion",
+        "b": "High availability",
+        "c": "Data entry",
+        "d": "Visualization"
+      },
+      "correct_answer": "b",
+      "explanation": "Backup and restore are key components of high availability and disaster recovery strategies."
     }
   ],
   "short_answer": [
@@ -568,6 +768,60 @@
       "question_en": "Explain the difference between univariate and multivariate plots.",
       "question_ar": "اشرح الفرق بين الرسوم أحادية المتغير ومتعددة المتغيرات.",
       "answer": "Univariate plots analyze a single variable, while multivariate plots analyze relationships between two or more variables."
+    },
+    {
+      "id": 6,
+      "question_en": "Define scalability in Big Data systems.",
+      "question_ar": "عرّف قابلية التوسع في أنظمة البيانات الضخمة.",
+      "answer": "Scalability is the ability of a system to handle increasing amounts of data, users, or workload by adding resources without significantly affecting performance."
+    },
+    {
+      "id": 7,
+      "question_en": "Explain the difference between batch and stream processing.",
+      "question_ar": "اشرح الفرق بين المعالجة الدفعية والمعالجة اللحظية.",
+      "answer": "Batch processing handles large amounts of collected data at scheduled intervals, while stream processing handles data continuously in real time as it arrives."
+    },
+    {
+      "id": 8,
+      "question_en": "What is the role of autoscaling?",
+      "question_ar": "ما دور التوسع التلقائي (Autoscaling)؟",
+      "answer": "Autoscaling automatically increases or decreases computing resources based on workload demand to maintain performance and optimize resource usage."
+    },
+    {
+      "id": 9,
+      "question_en": "Explain one benefit of geo-replication.",
+      "question_ar": "اشرح إحدى فوائد النسخ الجغرافي (Geo-Replication).",
+      "answer": "Geo-replication improves disaster recovery by maintaining copies of data in multiple geographic regions, allowing systems to continue operating if one region fails."
+    },
+    {
+      "id": 10,
+      "question_en": "Define Exploratory Data Analysis (EDA).",
+      "question_ar": "عرّف تحليل البيانات الاستكشافي (EDA).",
+      "answer": "Exploratory Data Analysis (EDA) is the process of analyzing and visualizing data to understand its structure, discover patterns, detect anomalies, and gain insights before building machine learning models."
+    },
+    {
+      "id": 11,
+      "question_en": "What are the main components of distribution analysis?",
+      "question_ar": "ما هي المكونات الرئيسية لتحليل التوزيع؟",
+      "answer": "The main components of distribution analysis include central tendency (mean, median, mode), dispersion (range, variance, standard deviation), skewness, and outlier detection."
+    },
+    {
+      "id": 12,
+      "question_en": "Why is data visualization important in machine learning?",
+      "question_ar": "لماذا يعد التصور البياني للبيانات مهمًا في تعلم الآلة؟",
+      "answer": "Data visualization helps understand data patterns, identify outliers, detect relationships between variables, and support better feature selection and model development."
+    },
+    {
+      "id": 13,
+      "question_en": "Explain the difference between univariate and multivariate plots.",
+      "question_ar": "اشرح الفرق بين الرسوم أحادية المتغير ومتعددة المتغيرات.",
+      "answer": "Univariate plots analyze a single variable and its distribution, while multivariate plots analyze relationships and interactions among two or more variables."
+    },
+    {
+      "id": 14,
+      "question_en": "List two best practices in data visualization.",
+      "question_ar": "اذكر ممارستين من أفضل ممارسات التصور البياني للبيانات.",
+      "answer": "Use clear labels and titles, and choose the appropriate chart type for the data being presented."
     }
   ],
   "code": [
@@ -640,208 +894,143 @@
       "id": 14,
       "task": "Simulate fault tolerance by creating data replicas.",
       "code": "import shutil\n\noriginal_file = 'data.csv'\nreplica1 = 'data_replica1.csv'\nreplica2 = 'data_replica2.csv'\n\nshutil.copy(original_file, replica1)\nshutil.copy(original_file, replica2)\n\nprint('Replicas created successfully')"
+    },
+    {
+      "id": 15,
+      "task": "Simulate batch processing by reading a CSV file and computing total sales.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('sales.csv')\ntotal_sales = df['sales'].sum()\n\nprint('Total Sales:', total_sales)"
+    },
+    {
+      "id": 16,
+      "task": "Implement ELT (Load first, then transform by filtering high values).",
+      "code": "import pandas as pd\n\n# Load\ndf = pd.read_csv('data.csv')\n\n# Transform after loading\nfiltered_df = df[df['value'] > 100]\n\nprint(filtered_df)"
+    },
+    {
+      "id": 17,
+      "task": "Implement synchronous replication simulation (copy data and confirm replication).",
+      "code": "import shutil\n\nsource_file = 'data.csv'\nreplica_file = 'data_replica.csv'\n\nshutil.copy(source_file, replica_file)\n\nprint('Replication completed successfully. Acknowledgment sent after replica creation.')"
+    },
+    {
+      "id": 18,
+      "task": "Implement autoscaling simulation based on CPU usage threshold.",
+      "code": "cpu_usage = 85\nthreshold = 80\ninstances = 2\n\nif cpu_usage > threshold:\n    instances += 1\n    print('Scaling up. Instances:', instances)\nelse:\n    print('No scaling required. Instances:', instances)"
+    },
+    {
+      "id": 19,
+      "task": "Load a dataset and display basic statistical summary (mean, median, std).",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\nprint('Mean:')\nprint(df.mean(numeric_only=True))\n\nprint('\\nMedian:')\nprint(df.median(numeric_only=True))\n\nprint('\\nStandard Deviation:')\nprint(df.std(numeric_only=True))"
+    },
+    {
+      "id": 20,
+      "task": "Create a correlation matrix and visualize it.",
+      "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\n\ncorrelation_matrix = df.corr(numeric_only=True)\n\nsns.heatmap(correlation_matrix, annot=True)\nplt.title('Correlation Matrix')\nplt.show()"
+    },
+    {
+      "id": 21,
+      "task": "Create a scatter matrix plot for multivariate analysis.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\nfrom pandas.plotting import scatter_matrix\n\ndf = pd.read_csv('data.csv')\n\nscatter_matrix(df.select_dtypes(include='number'), figsize=(8, 8))\nplt.show()"
     }
   ],
   "fill_in_the_blank": [
     {
       "id": 1,
-      "question": "RDBMS systems are not optimized for ______-scale Big Data workloads.",
-      "answer": "petabyte"
-    },
-    {
-      "id": 2,
-      "question": "One limitation of traditional RDBMS in Big Data is limited ______.",
-      "answer": "scalability"
-    },
-    {
-      "id": 3,
-      "question": "Apache Hadoop is designed for ______ storage and processing.",
-      "answer": "distributed"
-    },
-    {
-      "id": 4,
-      "question": "Hadoop provides built-in ______ tolerance.",
-      "answer": "fault"
-    },
-    {
-      "id": 5,
-      "question": "NoSQL databases can handle ______ and semi-structured data.",
-      "answer": "unstructured"
-    },
-    {
-      "id": 6,
-      "question": "HDFS stands for Hadoop Distributed ______ System.",
-      "answer": "File"
-    },
-    {
-      "id": 7,
-      "question": "Apache Spark is faster than MapReduce because it uses ______ processing.",
-      "answer": "in-memory"
-    },
-    {
-      "id": 8,
-      "question": "Apache Hive uses ______ Query Language (HQL).",
-      "answer": "Hive"
-    },
-    {
-      "id": 9,
-      "question": "Hadoop clusters can be managed using Apache ______.",
-      "answer": "Ambari"
-    },
-    {
-      "id": 10,
-      "question": "Hadoop supports structured, semi-structured, and ______ data.",
-      "answer": "unstructured"
-    },
-    {
-      "id": 11,
-      "question": "EDA helps in identifying patterns, trends, and ______ in data.",
-      "answer": "anomalies"
-    },
-    {
-      "id": 12,
-      "question": "Measures like mean, median, and mode are called ______ tendency.",
-      "answer": "central"
-    },
-    {
-      "id": 13,
-      "question": "Dispersion measures the ______ of data.",
-      "answer": "spread"
-    },
-    {
-      "id": 14,
-      "question": "A ______ is used to visualize the distribution of a numeric variable.",
-      "answer": "histogram"
-    },
-    {
-      "id": 15,
-      "question": "Box plots are useful for detecting ______ in data.",
-      "answer": "outliers"
-    },
-    {
-      "id": 16,
-      "question": "A correlation matrix is used to analyze ______ between variables.",
-      "answer": "relationships"
-    },
-    {
-      "id": 17,
-      "question": "Scatter plots are used to visualize the relationship between ______ variables.",
-      "answer": "two"
-    },
-    {
-      "id": 18,
-      "question": "The main goal of EDA is data ______ and understanding.",
-      "answer": "exploration"
-    },
-    {
-      "id": 19,
-      "question": "Density plots show data distribution in a ______ curve.",
-      "answer": "smooth"
-    },
-    {
-      "id": 20,
-      "question": "Matplotlib is a popular Python library used for ______.",
-      "answer": "visualization"
-    },
-    {
-      "id": 21,
-      "question": "The growth of ______ devices is a major cause of data explosion.",
+      "question": "The continuous generation of massive real-time data from ________ devices is a primary driver of the data explosion.",
       "answer": "IoT"
     },
     {
-      "id": 22,
-      "question": "Big Data includes structured, semi-structured, and ______ data.",
-      "answer": "unstructured"
-    },
-    {
-      "id": 23,
-      "question": "______ refers to the size or scale of data.",
+      "id": 2,
+      "question": "In the context of the Big Data 'Vs', the term ________ refers specifically to the amount or scale of the data.",
       "answer": "Volume"
     },
     {
-      "id": 24,
-      "question": "______ describes how fast data is generated and processed.",
+      "id": 3,
+      "question": "The ________ layer is responsible for collecting and importing data into the system from various sources.",
+      "answer": "Ingestion"
+    },
+    {
+      "id": 4,
+      "question": "Social media images are classified as ________ data because they do not follow a predefined schema.",
+      "answer": "unstructured"
+    },
+    {
+      "id": 5,
+      "question": "Unlike modern distributed systems, traditional systems are typically built on ________ architecture.",
+      "answer": "single-server"
+    },
+    {
+      "id": 6,
+      "question": "In Big Data, the term ________ refers to the speed at which data is generated and processed.",
       "answer": "Velocity"
     },
     {
-      "id": 25,
-      "question": "______ refers to different data types like text, images, and videos.",
-      "answer": "Variety"
-    },
-    {
-      "id": 26,
-      "question": "______ is related to data accuracy and reliability.",
-      "answer": "Veracity"
-    },
-    {
-      "id": 27,
-      "question": "Traditional systems rely on ______-server architecture.",
-      "answer": "single"
-    },
-    {
-      "id": 28,
-      "question": "Distributed computing allows multiple ______ to work together.",
-      "answer": "machines"
-    },
-    {
-      "id": 29,
-      "question": "The ______ layer is responsible for collecting data from sources.",
-      "answer": "ingestion"
-    },
-    {
-      "id": 30,
-      "question": "Fraud detection is commonly used in the ______ industry.",
+      "id": 7,
+      "question": "The ________ industry uses Big Data analytics extensively to detect fraudulent activities.",
       "answer": "finance"
     },
     {
-      "id": 31,
-      "question": "One major challenge in Big Data systems is data ______.",
-      "answer": "security"
+      "id": 8,
+      "question": "________ is the 'V' that refers to the accuracy and reliability of the data.",
+      "answer": "Veracity"
     },
     {
-      "id": 32,
-      "question": "Apache Kafka is mainly used for ______ data ingestion.",
-      "answer": "streaming"
-    },
-    {
-      "id": 33,
-      "question": "HDFS is a ______ file system used for large-scale storage.",
+      "id": 9,
+      "question": "By spreading workloads across multiple nodes, ________ computing significantly improves system scalability.",
       "answer": "distributed"
     },
     {
-      "id": 34,
-      "question": "In ELT, transformation happens ______ loading the data.",
-      "answer": "after"
+      "id": 10,
+      "question": "Data security is considered a major challenge in Big Data due to the large and sensitive nature of the ________.",
+      "answer": "datasets"
     },
     {
-      "id": 35,
-      "question": "Sharding is used for ______ data into smaller parts.",
-      "answer": "partitioning"
+      "id": 11,
+      "question": "Hadoop uses ________ as its primary distributed storage system.",
+      "answer": "HDFS"
     },
     {
-      "id": 36,
-      "question": "Geo-replication improves geographic ______ of data.",
-      "answer": "availability"
+      "id": 12,
+      "question": "________ is a popular tool widely used for real-time data streaming and ingestion.",
+      "answer": "Apache Kafka"
     },
     {
-      "id": 37,
-      "question": "______ services help improve scalability and autoscaling.",
-      "answer": "stateless"
+      "id": 13,
+      "question": "In the ________ process, data is loaded into the system first and then transformed, unlike the traditional ETL process.",
+      "answer": "ELT"
     },
     {
-      "id": 38,
-      "question": "Leader election is part of ______ availability mechanisms.",
-      "answer": "high"
+      "id": 14,
+      "question": "The ________ layer in a Big Data architecture is where machine learning models are typically developed.",
+      "answer": "analytics"
     },
     {
-      "id": 39,
-      "question": "Encryption is part of the ______ layer in Big Data systems.",
-      "answer": "security"
+      "id": 15,
+      "question": "________ is a NoSQL database that is document-oriented and used for flexible data storage.",
+      "answer": "MongoDB"
     },
     {
-      "id": 40,
-      "question": "Automated failover ensures ______ recovery from failures.",
-      "answer": "immediate"
+      "id": 16,
+      "question": "To distribute data across multiple nodes, the ________ technique utilizes partition keys.",
+      "answer": "Sharding"
+    },
+    {
+      "id": 17,
+      "question": "________ replication ensures that data is written to all replicas before a success acknowledgment is sent.",
+      "answer": "Synchronous"
+    },
+    {
+      "id": 18,
+      "question": "A ________ is a storage repository that can hold structured, semi-structured, and unstructured data.",
+      "answer": "Data Lake"
+    },
+    {
+      "id": 19,
+      "question": "The primary goal of ________ is to explore and understand data patterns, often using histograms.",
+      "answer": "EDA"
+    },
+    {
+      "id": 20,
+      "question": "________ is an open-source tool commonly used for monitoring system metrics and performance.",
+      "answer": "Prometheus"
     }
   ]
 }
