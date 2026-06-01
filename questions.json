@@ -2,2213 +2,846 @@
   "true_false": [
     {
       "id": 1,
-      "question_en": "Machine Learning became widely adopted only after big data and powerful GPUs became available.",
-      "question_ar": "هل أصبح تعلم الآلة واسع الانتشار فقط بعد توفر البيانات الضخمة ووحدات معالجة الرسوميات القوية؟",
+      "question_en": "The growth of IoT devices is one of the main causes of the data explosion.",
+      "question_ar": "هل نمو أجهزة إنترنت الأشياء هو أحد الأسباب الرئيسية لانفجار البيانات؟",
       "answer": true,
-      "explanation": "The major growth of ML, especially deep learning, occurred in the 2010s due to large datasets and GPU acceleration."
+      "explanation": "IoT devices continuously generate massive amounts of data, contributing to data explosion."
     },
     {
       "id": 2,
-      "question_en": "Supervised learning works without labeled data.",
-      "question_ar": "هل التعلم الموجّه يعمل بدون بيانات معنونة؟",
+      "question_en": "Big Data only refers to structured data stored in relational databases.",
+      "question_ar": "هل البيانات الضخمة تقتصر فقط على البيانات المنظمة؟",
       "answer": false,
-      "explanation": "Supervised learning requires labeled data where input-output pairs are provided."
+      "explanation": "Big Data includes structured, semi-structured, and unstructured data."
     },
     {
       "id": 3,
-      "question_en": "Reinforcement learning is based on rewards and penalties.",
-      "question_ar": "هل التعلم المعزز يعتمد على المكافآت والعقوبات؟",
-      "answer": true,
-      "explanation": "Reinforcement learning improves performance using feedback in the form of rewards and penalties."
+      "question_en": "Volume refers to the speed at which data is generated.",
+      "question_ar": "هل الحجم يشير إلى سرعة توليد البيانات؟",
+      "answer": false,
+      "explanation": "Volume refers to the amount of data, not speed."
     },
     {
       "id": 4,
-      "question_en": "Machine Learning and Traditional Programming follow the same logic-based approach.",
-      "question_ar": "هل يتبع تعلم الآلة والبرمجة التقليدية نفس النهج المنطقي؟",
-      "answer": false,
-      "explanation": "Traditional programming uses explicit rules, while ML learns patterns from data."
+      "question_en": "Velocity describes how fast data is generated and processed.",
+      "question_ar": "هل السرعة تصف مدى سرعة توليد ومعالجة البيانات؟",
+      "answer": true,
+      "explanation": "Velocity refers to the speed of data generation and processing."
     },
     {
       "id": 5,
-      "question_en": "Deep Learning is a specialized subset of Machine Learning.",
-      "question_ar": "هل التعلم العميق هو جزء متخصص من تعلم الآلة؟",
+      "question_en": "Variety refers to different formats such as text, images, and videos.",
+      "question_ar": "هل التنوع يشير إلى أنواع البيانات المختلفة؟",
       "answer": true,
-      "explanation": "Deep learning is a sub-field of machine learning using neural networks."
+      "explanation": "Variety represents different data formats."
     },
     {
       "id": 6,
-      "question_en": "Generative AI models can create new data based on patterns they learned.",
-      "question_ar": "هل يمكن لنماذج الذكاء التوليدي إنشاء بيانات جديدة بناءً على الأنماط التي تعلمتها؟",
+      "question_en": "Veracity deals with data accuracy and reliability.",
+      "question_ar": "هل الموثوقية تتعلق بدقة البيانات؟",
       "answer": true,
-      "explanation": "Generative AI focuses on creating new content such as text, images, and audio."
+      "explanation": "Veracity focuses on data quality and trustworthiness."
     },
     {
       "id": 7,
-      "question_en": "Overfitting happens when a model performs well on training data but poorly on new data.",
-      "question_ar": "هل يحدث فرط التكيّف عندما ينجح النموذج على بيانات التدريب ويفشل على البيانات الجديدة؟",
-      "answer": true,
-      "explanation": "Overfitting occurs when the model memorizes training data instead of generalizing."
+      "question_en": "Traditional systems are always sufficient for handling petabytes of data.",
+      "question_ar": "هل الأنظمة التقليدية كافية دائمًا لبيانات ضخمة؟",
+      "answer": false,
+      "explanation": "Traditional systems cannot efficiently handle very large-scale data."
     },
     {
       "id": 8,
-      "question_en": "Unsupervised learning is mainly used in clustering and dimensionality reduction.",
-      "question_ar": "هل يُستخدم التعلم غير الموجّه بشكل أساسي في التجميع وتقليل الأبعاد؟",
+      "question_en": "Distributed computing allows multiple machines to work together.",
+      "question_ar": "هل الحوسبة الموزعة تسمح لعدة أجهزة بالعمل معًا؟",
       "answer": true,
-      "explanation": "Unsupervised learning identifies patterns without labels, such as clustering and PCA."
+      "explanation": "Distributed computing uses multiple machines collaboratively."
     },
     {
       "id": 9,
-      "question_en": "ML Life Cycle includes steps such as data collection, cleaning, modeling, and evaluation.",
-      "question_ar": "هل دورة حياة تعلم الآلة تشمل جمع البيانات وتنظيفها والنمذجة والتقييم؟",
+      "question_en": "Big Data architecture includes ingestion, storage, processing, and analytics layers.",
+      "question_ar": "هل بنية البيانات الضخمة تشمل الإدخال والتخزين والمعالجة والتحليل؟",
       "answer": true,
-      "explanation": "These are core steps in the ML lifecycle before deployment."
+      "explanation": "These are the core layers in Big Data architecture."
     },
     {
       "id": 10,
-      "question_en": "Machine Learning can solve all real-world problems without limitations.",
-      "question_ar": "هل يمكن لتعلم الآلة حل جميع مشاكل العالم الحقيقي بدون قيود؟",
+      "question_en": "Scalability is not a challenge in Big Data systems.",
+      "question_ar": "هل قابلية التوسع ليست تحديًا؟",
       "answer": false,
-      "explanation": "ML has limitations such as data dependency, bias, computational cost, and lack of interpretability."
+      "explanation": "Scalability is a major challenge in Big Data systems."
     },
     {
       "id": 11,
-      "question_en": "Artificial Intelligence is a broader field that includes Machine Learning as one of its subfields.",
-      "question_ar": "الذكاء الاصطناعي مجال أوسع يشمل تعلم الآلة كأحد فروعه.",
+      "question_en": "Hadoop provides built-in fault tolerance.",
+      "question_ar": "هل Hadoop يوفر تحمل الأخطاء؟",
       "answer": true,
-      "explanation": "According to the lecture, Machine Learning is a subset of Artificial Intelligence."
+      "explanation": "Hadoop uses data replication for fault tolerance."
     },
     {
       "id": 12,
-      "question_en": "Artificial Neural Networks (ANNs) are inspired by the structure of the human brain.",
-      "question_ar": "الشبكات العصبية الاصطناعية مستوحاة من تركيب دماغ الإنسان.",
-      "answer": true,
-      "explanation": "ANNs are designed to simulate how the human brain works using interconnected neurons."
+      "question_en": "NoSQL databases are limited to structured data only.",
+      "question_ar": "هل NoSQL تقتصر على البيانات المنظمة؟",
+      "answer": false,
+      "explanation": "NoSQL supports unstructured and semi-structured data."
     },
     {
       "id": 13,
-      "question_en": "Deep Learning is a subset of Machine Learning that uses multiple neural network layers.",
-      "question_ar": "التعلم العميق هو جزء من تعلم الآلة ويستخدم طبقات متعددة من الشبكات العصبية.",
+      "question_en": "Hadoop Distributed File System is part of the Hadoop storage layer.",
+      "question_ar": "هل HDFS جزء من طبقة التخزين؟",
       "answer": true,
-      "explanation": "Deep Learning uses multi-layer neural networks to process complex data."
+      "explanation": "HDFS is the storage component of Hadoop."
     },
     {
       "id": 14,
-      "question_en": "Machine Learning always requires Artificial Neural Networks.",
-      "question_ar": "تعلم الآلة يتطلب دائمًا استخدام الشبكات العصبية.",
-      "answer": false,
-      "explanation": "Machine Learning includes many algorithms, not only neural networks (e.g., decision trees, regression)."
+      "question_en": "Apache Spark is generally faster than MapReduce due to in-memory processing.",
+      "question_ar": "هل Spark أسرع من MapReduce؟",
+      "answer": true,
+      "explanation": "Spark processes data in memory, making it faster."
     },
     {
       "id": 15,
-      "question_en": "Classification and regression are examples of Machine Learning tasks.",
-      "question_ar": "التصنيف والانحدار أمثلة على مهام تعلم الآلة.",
+      "question_en": "Apache Hive belongs to the data querying layer of the Hadoop ecosystem.",
+      "question_ar": "هل Hive ضمن طبقة الاستعلام؟",
       "answer": true,
-      "explanation": "Both classification and regression are core supervised learning tasks."
+      "explanation": "Hive allows SQL-like querying on Hadoop."
     },
     {
       "id": 16,
-      "question_en": "Quantitative data can be measured numerically.",
-      "question_ar": "البيانات الكمية يمكن قياسها بالأرقام.",
+      "question_en": "Hadoop cluster management can be performed using Apache Ambari.",
+      "question_ar": "هل يمكن إدارة Hadoop باستخدام Ambari؟",
       "answer": true,
-      "explanation": "Quantitative data represents measurable numerical values."
+      "explanation": "Ambari is used for monitoring and managing Hadoop clusters."
     },
     {
       "id": 17,
-      "question_en": "Qualitative data represents categories or labels rather than numbers.",
-      "question_ar": "البيانات النوعية تمثل فئات أو تسميات بدلاً من أرقام.",
-      "answer": true,
-      "explanation": "Qualitative data is categorical and non-numeric."
+      "question_en": "Hadoop is only suitable for structured relational data.",
+      "question_ar": "هل Hadoop مناسب فقط للبيانات المنظمة؟",
+      "answer": false,
+      "explanation": "Hadoop supports all data types."
     },
     {
       "id": 18,
-      "question_en": "One-Hot Encoding increases the number of features in a dataset.",
-      "question_ar": "تقنية One-Hot Encoding تزيد عدد الخصائص في البيانات.",
-      "answer": true,
-      "explanation": "It creates a separate binary column for each category."
+      "question_en": "A histogram is used for multivariate analysis only.",
+      "question_ar": "هل Histogram يستخدم فقط لتحليل متعدد المتغيرات؟",
+      "answer": false,
+      "explanation": "Histogram is used for univariate analysis."
     },
     {
       "id": 19,
-      "question_en": "Label Encoding is suitable for all categorical features without risk.",
-      "question_ar": "تقنية Label Encoding مناسبة لجميع البيانات الفئوية بدون مخاطر.",
-      "answer": false,
-      "explanation": "Label Encoding may introduce unintended ordinal relationships between categories."
+      "question_en": "Box plots can help identify outliers in data.",
+      "question_ar": "هل Box Plot يساعد في اكتشاف القيم الشاذة؟",
+      "answer": true,
+      "explanation": "Box plots highlight outliers clearly."
     },
     {
       "id": 20,
-      "question_en": "High-quality datasets improve the accuracy and reliability of ML models.",
-      "question_ar": "البيانات عالية الجودة تحسن دقة وموثوقية نماذج تعلم الآلة.",
+      "question_en": "Correlation matrix is used to analyze relationships between multiple variables.",
+      "question_ar": "هل مصفوفة الارتباط تستخدم لتحليل العلاقات؟",
       "answer": true,
-      "explanation": "Better data quality leads to better model performance."
+      "explanation": "It measures relationships between variables."
     },
     {
       "id": 21,
-      "question_en": "Data loading is the first step before understanding and preparing the dataset.",
-      "question_ar": "هل تحميل البيانات هو الخطوة الأولى قبل فهم البيانات وتجهيزها؟",
-      "answer": true,
-      "explanation": "Data loading is the initial step in ML preprocessing before analysis and preparation."
+      "question_en": "Data visualization has no role in machine learning.",
+      "question_ar": "هل التصور البياني لا دور له؟",
+      "answer": false,
+      "explanation": "Visualization is essential in understanding data."
     },
     {
       "id": 22,
-      "question_en": "Raw data is always clean and ready to be used directly in machine learning models.",
-      "question_ar": "هل البيانات الخام تكون دائمًا نظيفة وجاهزة للاستخدام مباشرة؟",
-      "answer": false,
-      "explanation": "Raw data often contains missing values, noise, and inconsistencies."
+      "question_en": "Scatter plots are used for visualizing relationships between two variables.",
+      "question_ar": "هل Scatter Plot يستخدم لعلاقة بين متغيرين؟",
+      "answer": true,
+      "explanation": "Scatter plots show relationships between two variables."
     },
     {
       "id": 23,
-      "question_en": "Checking data dimensions helps identify the number of features and records.",
-      "question_ar": "هل يساعد فحص أبعاد البيانات في معرفة عدد الصفوف والخصائص؟",
+      "question_en": "Data Visualization is used to represent data graphically for better understanding.",
+      "question_ar": "هل التصور البياني يستخدم لعرض البيانات؟",
       "answer": true,
-      "explanation": "Shape gives number of rows and columns."
+      "explanation": "It represents data visually."
     },
     {
       "id": 24,
-      "question_en": "Statistical summaries include measures such as mean, median, and standard deviation.",
-      "question_ar": "هل الإحصائيات تشمل المتوسط والوسيط والانحراف المعياري؟",
-      "answer": true,
-      "explanation": "describe() function provides these metrics."
+      "question_en": "Exploratory Data Analysis (EDA) is only performed after model deployment.",
+      "question_ar": "هل يتم EDA بعد نشر النموذج فقط؟",
+      "answer": false,
+      "explanation": "EDA is done before modeling."
     },
     {
       "id": 25,
-      "question_en": "Class distribution review is important only for regression problems.",
-      "question_ar": "هل توزيع الفئات مهم فقط في الانحدار؟",
-      "answer": false,
-      "explanation": "Class distribution is critical in classification problems."
+      "question_en": "Data Visualization is used to represent data graphically for better understanding.",
+      "question_ar": "هل التصور البياني يستخدم لعرض البيانات؟",
+      "answer": true,
+      "explanation": "Same as question 23."
     },
     {
       "id": 26,
-      "question_en": "Feature engineering focuses on creating or transforming features to improve learning.",
-      "question_ar": "هل هندسة الخصائص تهدف إلى تحسين التعلم عبر إنشاء أو تعديل الميزات؟",
-      "answer": true,
-      "explanation": "Feature engineering improves model performance."
+      "question_en": "Exploratory Data Analysis (EDA) is only performed after model deployment.",
+      "question_ar": "هل يتم EDA بعد نشر النموذج فقط؟",
+      "answer": false,
+      "explanation": "Same as question 24."
     },
     {
       "id": 27,
-      "question_en": "Precision measures how many actual positive cases were correctly predicted.",
-      "question_ar": "هل الدقة Precision تقيس عدد الإيجابيات الفعلية التي تم التنبؤ بها؟",
-      "answer": false,
-      "explanation": "This is Recall, not Precision."
+      "question_en": "EDA helps in identifying patterns, trends, and anomalies in data.",
+      "question_ar": "هل يساعد EDA في اكتشاف الأنماط؟",
+      "answer": true,
+      "explanation": "EDA is used to discover patterns and anomalies."
     },
     {
       "id": 28,
-      "question_en": "Recall is also known as sensitivity.",
-      "question_ar": "هل Recall هو نفسه Sensitivity؟",
+      "question_en": "Central tendency refers to measures like mean, median, and mode.",
+      "question_ar": "هل النزعة المركزية تشمل المتوسط والوسيط؟",
       "answer": true,
-      "explanation": "Recall = Sensitivity = TPR."
+      "explanation": "These are standard central tendency measures."
     },
     {
       "id": 29,
-      "question_en": "Logarithmic Loss penalizes confident but wrong predictions.",
-      "question_ar": "هل LogLoss يعاقب التنبؤات الخاطئة الواثقة؟",
-      "answer": true,
-      "explanation": "LogLoss heavily penalizes incorrect confident predictions."
-    },
-    {
-      "id": 31,
-      "question_en": "Linear regression is used to predict continuous numerical values.",
-      "question_ar": "هل الانحدار الخطي يستخدم للتنبؤ بقيم عددية مستمرة؟",
-      "answer": true,
-      "explanation": "Linear regression models continuous dependent variables."
-    },
-    {
-      "id": 32,
-      "question_en": "A linear equation represents a straight-line relationship between variables.",
-      "question_ar": "هل تمثل المعادلة الخطية علاقة خط مستقيم بين المتغيرات؟",
-      "answer": true,
-      "explanation": "Linear equations describe straight-line relationships."
-    },
-    {
-      "id": 33,
-      "question_en": "Gradient Descent is used to maximize the error in a machine learning model.",
-      "question_ar": "هل يستخدم Gradient Descent لتعظيم الخطأ؟",
+      "question_en": "RDBMS systems are fully optimized for petabyte-scale Big Data workloads.",
+      "question_ar": "هل RDBMS مناسبة لبيانات ضخمة جدًا؟",
       "answer": false,
-      "explanation": "Gradient Descent minimizes error, not maximizes it."
+      "explanation": "They are not optimized for very large-scale distributed data."
     },
     {
-      "id": 34,
-      "question_en": "Matrix addition is possible only if the matrices have the same dimensions.",
-      "question_ar": "هل يمكن جمع المصفوفات فقط إذا كانت بنفس الأبعاد؟",
-      "answer": true,
-      "explanation": "Matrices must have identical dimensions for addition."
-    },
-    {
-      "id": 35,
-      "question_en": "Matrix subtraction requires both matrices to have identical sizes.",
-      "question_ar": "هل طرح المصفوفات يتطلب نفس الأبعاد؟",
-      "answer": true,
-      "explanation": "Subtraction requires matching dimensions."
-    },
-    {
-      "id": 36,
-      "question_en": "Scalar multiplication multiplies each element in the matrix by a constant value.",
-      "question_ar": "هل الضرب القياسي يضرب كل عنصر في ثابت؟",
-      "answer": true,
-      "explanation": "Each element is multiplied by a scalar."
-    },
-    {
-      "id": 37,
-      "question_en": "In dot matrix multiplication, the number of columns of the first matrix must equal the number of rows of the second matrix.",
-      "question_ar": "هل يجب أن يساوي عدد أعمدة الأولى عدد صفوف الثانية في ضرب المصفوفات؟",
-      "answer": true,
-      "explanation": "This is a requirement for matrix multiplication."
-    },
-    {
-      "id": 38,
-      "question_en": "The transpose of a matrix swaps rows with columns.",
-      "question_ar": "هل نقل المصفوفة يعني تبديل الصفوف بالأعمدة؟",
-      "answer": true,
-      "explanation": "Transpose flips rows and columns."
-    },
-    {
-      "id": 39,
-      "question_en": "A singular matrix has a determinant equal to zero.",
-      "question_ar": "هل المصفوفة المفردة محددها يساوي صفر؟",
-      "answer": true,
-      "explanation": "Singular matrices have zero determinant."
-    },
-    {
-      "id": 40,
-      "question_en": "An identity matrix contains ones on the main diagonal and zeros elsewhere.",
-      "question_ar": "هل مصفوفة الوحدة تحتوي على 1 في القطر الرئيسي وصفر في باقي العناصر؟",
-      "answer": true,
-      "explanation": "Identity matrix definition."
-    },
-    {
-      "id": 41,
-      "question_en": "Linear regression with multivariables uses more than one input feature to predict the output.",
-      "question_ar": "هل الانحدار الخطي متعدد المتغيرات يستخدم أكثر من مدخل للتنبؤ بالمخرجات؟",
-      "answer": true,
-      "explanation": "Multivariable linear regression uses multiple features (x1, x2, ..., xn) to predict y."
-    },
-    {
-      "id": 42,
-      "question_en": "In multivariable linear regression, the hypothesis function can include multiple parameters (θ values).",
-      "question_ar": "هل يمكن لدالة الفرضية أن تحتوي على عدة معاملات θ؟",
-      "answer": true,
-      "explanation": "The hypothesis includes θ0, θ1, ..., θn for each feature."
-    },
-    {
-      "id": 43,
-      "question_en": "The learning rate controls how large the update step is during Gradient Descent.",
-      "question_ar": "هل معدل التعلم يتحكم في حجم خطوة التحديث في Gradient Descent؟",
-      "answer": true,
-      "explanation": "Learning rate (alpha) defines step size in parameter updates."
-    },
-    {
-      "id": 44,
-      "question_en": "Increasing the number of iterations always guarantees the best model.",
-      "question_ar": "هل زيادة عدد التكرارات تضمن دائماً أفضل نموذج؟",
+      "id": 30,
+      "question_en": "ETL loads data first and then transforms it.",
+      "question_ar": "هل ETL يقوم بالتحميل أولًا؟",
       "answer": false,
-      "explanation": "More iterations may improve convergence but can lead to wasted computation or over-optimization."
-    },
-    {
-      "id": 45,
-      "question_en": "Data rescaling helps Gradient Descent converge faster.",
-      "question_ar": "هل إعادة تحجيم البيانات يساعد على تسريع التقارب؟",
-      "answer": true,
-      "explanation": "Feature scaling improves convergence speed in Gradient Descent."
-    },
-    {
-      "id": 46,
-      "question_en": "Polynomial regression can model nonlinear relationships between variables.",
-      "question_ar": "هل الانحدار متعدد الحدود يمكنه تمثيل علاقات غير خطية؟",
-      "answer": true,
-      "explanation": "Polynomial regression introduces nonlinear terms like x^2, x^3."
-    },
-    {
-      "id": 47,
-      "question_en": "The Normal Equation is an iterative optimization method.",
-      "question_ar": "هل المعادلة الطبيعية طريقة تكرارية؟",
-      "answer": false,
-      "explanation": "Normal Equation computes parameters directly without iteration."
-    },
-    {
-      "id": 48,
-      "question_en": "Gradient Descent requires selecting a learning rate parameter.",
-      "question_ar": "هل Gradient Descent يتطلب تحديد معدل تعلم؟",
-      "answer": true,
-      "explanation": "Alpha must be chosen to control convergence."
-    },
-    {
-      "id": 49,
-      "question_en": "The Normal Equation can compute theta values directly without iterations.",
-      "question_ar": "هل المعادلة الطبيعية تحسب θ مباشرة بدون تكرار؟",
-      "answer": true,
-      "explanation": "It uses matrix operations to compute theta directly."
-    },
-    {
-      "id": 50,
-      "question_en": "Gradient Descent is usually preferred for very large datasets.",
-      "question_ar": "هل Gradient Descent مفضل للبيانات الضخمة؟",
-      "answer": true,
-      "explanation": "It scales better than Normal Equation for large datasets."
-    },
-    {
-      "id": 51,
-      "question_en": "Classification is used when the output variable y is continuous.",
-      "question_ar": "يُستخدم التصنيف عندما يكون متغير المخرجات y مستمراً.",
-      "answer": false,
-      "explanation": "Classification is used for discrete/categorical values, while Regression is used for continuous values."
-    },
-    {
-      "id": 52,
-      "question_en": "The Sigmoid function value is 0.5 when its input z is 0.",
-      "question_ar": "تكون قيمة دالة السيجمويد 0.5 عندما يكون المدخل z يساوي 0.",
-      "answer": true,
-      "explanation": "At z = 0, g(z) = 1 / (1 + e^0) = 1/2 = 0.5."
-    },
-    {
-      "id": 53,
-      "question_en": "In Binary Classification, y can only take two values, usually 0 and 1.",
-      "question_ar": "في التصنيف الثنائي، يمكن لـ y أن يأخذ قيمتين فقط، عادة 0 و 1.",
-      "answer": true,
-      "explanation": "Binary classification involves categorizing data into one of two distinct classes."
-    },
-    {
-      "id": 54,
-      "question_en": "Logistic Regression uses the same Cost Function as Linear Regression.",
-      "question_ar": "يستخدم الانحدار اللوجستي نفس دالة التكلفة التي يستخدمها الانحدار الخطي.",
-      "answer": false,
-      "explanation": "Logistic Regression uses a logarithmic cost function to ensure it is convex and can be optimized via Gradient Descent."
-    },
-    {
-      "id": 55,
-      "question_en": "A 'Balanced' model is one that captures the general trend without memorizing noise.",
-      "question_ar": "النموذج 'المتوازن' هو الذي يستوعب الاتجاه العام دون حفظ الضوضاء.",
-      "answer": true,
-      "explanation": "A balanced model generalizes well to new, unseen data."
-    },
-    {
-      "id": 56,
-      "question_en": "Overfitting makes the model perform excellently on new, unseen data.",
-      "question_ar": "الضبط الزائد يجعل النموذج يؤدي بشكل ممتاز على البيانات الجديدة غير المرئية.",
-      "answer": false,
-      "explanation": "Overfitting results in high training accuracy but poor performance on new data because the model memorized noise."
-    },
-    {
-      "id": 57,
-      "question_en": "Regularization involves adding a penalty term to the cost function to keep parameters small.",
-      "question_ar": "يتضمن التنعيم إضافة معامل عقوبة إلى دالة التكلفة لإبقاء المعاملات صغيرة.",
-      "answer": true,
-      "explanation": "Penalty terms like Lambda help reduce model complexity and prevent overfitting."
-    },
-    {
-      "id": 58,
-      "question_en": "In Multi-class classification, the 'One-vs-All' approach treats each class against all others combined.",
-      "question_ar": "في التصنيف متعدد الفئات، تتعامل طريقة 'الواحد ضد الجميع' مع كل فئة ضد جميع الفئات الأخرى مجتمعة.",
-      "answer": true,
-      "explanation": "OVA breaks down multi-class problems into multiple binary classification tasks."
-    },
-    {
-      "id": 59,
-      "question_en": "Underfitting happens because the mathematical equation is too complex for the data.",
-      "question_ar": "يحدث الضبط الناقص لأن المعادلة الرياضية معقدة جداً بالنسبة للبيانات.",
-      "answer": false,
-      "explanation": "Underfitting occurs when the model is too simple (high bias) to capture the underlying pattern."
-    },
-    {
-      "id": 60,
-      "question_en": "Regularization should be applied to all parameters, including theta zero.",
-      "question_ar": "يجب تطبيق التنعيم على جميع المعاملات، بما في ذلك theta zero.",
-      "answer": false,
-      "explanation": "Conventionally, theta zero is excluded from regularization as it does not contribute to model complexity."
-    },
-    {
-      "id": 61,
-      "question_en": "Artificial Neural Networks have no relationship to the biological structure of the human brain.",
-      "question_ar": "الشبكات العصبية الاصطناعية ليس لها أي علاقة بالتركيب البيولوجي لدماغ الإنسان.",
-      "answer": false,
-      "explanation": "ANNs are biologically inspired; nodes mimic neurons, and inputs mimic dendrites."
-    },
-    {
-      "id": 62,
-      "question_en": "A Neural Network can have multiple hidden layers.",
-      "question_ar": "يمكن أن تحتوي الشبكة العصبية على طبقات خفية متعددة.",
-      "answer": true,
-      "explanation": "Networks can have many hidden layers; more layers increase the network's ability to learn complex patterns (Deep Learning)."
-    },
-    {
-      "id": 63,
-      "question_en": "In a Neural Network layer, x0 is always equal to 0.",
-      "question_ar": "في طبقة الشبكة العصبية، x0 تساوي دائماً 0.",
-      "answer": false,
-      "explanation": "x0 is the bias unit and is always equal to 1, not 0."
-    },
-    {
-      "id": 64,
-      "question_en": "The logical function AND outputs 1 only when both inputs are 1.",
-      "question_ar": "الدالة المنطقية AND تخرج 1 فقط عندما يكون كلا المدخلين 1.",
-      "answer": true,
-      "explanation": "This is the core definition of the AND gate."
-    },
-    {
-      "id": 65,
-      "question_en": "To implement an OR gate mathematically, the bias weight (Theta_0) must be a large positive number.",
-      "question_ar": "لتطبيق بوابة OR رياضياً، يجب أن يكون وزن الانحراف (ثيتا_0) رقماً موجباً كبيراً.",
-      "answer": false,
-      "explanation": "For an OR gate, the bias weight is typically a small negative number (e.g., -10) to allow either input (with large positive weights) to push the output to 1."
-    },
-    {
-      "id": 66,
-      "question_en": "Delta (Δ) in Neural Networks measures the exact accuracy of the hidden layers.",
-      "question_ar": "دلتا (Δ) في الشبكات العصبية تقيس الدقة التامة للطبقات الخفية.",
-      "answer": false,
-      "explanation": "Delta measures the error or the difference between the predicted value and the actual target, not the accuracy."
-    },
-    {
-      "id": 67,
-      "question_en": "The value 'a' (Activation) represents the output of a specific neuron after applying the Sigmoid function.",
-      "question_ar": "تمثل القيمة 'a' (التنشيط) مخرجات خلية عصبية معينة بعد تطبيق دالة السيجمويد.",
-      "answer": true,
-      "explanation": "The activation value 'a' is the result of passing the weighted sum of inputs through the activation function."
-    },
-    {
-      "id": 68,
-      "question_en": "The NOT gate reverses the input, outputting 1 if the input is 0, and 0 if the input is 1.",
-      "question_ar": "بوابة NOT تعكس المدخل، فتخرج 1 إذا كان المدخل 0، و 0 إذا كان المدخل 1.",
-      "answer": true,
-      "explanation": "The NOT gate is a simple inverter."
-    },
-    {
-      "id": 69,
-      "question_en": "The XOR gate outputs 1 only when both inputs are identical.",
-      "question_ar": "بوابة XOR تخرج 1 فقط عندما يكون كلا المدخلين متطابقين.",
-      "answer": false,
-      "explanation": "The XOR (Exclusive OR) gate outputs 1 when the inputs are different (e.g., 1 and 0), and 0 when they are identical."
-    },
-    {
-      "id": 70,
-      "question_en": "When a computer analyzes an image using Neural Networks, it first converts the image into a matrix of numbers.",
-      "question_ar": "عندما يقوم الكمبيوتر بتحليل صورة باستخدام الشبكات العصبية، فإنه يقوم أولاً بتحويل الصورة إلى مصفوفة من الأرقام.",
-      "answer": true,
-      "explanation": "Images are interpreted by computers as grids (matrices) of pixel intensity values."
-    },
-    {
-      "id": 71,
-      "question_en": "For binary classification, a Neural Network needs at least two output units.",
-      "question_ar": "للتصنيف الثنائي، تحتاج الشبكة العصبية إلى وحدتي مخرج على الأقل.",
-      "answer": false,
-      "explanation": "One output unit is sufficient to represent binary classes (0 or 1)."
-    },
-    {
-      "id": 72,
-      "question_en": "In the cost function equation, the 'Regularization' part helps prevent overfitting.",
-      "question_ar": "في معادلة دالة التكلفة، يساعد جزء 'التنعيم' (Regularization) في منع الضبط الزائد.",
-      "answer": true,
-      "explanation": "Regularization penalizes large weights, simplifying the model to generalize better."
-    },
-    {
-      "id": 73,
-      "question_en": "Forward propagation is performed after backpropagation in every training iteration.",
-      "question_ar": "يتم تنفيذ المسار الأمامي بعد المسار الخلفي في كل تكرار تدريبي.",
-      "answer": false,
-      "explanation": "Forward propagation must happen first to produce a prediction, followed by backpropagation to calculate error."
-    },
-    {
-      "id": 74,
-      "question_en": "The symbol Delta represents the error for a specific neuron.",
-      "question_ar": "الرمز Delta يمثل الخطأ لخلية عصبية معينة.",
-      "answer": true,
-      "explanation": "Delta (δ) captures the difference between activation and target values for gradient calculation."
-    },
-    {
-      "id": 75,
-      "question_en": "Randomly initializing weights with very large numbers makes the training faster.",
-      "question_ar": "تهيئة الأوزان عشوائياً بأرقام كبيرة جداً يجعل التدريب أسرع.",
-      "answer": false,
-      "explanation": "Large weights can cause gradients to explode or saturate activation functions, slowing down or preventing convergence."
-    },
-    {
-      "id": 76,
-      "question_en": "Gradient Checking should be turned off during the actual training process because it is slow.",
-      "question_ar": "يجب إيقاف الفحص الاشتقاقي أثناء عملية التدريب الفعلية لأنه بطيء.",
-      "answer": true,
-      "explanation": "Gradient checking is a debugging tool only; numerical gradient calculation is computationally expensive."
-    },
-    {
-      "id": 77,
-      "question_en": "A 'Zero Matrix' used for initialization ensures the best starting point for Neural Networks.",
-      "question_ar": "تضمن 'المصفوفة الصفرية' المستخدمة للتهيئة أفضل نقطة بداية للشبكات العصبية.",
-      "answer": false,
-      "explanation": "Zero initialization leads to the symmetry problem where all neurons learn the same features."
-    },
-    {
-      "id": 78,
-      "question_en": "In a CNN, layers often consist of specialized units like ReLU and Pooling.",
-      "question_ar": "في شبكة CNN، تتكون الطبقات غالباً من وحدات متخصصة مثل ReLU و Pooling.",
-      "answer": true,
-      "explanation": "These layers help in feature extraction and dimensionality reduction in images."
-    },
-    {
-      "id": 79,
-      "question_en": "Modular Neural Networks (MNN) consist of several independent networks working in parallel.",
-      "question_ar": "الشبكات العصبية الوحدة (MNN) تتكون من عدة شبكات مستقلة تعمل بالتوازي.",
-      "answer": true,
-      "explanation": "MNNs use a 'divide and conquer' approach by splitting tasks across multiple sub-networks."
-    },
-    {
-      "id": 80,
-      "question_en": "A 'Global Minimum' is the lowest possible value of the Cost Function across all parameters.",
-      "question_ar": "'النهاية الصغرى العالمية' هي أقل قيمة ممكنة لدالة التكلفة عبر جميع المعاملات.",
-      "answer": true,
-      "explanation": "It is the optimal point where the model's error is minimized globally."
+      "explanation": "ETL stands for Extract, Transform, Load."
     }
   ],
   "mcq": [
     {
       "id": 1,
-      "question_en": "Machine Learning became more successful mainly due to:",
-      "question_ar": "أصبح تعلم الآلة أكثر نجاحًا بشكل أساسي بسبب:",
+      "question_en": "Which of the following contributes most to the data explosion?",
+      "question_ar": "أي مما يلي يساهم بشكل أكبر في انفجار البيانات؟",
       "options": {
-        "a": "Bigger screens",
-        "b": "More data + stronger GPUs",
-        "c": "New programming languages",
-        "d": "Cloud storage only"
+        "a": "Manual record keeping",
+        "b": "IoT devices",
+        "c": "Typewriters",
+        "d": "Fax machines"
       },
       "correct_answer": "b",
-      "explanation": "The availability of big data and powerful GPUs significantly accelerated ML development."
+      "explanation": "IoT devices continuously generate massive real-time data, making them a primary driver of data explosion."
     },
     {
       "id": 2,
-      "question_en": "Traditional programming focuses on:",
-      "question_ar": "تركز البرمجة التقليدية على:",
+      "question_en": "Which “V” represents the scale of data?",
+      "question_ar": "أي من الـ V يمثل حجم البيانات؟",
       "options": {
-        "a": "Data + rules → output",
-        "b": "Data + output → rules",
-        "c": "Rewards and penalties",
-        "d": "Random predictions"
+        "a": "Velocity",
+        "b": "Value",
+        "c": "Volume",
+        "d": "Variety"
       },
-      "correct_answer": "a",
-      "explanation": "Traditional programming uses explicit rules and input data to generate output."
+      "correct_answer": "c",
+      "explanation": "Volume refers to the amount or scale of data."
     },
     {
       "id": 3,
-      "question_en": "Which ML type requires labeled data?",
-      "question_ar": "أي نوع من تعلم الآلة يحتاج إلى بيانات معنونة؟",
+      "question_en": "Which layer is responsible for collecting data from different sources?",
+      "question_ar": "أي طبقة مسؤولة عن جمع البيانات من مصادر مختلفة؟",
       "options": {
-        "a": "Unsupervised",
-        "b": "Semi-Supervised",
-        "c": "Supervised",
-        "d": "Reinforcement"
+        "a": "Storage",
+        "b": "Analytics",
+        "c": "Ingestion",
+        "d": "Visualization"
       },
       "correct_answer": "c",
-      "explanation": "Supervised learning relies on labeled datasets."
+      "explanation": "The ingestion layer collects and imports data from multiple sources."
     },
     {
       "id": 4,
-      "question_en": "Clustering is an example of:",
-      "question_ar": "التجميع (Clustering) مثال على:",
+      "question_en": "Which of the following is an example of unstructured data?",
+      "question_ar": "أي مما يلي مثال على بيانات غير منظمة؟",
       "options": {
-        "a": "Supervised learning",
-        "b": "Unsupervised learning",
-        "c": "Reinforcement learning",
-        "d": "Deep learning"
+        "a": "Excel table",
+        "b": "SQL database",
+        "c": "Social media image",
+        "d": "CSV file"
       },
-      "correct_answer": "b",
-      "explanation": "Clustering groups data without labels, which is unsupervised learning."
+      "correct_answer": "c",
+      "explanation": "Images are unstructured data as they do not follow a predefined schema."
     },
     {
       "id": 5,
-      "question_en": "“The model memorizes training data but fails on test data” refers to:",
-      "question_ar": "يشير 'النموذج يحفظ بيانات التدريب ويفشل في الاختبار' إلى:",
+      "question_en": "Traditional systems mainly rely on:",
+      "question_ar": "الأنظمة التقليدية تعتمد بشكل أساسي على:",
       "options": {
-        "a": "Underfitting",
-        "b": "Normal behavior",
-        "c": "Perfect generalization",
-        "d": "Overfitting"
+        "a": "Distributed clusters",
+        "b": "Single-server architecture",
+        "c": "Cloud-native systems",
+        "d": "Edge computing"
       },
-      "correct_answer": "d",
-      "explanation": "This is the definition of overfitting."
+      "correct_answer": "b",
+      "explanation": "Traditional systems are typically built on single-server architectures."
     },
     {
       "id": 6,
-      "question_en": "Which of the following is a popular ML library in Python?",
-      "question_ar": "أي مما يلي مكتبة شهيرة لتعلم الآلة في بايثون؟",
+      "question_en": "Velocity mainly concerns:",
+      "question_ar": "السرعة (Velocity) تتعلق بـ:",
       "options": {
-        "a": "NumPy",
-        "b": "TensorFlow",
-        "c": "OpenCV",
-        "d": "Flask"
+        "a": "Data size",
+        "b": "Data speed",
+        "c": "Data quality",
+        "d": "Data storage cost"
       },
       "correct_answer": "b",
-      "explanation": "TensorFlow is a widely used machine learning and deep learning library."
+      "explanation": "Velocity refers to how fast data is generated and processed."
     },
     {
       "id": 7,
-      "question_en": "Generative AI is mainly used for:",
-      "question_ar": "يُستخدم الذكاء التوليدي بشكل أساسي في:",
+      "question_en": "Which industry uses Big Data for fraud detection?",
+      "question_ar": "أي قطاع يستخدم البيانات الضخمة لاكتشاف الاحتيال؟",
       "options": {
-        "a": "Predicting labels",
-        "b": "Creating new data (text/images/audio)",
-        "c": "Cleaning datasets",
-        "d": "Database indexing"
+        "a": "Agriculture",
+        "b": "Finance",
+        "c": "Construction",
+        "d": "Manufacturing"
       },
       "correct_answer": "b",
-      "explanation": "Generative AI creates new content based on learned patterns."
+      "explanation": "The finance industry uses Big Data extensively for fraud detection."
     },
     {
       "id": 8,
-      "question_en": "A challenge in Machine Learning is:",
-      "question_ar": "من تحديات تعلم الآلة:",
+      "question_en": "Veracity is related to:",
+      "question_ar": "الموثوقية (Veracity) تتعلق بـ:",
       "options": {
-        "a": "Having too little data",
-        "b": "Data bias",
-        "c": "High computational cost",
-        "d": "All of the above"
+        "a": "Data truthfulness",
+        "b": "Data format",
+        "c": "Data speed",
+        "d": "Data duplication"
       },
-      "correct_answer": "d",
-      "explanation": "All listed options are known ML challenges."
+      "correct_answer": "a",
+      "explanation": "Veracity refers to the accuracy and reliability of data."
     },
     {
       "id": 9,
-      "question_en": "Which algorithm is used for classification?",
-      "question_ar": "أي خوارزمية تُستخدم للتصنيف؟",
+      "question_en": "Distributed computing improves:",
+      "question_ar": "الحوسبة الموزعة تحسن:",
       "options": {
-        "a": "K-Means",
-        "b": "Linear Regression",
-        "c": "Logistic Regression",
-        "d": "PCA"
+        "a": "Manual processing",
+        "b": "Scalability",
+        "c": "Paper documentation",
+        "d": "Data entry speed"
       },
-      "correct_answer": "c",
-      "explanation": "Logistic Regression is used for classification tasks."
+      "correct_answer": "b",
+      "explanation": "Distributed systems improve scalability by spreading workloads."
     },
     {
       "id": 10,
-      "question_en": "The last step of the ML Life Cycle is usually:",
-      "question_ar": "آخر خطوة في دورة حياة تعلم الآلة عادةً هي:",
+      "question_en": "One key challenge in Big Data implementation is:",
+      "question_ar": "أحد التحديات الرئيسية في تطبيق البيانات الضخمة هو:",
       "options": {
-        "a": "Data collection",
-        "b": "Model deployment",
-        "c": "Feature engineering",
-        "d": "Model training"
+        "a": "Low internet usage",
+        "b": "Data security",
+        "c": "Small datasets",
+        "d": "Limited software options"
       },
       "correct_answer": "b",
-      "explanation": "After building and evaluating the model, it is deployed into production."
+      "explanation": "Security is a major concern due to large and sensitive datasets."
     },
     {
       "id": 11,
-      "question_en": "Which statement best describes the relationship between AI and ML?",
-      "question_ar": "ما أفضل وصف للعلاقة بين الذكاء الاصطناعي وتعلم الآلة؟",
+      "question_en": "Which layer is responsible for storing large volumes of data?",
+      "question_ar": "أي طبقة مسؤولة عن تخزين البيانات الضخمة؟",
       "options": {
-        "a": "AI is a subset of ML",
-        "b": "ML is a subset of AI",
-        "c": "AI and ML are identical",
-        "d": "ML is unrelated to AI"
+        "a": "Ingestion",
+        "b": "Storage",
+        "c": "Analytics",
+        "d": "Monitoring"
       },
       "correct_answer": "b",
-      "explanation": "Machine Learning is a subset of Artificial Intelligence."
+      "explanation": "Storage layer handles data persistence."
     },
     {
       "id": 12,
-      "question_en": "Which of the following is NOT an AI branch?",
-      "question_ar": "أي مما يلي ليس فرعًا من فروع الذكاء الاصطناعي؟",
+      "question_en": "Which of the following is an example of streaming ingestion tool?",
+      "question_ar": "أي مما يلي أداة إدخال بيانات لحظية؟",
       "options": {
-        "a": "Machine Learning",
-        "b": "Robotics",
-        "c": "Computer Vision",
-        "d": "Database Management"
+        "a": "Power BI",
+        "b": "Apache Kafka",
+        "c": "MySQL",
+        "d": "Excel"
       },
-      "correct_answer": "d",
-      "explanation": "Database Management is not considered an AI branch."
+      "correct_answer": "b",
+      "explanation": "Kafka is widely used for real-time data streaming."
     },
     {
       "id": 13,
-      "question_en": "Artificial Neural Networks are mainly composed of:",
-      "question_ar": "مم تتكون الشبكات العصبية الاصطناعية بشكل أساسي؟",
+      "question_en": "Which storage option is commonly used in Hadoop ecosystems?",
+      "question_ar": "ما هو نظام التخزين المستخدم في Hadoop؟",
       "options": {
-        "a": "Rules and logic",
-        "b": "Neurons and weighted connections",
-        "c": "Databases and tables",
-        "d": "Decision trees only"
+        "a": "HDFS",
+        "b": "FTP",
+        "c": "HTML",
+        "d": "SMTP"
       },
-      "correct_answer": "b",
-      "explanation": "ANNs consist of neurons connected by weighted links."
+      "correct_answer": "a",
+      "explanation": "HDFS is Hadoop’s distributed storage system."
     },
     {
       "id": 14,
-      "question_en": "Which ANN type is commonly used for image processing?",
-      "question_ar": "أي نوع من الشبكات العصبية يُستخدم غالبًا في معالجة الصور؟",
+      "question_en": "ELT differs from ETL because transformation happens:",
+      "question_ar": "ما الفرق بين ELT و ETL؟",
       "options": {
-        "a": "RNN",
-        "b": "CNN",
-        "c": "GAN",
-        "d": "SVM"
+        "a": "Before loading",
+        "b": "During ingestion",
+        "c": "After loading",
+        "d": "Outside the system"
       },
-      "correct_answer": "b",
-      "explanation": "CNNs (Convolutional Neural Networks) are widely used for image processing tasks."
+      "correct_answer": "c",
+      "explanation": "In ELT, data is loaded first, then transformed."
     },
     {
       "id": 15,
-      "question_en": "What is the key difference between ML and ANN-based models?",
-      "question_ar": "ما الفرق الأساسي بين تعلم الآلة والنماذج المعتمدة على الشبكات العصبية؟",
+      "question_en": "Hadoop mainly solves problems related to:",
+      "question_ar": "Hadoop يعالج مشاكل:",
       "options": {
-        "a": "ML never uses data",
-        "b": "ANN is a specific ML approach",
-        "c": "ANN replaces ML completely",
-        "d": "ML cannot learn patterns"
+        "a": "Small datasets",
+        "b": "Distributed storage and processing",
+        "c": "Desktop computing",
+        "d": "Word processing"
       },
       "correct_answer": "b",
-      "explanation": "ANN is one type of Machine Learning algorithm."
+      "explanation": "Hadoop is designed for distributed systems."
     },
     {
       "id": 16,
-      "question_en": "Which data type represents categories such as 'Red, Blue, Green'?",
-      "question_ar": "أي نوع بيانات يمثل فئات مثل الأحمر والأزرق والأخضر؟",
+      "question_en": "Which tool belongs to the Hadoop ingestion layer?",
+      "question_ar": "أي أداة ضمن طبقة الإدخال؟",
       "options": {
-        "a": "Quantitative",
-        "b": "Continuous",
-        "c": "Qualitative",
-        "d": "Numerical"
+        "a": "Hive",
+        "b": "Spark",
+        "c": "Flume",
+        "d": "HDFS"
       },
       "correct_answer": "c",
-      "explanation": "These are categorical (qualitative) values."
+      "explanation": "Flume is used for data ingestion."
     },
     {
       "id": 17,
-      "question_en": "Which encoding technique creates a separate binary column for each category?",
-      "question_ar": "أي تقنية ترميز تنشئ عمودًا ثنائيًا لكل فئة؟",
+      "question_en": "Which component is used for distributed storage?",
+      "question_ar": "ما المكون المستخدم للتخزين الموزع؟",
       "options": {
-        "a": "Label Encoding",
-        "b": "Frequency Encoding",
-        "c": "One-Hot Encoding",
-        "d": "Target Encoding"
+        "a": "HDFS",
+        "b": "Pig",
+        "c": "Hive",
+        "d": "Oozie"
       },
-      "correct_answer": "c",
-      "explanation": "One-Hot Encoding creates binary columns per category."
+      "correct_answer": "a",
+      "explanation": "HDFS handles distributed storage."
     },
     {
       "id": 18,
-      "question_en": "Which encoding technique replaces categories with their occurrence frequency?",
-      "question_ar": "أي تقنية تستبدل الفئات بعدد مرات تكرارها؟",
+      "question_en": "MapReduce primarily processes data in:",
+      "question_ar": "MapReduce يعالج البيانات في:",
       "options": {
-        "a": "Binary Encoding",
-        "b": "Frequency Encoding",
-        "c": "One-Hot Encoding",
-        "d": "Label Encoding"
+        "a": "Real-time memory",
+        "b": "Distributed batch mode",
+        "c": "Manual mode",
+        "d": "Local spreadsheets"
       },
       "correct_answer": "b",
-      "explanation": "Frequency Encoding uses the count or proportion of each category."
+      "explanation": "MapReduce is a batch processing model."
     },
     {
       "id": 19,
-      "question_en": "Which dataset source is considered reliable for ML projects?",
-      "question_ar": "أي مصدر بيانات يعتبر موثوقًا لمشاريع تعلم الآلة؟",
+      "question_en": "Which language is commonly used with Hive?",
+      "question_ar": "ما اللغة المستخدمة مع Hive؟",
       "options": {
-        "a": "Random internet comments",
-        "b": "Public datasets (e.g., Kaggle, UCI)",
-        "c": "Unverified social media posts",
-        "d": "Synthetic noise data only"
+        "a": "SQL",
+        "b": "HQL",
+        "c": "Python",
+        "d": "C++"
       },
       "correct_answer": "b",
-      "explanation": "Public datasets like Kaggle and UCI are reliable and widely used."
+      "explanation": "Hive uses Hive Query Language (HQL)."
     },
     {
       "id": 20,
-      "question_en": "Which strategy improves dataset quality?",
-      "question_ar": "أي استراتيجية تحسن جودة البيانات؟",
+      "question_en": "What is the main goal of EDA?",
+      "question_ar": "ما الهدف الأساسي من EDA؟",
       "options": {
-        "a": "Removing labels",
-        "b": "Data cleaning and preprocessing",
-        "c": "Using small datasets",
-        "d": "Ignoring missing values"
+        "a": "Data storage",
+        "b": "Data exploration and understanding",
+        "c": "Data deletion",
+        "d": "Data encryption"
       },
       "correct_answer": "b",
-      "explanation": "Cleaning and preprocessing improve data quality and model performance."
+      "explanation": "EDA focuses on understanding data patterns."
     },
     {
       "id": 21,
-      "question_en": "Which of the following is a common method for loading data in Python?",
-      "question_ar": "أي من الطرق التالية شائعة لتحميل البيانات في بايثون؟",
+      "question_en": "Which measure represents central tendency?",
+      "question_ar": "أي مقياس يمثل النزعة المركزية؟",
       "options": {
-        "a": "print()",
-        "b": "read_csv()",
-        "c": "load_data()",
-        "d": "input()"
+        "a": "Variance",
+        "b": "Mean",
+        "c": "Range",
+        "d": "Standard deviation"
       },
       "correct_answer": "b",
-      "explanation": "read_csv() is commonly used in pandas."
+      "explanation": "Mean is a measure of central tendency."
     },
     {
       "id": 22,
-      "question_en": "Which function shows the first few rows of a dataset?",
-      "question_ar": "أي دالة تعرض أول صفوف من البيانات؟",
+      "question_en": "Which plot is used for distribution analysis?",
+      "question_ar": "أي رسم يستخدم لتحليل التوزيع؟",
       "options": {
-        "a": "info()",
-        "b": "describe()",
-        "c": "head()",
-        "d": "shape"
+        "a": "Histogram",
+        "b": "Pie chart",
+        "c": "Line chart",
+        "d": "Bar chart"
       },
-      "correct_answer": "c",
-      "explanation": "head() displays first rows."
+      "correct_answer": "a",
+      "explanation": "Histogram shows data distribution."
     },
     {
       "id": 23,
-      "question_en": "Which method is used to check the number of rows and columns?",
-      "question_ar": "أي طريقة تُستخدم لمعرفة عدد الصفوف والأعمدة؟",
+      "question_en": "Which technique is used to detect outliers?",
+      "question_ar": "أي تقنية تستخدم لاكتشاف القيم الشاذة؟",
       "options": {
-        "a": "shape",
-        "b": "head()",
-        "c": "dtypes",
-        "d": "corr()"
+        "a": "Scatter plot",
+        "b": "Box plot",
+        "c": "Heatmap",
+        "d": "Line chart"
       },
-      "correct_answer": "a",
-      "explanation": "shape returns dataset dimensions."
+      "correct_answer": "b",
+      "explanation": "Box plot highlights outliers."
     },
     {
       "id": 24,
-      "question_en": "Which metric evaluates how well classes are balanced?",
-      "question_ar": "أي مقياس يقيس توازن الفئات؟",
+      "question_en": "Correlation matrix is used to:",
+      "question_ar": "مصفوفة الارتباط تستخدم لـ:",
       "options": {
-        "a": "Correlation",
-        "b": "Class distribution",
-        "c": "Skewness",
-        "d": "Feature scaling"
+        "a": "Store data",
+        "b": "Measure relationships between variables",
+        "c": "Clean data",
+        "d": "Encode data"
       },
       "correct_answer": "b",
-      "explanation": "Class distribution shows balance between classes."
+      "explanation": "It measures relationships between variables."
     },
     {
       "id": 25,
-      "question_en": "Which step removes missing values and duplicates?",
-      "question_ar": "أي خطوة تقوم بإزالة القيم المفقودة والتكرارات؟",
+      "question_en": "Which plot is used for multivariate analysis?",
+      "question_ar": "أي رسم يستخدم لتحليل متعدد المتغيرات؟",
       "options": {
-        "a": "Data Reduction",
-        "b": "Data Splitting",
-        "c": "Data Cleaning",
-        "d": "Feature Engineering"
+        "a": "Histogram",
+        "b": "Box plot",
+        "c": "Scatter matrix",
+        "d": "Density plot"
       },
       "correct_answer": "c",
-      "explanation": "Data cleaning handles missing and duplicate values."
-    },
-    {
-      "id": 26,
-      "question_en": "Feature engineering mainly aims to:",
-      "question_ar": "هندسة الخصائص تهدف إلى:",
-      "options": {
-        "a": "Reduce hardware cost",
-        "b": "Improve model learning",
-        "c": "Increase dataset size",
-        "d": "Remove labels"
-      },
-      "correct_answer": "b",
-      "explanation": "Feature engineering improves learning performance."
-    },
-    {
-      "id": 27,
-      "question_en": "Which metric combines precision and recall?",
-      "question_ar": "أي مقياس يجمع بين Precision و Recall؟",
-      "options": {
-        "a": "Accuracy",
-        "b": "ROC AUC",
-        "c": "F1 Score",
-        "d": "Support"
-      },
-      "correct_answer": "c",
-      "explanation": "F1 score balances precision and recall."
-    },
-    {
-      "id": 28,
-      "question_en": "A Confusion Matrix is mainly used to evaluate:",
-      "question_ar": "Confusion Matrix تُستخدم لتقييم:",
-      "options": {
-        "a": "Regression models",
-        "b": "Clustering models",
-        "c": "Classification models",
-        "d": "Dimensionality reduction"
-      },
-      "correct_answer": "c",
-      "explanation": "It evaluates classification performance."
-    },
-    {
-      "id": 29,
-      "question_en": "Which metric measures how many positive predictions were correct?",
-      "question_ar": "أي مقياس يقيس دقة التنبؤات الإيجابية؟",
-      "options": {
-        "a": "Recall",
-        "b": "Precision",
-        "c": "Accuracy",
-        "d": "Specificity"
-      },
-      "correct_answer": "b",
-      "explanation": "Precision measures correctness of positive predictions."
-    },
-    {
-      "id": 30,
-      "question_en": "ROC AUC Score measures:",
-      "question_ar": "ROC AUC يقيس:",
-      "options": {
-        "a": "Error rate",
-        "b": "Probability loss",
-        "c": "Model’s ability to separate classes",
-        "d": "Number of features"
-      },
-      "correct_answer": "c",
-      "explanation": "ROC AUC measures class separability."
-    },
-    {
-      "id": 31,
-      "question_en": "Linear regression attempts to model the relationship between variables using:",
-      "question_ar": "الانحدار الخطي يحاول نمذجة العلاقة باستخدام:",
-      "options": {
-        "a": "A curve",
-        "b": "A straight line",
-        "c": "A circle",
-        "d": "A polynomial only"
-      },
-      "correct_answer": "b",
-      "explanation": "Linear regression uses a straight line model."
-    },
-    {
-      "id": 32,
-      "question_en": "The equation of a simple linear regression model is:",
-      "question_ar": "ما هي معادلة الانحدار الخطي البسيط؟",
-      "options": {
-        "a": "y = ax² + bx + c",
-        "b": "y = mx + b",
-        "c": "y = mx²",
-        "d": "y = m/x"
-      },
-      "correct_answer": "b",
-      "explanation": "Standard linear equation form."
-    },
-    {
-      "id": 33,
-      "question_en": "Gradient Descent is mainly used for:",
-      "question_ar": "يستخدم Gradient Descent بشكل أساسي لـ:",
-      "options": {
-        "a": "Data cleaning",
-        "b": "Parameter optimization",
-        "c": "Sorting data",
-        "d": "Data visualization"
-      },
-      "correct_answer": "b",
-      "explanation": "It optimizes model parameters."
-    },
-    {
-      "id": 34,
-      "question_en": "Matrix addition requires:",
-      "question_ar": "جمع المصفوفات يتطلب:",
-      "options": {
-        "a": "Same number of rows only",
-        "b": "Same number of columns only",
-        "c": "Same dimensions",
-        "d": "Same determinant"
-      },
-      "correct_answer": "c",
-      "explanation": "Dimensions must match."
-    },
-    {
-      "id": 35,
-      "question_en": "The transpose of a matrix A is represented as:",
-      "question_ar": "يتم تمثيل نقل المصفوفة A بـ:",
-      "options": {
-        "a": "A⁻¹",
-        "b": "Aᵀ",
-        "c": "A²",
-        "d": "A°"
-      },
-      "correct_answer": "b",
-      "explanation": "Transpose notation is Aᵀ."
-    },
-    {
-      "id": 36,
-      "question_en": "A vector is best described as:",
-      "question_ar": "المتجه هو:",
-      "options": {
-        "a": "A single number",
-        "b": "A one-dimensional array of numbers",
-        "c": "A square matrix",
-        "d": "A random variable"
-      },
-      "correct_answer": "b",
-      "explanation": "A vector is a 1D array."
-    },
-    {
-      "id": 37,
-      "question_en": "Which matrix contains only zeros?",
-      "question_ar": "أي مصفوفة تحتوي على أصفار فقط؟",
-      "options": {
-        "a": "Identity Matrix",
-        "b": "Diagonal Matrix",
-        "c": "Zero Matrix",
-        "d": "Scalar Matrix"
-      },
-      "correct_answer": "c",
-      "explanation": "Zero matrix contains only zeros."
-    },
-    {
-      "id": 38,
-      "question_en": "Which matrix has ones on the main diagonal?",
-      "question_ar": "أي مصفوفة تحتوي على 1 في القطر الرئيسي؟",
-      "options": {
-        "a": "Zero Matrix",
-        "b": "Identity Matrix",
-        "c": "Random Matrix",
-        "d": "Singular Matrix"
-      },
-      "correct_answer": "b",
-      "explanation": "Identity matrix definition."
-    },
-    {
-      "id": 39,
-      "question_en": "If a matrix has no inverse, it is called:",
-      "question_ar": "إذا لم يكن للمصفوفة معكوس فهي تسمى:",
-      "options": {
-        "a": "Identity matrix",
-        "b": "Non-square matrix",
-        "c": "Singular matrix",
-        "d": "Diagonal matrix"
-      },
-      "correct_answer": "c",
-      "explanation": "Non-invertible matrices are singular."
-    },
-    {
-      "id": 40,
-      "question_en": "In gradient descent, parameters are updated in the direction of:",
-      "question_ar": "في Gradient Descent يتم التحديث في اتجاه:",
-      "options": {
-        "a": "Maximum gradient",
-        "b": "Zero gradient",
-        "c": "Negative gradient",
-        "d": "Random gradient"
-      },
-      "correct_answer": "c",
-      "explanation": "Gradient descent moves opposite the gradient."
-    },
-    {
-      "id": 41,
-      "question_en": "Multivariable Linear Regression uses:",
-      "question_ar": "الانحدار الخطي متعدد المتغيرات يستخدم:",
-      "options": {
-        "a": "One feature only",
-        "b": "Multiple input features",
-        "c": "Only categorical variables",
-        "d": "Only binary variables"
-      },
-      "correct_answer": "b",
-      "explanation": "It uses multiple input features (x1, x2, ..., xn)."
-    },
-    {
-      "id": 42,
-      "question_en": "The general hypothesis equation for multivariable linear regression is:",
-      "question_ar": "ما هي معادلة الفرضية العامة؟",
-      "options": {
-        "a": "h(x) = θ₀ + θ₁x₁ + θ₂x₂ + ... + θₙxₙ",
-        "b": "h(x) = x² + y²",
-        "c": "h(x) = θx²",
-        "d": "h(x) = x + y²"
-      },
-      "correct_answer": "a",
-      "explanation": "Standard linear hypothesis with multiple parameters."
-    },
-    {
-      "id": 43,
-      "question_en": "The parameter that controls the step size in Gradient Descent is called:",
-      "question_ar": "ما اسم معامل التحكم في حجم الخطوة؟",
-      "options": {
-        "a": "Iteration number",
-        "b": "Learning rate",
-        "c": "Theta",
-        "d": "Bias"
-      },
-      "correct_answer": "b",
-      "explanation": "Learning rate controls update magnitude."
-    },
-    {
-      "id": 44,
-      "question_en": "If the learning rate is too large, Gradient Descent may:",
-      "question_ar": "إذا كان معدل التعلم كبيراً جداً، فقد:",
-      "options": {
-        "a": "Converge slowly",
-        "b": "Fail to converge",
-        "c": "Always find the exact minimum",
-        "d": "Stop immediately"
-      },
-      "correct_answer": "b",
-      "explanation": "Large alpha causes divergence."
-    },
-    {
-      "id": 45,
-      "question_en": "Polynomial regression is used when:",
-      "question_ar": "يستخدم الانحدار متعدد الحدود عندما:",
-      "options": {
-        "a": "Data has a nonlinear pattern",
-        "b": "Data is always linear",
-        "c": "Only one variable exists",
-        "d": "Data is categorical"
-      },
-      "correct_answer": "a",
-      "explanation": "It models nonlinear relationships."
-    },
-    {
-      "id": 46,
-      "question_en": "Data rescaling is mainly used to:",
-      "question_ar": "إعادة تحجيم البيانات تستخدم لـ:",
-      "options": {
-        "a": "Increase dataset size",
-        "b": "Improve convergence speed of Gradient Descent",
-        "c": "Remove noise",
-        "d": "Change labels"
-      },
-      "correct_answer": "b",
-      "explanation": "Scaling improves optimization speed."
-    },
-    {
-      "id": 47,
-      "question_en": "Which method directly computes theta values without iterations?",
-      "question_ar": "أي طريقة تحسب θ مباشرة بدون تكرار؟",
-      "options": {
-        "a": "Gradient Descent",
-        "b": "Normal Equation",
-        "c": "Logistic Regression",
-        "d": "Decision Tree"
-      },
-      "correct_answer": "b",
-      "explanation": "Normal Equation solves analytically."
-    },
-    {
-      "id": 48,
-      "question_en": "Which method requires selecting a learning rate?",
-      "question_ar": "أي طريقة تحتاج معدل تعلم؟",
-      "options": {
-        "a": "Normal Equation",
-        "b": "Gradient Descent",
-        "c": "Polynomial Equation",
-        "d": "Matrix Inverse"
-      },
-      "correct_answer": "b",
-      "explanation": "Only Gradient Descent requires alpha."
-    },
-    {
-      "id": 49,
-      "question_en": "Which of the following equation types represents a second-degree polynomial?",
-      "question_ar": "أي نوع يمثل كثير حدود من الدرجة الثانية؟",
-      "options": {
-        "a": "Linear",
-        "b": "Quadratic",
-        "c": "Cubic",
-        "d": "Square Root"
-      },
-      "correct_answer": "b",
-      "explanation": "Second degree = quadratic (x^2)."
-    },
-    {
-      "id": 50,
-      "question_en": "For very large datasets, which method is generally more practical?",
-      "question_ar": "للمجموعات الكبيرة من البيانات، أي طريقة أفضل؟",
-      "options": {
-        "a": "Normal Equation",
-        "b": "Gradient Descent",
-        "c": "Matrix Inversion Only",
-        "d": "Direct Calculation"
-      },
-      "correct_answer": "b",
-      "explanation": "Gradient Descent scales better computationally."
-    },
-    {
-      "id": 51,
-      "question_en": "Which of the following is a primary task for Classification?",
-      "question_ar": "أي مما يلي هو المهمة الأساسية للتصنيف؟",
-      "options": {
-        "a": "Predicting house prices",
-        "b": "Assigning an email to 'Spam' or 'Not Spam'",
-        "c": "Calculating the average temperature",
-        "d": "Estimating stock market trends"
-      },
-      "correct_answer": "b",
-      "explanation": "Classification deals with assigning labels to data points, like identifying spam emails."
-    },
-    {
-      "id": 52,
-      "question_en": "The output of the Sigmoid (Logistic) function always falls between:",
-      "question_ar": "مخرجات دالة السيجمويد (اللوجستية) تقع دائماً بين:",
-      "options": {
-        "a": "-1 and 1",
-        "b": "0 and infinity",
-        "c": "0 and 1",
-        "d": "-infinity and +infinity"
-      },
-      "correct_answer": "c",
-      "explanation": "The Sigmoid function maps any real-valued number into the range [0, 1]."
-    },
-    {
-      "id": 53,
-      "question_en": "In Logistic Regression, the hypothesis function h(x) represents:",
-      "question_ar": "في الانحدار اللوجستي، تمثل دالة الفرضية h(x) التالي:",
-      "options": {
-        "a": "The absolute predicted value",
-        "b": "The probability that y = 1",
-        "c": "The error rate of the model",
-        "d": "The slope of the line"
-      },
-      "correct_answer": "b",
-      "explanation": "h(x) gives the estimated probability that the output is 1 for a given input."
-    },
-    {
-      "id": 54,
-      "question_en": "Which function is used to 'squash' a linear result into a range of 0 to 1?",
-      "question_ar": "ما هي الدالة المستخدمة لتحويل النتيجة الخطية إلى نطاق بين 0 و 1؟",
-      "options": {
-        "a": "Linear Function",
-        "b": "Polynomial Function",
-        "c": "Sigmoid Function",
-        "d": "Normal Equation"
-      },
-      "correct_answer": "c",
-      "explanation": "The Sigmoid function is specifically used to compress outputs into a probability range."
-    },
-    {
-      "id": 55,
-      "question_en": "The line that separates different classes in a classification plot is called:",
-      "question_ar": "الخط الذي يفصل بين الفئات المختلفة في مخطط التصنيف يسمى:",
-      "options": {
-        "a": "Regression Line",
-        "b": "Decision Boundary",
-        "c": "Cost Curve",
-        "d": "Lambda line"
-      },
-      "correct_answer": "b",
-      "explanation": "The decision boundary is the line or plane that partitions the feature space into classes."
-    },
-    {
-      "id": 56,
-      "question_en": "If h(x) >= 0.5, we typically predict the class as:",
-      "question_ar": "إذا كانت h(x) >= 0.5، فإننا نتوقع عادةً أن تكون الفئة:",
-      "options": {
-        "a": "y = 0",
-        "b": "y = 1",
-        "c": "y = 0.5",
-        "d": "Undefined"
-      },
-      "correct_answer": "b",
-      "explanation": "0.5 is the standard threshold for predicting the positive class (1)."
-    },
-    {
-      "id": 57,
-      "question_en": "The Cost Function for Logistic Regression is designed to be:",
-      "question_ar": "تم تصميم دالة التكلفة للانحدار اللوجستي لتكون:",
-      "options": {
-        "a": "Non-convex",
-        "b": "Linear",
-        "c": "Convex",
-        "d": "Random"
-      },
-      "correct_answer": "c",
-      "explanation": "A convex cost function ensures that Gradient Descent can find the global minimum."
-    },
-    {
-      "id": 58,
-      "question_en": "Multi-class classification can be solved using:",
-      "question_ar": "يمكن حل التصنيف متعدد الفئات باستخدام:",
-      "options": {
-        "a": "Simple Linear Regression",
-        "b": "One-vs-All",
-        "c": "Underfitting",
-        "d": "Scalar Multiplication"
-      },
-      "correct_answer": "b",
-      "explanation": "One-vs-All (OVA) is a strategy that trains one binary classifier per class."
-    },
-    {
-      "id": 59,
-      "question_en": "'Underfitting' (UF) occurs when the model is:",
-      "question_ar": "يحدث 'الضبط الناقص' (UF) عندما يكون النموذج:",
-      "options": {
-        "a": "Too complex",
-        "b": "Too simple to capture data patterns",
-        "c": "Perfectly balanced",
-        "d": "Using too many features"
-      },
-      "correct_answer": "b",
-      "explanation": "Underfitting means the model is too simple to represent the underlying structure of the data."
-    },
-    {
-      "id": 60,
-      "question_en": "'Overfitting' (OF) is characterized by:",
-      "question_ar": "يتميز 'الضبط الزائد' (OF) بـ:",
-      "options": {
-        "a": "High bias",
-        "b": "High variance",
-        "c": "Low training accuracy",
-        "d": "Simplicity"
-      },
-      "correct_answer": "b",
-      "explanation": "Overfitting happens when a model captures noise, resulting in high variance."
-    },
-    {
-      "id": 61,
-      "question_en": "Regularization helps to solve the problem of:",
-      "question_ar": "تساعد عملية التنعيم (Regularization) في حل مشكلة:",
-      "options": {
-        "a": "Underfitting",
-        "b": "Overfitting",
-        "c": "Data collection",
-        "d": "Matrix multiplication"
-      },
-      "correct_answer": "b",
-      "explanation": "Regularization penalizes large parameter values to prevent the model from overfitting."
-    },
-    {
-      "id": 62,
-      "question_en": "The parameter used to control the strength of regularization is:",
-      "question_ar": "المعامل المستخدم للتحكم في قوة التنعيم هو:",
-      "options": {
-        "a": "Alpha",
-        "b": "Theta",
-        "c": "Lambda",
-        "d": "Gamma"
-      },
-      "correct_answer": "c",
-      "explanation": "Lambda is the regularization parameter that balances fitting the data and keeping weights small."
-    },
-    {
-      "id": 63,
-      "question_en": "In the One-vs-All (OVA) method, for K classes, we train:",
-      "question_ar": "في طريقة 'الواحد ضد الجميع' (OVA)، لعدد K من الفئات، نقوم بتدريب:",
-      "options": {
-        "a": "1 classifier",
-        "b": "K classifiers",
-        "c": "K-1 classifiers",
-        "d": "0 classifiers"
-      },
-      "correct_answer": "b",
-      "explanation": "In OVA, we train one classifier for each class to distinguish it from all other classes."
-    },
-    {
-      "id": 64,
-      "question_en": "Which technique involves selecting only the most relevant features to prevent OF?",
-      "question_ar": "أي تقنية تتضمن اختيار الخصائص الأكثر أهمية فقط لمنع الضبط الزائد؟",
-      "options": {
-        "a": "Feature Selection / Data Selection",
-        "b": "Gradient Maximization",
-        "c": "Random Guessing",
-        "d": "Increasing Lambda to infinity"
-      },
-      "correct_answer": "a",
-      "explanation": "Feature selection reduces complexity by removing non-essential inputs."
-    },
-    {
-      "id": 65,
-      "question_en": "If we set Lambda to an extremely large value, what happens to the parameters?",
-      "question_ar": "إذا قمنا بضبط لمدا على قيمة كبيرة جداً، ماذا يحدث للمعاملات؟",
-      "options": {
-        "a": "They become very large",
-        "b": "They approach zero",
-        "c": "They stay the same",
-        "d": "They become negative"
-      },
-      "correct_answer": "b",
-      "explanation": "A very large Lambda heavily penalizes all parameters, forcing them to become very small (near zero)."
-    },
-    {
-      "id": 66,
-      "question_en": "In a Neural Network, which biological component inspired the inputs (x)?",
-      "question_ar": "في الشبكة العصبية، ما هو المكون البيولوجي الذي استوحيت منه المدخلات (x)؟",
-      "options": {
-        "a": "Nucleus (النواة)",
-        "b": "Dendrites (الزوائد الشجرية)",
-        "c": "Axon (المحور العصبي)",
-        "d": "Schwann cell (خلية شوان)"
-      },
-      "correct_answer": "b",
-      "explanation": "Dendrites are the receiving part of a biological neuron, analogous to the inputs (x) in an artificial neural network."
-    },
-    {
-      "id": 67,
-      "question_en": "What is the purpose of the Bias Unit in a Neural Network layer?",
-      "question_ar": "ما هو الغرض من وحدة الانحراف (Bias Unit) في طبقة الشبكة العصبية؟",
-      "options": {
-        "a": "It calculates the final error",
-        "b": "It is a constant input always set to 1 (x0 = 1)",
-        "c": "It removes missing values",
-        "d": "It multiplies all weights by zero"
-      },
-      "correct_answer": "b",
-      "explanation": "The bias unit (x0) is an extra input added to a layer, always equal to 1, which helps shift the activation function."
-    },
-    {
-      "id": 68,
-      "question_en": "In Neural Networks, 'Weights' (W or Theta) represent:",
-      "question_ar": "في الشبكات العصبية، 'الأوزان' (W أو Theta) تمثل:",
-      "options": {
-        "a": "The number of hidden layers",
-        "b": "The final output classification",
-        "c": "The parameters linking one layer's neurons to the next",
-        "d": "The amount of training data"
-      },
-      "correct_answer": "c",
-      "explanation": "Weights (Thetas) are the mathematical parameters that determine the strength of the connection between neurons across layers."
-    },
-    {
-      "id": 69,
-      "question_en": "Which mathematical function is commonly used in this lecture to calculate activation values?",
-      "question_ar": "ما هي الدالة الرياضية الشائعة الاستخدام في هذه المحاضرة لحساب قيم التنشيط؟",
-      "options": {
-        "a": "Polynomial Function",
-        "b": "Linear Regression",
-        "c": "Sigmoid Function",
-        "d": "Standard Deviation"
-      },
-      "correct_answer": "c",
-      "explanation": "The Sigmoid function, g(z), is used to calculate the activation values in the neurons."
-    },
-    {
-      "id": 70,
-      "question_en": "A Neural Network must have at least how many layers?",
-      "question_ar": "ما هو الحد الأدنى لعدد الطبقات في الشبكة العصبية؟",
-      "options": {
-        "a": "1",
-        "b": "2",
-        "c": "3 (Input, Hidden, Output)",
-        "d": "10"
-      },
-      "correct_answer": "c",
-      "explanation": "A standard minimum neural network consists of 3 layers: an Input layer, at least one Hidden layer, and an Output layer."
-    },
-    {
-      "id": 71,
-      "question_en": "In the notation for Neural Networks, what does the superscript (top number) on Theta typically indicate?",
-      "question_ar": "في ترميز الشبكات العصبية، ماذا يشير الرقم العلوي (Superscript) على المعامل ثيتا عادةً؟",
-      "options": {
-        "a": "The layer number (رقم الطبقة)",
-        "b": "The neuron number (رقم الخلية)",
-        "c": "The iteration count (عدد التكرارات)",
-        "d": "The learning rate (معدل التعلم)"
-      },
-      "correct_answer": "a",
-      "explanation": "The superscript indicates the layer number from which the weights are originating."
-    },
-    {
-      "id": 72,
-      "question_en": "To mathematically implement an AND logical gate, the weight for Theta_0 (bias) should be:",
-      "question_ar": "لتطبيق البوابة المنطقية AND رياضياً، يجب أن يكون وزن ثيتا_0 (الانحراف):",
-      "options": {
-        "a": "A large positive number",
-        "b": "Zero",
-        "c": "A large negative number",
-        "d": "Equal to Theta_1"
-      },
-      "correct_answer": "c",
-      "explanation": "For an AND gate, Theta_0 is a large negative number (e.g., -30) so that the output is only positive when both x1 and x2 are 1."
-    },
-    {
-      "id": 73,
-      "question_en": "Which logical function requires ONLY ONE of its inputs to be 1 to output 1?",
-      "question_ar": "أي دالة منطقية تتطلب أن يكون أحد مدخلاتها فقط 1 لكي يكون المخرج 1؟",
-      "options": {
-        "a": "AND",
-        "b": "OR",
-        "c": "NAND",
-        "d": "XNOR"
-      },
-      "correct_answer": "b",
-      "explanation": "The OR gate outputs 1 if at least one of the inputs (x1 or x2) is 1."
-    },
-    {
-      "id": 74,
-      "question_en": "The NOT logical function:",
-      "question_ar": "الدالة المنطقية NOT:",
-      "options": {
-        "a": "Requires two inputs to compare",
-        "b": "Outputs the exact same value as the input",
-        "c": "Inverts the input value",
-        "d": "Always outputs 0"
-      },
-      "correct_answer": "c",
-      "explanation": "The NOT gate is an inverter; it outputs the opposite of the input value."
-    },
-    {
-      "id": 75,
-      "question_en": "To construct an XOR gate in a Neural Network, you typically combine:",
-      "question_ar": "لبناء بوابة XOR في شبكة عصبية، عادةً ما تقوم بدمج:",
-      "options": {
-        "a": "Only AND gates",
-        "b": "Only OR gates",
-        "c": "OR, NAND, and AND gates",
-        "d": "A single linear equation"
-      },
-      "correct_answer": "c",
-      "explanation": "XOR cannot be represented by a single standard logic gate's equation; it requires combining OR and NAND outputs into a final AND gate."
-    },
-    {
-      "id": 76,
-      "question_en": "If a Neural Network performs poorly on the 'Test Sample', it implies:",
-      "question_ar": "إذا كان أداء الشبكة العصبية ضعيفاً في 'عينة الاختبار'، فهذا يعني:",
-      "options": {
-        "a": "The model is perfect",
-        "b": "The training sample might have been too small or the algorithm inappropriate",
-        "c": "The CPU is too slow",
-        "d": "The input data is quantitative"
-      },
-      "correct_answer": "b",
-      "explanation": "Poor test performance indicates a failure to generalize, often due to insufficient training data or a poor algorithmic choice."
-    },
-    {
-      "id": 77,
-      "question_en": "What does 'Delta' represent in the context of Neural Networks?",
-      "question_ar": "ماذا تمثل 'دلتا' (Delta) في سياق الشبكات العصبية؟",
-      "options": {
-        "a": "The learning rate",
-        "b": "The error or difference between predicted and actual values",
-        "c": "The number of hidden layers",
-        "d": "The final probability"
-      },
-      "correct_answer": "b",
-      "explanation": "Delta represents the error for a specific element, calculating the difference between the prediction and the actual truth."
-    },
-    {
-      "id": 78,
-      "question_en": "Image processing in Neural Networks involves:",
-      "question_ar": "معالجة الصور في الشبكات العصبية تتضمن:",
-      "options": {
-        "a": "Converting pixels into large matrices of numbers",
-        "b": "Deleting all colors from the image",
-        "c": "Only analyzing images smaller than 10x10 pixels",
-        "d": "Using simple linear regression"
-      },
-      "correct_answer": "a",
-      "explanation": "Images are processed by converting each pixel's brightness (or RGB values) into a numerical matrix."
-    },
-    {
-      "id": 79,
-      "question_en": "Increasing the number of 'Hidden Layers' in a Neural Network:",
-      "question_ar": "زيادة عدد 'الطبقات الخفية' في الشبكة العصبية:",
-      "options": {
-        "a": "Decreases the model's accuracy",
-        "b": "Increases both the capability and the complexity of the network",
-        "c": "Turns it into traditional programming",
-        "d": "Removes the need for weights"
-      },
-      "correct_answer": "b",
-      "explanation": "More hidden layers allow the network to learn more complex patterns, but also increase computational complexity."
-    },
-    {
-      "id": 80,
-      "question_en": "In a biological context, the Neural Rewiring Experiment demonstrated that:",
-      "question_ar": "في السياق البيولوجي، أثبتت تجربة إعادة التوصيل العصبي أن:",
-      "options": {
-        "a": "The brain cannot process new information",
-        "b": "The brain can adapt and learn to process visual data through the auditory cortex",
-        "c": "Animals do not use neural networks",
-        "d": "Vision is entirely disconnected from the brain"
-      },
-      "correct_answer": "b",
-      "explanation": "The experiment showed that the auditory cortex could learn to 'see' when connected to optic nerves, proving the brain's adaptable learning ability."
-    },
-    {
-      "id": 81,
-      "question_en": "In Multi-class classification with K classes, the output layer should have:",
-      "question_ar": "في التصنيف متعدد الفئات (K classes)، يجب أن تحتوي طبقة المخرجات على:",
-      "options": {
-        "a": "1 output unit",
-        "b": "2 output units",
-        "c": "K output units",
-        "d": "K-1 output units"
-      },
-      "correct_answer": "c",
-      "explanation": "Each output unit represents the probability of one of the K classes."
-    },
-    {
-      "id": 82,
-      "question_en": "The 'Cost Function' in Neural Networks primarily measures:",
-      "question_ar": "دالة التكلفة في الشبكات العصبية تقيس بشكل أساسي:",
-      "options": {
-        "a": "The speed of the network",
-        "b": "The distance between predicted and actual values",
-        "c": "The number of hidden layers",
-        "d": "The size of the dataset"
-      },
-      "correct_answer": "b",
-      "explanation": "The cost function quantifies the error between the network's prediction and the true label."
-    },
-    {
-      "id": 83,
-      "question_en": "Which process involves calculating the output 'y' from inputs 'x' using current weights?",
-      "question_ar": "أي عملية تتضمن حساب المخرجات 'y' من المدخلات 'x' باستخدام الأوزان الحالية؟",
-      "options": {
-        "a": "Backpropagation",
-        "b": "Forward Propagation",
-        "c": "Gradient Checking",
-        "d": "Random Initialization"
-      },
-      "correct_answer": "b",
-      "explanation": "Forward propagation is the pass where inputs are transformed into a final prediction."
-    },
-    {
-      "id": 84,
-      "question_en": "In the weight notation, what does the superscript usually refer to?",
-      "question_ar": "في ترميز الأوزان، ماذا يشير الرقم العلوي عادةً؟",
-      "options": {
-        "a": "The neuron number",
-        "b": "The layer number",
-        "c": "The sample index",
-        "d": "The weight squared"
-      },
-      "correct_answer": "b",
-      "explanation": "Superscripts in Theta notation typically denote the layer level."
-    },
-    {
-      "id": 85,
-      "question_en": "Backpropagation is used specifically to:",
-      "question_ar": "يُستخدم المسار الخلفي (Backpropagation) خصيصاً لـ:",
-      "options": {
-        "a": "Initialize weights to zero",
-        "b": "Find the error (Delta) and its partial derivatives",
-        "c": "Increase the number of features",
-        "d": "Plot the decision boundary"
-      },
-      "correct_answer": "b",
-      "explanation": "Backpropagation calculates the gradients needed to update the weights."
-    },
-    {
-      "id": 86,
-      "question_en": "Why shouldn't weights be initialized to all zeros in a Neural Network?",
-      "question_ar": "لماذا لا ينبغي تهيئة الأوزان كلها بأصفار في الشبكة العصبية؟",
-      "options": {
-        "a": "The network becomes too fast",
-        "b": "It prevents symmetry breaking",
-        "c": "All neurons in a layer will learn the same thing",
-        "d": "It causes memory errors"
-      },
-      "correct_answer": "c",
-      "explanation": "Zero initialization leads to symmetry where all hidden units remain identical during training."
-    },
-    {
-      "id": 87,
-      "question_en": "The ideal range for Random Initialization of weights is typically:",
-      "question_ar": "النطاق المثالي للتهيئة العشوائية للأوزان يتراوح عادة بين:",
-      "options": {
-        "a": "[-100, 100]",
-        "b": "Small values near zero (e.g. [-0.01, 0.01])",
-        "c": "[0, 1]",
-        "d": "[10, 20]"
-      },
-      "correct_answer": "b",
-      "explanation": "Small random values break symmetry without causing slow optimization or divergence."
-    },
-    {
-      "id": 88,
-      "question_en": "Gradient Checking is performed to verify that:",
-      "question_ar": "يتم إجراء الفحص الاشتقاقي للتأكد من أن:",
-      "options": {
-        "a": "The dataset is clean",
-        "b": "The backpropagation implementation is bug-free",
-        "c": "The computer is fast enough",
-        "d": "The images are high resolution"
-      },
-      "correct_answer": "b",
-      "explanation": "It compares analytical gradients with numerical approximations to catch code errors."
-    },
-    {
-      "id": 89,
-      "question_en": "If the difference between Numerical and Analytical gradients is very small (e.g. < 1e-7):",
-      "question_ar": "إذا كان الفرق بين الاشتقاق العددي والتحليلي صغيراً جداً (مثلاً < 1e-7):",
-      "options": {
-        "a": "The network has a major bug",
-        "b": "The backpropagation implementation is likely correct",
-        "c": "You must increase the learning rate",
-        "d": "The bias unit is missing"
-      },
-      "correct_answer": "b",
-      "explanation": "A very small difference confirms that the derivation and code are correct."
-    },
-    {
-      "id": 90,
-      "question_en": "Which NN type is primarily used for image and video analysis?",
-      "question_ar": "أي نوع من الشبكات العصبية يستخدم بشكل أساسي لتحليل الصور والفيديو؟",
-      "options": {
-        "a": "RNN",
-        "b": "CNN (Convolutional)",
-        "c": "SOM",
-        "d": "RBF"
-      },
-      "correct_answer": "b",
-      "explanation": "CNNs are designed to process grid-like data such as pixels in images."
-    },
-    {
-      "id": 91,
-      "question_en": "Recurrent Neural Networks (RNN) are best suited for:",
-      "question_ar": "الشبكات العصبية المتكررة (RNN) هي الأنسب لـ:",
-      "options": {
-        "a": "Static image classification",
-        "b": "Text translation and sequences",
-        "c": "Calculating house prices",
-        "d": "Sorting matrices"
-      },
-      "correct_answer": "b",
-      "explanation": "RNNs handle sequential data where the order of information is critical."
-    },
-    {
-      "id": 92,
-      "question_en": "In the Backward Pass, the error of the output layer (Delta L) is calculated as:",
-      "question_ar": "في المسار الخلفي، يتم حساب خطأ الطبقة الأخيرة (Delta L) كـ:",
-      "options": {
-        "a": "Activation + y",
-        "b": "Activation - y",
-        "c": "Theta * x",
-        "d": "Sigmoid(z)"
-      },
-      "correct_answer": "b",
-      "explanation": "The output error is the difference between predicted activation and actual target value."
-    },
-    {
-      "id": 93,
-      "question_en": "Numerical Gradient is calculated using a small value called:",
-      "question_ar": "يتم حساب الاشتقاق العددي باستخدام قيمة صغيرة تسمى:",
-      "options": {
-        "a": "Alpha",
-        "b": "Lambda",
-        "c": "Epsilon",
-        "d": "Theta"
-      },
-      "correct_answer": "c",
-      "explanation": "Epsilon is the tiny offset used to approximate the derivative numerically."
-    },
-    {
-      "id": 94,
-      "question_en": "Which NN type is associated with Unsupervised Learning?",
-      "question_ar": "أي نوع من الشبكات العصبية يرتبط بالتعلم بدون إشراف؟",
-      "options": {
-        "a": "FNN",
-        "b": "CNN",
-        "c": "SOM (Self-Organizing Maps)",
-        "d": "MNN"
-      },
-      "correct_answer": "c",
-      "explanation": "SOMs are used to map high-dimensional data without explicit labels."
-    },
-    {
-      "id": 95,
-      "question_en": "The primary goal of the 'Update Step' in training is to:",
-      "question_ar": "الهدف الأساسي من 'خطوة التحديث' في التدريب هو:",
-      "options": {
-        "a": "Add more neurons",
-        "b": "Adjust weight values to minimize the cost function",
-        "c": "Delete the bias unit",
-        "d": "Save the dataset"
-      },
-      "correct_answer": "b",
-      "explanation": "Optimization updates the weights to move towards the global minimum of the error function."
+      "explanation": "Scatter matrix visualizes relationships among multiple variables."
     }
   ],
   "short_answer": [
     {
       "id": 1,
-      "question_en": "What is Linear Regression?",
-      "question_ar": "ما هو الانحدار الخطي؟",
-      "answer": "Linear regression is a supervised learning method used to model the relationship between input and output variables using a straight line."
+      "question_en": "Why do traditional systems struggle with Big Data?",
+      "question_ar": "لماذا تواجه الأنظمة التقليدية صعوبة في التعامل مع البيانات الضخمة؟",
+      "answer": "Traditional systems struggle with Big Data because:\n\n• Limited scalability → rely on single-server (vertical scaling).\n• Cannot handle huge data volumes → performance drops with TB/PB data.\n• Poor support for unstructured data → designed for structured tables only.\n• Slow processing → lack distributed and parallel processing.\n• High cost → scaling hardware becomes expensive."
     },
     {
       "id": 2,
-      "question_en": "Write the general equation of a straight line used in Linear Regression.",
-      "question_ar": "اكتب المعادلة العامة للخط المستقيم في الانحدار الخطي.",
-      "answer": "y = mx + b"
+      "question_en": "Explain the main components of Big Data Architecture.",
+      "question_ar": "اشرح المكونات الرئيسية لبنية البيانات الضخمة.",
+      "answer": "The main components of Big Data Architecture are:\n\nIngestion → Collects data from sources (batch or streaming).\nStorage → Stores large data in distributed systems (e.g., HDFS).\nProcessing → Transforms and analyzes data (batch or real-time).\nAnalytics → Presents insights via dashboards, queries, or ML models."
     },
     {
       "id": 3,
-      "question_en": "What is the purpose of Gradient Descent in machine learning?",
-      "question_ar": "ما الهدف من Gradient Descent في تعلم الآلة؟",
-      "answer": "It is used to minimize the cost function by updating model parameters iteratively."
+      "question_en": "What is the difference between ETL and ELT?",
+      "question_ar": "ما الفرق بين ETL و ELT؟",
+      "answer": "ETL transforms data before loading it into storage, while ELT loads data first and then performs transformation inside the storage system."
     },
     {
       "id": 4,
-      "question_en": "What is a Matrix Transpose?",
-      "question_ar": "ما هو نقل المصفوفة؟",
-      "answer": "It is an operation that swaps rows and columns of a matrix."
+      "question_en": "Define Exploratory Data Analysis (EDA).",
+      "question_ar": "عرّف تحليل البيانات الاستكشافي (EDA).",
+      "answer": "EDA is analyzing and visualizing data to understand patterns, find outliers, and gain insights before modeling."
     },
     {
       "id": 5,
-      "question_en": "What is the difference between an Identity Matrix and a Zero Matrix?",
-      "question_ar": "ما الفرق بين مصفوفة الوحدة ومصفوفة الصفر؟",
-      "answer": "Identity matrix has ones on the diagonal, while zero matrix contains only zeros."
-    },
-    {
-      "id": 6,
-      "question_en": "Explain the main difference between Regression and Classification.",
-      "question_ar": "اشرح الفرق الرئيسي بين الانحدار والتصنيف.",
-      "answer": "Regression predicts continuous numerical values (e.g., house prices), while Classification predicts discrete categories or labels (e.g., Spam or Not Spam)."
-    },
-    {
-      "id": 7,
-      "question_en": "What is the primary role of the Sigmoid function in Logistic Regression?",
-      "question_ar": "ما هو الدور الأساسي لدالة السيجمويد في الانحدار اللوجستي؟",
-      "answer": "The Sigmoid function maps any input value into a range between 0 and 1, allowing the output to be interpreted as a probability."
-    },
-    {
-      "id": 8,
-      "question_en": "How does Regularization help in preventing Overfitting?",
-      "question_ar": "كيف تساعد عملية التنعيم (Regularization) في منع الضبط الزائد؟",
-      "answer": "Regularization adds a penalty term (Lambda) to the cost function, which discourages the model from assigning excessively large weights to features, thereby simplifying the model and improving generalization."
-    },
-    {
-      "id": 9,
-      "question_en": "Explain the concept of 'Hidden Layers' in a Neural Network.",
-      "question_ar": "اشرح مفهوم 'الطبقات الخفية' في الشبكة العصبية.",
-      "answer": "Hidden layers are the layers of neurons between the input and output layers. They receive inputs from the previous layer, apply weights and activation functions, and pass the results to the next layer. Increasing their number allows the network to learn more complex patterns."
-    },
-    {
-      "id": 10,
-      "question_en": "How are images processed as inputs in a Neural Network?",
-      "question_ar": "كيف يتم معالجة الصور كمدخلات في الشبكة العصبية؟",
-      "answer": "Images are converted into a matrix of numbers where each number represents a pixel's value (e.g., brightness or RGB channels). These matrices are then fed as inputs (features) into the neural network."
-    },
-    {
-      "id": 11,
-      "question_en": "Briefly describe the Neural Rewiring Experiment and its significance to Neural Networks.",
-      "question_ar": "صف باختصار تجربة إعادة التوصيل العصبي وأهميتها بالنسبة للشبكات العصبية.",
-      "answer": "The experiment connected optic nerves to the brain's auditory cortex, showing that the animal could still 'see'. This demonstrated the brain's ability to learn and adapt to new input types, inspiring the adaptable, data-driven learning architecture of Artificial Neural Networks."
-    },
-    {
-      "id": 12,
-      "question_en": "Why is it necessary to perform 'Gradient Checking' during the development of a Neural Network?",
-      "question_ar": "لماذا من الضروري إجراء 'الفحص الاشتقاقي' أثناء تطوير الشبكة العصبية؟",
-      "answer": "Neural Networks often have hidden bugs that allow the code to run but produce inaccurate results. Gradient checking compares the Analytical gradient (from backpropagation) with a Numerical gradient approximation to ensure the mathematical implementation is correct."
-    },
-    {
-      "id": 13,
-      "question_en": "Explain the difference between Forward Propagation and Backward Propagation in the training cycle.",
-      "question_ar": "اشرح الفرق بين المسار الأمامي والمسار الخلفي في دورة التدريب.",
-      "answer": "Forward Propagation passes input data through the layers to generate a prediction (output). Backward Propagation calculates the error between that prediction and the true label, then propagates that error backward through the layers to determine how to adjust the weights."
-    },
-    {
-      "id": 14,
-      "question_en": "What is the consequence of using 'Zero Initialization' for all weights in a Neural Network?",
-      "question_ar": "ما هي نتيجة استخدام 'التهيئة الصفرية' لجميع الأوزان في الشبكة العصبية؟",
-      "answer": "If all weights start at zero, all hidden units in a layer will calculate the exact same activation and error values. This results in 'symmetry' where all neurons learn identical features, effectively making multiple neurons behave like a single one and preventing the network from learning complex patterns."
+      "question_en": "Explain the difference between univariate and multivariate plots.",
+      "question_ar": "اشرح الفرق بين الرسوم أحادية المتغير ومتعددة المتغيرات.",
+      "answer": "Univariate plots analyze a single variable, while multivariate plots analyze relationships between two or more variables."
     }
   ],
   "code": [
     {
       "id": 1,
-      "task": "Write a program that calculates Linear Regression using Gradient Descent for a simple dataset.",
-      "code": "import numpy as np\n\ndef gradient_descent(x, y, lr=0.01, epochs=1000):\n    m = len(x)\n    theta0 = 0\n    theta1 = 0\n\n    for _ in range(epochs):\n        y_pred = theta0 + theta1 * x\n        error = y_pred - y\n\n        theta0 -= lr * (1/m) * np.sum(error)\n        theta1 -= lr * (1/m) * np.sum(error * x)\n\n    return theta0, theta1\n\nx = np.array([100, 95, 90, 80])\ny = np.array([300, 285, 270, 240])\n\nprint(gradient_descent(x, y))"
+      "task": "Load a dataset and display basic statistical summary (mean, median, std).",
+      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.mean(numeric_only=True))\nprint(df.median(numeric_only=True))\nprint(df.std(numeric_only=True))"
     },
     {
       "id": 2,
-      "task": "Write a Python program to load a dataset using pandas and display the first 5 rows.",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nprint(df.head())"
+      "task": "Create a histogram to visualize the distribution of a numeric column.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\ndf['score'].hist()\nplt.show()"
     },
     {
       "id": 3,
-      "task": "Write a Python program to split data into training and testing sets using scikit-learn.",
-      "code": "from sklearn.model_selection import train_test_split\n\n# Example data\nX = [[1], [2], [3], [4], [5]]\ny = [2, 4, 6, 8, 10]\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nprint('X_train:', X_train)\nprint('X_test:', X_test)\nprint('y_train:', y_train)\nprint('y_test:', y_test)"
+      "task": "Generate a box plot to detect outliers in a dataset.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\ndf.boxplot()\nplt.show()"
     },
     {
       "id": 4,
-      "task": "Train a simple Linear Regression model on sample data and print the model coefficients.",
-      "code": "from sklearn.linear_model import LinearRegression\nimport numpy as np\n\n# Sample data\nX = np.array([[1], [2], [3], [4], [5]])\ny = np.array([2, 4, 6, 8, 10])\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\nprint('Coefficient:', model.coef_)\nprint('Intercept:', model.intercept_)"
+      "task": "Create a correlation matrix and visualize it.",
+      "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\nsns.heatmap(df.corr(numeric_only=True))\nplt.show()"
     },
     {
       "id": 5,
-      "task": "Write code to perform K-Means clustering on a dataset with 3 clusters.",
-      "code": "from sklearn.cluster import KMeans\nimport numpy as np\n\n# Sample data\nX = np.array([[1, 2], [1, 4], [1, 0],\n              [10, 2], [10, 4], [10, 0],\n              [5, 2], [6, 3]])\n\nkmeans = KMeans(n_clusters=3, random_state=42, n_init=10)\nkmeans.fit(X)\n\nprint('Cluster Centers:', kmeans.cluster_centers_)\nprint('Labels:', kmeans.labels_)"
+      "task": "Create a histogram using NumPy random data.",
+      "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\ndata = np.random.randn(1000)\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Example')\nplt.show()"
     },
     {
       "id": 6,
-      "task": "Write Python code to evaluate a classification model using accuracy score.",
-      "code": "from sklearn.metrics import accuracy_score\n\n# Example values\ny_test = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 1, 0, 0]\n\naccuracy = accuracy_score(y_test, y_pred)\nprint('Accuracy:', accuracy)"
+      "task": "Create a density plot (KDE) for a dataset.",
+      "code": "import seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = sns.load_dataset('iris')\nsns.kdeplot(data=df, x='sepal_length', fill=True)\nplt.xlabel('Sepal Length')\nplt.ylabel('Density')\nplt.title('Density Plot of Sepal Length')\nplt.show()"
     },
     {
       "id": 7,
-      "task": "Write a Python program to apply One-Hot Encoding to a categorical column.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C']})\n\nencoded_df = pd.get_dummies(df, columns=['category'])\nprint(encoded_df)"
+      "task": "Generate a box and whisker plot using sample data.",
+      "code": "import matplotlib.pyplot as plt\n\ndata = [10, 15, 18, 20, 22, 25, 28, 30, 32, 35]\nfig, ax = plt.subplots()\nax.boxplot(data)\nax.set_title('Box and Whisker Plot')\nplt.show()"
     },
     {
       "id": 8,
-      "task": "Write code to perform Label Encoding on a dataset column.",
-      "code": "from sklearn.preprocessing import LabelEncoder\nimport pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C']})\n\nle = LabelEncoder()\ndf['encoded'] = le.fit_transform(df['category'])\n\nprint(df)"
+      "task": "Create a correlation matrix heatmap with annotations.",
+      "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndata = {'A': [1, 2, 3, 4, 5], 'B': [5, 4, 3, 2, 1], 'C': [2, 3, 1, 4, 5]}\ndf = pd.DataFrame(data)\nc_matrix = df.corr()\nsns.heatmap(c_matrix, annot=True, cmap='coolwarm')\nplt.title('Correlation Matrix')\nplt.show()"
     },
     {
       "id": 9,
-      "task": "Write a program to apply Frequency Encoding to a categorical feature.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({'category': ['A', 'B', 'A', 'C', 'B', 'A']})\n\nfreq = df['category'].value_counts()\ndf['encoded'] = df['category'].map(freq)\n\nprint(df)"
+      "task": "Create a scatter matrix plot for multivariate analysis.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn import datasets\n\niris = datasets.load_iris()\ndf = pd.DataFrame(iris.data, columns=iris.feature_names)\npd.plotting.scatter_matrix(df, diagonal='hist', figsize=(8, 7))\nplt.show()"
     },
     {
       "id": 10,
-      "task": "Write Python code to split a dataset into features and labels.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'feature1': [1, 2, 3],\n    'feature2': [4, 5, 6],\n    'target': [0, 1, 0]\n})\n\nX = df.drop('target', axis=1)\ny = df['target']\n\nprint('Features:\\n', X)\nprint('Labels:\\n', y)"
+      "task": "Simulate distributed storage by splitting a dataset into multiple files (HDFS-style).",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nchunk_size = len(df) // 3\nfor i in range(3):\n    chunk = df[i*chunk_size:(i+1)*chunk_size]\n    chunk.to_csv(f'block_{i}.csv', index=False)"
     },
     {
       "id": 11,
-      "task": "Write a simple program that builds a basic Artificial Neural Network using Keras.",
-      "code": "from tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense\nimport numpy as np\n\n# Sample data\nX = np.array([[0], [1], [2], [3]])\ny = np.array([0, 1, 1, 0])\n\nmodel = Sequential()\nmodel.add(Dense(8, activation='relu', input_shape=(1,)))\nmodel.add(Dense(1, activation='sigmoid'))\n\nmodel.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])\nmodel.fit(X, y, epochs=10, verbose=1)"
+      "task": "Simulate MapReduce word count using Python.",
+      "code": "from collections import defaultdict\n\ntext = \"big data big data analytics\"\nwords = text.split()\n\n# Map phase\nmapped = [(word, 1) for word in words]\n\n# Reduce phase\nreduced = defaultdict(int)\nfor word, count in mapped:\n    reduced[word] += count\n\nprint(dict(reduced))"
     },
     {
       "id": 12,
-      "task": "Load a CSV dataset using pandas and display its first 5 rows.",
-      "code": "import pandas as pd\n\n# Load dataset\ndf = pd.read_csv('data.csv')\n\n# Display first 5 rows\nprint(df.head())"
+      "task": "Simulate Spark-like in-memory processing with aggregation.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nresult = df.groupby('category')['value'].sum()\nprint(result)"
     },
     {
       "id": 13,
-      "task": "Write code to check dataset shape and data types.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'A': [1, 2, 3],\n    'B': [4.0, 5.5, 6.1],\n    'C': ['x', 'y', 'z']\n})\n\nprint('Shape:', df.shape)\nprint('Data Types:\\n', df.dtypes)"
+      "task": "Store structured and unstructured data separately.",
+      "code": "import json\n\nstructured_data = [{'id': 1, 'name': 'Ali'}, {'id': 2, 'name': 'Sara'}]\nunstructured_data = ['This is a text', 'Another random sentence']\n\nwith open('structured.json', 'w') as f:\n    json.dump(structured_data, f)\n\nwith open('unstructured.txt', 'w') as f:\n    for line in unstructured_data:\n        f.write(line + '\\n')"
     },
     {
       "id": 14,
-      "task": "Write Python code to display statistical summary of a dataset.",
-      "code": "import pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'A': [1, 2, 3, 4, 5],\n    'B': [10, 20, 30, 40, 50]\n})\n\nprint(df.describe())"
-    },
-    {
-      "id": 15,
-      "task": "Write code to split a dataset into training and testing sets.",
-      "code": "from sklearn.model_selection import train_test_split\nimport pandas as pd\n\n# Sample data\ndf = pd.DataFrame({\n    'feature': [1, 2, 3, 4, 5],\n    'target': [2, 4, 6, 8, 10]\n})\n\nX = df[['feature']]\ny = df['target']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nprint('X_train:\\n', X_train)\nprint('X_test:\\n', X_test)"
-    },
-    {
-      "id": 16,
-      "task": "Write Python code to evaluate a classification model using confusion matrix and accuracy.",
-      "code": "from sklearn.metrics import confusion_matrix, accuracy_score\n\n# Example values\ny_test = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 1, 0, 0]\n\ncm = confusion_matrix(y_test, y_pred)\nacc = accuracy_score(y_test, y_pred)\n\nprint('Confusion Matrix:\\n', cm)\nprint('Accuracy:', acc)"
+      "task": "Simulate fault tolerance by creating data replicas.",
+      "code": "import shutil\n\noriginal_file = 'data.csv'\nreplica1 = 'data_replica1.csv'\nreplica2 = 'data_replica2.csv'\n\nshutil.copy(original_file, replica1)\nshutil.copy(original_file, replica2)\n\nprint('Replicas created successfully')"
     }
   ],
   "fill_in_the_blank": [
     {
       "id": 1,
-      "question": "Which specific phenomenon occurs when a model captures the underlying data patterns but also interprets random noise as signal, leading to poor generalization?",
-      "answer": "Overfitting"
+      "question": "RDBMS systems are not optimized for ______-scale Big Data workloads.",
+      "answer": "petabyte"
     },
     {
       "id": 2,
-      "question": "In the context of model evaluation, which problem is indicated by high training error and high testing error, suggesting the model is too simple?",
-      "answer": "Underfitting"
+      "question": "One limitation of traditional RDBMS in Big Data is limited ______.",
+      "answer": "scalability"
     },
     {
       "id": 3,
-      "question": "Which type of machine learning involves an agent learning through a trial-and-error process guided by rewards and penalties?",
-      "answer": "Reinforcement learning"
+      "question": "Apache Hadoop is designed for ______ storage and processing.",
+      "answer": "distributed"
     },
     {
       "id": 4,
-      "question": "To prevent the 'symmetry problem' during training, with what kind of values should the weights of a neural network be initialized?",
-      "answer": "Small random"
+      "question": "Hadoop provides built-in ______ tolerance.",
+      "answer": "fault"
     },
     {
       "id": 5,
-      "question": "Which algorithmic strategy handles multi-class classification by training one binary classifier for each class against all others combined?",
-      "answer": "One-vs-All"
+      "question": "NoSQL databases can handle ______ and semi-structured data.",
+      "answer": "unstructured"
     },
     {
       "id": 6,
-      "question": "In a neural network, which specific component acts as a receiving part of a neuron, analogous to the mathematical inputs (x)?",
-      "answer": "Dendrites"
+      "question": "HDFS stands for Hadoop Distributed ______ System.",
+      "answer": "File"
     },
     {
       "id": 7,
-      "question": "Which mathematical function maps linear inputs to a probability range between 0 and 1, used extensively in Logistic Regression?",
-      "answer": "Sigmoid function"
+      "question": "Apache Spark is faster than MapReduce because it uses ______ processing.",
+      "answer": "in-memory"
     },
     {
       "id": 8,
-      "question": "What is the name of the constant input unit, typically set to x0 = 1, used to shift the activation function in a neural network layer?",
-      "answer": "Bias unit"
+      "question": "Apache Hive uses ______ Query Language (HQL).",
+      "answer": "Hive"
     },
     {
       "id": 9,
-      "question": "Which optimization parameter determines the magnitude of the update applied to the model weights during each iteration of Gradient Descent?",
-      "answer": "Learning rate"
+      "question": "Hadoop clusters can be managed using Apache ______.",
+      "answer": "Ambari"
     },
     {
       "id": 10,
-      "question": "In the cost function for Logistic Regression, which mathematical term is added to penalize large parameter values and prevent overfitting?",
-      "answer": "Regularization"
+      "question": "Hadoop supports structured, semi-structured, and ______ data.",
+      "answer": "unstructured"
     },
     {
       "id": 11,
-      "question": "What is the term for the matrix operation that swaps the rows and columns of a given matrix A?",
-      "answer": "Transpose"
+      "question": "EDA helps in identifying patterns, trends, and ______ in data.",
+      "answer": "anomalies"
     },
     {
       "id": 12,
-      "question": "Which specific type of matrix has values of one on the main diagonal and zeros everywhere else?",
-      "answer": "Identity matrix"
+      "question": "Measures like mean, median, and mode are called ______ tendency.",
+      "answer": "central"
     },
     {
       "id": 13,
-      "question": "What is the term for a matrix that has a determinant of zero and therefore does not have an inverse?",
-      "answer": "Singular matrix"
+      "question": "Dispersion measures the ______ of data.",
+      "answer": "spread"
     },
     {
       "id": 14,
-      "question": "Which debugging technique compares analytical gradients from backpropagation with numerical approximations to ensure implementation correctness?",
-      "answer": "Gradient checking"
+      "question": "A ______ is used to visualize the distribution of a numeric variable.",
+      "answer": "histogram"
     },
     {
       "id": 15,
-      "question": "Which process calculates the activation values of neurons layer by layer, starting from the input and moving toward the output?",
-      "answer": "Forward propagation"
+      "question": "Box plots are useful for detecting ______ in data.",
+      "answer": "outliers"
     },
     {
       "id": 16,
-      "question": "Which ML type requires labeled data?",
-      "answer": "Supervised learning"
+      "question": "A correlation matrix is used to analyze ______ between variables.",
+      "answer": "relationships"
     },
     {
       "id": 17,
-      "question": "Which data type represents categories such as \"Red, Blue, Green\"?",
-      "answer": "Categorical data"
+      "question": "Scatter plots are used to visualize the relationship between ______ variables.",
+      "answer": "two"
     },
     {
       "id": 18,
-      "question": "Which metric combines precision and recall?",
-      "answer": "F1 score"
+      "question": "The main goal of EDA is data ______ and understanding.",
+      "answer": "exploration"
     },
     {
       "id": 19,
-      "question": "Which metric measures how many positive predictions were correct?",
-      "answer": "Precision"
+      "question": "Density plots show data distribution in a ______ curve.",
+      "answer": "smooth"
     },
     {
       "id": 20,
-      "question": "Gradient Descent is mainly used for:",
-      "answer": "Optimization"
+      "question": "Matplotlib is a popular Python library used for ______.",
+      "answer": "visualization"
     },
     {
       "id": 21,
-      "question": "In a neural network training cycle, which algorithm is used to compute the gradients of the cost function by propagating the error backwards?",
-      "answer": "Backpropagation"
+      "question": "The growth of ______ devices is a major cause of data explosion.",
+      "answer": "IoT"
     },
     {
       "id": 22,
-      "question": "Which regularization parameter, often denoted as Lambda, balances the trade-off between fitting training data and keeping weights small?",
-      "answer": "Regularization parameter"
+      "question": "Big Data includes structured, semi-structured, and ______ data.",
+      "answer": "unstructured"
     },
     {
       "id": 23,
-      "question": "What is the result of applying the Sigmoid function to an input value of z = 0?",
-      "answer": "0.5"
+      "question": "______ refers to the size or scale of data.",
+      "answer": "Volume"
     },
     {
       "id": 24,
-      "question": "Which neural network architecture is specifically optimized for grid-like data such as image pixels?",
-      "answer": "CNN"
+      "question": "______ describes how fast data is generated and processed.",
+      "answer": "Velocity"
     },
     {
       "id": 25,
-      "question": "Which machine learning task is concerned with predicting a discrete class label rather than a continuous numerical value?",
-      "answer": "Classification"
+      "question": "______ refers to different data types like text, images, and videos.",
+      "answer": "Variety"
     },
     {
       "id": 26,
-      "question": "What is the name of the boundary that a classification algorithm uses to separate different class labels in the feature space?",
-      "answer": "Decision Boundary"
+      "question": "______ is related to data accuracy and reliability.",
+      "answer": "Veracity"
     },
     {
       "id": 27,
-      "question": "In Linear Regression, which analytical method directly calculates the optimal parameter values without requiring an iterative optimization process?",
-      "answer": "Normal Equation"
+      "question": "Traditional systems rely on ______-server architecture.",
+      "answer": "single"
     },
     {
       "id": 28,
-      "question": "Which preprocessing technique scales input features to a similar range to ensure faster convergence of Gradient Descent?",
-      "answer": "Feature scaling"
+      "question": "Distributed computing allows multiple ______ to work together.",
+      "answer": "machines"
     },
     {
       "id": 29,
-      "question": "Which logical gate outputs 1 only if both of its binary inputs are 1?",
-      "answer": "AND gate"
+      "question": "The ______ layer is responsible for collecting data from sources.",
+      "answer": "ingestion"
     },
     {
       "id": 30,
-      "question": "Which logical gate can be constructed by combining OR, NAND, and AND gates in a neural network to handle non-linearly separable data?",
-      "answer": "XOR gate"
+      "question": "Fraud detection is commonly used in the ______ industry.",
+      "answer": "finance"
     },
     {
       "id": 31,
-      "question": "In image processing, what is the term for the intensity values of the grid points that are used as inputs for a neural network?",
-      "answer": "Pixels"
+      "question": "One major challenge in Big Data systems is data ______.",
+      "answer": "security"
     },
     {
       "id": 32,
-      "question": "What is the term for the layers situated between the input and output layers that allow a neural network to learn complex patterns?",
-      "answer": "Hidden layers"
+      "question": "Apache Kafka is mainly used for ______ data ingestion.",
+      "answer": "streaming"
     },
     {
       "id": 33,
-      "question": "Which optimization issue arises when a learning rate is too large, causing the algorithm to overshoot the minimum and diverge?",
-      "answer": "Non-convergence"
+      "question": "HDFS is a ______ file system used for large-scale storage.",
+      "answer": "distributed"
     },
     {
       "id": 34,
-      "question": "What is the name of the error term, denoted by δ (Delta), which measures the difference between activation and target values during backpropagation?",
-      "answer": "Layer error"
+      "question": "In ELT, transformation happens ______ loading the data.",
+      "answer": "after"
     },
     {
       "id": 35,
-      "question": "Which matrix contains only zeros and is used as a baseline in various linear algebra operations?",
-      "answer": "Zero matrix"
+      "question": "Sharding is used for ______ data into smaller parts.",
+      "answer": "partitioning"
     },
     {
       "id": 36,
-      "question": "In Gradient Descent, in which direction relative to the gradient are the model parameters updated to minimize the cost function?",
-      "answer": "Opposite direction"
+      "question": "Geo-replication improves geographic ______ of data.",
+      "answer": "availability"
     },
     {
       "id": 37,
-      "question": "Which type of machine learning uses data to find hidden structures or clusters without being provided with explicit labels?",
-      "answer": "Unsupervised learning"
+      "question": "______ services help improve scalability and autoscaling.",
+      "answer": "stateless"
     },
     {
       "id": 38,
-      "question": "What is the term for the specific data subset that is used to provide an unbiased final evaluation of a trained model's performance?",
-      "answer": "Test set"
+      "question": "Leader election is part of ______ availability mechanisms.",
+      "answer": "high"
     },
     {
       "id": 39,
-      "question": "In a neural network, which mathematical value 'a' represents the output of a neuron after it has been processed by an activation function?",
-      "answer": "Activation"
+      "question": "Encryption is part of the ______ layer in Big Data systems.",
+      "answer": "security"
     },
     {
       "id": 40,
-      "question": "Which encoding technique represents each categorical value as a separate binary column, thereby increasing the dimensionality of the dataset?",
-      "answer": "One-Hot Encoding"
-    },
-    {
-      "id": 41,
-      "question": "Which type of regression models the relationship between variables as an nth-degree polynomial to capture non-linear trends?",
-      "answer": "Polynomial regression"
-    },
-    {
-      "id": 42,
-      "question": "Which specific metric measures the ability of a classification model to correctly identify all relevant instances within a dataset?",
-      "answer": "Recall"
-    },
-    {
-      "id": 43,
-      "question": "In the context of Big Data, which specific term refers to the velocity, volume, and variety of information that traditional systems cannot process?",
-      "answer": "Big Data"
-    },
-    {
-      "id": 44,
-      "question": "Which specific Big Data processing framework is known for its speed by utilizing in-memory computation instead of disk-based storage?",
-      "answer": "Apache Spark"
-    },
-    {
-      "id": 45,
-      "question": "What is the term for the lightweight messaging protocol used for communication between IoT devices in low-bandwidth environments?",
-      "answer": "MQTT"
-    },
-    {
-      "id": 46,
-      "question": "Which security process ensures that only trusted, digitally signed firmware is allowed to execute during the startup of an IoT device?",
-      "answer": "Secure boot"
-    },
-    {
-      "id": 47,
-      "question": "In robotics, which component is responsible for sensing physical changes in the environment like temperature, light, or proximity?",
-      "answer": "Sensor"
-    },
-    {
-      "id": 48,
-      "question": "What is the term for a robotic component that performs a physical action, such as turning a wheel or opening a valve, in response to a command?",
-      "answer": "Actuator"
-    },
-    {
-      "id": 49,
-      "question": "Which specific framework is used in cybersecurity to identify and categorize threats such as Spoofing, Tampering, and Information Disclosure?",
-      "answer": "STRIDE"
-    },
-    {
-      "id": 50,
-      "question": "Which subfield of machine learning uses multiple hidden layers to extract high-level features from complex, unstructured data?",
-      "answer": "Deep Learning"
+      "question": "Automated failover ensures ______ recovery from failures.",
+      "answer": "immediate"
     }
   ]
 }
