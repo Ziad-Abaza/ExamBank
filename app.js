@@ -184,27 +184,64 @@ const Utils = {
   normalizeString: (str) => {
     if (!str) return '';
     
-    // Convert to lowercase and trim
+    // 1. Convert to lowercase and trim
     let normalized = str.toLowerCase().trim();
     
-    // Remove punctuation and special characters
-    normalized = normalized.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()؟?،!]/g, "");
+    // 2. Replace punctuation and special characters with SPACE instead of removing them
+    // This ensures "Zero-matrix" becomes "zero matrix" instead of "zeromatrix"
+    // Also handles quotes, brackets, and other common symbols
+    normalized = normalized.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()؟?،!"'\[\]\\|<>+@]/g, " ");
     
-    // Normalize Arabic characters
+    // 3. Normalize Arabic characters
     normalized = normalized
       .replace(/[أإآ]/g, "ا") // Normalize Alef
       .replace(/ة/g, "ه")     // Normalize Teh Marbuta
       .replace(/ى/g, "ي")     // Normalize Alef Maksura
       .replace(/[^\u0000-\u007E\u0621-\u064A\u0660-\u0669\s]/g, ""); // Remove diacritics
     
-    // Remove Arabic 'Al-' prefix (ال) from the start of words
+    // 4. Remove Arabic 'Al-' prefix (ال) from the start of words
     // Use a regex that matches 'ال' at the start of the string or after a space
     normalized = normalized.replace(/(^|\s)ال/g, "$1");
     
-    // Replace multiple spaces with a single space
+    // 5. Replace multiple spaces with a single space and trim again
     normalized = normalized.replace(/\s+/g, " ");
     
     return normalized.trim();
+  },
+
+  /**
+   * Calculate Levenshtein distance between two strings.
+   */
+  getLevenshteinDistance: (a, b) => {
+    const matrix = [];
+    for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+    for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+
+    for (let i = 1; i <= b.length; i++) {
+      for (let j = 1; j <= a.length; j++) {
+        if (b.charAt(i - 1) === a.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1];
+        } else {
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j - 1] + 1, // substitution
+            matrix[i][j - 1] + 1,     // insertion
+            matrix[i - 1][j] + 1      // deletion
+          );
+        }
+      }
+    }
+    return matrix[b.length][a.length];
+  },
+
+  /**
+   * Calculate similarity score between 0 and 1.
+   */
+  getStringSimilarity: (str1, str2) => {
+    if (str1 === str2) return 1.0;
+    const distance = Utils.getLevenshteinDistance(str1, str2);
+    const maxLength = Math.max(str1.length, str2.length);
+    if (maxLength === 0) return 1.0;
+    return 1.0 - distance / maxLength;
   },
 
   /**
@@ -218,23 +255,47 @@ const Utils = {
     
     // 1. Exact match after normalization
     if (norm1 === norm2) return true;
+
+    // Detect if the correct answer is primarily Arabic
+    const isArabic = /[\u0600-\u06FF]/.test(norm2);
     
-    // 2. Word-based coverage check
+    // 2. Fuzzy match for the whole string
+    // English: 0.80 threshold (allows minor typos and plurals)
+    // Arabic: 0.90 threshold (remains stricter as requested)
+    const threshold = isArabic ? 0.90 : 0.80;
+    const totalSimilarity = Utils.getStringSimilarity(norm1, norm2);
+    
+    if (totalSimilarity >= threshold) return true;
+    
+    // 3. Word-based coverage check (for phrases)
     const words1 = norm1.split(' ').filter(w => w.length > 1);
     const words2 = norm2.split(' ').filter(w => w.length > 1);
     
     if (words1.length > 0 && words2.length > 0) {
-      // Calculate how many words from the correct answer (words2) are in the user's answer (words1)
-      const matches = words2.filter(w => words1.includes(w));
-      const coverage = matches.length / words2.length;
+      // For each word in the correct answer, check if there's a similar word in the user's answer
+      let matchCount = 0;
+      for (const w2 of words2) {
+        let bestWordSimilarity = 0;
+        for (const w1 of words1) {
+          const sim = Utils.getStringSimilarity(w1, w2);
+          if (sim > bestWordSimilarity) bestWordSimilarity = sim;
+        }
+        
+        // Individual word threshold
+        const wordThreshold = isArabic ? 0.85 : 0.80;
+        if (bestWordSimilarity >= wordThreshold) {
+          matchCount++;
+        }
+      }
       
-      // If the correct answer is short (1-2 words), require 100% match
+      const coverage = matchCount / words2.length;
+      
+      // If the correct answer is short (1-2 words), we rely more on totalSimilarity
       if (words2.length <= 2) {
         return coverage === 1;
       }
       
-      // For longer answers, require at least 80% coverage to prevent single-word matches
-      // This allows for missing one minor word in a long phrase but rejects "ريادة" for "ريادة ابتكارية بحتة"
+      // For longer answers, require at least 80% coverage
       return coverage >= 0.8;
     }
     
