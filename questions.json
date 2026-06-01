@@ -1962,348 +1962,253 @@
   "fill_in_the_blank": [
     {
       "id": 1,
-      "question": "Machine Learning success increased due to ______ and powerful GPUs.",
-      "answer": "big data"
+      "question": "Which specific phenomenon occurs when a model captures the underlying data patterns but also interprets random noise as signal, leading to poor generalization?",
+      "answer": "Overfitting"
     },
     {
       "id": 2,
-      "question": "Traditional programming follows the formula: Data + ______ → Output.",
-      "answer": "rules"
+      "question": "In the context of model evaluation, which problem is indicated by high training error and high testing error, suggesting the model is too simple?",
+      "answer": "Underfitting"
     },
     {
       "id": 3,
-      "question": "Supervised learning requires ______ data.",
-      "answer": "labeled"
+      "question": "Which type of machine learning involves an agent learning through a trial-and-error process guided by rewards and penalties?",
+      "answer": "Reinforcement learning"
     },
     {
       "id": 4,
-      "question": "Clustering is a type of ______ learning.",
-      "answer": "unsupervised"
+      "question": "To prevent the 'symmetry problem' during training, with what kind of values should the weights of a neural network be initialized?",
+      "answer": "Small random"
     },
     {
       "id": 5,
-      "question": "When a model memorizes training data and fails on new data, it is called ______.",
-      "answer": "overfitting"
+      "question": "Which algorithmic strategy handles multi-class classification by training one binary classifier for each class against all others combined?",
+      "answer": "One-vs-All"
     },
     {
       "id": 6,
-      "question": "TensorFlow is a popular ______ library in Python.",
-      "answer": "machine learning"
+      "question": "In a neural network, which specific component acts as a receiving part of a neuron, analogous to the mathematical inputs (x)?",
+      "answer": "Dendrites"
     },
     {
       "id": 7,
-      "question": "Generative AI is used to create new ______ such as images and text.",
-      "answer": "data"
+      "question": "Which mathematical function maps linear inputs to a probability range between 0 and 1, used extensively in Logistic Regression?",
+      "answer": "Sigmoid function"
     },
     {
       "id": 8,
-      "question": "Data bias and high computational cost are examples of ML ______.",
-      "answer": "challenges"
+      "question": "What is the name of the constant input unit, typically set to x0 = 1, used to shift the activation function in a neural network layer?",
+      "answer": "Bias unit"
     },
     {
       "id": 9,
-      "question": "Logistic Regression is used for ______ tasks.",
-      "answer": "classification"
+      "question": "Which optimization parameter determines the magnitude of the update applied to the model weights during each iteration of Gradient Descent?",
+      "answer": "Learning rate"
     },
     {
       "id": 10,
-      "question": "The final stage of ML lifecycle is model ______.",
-      "answer": "deployment"
+      "question": "In the cost function for Logistic Regression, which mathematical term is added to penalize large parameter values and prevent overfitting?",
+      "answer": "Regularization"
     },
     {
       "id": 11,
-      "question": "Machine Learning is a subset of ______.",
-      "answer": "Artificial Intelligence"
+      "question": "What is the term for the matrix operation that swaps the rows and columns of a given matrix A?",
+      "answer": "Transpose"
     },
     {
       "id": 12,
-      "question": "______ is NOT considered an AI branch.",
-      "answer": "Database Management"
+      "question": "Which specific type of matrix has values of one on the main diagonal and zeros everywhere else?",
+      "answer": "Identity matrix"
     },
     {
       "id": 13,
-      "question": "Artificial Neural Networks are mainly composed of neurons and ______ connections.",
-      "answer": "weighted"
+      "question": "What is the term for a matrix that has a determinant of zero and therefore does not have an inverse?",
+      "answer": "Singular matrix"
     },
     {
       "id": 14,
-      "question": "Convolutional Neural Networks (CNN) are commonly used for ______ processing.",
-      "answer": "image"
+      "question": "Which debugging technique compares analytical gradients from backpropagation with numerical approximations to ensure implementation correctness?",
+      "answer": "Gradient checking"
     },
     {
       "id": 15,
-      "question": "ANN is a specific type of ______ algorithm.",
-      "answer": "Machine Learning"
+      "question": "Which process calculates the activation values of neurons layer by layer, starting from the input and moving toward the output?",
+      "answer": "Forward propagation"
     },
     {
       "id": 16,
-      "question": "Red, Blue, and Green are examples of ______ data.",
-      "answer": "qualitative"
+      "question": "Which ML type requires labeled data?",
+      "answer": "Supervised learning"
     },
     {
       "id": 17,
-      "question": "One-Hot Encoding creates a separate ______ column for each category.",
-      "answer": "binary"
+      "question": "Which data type represents categories such as \"Red, Blue, Green\"?",
+      "answer": "Categorical data"
     },
     {
       "id": 18,
-      "question": "Frequency Encoding replaces categories with their occurrence ______.",
-      "answer": "frequency"
+      "question": "Which metric combines precision and recall?",
+      "answer": "F1 score"
     },
     {
       "id": 19,
-      "question": "Public datasets such as Kaggle and UCI are considered ______ sources.",
-      "answer": "reliable"
+      "question": "Which metric measures how many positive predictions were correct?",
+      "answer": "Precision"
     },
     {
       "id": 20,
-      "question": "Data cleaning and preprocessing improve dataset ______.",
-      "answer": "quality"
+      "question": "Gradient Descent is mainly used for:",
+      "answer": "Optimization"
     },
     {
       "id": 21,
-      "question": "A common Python function used to load CSV files into a DataFrame is ______.",
-      "answer": "read_csv"
-    },
-    {
-      "id": 22,
-      "question": "The function used to display the first rows of a dataset is ______.",
-      "answer": "head"
-    },
-    {
-      "id": 23,
-      "question": "The property used to check dataset shape (rows and columns) is ______.",
-      "answer": "shape"
-    },
-    {
-      "id": 24,
-      "question": "A technique used to evaluate class balance in datasets is ______.",
-      "answer": "class distribution"
-    },
-    {
-      "id": 25,
-      "question": "Removing missing values and duplicates is called data ______.",
-      "answer": "cleaning"
-    },
-    {
-      "id": 26,
-      "question": "Improving model performance by creating new features is called feature ______.",
-      "answer": "engineering"
-    },
-    {
-      "id": 27,
-      "question": "A metric that combines precision and recall is ______ score.",
-      "answer": "F1"
-    },
-    {
-      "id": 28,
-      "question": "A matrix used for evaluating classification performance is ______ matrix.",
-      "answer": "confusion"
-    },
-    {
-      "id": 29,
-      "question": "The ratio of correct positive predictions is called ______.",
-      "answer": "precision"
-    },
-    {
-      "id": 30,
-      "question": "A metric that evaluates class separation ability is ROC ______.",
-      "answer": "AUC"
-    },
-    {
-      "id": 31,
-      "question": "Linear regression predicts a ______ relationship between variables.",
-      "answer": "linear"
-    },
-    {
-      "id": 32,
-      "question": "The equation y = mx + b represents a ______ line.",
-      "answer": "straight"
-    },
-    {
-      "id": 33,
-      "question": "Gradient Descent is used to minimize the ______ function.",
-      "answer": "cost"
-    },
-    {
-      "id": 34,
-      "question": "Matrix addition requires same ______ for both matrices.",
-      "answer": "dimensions"
-    },
-    {
-      "id": 35,
-      "question": "The transpose of matrix A is written as A______.",
-      "answer": "T"
-    },
-    {
-      "id": 36,
-      "question": "A vector is a ______-dimensional array of numbers.",
-      "answer": "one"
-    },
-    {
-      "id": 37,
-      "question": "A zero matrix contains only ______ values.",
-      "answer": "zero"
-    },
-    {
-      "id": 38,
-      "question": "An identity matrix has ones on the main ______.",
-      "answer": "diagonal"
-    },
-    {
-      "id": 39,
-      "question": "A singular matrix has no ______.",
-      "answer": "inverse"
-    },
-    {
-      "id": 40,
-      "question": "Gradient Descent moves in the ______ gradient direction.",
-      "answer": "negative"
-    },
-    {
-      "id": 41,
-      "question": "Multivariable linear regression uses ____ input features.",
-      "answer": "multiple"
-    },
-    {
-      "id": 42,
-      "question": "The learning rate controls the ____ size in Gradient Descent.",
-      "answer": "step"
-    },
-    {
-      "id": 43,
-      "question": "Gradient Descent may fail to ____ if the learning rate is too large.",
-      "answer": "converge"
-    },
-    {
-      "id": 44,
-      "question": "Polynomial regression is used for ____ relationships.",
-      "answer": "nonlinear"
-    },
-    {
-      "id": 45,
-      "question": "Normal Equation computes theta values ____ without iterations.",
-      "answer": "directly"
-    },
-    {
-      "id": 46,
-      "question": "Data rescaling improves the ____ speed of Gradient Descent.",
-      "answer": "convergence"
-    },
-    {
-      "id": 47,
-      "question": "Gradient Descent requires choosing a ____ rate.",
-      "answer": "learning"
-    },
-    {
-      "id": 48,
-      "question": "In multivariable regression, the hypothesis includes multiple ____ parameters.",
-      "answer": "theta"
-    },
-    {
-      "id": 49,
-      "question": "The mathematical function used to map input values to probabilities in Logistic Regression is the ______ function.",
-      "answer": "Sigmoid"
-    },
-    {
-      "id": 50,
-      "question": "When y belongs to {0, 1, 2, 3}, this is called ______ classification.",
-      "answer": "multi-class"
-    },
-    {
-      "id": 51,
-      "question": "The line (or surface) that separates different classes in a dataset is called the ______ Boundary.",
-      "answer": "Decision"
-    },
-    {
-      "id": 52,
-      "question": "A model with 'High Bias' is likely suffering from ______.",
-      "answer": "underfitting"
-    },
-    {
-      "id": 53,
-      "question": "The technique of adding a penalty term to the cost function is called ______.",
-      "answer": "regularization"
-    },
-    {
-      "id": 54,
-      "question": "In the cost function for y=1, as h(x) approaches 0, the cost approaches ______.",
-      "answer": "infinity"
-    },
-    {
-      "id": 55,
-      "question": "To handle Overfitting without removing features, we can use ______.",
-      "answer": "regularization"
-    },
-    {
-      "id": 56,
-      "question": "In a biological neuron, the ______ act as the inputs to the cell.",
-      "answer": "dendrites"
-    },
-    {
-      "id": 57,
-      "question": "The layers between the input and output layers in an ANN are called ______ layers.",
-      "answer": "hidden"
-    },
-    {
-      "id": 58,
-      "question": "The constant input added to a neural network layer, usually equal to 1, is called the ______ unit.",
-      "answer": "bias"
-    },
-    {
-      "id": 59,
-      "question": "The mathematical function used to calculate the activation value (a) is the ______ function.",
-      "answer": "Sigmoid"
-    },
-    {
-      "id": 60,
-      "question": "The logical ______ gate outputs 1 only if BOTH inputs are 1.",
-      "answer": "AND"
-    },
-    {
-      "id": 61,
-      "question": "The difference between the predicted value and the actual value in a neural network is represented by the symbol ______.",
-      "answer": "Delta"
-    },
-    {
-      "id": 62,
-      "question": "In the mathematical notation of a neural network, the superscript number on Theta indicates the ______ number.",
-      "answer": "layer"
-    },
-    {
-      "id": 63,
-      "question": "The process of calculating errors from the output layer back to the input layer is called ______.",
+      "question": "In a neural network training cycle, which algorithm is used to compute the gradients of the cost function by propagating the error backwards?",
       "answer": "Backpropagation"
     },
     {
-      "id": 64,
-      "question": "To ensure all neurons learn different features, we use ______ initialization of weights.",
-      "answer": "random"
+      "id": 22,
+      "question": "Which regularization parameter, often denoted as Lambda, balances the trade-off between fitting training data and keeping weights small?",
+      "answer": "Regularization parameter"
     },
     {
-      "id": 65,
-      "question": "The small value added/subtracted to calculate the Numerical Gradient is ______.",
-      "answer": "Epsilon"
+      "id": 23,
+      "question": "What is the result of applying the Sigmoid function to an input value of z = 0?",
+      "answer": "0.5"
     },
     {
-      "id": 66,
-      "question": "______ Neural Networks are the standard choice for face recognition and medical image analysis.",
+      "id": 24,
+      "question": "Which neural network architecture is specifically optimized for grid-like data such as image pixels?",
       "answer": "CNN"
     },
     {
-      "id": 67,
-      "question": "If a Neural Network has only one output unit, it is usually performing ______ classification.",
-      "answer": "binary"
+      "id": 25,
+      "question": "Which machine learning task is concerned with predicting a discrete class label rather than a continuous numerical value?",
+      "answer": "Classification"
     },
     {
-      "id": 68,
-      "question": "The final step in the NN training cycle after backpropagation is the ______ of weights.",
-      "answer": "update"
+      "id": 26,
+      "question": "What is the name of the boundary that a classification algorithm uses to separate different class labels in the feature space?",
+      "answer": "Decision Boundary"
     },
     {
-      "id": 69,
-      "question": "______ Neural Networks are used for tasks where the sequence of data matters, like translation.",
-      "answer": "RNN"
+      "id": 27,
+      "question": "In Linear Regression, which analytical method directly calculates the optimal parameter values without requiring an iterative optimization process?",
+      "answer": "Normal Equation"
+    },
+    {
+      "id": 28,
+      "question": "Which preprocessing technique scales input features to a similar range to ensure faster convergence of Gradient Descent?",
+      "answer": "Feature scaling"
+    },
+    {
+      "id": 29,
+      "question": "Which logical gate outputs 1 only if both of its binary inputs are 1?",
+      "answer": "AND gate"
+    },
+    {
+      "id": 30,
+      "question": "Which logical gate can be constructed by combining OR, NAND, and AND gates in a neural network to handle non-linearly separable data?",
+      "answer": "XOR gate"
+    },
+    {
+      "id": 31,
+      "question": "In image processing, what is the term for the intensity values of the grid points that are used as inputs for a neural network?",
+      "answer": "Pixels"
+    },
+    {
+      "id": 32,
+      "question": "What is the term for the layers situated between the input and output layers that allow a neural network to learn complex patterns?",
+      "answer": "Hidden layers"
+    },
+    {
+      "id": 33,
+      "question": "Which optimization issue arises when a learning rate is too large, causing the algorithm to overshoot the minimum and diverge?",
+      "answer": "Non-convergence"
+    },
+    {
+      "id": 34,
+      "question": "What is the name of the error term, denoted by \u03b4 (Delta), which measures the difference between activation and target values during backpropagation?",
+      "answer": "Layer error"
+    },
+    {
+      "id": 35,
+      "question": "Which matrix contains only zeros and is used as a baseline in various linear algebra operations?",
+      "answer": "Zero matrix"
+    },
+    {
+      "id": 36,
+      "question": "In Gradient Descent, in which direction relative to the gradient are the model parameters updated to minimize the cost function?",
+      "answer": "Opposite direction"
+    },
+    {
+      "id": 37,
+      "question": "Which type of machine learning uses data to find hidden structures or clusters without being provided with explicit labels?",
+      "answer": "Unsupervised learning"
+    },
+    {
+      "id": 38,
+      "question": "What is the term for the specific data subset that is used to provide an unbiased final evaluation of a trained model's performance?",
+      "answer": "Test set"
+    },
+    {
+      "id": 39,
+      "question": "In a neural network, which mathematical value 'a' represents the output of a neuron after it has been processed by an activation function?",
+      "answer": "Activation"
+    },
+    {
+      "id": 40,
+      "question": "Which encoding technique represents each categorical value as a separate binary column, thereby increasing the dimensionality of the dataset?",
+      "answer": "One-Hot Encoding"
+    },
+    {
+      "id": 41,
+      "question": "Which type of regression models the relationship between variables as an nth-degree polynomial to capture non-linear trends?",
+      "answer": "Polynomial regression"
+    },
+    {
+      "id": 42,
+      "question": "Which specific metric measures the ability of a classification model to correctly identify all relevant instances within a dataset?",
+      "answer": "Recall"
+    },
+    {
+      "id": 43,
+      "question": "In the context of Big Data, which specific term refers to the velocity, volume, and variety of information that traditional systems cannot process?",
+      "answer": "Big Data"
+    },
+    {
+      "id": 44,
+      "question": "Which specific Big Data processing framework is known for its speed by utilizing in-memory computation instead of disk-based storage?",
+      "answer": "Apache Spark"
+    },
+    {
+      "id": 45,
+      "question": "What is the term for the lightweight messaging protocol used for communication between IoT devices in low-bandwidth environments?",
+      "answer": "MQTT"
+    },
+    {
+      "id": 46,
+      "question": "Which security process ensures that only trusted, digitally signed firmware is allowed to execute during the startup of an IoT device?",
+      "answer": "Secure boot"
+    },
+    {
+      "id": 47,
+      "question": "In robotics, which component is responsible for sensing physical changes in the environment like temperature, light, or proximity?",
+      "answer": "Sensor"
+    },
+    {
+      "id": 48,
+      "question": "What is the term for a robotic component that performs a physical action, such as turning a wheel or opening a valve, in response to a command?",
+      "answer": "Actuator"
+    },
+    {
+      "id": 49,
+      "question": "Which specific framework is used in cybersecurity to identify and categorize threats such as Spoofing, Tampering, and Information Disclosure?",
+      "answer": "STRIDE"
+    },
+    {
+      "id": 50,
+      "question": "Which subfield of machine learning uses multiple hidden layers to extract high-level features from complex, unstructured data?",
+      "answer": "Deep Learning"
     }
   ]
 }
