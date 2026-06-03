@@ -72,213 +72,472 @@
     },
     {
       "id": 11,
+      "question_en": "The ingestion layer is responsible for collecting data from different sources.",
+      "question_ar": "هل طبقة الإدخال مسؤولة عن جمع البيانات من مصادر مختلفة؟",
+      "answer": true,
+      "explanation": "The ingestion layer collects data from sources like databases, logs, IoT devices, and APIs."
+    },
+    {
+      "id": 12,
+      "question_en": "Apache Kafka is mainly used for streaming data ingestion.",
+      "question_ar": "هل يستخدم Apache Kafka بشكل أساسي لإدخال بيانات البث؟",
+      "answer": true,
+      "explanation": "Kafka is widely used for real-time data ingestion and event streaming."
+    },
+    {
+      "id": 13,
+      "question_en": "Hadoop Distributed File System is a distributed file system used for large-scale storage.",
+      "question_ar": "هل HDFS هو نظام ملفات موزع يستخدم للتخزين على نطاق واسع؟",
+      "answer": true,
+      "explanation": "HDFS is designed for scalable and fault-tolerant storage of large datasets."
+    },
+    {
+      "id": 14,
+      "question_en": "Data warehouses are optimized mainly for transactional workloads.",
+      "question_ar": "هل مستودعات البيانات مُحسَّنة بشكل أساسي لأعباء العمل المتعلقة بالمعاملات؟",
+      "answer": false,
+      "explanation": "Data warehouses are optimized for analytical workloads (OLAP), not transactional processing (OLTP)."
+    },
+    {
+      "id": 15,
+      "question_en": "ETL loads data first and then transforms it.",
+      "question_ar": "هل تقوم ETL بتحميل البيانات أولاً ثم تحويلها؟",
+      "answer": false,
+      "explanation": "In ETL, data is Extracted, then Transformed, and finally Loaded."
+    },
+    {
+      "id": 16,
+      "question_en": "Stateless services help improve scalability.",
+      "question_ar": "هل تساعد الخدمات عديمة الحالة في تحسين قابلية التوسع؟",
+      "answer": true,
+      "explanation": "Stateless services do not retain session data, making them easier to scale horizontally."
+    },
+    {
+      "id": 17,
+      "question_en": "Leader election is part of high availability mechanisms.",
+      "question_ar": "هل انتخاب القائد جزء من آليات التوفر العالي؟",
+      "answer": true,
+      "explanation": "Leader election ensures one active node coordinates the system in distributed architectures."
+    },
+    {
+      "id": 18,
+      "question_en": "Encryption is part of the security layer in Big Data architecture.",
+      "question_ar": "هل التشفير جزء من طبقة الأمان في بنية البيانات الضخمة؟",
+      "answer": true,
+      "explanation": "Encryption protects data at rest and in transit within Big Data systems."
+    },
+    {
+      "id": 19,
       "question_en": "Hadoop provides built-in fault tolerance.",
       "question_ar": "هل Hadoop يوفر تحمل الأخطاء؟",
       "answer": true,
       "explanation": "Hadoop uses data replication for fault tolerance."
     },
     {
-      "id": 12,
+      "id": 20,
       "question_en": "NoSQL databases are limited to structured data only.",
       "question_ar": "هل NoSQL تقتصر على البيانات المنظمة؟",
       "answer": false,
       "explanation": "NoSQL supports unstructured and semi-structured data."
     },
     {
-      "id": 13,
-      "question_en": "Hadoop Distributed File System is part of the Hadoop storage layer.",
-      "question_ar": "هل HDFS جزء من طبقة التخزين؟",
-      "answer": true,
-      "explanation": "HDFS is the storage component of Hadoop."
-    },
-    {
-      "id": 14,
+      "id": 21,
       "question_en": "Apache Spark is generally faster than MapReduce due to in-memory processing.",
       "question_ar": "هل Spark أسرع من MapReduce؟",
       "answer": true,
       "explanation": "Spark processes data in memory, making it faster."
     },
     {
-      "id": 15,
+      "id": 22,
       "question_en": "Apache Hive belongs to the data querying layer of the Hadoop ecosystem.",
       "question_ar": "هل Hive ضمن طبقة الاستعلام؟",
       "answer": true,
       "explanation": "Hive allows SQL-like querying on Hadoop."
     },
     {
-      "id": 16,
+      "id": 23,
       "question_en": "Hadoop cluster management can be performed using Apache Ambari.",
       "question_ar": "هل يمكن إدارة Hadoop باستخدام Ambari؟",
       "answer": true,
       "explanation": "Ambari is used for monitoring and managing Hadoop clusters."
     },
     {
-      "id": 17,
+      "id": 24,
       "question_en": "Hadoop is only suitable for structured relational data.",
       "question_ar": "هل Hadoop مناسب فقط للبيانات المنظمة؟",
       "answer": false,
       "explanation": "Hadoop supports all data types."
     },
     {
-      "id": 18,
+      "id": 25,
       "question_en": "A histogram is used for multivariate analysis only.",
       "question_ar": "هل Histogram يستخدم فقط لتحليل متعدد المتغيرات؟",
       "answer": false,
       "explanation": "Histogram is used for univariate analysis."
     },
     {
-      "id": 19,
+      "id": 26,
       "question_en": "Box plots can help identify outliers in data.",
       "question_ar": "هل Box Plot يساعد في اكتشاف القيم الشاذة؟",
       "answer": true,
       "explanation": "Box plots highlight outliers clearly."
     },
     {
-      "id": 20,
+      "id": 27,
       "question_en": "Correlation matrix is used to analyze relationships between multiple variables.",
       "question_ar": "هل مصفوفة الارتباط تستخدم لتحليل العلاقات؟",
       "answer": true,
       "explanation": "It measures relationships between variables."
     },
     {
-      "id": 21,
+      "id": 28,
       "question_en": "Data visualization has no role in machine learning.",
       "question_ar": "هل التصور البياني لا دور له؟",
       "answer": false,
       "explanation": "Visualization is essential in understanding data."
     },
     {
-      "id": 22,
+      "id": 29,
       "question_en": "Scatter plots are used for visualizing relationships between two variables.",
       "question_ar": "هل Scatter Plot يستخدم لعلاقة بين متغيرين؟",
       "answer": true,
       "explanation": "Scatter plots show relationships between two variables."
     },
     {
-      "id": 23,
+      "id": 30,
       "question_en": "Data Visualization is used to represent data graphically for better understanding.",
       "question_ar": "هل التصور البياني يستخدم لعرض البيانات؟",
       "answer": true,
       "explanation": "It represents data visually."
     },
     {
-      "id": 24,
+      "id": 31,
       "question_en": "Exploratory Data Analysis (EDA) is only performed after model deployment.",
       "question_ar": "هل يتم EDA بعد نشر النموذج فقط؟",
       "answer": false,
       "explanation": "EDA is done before modeling."
     },
     {
-      "id": 25,
-      "question_en": "Data Visualization is used to represent data graphically for better understanding.",
-      "question_ar": "هل التصور البياني يستخدم لعرض البيانات؟",
-      "answer": true,
-      "explanation": "Same as question 23."
-    },
-    {
-      "id": 26,
-      "question_en": "Exploratory Data Analysis (EDA) is only performed after model deployment.",
-      "question_ar": "هل يتم EDA بعد نشر النموذج فقط؟",
-      "answer": false,
-      "explanation": "Same as question 24."
-    },
-    {
-      "id": 27,
+      "id": 32,
       "question_en": "EDA helps in identifying patterns, trends, and anomalies in data.",
       "question_ar": "هل يساعد EDA في اكتشاف الأنماط؟",
       "answer": true,
       "explanation": "EDA is used to discover patterns and anomalies."
     },
     {
-      "id": 28,
+      "id": 33,
       "question_en": "Central tendency refers to measures like mean, median, and mode.",
       "question_ar": "هل النزعة المركزية تشمل المتوسط والوسيط؟",
       "answer": true,
       "explanation": "These are standard central tendency measures."
     },
     {
-      "id": 29,
+      "id": 34,
       "question_en": "RDBMS systems are fully optimized for petabyte-scale Big Data workloads.",
       "question_ar": "هل RDBMS مناسبة لبيانات ضخمة جدًا؟",
       "answer": false,
       "explanation": "They are not optimized for very large-scale distributed data."
     },
     {
-      "id": 30,
-      "question_en": "ETL loads data first and then transforms it.",
-      "question_ar": "هل ETL يقوم بالتحميل أولًا؟",
-      "answer": false,
-      "explanation": "ETL stands for Extract, Transform, Load."
-    },
-    {
-      "id": 31,
+      "id": 35,
       "question_en": "Batch processing handles data in large chunks collected over time.",
       "question_ar": "هل المعالجة الدفعية تتعامل مع البيانات على شكل دفعات كبيرة يتم جمعها مع مرور الوقت؟",
       "answer": true,
       "explanation": "Batch processing collects data over a period and processes it in large groups."
     },
     {
-      "id": 32,
+      "id": 36,
       "question_en": "Streaming processing handles data in real time as it arrives.",
       "question_ar": "هل المعالجة اللحظية تتعامل مع البيانات فور وصولها؟",
       "answer": true,
       "explanation": "Streaming systems process data continuously as it is generated."
     },
     {
-      "id": 33,
+      "id": 37,
       "question_en": "Apache Kafka can be used for real-time data ingestion.",
       "question_ar": "هل يمكن استخدام Apache Kafka لإدخال البيانات في الوقت الحقيقي؟",
       "answer": true,
       "explanation": "Kafka is a popular platform for streaming and real-time data ingestion."
     },
     {
-      "id": 34,
+      "id": 38,
       "question_en": "Apache Flume is mainly used for dashboard visualization.",
       "question_ar": "هل Apache Flume يستخدم أساسًا لعرض لوحات المعلومات؟",
       "answer": false,
       "explanation": "Flume is used for data ingestion, not visualization."
     },
     {
-      "id": 35,
+      "id": 39,
       "question_en": "Data warehouses are optimized for analytical queries.",
       "question_ar": "هل مستودعات البيانات مُحسّنة للاستعلامات التحليلية؟",
       "answer": true,
       "explanation": "Data warehouses are designed to support analytics and reporting workloads."
     },
     {
-      "id": 36,
+      "id": 40,
       "question_en": "Cloud object storage is less scalable than local storage.",
       "question_ar": "هل التخزين الكائني السحابي أقل قابلية للتوسع من التخزين المحلي؟",
       "answer": false,
       "explanation": "Cloud object storage is highly scalable and can handle massive data growth."
     },
     {
-      "id": 37,
-      "question_en": "Stateless services simplify horizontal scaling.",
-      "question_ar": "هل الخدمات عديمة الحالة تسهل التوسع الأفقي؟",
-      "answer": true,
-      "explanation": "Stateless services can be replicated easily because they do not store session state locally."
-    },
-    {
-      "id": 38,
+      "id": 41,
       "question_en": "Geo-replication helps systems recover from regional failures.",
       "question_ar": "هل النسخ الجغرافي يساعد الأنظمة على التعافي من الأعطال الإقليمية؟",
       "answer": true,
       "explanation": "Geo-replication keeps copies of data across regions to improve disaster recovery."
     },
     {
-      "id": 39,
+      "id": 42,
       "question_en": "Autoscaling automatically adjusts system resources based on workload.",
       "question_ar": "هل التوسع التلقائي يعدل الموارد تلقائيًا حسب الحمل؟",
       "answer": true,
       "explanation": "Autoscaling increases or decreases resources according to demand."
     },
     {
-      "id": 40,
+      "id": 43,
       "question_en": "Monitoring tools are unnecessary if replication is implemented.",
       "question_ar": "هل أدوات المراقبة غير ضرورية عند تطبيق النسخ المتماثل؟",
       "answer": false,
       "explanation": "Monitoring remains essential for detecting failures, performance issues, and system health."
+    },
+    {
+      "id": 44,
+      "question_en": "Scalability is one of the main limitations of traditional RDBMS when handling Big Data.",
+      "question_ar": "هل قابلية التوسع هي إحدى القيود الرئيسية لـ RDBMS التقليدية عند التعامل مع البيانات الضخمة؟",
+      "answer": true,
+      "explanation": "RDBMS systems scale vertically, which is limited compared to distributed systems."
+    },
+    {
+      "id": 45,
+      "question_en": "Apache Hadoop is designed for distributed storage and processing of large datasets.",
+      "question_ar": "هل صُمم Apache Hadoop للتخزين الموزع ومعالجة مجموعات البيانات الكبيرة؟",
+      "answer": true,
+      "explanation": "Hadoop is built for distributed storage and parallel processing."
+    },
+    {
+      "id": 46,
+      "question_en": "Dispersion measures the spread of data.",
+      "question_ar": "هل يقيس التشتت مدى انتشار البيانات؟",
+      "answer": true,
+      "explanation": "Dispersion includes variance, standard deviation, and range."
+    },
+    {
+      "id": 47,
+      "question_en": "Statistics are tools used to answer questions about data.",
+      "question_ar": "هل الإحصاء عبارة عن أدوات تستخدم للإجابة على أسئلة حول البيانات؟",
+      "answer": true,
+      "explanation": "Statistics provides methods for data analysis."
+    },
+    {
+      "id": 48,
+      "question_en": "Inferential Statistics summarizes data without making predictions.",
+      "question_ar": "هل تلخص الإحصاء الاستدلالي البيانات دون إجراء تنبؤات؟",
+      "answer": false,
+      "explanation": "Inferential statistics is used to make predictions and conclusions."
+    },
+    {
+      "id": 49,
+      "question_en": "Inferential Statistics uses a sample to make conclusions about a population.",
+      "question_ar": "هل يستخدم الإحصاء الاستدلالي عينة لاستخلاص استنتاجات حول مجتمع ما؟",
+      "answer": true,
+      "explanation": "This is the core definition of inferential statistics."
+    },
+    {
+      "id": 50,
+      "question_en": "Descriptive Statistics is used to predict whole domains from small samples.",
+      "question_ar": "هل يستخدم الإحصاء الوصفي للتنبؤ بمجالات كاملة من عينات صغيرة؟",
+      "answer": false,
+      "explanation": "Descriptive statistics only summarizes data, it does not predict."
+    },
+    {
+      "id": 51,
+      "question_en": "Mean is the most common value in a dataset.",
+      "question_ar": "هل المتوسط هو القيمة الأكثر شيوعًا في مجموعة البيانات؟",
+      "answer": false,
+      "explanation": "The most common value is the mode."
+    },
+    {
+      "id": 52,
+      "question_en": "Median is the middle value after sorting data.",
+      "question_ar": "هل الوسيط هو القيمة الوسطى بعد فرز البيانات؟",
+      "answer": true,
+      "explanation": "Median represents the 50th percentile of sorted data."
+    },
+    {
+      "id": 53,
+      "question_en": "Mode is the most frequently occurring value.",
+      "question_ar": "هل المنوال هو القيمة الأكثر تكرارًا؟",
+      "answer": true,
+      "explanation": "Mode is the value that appears most often."
+    },
+    {
+      "id": 54,
+      "question_en": "Measures of Variability include Mean and Median.",
+      "question_ar": "هل تشمل مقاييس التشتت المتوسط والوسيط؟",
+      "answer": false,
+      "explanation": "Mean and Median are measures of central tendency."
+    },
+    {
+      "id": 55,
+      "question_en": "Standard Deviation is a measure of variability.",
+      "question_ar": "هل الانحراف المعياري هو مقياس للتشتت؟",
+      "answer": true,
+      "explanation": "It measures how spread out the numbers are."
+    },
+    {
+      "id": 56,
+      "question_en": "Variance is a measure of central tendency.",
+      "question_ar": "هل التباين هو مقياس للنزعة المركزية؟",
+      "answer": false,
+      "explanation": "Variance is a measure of variability/dispersion."
+    },
+    {
+      "id": 57,
+      "question_en": "Outliers are values that lie outside the pattern of the remaining data.",
+      "question_ar": "هل القيم الشاذة هي قيم تقع خارج نمط باقي البيانات؟",
+      "answer": true,
+      "explanation": "Outliers deviate significantly from other observations."
+    },
+    {
+      "id": 58,
+      "question_en": "Descriptive Statistics transforms raw observations into understandable data.",
+      "question_ar": "هل يحول الإحصاء الوصفي الملاحظات الخام إلى بيانات مفهومة؟",
+      "answer": true,
+      "explanation": "It summarizes and organizes data effectively."
+    },
+    {
+      "id": 59,
+      "question_en": "Inferential Statistics requires information from every member of the population.",
+      "question_ar": "هل يتطلب الإحصاء الاستدلالي معلومات من كل فرد في المجتمع؟",
+      "answer": false,
+      "explanation": "It uses samples to infer about populations."
+    },
+    {
+      "id": 60,
+      "question_en": "Range is considered a measure of variability.",
+      "question_ar": "هل يعتبر المدى مقياسًا للتشتت؟",
+      "answer": true,
+      "explanation": "Range is the difference between max and min values."
+    },
+    {
+      "id": 61,
+      "question_en": "Skewness and Kurtosis are measures of spread.",
+      "question_ar": "هل الالتواء والتفرطح من مقاييس الانتشار؟",
+      "answer": false,
+      "explanation": "They describe the shape of the distribution, not spread."
+    },
+    {
+      "id": 62,
+      "question_en": "Descriptive Statistics can be used to summarize collected data.",
+      "question_ar": "هل يمكن استخدام الإحصاء الوصفي لتلخيص البيانات المجمعة؟",
+      "answer": true,
+      "explanation": "Summarization is its primary purpose."
+    },
+    {
+      "id": 63,
+      "question_en": "In a normal distribution, Mean = Median = Mode.",
+      "question_ar": "في التوزيع الطبيعي، هل المتوسط = الوسيط = المنوال؟",
+      "answer": true,
+      "explanation": "Normal distribution is perfectly symmetrical."
+    },
+    {
+      "id": 64,
+      "question_en": "Harmonic Mean and Arithmetic Mean always produce the same result.",
+      "question_ar": "هل ينتج المتوسط التوافقي والمتوسط الحسابي دائمًا نفس النتيجة؟",
+      "answer": false,
+      "explanation": "They usually differ unless all data points are identical."
+    },
+    {
+      "id": 65,
+      "question_en": "A sample is usually smaller than the population.",
+      "question_ar": "هل العينة عادة أصغر من المجتمع؟",
+      "answer": true,
+      "explanation": "A sample is a subset of the population."
+    },
+    {
+      "id": 66,
+      "question_en": "Outliers may affect the Mean significantly.",
+      "question_ar": "هل يمكن أن تؤثر القيم الشاذة على المتوسط بشكل كبير؟",
+      "answer": true,
+      "explanation": "Mean is highly sensitive to extreme values."
+    },
+    {
+      "id": 67,
+      "question_en": "The Mean is considered a measure of central tendency.",
+      "question_ar": "هل يعتبر المتوسط مقياسًا للنزعة المركزية؟",
+      "answer": true,
+      "explanation": "It is one of the primary measures of center."
+    },
+    {
+      "id": 68,
+      "question_en": "The Mode is always larger than the Mean.",
+      "question_ar": "هل المنوال دائمًا أكبر من المتوسط؟",
+      "answer": false,
+      "explanation": "It depends entirely on the data distribution."
+    },
+    {
+      "id": 69,
+      "question_en": "Variance measures variability in data.",
+      "question_ar": "هل يقيس التباين التشتت في البيانات؟",
+      "answer": true,
+      "explanation": "It measures average squared deviation from the mean."
+    },
+    {
+      "id": 70,
+      "question_en": "Standard Deviation and Variance measure the same concept in different ways.",
+      "question_ar": "هل يقيس الانحراف المعياري والتباين نفس المفهوم بطرق مختلفة؟",
+      "answer": true,
+      "explanation": "Standard deviation is the square root of variance."
+    },
+    {
+      "id": 71,
+      "question_en": "Outliers have little or no effect on statistical analysis.",
+      "question_ar": "هل للقيم الشاذة تأثير ضئيل أو معدوم على التحليل الإحصائي؟",
+      "answer": false,
+      "explanation": "Outliers can skew results drastically."
+    },
+    {
+      "id": 72,
+      "question_en": "Median is less affected by outliers than Mean.",
+      "question_ar": "هل الوسيط أقل تأثرًا بالقيم الشاذة من المتوسط؟",
+      "answer": true,
+      "explanation": "Median is a robust statistic."
+    },
+    {
+      "id": 73,
+      "question_en": "A sample is a subset of a population.",
+      "question_ar": "هل العينة هي مجموعة فرعية من المجتمع؟",
+      "answer": true,
+      "explanation": "By definition."
+    },
+    {
+      "id": 74,
+      "question_en": "Skewness describes the symmetry of a distribution.",
+      "question_ar": "هل يصف الالتواء تماثل التوزيع؟",
+      "answer": true,
+      "explanation": "It measures lack of symmetry."
+    },
+    {
+      "id": 75,
+      "question_en": "Range equals Max − Min.",
+      "question_ar": "هل المدى يساوي الحد الأقصى - الحد الأدنى؟",
+      "answer": true,
+      "explanation": "This is the formula for range."
+    },
+    {
+      "id": 76,
+      "question_en": "Harmonic Mean is commonly used for rates and speeds.",
+      "question_ar": "هل يستخدم المتوسط التوافقي عادة للمعدلات والسرعات؟",
+      "answer": true,
+      "explanation": "It is best suited for averaging rates."
+    },
+    {
+      "id": 77,
+      "question_en": "In right-skewed distributions, Mean is usually greater than Median.",
+      "question_ar": "في التوزيعات الملتوية لليمين، هل المتوسط عادة أكبر من الوسيط؟",
+      "answer": true,
+      "explanation": "The long tail pulls the mean to the right."
     }
   ],
   "mcq": [
@@ -466,6 +725,84 @@
     },
     {
       "id": 15,
+      "question_en": "Sharding is mainly used for:",
+      "question_ar": "ما هو الغرض الأساسي من Sharding؟",
+      "options": {
+        "a": "Backup",
+        "b": "Partitioning data",
+        "c": "Encryption",
+        "d": "Visualization"
+      },
+      "correct_answer": "b",
+      "explanation": "Sharding uses partition keys to distribute data across multiple nodes."
+    },
+    {
+      "id": 16,
+      "question_en": "Geo-replication improves:",
+      "question_ar": "ما الذي يحسنه النسخ الجغرافي؟",
+      "options": {
+        "a": "Data formatting",
+        "b": "Geographic availability",
+        "c": "Dashboard design",
+        "d": "Programming speed"
+      },
+      "correct_answer": "b",
+      "explanation": "Geo-replication keeps copies of data across regions to improve availability and disaster recovery."
+    },
+    {
+      "id": 17,
+      "question_en": "Which tool is commonly used for monitoring cluster metrics?",
+      "question_ar": "أي أداة تُستخدم بشكل شائع لمراقبة مقاييس المجموعة؟",
+      "options": {
+        "a": "Kafka",
+        "b": "Prometheus",
+        "c": "HDFS",
+        "d": "SQL Server"
+      },
+      "correct_answer": "b",
+      "explanation": "Prometheus is widely used for metrics collection and monitoring."
+    },
+    {
+      "id": 18,
+      "question_en": "Data lakes are beneficial because they:",
+      "question_ar": "لماذا تعتبر بحيرات البيانات مفيدة؟",
+      "options": {
+        "a": "Reduce flexibility",
+        "b": "Store only structured data",
+        "c": "Support machine learning readiness",
+        "d": "Eliminate scalability"
+      },
+      "correct_answer": "c",
+      "explanation": "Data lakes can store structured and unstructured data, providing a foundation for ML."
+    },
+    {
+      "id": 19,
+      "question_en": "Stateless services are important for:",
+      "question_ar": "لماذا تعتبر الخدمات عديمة الحالة مهمة؟",
+      "options": {
+        "a": "Security only",
+        "b": "Scalability and autoscaling",
+        "c": "Manual processing",
+        "d": "Backup operations"
+      },
+      "correct_answer": "b",
+      "explanation": "Stateless services can be replicated easily because they do not store session state locally."
+    },
+    {
+      "id": 20,
+      "question_en": "In high availability systems, automated failover ensures:",
+      "question_ar": "في أنظمة التوفر العالي، يضمن تجاوز الفشل التلقائي ما يلي:",
+      "options": {
+        "a": "Manual restart",
+        "b": "Immediate recovery from failure",
+        "c": "Data deletion",
+        "d": "Reduced monitoring"
+      },
+      "correct_answer": "b",
+      "explanation": "Automated failover switches to a standby system to minimize downtime."
+    },
+    {
+      "id": 21,
       "question_en": "Hadoop mainly solves problems related to:",
       "question_ar": "Hadoop يعالج مشاكل:",
       "options": {
@@ -478,7 +815,7 @@
       "explanation": "Hadoop is designed for distributed systems."
     },
     {
-      "id": 16,
+      "id": 22,
       "question_en": "Which tool belongs to the Hadoop ingestion layer?",
       "question_ar": "أي أداة ضمن طبقة الإدخال؟",
       "options": {
@@ -491,7 +828,7 @@
       "explanation": "Flume is used for data ingestion."
     },
     {
-      "id": 17,
+      "id": 23,
       "question_en": "Which component is used for distributed storage?",
       "question_ar": "ما المكون المستخدم للتخزين الموزع؟",
       "options": {
@@ -504,7 +841,7 @@
       "explanation": "HDFS handles distributed storage."
     },
     {
-      "id": 18,
+      "id": 24,
       "question_en": "MapReduce primarily processes data in:",
       "question_ar": "MapReduce يعالج البيانات في:",
       "options": {
@@ -517,7 +854,7 @@
       "explanation": "MapReduce is a batch processing model."
     },
     {
-      "id": 19,
+      "id": 25,
       "question_en": "Which language is commonly used with Hive?",
       "question_ar": "ما اللغة المستخدمة مع Hive؟",
       "options": {
@@ -530,7 +867,7 @@
       "explanation": "Hive uses Hive Query Language (HQL)."
     },
     {
-      "id": 20,
+      "id": 26,
       "question_en": "What is the main goal of EDA?",
       "question_ar": "ما الهدف الأساسي من EDA؟",
       "options": {
@@ -543,7 +880,7 @@
       "explanation": "EDA focuses on understanding data patterns."
     },
     {
-      "id": 21,
+      "id": 27,
       "question_en": "Which measure represents central tendency?",
       "question_ar": "أي مقياس يمثل النزعة المركزية؟",
       "options": {
@@ -556,7 +893,7 @@
       "explanation": "Mean is a measure of central tendency."
     },
     {
-      "id": 22,
+      "id": 28,
       "question_en": "Which plot is used for distribution analysis?",
       "question_ar": "أي رسم يستخدم لتحليل التوزيع؟",
       "options": {
@@ -569,7 +906,7 @@
       "explanation": "Histogram shows data distribution."
     },
     {
-      "id": 23,
+      "id": 29,
       "question_en": "Which technique is used to detect outliers?",
       "question_ar": "أي تقنية تستخدم لاكتشاف القيم الشاذة؟",
       "options": {
@@ -582,7 +919,7 @@
       "explanation": "Box plot highlights outliers."
     },
     {
-      "id": 24,
+      "id": 30,
       "question_en": "Correlation matrix is used to:",
       "question_ar": "مصفوفة الارتباط تستخدم لـ:",
       "options": {
@@ -595,7 +932,7 @@
       "explanation": "It measures relationships between variables."
     },
     {
-      "id": 25,
+      "id": 31,
       "question_en": "Which plot is used for multivariate analysis?",
       "question_ar": "أي رسم يستخدم لتحليل متعدد المتغيرات؟",
       "options": {
@@ -608,7 +945,7 @@
       "explanation": "Scatter matrix visualizes relationships among multiple variables."
     },
     {
-      "id": 26,
+      "id": 32,
       "question_en": "Which layer performs machine learning model development?",
       "question_ar": "أي طبقة تقوم بتطوير نماذج تعلم الآلة؟",
       "options": {
@@ -621,7 +958,7 @@
       "explanation": "The analytics layer is responsible for data analysis, reporting, and machine learning."
     },
     {
-      "id": 27,
+      "id": 33,
       "question_en": "Which is an example of NoSQL storage?",
       "question_ar": "أي مما يلي مثال على تخزين NoSQL؟",
       "options": {
@@ -634,7 +971,7 @@
       "explanation": "MongoDB is a document-oriented NoSQL database."
     },
     {
-      "id": 28,
+      "id": 34,
       "question_en": "ETL stands for:",
       "question_ar": "ماذا تعني ETL؟",
       "options": {
@@ -647,20 +984,7 @@
       "explanation": "ETL stands for Extract, Transform, and Load."
     },
     {
-      "id": 29,
-      "question_en": "Sharding distributes data based on:",
-      "question_ar": "بماذا يعتمد تقسيم البيانات (Sharding)؟",
-      "options": {
-        "a": "Encryption",
-        "b": "Partition keys",
-        "c": "Monitoring",
-        "d": "Logging"
-      },
-      "correct_answer": "b",
-      "explanation": "Sharding uses partition keys to distribute data across multiple nodes."
-    },
-    {
-      "id": 30,
+      "id": 35,
       "question_en": "Synchronous replication ensures:",
       "question_ar": "ماذا يضمن النسخ المتماثل المتزامن؟",
       "options": {
@@ -673,7 +997,7 @@
       "explanation": "Synchronous replication confirms data is written to replicas before acknowledging success."
     },
     {
-      "id": 31,
+      "id": 36,
       "question_en": "A Data Lake stores:",
       "question_ar": "ماذا يخزن Data Lake؟",
       "options": {
@@ -686,7 +1010,7 @@
       "explanation": "Data lakes can store structured, semi-structured, and unstructured data."
     },
     {
-      "id": 32,
+      "id": 37,
       "question_en": "High availability reduces:",
       "question_ar": "ماذا يقلل التوفر العالي؟",
       "options": {
@@ -699,7 +1023,7 @@
       "explanation": "High availability minimizes service interruptions and downtime."
     },
     {
-      "id": 33,
+      "id": 38,
       "question_en": "Which tool is used for monitoring metrics?",
       "question_ar": "أي أداة تستخدم لمراقبة المقاييس؟",
       "options": {
@@ -712,7 +1036,7 @@
       "explanation": "Prometheus is widely used for metrics collection and monitoring."
     },
     {
-      "id": 34,
+      "id": 39,
       "question_en": "ELT is common in:",
       "question_ar": "أين يُستخدم ELT بشكل شائع؟",
       "options": {
@@ -725,7 +1049,7 @@
       "explanation": "ELT is commonly used in modern cloud-based data platforms."
     },
     {
-      "id": 35,
+      "id": 40,
       "question_en": "Backup & restore mechanisms are part of:",
       "question_ar": "تندرج آليات النسخ الاحتياطي والاستعادة ضمن:",
       "options": {
@@ -736,62 +1060,374 @@
       },
       "correct_answer": "b",
       "explanation": "Backup and restore are key components of high availability and disaster recovery strategies."
+    },
+    {
+      "id": 41,
+      "question_en": "Which of the following is a limitation of RDBMS in Big Data?",
+      "question_ar": "أي مما يلي يعد قيدًا على RDBMS في البيانات الضخمة؟",
+      "options": {
+        "a": "High scalability",
+        "b": "Low cost storage",
+        "c": "Limited scalability",
+        "d": "Built-in fault tolerance"
+      },
+      "correct_answer": "c",
+      "explanation": "RDBMS systems struggle with horizontal scalability required for Big Data."
+    },
+    {
+      "id": 42,
+      "question_en": "HBase is best described as:",
+      "question_ar": "أفضل وصف لـ HBase هو:",
+      "options": {
+        "a": "Relational database",
+        "b": "NoSQL wide-column database",
+        "c": "Visualization tool",
+        "d": "Monitoring tool"
+      },
+      "correct_answer": "b",
+      "explanation": "HBase is a NoSQL wide-column store built on top of HDFS."
+    },
+    {
+      "id": 43,
+      "question_en": "Which company is known as a leading Big Data vendor?",
+      "question_ar": "أي شركة تُعرف بأنها مورد رائد للبيانات الضخمة؟",
+      "options": {
+        "a": "Cloudera",
+        "b": "Adobe",
+        "c": "Intel",
+        "d": "Oracle Forms"
+      },
+      "correct_answer": "a",
+      "explanation": "Cloudera is a major vendor providing enterprise Big Data solutions based on Hadoop."
+    },
+    {
+      "id": 44,
+      "question_en": "Spark is preferred over MapReduce because:",
+      "question_ar": "يُفضل Spark على MapReduce بسبب:",
+      "options": {
+        "a": "It is slower",
+        "b": "It lacks scalability",
+        "c": "It supports in-memory processing",
+        "d": "It does not support ML"
+      },
+      "correct_answer": "c",
+      "explanation": "Spark performs in-memory processing, making it significantly faster than MapReduce."
+    },
+    {
+      "id": 45,
+      "question_en": "Hadoop supports which type of data?",
+      "question_ar": "ما نوع البيانات الذي يدعمه Hadoop؟",
+      "options": {
+        "a": "Only structured",
+        "b": "Only unstructured",
+        "c": "Structured, semi-structured, and unstructured",
+        "d": "Only relational"
+      },
+      "correct_answer": "c",
+      "explanation": "Hadoop can store and process all forms of data."
+    },
+    {
+      "id": 46,
+      "question_en": "Which library is commonly used for visualization in Python?",
+      "question_ar": "ما هي المكتبة الشائعة الاستخدام للتصور البياني في بايثون؟",
+      "options": {
+        "a": "NumPy",
+        "b": "Pandas",
+        "c": "Matplotlib",
+        "d": "TensorFlow"
+      },
+      "correct_answer": "c",
+      "explanation": "Matplotlib is the foundational plotting library in Python."
+    },
+    {
+      "id": 47,
+      "question_en": "Dispersion includes:",
+      "question_ar": "يشمل التشتت:",
+      "options": {
+        "a": "Mean",
+        "b": "Median",
+        "c": "Standard deviation",
+        "d": "Mode"
+      },
+      "correct_answer": "c",
+      "explanation": "Standard deviation is a measure of data dispersion."
+    },
+    {
+      "id": 48,
+      "question_en": "Density plots are used to:",
+      "question_ar": "تُستخدم الرسوم البيانية للكثافة (Density plots) من أجل:",
+      "options": {
+        "a": "Show data categories",
+        "b": "Show data distribution smoothly",
+        "c": "Show exact values",
+        "d": "Store data"
+      },
+      "correct_answer": "b",
+      "explanation": "Density plots show data distribution smoothly over a continuous interval."
+    },
+    {
+      "id": 49,
+      "question_en": "Data visualization in ML helps in:",
+      "question_ar": "يساعد التصور البياني للبيانات في تعلم الآلة في:",
+      "options": {
+        "a": "Ignoring data",
+        "b": "Understanding features and patterns",
+        "c": "Deleting models",
+        "d": "Avoiding preprocessing"
+      },
+      "correct_answer": "b",
+      "explanation": "Visualization is essential in ML for feature understanding and pattern discovery."
+    },
+    {
+      "id": 50,
+      "question_en": "Inferential Statistics uses:",
+      "question_ar": "يستخدم الإحصاء الاستدلالي:",
+      "options": {
+        "a": "Descriptive Statistics",
+        "b": "Samples to make conclusions",
+        "c": "Graphical Statistics",
+        "d": "Central Statistics"
+      },
+      "correct_answer": "b",
+      "explanation": "Inferential statistics draws conclusions from samples."
+    },
+    {
+      "id": 51,
+      "question_en": "The average value of a dataset is called:",
+      "question_ar": "تسمى القيمة المتوسطة لمجموعة البيانات:",
+      "options": {
+        "a": "Median",
+        "b": "Mode",
+        "c": "Mean",
+        "d": "Range"
+      },
+      "correct_answer": "c",
+      "explanation": "The Mean is the arithmetic average."
+    },
+    {
+      "id": 52,
+      "question_en": "The most common value in a dataset is called:",
+      "question_ar": "تسمى القيمة الأكثر شيوعًا في مجموعة البيانات:",
+      "options": {
+        "a": "Mean",
+        "b": "Mode",
+        "c": "Median",
+        "d": "Variance"
+      },
+      "correct_answer": "b",
+      "explanation": "Mode represents highest frequency."
+    },
+    {
+      "id": 53,
+      "question_en": "The middle value of a sorted dataset is:",
+      "question_ar": "القيمة الوسطى لمجموعة بيانات مفروزة هي:",
+      "options": {
+        "a": "Mode",
+        "b": "Variance",
+        "c": "Mean",
+        "d": "Median"
+      },
+      "correct_answer": "d",
+      "explanation": "Median divides data in half."
+    },
+    {
+      "id": 54,
+      "question_en": "Which of the following is NOT a measure of variability?",
+      "question_ar": "أي مما يلي لا يعتبر مقياسًا للتشتت؟",
+      "options": {
+        "a": "Variance",
+        "b": "Standard Deviation",
+        "c": "Mean",
+        "d": "Range"
+      },
+      "correct_answer": "c",
+      "explanation": "Mean is a measure of central tendency."
+    },
+    {
+      "id": 55,
+      "question_en": "Which measure describes the spread of data?",
+      "question_ar": "أي مقياس يصف انتشار البيانات؟",
+      "options": {
+        "a": "Standard Deviation",
+        "b": "Median",
+        "c": "Mode",
+        "d": "Mean"
+      },
+      "correct_answer": "a",
+      "explanation": "Standard Deviation measures spread."
+    },
+    {
+      "id": 56,
+      "question_en": "Outliers are best described as:",
+      "question_ar": "أفضل وصف للقيم الشاذة هو:",
+      "options": {
+        "a": "Average values",
+        "b": "Missing values",
+        "c": "Values outside pattern",
+        "d": "Duplicate values"
+      },
+      "correct_answer": "c",
+      "explanation": "They are unusually high or low values."
+    },
+    {
+      "id": 57,
+      "question_en": "Which measure is based on the reciprocal of values?",
+      "question_ar": "أي مقياس يعتمد على مقلوب القيم؟",
+      "options": {
+        "a": "Arithmetic Mean",
+        "b": "Median",
+        "c": "Harmonic Mean",
+        "d": "Mode"
+      },
+      "correct_answer": "c",
+      "explanation": "Harmonic Mean uses reciprocals."
+    },
+    {
+      "id": 58,
+      "question_en": "The difference between the highest and lowest values is:",
+      "question_ar": "الفرق بين أعلى وأقل قيمة هو:",
+      "options": {
+        "a": "Range",
+        "b": "Mean",
+        "c": "Mode",
+        "d": "Median"
+      },
+      "correct_answer": "a",
+      "explanation": "Max minus Min equals Range."
+    },
+    {
+      "id": 59,
+      "question_en": "What is the main aim of Descriptive Statistics?",
+      "question_ar": "ما هو الهدف الرئيسي للإحصاء الوصفي؟",
+      "options": {
+        "a": "Predict future events",
+        "b": "Summarize data",
+        "c": "Build databases",
+        "d": "Collect samples"
+      },
+      "correct_answer": "b",
+      "explanation": "It aims to describe and summarize data."
+    },
+    {
+      "id": 60,
+      "question_en": "Which measure is most affected by outliers?",
+      "question_ar": "أي مقياس هو الأكثر تأثرًا بالقيم الشاذة؟",
+      "options": {
+        "a": "Mean",
+        "b": "Mode",
+        "c": "Median",
+        "d": "Range"
+      },
+      "correct_answer": "a",
+      "explanation": "Mean shifts towards extreme values."
+    },
+    {
+      "id": 61,
+      "question_en": "In a normal distribution, the relationship between measures of central tendency is:",
+      "question_ar": "في التوزيع الطبيعي، العلاقة بين مقاييس النزعة المركزية هي:",
+      "options": {
+        "a": "Mean > Median > Mode",
+        "b": "Mode > Median > Mean",
+        "c": "Mean = Median = Mode",
+        "d": "Mean = Mode only"
+      },
+      "correct_answer": "c",
+      "explanation": "A perfect normal distribution is symmetric."
+    },
+    {
+      "id": 62,
+      "question_en": "Which of the following is a measure of variability?",
+      "question_ar": "أي مما يلي يعتبر مقياسًا للتشتت؟",
+      "options": {
+        "a": "Median",
+        "b": "Mode",
+        "c": "Variance",
+        "d": "Mean"
+      },
+      "correct_answer": "c",
+      "explanation": "Variance measures spread."
+    },
+    {
+      "id": 63,
+      "question_en": "Statistics helps answer questions about:",
+      "question_ar": "يساعد الإحصاء في الإجابة على أسئلة حول:",
+      "options": {
+        "a": "Hardware only",
+        "b": "Software only",
+        "c": "Data",
+        "d": "Networks"
+      },
+      "correct_answer": "c",
+      "explanation": "Statistics analyzes data."
+    },
+    {
+      "id": 64,
+      "question_en": "Which branch of statistics is used to predict population parameters from a sample?",
+      "question_ar": "أي فرع من الإحصاء يستخدم للتنبؤ بمعلمات المجتمع من عينة؟",
+      "options": {
+        "a": "Descriptive",
+        "b": "Inferential",
+        "c": "Data Mining",
+        "d": "Data Cleaning"
+      },
+      "correct_answer": "b",
+      "explanation": "Inferential statistics makes predictions."
     }
   ],
   "short_answer": [
     {
       "id": 1,
+      "question_en": "Define Big Data in your own words.",
+      "question_ar": "عرف البيانات الضخمة بأسلوبك الخاص.",
+      "answer": "Big Data refers to extremely large and complex datasets that cannot be efficiently processed using traditional data processing systems. It includes structured, semi-structured, and unstructured data and requires distributed computing systems for storage and analysis."
+    },
+    {
+      "id": 2,
+      "question_en": "Explain the difference between Volume and Velocity.",
+      "question_ar": "اشرح الفرق بين الحجم (Volume) والسرعة (Velocity).",
+      "answer": "• Volume: Refers to the amount or size of data generated.\n• Velocity: Refers to the speed at which data is generated and processed."
+    },
+    {
+      "id": 3,
       "question_en": "Why do traditional systems struggle with Big Data?",
       "question_ar": "لماذا تواجه الأنظمة التقليدية صعوبة في التعامل مع البيانات الضخمة؟",
       "answer": "Traditional systems struggle with Big Data because:\n\n• Limited scalability → rely on single-server (vertical scaling).\n• Cannot handle huge data volumes → performance drops with TB/PB data.\n• Poor support for unstructured data → designed for structured tables only.\n• Slow processing → lack distributed and parallel processing.\n• High cost → scaling hardware becomes expensive."
     },
     {
-      "id": 2,
-      "question_en": "Explain the main components of Big Data Architecture.",
+      "id": 4,
+      "question_en": "List the main components of the Big Data technology stack.",
       "question_ar": "اشرح المكونات الرئيسية لبنية البيانات الضخمة.",
-      "answer": "The main components of Big Data Architecture are:\n\nIngestion → Collects data from sources (batch or streaming).\nStorage → Stores large data in distributed systems (e.g., HDFS).\nProcessing → Transforms and analyzes data (batch or real-time).\nAnalytics → Presents insights via dashboards, queries, or ML models."
+      "answer": "The main components of Big Data Architecture are:\n\nIngestion → Collects data from sources (batch or streaming).\nStorage → Stores large data in distributed systems (e.g., HDFS).\nProcessing → Transforms and analyzes data (batch or real-time).\nAnalytics → Presents insights via dashboards, queries, or ML models.\nSecurity & monitoring layer: ensures safety and system health."
     },
     {
-      "id": 3,
+      "id": 5,
       "question_en": "What is the difference between ETL and ELT?",
       "question_ar": "ما الفرق بين ETL و ELT؟",
       "answer": "ETL transforms data before loading it into storage, while ELT loads data first and then performs transformation inside the storage system."
     },
     {
-      "id": 4,
-      "question_en": "Define Exploratory Data Analysis (EDA).",
-      "question_ar": "عرّف تحليل البيانات الاستكشافي (EDA).",
-      "answer": "EDA is analyzing and visualizing data to understand patterns, find outliers, and gain insights before modeling."
-    },
-    {
-      "id": 5,
-      "question_en": "Explain the difference between univariate and multivariate plots.",
-      "question_ar": "اشرح الفرق بين الرسوم أحادية المتغير ومتعددة المتغيرات.",
-      "answer": "Univariate plots analyze a single variable, while multivariate plots analyze relationships between two or more variables."
-    },
-    {
       "id": 6,
-      "question_en": "Define scalability in Big Data systems.",
-      "question_ar": "عرّف قابلية التوسع في أنظمة البيانات الضخمة.",
-      "answer": "Scalability is the ability of a system to handle increasing amounts of data, users, or workload by adding resources without significantly affecting performance."
+      "question_en": "Define fault tolerance and give one replication strategy example.",
+      "question_ar": "عرّف تحمل الأخطاء واذكر مثالاً على إحدى استراتيجيات النسخ المتماثل.",
+      "answer": "Fault tolerance is the ability of a system to continue operating even if some components fail.\nExample: Data replication in HDFS, where each data block is stored in multiple nodes."
     },
     {
       "id": 7,
-      "question_en": "Explain the difference between batch and stream processing.",
-      "question_ar": "اشرح الفرق بين المعالجة الدفعية والمعالجة اللحظية.",
-      "answer": "Batch processing handles large amounts of collected data at scheduled intervals, while stream processing handles data continuously in real time as it arrives."
+      "question_en": "What are the benefits of a Data Lake?",
+      "question_ar": "ما هي فوائد بحيرة البيانات (Data Lake)؟",
+      "answer": "• Stores structured and unstructured data\n• Highly scalable\n• Low-cost storage\n• Supports machine learning and advanced analytics\n• Flexible schema-on-read approach"
     },
     {
       "id": 8,
-      "question_en": "What is the role of autoscaling?",
-      "question_ar": "ما دور التوسع التلقائي (Autoscaling)؟",
-      "answer": "Autoscaling automatically increases or decreases computing resources based on workload demand to maintain performance and optimize resource usage."
+      "question_en": "Explain the importance of monitoring in distributed systems.",
+      "question_ar": "اشرح أهمية المراقبة في الأنظمة الموزعة.",
+      "answer": "Monitoring ensures system reliability by:\n• Detecting failures early\n• Tracking performance metrics\n• Preventing downtime\n• Supporting autoscaling decisions\n• Improving system optimization"
     },
     {
       "id": 9,
-      "question_en": "Explain one benefit of geo-replication.",
-      "question_ar": "اشرح إحدى فوائد النسخ الجغرافي (Geo-Replication).",
-      "answer": "Geo-replication improves disaster recovery by maintaining copies of data in multiple geographic regions, allowing systems to continue operating if one region fails."
+      "question_en": "Mention two Big Data use cases in healthcare or e-commerce.",
+      "question_ar": "اذكر حالتي استخدام للبيانات الضخمة في الرعاية الصحية أو التجارة الإلكترونية.",
+      "answer": "• Predicting disease outbreaks using patient data (Healthcare)\n• Recommendation systems for online shopping (E-commerce)"
     },
     {
       "id": 10,
@@ -801,134 +1437,198 @@
     },
     {
       "id": 11,
-      "question_en": "What are the main components of distribution analysis?",
-      "question_ar": "ما هي المكونات الرئيسية لتحليل التوزيع؟",
-      "answer": "The main components of distribution analysis include central tendency (mean, median, mode), dispersion (range, variance, standard deviation), skewness, and outlier detection."
-    },
-    {
-      "id": 12,
-      "question_en": "Why is data visualization important in machine learning?",
-      "question_ar": "لماذا يعد التصور البياني للبيانات مهمًا في تعلم الآلة؟",
-      "answer": "Data visualization helps understand data patterns, identify outliers, detect relationships between variables, and support better feature selection and model development."
-    },
-    {
-      "id": 13,
       "question_en": "Explain the difference between univariate and multivariate plots.",
       "question_ar": "اشرح الفرق بين الرسوم أحادية المتغير ومتعددة المتغيرات.",
       "answer": "Univariate plots analyze a single variable and its distribution, while multivariate plots analyze relationships and interactions among two or more variables."
     },
     {
+      "id": 12,
+      "question_en": "Define scalability in Big Data systems.",
+      "question_ar": "عرّف قابلية التوسع في أنظمة البيانات الضخمة.",
+      "answer": "Scalability is the ability of a system to handle increasing amounts of data, users, or workload by adding resources without significantly affecting performance."
+    },
+    {
+      "id": 13,
+      "question_en": "Explain the difference between batch and stream processing.",
+      "question_ar": "اشرح الفرق بين المعالجة الدفعية والمعالجة اللحظية.",
+      "answer": "Batch processing handles large amounts of collected data at scheduled intervals, while stream processing handles data continuously in real time as it arrives."
+    },
+    {
       "id": 14,
+      "question_en": "What is the role of autoscaling?",
+      "question_ar": "ما دور التوسع التلقائي (Autoscaling)؟",
+      "answer": "Autoscaling automatically increases or decreases computing resources based on workload demand to maintain performance and optimize resource usage."
+    },
+    {
+      "id": 15,
+      "question_en": "Explain one benefit of geo-replication.",
+      "question_ar": "اشرح إحدى فوائد النسخ الجغرافي (Geo-Replication).",
+      "answer": "Geo-replication improves disaster recovery by maintaining copies of data in multiple geographic regions, allowing systems to continue operating if one region fails."
+    },
+    {
+      "id": 16,
+      "question_en": "What are the main components of distribution analysis?",
+      "question_ar": "ما هي المكونات الرئيسية لتحليل التوزيع؟",
+      "answer": "The main components of distribution analysis include central tendency (mean, median, mode), dispersion (range, variance, standard deviation), skewness, and outlier detection."
+    },
+    {
+      "id": 17,
+      "question_en": "Why is data visualization important in machine learning?",
+      "question_ar": "لماذا يعد التصور البياني للبيانات مهمًا في تعلم الآلة؟",
+      "answer": "Data visualization helps understand data patterns, identify outliers, detect relationships between variables, and support better feature selection and model development."
+    },
+    {
+      "id": 18,
       "question_en": "List two best practices in data visualization.",
       "question_ar": "اذكر ممارستين من أفضل ممارسات التصور البياني للبيانات.",
       "answer": "Use clear labels and titles, and choose the appropriate chart type for the data being presented."
+    },
+    {
+      "id": 19,
+      "question_en": "Why is RDBMS not suitable for Big Data workloads?",
+      "question_ar": "لماذا لا يعد RDBMS مناسبًا لأحمال عمل البيانات الضخمة؟",
+      "answer": "RDBMS systems are not suitable because they rely on vertical scaling, have limited ability to handle massive distributed datasets, and are optimized for structured data and transactional workloads rather than large-scale analytics."
+    },
+    {
+      "id": 20,
+      "question_en": "What are the main advantages of Hadoop?",
+      "question_ar": "ما هي المزايا الرئيسية لـ Hadoop؟",
+      "answer": "• Horizontal scalability\n• Fault tolerance via replication\n• Cost-effective distributed storage\n• Ability to process large and diverse datasets\n• Parallel processing capability"
+    },
+    {
+      "id": 21,
+      "question_en": "Explain the difference between HDFS and HBase.",
+      "question_ar": "اشرح الفرق بين HDFS و HBase.",
+      "answer": "• HDFS: Distributed file system for storing large files.\n• HBase: NoSQL database built on top of HDFS for real-time read/write access."
+    },
+    {
+      "id": 22,
+      "question_en": "Compare MapReduce and Spark.",
+      "question_ar": "قارن بين MapReduce و Spark.",
+      "answer": "• MapReduce: Disk-based batch processing, slower due to I/O overhead.\n• Spark: In-memory processing, faster and supports iterative workloads and real-time analytics."
+    },
+    {
+      "id": 23,
+      "question_en": "What is the role of Apache Ambari in Hadoop?",
+      "question_ar": "ما هو دور Apache Ambari في Hadoop؟",
+      "answer": "Apache Ambari is used to install, configure, monitor, and manage Hadoop clusters through a centralized web interface."
     }
   ],
   "code": [
     {
       "id": 1,
-      "task": "Load a dataset and display basic statistical summary (mean, median, std).",
-      "code": "import pandas as pd\ndf = pd.read_csv('data.csv')\nprint(df.mean(numeric_only=True))\nprint(df.median(numeric_only=True))\nprint(df.std(numeric_only=True))"
+      "task": "1. Load a dataset and display basic statistical summary (mean, median, std).",
+      "code": "import pandas as pd\n\n# Load dataset\ndf = pd.read_csv('data.csv')\n\n# Statistical summary\nsummary = df.describe()\nmedian = df.median(numeric_only=True)\n\nprint('Mean:\\n', df.mean(numeric_only=True))\nprint('Median:\\n', median)\nprint('Std:\\n', df.std(numeric_only=True))"
     },
     {
       "id": 2,
-      "task": "Create a histogram to visualize the distribution of a numeric column.",
-      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\ndf['score'].hist()\nplt.show()"
+      "task": "2. Create a histogram to visualize the distribution of a numeric column.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\n\ndf['value'].hist(bins=30)\nplt.title('Histogram')\nplt.xlabel('Value')\nplt.ylabel('Frequency')\nplt.show()"
     },
     {
       "id": 3,
-      "task": "Generate a box plot to detect outliers in a dataset.",
-      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\ndf.boxplot()\nplt.show()"
+      "task": "3. Generate a box plot to detect outliers in a dataset.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\n\nplt.boxplot(df['value'].dropna())\nplt.title('Box Plot')\nplt.show()"
     },
     {
       "id": 4,
-      "task": "Create a correlation matrix and visualize it.",
-      "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('data.csv')\nsns.heatmap(df.corr(numeric_only=True))\nplt.show()"
+      "task": "4. Create a correlation matrix and visualize it.",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\n\nimport numpy as np\n\ndf = pd.read_csv('data.csv')\n\ncorr = df.corr(numeric_only=True)\nprint(corr)\n\nplt.imshow(corr, cmap='coolwarm')\nplt.colorbar()\nplt.title('Correlation Matrix')\nplt.show()"
     },
     {
       "id": 5,
-      "task": "Create a histogram using NumPy random data.",
-      "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\ndata = np.random.randn(1000)\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Example')\nplt.show()"
+      "task": "Create a scatter matrix plot for multivariate analysis.",
+      "code": "import pandas as pd\nfrom pandas.plotting import scatter_matrix\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\n\nscatter_matrix(df.select_dtypes(include='number'), figsize=(10, 10))\nplt.show()"
     },
     {
       "id": 6,
-      "task": "Create a density plot (KDE) for a dataset.",
-      "code": "import seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = sns.load_dataset('iris')\nsns.kdeplot(data=df, x='sepal_length', fill=True)\nplt.xlabel('Sepal Length')\nplt.ylabel('Density')\nplt.title('Density Plot of Sepal Length')\nplt.show()"
+      "task": "1. Simulate batch processing by reading a CSV file and computing total sales.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('sales.csv')\n\ntotal_sales = df['sales'].sum()\nprint('Total Sales:', total_sales)"
     },
     {
       "id": 7,
-      "task": "Generate a box and whisker plot using sample data.",
-      "code": "import matplotlib.pyplot as plt\n\ndata = [10, 15, 18, 20, 22, 25, 28, 30, 32, 35]\nfig, ax = plt.subplots()\nax.boxplot(data)\nax.set_title('Box and Whisker Plot')\nplt.show()"
+      "task": "2. Implement ELT (Load first, then transform by filtering high values).",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\ntransformed = df[df['value'] > 100]\ntransformed.to_csv('filtered_data.csv', index=False)"
     },
     {
       "id": 8,
-      "task": "Create a correlation matrix heatmap with annotations.",
-      "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndata = {'A': [1, 2, 3, 4, 5], 'B': [5, 4, 3, 2, 1], 'C': [2, 3, 1, 4, 5]}\ndf = pd.DataFrame(data)\nc_matrix = df.corr()\nsns.heatmap(c_matrix, annot=True, cmap='coolwarm')\nplt.title('Correlation Matrix')\nplt.show()"
+      "task": "3. Implement synchronous replication simulation (copy data and confirm replication).",
+      "code": "import shutil\n\nsource = 'data.csv'\ndestination = 'replica.csv'\n\nshutil.copy(source, destination)\n\nprint('Replication successful')"
     },
     {
       "id": 9,
-      "task": "Create a scatter matrix plot for multivariate analysis.",
-      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn import datasets\n\niris = datasets.load_iris()\ndf = pd.DataFrame(iris.data, columns=iris.feature_names)\npd.plotting.scatter_matrix(df, diagonal='hist', figsize=(8, 7))\nplt.show()"
+      "task": "4. Implement autoscaling simulation based on CPU usage threshold.",
+      "code": "cpu_usage = 75\nthreshold = 70\n\nif cpu_usage > threshold:\n    print('Scaling up resources')\nelse:\n    print('System stable')"
     },
     {
       "id": 10,
-      "task": "Simulate distributed storage by splitting a dataset into multiple files (HDFS-style).",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nchunk_size = len(df) // 3\nfor i in range(3):\n    chunk = df[i*chunk_size:(i+1)*chunk_size]\n    chunk.to_csv(f'block_{i}.csv', index=False)"
+      "task": "1. Write a program that reads a large dataset (e.g., text file) and counts the number of words (simulating Volume processing).",
+      "code": "from collections import Counter\n\nwith open('large.txt', 'r') as f:\n    text = f.read()\n\nword_count = len(text.split())\nprint('Word Count:', word_count)"
     },
     {
       "id": 11,
-      "task": "Simulate MapReduce word count using Python.",
-      "code": "from collections import defaultdict\n\ntext = \"big data big data analytics\"\nwords = text.split()\n\n# Map phase\nmapped = [(word, 1) for word in words]\n\n# Reduce phase\nreduced = defaultdict(int)\nfor word, count in mapped:\n    reduced[word] += count\n\nprint(dict(reduced))"
+      "task": "2. Write a program that simulates real-time data streaming (Velocity) by generating random data every second and printing it.",
+      "code": "import random\nimport time\n\nfor _ in range(5):\n    data = random.randint(1, 100)\n    print('Stream:', data)\n    time.sleep(1)"
     },
     {
       "id": 12,
-      "task": "Simulate Spark-like in-memory processing with aggregation.",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nresult = df.groupby('category')['value'].sum()\nprint(result)"
+      "task": "3. Write a program that reads different data types (text, numbers, and images file path names) and categorizes them (Variety simulation).",
+      "code": "data = ['file.txt', 123, 'image.png', 45.6]\n\ncategories = {'text': [], 'number': [], 'image': []}\n\nfor item in data:\n    if isinstance(item, str) and item.endswith('.png'):\n        categories['image'].append(item)\n    elif isinstance(item, str):\n        categories['text'].append(item)\n    else:\n        categories['number'].append(item)\n\nprint(categories)"
     },
     {
       "id": 13,
-      "task": "Store structured and unstructured data separately.",
-      "code": "import json\n\nstructured_data = [{'id': 1, 'name': 'Ali'}, {'id': 2, 'name': 'Sara'}]\nunstructured_data = ['This is a text', 'Another random sentence']\n\nwith open('structured.json', 'w') as f:\n    json.dump(structured_data, f)\n\nwith open('unstructured.txt', 'w') as f:\n    for line in unstructured_data:\n        f.write(line + '\\n')"
+      "task": "4. Write a program that removes duplicate records from a dataset (Veracity improvement).",
+      "code": "data = [1, 2, 2, 3, 4, 4, 5]\n\ncleaned = list(set(data))\nprint('Cleaned Data:', cleaned)"
     },
     {
       "id": 14,
-      "task": "Simulate fault tolerance by creating data replicas.",
-      "code": "import shutil\n\noriginal_file = 'data.csv'\nreplica1 = 'data_replica1.csv'\nreplica2 = 'data_replica2.csv'\n\nshutil.copy(original_file, replica1)\nshutil.copy(original_file, replica2)\n\nprint('Replicas created successfully')"
+      "task": "5. Write a program that calculates the average sales from a dataset and prints a summary report (Value extraction).",
+      "code": "sales = [100, 200, 300, 400]\navg_sales = sum(sales) / len(sales)\n\nprint('Average Sales:', avg_sales)"
     },
     {
       "id": 15,
-      "task": "Simulate batch processing by reading a CSV file and computing total sales.",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('sales.csv')\ntotal_sales = df['sales'].sum()\n\nprint('Total Sales:', total_sales)"
+      "task": "1. Write a Python program that simulates data ingestion from multiple sources (e.g., logs and IoT sensors) and stores them into a single dataset.",
+      "code": "logs = ['log1', 'log2']\niot = [10, 20, 30]\n\ncombined = []\n\ndef ingest(source):\n    for item in source:\n        combined.append(item)\n\ningest(logs)\ningest(iot)\n\nprint(combined)"
     },
     {
       "id": 16,
-      "task": "Implement ELT (Load first, then transform by filtering high values).",
-      "code": "import pandas as pd\n\n# Load\ndf = pd.read_csv('data.csv')\n\n# Transform after loading\nfiltered_df = df[df['value'] > 100]\n\nprint(filtered_df)"
+      "task": "2. Write a Python program that performs ETL: \n o Extract data from a CSV file \n o Transform it (clean null values) \n o Load it into a new CSV file.",
+      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\ndf = df.dropna()\n\ndf.to_csv('clean_data.csv', index=False)"
     },
     {
       "id": 17,
-      "task": "Implement synchronous replication simulation (copy data and confirm replication).",
-      "code": "import shutil\n\nsource_file = 'data.csv'\nreplica_file = 'data_replica.csv'\n\nshutil.copy(source_file, replica_file)\n\nprint('Replication completed successfully. Acknowledgment sent after replica creation.')"
+      "task": "3. Write a Python program that partitions a dataset into two shards based on a key (e.g., even/odd IDs).",
+      "code": "import pandas as pd\n\ndf = pd.DataFrame({'id': [1,2,3,4,5]})\n\neven = df[df['id'] % 2 == 0]\nodd = df[df['id'] % 2 != 0]\n\nprint(even)\nprint(odd)"
     },
     {
       "id": 18,
-      "task": "Implement autoscaling simulation based on CPU usage threshold.",
-      "code": "cpu_usage = 85\nthreshold = 80\ninstances = 2\n\nif cpu_usage > threshold:\n    instances += 1\n    print('Scaling up. Instances:', instances)\nelse:\n    print('No scaling required. Instances:', instances)"
+      "task": "4. Write a Python program that monitors a dataset and prints a warning if a value exceeds a given threshold (simulating system monitoring).",
+      "code": "data = [10, 50, 120, 30]\nthreshold = 100\n\nfor v in data:\n    if v > threshold:\n        print('Warning:', v)"
     },
     {
       "id": 19,
-      "task": "Load a dataset and display basic statistical summary (mean, median, std).",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\nprint('Mean:')\nprint(df.mean(numeric_only=True))\n\nprint('\\nMedian:')\nprint(df.median(numeric_only=True))\n\nprint('\\nStandard Deviation:')\nprint(df.std(numeric_only=True))"
+      "task": "1. Simulate distributed storage by splitting a dataset into multiple files (HDFS style block simulation).",
+      "code": "data = list(range(100))\nchunk_size = 20\n\nfor i in range(0, len(data), chunk_size):\n    with open(f'block_{i//chunk_size}.txt', 'w') as f:\n        f.write(str(data[i:i+chunk_size]))"
     },
     {
       "id": 20,
-      "task": "Create a correlation matrix and visualize it.",
-      "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\n\ncorrelation_matrix = df.corr(numeric_only=True)\n\nsns.heatmap(correlation_matrix, annot=True)\nplt.title('Correlation Matrix')\nplt.show()"
+      "task": "2. Simulate MapReduce word count using Python (map phase + reduce phase).",
+      "code": "text = 'map reduce map example text map'\n\nwords = text.split()\n\nmapped = [(w, 1) for w in words]\n\nreduced = {}\nfor w, c in mapped:\n    reduced[w] = reduced.get(w, 0) + c\n\nprint(reduced)"
     },
     {
       "id": 21,
-      "task": "Create a scatter matrix plot for multivariate analysis.",
-      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\nfrom pandas.plotting import scatter_matrix\n\ndf = pd.read_csv('data.csv')\n\nscatter_matrix(df.select_dtypes(include='number'), figsize=(8, 8))\nplt.show()"
+      "task": "3. Simulate Spark-like in-memory processing by loading a dataset and performing aggregation.",
+      "code": "data = [10, 20, 30, 40]\n\nresult = sum(data)\nprint('Aggregation Result:', result)"
+    },
+    {
+      "id": 22,
+      "task": "4. Write a program that stores structured and unstructured data in separate categories (simulating Hadoop flexibility).",
+      "code": "data = [{'id': 1, 'value': 10}, 'raw_text', {'id': 2, 'value': 20}, 'log entry']\n\nstructured = []\nunstructured = []\n\nfor item in data:\n    if isinstance(item, dict):\n        structured.append(item)\n    else:\n        unstructured.append(item)\n\nprint(structured)\nprint(unstructured)"
+    },
+    {
+      "id": 23,
+      "task": "5. Write a program that simulates fault tolerance by creating data replicas.",
+      "code": "data = ['A', 'B', 'C']\nreplicas = {i: data[:] for i in range(3)}\n\nprint(replicas)"
     }
   ],
   "fill_in_the_blank": [
@@ -1031,6 +1731,56 @@
       "id": 20,
       "question": "________ is an open-source tool commonly used for monitoring system metrics and performance.",
       "answer": "Prometheus"
+    },
+    {
+      "id": 21,
+      "question": "________ Statistics summarizes observations from data.",
+      "answer": "Descriptive"
+    },
+    {
+      "id": 22,
+      "question": "________ Statistics uses samples to make predictions.",
+      "answer": "Inferential"
+    },
+    {
+      "id": 23,
+      "question": "The ________ is the average value.",
+      "answer": "Mean"
+    },
+    {
+      "id": 24,
+      "question": "The ________ is the most common value.",
+      "answer": "Mode"
+    },
+    {
+      "id": 25,
+      "question": "The ________ is the middle value.",
+      "answer": "Median"
+    },
+    {
+      "id": 26,
+      "question": "________ are values outside the normal pattern.",
+      "answer": "Outliers"
+    },
+    {
+      "id": 27,
+      "question": "________ measures spread around mean.",
+      "answer": "Standard Deviation"
+    },
+    {
+      "id": 28,
+      "question": "________ measures asymmetry.",
+      "answer": "Skewness"
+    },
+    {
+      "id": 29,
+      "question": "________ measures tail heaviness.",
+      "answer": "Kurtosis"
+    },
+    {
+      "id": 30,
+      "question": "________ equals max − min.",
+      "answer": "Range"
     }
   ]
 }
