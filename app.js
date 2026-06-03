@@ -2615,10 +2615,40 @@ const DataLoader = (() => {
 })();
 
 // ========================================
+// 12.5 WARNING BANNER
+// ========================================
+const WarningBanner = (() => {
+  const BANNER_KEY = 'exambank_warning_dismissed';
+
+  const init = () => {
+    const banner = document.getElementById('topWarningBanner');
+    const closeBtn = document.getElementById('closeBannerBtn');
+
+    if (!banner || !closeBtn) return;
+
+    // Check if already dismissed
+    const isDismissed = localStorage.getItem(BANNER_KEY);
+    if (!isDismissed) {
+      banner.classList.remove('hidden');
+    }
+
+    closeBtn.addEventListener('click', () => {
+      banner.classList.add('hidden');
+      localStorage.setItem(BANNER_KEY, 'true');
+    });
+  };
+
+  return { init };
+})();
+
+// ========================================
 // 13. APP INITIALIZATION
 // ========================================
 const App = (() => {
   const init = async () => {
+    // Initialize Warning Banner
+    WarningBanner.init();
+
     // Load keywords first
     await KeywordManager.load();
 

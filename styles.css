@@ -3693,3 +3693,87 @@ html[dir="rtl"] .keyword-highlight {
   transition: none !important;
 }
 
+/* --- Warning Banner --- */
+.warning-banner {
+  background-color: var(--color-warning-light);
+  border-bottom: 1px solid var(--color-warning);
+  padding: var(--space-3) 0;
+  z-index: 1001; /* Above header if needed */
+  animation: slideDownBanner 0.3s ease-out;
+}
+
+.warning-banner.hidden {
+  display: none;
+}
+
+.banner-container {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.banner-content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  direction: rtl; /* Arabic text */
+}
+
+.banner-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-warning);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.banner-text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  margin: 0;
+  text-align: justify;
+}
+
+.banner-close {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.banner-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-text-primary);
+}
+
+.banner-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes slideDownBanner {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    padding: 0 var(--space-4);
+  }
+  .banner-text {
+    font-size: var(--font-size-xs);
+  }
+}
+

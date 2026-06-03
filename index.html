@@ -32,6 +32,26 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Top Warning Banner -->
+  <div id="topWarningBanner" class="warning-banner hidden" role="alert">
+    <div class="banner-container">
+      <div class="banner-content">
+        <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p class="banner-text">تنبيه: البيانات المتاحة على هذه المنصة غير مكتملة، حيث لم يتم تضمين جميع الشيتات أو الواجبات أو المراجع بشكل كامل. لذلك لا يُنصح بالاعتماد عليها كمصدر دقيق أو رسمي، ويُفضل استخدامها فقط للمراجعة أو التعلم أو اختبار نفسك.</p>
+      </div>
+      <button id="closeBannerBtn" class="banner-close" aria-label="Dismiss warning">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="app-header">
     <div class="header-container">
