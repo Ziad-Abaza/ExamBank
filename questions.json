@@ -1,1786 +1,2175 @@
 {
-  "true_false": [
-    {
-      "id": 1,
-      "question_en": "The growth of IoT devices is one of the main causes of the data explosion.",
-      "question_ar": "هل نمو أجهزة إنترنت الأشياء هو أحد الأسباب الرئيسية لانفجار البيانات؟",
-      "answer": true,
-      "explanation": "IoT devices continuously generate massive amounts of data, contributing to data explosion."
-    },
-    {
-      "id": 2,
-      "question_en": "Big Data only refers to structured data stored in relational databases.",
-      "question_ar": "هل البيانات الضخمة تقتصر فقط على البيانات المنظمة؟",
-      "answer": false,
-      "explanation": "Big Data includes structured, semi-structured, and unstructured data."
-    },
-    {
-      "id": 3,
-      "question_en": "Volume refers to the speed at which data is generated.",
-      "question_ar": "هل الحجم يشير إلى سرعة توليد البيانات؟",
-      "answer": false,
-      "explanation": "Volume refers to the amount of data, not speed."
-    },
-    {
-      "id": 4,
-      "question_en": "Velocity describes how fast data is generated and processed.",
-      "question_ar": "هل السرعة تصف مدى سرعة توليد ومعالجة البيانات؟",
-      "answer": true,
-      "explanation": "Velocity refers to the speed of data generation and processing."
-    },
-    {
-      "id": 5,
-      "question_en": "Variety refers to different formats such as text, images, and videos.",
-      "question_ar": "هل التنوع يشير إلى أنواع البيانات المختلفة؟",
-      "answer": true,
-      "explanation": "Variety represents different data formats."
-    },
-    {
-      "id": 6,
-      "question_en": "Veracity deals with data accuracy and reliability.",
-      "question_ar": "هل الموثوقية تتعلق بدقة البيانات؟",
-      "answer": true,
-      "explanation": "Veracity focuses on data quality and trustworthiness."
-    },
-    {
-      "id": 7,
-      "question_en": "Traditional systems are always sufficient for handling petabytes of data.",
-      "question_ar": "هل الأنظمة التقليدية كافية دائمًا لبيانات ضخمة؟",
-      "answer": false,
-      "explanation": "Traditional systems cannot efficiently handle very large-scale data."
-    },
-    {
-      "id": 8,
-      "question_en": "Distributed computing allows multiple machines to work together.",
-      "question_ar": "هل الحوسبة الموزعة تسمح لعدة أجهزة بالعمل معًا؟",
-      "answer": true,
-      "explanation": "Distributed computing uses multiple machines collaboratively."
-    },
-    {
-      "id": 9,
-      "question_en": "Big Data architecture includes ingestion, storage, processing, and analytics layers.",
-      "question_ar": "هل بنية البيانات الضخمة تشمل الإدخال والتخزين والمعالجة والتحليل؟",
-      "answer": true,
-      "explanation": "These are the core layers in Big Data architecture."
-    },
-    {
-      "id": 10,
-      "question_en": "Scalability is not a challenge in Big Data systems.",
-      "question_ar": "هل قابلية التوسع ليست تحديًا؟",
-      "answer": false,
-      "explanation": "Scalability is a major challenge in Big Data systems."
-    },
-    {
-      "id": 11,
-      "question_en": "The ingestion layer is responsible for collecting data from different sources.",
-      "question_ar": "هل طبقة الإدخال مسؤولة عن جمع البيانات من مصادر مختلفة؟",
-      "answer": true,
-      "explanation": "The ingestion layer collects data from sources like databases, logs, IoT devices, and APIs."
-    },
-    {
-      "id": 12,
-      "question_en": "Apache Kafka is mainly used for streaming data ingestion.",
-      "question_ar": "هل يستخدم Apache Kafka بشكل أساسي لإدخال بيانات البث؟",
-      "answer": true,
-      "explanation": "Kafka is widely used for real-time data ingestion and event streaming."
-    },
-    {
-      "id": 13,
-      "question_en": "Hadoop Distributed File System is a distributed file system used for large-scale storage.",
-      "question_ar": "هل HDFS هو نظام ملفات موزع يستخدم للتخزين على نطاق واسع؟",
-      "answer": true,
-      "explanation": "HDFS is designed for scalable and fault-tolerant storage of large datasets."
-    },
-    {
-      "id": 14,
-      "question_en": "Data warehouses are optimized mainly for transactional workloads.",
-      "question_ar": "هل مستودعات البيانات مُحسَّنة بشكل أساسي لأعباء العمل المتعلقة بالمعاملات؟",
-      "answer": false,
-      "explanation": "Data warehouses are optimized for analytical workloads (OLAP), not transactional processing (OLTP)."
-    },
-    {
-      "id": 15,
-      "question_en": "ETL loads data first and then transforms it.",
-      "question_ar": "هل تقوم ETL بتحميل البيانات أولاً ثم تحويلها؟",
-      "answer": false,
-      "explanation": "In ETL, data is Extracted, then Transformed, and finally Loaded."
-    },
-    {
-      "id": 16,
-      "question_en": "Stateless services help improve scalability.",
-      "question_ar": "هل تساعد الخدمات عديمة الحالة في تحسين قابلية التوسع؟",
-      "answer": true,
-      "explanation": "Stateless services do not retain session data, making them easier to scale horizontally."
-    },
-    {
-      "id": 17,
-      "question_en": "Leader election is part of high availability mechanisms.",
-      "question_ar": "هل انتخاب القائد جزء من آليات التوفر العالي؟",
-      "answer": true,
-      "explanation": "Leader election ensures one active node coordinates the system in distributed architectures."
-    },
-    {
-      "id": 18,
-      "question_en": "Encryption is part of the security layer in Big Data architecture.",
-      "question_ar": "هل التشفير جزء من طبقة الأمان في بنية البيانات الضخمة؟",
-      "answer": true,
-      "explanation": "Encryption protects data at rest and in transit within Big Data systems."
-    },
-    {
-      "id": 19,
-      "question_en": "Hadoop provides built-in fault tolerance.",
-      "question_ar": "هل Hadoop يوفر تحمل الأخطاء؟",
-      "answer": true,
-      "explanation": "Hadoop uses data replication for fault tolerance."
-    },
-    {
-      "id": 20,
-      "question_en": "NoSQL databases are limited to structured data only.",
-      "question_ar": "هل NoSQL تقتصر على البيانات المنظمة؟",
-      "answer": false,
-      "explanation": "NoSQL supports unstructured and semi-structured data."
-    },
-    {
-      "id": 21,
-      "question_en": "Apache Spark is generally faster than MapReduce due to in-memory processing.",
-      "question_ar": "هل Spark أسرع من MapReduce؟",
-      "answer": true,
-      "explanation": "Spark processes data in memory, making it faster."
-    },
-    {
-      "id": 22,
-      "question_en": "Apache Hive belongs to the data querying layer of the Hadoop ecosystem.",
-      "question_ar": "هل Hive ضمن طبقة الاستعلام؟",
-      "answer": true,
-      "explanation": "Hive allows SQL-like querying on Hadoop."
-    },
-    {
-      "id": 23,
-      "question_en": "Hadoop cluster management can be performed using Apache Ambari.",
-      "question_ar": "هل يمكن إدارة Hadoop باستخدام Ambari؟",
-      "answer": true,
-      "explanation": "Ambari is used for monitoring and managing Hadoop clusters."
-    },
-    {
-      "id": 24,
-      "question_en": "Hadoop is only suitable for structured relational data.",
-      "question_ar": "هل Hadoop مناسب فقط للبيانات المنظمة؟",
-      "answer": false,
-      "explanation": "Hadoop supports all data types."
-    },
-    {
-      "id": 25,
-      "question_en": "A histogram is used for multivariate analysis only.",
-      "question_ar": "هل Histogram يستخدم فقط لتحليل متعدد المتغيرات؟",
-      "answer": false,
-      "explanation": "Histogram is used for univariate analysis."
-    },
-    {
-      "id": 26,
-      "question_en": "Box plots can help identify outliers in data.",
-      "question_ar": "هل Box Plot يساعد في اكتشاف القيم الشاذة؟",
-      "answer": true,
-      "explanation": "Box plots highlight outliers clearly."
-    },
-    {
-      "id": 27,
-      "question_en": "Correlation matrix is used to analyze relationships between multiple variables.",
-      "question_ar": "هل مصفوفة الارتباط تستخدم لتحليل العلاقات؟",
-      "answer": true,
-      "explanation": "It measures relationships between variables."
-    },
-    {
-      "id": 28,
-      "question_en": "Data visualization has no role in machine learning.",
-      "question_ar": "هل التصور البياني لا دور له؟",
-      "answer": false,
-      "explanation": "Visualization is essential in understanding data."
-    },
-    {
-      "id": 29,
-      "question_en": "Scatter plots are used for visualizing relationships between two variables.",
-      "question_ar": "هل Scatter Plot يستخدم لعلاقة بين متغيرين؟",
-      "answer": true,
-      "explanation": "Scatter plots show relationships between two variables."
-    },
-    {
-      "id": 30,
-      "question_en": "Data Visualization is used to represent data graphically for better understanding.",
-      "question_ar": "هل التصور البياني يستخدم لعرض البيانات؟",
-      "answer": true,
-      "explanation": "It represents data visually."
-    },
-    {
-      "id": 31,
-      "question_en": "Exploratory Data Analysis (EDA) is only performed after model deployment.",
-      "question_ar": "هل يتم EDA بعد نشر النموذج فقط؟",
-      "answer": false,
-      "explanation": "EDA is done before modeling."
-    },
-    {
-      "id": 32,
-      "question_en": "EDA helps in identifying patterns, trends, and anomalies in data.",
-      "question_ar": "هل يساعد EDA في اكتشاف الأنماط؟",
-      "answer": true,
-      "explanation": "EDA is used to discover patterns and anomalies."
-    },
-    {
-      "id": 33,
-      "question_en": "Central tendency refers to measures like mean, median, and mode.",
-      "question_ar": "هل النزعة المركزية تشمل المتوسط والوسيط؟",
-      "answer": true,
-      "explanation": "These are standard central tendency measures."
-    },
-    {
-      "id": 34,
-      "question_en": "RDBMS systems are fully optimized for petabyte-scale Big Data workloads.",
-      "question_ar": "هل RDBMS مناسبة لبيانات ضخمة جدًا؟",
-      "answer": false,
-      "explanation": "They are not optimized for very large-scale distributed data."
-    },
-    {
-      "id": 35,
-      "question_en": "Batch processing handles data in large chunks collected over time.",
-      "question_ar": "هل المعالجة الدفعية تتعامل مع البيانات على شكل دفعات كبيرة يتم جمعها مع مرور الوقت؟",
-      "answer": true,
-      "explanation": "Batch processing collects data over a period and processes it in large groups."
-    },
-    {
-      "id": 36,
-      "question_en": "Streaming processing handles data in real time as it arrives.",
-      "question_ar": "هل المعالجة اللحظية تتعامل مع البيانات فور وصولها؟",
-      "answer": true,
-      "explanation": "Streaming systems process data continuously as it is generated."
-    },
-    {
-      "id": 37,
-      "question_en": "Apache Kafka can be used for real-time data ingestion.",
-      "question_ar": "هل يمكن استخدام Apache Kafka لإدخال البيانات في الوقت الحقيقي؟",
-      "answer": true,
-      "explanation": "Kafka is a popular platform for streaming and real-time data ingestion."
-    },
-    {
-      "id": 38,
-      "question_en": "Apache Flume is mainly used for dashboard visualization.",
-      "question_ar": "هل Apache Flume يستخدم أساسًا لعرض لوحات المعلومات؟",
-      "answer": false,
-      "explanation": "Flume is used for data ingestion, not visualization."
-    },
-    {
-      "id": 39,
-      "question_en": "Data warehouses are optimized for analytical queries.",
-      "question_ar": "هل مستودعات البيانات مُحسّنة للاستعلامات التحليلية؟",
-      "answer": true,
-      "explanation": "Data warehouses are designed to support analytics and reporting workloads."
-    },
-    {
-      "id": 40,
-      "question_en": "Cloud object storage is less scalable than local storage.",
-      "question_ar": "هل التخزين الكائني السحابي أقل قابلية للتوسع من التخزين المحلي؟",
-      "answer": false,
-      "explanation": "Cloud object storage is highly scalable and can handle massive data growth."
-    },
-    {
-      "id": 41,
-      "question_en": "Geo-replication helps systems recover from regional failures.",
-      "question_ar": "هل النسخ الجغرافي يساعد الأنظمة على التعافي من الأعطال الإقليمية؟",
-      "answer": true,
-      "explanation": "Geo-replication keeps copies of data across regions to improve disaster recovery."
-    },
-    {
-      "id": 42,
-      "question_en": "Autoscaling automatically adjusts system resources based on workload.",
-      "question_ar": "هل التوسع التلقائي يعدل الموارد تلقائيًا حسب الحمل؟",
-      "answer": true,
-      "explanation": "Autoscaling increases or decreases resources according to demand."
-    },
-    {
-      "id": 43,
-      "question_en": "Monitoring tools are unnecessary if replication is implemented.",
-      "question_ar": "هل أدوات المراقبة غير ضرورية عند تطبيق النسخ المتماثل؟",
-      "answer": false,
-      "explanation": "Monitoring remains essential for detecting failures, performance issues, and system health."
-    },
-    {
-      "id": 44,
-      "question_en": "Scalability is one of the main limitations of traditional RDBMS when handling Big Data.",
-      "question_ar": "هل قابلية التوسع هي إحدى القيود الرئيسية لـ RDBMS التقليدية عند التعامل مع البيانات الضخمة؟",
-      "answer": true,
-      "explanation": "RDBMS systems scale vertically, which is limited compared to distributed systems."
-    },
-    {
-      "id": 45,
-      "question_en": "Apache Hadoop is designed for distributed storage and processing of large datasets.",
-      "question_ar": "هل صُمم Apache Hadoop للتخزين الموزع ومعالجة مجموعات البيانات الكبيرة؟",
-      "answer": true,
-      "explanation": "Hadoop is built for distributed storage and parallel processing."
-    },
-    {
-      "id": 46,
-      "question_en": "Dispersion measures the spread of data.",
-      "question_ar": "هل يقيس التشتت مدى انتشار البيانات؟",
-      "answer": true,
-      "explanation": "Dispersion includes variance, standard deviation, and range."
-    },
-    {
-      "id": 47,
-      "question_en": "Statistics are tools used to answer questions about data.",
-      "question_ar": "هل الإحصاء عبارة عن أدوات تستخدم للإجابة على أسئلة حول البيانات؟",
-      "answer": true,
-      "explanation": "Statistics provides methods for data analysis."
-    },
-    {
-      "id": 48,
-      "question_en": "Inferential Statistics summarizes data without making predictions.",
-      "question_ar": "هل تلخص الإحصاء الاستدلالي البيانات دون إجراء تنبؤات؟",
-      "answer": false,
-      "explanation": "Inferential statistics is used to make predictions and conclusions."
-    },
-    {
-      "id": 49,
-      "question_en": "Inferential Statistics uses a sample to make conclusions about a population.",
-      "question_ar": "هل يستخدم الإحصاء الاستدلالي عينة لاستخلاص استنتاجات حول مجتمع ما؟",
-      "answer": true,
-      "explanation": "This is the core definition of inferential statistics."
-    },
-    {
-      "id": 50,
-      "question_en": "Descriptive Statistics is used to predict whole domains from small samples.",
-      "question_ar": "هل يستخدم الإحصاء الوصفي للتنبؤ بمجالات كاملة من عينات صغيرة؟",
-      "answer": false,
-      "explanation": "Descriptive statistics only summarizes data, it does not predict."
-    },
-    {
-      "id": 51,
-      "question_en": "Mean is the most common value in a dataset.",
-      "question_ar": "هل المتوسط هو القيمة الأكثر شيوعًا في مجموعة البيانات؟",
-      "answer": false,
-      "explanation": "The most common value is the mode."
-    },
-    {
-      "id": 52,
-      "question_en": "Median is the middle value after sorting data.",
-      "question_ar": "هل الوسيط هو القيمة الوسطى بعد فرز البيانات؟",
-      "answer": true,
-      "explanation": "Median represents the 50th percentile of sorted data."
-    },
-    {
-      "id": 53,
-      "question_en": "Mode is the most frequently occurring value.",
-      "question_ar": "هل المنوال هو القيمة الأكثر تكرارًا؟",
-      "answer": true,
-      "explanation": "Mode is the value that appears most often."
-    },
-    {
-      "id": 54,
-      "question_en": "Measures of Variability include Mean and Median.",
-      "question_ar": "هل تشمل مقاييس التشتت المتوسط والوسيط؟",
-      "answer": false,
-      "explanation": "Mean and Median are measures of central tendency."
-    },
-    {
-      "id": 55,
-      "question_en": "Standard Deviation is a measure of variability.",
-      "question_ar": "هل الانحراف المعياري هو مقياس للتشتت؟",
-      "answer": true,
-      "explanation": "It measures how spread out the numbers are."
-    },
-    {
-      "id": 56,
-      "question_en": "Variance is a measure of central tendency.",
-      "question_ar": "هل التباين هو مقياس للنزعة المركزية؟",
-      "answer": false,
-      "explanation": "Variance is a measure of variability/dispersion."
-    },
-    {
-      "id": 57,
-      "question_en": "Outliers are values that lie outside the pattern of the remaining data.",
-      "question_ar": "هل القيم الشاذة هي قيم تقع خارج نمط باقي البيانات؟",
-      "answer": true,
-      "explanation": "Outliers deviate significantly from other observations."
-    },
-    {
-      "id": 58,
-      "question_en": "Descriptive Statistics transforms raw observations into understandable data.",
-      "question_ar": "هل يحول الإحصاء الوصفي الملاحظات الخام إلى بيانات مفهومة؟",
-      "answer": true,
-      "explanation": "It summarizes and organizes data effectively."
-    },
-    {
-      "id": 59,
-      "question_en": "Inferential Statistics requires information from every member of the population.",
-      "question_ar": "هل يتطلب الإحصاء الاستدلالي معلومات من كل فرد في المجتمع؟",
-      "answer": false,
-      "explanation": "It uses samples to infer about populations."
-    },
-    {
-      "id": 60,
-      "question_en": "Range is considered a measure of variability.",
-      "question_ar": "هل يعتبر المدى مقياسًا للتشتت؟",
-      "answer": true,
-      "explanation": "Range is the difference between max and min values."
-    },
-    {
-      "id": 61,
-      "question_en": "Skewness and Kurtosis are measures of spread.",
-      "question_ar": "هل الالتواء والتفرطح من مقاييس الانتشار؟",
-      "answer": false,
-      "explanation": "They describe the shape of the distribution, not spread."
-    },
-    {
-      "id": 62,
-      "question_en": "Descriptive Statistics can be used to summarize collected data.",
-      "question_ar": "هل يمكن استخدام الإحصاء الوصفي لتلخيص البيانات المجمعة؟",
-      "answer": true,
-      "explanation": "Summarization is its primary purpose."
-    },
-    {
-      "id": 63,
-      "question_en": "In a normal distribution, Mean = Median = Mode.",
-      "question_ar": "في التوزيع الطبيعي، هل المتوسط = الوسيط = المنوال؟",
-      "answer": true,
-      "explanation": "Normal distribution is perfectly symmetrical."
-    },
-    {
-      "id": 64,
-      "question_en": "Harmonic Mean and Arithmetic Mean always produce the same result.",
-      "question_ar": "هل ينتج المتوسط التوافقي والمتوسط الحسابي دائمًا نفس النتيجة؟",
-      "answer": false,
-      "explanation": "They usually differ unless all data points are identical."
-    },
-    {
-      "id": 65,
-      "question_en": "A sample is usually smaller than the population.",
-      "question_ar": "هل العينة عادة أصغر من المجتمع؟",
-      "answer": true,
-      "explanation": "A sample is a subset of the population."
-    },
-    {
-      "id": 66,
-      "question_en": "Outliers may affect the Mean significantly.",
-      "question_ar": "هل يمكن أن تؤثر القيم الشاذة على المتوسط بشكل كبير؟",
-      "answer": true,
-      "explanation": "Mean is highly sensitive to extreme values."
-    },
-    {
-      "id": 67,
-      "question_en": "The Mean is considered a measure of central tendency.",
-      "question_ar": "هل يعتبر المتوسط مقياسًا للنزعة المركزية؟",
-      "answer": true,
-      "explanation": "It is one of the primary measures of center."
-    },
-    {
-      "id": 68,
-      "question_en": "The Mode is always larger than the Mean.",
-      "question_ar": "هل المنوال دائمًا أكبر من المتوسط؟",
-      "answer": false,
-      "explanation": "It depends entirely on the data distribution."
-    },
-    {
-      "id": 69,
-      "question_en": "Variance measures variability in data.",
-      "question_ar": "هل يقيس التباين التشتت في البيانات؟",
-      "answer": true,
-      "explanation": "It measures average squared deviation from the mean."
-    },
-    {
-      "id": 70,
-      "question_en": "Standard Deviation and Variance measure the same concept in different ways.",
-      "question_ar": "هل يقيس الانحراف المعياري والتباين نفس المفهوم بطرق مختلفة؟",
-      "answer": true,
-      "explanation": "Standard deviation is the square root of variance."
-    },
-    {
-      "id": 71,
-      "question_en": "Outliers have little or no effect on statistical analysis.",
-      "question_ar": "هل للقيم الشاذة تأثير ضئيل أو معدوم على التحليل الإحصائي؟",
-      "answer": false,
-      "explanation": "Outliers can skew results drastically."
-    },
-    {
-      "id": 72,
-      "question_en": "Median is less affected by outliers than Mean.",
-      "question_ar": "هل الوسيط أقل تأثرًا بالقيم الشاذة من المتوسط؟",
-      "answer": true,
-      "explanation": "Median is a robust statistic."
-    },
-    {
-      "id": 73,
-      "question_en": "A sample is a subset of a population.",
-      "question_ar": "هل العينة هي مجموعة فرعية من المجتمع؟",
-      "answer": true,
-      "explanation": "By definition."
-    },
-    {
-      "id": 74,
-      "question_en": "Skewness describes the symmetry of a distribution.",
-      "question_ar": "هل يصف الالتواء تماثل التوزيع؟",
-      "answer": true,
-      "explanation": "It measures lack of symmetry."
-    },
-    {
-      "id": 75,
-      "question_en": "Range equals Max − Min.",
-      "question_ar": "هل المدى يساوي الحد الأقصى - الحد الأدنى؟",
-      "answer": true,
-      "explanation": "This is the formula for range."
-    },
-    {
-      "id": 76,
-      "question_en": "Harmonic Mean is commonly used for rates and speeds.",
-      "question_ar": "هل يستخدم المتوسط التوافقي عادة للمعدلات والسرعات؟",
-      "answer": true,
-      "explanation": "It is best suited for averaging rates."
-    },
-    {
-      "id": 77,
-      "question_en": "In right-skewed distributions, Mean is usually greater than Median.",
-      "question_ar": "في التوزيعات الملتوية لليمين، هل المتوسط عادة أكبر من الوسيط؟",
-      "answer": true,
-      "explanation": "The long tail pulls the mean to the right."
-    }
-  ],
   "mcq": [
     {
       "id": 1,
-      "question_en": "Which of the following contributes most to the data explosion?",
-      "question_ar": "أي مما يلي يساهم بشكل أكبر في انفجار البيانات؟",
+      "question_en": "Asymmetric crypto uses:",
+      "question_ar": "التشفير غير المتماثل يستخدم:",
       "options": {
-        "a": "Manual record keeping",
-        "b": "IoT devices",
-        "c": "Typewriters",
-        "d": "Fax machines"
+        "a": "One shared key",
+        "b": "No keys",
+        "c": "Public key + private key",
+        "d": "Only passwords"
       },
-      "correct_answer": "b",
-      "explanation": "IoT devices continuously generate massive real-time data, making them a primary driver of data explosion."
+      "correct_answer": "c",
+      "explanation": "Asymmetric cryptography relies on a pair of keys: a public key for encryption and a private key for decryption."
     },
     {
       "id": 2,
-      "question_en": "Which “V” represents the scale of data?",
-      "question_ar": "أي من الـ V يمثل حجم البيانات؟",
+      "question_en": "Signed firmware updates are important because they:",
+      "question_ar": "لماذا تعتبر تحديثات البرنامج الثابت الموقعة مهمة؟",
       "options": {
-        "a": "Velocity",
-        "b": "Value",
-        "c": "Volume",
-        "d": "Variety"
+        "a": "Reduce file size",
+        "b": "Ensure updates come from the real manufacturer and were not modified",
+        "c": "Increase battery drain",
+        "d": "Remove the need for authentication"
       },
-      "correct_answer": "c",
-      "explanation": "Volume refers to the amount or scale of data."
+      "correct_answer": "b",
+      "explanation": "Digital signatures verify the authenticity and integrity of firmware updates, ensuring they are not tampered with."
     },
     {
       "id": 3,
-      "question_en": "Which layer is responsible for collecting data from different sources?",
-      "question_ar": "أي طبقة مسؤولة عن جمع البيانات من مصادر مختلفة؟",
+      "question_en": "Why must IoT security be end-to-end?",
+      "question_ar": "لماذا يجب أن يكون أمن إنترنت الأشياء شاملاً من الطرف إلى الطرف؟",
       "options": {
-        "a": "Storage",
-        "b": "Analytics",
-        "c": "Ingestion",
-        "d": "Visualization"
+        "a": "Attacks only happen in the cloud",
+        "b": "Security must cover Device → Network → Cloud → App → Operations",
+        "c": "Only the app layer is important",
+        "d": "Only the device layer is important"
       },
-      "correct_answer": "c",
-      "explanation": "The ingestion layer collects and imports data from multiple sources."
+      "correct_answer": "b",
+      "explanation": "IoT systems span multiple layers, and vulnerabilities in any layer can compromise the entire system."
     },
     {
       "id": 4,
-      "question_en": "Which of the following is an example of unstructured data?",
-      "question_ar": "أي مما يلي مثال على بيانات غير منظمة؟",
+      "question_en": "STRIDE “D” stands for:",
+      "question_ar": "ماذا يشير الحرف D في نموذج STRIDE؟",
       "options": {
-        "a": "Excel table",
-        "b": "SQL database",
-        "c": "Social media image",
-        "d": "CSV file"
+        "a": "Debugging",
+        "b": "Denial of Service",
+        "c": "Data Storage",
+        "d": "Device Discovery"
       },
-      "correct_answer": "c",
-      "explanation": "Images are unstructured data as they do not follow a predefined schema."
+      "correct_answer": "b",
+      "explanation": "In the STRIDE threat model, 'D' represents Denial of Service attacks."
     },
     {
       "id": 5,
-      "question_en": "Traditional systems mainly rely on:",
-      "question_ar": "الأنظمة التقليدية تعتمد بشكل أساسي على:",
+      "question_en": "MQTT communication style is:",
+      "question_ar": "نمط الاتصال في MQTT هو:",
       "options": {
-        "a": "Distributed clusters",
-        "b": "Single-server architecture",
-        "c": "Cloud-native systems",
-        "d": "Edge computing"
+        "a": "File transfer",
+        "b": "Publish/Subscribe",
+        "c": "Email-based",
+        "d": "Peer-to-peer only"
       },
       "correct_answer": "b",
-      "explanation": "Traditional systems are typically built on single-server architectures."
+      "explanation": "MQTT uses a publish/subscribe model where clients publish messages to topics and others subscribe to receive them."
     },
     {
       "id": 6,
-      "question_en": "Velocity mainly concerns:",
-      "question_ar": "السرعة (Velocity) تتعلق بـ:",
+      "question_en": "“Hardcoded secret” means:",
+      "question_ar": "ماذا يعني \"سر مشفر داخل الكود\"؟",
       "options": {
-        "a": "Data size",
-        "b": "Data speed",
-        "c": "Data quality",
-        "d": "Data storage cost"
+        "a": "A key stored safely in secure hardware",
+        "b": "A password/key written directly inside the source code",
+        "c": "A key stored only in the cloud",
+        "d": "A key that changes daily automatically"
       },
       "correct_answer": "b",
-      "explanation": "Velocity refers to how fast data is generated and processed."
+      "explanation": "Hardcoded secrets are embedded directly in code, making them vulnerable if the code is exposed."
     },
     {
       "id": 7,
-      "question_en": "Which industry uses Big Data for fraud detection?",
-      "question_ar": "أي قطاع يستخدم البيانات الضخمة لاكتشاف الاحتيال؟",
+      "question_en": "The main crypto goals are:",
+      "question_ar": "ما هي الأهداف الرئيسية للتشفير؟",
       "options": {
-        "a": "Agriculture",
-        "b": "Finance",
-        "c": "Construction",
-        "d": "Manufacturing"
+        "a": "Speed, cost, size",
+        "b": "Confidentiality, integrity, authentication",
+        "c": "Wi-Fi, BLE, Zigbee",
+        "d": "Password, username, email"
       },
       "correct_answer": "b",
-      "explanation": "The finance industry uses Big Data extensively for fraud detection."
+      "explanation": "Core cryptographic goals include confidentiality, integrity, and authentication."
     },
     {
       "id": 8,
-      "question_en": "Veracity is related to:",
-      "question_ar": "الموثوقية (Veracity) تتعلق بـ:",
+      "question_en": "In IoT systems, telemetry usually means:",
+      "question_ar": "في أنظمة إنترنت الأشياء، ماذا تعني البيانات القياسية (Telemetry)؟",
       "options": {
-        "a": "Data truthfulness",
-        "b": "Data format",
-        "c": "Data speed",
-        "d": "Data duplication"
+        "a": "Server → device actions",
+        "b": "Device → server measurements",
+        "c": "Device reset",
+        "d": "User login"
       },
-      "correct_answer": "a",
-      "explanation": "Veracity refers to the accuracy and reliability of data."
+      "correct_answer": "b",
+      "explanation": "Telemetry refers to data sent from devices to servers, typically measurements or status information."
     },
     {
       "id": 9,
-      "question_en": "Distributed computing improves:",
-      "question_ar": "الحوسبة الموزعة تحسن:",
+      "question_en": "In threat modeling, an asset is:",
+      "question_ar": "في نمذجة التهديدات، ما هو الأصل (Asset)؟",
       "options": {
-        "a": "Manual processing",
-        "b": "Scalability",
-        "c": "Paper documentation",
-        "d": "Data entry speed"
+        "a": "A type of attack",
+        "b": "Something valuable to protect",
+        "c": "A bug in code",
+        "d": "A firewall rule"
       },
       "correct_answer": "b",
-      "explanation": "Distributed systems improve scalability by spreading workloads."
+      "explanation": "An asset is any valuable resource that needs protection, such as data, systems, or devices."
     },
     {
       "id": 10,
-      "question_en": "One key challenge in Big Data implementation is:",
-      "question_ar": "أحد التحديات الرئيسية في تطبيق البيانات الضخمة هو:",
+      "question_en": "What is the best definition of IoT security?",
+      "question_ar": "ما هو أفضل تعريف لأمن إنترنت الأشياء؟",
       "options": {
-        "a": "Low internet usage",
-        "b": "Data security",
-        "c": "Small datasets",
-        "d": "Limited software options"
+        "a": "Protecting only cloud databases from hackers",
+        "b": "Protecting devices that sense, communicate, and sometimes act on the physical world",
+        "c": "Protecting smartphones from malware only",
+        "d": "Protecting internet browsers from phishing"
       },
       "correct_answer": "b",
-      "explanation": "Security is a major concern due to large and sensitive datasets."
+      "explanation": "IoT security involves protecting interconnected devices that interact with the physical environment."
     },
     {
       "id": 11,
-      "question_en": "Which layer is responsible for storing large volumes of data?",
-      "question_ar": "أي طبقة مسؤولة عن تخزين البيانات الضخمة؟",
+      "question_en": "“Fail-safe behavior” means:",
+      "question_ar": "ماذا يعني سلوك \"الفشل الآمن\"؟",
       "options": {
-        "a": "Ingestion",
-        "b": "Storage",
-        "c": "Analytics",
-        "d": "Monitoring"
+        "a": "Continue operation even with unsafe configuration",
+        "b": "If something is wrong, refuse unsafe actions and use safe defaults",
+        "c": "Delete all files",
+        "d": "Turn off validation"
       },
       "correct_answer": "b",
-      "explanation": "Storage layer handles data persistence."
+      "explanation": "Fail-safe design ensures that systems default to a safe state when a failure occurs, preventing unsafe operations."
     },
     {
       "id": 12,
-      "question_en": "Which of the following is an example of streaming ingestion tool?",
-      "question_ar": "أي مما يلي أداة إدخال بيانات لحظية؟",
+      "question_en": "TLS mainly provides:",
+      "question_ar": "ماذا يوفر بروتوكول TLS بشكل أساسي؟",
       "options": {
-        "a": "Power BI",
-        "b": "Apache Kafka",
-        "c": "MySQL",
-        "d": "Excel"
+        "a": "Compression",
+        "b": "Encryption + integrity + authentication",
+        "c": "Larger packets",
+        "d": "Faster CPU"
       },
       "correct_answer": "b",
-      "explanation": "Kafka is widely used for real-time data streaming."
+      "explanation": "TLS secures communication by providing encryption, ensuring data integrity, and authenticating parties."
     },
     {
       "id": 13,
-      "question_en": "Which storage option is commonly used in Hadoop ecosystems?",
-      "question_ar": "ما هو نظام التخزين المستخدم في Hadoop؟",
+      "question_en": "A trust boundary is:",
+      "question_ar": "ما هو حد الثقة (Trust Boundary)؟",
       "options": {
-        "a": "HDFS",
-        "b": "FTP",
-        "c": "HTML",
-        "d": "SMTP"
+        "a": "A cable between sensors",
+        "b": "A place where trust level changes",
+        "c": "A router brand",
+        "d": "A database table"
       },
-      "correct_answer": "a",
-      "explanation": "HDFS is Hadoop’s distributed storage system."
+      "correct_answer": "b",
+      "explanation": "A trust boundary represents a point where the level of trust changes, requiring validation or security controls."
     },
     {
       "id": 14,
-      "question_en": "ELT differs from ETL because transformation happens:",
-      "question_ar": "ما الفرق بين ELT و ETL؟",
+      "question_en": "Digital signatures provide:",
+      "question_ar": "ماذا توفر التوقيعات الرقمية؟",
       "options": {
-        "a": "Before loading",
-        "b": "During ingestion",
-        "c": "After loading",
-        "d": "Outside the system"
+        "a": "Confidentiality only",
+        "b": "Integrity + authentication",
+        "c": "Faster Wi-Fi",
+        "d": "Bigger storage"
       },
-      "correct_answer": "c",
-      "explanation": "In ELT, data is loaded first, then transformed."
+      "correct_answer": "b",
+      "explanation": "Digital signatures ensure that data has not been altered (integrity) and verify the sender's identity (authentication)."
     },
     {
       "id": 15,
-      "question_en": "Sharding is mainly used for:",
-      "question_ar": "ما هو الغرض الأساسي من Sharding؟",
+      "question_en": "Which is the correct typical IoT architecture order (end-to-end view)?",
+      "question_ar": "ما هو الترتيب الصحيح لبنية إنترنت الأشياء من طرف إلى طرف؟",
       "options": {
-        "a": "Backup",
-        "b": "Partitioning data",
-        "c": "Encryption",
-        "d": "Visualization"
+        "a": "Cloud → Device → App → Network → Operations",
+        "b": "Device → Network → Cloud → App → Operations",
+        "c": "App → Cloud → Network → Device → Operations",
+        "d": "Operations → Device → Cloud → Network → App"
       },
       "correct_answer": "b",
-      "explanation": "Sharding uses partition keys to distribute data across multiple nodes."
+      "explanation": "Typical IoT architecture flows from devices through network to cloud, then to applications and operational layers."
     },
     {
       "id": 16,
-      "question_en": "Geo-replication improves:",
-      "question_ar": "ما الذي يحسنه النسخ الجغرافي؟",
+      "question_en": "Firmware is best described as:",
+      "question_ar": "كيف يمكن وصف البرنامج الثابت (Firmware) بشكل أفضل؟",
       "options": {
-        "a": "Data formatting",
-        "b": "Geographic availability",
-        "c": "Dashboard design",
-        "d": "Programming speed"
+        "a": "A mobile app",
+        "b": "Software running inside the device stored in flash",
+        "c": "A cloud database",
+        "d": "A network cable"
       },
       "correct_answer": "b",
-      "explanation": "Geo-replication keeps copies of data across regions to improve availability and disaster recovery."
+      "explanation": "Firmware is embedded software stored in non-volatile memory that controls device hardware."
     },
     {
       "id": 17,
-      "question_en": "Which tool is commonly used for monitoring cluster metrics?",
-      "question_ar": "أي أداة تُستخدم بشكل شائع لمراقبة مقاييس المجموعة؟",
+      "question_en": "BLE is mainly used for:",
+      "question_ar": "فيما يُستخدم BLE بشكل أساسي؟",
       "options": {
-        "a": "Kafka",
-        "b": "Prometheus",
-        "c": "HDFS",
-        "d": "SQL Server"
+        "a": "Long-range city networks",
+        "b": "Short-range communication and device onboarding",
+        "c": "Cloud databases",
+        "d": "Satellite internet"
       },
       "correct_answer": "b",
-      "explanation": "Prometheus is widely used for metrics collection and monitoring."
+      "explanation": "Bluetooth Low Energy (BLE) is designed for low-power, short-range communication, often used in IoT onboarding."
     },
     {
       "id": 18,
-      "question_en": "Data lakes are beneficial because they:",
-      "question_ar": "لماذا تعتبر بحيرات البيانات مفيدة؟",
+      "question_en": "Risk is mainly about:",
+      "question_ar": "المخاطر (Risk) تعتمد بشكل أساسي على:",
       "options": {
-        "a": "Reduce flexibility",
-        "b": "Store only structured data",
-        "c": "Support machine learning readiness",
-        "d": "Eliminate scalability"
+        "a": "Only impact",
+        "b": "Only likelihood",
+        "c": "Likelihood and impact together",
+        "d": "Device cost"
       },
       "correct_answer": "c",
-      "explanation": "Data lakes can store structured and unstructured data, providing a foundation for ML."
+      "explanation": "Risk is evaluated based on both the likelihood of an event and its potential impact."
     },
     {
       "id": 19,
-      "question_en": "Stateless services are important for:",
-      "question_ar": "لماذا تعتبر الخدمات عديمة الحالة مهمة؟",
+      "question_en": "A hash function is mainly used for:",
+      "question_ar": "فيما تُستخدم دوال التجزئة (Hash Functions) بشكل أساسي؟",
       "options": {
-        "a": "Security only",
-        "b": "Scalability and autoscaling",
-        "c": "Manual processing",
-        "d": "Backup operations"
+        "a": "Hiding data so nobody reads it",
+        "b": "Detecting changes (integrity)",
+        "c": "Creating Wi-Fi connection",
+        "d": "Increasing battery life"
       },
       "correct_answer": "b",
-      "explanation": "Stateless services can be replicated easily because they do not store session state locally."
+      "explanation": "Hash functions produce a fixed output for input data, allowing detection of any changes to ensure integrity."
     },
     {
       "id": 20,
-      "question_en": "In high availability systems, automated failover ensures:",
-      "question_ar": "في أنظمة التوفر العالي، يضمن تجاوز الفشل التلقائي ما يلي:",
+      "question_en": "Which goal is MOST related to keeping devices/services working during overload or DoS attacks?",
+      "question_ar": "أي هدف يرتبط أكثر بالحفاظ على عمل الأجهزة والخدمات أثناء الهجمات أو الضغط العالي (DoS)؟",
       "options": {
-        "a": "Manual restart",
-        "b": "Immediate recovery from failure",
-        "c": "Data deletion",
-        "d": "Reduced monitoring"
+        "a": "Confidentiality",
+        "b": "Availability",
+        "c": "Integrity",
+        "d": "Safety"
       },
       "correct_answer": "b",
-      "explanation": "Automated failover switches to a standby system to minimize downtime."
+      "explanation": "Availability ensures systems remain operational and accessible even under stress or attack conditions like DoS."
     },
     {
       "id": 21,
-      "question_en": "Hadoop mainly solves problems related to:",
-      "question_ar": "Hadoop يعالج مشاكل:",
+      "question_en": "The best summary of device physical security is:",
+      "question_ar": "ما هو أفضل وصف لأمن الأجهزة الفيزيائي؟",
       "options": {
-        "a": "Small datasets",
-        "b": "Distributed storage and processing",
-        "c": "Desktop computing",
-        "d": "Word processing"
+        "a": "Physical access never matters",
+        "b": "Physical access can bypass software controls, so reduce and protect physical attack paths",
+        "c": "Only network threats exist",
+        "d": "TLS prevents physical attacks"
       },
       "correct_answer": "b",
-      "explanation": "Hadoop is designed for distributed systems."
+      "explanation": "Physical access can allow attackers to bypass logical protections, so securing hardware and limiting access is critical."
     },
     {
       "id": 22,
-      "question_en": "Which tool belongs to the Hadoop ingestion layer?",
-      "question_ar": "أي أداة ضمن طبقة الإدخال؟",
+      "question_en": "Network segmentation means:",
+      "question_ar": "ماذا يعني تقسيم الشبكة (Network Segmentation)؟",
       "options": {
-        "a": "Hive",
-        "b": "Spark",
-        "c": "Flume",
-        "d": "HDFS"
+        "a": "Faster internet",
+        "b": "Split network into zones",
+        "c": "Disable passwords",
+        "d": "One flat network for all"
       },
-      "correct_answer": "c",
-      "explanation": "Flume is used for data ingestion."
+      "correct_answer": "b",
+      "explanation": "Segmentation divides a network into isolated zones to limit attack spread and improve security."
     },
     {
       "id": 23,
-      "question_en": "Which component is used for distributed storage?",
-      "question_ar": "ما المكون المستخدم للتخزين الموزع؟",
+      "question_en": "If likelihood = 3 and impact = 2, the risk score is:",
+      "question_ar": "إذا كان الاحتمال = 3 والتأثير = 2، فما هي قيمة المخاطر؟",
       "options": {
-        "a": "HDFS",
-        "b": "Pig",
-        "c": "Hive",
-        "d": "Oozie"
+        "a": "5",
+        "b": "6",
+        "c": "8",
+        "d": "9"
       },
-      "correct_answer": "a",
-      "explanation": "HDFS handles distributed storage."
+      "correct_answer": "b",
+      "explanation": "Risk score is typically calculated as likelihood × impact = 3 × 2 = 6."
     },
     {
       "id": 24,
-      "question_en": "MapReduce primarily processes data in:",
-      "question_ar": "MapReduce يعالج البيانات في:",
+      "question_en": "If you change one character in a message, the SHA-256 hash will:",
+      "question_ar": "إذا تم تغيير حرف واحد في الرسالة، فإن ناتج SHA-256 سوف:",
       "options": {
-        "a": "Real-time memory",
-        "b": "Distributed batch mode",
-        "c": "Manual mode",
-        "d": "Local spreadsheets"
+        "a": "Stay similar",
+        "b": "Change completely",
+        "c": "Become shorter",
+        "d": "Become readable text"
       },
       "correct_answer": "b",
-      "explanation": "MapReduce is a batch processing model."
+      "explanation": "SHA-256 exhibits the avalanche effect, where a small input change produces a completely different hash."
     },
     {
       "id": 25,
-      "question_en": "Which language is commonly used with Hive?",
-      "question_ar": "ما اللغة المستخدمة مع Hive؟",
+      "question_en": "Which baseline control directly helps prevent running malicious firmware permanently on a device?",
+      "question_ar": "أي إجراء أمني أساسي يمنع تشغيل برنامج ثابت خبيث بشكل دائم على الجهاز؟",
       "options": {
-        "a": "SQL",
-        "b": "HQL",
-        "c": "Python",
-        "d": "C++"
+        "a": "Segmentation",
+        "b": "Secure boot and signed firmware",
+        "c": "Monitoring and logging",
+        "d": "Vulnerability management process"
       },
       "correct_answer": "b",
-      "explanation": "Hive uses Hive Query Language (HQL)."
+      "explanation": "Secure boot ensures only trusted, signed firmware can run, preventing persistent malicious code."
     },
     {
       "id": 26,
-      "question_en": "What is the main goal of EDA?",
-      "question_ar": "ما الهدف الأساسي من EDA؟",
+      "question_en": "A security event log is useful because it:",
+      "question_ar": "لماذا يعتبر سجل الأحداث الأمنية مفيدًا؟",
       "options": {
-        "a": "Data storage",
-        "b": "Data exploration and understanding",
-        "c": "Data deletion",
-        "d": "Data encryption"
+        "a": "Makes device faster",
+        "b": "Provides evidence of attacks and failures (audit trail)",
+        "c": "Replaces encryption",
+        "d": "Removes the need for authentication"
       },
       "correct_answer": "b",
-      "explanation": "EDA focuses on understanding data patterns."
+      "explanation": "Logs provide traceability and forensic evidence for detecting and analyzing incidents."
     },
     {
       "id": 27,
-      "question_en": "Which measure represents central tendency?",
-      "question_ar": "أي مقياس يمثل النزعة المركزية؟",
+      "question_en": "A secure channel is mainly needed to protect data:",
+      "question_ar": "القناة الآمنة تُستخدم أساسًا لحماية البيانات:",
       "options": {
-        "a": "Variance",
-        "b": "Mean",
-        "c": "Range",
-        "d": "Standard deviation"
+        "a": "Stored in flash",
+        "b": "While traveling on the network",
+        "c": "After deletion",
+        "d": "Only in RAM"
       },
       "correct_answer": "b",
-      "explanation": "Mean is a measure of central tendency."
+      "explanation": "Secure channels like TLS protect data in transit from interception or tampering."
     },
     {
       "id": 28,
-      "question_en": "Which plot is used for distribution analysis?",
-      "question_ar": "أي رسم يستخدم لتحليل التوزيع؟",
+      "question_en": "STRIDE “S” stands for:",
+      "question_ar": "ماذا يشير الحرف S في نموذج STRIDE؟",
       "options": {
-        "a": "Histogram",
-        "b": "Pie chart",
-        "c": "Line chart",
-        "d": "Bar chart"
+        "a": "Security",
+        "b": "Spoofing",
+        "c": "Scanning",
+        "d": "Switching"
       },
-      "correct_answer": "a",
-      "explanation": "Histogram shows data distribution."
+      "correct_answer": "b",
+      "explanation": "In STRIDE, 'S' refers to Spoofing identity attacks."
     },
     {
       "id": 29,
-      "question_en": "Which technique is used to detect outliers?",
-      "question_ar": "أي تقنية تستخدم لاكتشاف القيم الشاذة؟",
+      "question_en": "Confidentiality means:",
+      "question_ar": "ماذا تعني السرية (Confidentiality)؟",
       "options": {
-        "a": "Scatter plot",
-        "b": "Box plot",
-        "c": "Heatmap",
-        "d": "Line chart"
+        "a": "Data cannot be changed",
+        "b": "Only authorized parties can read data",
+        "c": "Everyone can read data",
+        "d": "Data is always public"
       },
       "correct_answer": "b",
-      "explanation": "Box plot highlights outliers."
+      "explanation": "Confidentiality ensures that only authorized entities can access sensitive information."
     },
     {
       "id": 30,
-      "question_en": "Correlation matrix is used to:",
-      "question_ar": "مصفوفة الارتباط تستخدم لـ:",
+      "question_en": "Which security goal focuses on preventing attackers from reading private data (video, location, health)?",
+      "question_ar": "أي هدف أمني يركز على منع المهاجمين من قراءة البيانات الخاصة؟",
       "options": {
-        "a": "Store data",
-        "b": "Measure relationships between variables",
-        "c": "Clean data",
-        "d": "Encode data"
+        "a": "Integrity",
+        "b": "Availability",
+        "c": "Confidentiality",
+        "d": "Auditability"
       },
-      "correct_answer": "b",
-      "explanation": "It measures relationships between variables."
+      "correct_answer": "c",
+      "explanation": "Confidentiality specifically protects data from unauthorized access."
     },
     {
       "id": 31,
-      "question_en": "Which plot is used for multivariate analysis?",
-      "question_ar": "أي رسم يستخدم لتحليل متعدد المتغيرات؟",
+      "question_en": "A “safe default” security rule means:",
+      "question_ar": "ماذا تعني قاعدة \"الإعدادات الآمنة افتراضيًا\"؟",
       "options": {
-        "a": "Histogram",
-        "b": "Box plot",
-        "c": "Scatter matrix",
-        "d": "Density plot"
+        "a": "Allow everything by default",
+        "b": "Deny risky actions unless explicitly allowed",
+        "c": "Disable updates",
+        "d": "Use default passwords"
       },
-      "correct_answer": "c",
-      "explanation": "Scatter matrix visualizes relationships among multiple variables."
+      "correct_answer": "b",
+      "explanation": "Secure systems follow a deny-by-default principle, allowing only explicitly permitted actions."
     },
     {
       "id": 32,
-      "question_en": "Which layer performs machine learning model development?",
-      "question_ar": "أي طبقة تقوم بتطوير نماذج تعلم الآلة؟",
+      "question_en": "In MQTT, the broker is:",
+      "question_ar": "في بروتوكول MQTT، ما هو الـ Broker؟",
       "options": {
-        "a": "Storage",
-        "b": "Analytics",
-        "c": "Ingestion",
-        "d": "Replication"
+        "a": "The sensor",
+        "b": "The server that routes messages",
+        "c": "The router",
+        "d": "The mobile app"
       },
       "correct_answer": "b",
-      "explanation": "The analytics layer is responsible for data analysis, reporting, and machine learning."
+      "explanation": "The broker is the central server responsible for receiving and distributing messages."
     },
     {
       "id": 33,
-      "question_en": "Which is an example of NoSQL storage?",
-      "question_ar": "أي مما يلي مثال على تخزين NoSQL؟",
+      "question_en": "A vulnerability is best described as:",
+      "question_ar": "كيف يمكن وصف الثغرة الأمنية (Vulnerability)؟",
       "options": {
-        "a": "MySQL",
-        "b": "MongoDB",
-        "c": "Excel",
-        "d": "PowerPoint"
+        "a": "A weak point that can be exploited",
+        "b": "The attacker’s goal",
+        "c": "The final damage",
+        "d": "A security patch"
       },
-      "correct_answer": "b",
-      "explanation": "MongoDB is a document-oriented NoSQL database."
+      "correct_answer": "a",
+      "explanation": "A vulnerability is a weakness that attackers can exploit to compromise a system."
     },
     {
       "id": 34,
-      "question_en": "ETL stands for:",
-      "question_ar": "ماذا تعني ETL؟",
+      "question_en": "HMAC is used for:",
+      "question_ar": "فيما يُستخدم HMAC؟",
       "options": {
-        "a": "Extract Transform Load",
-        "b": "Enter Transfer Log",
-        "c": "Execute Test Load",
-        "d": "Export Table Link"
+        "a": "Confidentiality",
+        "b": "Integrity + authenticity with shared key",
+        "c": "Compression",
+        "d": "Creating device IDs"
       },
-      "correct_answer": "a",
-      "explanation": "ETL stands for Extract, Transform, and Load."
+      "correct_answer": "b",
+      "explanation": "HMAC ensures message integrity and authenticity using a shared secret key."
     },
     {
       "id": 35,
-      "question_en": "Synchronous replication ensures:",
-      "question_ar": "ماذا يضمن النسخ المتماثل المتزامن؟",
+      "question_en": "Which attacker motivation is correctly matched?",
+      "question_ar": "أي دافع للمهاجم مرتبط بشكل صحيح؟",
       "options": {
-        "a": "Faster writes with possible data loss",
-        "b": "Data consistency before acknowledgment",
-        "c": "No network traffic",
-        "d": "No replication"
+        "a": "Botnets → to improve user privacy",
+        "b": "Spying → to invade privacy using cameras/sensors",
+        "c": "Sabotage → to increase service availability",
+        "d": "Money → to reduce legal compliance risk"
       },
       "correct_answer": "b",
-      "explanation": "Synchronous replication confirms data is written to replicas before acknowledging success."
+      "explanation": "Spying attacks aim to invade privacy by accessing sensitive data from sensors or cameras."
     },
     {
       "id": 36,
-      "question_en": "A Data Lake stores:",
-      "question_ar": "ماذا يخزن Data Lake؟",
+      "question_en": "“Rollback protection” prevents:",
+      "question_ar": "ماذا يمنع \"Rollback Protection\"؟",
       "options": {
-        "a": "Only structured data",
-        "b": "Structured and unstructured data",
-        "c": "Only text files",
-        "d": "Only relational tables"
+        "a": "Firmware signing",
+        "b": "Downgrading to an old vulnerable firmware version",
+        "c": "Encrypting data",
+        "d": "Updating certificates"
       },
       "correct_answer": "b",
-      "explanation": "Data lakes can store structured, semi-structured, and unstructured data."
+      "explanation": "Rollback protection ensures devices cannot be downgraded to insecure firmware versions."
     },
     {
       "id": 37,
-      "question_en": "High availability reduces:",
-      "question_ar": "ماذا يقلل التوفر العالي؟",
+      "question_en": "A replay attack means the attacker:",
+      "question_ar": "ماذا يعني هجوم إعادة الإرسال (Replay Attack)؟",
       "options": {
-        "a": "System uptime",
-        "b": "System cost",
-        "c": "Downtime",
-        "d": "Storage size"
+        "a": "Records a valid message and sends it again later",
+        "b": "Deletes the message",
+        "c": "Compresses the message",
+        "d": "Creates a new key"
       },
-      "correct_answer": "c",
-      "explanation": "High availability minimizes service interruptions and downtime."
+      "correct_answer": "a",
+      "explanation": "A replay attack involves capturing a valid message and retransmitting it to deceive the system."
     },
     {
       "id": 38,
-      "question_en": "Which tool is used for monitoring metrics?",
-      "question_ar": "أي أداة تستخدم لمراقبة المقاييس؟",
+      "question_en": "STRIDE “I” stands for:",
+      "question_ar": "ماذا يشير الحرف I في نموذج STRIDE؟",
       "options": {
-        "a": "Prometheus",
-        "b": "Kafka",
-        "c": "Flume",
-        "d": "Hadoop"
+        "a": "Injection",
+        "b": "Information Disclosure",
+        "c": "Inspection",
+        "d": "Initialization"
       },
-      "correct_answer": "a",
-      "explanation": "Prometheus is widely used for metrics collection and monitoring."
+      "correct_answer": "b",
+      "explanation": "In STRIDE, 'I' represents Information Disclosure, which involves unauthorized access to data."
     },
     {
       "id": 39,
-      "question_en": "ELT is common in:",
-      "question_ar": "أين يُستخدم ELT بشكل شائع؟",
+      "question_en": "Symmetric crypto uses:",
+      "question_ar": "التشفير المتماثل يستخدم:",
       "options": {
-        "a": "Traditional small systems",
-        "b": "Modern cloud architectures",
-        "c": "Manual processing",
-        "d": "Offline storage"
+        "a": "Two different keys",
+        "b": "One shared key",
+        "c": "Only public keys",
+        "d": "No keys"
       },
       "correct_answer": "b",
-      "explanation": "ELT is commonly used in modern cloud-based data platforms."
+      "explanation": "Symmetric cryptography uses a single shared key for both encryption and decryption."
     },
     {
       "id": 40,
-      "question_en": "Backup & restore mechanisms are part of:",
-      "question_ar": "تندرج آليات النسخ الاحتياطي والاستعادة ضمن:",
+      "question_en": "Which is NOT a common reason IoT is hard to secure?",
+      "question_ar": "أي مما يلي ليس سببًا شائعًا لصعوبة تأمين إنترنت الأشياء؟",
       "options": {
-        "a": "Ingestion",
-        "b": "High availability",
-        "c": "Data entry",
-        "d": "Visualization"
+        "a": "Limited CPU/RAM/power",
+        "b": "Devices staying deployed for many years",
+        "c": "Devices are always protected in locked server rooms",
+        "d": "Physical exposure (tampering, theft, reset)"
       },
-      "correct_answer": "b",
-      "explanation": "Backup and restore are key components of high availability and disaster recovery strategies."
+      "correct_answer": "c",
+      "explanation": "IoT devices are often deployed in exposed environments, not secure server rooms."
     },
     {
       "id": 41,
-      "question_en": "Which of the following is a limitation of RDBMS in Big Data?",
-      "question_ar": "أي مما يلي يعد قيدًا على RDBMS في البيانات الضخمة؟",
+      "question_en": "Input validation means:",
+      "question_ar": "ماذا يعني التحقق من صحة المدخلات؟",
       "options": {
-        "a": "High scalability",
-        "b": "Low cost storage",
-        "c": "Limited scalability",
-        "d": "Built-in fault tolerance"
+        "a": "Accept any input to avoid errors",
+        "b": "Check type, range, and format before using input",
+        "c": "Remove encryption",
+        "d": "Ignore user data"
       },
-      "correct_answer": "c",
-      "explanation": "RDBMS systems struggle with horizontal scalability required for Big Data."
+      "correct_answer": "b",
+      "explanation": "Input validation ensures data meets expected criteria before processing, preventing vulnerabilities."
     },
     {
       "id": 42,
-      "question_en": "HBase is best described as:",
-      "question_ar": "أفضل وصف لـ HBase هو:",
+      "question_en": "In IoT systems, commands usually mean:",
+      "question_ar": "في أنظمة إنترنت الأشياء، ماذا تعني الأوامر عادةً؟",
       "options": {
-        "a": "Relational database",
-        "b": "NoSQL wide-column database",
-        "c": "Visualization tool",
-        "d": "Monitoring tool"
+        "a": "Device → server readings",
+        "b": "Server/app → device actions",
+        "c": "Router → cloud logs",
+        "d": "File encryption"
       },
       "correct_answer": "b",
-      "explanation": "HBase is a NoSQL wide-column store built on top of HDFS."
+      "explanation": "Commands typically flow from applications or servers to devices to trigger actions."
     },
     {
       "id": 43,
-      "question_en": "Which company is known as a leading Big Data vendor?",
-      "question_ar": "أي شركة تُعرف بأنها مورد رائد للبيانات الضخمة؟",
+      "question_en": "A threat is:",
+      "question_ar": "ما هو التهديد (Threat)؟",
       "options": {
-        "a": "Cloudera",
-        "b": "Adobe",
-        "c": "Intel",
-        "d": "Oracle Forms"
+        "a": "A protection method",
+        "b": "A weakness",
+        "c": "A harmful event/action that could happen",
+        "d": "A device setting"
       },
-      "correct_answer": "a",
-      "explanation": "Cloudera is a major vendor providing enterprise Big Data solutions based on Hadoop."
+      "correct_answer": "c",
+      "explanation": "A threat is a potential harmful event that could exploit a vulnerability."
     },
     {
       "id": 44,
-      "question_en": "Spark is preferred over MapReduce because:",
-      "question_ar": "يُفضل Spark على MapReduce بسبب:",
+      "question_en": "Integrity means:",
+      "question_ar": "ماذا تعني سلامة البيانات (Integrity)؟",
       "options": {
-        "a": "It is slower",
-        "b": "It lacks scalability",
-        "c": "It supports in-memory processing",
-        "d": "It does not support ML"
+        "a": "Only the receiver can read the message",
+        "b": "Message changes can be detected",
+        "c": "Device is always online",
+        "d": "Password is hidden"
       },
-      "correct_answer": "c",
-      "explanation": "Spark performs in-memory processing, making it significantly faster than MapReduce."
+      "correct_answer": "b",
+      "explanation": "Integrity ensures that any modification to data can be detected."
     },
     {
       "id": 45,
-      "question_en": "Hadoop supports which type of data?",
-      "question_ar": "ما نوع البيانات الذي يدعمه Hadoop؟",
+      "question_en": "Why is IoT security “special” compared to normal IT security?",
+      "question_ar": "لماذا يعتبر أمن إنترنت الأشياء مميزًا مقارنة بأمن تكنولوجيا المعلومات التقليدي؟",
       "options": {
-        "a": "Only structured",
-        "b": "Only unstructured",
-        "c": "Structured, semi-structured, and unstructured",
-        "d": "Only relational"
+        "a": "IoT devices never use networks",
+        "b": "IoT security is only about privacy",
+        "c": "IoT connects digital systems to the physical world, so failures can cause real-world impact",
+        "d": "IoT devices cannot be attacked"
       },
       "correct_answer": "c",
-      "explanation": "Hadoop can store and process all forms of data."
+      "explanation": "IoT systems interact with the physical world, making security failures potentially dangerous beyond digital impact."
     },
     {
       "id": 46,
-      "question_en": "Which library is commonly used for visualization in Python?",
-      "question_ar": "ما هي المكتبة الشائعة الاستخدام للتصور البياني في بايثون؟",
+      "question_en": "Secure boot means:",
+      "question_ar": "ماذا يعني الإقلاع الآمن (Secure Boot)؟",
       "options": {
-        "a": "NumPy",
-        "b": "Pandas",
-        "c": "Matplotlib",
-        "d": "TensorFlow"
+        "a": "Device boots faster",
+        "b": "Device runs only trusted/verified firmware",
+        "c": "Device never needs updates",
+        "d": "Device uses BLE only"
       },
-      "correct_answer": "c",
-      "explanation": "Matplotlib is the foundational plotting library in Python."
+      "correct_answer": "b",
+      "explanation": "Secure boot ensures that only authenticated and trusted firmware is executed during startup."
     },
     {
       "id": 47,
-      "question_en": "Dispersion includes:",
-      "question_ar": "يشمل التشتت:",
+      "question_en": "A publisher in MQTT:",
+      "question_ar": "في MQTT، ما هو الـ Publisher؟",
       "options": {
-        "a": "Mean",
-        "b": "Median",
-        "c": "Standard deviation",
-        "d": "Mode"
+        "a": "Receives only",
+        "b": "Sends messages to a topic",
+        "c": "Generates certificates",
+        "d": "Blocks traffic"
       },
-      "correct_answer": "c",
-      "explanation": "Standard deviation is a measure of data dispersion."
+      "correct_answer": "b",
+      "explanation": "A publisher sends messages to a specific topic in the MQTT system."
     },
     {
       "id": 48,
-      "question_en": "Density plots are used to:",
-      "question_ar": "تُستخدم الرسوم البيانية للكثافة (Density plots) من أجل:",
+      "question_en": "STRIDE “E” stands for:",
+      "question_ar": "ماذا يشير الحرف E في نموذج STRIDE؟",
       "options": {
-        "a": "Show data categories",
-        "b": "Show data distribution smoothly",
-        "c": "Show exact values",
-        "d": "Store data"
+        "a": "Encryption",
+        "b": "Elevation of Privilege",
+        "c": "Endpoint",
+        "d": "Evaluation"
       },
       "correct_answer": "b",
-      "explanation": "Density plots show data distribution smoothly over a continuous interval."
+      "explanation": "In STRIDE, 'E' refers to Elevation of Privilege attacks."
     },
     {
       "id": 49,
-      "question_en": "Data visualization in ML helps in:",
-      "question_ar": "يساعد التصور البياني للبيانات في تعلم الآلة في:",
+      "question_en": "Hashing is:",
+      "question_ar": "ما هو التجزئة (Hashing)؟",
       "options": {
-        "a": "Ignoring data",
-        "b": "Understanding features and patterns",
-        "c": "Deleting models",
-        "d": "Avoiding preprocessing"
+        "a": "Reversible",
+        "b": "One-way",
+        "c": "Always secret-key based",
+        "d": "Same as encryption"
       },
       "correct_answer": "b",
-      "explanation": "Visualization is essential in ML for feature understanding and pattern discovery."
+      "explanation": "Hashing is a one-way function that cannot be reversed to obtain the original input."
     },
     {
       "id": 50,
-      "question_en": "Inferential Statistics uses:",
-      "question_ar": "يستخدم الإحصاء الاستدلالي:",
+      "question_en": "Which secure-by-design principle means “give only the permissions truly needed”?",
+      "question_ar": "أي مبدأ من مبادئ التصميم الآمن يعني إعطاء أقل صلاحيات ممكنة؟",
       "options": {
-        "a": "Descriptive Statistics",
-        "b": "Samples to make conclusions",
-        "c": "Graphical Statistics",
-        "d": "Central Statistics"
+        "a": "Patchability",
+        "b": "Defense in depth",
+        "c": "Least privilege",
+        "d": "Fail safely"
       },
-      "correct_answer": "b",
-      "explanation": "Inferential statistics draws conclusions from samples."
+      "correct_answer": "c",
+      "explanation": "The principle of least privilege ensures that entities have only the permissions necessary to perform their tasks."
     },
     {
       "id": 51,
-      "question_en": "The average value of a dataset is called:",
-      "question_ar": "تسمى القيمة المتوسطة لمجموعة البيانات:",
+      "question_en": "What is the main function of authentication?",
+      "question_ar": "ما الوظيفة الرئيسية للمصادقة (Authentication)؟",
       "options": {
-        "a": "Median",
-        "b": "Mode",
-        "c": "Mean",
-        "d": "Range"
+        "a": "Grant permissions",
+        "b": "Verify identity",
+        "c": "Encrypt data",
+        "d": "Store data"
       },
-      "correct_answer": "c",
-      "explanation": "The Mean is the arithmetic average."
+      "correct_answer": "b",
+      "explanation": "Authentication is the process of verifying the identity of a user, device, or system."
     },
     {
       "id": 52,
-      "question_en": "The most common value in a dataset is called:",
-      "question_ar": "تسمى القيمة الأكثر شيوعًا في مجموعة البيانات:",
+      "question_en": "Authorization determines:",
+      "question_ar": "ماذا يحدد التفويض (Authorization)؟",
       "options": {
-        "a": "Mean",
-        "b": "Mode",
-        "c": "Median",
-        "d": "Variance"
+        "a": "Identity",
+        "b": "Access rights",
+        "c": "Encryption",
+        "d": "Storage"
       },
       "correct_answer": "b",
-      "explanation": "Mode represents highest frequency."
+      "explanation": "Authorization determines what resources and actions an authenticated user is allowed to access."
     },
     {
       "id": 53,
-      "question_en": "The middle value of a sorted dataset is:",
-      "question_ar": "القيمة الوسطى لمجموعة بيانات مفروزة هي:",
+      "question_en": "MQTT is:",
+      "question_ar": "بروتوكول MQTT هو:",
       "options": {
-        "a": "Mode",
-        "b": "Variance",
-        "c": "Mean",
-        "d": "Median"
+        "a": "Database",
+        "b": "Protocol",
+        "c": "Firewall",
+        "d": "OS"
       },
-      "correct_answer": "d",
-      "explanation": "Median divides data in half."
+      "correct_answer": "b",
+      "explanation": "MQTT is a lightweight messaging protocol commonly used in IoT applications."
     },
     {
       "id": 54,
-      "question_en": "Which of the following is NOT a measure of variability?",
-      "question_ar": "أي مما يلي لا يعتبر مقياسًا للتشتت؟",
+      "question_en": "Least privilege means:",
+      "question_ar": "ماذا يعني مبدأ أقل الصلاحيات (Least Privilege)؟",
       "options": {
-        "a": "Variance",
-        "b": "Standard Deviation",
-        "c": "Mean",
-        "d": "Range"
+        "a": "Full access",
+        "b": "Minimum access",
+        "c": "No access",
+        "d": "Admin access"
       },
-      "correct_answer": "c",
-      "explanation": "Mean is a measure of central tendency."
+      "correct_answer": "b",
+      "explanation": "The principle of least privilege grants only the minimum permissions required to perform a task."
     },
     {
       "id": 55,
-      "question_en": "Which measure describes the spread of data?",
-      "question_ar": "أي مقياس يصف انتشار البيانات؟",
+      "question_en": "API stands for:",
+      "question_ar": "ماذا تعني API؟",
       "options": {
-        "a": "Standard Deviation",
-        "b": "Median",
-        "c": "Mode",
-        "d": "Mean"
+        "a": "Application Programming Interface",
+        "b": "Advanced Protocol Interface",
+        "c": "App Process Integration",
+        "d": "None"
       },
       "correct_answer": "a",
-      "explanation": "Standard Deviation measures spread."
+      "explanation": "API stands for Application Programming Interface, which enables communication between software applications."
     },
     {
       "id": 56,
-      "question_en": "Outliers are best described as:",
-      "question_ar": "أفضل وصف للقيم الشاذة هو:",
+      "question_en": "HTTPS ensures:",
+      "question_ar": "ماذا يوفر HTTPS؟",
       "options": {
-        "a": "Average values",
-        "b": "Missing values",
-        "c": "Values outside pattern",
-        "d": "Duplicate values"
+        "a": "Speed",
+        "b": "Encryption",
+        "c": "Storage",
+        "d": "Compression"
       },
-      "correct_answer": "c",
-      "explanation": "They are unusually high or low values."
+      "correct_answer": "b",
+      "explanation": "HTTPS encrypts data transmitted between clients and servers using TLS/SSL."
     },
     {
       "id": 57,
-      "question_en": "Which measure is based on the reciprocal of values?",
-      "question_ar": "أي مقياس يعتمد على مقلوب القيم؟",
+      "question_en": "Multi-tenancy means:",
+      "question_ar": "ماذا يعني تعدد المستأجرين (Multi-tenancy)؟",
       "options": {
-        "a": "Arithmetic Mean",
-        "b": "Median",
-        "c": "Harmonic Mean",
-        "d": "Mode"
+        "a": "Single user",
+        "b": "Multiple users sharing system",
+        "c": "No users",
+        "d": "Offline system"
       },
-      "correct_answer": "c",
-      "explanation": "Harmonic Mean uses reciprocals."
+      "correct_answer": "b",
+      "explanation": "Multi-tenancy is an architecture where multiple users or organizations share the same application infrastructure."
     },
     {
       "id": 58,
-      "question_en": "The difference between the highest and lowest values is:",
-      "question_ar": "الفرق بين أعلى وأقل قيمة هو:",
+      "question_en": "Cloud misconfiguration leads to:",
+      "question_ar": "إلى ماذا يؤدي سوء إعدادات السحابة (Cloud Misconfiguration)؟",
       "options": {
-        "a": "Range",
-        "b": "Mean",
-        "c": "Mode",
-        "d": "Median"
+        "a": "Better security",
+        "b": "Vulnerabilities",
+        "c": "Faster systems",
+        "d": "None"
       },
-      "correct_answer": "a",
-      "explanation": "Max minus Min equals Range."
+      "correct_answer": "b",
+      "explanation": "Cloud misconfigurations can expose systems and data to security vulnerabilities."
     },
     {
       "id": 59,
-      "question_en": "What is the main aim of Descriptive Statistics?",
-      "question_ar": "ما هو الهدف الرئيسي للإحصاء الوصفي؟",
+      "question_en": "RBAC is based on:",
+      "question_ar": "يعتمد RBAC على:",
       "options": {
-        "a": "Predict future events",
-        "b": "Summarize data",
-        "c": "Build databases",
-        "d": "Collect samples"
+        "a": "Location",
+        "b": "Roles",
+        "c": "Time",
+        "d": "Data"
       },
       "correct_answer": "b",
-      "explanation": "It aims to describe and summarize data."
+      "explanation": "Role-Based Access Control (RBAC) grants permissions according to assigned roles."
     },
     {
       "id": 60,
-      "question_en": "Which measure is most affected by outliers?",
-      "question_ar": "أي مقياس هو الأكثر تأثرًا بالقيم الشاذة؟",
+      "question_en": "ABAC uses:",
+      "question_ar": "يعتمد ABAC على:",
       "options": {
-        "a": "Mean",
-        "b": "Mode",
-        "c": "Median",
-        "d": "Range"
+        "a": "Roles only",
+        "b": "Attributes",
+        "c": "Passwords",
+        "d": "Keys"
       },
-      "correct_answer": "a",
-      "explanation": "Mean shifts towards extreme values."
+      "correct_answer": "b",
+      "explanation": "Attribute-Based Access Control (ABAC) uses attributes such as user, resource, and environment characteristics."
     },
     {
       "id": 61,
-      "question_en": "In a normal distribution, the relationship between measures of central tendency is:",
-      "question_ar": "في التوزيع الطبيعي، العلاقة بين مقاييس النزعة المركزية هي:",
+      "question_en": "API attacks include:",
+      "question_ar": "من أمثلة هجمات الـ API:",
       "options": {
-        "a": "Mean > Median > Mode",
-        "b": "Mode > Median > Mean",
-        "c": "Mean = Median = Mode",
-        "d": "Mean = Mode only"
+        "a": "Injection",
+        "b": "Storage",
+        "c": "Printing",
+        "d": "None"
       },
-      "correct_answer": "c",
-      "explanation": "A perfect normal distribution is symmetric."
+      "correct_answer": "a",
+      "explanation": "Injection attacks are among the most common security threats targeting APIs."
     },
     {
       "id": 62,
-      "question_en": "Which of the following is a measure of variability?",
-      "question_ar": "أي مما يلي يعتبر مقياسًا للتشتت؟",
+      "question_en": "OAuth is used for:",
+      "question_ar": "يُستخدم OAuth من أجل:",
       "options": {
-        "a": "Median",
-        "b": "Mode",
-        "c": "Variance",
-        "d": "Mean"
+        "a": "Storage",
+        "b": "Authentication",
+        "c": "Networking",
+        "d": "Hardware"
       },
-      "correct_answer": "c",
-      "explanation": "Variance measures spread."
+      "correct_answer": "b",
+      "explanation": "OAuth is commonly used to enable secure delegated authentication and authorization."
     },
     {
       "id": 63,
-      "question_en": "Statistics helps answer questions about:",
-      "question_ar": "يساعد الإحصاء في الإجابة على أسئلة حول:",
+      "question_en": "Secure storage requires:",
+      "question_ar": "يتطلب التخزين الآمن:",
       "options": {
-        "a": "Hardware only",
-        "b": "Software only",
-        "c": "Data",
-        "d": "Networks"
+        "a": "Encryption",
+        "b": "Plain text",
+        "c": "Sharing",
+        "d": "None"
       },
-      "correct_answer": "c",
-      "explanation": "Statistics analyzes data."
+      "correct_answer": "a",
+      "explanation": "Sensitive data should be encrypted when stored to protect it from unauthorized access."
     },
     {
       "id": 64,
-      "question_en": "Which branch of statistics is used to predict population parameters from a sample?",
-      "question_ar": "أي فرع من الإحصاء يستخدم للتنبؤ بمعلمات المجتمع من عينة؟",
+      "question_en": "Logs help in:",
+      "question_ar": "تساعد السجلات (Logs) في:",
       "options": {
-        "a": "Descriptive",
-        "b": "Inferential",
-        "c": "Data Mining",
-        "d": "Data Cleaning"
+        "a": "Ignoring attacks",
+        "b": "Monitoring",
+        "c": "Deleting data",
+        "d": "None"
       },
       "correct_answer": "b",
-      "explanation": "Inferential statistics makes predictions."
+      "explanation": "Logs support monitoring, auditing, troubleshooting, and incident investigation."
+    },
+    {
+      "id": 65,
+      "question_en": "Mobile apps should avoid:",
+      "question_ar": "يجب على تطبيقات الهاتف تجنب:",
+      "options": {
+        "a": "Encryption",
+        "b": "Hardcoded secrets",
+        "c": "Updates",
+        "d": "Security"
+      },
+      "correct_answer": "b",
+      "explanation": "Hardcoded secrets such as API keys and passwords can be extracted by attackers and should never be embedded directly in mobile applications."
+    },
+    {
+      "id": 66,
+      "question_en": "Firmware is best described as:",
+      "question_ar": "كيف يمكن وصف الـ Firmware بشكل أفضل؟",
+      "options": {
+        "a": "A mobile app",
+        "b": "Software running inside the device stored in flash",
+        "c": "A cloud database",
+        "d": "A network cable"
+      },
+      "correct_answer": "b",
+      "explanation": "Firmware is software embedded in a device and typically stored in non-volatile memory such as flash memory."
+    },
+    {
+      "id": 67,
+      "question_en": "Why is firmware a major security target?",
+      "question_ar": "لماذا يُعد الـ Firmware هدفًا مهمًا للهجمات الأمنية؟",
+      "options": {
+        "a": "Because it is never updated",
+        "b": "Because controlling firmware means controlling the whole device",
+        "c": "Because firmware is always encrypted",
+        "d": "Because firmware cannot access sensors"
+      },
+      "correct_answer": "b",
+      "explanation": "Firmware controls the device's core functions, so compromising it often gives an attacker full control over the device."
+    },
+    {
+      "id": 68,
+      "question_en": "A common firmware weakness is:",
+      "question_ar": "من نقاط الضعف الشائعة في الـ Firmware:",
+      "options": {
+        "a": "Strong input validation",
+        "b": "Hardcoded secrets",
+        "c": "Signed updates",
+        "d": "Secure boot"
+      },
+      "correct_answer": "b",
+      "explanation": "Hardcoded secrets such as passwords, API keys, or cryptographic keys are a common firmware security weakness."
+    },
+    {
+      "id": 69,
+      "question_en": "“Hardcoded secret” means:",
+      "question_ar": "ماذا يعني مصطلح Hardcoded Secret؟",
+      "options": {
+        "a": "A key stored safely in secure hardware",
+        "b": "A password/key written directly inside the source code",
+        "c": "A key stored only in the cloud",
+        "d": "A key that changes daily automatically"
+      },
+      "correct_answer": "b",
+      "explanation": "A hardcoded secret is sensitive information embedded directly in the source code or firmware."
+    },
+    {
+      "id": 70,
+      "question_en": "Which is an example of unsafe default?",
+      "question_ar": "أي مما يلي يُعد إعدادًا افتراضيًا غير آمن؟",
+      "options": {
+        "a": "Deny remote commands by default",
+        "b": "Force password change on first use",
+        "c": "Default admin password shared by all devices",
+        "d": "Validate all inputs"
+      },
+      "correct_answer": "c",
+      "explanation": "Using the same default administrator password across all devices creates a significant security risk."
+    },
+    {
+      "id": 71,
+      "question_en": "Physical access is dangerous because an attacker can:",
+      "question_ar": "لماذا يُعتبر الوصول المادي للجهاز خطرًا؟",
+      "options": {
+        "a": "Only read public data",
+        "b": "Directly access flash/debug ports and extract secrets",
+        "c": "Only slow the Wi-Fi network",
+        "d": "Disable TLS remotely"
+      },
+      "correct_answer": "b",
+      "explanation": "Physical access may allow attackers to connect to debug interfaces and extract firmware, credentials, or cryptographic keys."
+    },
+    {
+      "id": 72,
+      "question_en": "A common physical attack interface is:",
+      "question_ar": "ما هي إحدى واجهات الهجوم المادي الشائعة؟",
+      "options": {
+        "a": "HDMI",
+        "b": "UART/JTAG debug ports",
+        "c": "Speaker",
+        "d": "Camera lens"
+      },
+      "correct_answer": "b",
+      "explanation": "UART and JTAG are commonly used debugging interfaces that attackers may exploit when physical access is available."
+    },
+    {
+      "id": 73,
+      "question_en": "“Hardware root of trust” means:",
+      "question_ar": "ماذا يعني Hardware Root of Trust؟",
+      "options": {
+        "a": "Trusting the user password only",
+        "b": "A trusted hardware/ROM starting point used to verify the boot process",
+        "c": "Using more RAM",
+        "d": "Disabling encryption"
+      },
+      "correct_answer": "b",
+      "explanation": "A hardware root of trust is a trusted foundation, usually implemented in hardware or ROM, that verifies system integrity during startup."
+    },
+    {
+      "id": 74,
+      "question_en": "Secure boot means:",
+      "question_ar": "ماذا يعني Secure Boot؟",
+      "options": {
+        "a": "Device boots faster",
+        "b": "Device runs only trusted/verified firmware",
+        "c": "Device never needs updates",
+        "d": "Device uses BLE only"
+      },
+      "correct_answer": "b",
+      "explanation": "Secure Boot verifies firmware integrity and authenticity before execution, preventing unauthorized code from running."
+    },
+    {
+      "id": 75,
+      "question_en": "“Chain of trust” means:",
+      "question_ar": "ماذا يعني Chain of Trust؟",
+      "options": {
+        "a": "One password for all devices",
+        "b": "Each boot stage verifies the next stage before running it",
+        "c": "Devices share the same Wi-Fi",
+        "d": "Storing logs in plain text"
+      },
+      "correct_answer": "b",
+      "explanation": "In a chain of trust, every stage of the boot process validates the integrity and authenticity of the next stage before executing it."
+    },
+    {
+      "id": 76,
+      "question_en": "Signed firmware updates are important because they:",
+      "question_ar": "لماذا تعتبر تحديثات الـ Firmware الموقعة (Signed) مهمة؟",
+      "options": {
+        "a": "Reduce file size",
+        "b": "Ensure updates come from the real manufacturer and were not modified",
+        "c": "Increase battery drain",
+        "d": "Remove the need for authentication"
+      },
+      "correct_answer": "b",
+      "explanation": "Signed firmware updates verify authenticity and integrity, ensuring the update is from a trusted source and has not been tampered with."
+    },
+    {
+      "id": 77,
+      "question_en": "A firmware update should be rejected if:",
+      "question_ar": "متى يجب رفض تحديث الـ Firmware؟",
+      "options": {
+        "a": "It is large",
+        "b": "Its signature verification fails",
+        "c": "It contains new features",
+        "d": "It uses JSON"
+      },
+      "correct_answer": "b",
+      "explanation": "If the digital signature verification fails, the update cannot be trusted and must be rejected."
+    },
+    {
+      "id": 78,
+      "question_en": "Secure storage goals include:",
+      "question_ar": "ما هي أهداف التخزين الآمن؟",
+      "options": {
+        "a": "Only faster reads",
+        "b": "Confidentiality + integrity + access control",
+        "c": "Bigger flash",
+        "d": "More sensors"
+      },
+      "correct_answer": "b",
+      "explanation": "Secure storage focuses on protecting data confidentiality, ensuring integrity, and enforcing proper access control."
+    },
+    {
+      "id": 79,
+      "question_en": "Confidentiality in secure storage means:",
+      "question_ar": "ماذا يعني مبدأ السرية (Confidentiality) في التخزين الآمن؟",
+      "options": {
+        "a": "Data cannot be read by unauthorized parties",
+        "b": "Data cannot be changed",
+        "c": "Device is always online",
+        "d": "Logs are deleted"
+      },
+      "correct_answer": "a",
+      "explanation": "Confidentiality ensures that data is accessible only to authorized users or processes."
+    },
+    {
+      "id": 80,
+      "question_en": "Integrity in secure storage means:",
+      "question_ar": "ماذا يعني مبدأ السلامة (Integrity) في التخزين الآمن؟",
+      "options": {
+        "a": "Data is always encrypted",
+        "b": "Data cannot be modified silently",
+        "c": "Data is stored in cloud only",
+        "d": "Password is public"
+      },
+      "correct_answer": "b",
+      "explanation": "Integrity ensures that data cannot be altered or tampered with without detection."
+    },
+    {
+      "id": 81,
+      "question_en": "Access control in secure storage means:",
+      "question_ar": "ماذا يعني التحكم في الوصول (Access Control) في التخزين الآمن؟",
+      "options": {
+        "a": "Anyone can read keys",
+        "b": "Only authorized code/users can access stored secrets",
+        "c": "Keys are printed to console",
+        "d": "Storage is shared with all apps"
+      },
+      "correct_answer": "b",
+      "explanation": "Access control restricts access to sensitive data so that only authorized entities can read or modify it."
+    },
+    {
+      "id": 82,
+      "question_en": "A “safe default” security rule means:",
+      "question_ar": "ماذا يعني مبدأ الإعداد الافتراضي الآمن (Safe Default)؟",
+      "options": {
+        "a": "Allow everything by default",
+        "b": "Deny risky actions unless explicitly allowed",
+        "c": "Disable updates",
+        "d": "Use default passwords"
+      },
+      "correct_answer": "b",
+      "explanation": "Safe default means the system denies access or actions unless they are explicitly permitted."
+    },
+    {
+      "id": 83,
+      "question_en": "Input validation means:",
+      "question_ar": "ماذا يعني التحقق من المدخلات (Input Validation)؟",
+      "options": {
+        "a": "Accept any input to avoid errors",
+        "b": "Check type, range, and format before using input",
+        "c": "Remove encryption",
+        "d": "Ignore user data"
+      },
+      "correct_answer": "b",
+      "explanation": "Input validation ensures that incoming data is checked for type, range, and format before processing."
+    },
+    {
+      "id": 84,
+      "question_en": "If motor speed should be 0–255, then speed = 999 is:",
+      "question_ar": "إذا كانت سرعة المحرك يجب أن تكون بين 0 و255، فإن القيمة 999 تعتبر:",
+      "options": {
+        "a": "Safe",
+        "b": "Unsafe and must be rejected",
+        "c": "A valid float",
+        "d": "Recommended"
+      },
+      "correct_answer": "b",
+      "explanation": "The value 999 is outside the valid range and must be rejected to prevent undefined or unsafe behavior."
+    },
+    {
+      "id": 85,
+      "question_en": "A good practice for debug logs in production firmware is:",
+      "question_ar": "ما هي الممارسة الصحيحة لسجلات التصحيح (Debug Logs) في الإنتاج؟",
+      "options": {
+        "a": "Keep all debug logs enabled forever",
+        "b": "Remove/disable debug logs and never print secrets",
+        "c": "Log all passwords for troubleshooting",
+        "d": "Print keys on boot"
+      },
+      "correct_answer": "b",
+      "explanation": "Debug logs should be disabled in production, and sensitive information must never be logged."
+    },
+    {
+      "id": 86,
+      "question_en": "Device hardening includes:",
+      "question_ar": "ماذا يشمل تقوية وتأمين الجهاز (Device Hardening)؟",
+      "options": {
+        "a": "Enabling all ports",
+        "b": "Disabling debug interfaces in production",
+        "c": "Sharing one key for all devices",
+        "d": "Accepting unsigned firmware"
+      },
+      "correct_answer": "b",
+      "explanation": "Device hardening includes reducing attack surface, such as disabling debug interfaces like UART/JTAG in production environments."
+    },
+    {
+      "id": 87,
+      "question_en": "Why is leaving UART/JTAG enabled risky?",
+      "question_ar": "لماذا يُعد ترك UART/JTAG مفعلًا خطرًا؟",
+      "options": {
+        "a": "It slows the CPU",
+        "b": "It can allow attackers to read/modify firmware and extract secrets",
+        "c": "It increases sensor accuracy",
+        "d": "It improves TLS"
+      },
+      "correct_answer": "b",
+      "explanation": "UART and JTAG interfaces can expose low-level system access, allowing attackers to extract firmware and sensitive data."
+    },
+    {
+      "id": 88,
+      "question_en": "“Rollback protection” prevents:",
+      "question_ar": "ماذا تمنع آلية Rollback Protection؟",
+      "options": {
+        "a": "Firmware signing",
+        "b": "Downgrading to an old vulnerable firmware version",
+        "c": "Encrypting data",
+        "d": "Updating certificates"
+      },
+      "correct_answer": "b",
+      "explanation": "Rollback protection prevents attackers from installing older, vulnerable firmware versions."
+    },
+    {
+      "id": 89,
+      "question_en": "A security event log is useful because it:",
+      "question_ar": "لماذا تعتبر سجلات الأحداث الأمنية مهمة؟",
+      "options": {
+        "a": "Makes device faster",
+        "b": "Provides evidence of attacks and failures (audit trail)",
+        "c": "Replaces encryption",
+        "d": "Removes the need for authentication"
+      },
+      "correct_answer": "b",
+      "explanation": "Security logs provide an audit trail that helps detect, analyze, and investigate security incidents."
+    },
+    {
+      "id": 90,
+      "question_en": "A good security event to log is:",
+      "question_ar": "ما هو الحدث الأمني المناسب لتسجيله في السجلات؟",
+      "options": {
+        "a": "Screen brightness change",
+        "b": "Authentication failures",
+        "c": "Keyboard layout",
+        "d": "Wallpaper change"
+      },
+      "correct_answer": "b",
+      "explanation": "Authentication failures are critical security events that may indicate brute-force attacks or unauthorized access attempts."
+    },
+    {
+      "id": 91,
+      "question_en": "JSON Lines logging means:",
+      "question_ar": "ماذا يعني أسلوب JSON Lines في تسجيل البيانات؟",
+      "options": {
+        "a": "One file per event",
+        "b": "One JSON object per line",
+        "c": "Only XML format",
+        "d": "Binary-only logs"
+      },
+      "correct_answer": "b",
+      "explanation": "JSON Lines is a format where each line in the file is a separate JSON object, commonly used for streaming logs."
+    },
+    {
+      "id": 92,
+      "question_en": "“Fail-safe behavior” means:",
+      "question_ar": "ماذا يعني سلوك الفشل الآمن (Fail-safe behavior)؟",
+      "options": {
+        "a": "Continue operation even with unsafe configuration",
+        "b": "If something is wrong, refuse unsafe actions and use safe defaults",
+        "c": "Delete all files",
+        "d": "Turn off validation"
+      },
+      "correct_answer": "b",
+      "explanation": "Fail-safe behavior ensures the system defaults to a secure state when an error or failure occurs."
+    },
+    {
+      "id": 93,
+      "question_en": "If the configuration file is missing, the secure choice is to:",
+      "question_ar": "إذا كان ملف الإعدادات مفقودًا، ما هو الخيار الآمن؟",
+      "options": {
+        "a": "Allow remote commands",
+        "b": "Use safe defaults",
+        "c": "Disable all security",
+        "d": "Print secrets for help"
+      },
+      "correct_answer": "b",
+      "explanation": "When configuration is missing, the system should fall back to secure default settings rather than unsafe behavior."
+    },
+    {
+      "id": 94,
+      "question_en": "Which is a common key/secret mistake in firmware?",
+      "question_ar": "ما هو الخطأ الشائع في التعامل مع المفاتيح السرية داخل الـ Firmware؟",
+      "options": {
+        "a": "Unique key per device",
+        "b": "Hardcoding keys and pushing code to public repo",
+        "c": "Validating certificates",
+        "d": "Using signed updates"
+      },
+      "correct_answer": "b",
+      "explanation": "Hardcoding secrets and exposing them in public repositories is a critical security vulnerability."
+    },
+    {
+      "id": 95,
+      "question_en": "The best summary of device physical security is:",
+      "question_ar": "ما هو أفضل تلخيص لأمن الجهاز المادي؟",
+      "options": {
+        "a": "Physical access never matters",
+        "b": "Physical access can bypass software controls, so reduce and protect physical attack paths",
+        "c": "Only network threats exist",
+        "d": "TLS prevents physical attacks"
+      },
+      "correct_answer": "b",
+      "explanation": "Physical access can bypass many software protections, so securing hardware interfaces and physical exposure is critical."
+    },
+    {
+      "id": 96,
+      "question_en": "OTA stands for:",
+      "question_ar": "ماذا يعني اختصار OTA؟",
+      "options": {
+        "a": "On-Time Access",
+        "b": "Over-The-Air update",
+        "c": "Open Token Authentication",
+        "d": "Offline Transfer Algorithm"
+      },
+      "correct_answer": "b",
+      "explanation": "OTA stands for Over-The-Air updates, which allow remote firmware/software updates over a network."
+    },
+    {
+      "id": 97,
+      "question_en": "The main reason IoT devices need OTA updates is:",
+      "question_ar": "ما السبب الرئيسي لاحتياج أجهزة IoT لتحديثات OTA؟",
+      "options": {
+        "a": "To increase screen size",
+        "b": "To patch bugs and vulnerabilities after deployment",
+        "c": "To remove encryption",
+        "d": "To avoid using Wi-Fi"
+      },
+      "correct_answer": "b",
+      "explanation": "OTA updates are primarily used to fix bugs and security vulnerabilities after devices have been deployed."
+    },
+    {
+      "id": 98,
+      "question_en": "A common IoT lifecycle stage is:",
+      "question_ar": "أي مما يلي يعتبر مرحلة في دورة حياة إنترنت الأشياء؟",
+      "options": {
+        "a": "Wallpaper change",
+        "b": "Manufacturing/Factory provisioning",
+        "c": "Gaming mode",
+        "d": "Video rendering"
+      },
+      "correct_answer": "b",
+      "explanation": "IoT lifecycle includes stages such as manufacturing, provisioning, deployment, operation, and maintenance."
+    },
+    {
+      "id": 99,
+      "question_en": "Which is part of the IoT lifecycle?",
+      "question_ar": "أي مما يلي جزء من دورة حياة IoT؟",
+      "options": {
+        "a": "Design & development",
+        "b": "Operation",
+        "c": "Maintenance/OTA updates",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The IoT lifecycle includes design, operation, and maintenance phases including OTA updates."
+    },
+    {
+      "id": 100,
+      "question_en": "OTA is hard in IoT mainly because devices can be:",
+      "question_ar": "لماذا تعتبر تحديثات OTA صعبة في أجهزة IoT؟",
+      "options": {
+        "a": "Always connected and plugged in",
+        "b": "Offline and battery-powered",
+        "c": "Only in data centers",
+        "d": "All the same hardware"
+      },
+      "correct_answer": "b",
+      "explanation": "IoT devices are often battery-powered and intermittently connected, making OTA updates challenging."
+    },
+    {
+      "id": 101,
+      "question_en": "One OTA challenge related to reliability is:",
+      "question_ar": "ما هو أحد تحديات OTA المتعلقة بالموثوقية؟",
+      "options": {
+        "a": "Too much RAM",
+        "b": "Power loss during update",
+        "c": "Too many keyboards",
+        "d": "Fast internet"
+      },
+      "correct_answer": "b",
+      "explanation": "Power loss during an update can corrupt firmware and potentially brick the device."
+    },
+    {
+      "id": 102,
+      "question_en": "“Bricking” means:",
+      "question_ar": "ماذا يعني مصطلح Bricking؟",
+      "options": {
+        "a": "Faster boot",
+        "b": "Device becomes unusable after update",
+        "c": "More storage",
+        "d": "Better encryption"
+      },
+      "correct_answer": "b",
+      "explanation": "Bricking refers to a device becoming completely unusable due to failed firmware or software updates."
+    },
+    {
+      "id": 103,
+      "question_en": "A malicious update risk means:",
+      "question_ar": "ما المقصود بخطر التحديثات الخبيثة؟",
+      "options": {
+        "a": "Update is too small",
+        "b": "Attacker installs fake firmware",
+        "c": "Device logs too much",
+        "d": "Broker is slow"
+      },
+      "correct_answer": "b",
+      "explanation": "A malicious update risk occurs when attackers attempt to install unauthorized or fake firmware."
+    },
+    {
+      "id": 104,
+      "question_en": "A rollback attack means:",
+      "question_ar": "ما هو هجوم Rollback؟",
+      "options": {
+        "a": "Update to newer version",
+        "b": "Forcing device to install older vulnerable firmware",
+        "c": "Encrypting firmware",
+        "d": "Increasing battery life"
+      },
+      "correct_answer": "b",
+      "explanation": "Rollback attacks force devices to install older, vulnerable versions of firmware to exploit known weaknesses."
+    },
+    {
+      "id": 105,
+      "question_en": "The secure OTA pipeline order is best described as:",
+      "question_ar": "ما هو الترتيب الصحيح لخط أنابيب OTA الآمن؟",
+      "options": {
+        "a": "Install → verify → sign → build",
+        "b": "Build → sign → distribute → verify → install → report",
+        "c": "Verify → build → install → report",
+        "d": "Sign → distribute → build → install"
+      },
+      "correct_answer": "b",
+      "explanation": "A secure OTA pipeline includes building firmware, signing it, distributing it, verifying it on the device, installing it, and reporting status."
+    },
+    {
+      "id": 106,
+      "question_en": "Which step proves the firmware came from the real manufacturer?",
+      "question_ar": "أي خطوة تثبت أن الـ firmware من الشركة المصنعة الحقيقية؟",
+      "options": {
+        "a": "Distribute",
+        "b": "Sign",
+        "c": "Install",
+        "d": "Report"
+      },
+      "correct_answer": "b",
+      "explanation": "Digital signatures verify the authenticity and origin of firmware."
+    },
+    {
+      "id": 107,
+      "question_en": "TLS mainly protects:",
+      "question_ar": "ما الذي يحميه TLS بشكل أساسي؟",
+      "options": {
+        "a": "Firmware authenticity only",
+        "b": "Data in transit (confidentiality/integrity)",
+        "c": "Device hardware",
+        "d": "Battery health"
+      },
+      "correct_answer": "b",
+      "explanation": "TLS secures data in transit by providing confidentiality, integrity, and authentication of communication channels."
+    },
+    {
+      "id": 108,
+      "question_en": "Even with TLS, the device must still verify firmware because:",
+      "question_ar": "لماذا يجب على الجهاز التحقق من الـ firmware حتى مع وجود TLS؟",
+      "options": {
+        "a": "TLS is slow",
+        "b": "TLS does not prove the firmware file is from the manufacturer",
+        "c": "TLS changes version numbers",
+        "d": "TLS blocks rollback automatically"
+      },
+      "correct_answer": "b",
+      "explanation": "TLS protects the communication channel, but firmware integrity and authenticity must still be verified separately."
+    },
+    {
+      "id": 109,
+      "question_en": "Rollback protection is mainly to:",
+      "question_ar": "ما الهدف الرئيسي من حماية الرجوع للخلف (Rollback Protection)؟",
+      "options": {
+        "a": "Allow downgrades",
+        "b": "Block installing older versions",
+        "c": "Increase file size",
+        "d": "Remove signatures"
+      },
+      "correct_answer": "b",
+      "explanation": "Rollback protection prevents installation of older, vulnerable firmware versions."
+    },
+    {
+      "id": 110,
+      "question_en": "A simple rollback rule is:",
+      "question_ar": "ما هي قاعدة منع الرجوع للخلف (Rollback) البسيطة؟",
+      "options": {
+        "a": "new_version ≤ current_version allowed",
+        "b": "new_version must be different",
+        "c": "new_version > current_version required",
+        "d": "version doesn’t matter"
+      },
+      "correct_answer": "c",
+      "explanation": "A secure rollback policy requires that only newer firmware versions are accepted to prevent downgrading to vulnerable versions."
+    },
+    {
+      "id": 111,
+      "question_en": "A/B updates help reliability because they:",
+      "question_ar": "لماذا تساعد تحديثات A/B في زيادة الاعتمادية؟",
+      "options": {
+        "a": "Remove encryption",
+        "b": "Keep a working firmware slot while installing new one",
+        "c": "Disable logging",
+        "d": "Avoid signing"
+      },
+      "correct_answer": "b",
+      "explanation": "A/B partitioning allows one active firmware slot to remain working while the other is updated, enabling safe rollback."
+    },
+    {
+      "id": 112,
+      "question_en": "A recovery mode/image is useful because it:",
+      "question_ar": "لماذا يعتبر وضع الاسترداد (Recovery Mode) مهمًا؟",
+      "options": {
+        "a": "Makes MQTT faster",
+        "b": "Lets device boot safely if update fails",
+        "c": "Increases Wi-Fi range",
+        "d": "Removes keys"
+      },
+      "correct_answer": "b",
+      "explanation": "Recovery mode allows the device to boot into a safe state and restore functionality if an update fails."
+    },
+    {
+      "id": 113,
+      "question_en": "Staged rollout (canary) means:",
+      "question_ar": "ماذا يعني النشر التدريجي (Canary Release)؟",
+      "options": {
+        "a": "Update everyone at the same time",
+        "b": "Update a small percentage first and monitor",
+        "c": "Never update devices",
+        "d": "Only update offline devices"
+      },
+      "correct_answer": "b",
+      "explanation": "Staged rollout deploys updates to a small subset of devices first to detect issues before full deployment."
+    },
+    {
+      "id": 114,
+      "question_en": "A key benefit of staged rollout is:",
+      "question_ar": "ما الفائدة الأساسية من النشر التدريجي؟",
+      "options": {
+        "a": "Bigger firmware files",
+        "b": "Reducing fleet-wide failure risk",
+        "c": "Removing authentication",
+        "d": "Faster bricking"
+      },
+      "correct_answer": "b",
+      "explanation": "Staged rollout reduces risk by limiting the impact of potential failures to a small subset of devices."
+    },
+    {
+      "id": 115,
+      "question_en": "A rollout should be paused if:",
+      "question_ar": "متى يجب إيقاف عملية النشر (Rollout)؟",
+      "options": {
+        "a": "Success rate is high",
+        "b": "Failure rate is too high",
+        "c": "Firmware is signed",
+        "d": "Version increases"
+      },
+      "correct_answer": "b",
+      "explanation": "A rollout should be paused if failure rates exceed acceptable thresholds to prevent widespread issues."
+    },
+    {
+      "id": 116,
+      "question_en": "Vulnerability management means:",
+      "question_ar": "ماذا يعني إدارة الثغرات الأمنية؟",
+      "options": {
+        "a": "Ignore CVEs",
+        "b": "Track, patch, and verify fixes across devices",
+        "c": "Disable updates",
+        "d": "Use weak passwords"
+      },
+      "correct_answer": "b",
+      "explanation": "Vulnerability management involves identifying, tracking, and patching security issues across systems."
+    },
+    {
+      "id": 117,
+      "question_en": "SBOM is best described as:",
+      "question_ar": "ما هو SBOM؟",
+      "options": {
+        "a": "A sensor type",
+        "b": "Software Bill of Materials (list of components/libraries)",
+        "c": "A Wi-Fi protocol",
+        "d": "A bootloader"
+      },
+      "correct_answer": "b",
+      "explanation": "SBOM is a structured list of software components and dependencies used in a system."
+    },
+    {
+      "id": 118,
+      "question_en": "SBOM helps security because it:",
+      "question_ar": "كيف يساعد SBOM في الأمن السيبراني؟",
+      "options": {
+        "a": "Encrypts firmware automatically",
+        "b": "Helps identify affected devices when a library vulnerability appears",
+        "c": "Stops DoS attacks",
+        "d": "Replaces signatures"
+      },
+      "correct_answer": "b",
+      "explanation": "SBOM allows organizations to quickly identify impacted systems when a vulnerability is discovered in a dependency."
+    },
+    {
+      "id": 119,
+      "question_en": "End-of-life decommissioning should include:",
+      "question_ar": "ماذا يجب أن يتضمن إنهاء دورة حياة الجهاز (End-of-Life)؟",
+      "options": {
+        "a": "Leaving keys active forever",
+        "b": "Revoking credentials and wiping sensitive data",
+        "c": "Disabling all validation",
+        "d": "Publishing private keys"
+      },
+      "correct_answer": "b",
+      "explanation": "Proper decommissioning includes revoking credentials and securely wiping sensitive data."
+    },
+    {
+      "id": 120,
+      "question_en": "The best device rule is to install an update only if:",
+      "question_ar": "ما هي القاعدة الأفضل لتثبيت التحديثات؟",
+      "options": {
+        "a": "It is newer in size",
+        "b": "Verification passes (signature/HMAC + hash + version policy)",
+        "c": "It has a nice name",
+        "d": "The network is fast"
+      },
+      "correct_answer": "b",
+      "explanation": "Updates should only be installed after full cryptographic verification and version policy checks."
+    },
+    {
+      "id": 121,
+      "question_en": "Monitoring in IoT is important mainly because:",
+      "question_ar": "لماذا تعتبر المراقبة (Monitoring) مهمة في أنظمة IoT؟",
+      "options": {
+        "a": "Devices never fail",
+        "b": "Attacks and failures happen after deployment",
+        "c": "Encryption is useless",
+        "d": "Sensors stop working automatically"
+      },
+      "correct_answer": "b",
+      "explanation": "IoT systems must be monitored because failures and security attacks typically occur after deployment in real-world environments."
+    },
+    {
+      "id": 122,
+      "question_en": "Which is a device health signal?",
+      "question_ar": "أي مما يلي يُعتبر مؤشر صحة للجهاز؟",
+      "options": {
+        "a": "Wallpaper color",
+        "b": "Last seen time/heartbeat",
+        "c": "Keyboard layout",
+        "d": "Screen resolution"
+      },
+      "correct_answer": "b",
+      "explanation": "Heartbeat or last-seen timestamps indicate whether a device is active and responsive."
+    },
+    {
+      "id": 123,
+      "question_en": "Which is a device health signal?",
+      "question_ar": "أي مما يلي يُعتبر مؤشر صحة للجهاز؟",
+      "options": {
+        "a": "Firmware version",
+        "b": "Mouse speed",
+        "c": "Font size",
+        "d": "Wallpaper"
+      },
+      "correct_answer": "a",
+      "explanation": "Firmware version helps assess device state, compatibility, and potential vulnerability exposure."
+    },
+    {
+      "id": 124,
+      "question_en": "A possible sign of device compromise or failure is:",
+      "question_ar": "ما الذي قد يدل على اختراق أو فشل الجهاز؟",
+      "options": {
+        "a": "Stable heartbeat always",
+        "b": "Sudden reboot loops or device disappears",
+        "c": "More storage",
+        "d": "Better Wi-Fi"
+      },
+      "correct_answer": "b",
+      "explanation": "Unexpected reboot loops or disappearance from monitoring systems can indicate compromise or system failure."
+    },
+    {
+      "id": 125,
+      "question_en": "Which is a network anomaly?",
+      "question_ar": "ما هو الشذوذ (Anomaly) في الشبكة؟",
+      "options": {
+        "a": "Normal telemetry every 5 seconds",
+        "b": "Unusual traffic spike or repeated connection attempts",
+        "c": "Normal TLS connection",
+        "d": "Normal device sleep mode"
+      },
+      "correct_answer": "b",
+      "explanation": "Unusual spikes in traffic or repeated connection attempts often indicate abnormal or malicious activity."
+    },
+    {
+      "id": 126,
+      "question_en": "Which is a cloud/backend anomaly?",
+      "question_ar": "ما هو مثال على شذوذ في السحابة أو الخلفية (Backend)؟",
+      "options": {
+        "a": "Many 401/403 errors suddenly",
+        "b": "A single normal login",
+        "c": "A device sending temperature",
+        "d": "A user changing phone wallpaper"
+      },
+      "correct_answer": "a",
+      "explanation": "A sudden increase in 401/403 errors may indicate authentication issues or unauthorized access attempts."
+    },
+    {
+      "id": 127,
+      "question_en": "Logging is mainly used to answer:",
+      "question_ar": "ما الهدف الرئيسي من السجلات (Logging)؟",
+      "options": {
+        "a": "What happened and when",
+        "b": "What color is the UI",
+        "c": "How to build hardware",
+        "d": "How to charge battery"
+      },
+      "correct_answer": "a",
+      "explanation": "Logs are used to record events and provide a timeline of what happened in the system."
+    },
+    {
+      "id": 128,
+      "question_en": "A good log format for analysis is:",
+      "question_ar": "ما هو أفضل تنسيق للسجلات للتحليل؟",
+      "options": {
+        "a": "Random text only",
+        "b": "Structured JSON logs",
+        "c": "Images",
+        "d": "Audio files"
+      },
+      "correct_answer": "b",
+      "explanation": "Structured JSON logs are machine-readable and easier to analyze and query."
+    },
+    {
+      "id": 129,
+      "question_en": "A good security log should include:",
+      "question_ar": "ما الذي يجب أن يحتويه سجل أمني جيد؟",
+      "options": {
+        "a": "Passwords",
+        "b": "Tokens",
+        "c": "Time + event_type + device_id + result",
+        "d": "Private keys"
+      },
+      "correct_answer": "c",
+      "explanation": "Security logs should include structured metadata like time, event type, device ID, and result for traceability."
+    },
+    {
+      "id": 130,
+      "question_en": "Which field helps multi-tenant systems avoid data mixing?",
+      "question_ar": "أي حقل يساعد في منع اختلاط البيانات في الأنظمة متعددة المستأجرين؟",
+      "options": {
+        "a": "tenant_id",
+        "b": "wallpaper_id",
+        "c": "font_id",
+        "d": "camera_id"
+      },
+      "correct_answer": "a",
+      "explanation": "tenant_id is used to isolate and separate data between different tenants in multi-tenant systems."
+    },
+    {
+      "id": 131,
+      "question_en": "“High signal, low noise” alerting means:",
+      "question_ar": "ماذا يعني تنبيه (High signal, low noise)؟",
+      "options": {
+        "a": "Many alerts always",
+        "b": "Alerts are meaningful and not too frequent",
+        "c": "No alerts at all",
+        "d": "Alerts only during exams"
+      },
+      "correct_answer": "b",
+      "explanation": "It means alerts should be relevant and reduce unnecessary or false notifications."
+    },
+    {
+      "id": 132,
+      "question_en": "A good alert rule is usually based on:",
+      "question_ar": "ما الذي تعتمد عليه قواعد التنبيه الجيدة؟",
+      "options": {
+        "a": "One event only",
+        "b": "Thresholds and time windows",
+        "c": "Device color",
+        "d": "Random guessing"
+      },
+      "correct_answer": "b",
+      "explanation": "Good alerting uses thresholds over time windows to reduce false positives."
+    },
+    {
+      "id": 133,
+      "question_en": "Incident response “containment” means:",
+      "question_ar": "ماذا يعني الاحتواء (Containment) في الاستجابة للحوادث؟",
+      "options": {
+        "a": "Learning after the incident",
+        "b": "Stopping the incident from spreading / reducing damage",
+        "c": "Writing code",
+        "d": "Creating a new product"
+      },
+      "correct_answer": "b",
+      "explanation": "Containment aims to limit the impact and prevent further spread of an incident."
+    },
+    {
+      "id": 134,
+      "question_en": "A containment action in IoT could be:",
+      "question_ar": "ما مثال على إجراء احتواء في IoT؟",
+      "options": {
+        "a": "Revoking device credentials",
+        "b": "Printing passwords to logs",
+        "c": "Disabling all TLS",
+        "d": "Sharing one key for all devices"
+      },
+      "correct_answer": "a",
+      "explanation": "Revoking compromised credentials helps stop unauthorized access in IoT systems."
+    },
+    {
+      "id": 135,
+      "question_en": "The correct incident response order is closest to:",
+      "question_ar": "ما هو الترتيب الصحيح تقريبًا للاستجابة للحوادث؟",
+      "options": {
+        "a": "Detect → Contain → Recover → Review",
+        "b": "Contain → Ignore → Delete logs",
+        "c": "Update wallpaper → reboot",
+        "d": "Encrypt → decrypt → encrypt"
+      },
+      "correct_answer": "a",
+      "explanation": "Incident response typically follows detect, contain, recover, then review/learn phases."
+    },
+    {
+      "id": 136,
+      "question_en": "Privacy “minimization” means:",
+      "question_ar": "ماذا يعني تقليل جمع البيانات (Privacy Minimization)؟",
+      "options": {
+        "a": "Collect everything",
+        "b": "Collect only what is needed",
+        "c": "Store data forever",
+        "d": "Share data publicly"
+      },
+      "correct_answer": "b",
+      "explanation": "Data minimization means collecting only the necessary data required for a specific purpose."
+    },
+    {
+      "id": 137,
+      "question_en": "Privacy “retention” means:",
+      "question_ar": "ماذا يعني مصطلح الاحتفاظ بالبيانات (Retention) في الخصوصية؟",
+      "options": {
+        "a": "Data is deleted immediately always",
+        "b": "Define how long data is kept",
+        "c": "Data is encrypted",
+        "d": "Data is always public"
+      },
+      "correct_answer": "b",
+      "explanation": "Data retention defines policies for how long data is stored before being deleted or archived."
+    },
+    {
+      "id": 138,
+      "question_en": "Privacy “transparency” means:",
+      "question_ar": "ماذا يعني مبدأ الشفافية (Transparency) في الخصوصية؟",
+      "options": {
+        "a": "Hide what you collect",
+        "b": "Tell users what you collect and why",
+        "c": "Never show settings",
+        "d": "Store tokens in plaintext"
+      },
+      "correct_answer": "b",
+      "explanation": "Transparency means clearly informing users about what data is collected and how it is used."
+    },
+    {
+      "id": 139,
+      "question_en": "Privacy “control” means:",
+      "question_ar": "ماذا يعني مبدأ التحكم (Control) في الخصوصية؟",
+      "options": {
+        "a": "Only admins can see data",
+        "b": "Users can manage settings and deletion (when possible)",
+        "c": "Devices never update",
+        "d": "Cloud has no logs"
+      },
+      "correct_answer": "b",
+      "explanation": "Privacy control allows users to manage their data, including access, modification, and deletion where applicable."
+    },
+    {
+      "id": 140,
+      "question_en": "Which data is usually considered sensitive?",
+      "question_ar": "أي نوع من البيانات يعتبر حساسًا عادة؟",
+      "options": {
+        "a": "Temperature only",
+        "b": "Location and video/audio",
+        "c": "Device model name only",
+        "d": "Firmware version only"
+      },
+      "correct_answer": "b",
+      "explanation": "Location data and audio/video streams are considered sensitive because they can directly identify users or their behavior."
+    },
+    {
+      "id": 141,
+      "question_en": "A privacy impact question is:",
+      "question_ar": "ما هو مثال على سؤال تقييم الأثر على الخصوصية؟",
+      "options": {
+        "a": "Can we collect less data?",
+        "b": "Can we remove TLS?",
+        "c": "Can we share passwords?",
+        "d": "Can we ignore logging?"
+      },
+      "correct_answer": "a",
+      "explanation": "Privacy impact assessments often ask whether data collection can be minimized."
+    },
+    {
+      "id": 142,
+      "question_en": "Standards are mainly used in this course as:",
+      "question_ar": "ما الهدف من استخدام المعايير (Standards) في هذا المقرر؟",
+      "options": {
+        "a": "A checklist/guidance for best practices",
+        "b": "A replacement for security",
+        "c": "A way to remove monitoring",
+        "d": "A tool to store secrets"
+      },
+      "correct_answer": "a",
+      "explanation": "Standards provide structured best-practice guidelines rather than replacing actual security implementation."
+    },
+    {
+      "id": 143,
+      "question_en": "Capstone end-to-end security design should include:",
+      "question_ar": "ما الذي يجب أن يشمله تصميم الأمان الشامل (Capstone)؟",
+      "options": {
+        "a": "Only UI design",
+        "b": "Identity + secure comms + OTA + logging + privacy",
+        "c": "Only device color",
+        "d": "Only marketing plan"
+      },
+      "correct_answer": "b",
+      "explanation": "A complete security design includes identity management, secure communication, OTA updates, logging, and privacy controls."
+    },
+    {
+      "id": 144,
+      "question_en": "In log analysis, counting auth failures per device is used to detect:",
+      "question_ar": "لماذا يتم تحليل عدد فشل المصادقة لكل جهاز في السجلات؟",
+      "options": {
+        "a": "Battery charging",
+        "b": "Possible brute force / password guessing attacks",
+        "c": "Screen brightness problems",
+        "d": "Faster Wi-Fi"
+      },
+      "correct_answer": "b",
+      "explanation": "Repeated authentication failures may indicate brute-force or password-guessing attacks."
+    },
+    {
+      "id": 145,
+      "question_en": "A device health dashboard is mainly for:",
+      "question_ar": "ما الهدف الرئيسي من لوحة صحة الجهاز (Device Health Dashboard)؟",
+      "options": {
+        "a": "Playing videos",
+        "b": "Viewing device status (last seen, firmware, failures) quickly",
+        "c": "Printing passwords",
+        "d": "Removing encryption"
+      },
+      "correct_answer": "b",
+      "explanation": "Device dashboards provide quick visibility into device status, health, and operational metrics."
     }
   ],
   "short_answer": [
     {
       "id": 1,
-      "question_en": "Define Big Data in your own words.",
-      "question_ar": "عرف البيانات الضخمة بأسلوبك الخاص.",
-      "answer": "Big Data refers to extremely large and complex datasets that cannot be efficiently processed using traditional data processing systems. It includes structured, semi-structured, and unstructured data and requires distributed computing systems for storage and analysis."
+      "question_en": "What is encryption? Explain it in simple words.",
+      "question_ar": "ما هو التشفير؟ اشرحه بكلمات بسيطة.",
+      "answer": "Encryption hides data and can be reversed with a key."
     },
     {
       "id": 2,
-      "question_en": "Explain the difference between Volume and Velocity.",
-      "question_ar": "اشرح الفرق بين الحجم (Volume) والسرعة (Velocity).",
-      "answer": "• Volume: Refers to the amount or size of data generated.\n• Velocity: Refers to the speed at which data is generated and processed."
+      "question_en": "Explain what IoT security is, and mention one example of an actuator (locks, motors, or alarms).",
+      "question_ar": "اشرح ما هو أمن إنترنت الأشياء، واذكر مثالًا واحدًا على المشغل (مثل الأقفال أو المحركات أو الإنذارات).",
+      "answer": "IoT security protects devices that sense the environment, communicate over networks, and act on the physical world. Example: a smart lock."
     },
     {
       "id": 3,
-      "question_en": "Why do traditional systems struggle with Big Data?",
-      "question_ar": "لماذا تواجه الأنظمة التقليدية صعوبة في التعامل مع البيانات الضخمة؟",
-      "answer": "Traditional systems struggle with Big Data because:\n\n• Limited scalability → rely on single-server (vertical scaling).\n• Cannot handle huge data volumes → performance drops with TB/PB data.\n• Poor support for unstructured data → designed for structured tables only.\n• Slow processing → lack distributed and parallel processing.\n• High cost → scaling hardware becomes expensive."
+      "question_en": "Explain telemetry and commands with one IoT example for each.",
+      "question_ar": "اشرح البيانات القياسية (Telemetry) والأوامر مع مثال واحد لكل منهما.",
+      "answer": "Telemetry:  Data the device sends out to report its status or sensor readings (Device → server data) - e.g., temperature sensor sends 25°C to the cloud every 5 seconds. \nCommands: Instructions the server/app sends to the device to change what it does ( Server/app → device actions ) - e.g., app sends unlock command to a smart lock)."
     },
     {
       "id": 4,
-      "question_en": "List the main components of the Big Data technology stack.",
-      "question_ar": "اشرح المكونات الرئيسية لبنية البيانات الضخمة.",
-      "answer": "The main components of Big Data Architecture are:\n\nIngestion → Collects data from sources (batch or streaming).\nStorage → Stores large data in distributed systems (e.g., HDFS).\nProcessing → Transforms and analyzes data (batch or real-time).\nAnalytics → Presents insights via dashboards, queries, or ML models.\nSecurity & monitoring layer: ensures safety and system health."
+      "question_en": "Write one clear definition for each: asset, threat, vulnerability, risk, mitigation.",
+      "question_ar": "اكتب تعريفًا واضحًا لكل من: الأصل، التهديد، الثغرة، المخاطر، التخفيف.",
+      "answer": "Asset: valuable item to protect. \nThreat: harmful event. \nVulnerability: A weakness that allows a threat to succeed. \nRisk: How bad something can be, based on likelihood × impact. \nMitigation: control to reduce risk."
     },
     {
       "id": 5,
-      "question_en": "What is the difference between ETL and ELT?",
-      "question_ar": "ما الفرق بين ETL و ELT؟",
-      "answer": "ETL transforms data before loading it into storage, while ELT loads data first and then performs transformation inside the storage system."
+      "question_en": "Give 3 examples of physical access threats in IoT devices.",
+      "question_ar": "اذكر 3 أمثلة على تهديدات الوصول الفيزيائي في أجهزة إنترنت الأشياء.",
+      "answer": "Reading flash memory to extract secrets; \nusing UART/JTAG to bypass protections; \nhardware tampering to fake sensor readings."
     },
     {
       "id": 6,
-      "question_en": "Define fault tolerance and give one replication strategy example.",
-      "question_ar": "عرّف تحمل الأخطاء واذكر مثالاً على إحدى استراتيجيات النسخ المتماثل.",
-      "answer": "Fault tolerance is the ability of a system to continue operating even if some components fail.\nExample: Data replication in HDFS, where each data block is stored in multiple nodes."
+      "question_en": "What is hashing? Explain it in simple words.",
+      "question_ar": "ما هو التجزئة (Hashing)؟ اشرحه بكلمات بسيطة.",
+      "answer": "Hashing creates a one-way fingerprint to detect changes."
     },
     {
       "id": 7,
-      "question_en": "What are the benefits of a Data Lake?",
-      "question_ar": "ما هي فوائد بحيرة البيانات (Data Lake)؟",
-      "answer": "• Stores structured and unstructured data\n• Highly scalable\n• Low-cost storage\n• Supports machine learning and advanced analytics\n• Flexible schema-on-read approach"
+      "question_en": "Why is IoT security special compared to normal computer security?",
+      "question_ar": "لماذا يُعد أمن إنترنت الأشياء مميزًا مقارنة بأمن الحواسيب التقليدي؟",
+      "answer": "Because IoT connects digital systems to the physical world, so failures can cause real-world impact."
     },
     {
       "id": 8,
-      "question_en": "Explain the importance of monitoring in distributed systems.",
-      "question_ar": "اشرح أهمية المراقبة في الأنظمة الموزعة.",
-      "answer": "Monitoring ensures system reliability by:\n• Detecting failures early\n• Tracking performance metrics\n• Preventing downtime\n• Supporting autoscaling decisions\n• Improving system optimization"
+      "question_en": "What does TLS protect, and what does it NOT fix by itself?",
+      "question_ar": "ماذا يحمي TLS، وماذا لا يعالجه بمفرده؟",
+      "answer": "TLS protects confidentiality, integrity, and authentication. \nIt does not fix weak passwords, bad authorization, application bugs, or DoS attacks."
     },
     {
       "id": 9,
-      "question_en": "Mention two Big Data use cases in healthcare or e-commerce.",
-      "question_ar": "اذكر حالتي استخدام للبيانات الضخمة في الرعاية الصحية أو التجارة الإلكترونية.",
-      "answer": "• Predicting disease outbreaks using patient data (Healthcare)\n• Recommendation systems for online shopping (E-commerce)"
+      "question_en": "Draw a simple IoT system diagram for: sensor → Wi-Fi → cloud API → mobile app. Label each part.",
+      "question_ar": "ارسم مخططًا بسيطًا لنظام إنترنت الأشياء: مستشعر → Wi-Fi → واجهة برمجة التطبيقات السحابية → تطبيق الهاتف.",
+      "answer": "Sensor/Device → Wi-Fi/Router/Internet → Cloud API/Server → Mobile App."
     },
     {
       "id": 10,
-      "question_en": "Define Exploratory Data Analysis (EDA).",
-      "question_ar": "عرّف تحليل البيانات الاستكشافي (EDA).",
-      "answer": "Exploratory Data Analysis (EDA) is the process of analyzing and visualizing data to understand its structure, discover patterns, detect anomalies, and gain insights before building machine learning models."
+      "question_en": "Explain the 3 goals of secure storage (confidentiality, integrity, access control) with one example each.",
+      "question_ar": "اشرح الأهداف الثلاثة للتخزين الآمن (السرية، السلامة، التحكم في الوصول) مع مثال لكل منها.",
+      "answer": "Confidentiality: protect secrets (e.g., Wi-Fi password). \nIntegrity: detect unauthorized changes (e.g., config file tampering). \nAccess control: restrict who can access data (e.g., only update module can write firmware)."
     },
     {
       "id": 11,
-      "question_en": "Explain the difference between univariate and multivariate plots.",
-      "question_ar": "اشرح الفرق بين الرسوم أحادية المتغير ومتعددة المتغيرات.",
-      "answer": "Univariate plots analyze a single variable and its distribution, while multivariate plots analyze relationships and interactions among two or more variables."
+      "question_en": "List 5 common firmware weaknesses and explain one of them.",
+      "question_ar": "اذكر 5 من أشهر نقاط ضعف الـ Firmware واشرح واحدة منها.",
+      "answer": "Five common firmware weaknesses: \n1. Hardcoded secrets (passwords, API keys inside code) \n2. No input validation (accepting any values/strings) \n3. Unsafe defaults (default admin password, debug enabled) \n4. Debug interfaces left enabled (UART/JTAG open in production) \n5. Unsigned / unverified firmware updates (device installs any update file)\n\nExplanation (Hardcoded secrets): \nIf a secret key or admin password is written inside the firmware code, anyone who extracts the firmware (from flash memory, OTA file, or leaked repository) can recover it. This allows attackers to impersonate devices, access backend systems, or gain administrative control."
     },
     {
       "id": 12,
-      "question_en": "Define scalability in Big Data systems.",
-      "question_ar": "عرّف قابلية التوسع في أنظمة البيانات الضخمة.",
-      "answer": "Scalability is the ability of a system to handle increasing amounts of data, users, or workload by adding resources without significantly affecting performance."
+      "question_en": "Give 3 examples of physical access threats in IoT devices.",
+      "question_ar": "اذكر 3 أمثلة على تهديدات الوصول المادي في أجهزة IoT.",
+      "answer": "1. Reading flash memory to extract firmware and secrets such as Wi-Fi passwords, tokens, or certificates. \n2. Using UART/JTAG debug ports to bypass security controls, dump memory, or rewrite firmware. \n3. Hardware tampering such as modifying sensor wiring/signals to inject fake data or force device resets."
     },
     {
       "id": 13,
-      "question_en": "Explain the difference between batch and stream processing.",
-      "question_ar": "اشرح الفرق بين المعالجة الدفعية والمعالجة اللحظية.",
-      "answer": "Batch processing handles large amounts of collected data at scheduled intervals, while stream processing handles data continuously in real time as it arrives."
+      "question_en": "Explain the 3 goals of secure storage (confidentiality, integrity, access control) with one example each.",
+      "question_ar": "اشرح أهداف التخزين الآمن الثلاثة (السرية، السلامة، التحكم في الوصول) مع مثال لكل منها.",
+      "answer": "Confidentiality: Protect sensitive data from unauthorized reading. Example: storing Wi-Fi passwords or private keys so attackers cannot read them from flash memory. \nIntegrity: Ensure data is not modified without detection. Example: preventing unauthorized changes to configuration files such as enabling hidden remote access. \nAccess control: Restrict who can read or write data. Example: only the firmware update module can write firmware data while other modules cannot access private keys."
     },
     {
       "id": 14,
-      "question_en": "What is the role of autoscaling?",
-      "question_ar": "ما دور التوسع التلقائي (Autoscaling)؟",
-      "answer": "Autoscaling automatically increases or decreases computing resources based on workload demand to maintain performance and optimize resource usage."
+      "question_en": "Write a device hardening checklist with at least 8 items.",
+      "question_ar": "اكتب قائمة لتقوية أمان الجهاز (Device Hardening) تحتوي على 8 عناصر على الأقل.",
+      "answer": "1. Remove default passwords and enforce password change on first use. \n2. Apply input validation for all external inputs (network, BLE, files). \n3. Use safe defaults (deny risky actions unless explicitly allowed). \n4. Disable or remove debug logs in production and avoid logging secrets. \n5. Disable or secure UART/JTAG interfaces in production hardware. \n6. Enable secure boot to ensure only trusted firmware runs. \n7. Require signed firmware updates and reject invalid signatures. \n8. Implement rollback protection to prevent downgrading to vulnerable firmware. \n9. Use secure storage for secrets (encrypted and access-controlled). \n10. Log security events such as authentication and update failures."
     },
     {
       "id": 15,
-      "question_en": "Explain one benefit of geo-replication.",
-      "question_ar": "اشرح إحدى فوائد النسخ الجغرافي (Geo-Replication).",
-      "answer": "Geo-replication improves disaster recovery by maintaining copies of data in multiple geographic regions, allowing systems to continue operating if one region fails."
+      "question_en": "Explain why security event logging is important, and give 3 events you would log.",
+      "question_ar": "اشرح أهمية تسجيل الأحداث الأمنية واذكر 3 أحداث يجب تسجيلها.",
+      "answer": "Security event logging is important because it provides an audit trail to detect attacks, investigate incidents, and analyze system failures. Without logs, malicious activity may go unnoticed.\n\nEvents to log:\n1. Authentication failures such as wrong passwords or repeated login attempts.\n2. Firmware update failures including invalid signatures or rollback attempts.\n3. Configuration violations such as invalid or unsafe settings being rejected."
     },
     {
       "id": 16,
-      "question_en": "What are the main components of distribution analysis?",
-      "question_ar": "ما هي المكونات الرئيسية لتحليل التوزيع؟",
-      "answer": "The main components of distribution analysis include central tendency (mean, median, mode), dispersion (range, variance, standard deviation), skewness, and outlier detection."
+      "question_en": "List the main IoT lifecycle stages and explain why security must cover all stages.",
+      "question_ar": "اذكر المراحل الرئيسية لدورة حياة إنترنت الأشياء وفسر لماذا يجب أن يغطي الأمان جميع المراحل.",
+      "answer": "Main IoT lifecycle stages include: \n1. Design & development \n2. Manufacturing / provisioning \n3. Deployment \n4. Operation \n5. Maintenance (including OTA updates) \n6. End-of-life / decommissioning\n\nSecurity must cover all stages because vulnerabilities can be introduced at any point. A device may be secure at design time but become vulnerable during deployment, updates, or even when retired if credentials are not revoked or data is not wiped."
     },
     {
       "id": 17,
-      "question_en": "Why is data visualization important in machine learning?",
-      "question_ar": "لماذا يعد التصور البياني للبيانات مهمًا في تعلم الآلة؟",
-      "answer": "Data visualization helps understand data patterns, identify outliers, detect relationships between variables, and support better feature selection and model development."
+      "question_en": "Explain why OTA updates are difficult in IoT (give at least 4 reasons).",
+      "question_ar": "اشرح لماذا تعتبر تحديثات OTA صعبة في أجهزة IoT (اذكر 4 أسباب على الأقل).",
+      "answer": "OTA updates are difficult in IoT because: \n1. Many devices are battery-powered and may lose power during updates. \n2. Devices may be intermittently connected or fully offline. \n3. Hardware is resource-constrained (low CPU, memory, storage). \n4. Devices are deployed in remote or inaccessible locations. \n5. Network reliability varies, increasing risk of incomplete updates."
     },
     {
       "id": 18,
-      "question_en": "List two best practices in data visualization.",
-      "question_ar": "اذكر ممارستين من أفضل ممارسات التصور البياني للبيانات.",
-      "answer": "Use clear labels and titles, and choose the appropriate chart type for the data being presented."
+      "question_en": "Explain OTA risks: malicious update, rollback, and bricking (what each means).",
+      "question_ar": "اشرح مخاطر OTA: التحديث الخبيث، الرجوع للخلف، وتعطّل الجهاز (bricking).",
+      "answer": "Malicious update: an attacker attempts to install fake or modified firmware to gain control over the device. \n\nRollback: forcing the device to install an older firmware version that contains known vulnerabilities. \n\nBricking: a failed or corrupted update leaves the device unusable, either partially or completely."
     },
     {
       "id": 19,
-      "question_en": "Why is RDBMS not suitable for Big Data workloads?",
-      "question_ar": "لماذا لا يعد RDBMS مناسبًا لأحمال عمل البيانات الضخمة؟",
-      "answer": "RDBMS systems are not suitable because they rely on vertical scaling, have limited ability to handle massive distributed datasets, and are optimized for structured data and transactional workloads rather than large-scale analytics."
+      "question_en": "Explain rollback protection and give one simple version policy rule.",
+      "question_ar": "اشرح حماية الرجوع للخلف (Rollback Protection) واذكر قاعدة بسيطة لإدارة الإصدارات.",
+      "answer": "Rollback protection prevents devices from installing older, vulnerable firmware versions. It ensures only safe progression to newer versions.\n\nSimple version policy rule: Only accept firmware if new_version > current_version."
     },
     {
       "id": 20,
-      "question_en": "What are the main advantages of Hadoop?",
-      "question_ar": "ما هي المزايا الرئيسية لـ Hadoop؟",
-      "answer": "• Horizontal scalability\n• Fault tolerance via replication\n• Cost-effective distributed storage\n• Ability to process large and diverse datasets\n• Parallel processing capability"
+      "question_en": "Explain staged rollout and why it is safer than updating all devices at once.",
+      "question_ar": "اشرح النشر التدريجي (Staged Rollout) ولماذا هو أكثر أمانًا من تحديث جميع الأجهزة مرة واحدة.",
+      "answer": "Staged rollout (canary deployment) means updating a small percentage of devices first and monitoring their behavior before full deployment.\n\nIt is safer because it limits the impact of potential bugs or vulnerabilities. If a problem is detected early, the rollout can be paused before affecting the entire fleet of devices."
     },
     {
       "id": 21,
-      "question_en": "Explain the difference between HDFS and HBase.",
-      "question_ar": "اشرح الفرق بين HDFS و HBase.",
-      "answer": "• HDFS: Distributed file system for storing large files.\n• HBase: NoSQL database built on top of HDFS for real-time read/write access."
+      "question_en": "Explain IoT cloud architecture layers and their security risks.",
+      "question_ar": "اشرح طبقات معمارية السحابة في إنترنت الأشياء والمخاطر الأمنية المرتبطة بها.",
+      "answer": "IoT cloud architecture typically includes:\n1. Device layer: sensors and embedded devices collecting data. Security risks include firmware vulnerabilities, physical tampering, and weak authentication.\n2. Network/communication layer: transports data via protocols like MQTT/HTTP. Risks include interception, MITM attacks, and insecure protocols.\n3. Cloud ingestion layer: receives and processes incoming data. Risks include API abuse, injection attacks, and authentication bypass.\n4. Storage layer: databases and object storage. Risks include data leakage, improper access control, and misconfiguration.\n5. Application layer: dashboards and analytics. Risks include broken access control, session hijacking, and insecure APIs."
     },
     {
       "id": 22,
-      "question_en": "Compare MapReduce and Spark.",
-      "question_ar": "قارن بين MapReduce و Spark.",
-      "answer": "• MapReduce: Disk-based batch processing, slower due to I/O overhead.\n• Spark: In-memory processing, faster and supports iterative workloads and real-time analytics."
+      "question_en": "Differentiate between authentication and authorization with examples.",
+      "question_ar": "ميز بين المصادقة (Authentication) والتفويض (Authorization) مع أمثلة.",
+      "answer": "Authentication verifies identity (who the user/device is). Example: logging in with username and password or device certificate validation.\nAuthorization determines access rights (what the user/device is allowed to do). Example: an authenticated user may be allowed to view sensor data but not modify firmware settings."
     },
     {
       "id": 23,
-      "question_en": "What is the role of Apache Ambari in Hadoop?",
-      "question_ar": "ما هو دور Apache Ambari في Hadoop؟",
-      "answer": "Apache Ambari is used to install, configure, monitor, and manage Hadoop clusters through a centralized web interface."
+      "question_en": "Discuss API security threats and mitigation techniques.",
+      "question_ar": "ناقش تهديدات أمن واجهات البرمجة (API) وطرق الحماية منها.",
+      "answer": "Common API threats include:\n1. Injection attacks (SQL/command injection)\n2. Broken authentication (stolen tokens, weak sessions)\n3. Excessive data exposure\n4. Rate abuse / DoS attacks\n\nMitigation techniques include:\n- Strong authentication (OAuth2, API keys, JWT with proper validation)\n- Input validation and sanitization\n- Rate limiting and throttling\n- TLS encryption for data in transit\n- Proper access control checks on every endpoint"
+    },
+    {
+      "id": 24,
+      "question_en": "Explain multi-tenant isolation challenges.",
+      "question_ar": "اشرح تحديات العزل في الأنظمة متعددة المستأجرين (Multi-tenancy).",
+      "answer": "Multi-tenant systems share the same infrastructure among multiple customers. Challenges include:\n- Data isolation failures where one tenant can access another tenant’s data\n- Improper access control due to missing tenant_id enforcement\n- Shared resource contention affecting performance\n- Misconfigured APIs exposing cross-tenant information\nProper isolation requires strict logical separation, tenant-aware authorization, and secure database design."
+    },
+    {
+      "id": 25,
+      "question_en": "Describe importance of audit logging in IoT systems.",
+      "question_ar": "اشرح أهمية سجلات التدقيق (Audit Logging) في أنظمة إنترنت الأشياء.",
+      "answer": "Audit logging is critical in IoT systems because it provides traceability of actions and events. It helps detect security incidents, analyze failures, and support forensic investigations. Logs can reveal unauthorized access attempts, firmware update issues, and abnormal device behavior. Without audit logs, attacks may go unnoticed and root cause analysis becomes impossible."
+    },
+    {
+      "id": 26,
+      "question_en": "List what to monitor in IoT in three categories: device health, network anomalies, cloud anomalies (give 3 examples for each).",
+      "question_ar": "اذكر ما يجب مراقبته في أنظمة IoT ضمن ثلاث فئات: صحة الجهاز، شذوذ الشبكة، شذوذ السحابة (3 أمثلة لكل فئة).",
+      "answer": "Device health monitoring:\n1. Heartbeat / last-seen time\n2. Firmware version consistency\n3. Reboot frequency or crash loops\n\nNetwork anomaly monitoring:\n1. Unusual traffic spikes\n2. Repeated failed connection attempts\n3. Unexpected outbound connections\n\nCloud anomaly monitoring:\n1. Sudden increase in 401/403 authentication errors\n2. API rate limit violations or spikes\n3. Unexpected access to sensitive endpoints"
+    },
+    {
+      "id": 27,
+      "question_en": "Write the essential fields of a good security log entry and explain why 3 of them are important.",
+      "question_ar": "اكتب الحقول الأساسية لسجل أمني جيد واشرح أهمية 3 منها.",
+      "answer": "Essential log fields:\n- timestamp\n- event_type\n- device_id\n- user_id (if applicable)\n- result (success/failure)\n- severity\n- tenant_id (for multi-tenant systems)\n\nWhy three are important:\n1. timestamp: enables sequencing and forensic timeline reconstruction.\n2. device_id: identifies which device generated the event for tracing issues.\n3. event_type: categorizes the event (e.g., auth_failure, update_attempt) for filtering and detection."
+    },
+    {
+      "id": 28,
+      "question_en": "Explain the incident response lifecycle and give 3 containment actions for IoT.",
+      "question_ar": "اشرح دورة الاستجابة للحوادث واذكر 3 إجراءات احتواء في IoT.",
+      "answer": "Incident response lifecycle typically includes: detection, analysis, containment, eradication, recovery, and post-incident review.\n\nContainment actions in IoT:\n1. Revoking compromised device credentials\n2. Isolating affected devices from the network\n3. Blocking malicious IPs or disabling vulnerable services temporarily"
+    },
+    {
+      "id": 29,
+      "question_en": "Explain privacy principles (minimization, retention, transparency, control) with one example for each.",
+      "question_ar": "اشرح مبادئ الخصوصية (التقليل، الاحتفاظ، الشفافية، التحكم) مع مثال لكل منها.",
+      "answer": "Minimization: collect only necessary data. Example: collecting temperature instead of full audio streams.\nRetention: define how long data is stored. Example: deleting sensor logs after 30 days.\nTransparency: inform users about data usage. Example: showing what data the IoT device collects and why.\nControl: allow users to manage their data. Example: user can delete stored location history."
+    },
+    {
+      "id": 30,
+      "question_en": "Explain what SBOM means and why it helps vulnerability management.",
+      "question_ar": "اشرح معنى SBOM ولماذا يساعد في إدارة الثغرات الأمنية.",
+      "answer": "SBOM (Software Bill of Materials) is a structured list of all software components, libraries, and dependencies used in a system.\n\nIt helps vulnerability management by allowing teams to quickly identify which devices are affected when a vulnerability is discovered in a specific library, enabling faster patching and risk assessment across the entire fleet."
+    }
+  ],
+  "code_analysis": [
+    {
+      "id": 1,
+      "question_en": "What is the function of the following code? Explain in detail.",
+      "question_ar": "ما وظيفة الكود التالي؟ اشرح بالتفصيل.",
+      "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")",
+      "answer": "Calculates Risk Score (Likelihood × Impact) and outputs priority and action.",
+      "explanation": "Implements risk scoring logic with input validation and categorization (Low/Medium/High)."
+    },
+    {
+      "id": 2,
+      "question_en": "What is the function of this code, and what does it demonstrate?",
+      "question_ar": "ما وظيفة هذا الكود، وماذا يوضح؟",
+      "code": "import hashlib\nmsg1 = \"temperature=25\"\nmsg2 = \"temperature=26\"  # tiny change\nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()\nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256  :\", h1)\nprint()\nprint(\"Message 2:\", msg2)\nprint(\"SHA-256  :\", h2)\nprint()\nprint(\"Are hashes equal?\", h1 == h2)",
+      "answer": "Demonstrates hashing and avalanche effect using SHA-256.",
+      "explanation": "Shows that small input change → completely different hash (integrity property)."
+    },
+    {
+      "id": 3,
+      "question_en": "Read the following MQTT protocol code. What is its primary function?",
+      "question_ar": "اقرأ كود MQTT التالي. ما هي وظيفته الأساسية؟",
+      "code": "import paho.mqtt.client as mqtt\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\ndef on_connect(client, userdata, flags, rc):\n    print(\"Connected with result code:\", rc)\n    client.subscribe(TOPIC)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"viewer_subscriber\")\nclient.on_connect = on_connect\nclient.on_message = on_message\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()",
+      "answer": "MQTT Subscriber that listens to a topic and prints messages.",
+      "explanation": "Connects to broker, subscribes to topic, and handles incoming telemetry messages."
+    },
+    {
+      "id": 4,
+      "question_en": "Explain what this code does and how it applies secure-coding principles.",
+      "question_ar": "اشرح ما يفعله هذا الكود وكيف يطبق مبادئ البرمجة الآمنة.",
+      "code": "def apply_pwm(value: int):\n    print(\"PWM applied:\", value)\n\ndef get_safe_speed():\n    raw = input(\"Enter motor speed (0-255): \").strip()\n    speed = 0\n    try:\n        candidate = int(raw)\n        if 0 <= candidate <= 255:\n            speed = candidate\n        else:\n            print(\"Unsafe speed -> using safe default (0)\")\n    except ValueError:\n        print(\"Invalid input -> using safe default (0)\")\n    return speed\n\nspeed = get_safe_speed()\napply_pwm(speed)",
+      "answer": "Controls motor speed using safe input validation and default value.",
+      "explanation": "Applies Input Validation (range check) and Safe Default (fallback = 0)."
+    },
+    {
+      "id": 5,
+      "question_en": "What is the purpose of executing the following code, and what does it generate?",
+      "question_ar": "ما الهدف من تنفيذ هذا الكود، وماذا ينتج؟",
+      "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\",\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)",
+      "answer": "Generates and saves a Device Identity JSON file.",
+      "explanation": "Creates unique device ID (UUID) and stores identity metadata in JSON."
     }
   ],
   "code": [
     {
       "id": 1,
-      "task": "1. Load a dataset and display basic statistical summary (mean, median, std).",
-      "code": "import pandas as pd\n\n# Load dataset\ndf = pd.read_csv('data.csv')\n\n# Statistical summary\nsummary = df.describe()\nmedian = df.median(numeric_only=True)\n\nprint('Mean:\\n', df.mean(numeric_only=True))\nprint('Median:\\n', median)\nprint('Std:\\n', df.std(numeric_only=True))"
+      "task": "Read a file in chunks of 4096 bytes and update SHA-256 hash to avoid memory overload.",
+      "code": "chunk = f.read(4096)\nif not chunk:\n    break\nsha.update(chunk)"
     },
     {
       "id": 2,
-      "task": "2. Create a histogram to visualize the distribution of a numeric column.",
-      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\n\ndf['value'].hist(bins=30)\nplt.title('Histogram')\nplt.xlabel('Value')\nplt.ylabel('Frequency')\nplt.show()"
+      "task": "Generate an HMAC tag using a shared key and SHA-256, then convert to hex.",
+      "code": "tag = hmac.new(key, message, hashlib.sha256).hexdigest()"
     },
     {
       "id": 3,
-      "task": "3. Generate a box plot to detect outliers in a dataset.",
-      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\n\nplt.boxplot(df['value'].dropna())\nplt.title('Box Plot')\nplt.show()"
+      "task": "Convert dictionary data to JSON string and publish it to an MQTT topic.",
+      "code": "payload = json.dumps(data)\nclient.publish(TOPIC, payload)"
     },
     {
       "id": 4,
-      "task": "4. Create a correlation matrix and visualize it.",
-      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\n\nimport numpy as np\n\ndf = pd.read_csv('data.csv')\n\ncorr = df.corr(numeric_only=True)\nprint(corr)\n\nplt.imshow(corr, cmap='coolwarm')\nplt.colorbar()\nplt.title('Correlation Matrix')\nplt.show()"
+      "task": "Add authentication to MQTT client using USERNAME and PASSWORD.",
+      "code": "client.username_pw_set(USERNAME, PASSWORD)"
     },
     {
       "id": 5,
-      "task": "Create a scatter matrix plot for multivariate analysis.",
-      "code": "import pandas as pd\nfrom pandas.plotting import scatter_matrix\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\n\nscatter_matrix(df.select_dtypes(include='number'), figsize=(10, 10))\nplt.show()"
+      "task": "Enable TLS for MQTT client with certificates and enforce secure verification.",
+      "code": "client.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\nclient.tls_insecure_set(False)"
     },
     {
       "id": 6,
-      "task": "1. Simulate batch processing by reading a CSV file and computing total sales.",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('sales.csv')\n\ntotal_sales = df['sales'].sum()\nprint('Total Sales:', total_sales)"
+      "task": "Sort a list of dictionaries (threats) descending by 'score'.",
+      "code": "threats.sort(key=lambda x: x[\"score\"], reverse=True)"
     },
     {
       "id": 7,
-      "task": "2. Implement ELT (Load first, then transform by filtering high values).",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\ntransformed = df[df['value'] > 100]\ntransformed.to_csv('filtered_data.csv', index=False)"
+      "task": "Load JSON config safely, and return SAFE_DEFAULTS if error occurs.",
+      "code": "try:\n    with open(path, \"r\", encoding=\"utf-8\") as f:\n        cfg = json.load(f)\nexcept Exception:\n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")\n    return SAFE_DEFAULTS.copy()"
     },
     {
       "id": 8,
-      "task": "3. Implement synchronous replication simulation (copy data and confirm replication).",
-      "code": "import shutil\n\nsource = 'data.csv'\ndestination = 'replica.csv'\n\nshutil.copy(source, destination)\n\nprint('Replication successful')"
+      "task": "Secure OTA update simulation: verify rollback protection, hash integrity, HMAC authenticity, then install firmware if all checks pass.",
+      "code": "import os\nimport json\nimport shutil\nimport hashlib\nimport hmac\n\nSHARED_KEY = b\"lab_shared_secret\"\n\nSERVER_DIR = \"server_files\"\nDEVICE_DIR = \"device_files\"\n\ndef read_file(path, mode=\"rb\"):\n    with open(path, mode) as f:\n        return f.read()\n\n\ndef sha256(data: bytes) -> str:\n    return hashlib.sha256(data).hexdigest()\n\n\ndef hmac_sha256(data: bytes, key: bytes) -> str:\n    return hmac.new(key, data, hashlib.sha256).hexdigest()\n\n\ndef load_current_version():\n    path = os.path.join(DEVICE_DIR, \"installed_version.txt\")\n    try:\n        return int(read_file(path, \"r\").strip())\n    except Exception:\n        return 0\n\n\ndef secure_ota_update():\n    try:\n        firmware = read_file(os.path.join(SERVER_DIR, \"firmware.bin\"), \"rb\")\n        metadata = json.loads(read_file(os.path.join(SERVER_DIR, \"metadata.json\"), \"r\"))\n        signature = read_file(os.path.join(SERVER_DIR, \"firmware.sig\"), \"r\").strip()\n    except Exception:\n        print(\"SERVER_FILES_MISSING\")\n        return\n\n    os.makedirs(DEVICE_DIR, exist_ok=True)\n    os.makedirs(os.path.join(DEVICE_DIR, \"installed\"), exist_ok=True)\n\n    shutil.copy(os.path.join(SERVER_DIR, \"firmware.bin\"), DEVICE_DIR)\n    shutil.copy(os.path.join(SERVER_DIR, \"metadata.json\"), DEVICE_DIR)\n    shutil.copy(os.path.join(SERVER_DIR, \"firmware.sig\"), DEVICE_DIR)\n\n    current_version = load_current_version()\n    new_version = metadata.get(\"version\", 0)\n\n    if new_version <= current_version:\n        print(\"ROLLBACK_BLOCKED\")\n        return\n\n    expected_hash = metadata.get(\"sha256\")\n    if sha256(firmware) != expected_hash:\n        print(\"HASH_MISMATCH\")\n        return\n\n    data_for_hmac = firmware + str(new_version).encode()\n    expected_sig = hmac_sha256(data_for_hmac, SHARED_KEY)\n\n    if signature != expected_sig:\n        print(\"BAD_SIGNATURE\")\n        return\n\n    install_path = os.path.join(DEVICE_DIR, \"installed\", \"firmware.bin\")\n    with open(install_path, \"wb\") as f:\n        f.write(firmware)\n\n    with open(os.path.join(DEVICE_DIR, \"installed_version.txt\"), \"w\") as f:\n        f.write(str(new_version))\n\n    print(\"INSTALLED SUCCESSFULLY\")\n\n\nsecure_ota_update()"
     },
     {
       "id": 9,
-      "task": "4. Implement autoscaling simulation based on CPU usage threshold.",
-      "code": "cpu_usage = 75\nthreshold = 70\n\nif cpu_usage > threshold:\n    print('Scaling up resources')\nelse:\n    print('System stable')"
+      "task": "Secure motor speed control with input validation, safe defaults, and no secrets/debug exposure.",
+      "code": "def apply_pwm(value: int):\n    # In real firmware, this would write to a hardware register.\n    print(\"PWM applied:\", value)\n\n\ndef get_safe_speed():\n    raw = input(\"Enter motor speed (0-255): \").strip()\n\n    # Safe default\n    speed = 0\n\n    # Validate input\n    try:\n        candidate = int(raw)\n        if 0 <= candidate <= 255:\n            speed = candidate\n        else:\n            print(\"Unsafe speed -> using safe default (0)\")\n    except ValueError:\n        print(\"Invalid input -> using safe default (0)\")\n\n    return speed\n\n\nspeed = get_safe_speed()\napply_pwm(speed)"
     },
     {
       "id": 10,
-      "task": "1. Write a program that reads a large dataset (e.g., text file) and counts the number of words (simulating Volume processing).",
-      "code": "from collections import Counter\n\nwith open('large.txt', 'r') as f:\n    text = f.read()\n\nword_count = len(text.split())\nprint('Word Count:', word_count)"
+      "task": "Log parser that counts AUTH_FAILURE per device and triggers alert if threshold is exceeded.",
+      "code": "import json\nfrom collections import defaultdict\n\nTHRESHOLD = 5\n\n\ndef parse_logs(log_file):\n    failure_count = defaultdict(int)\n\n    with open(log_file, \"r\", encoding=\"utf-8\") as f:\n        for line in f:\n            try:\n                log = json.loads(line)\n            except Exception:\n                continue\n\n            if log.get(\"event_type\") == \"AUTH_FAILURE\":\n                device_id = log.get(\"device_id\", \"unknown\")\n                failure_count[device_id] += 1\n\n    for device_id, count in failure_count.items():\n        print(f\"Device: {device_id} -> AUTH_FAILUREs: {count}\")\n        if count > THRESHOLD:\n            print(f\"ALERT: Possible brute force attack on {device_id}\")\n\n\n# Example usage\n# parse_logs(\"logs.jsonl\")"
     },
     {
       "id": 11,
-      "task": "2. Write a program that simulates real-time data streaming (Velocity) by generating random data every second and printing it.",
-      "code": "import random\nimport time\n\nfor _ in range(5):\n    data = random.randint(1, 100)\n    print('Stream:', data)\n    time.sleep(1)"
+      "task": "Device health dashboard printing table with device_id, last_seen, firmware version, update status, and auth failure count.",
+      "code": "def print_dashboard(devices):\n    print(\"{:<15} {:<20} {:<10} {:<15} {:<10}\".format(\n        \"device_id\", \"last_seen\", \"firmware\", \"update_status\", \"auth_failures\"\n    ))\n    print(\"-\" * 75)\n\n    for d in devices:\n        print(\"{:<15} {:<20} {:<10} {:<15} {:<10}\".format(\n            d.get(\"device_id\", \"N/A\"),\n            d.get(\"last_seen\", \"N/A\"),\n            d.get(\"firmware_version\", \"N/A\"),\n            d.get(\"update_status\", \"N/A\"),\n            d.get(\"auth_failure_count\", 0)\n        ))\n\n\n# Example usage:\n# devices = [\n#     {\"device_id\": \"dev1\", \"last_seen\": \"10:00\", \"firmware_version\": \"1.0\", \"update_status\": \"OK\", \"auth_failure_count\": 2}\n# ]\n# print_dashboard(devices)"
     },
     {
       "id": 12,
-      "task": "3. Write a program that reads different data types (text, numbers, and images file path names) and categorizes them (Variety simulation).",
-      "code": "data = ['file.txt', 123, 'image.png', 45.6]\n\ncategories = {'text': [], 'number': [], 'image': []}\n\nfor item in data:\n    if isinstance(item, str) and item.endswith('.png'):\n        categories['image'].append(item)\n    elif isinstance(item, str):\n        categories['text'].append(item)\n    else:\n        categories['number'].append(item)\n\nprint(categories)"
-    },
-    {
-      "id": 13,
-      "task": "4. Write a program that removes duplicate records from a dataset (Veracity improvement).",
-      "code": "data = [1, 2, 2, 3, 4, 4, 5]\n\ncleaned = list(set(data))\nprint('Cleaned Data:', cleaned)"
-    },
-    {
-      "id": 14,
-      "task": "5. Write a program that calculates the average sales from a dataset and prints a summary report (Value extraction).",
-      "code": "sales = [100, 200, 300, 400]\navg_sales = sum(sales) / len(sales)\n\nprint('Average Sales:', avg_sales)"
-    },
-    {
-      "id": 15,
-      "task": "1. Write a Python program that simulates data ingestion from multiple sources (e.g., logs and IoT sensors) and stores them into a single dataset.",
-      "code": "logs = ['log1', 'log2']\niot = [10, 20, 30]\n\ncombined = []\n\ndef ingest(source):\n    for item in source:\n        combined.append(item)\n\ningest(logs)\ningest(iot)\n\nprint(combined)"
-    },
-    {
-      "id": 16,
-      "task": "2. Write a Python program that performs ETL: \n o Extract data from a CSV file \n o Transform it (clean null values) \n o Load it into a new CSV file.",
-      "code": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\ndf = df.dropna()\n\ndf.to_csv('clean_data.csv', index=False)"
-    },
-    {
-      "id": 17,
-      "task": "3. Write a Python program that partitions a dataset into two shards based on a key (e.g., even/odd IDs).",
-      "code": "import pandas as pd\n\ndf = pd.DataFrame({'id': [1,2,3,4,5]})\n\neven = df[df['id'] % 2 == 0]\nodd = df[df['id'] % 2 != 0]\n\nprint(even)\nprint(odd)"
-    },
-    {
-      "id": 18,
-      "task": "4. Write a Python program that monitors a dataset and prints a warning if a value exceeds a given threshold (simulating system monitoring).",
-      "code": "data = [10, 50, 120, 30]\nthreshold = 100\n\nfor v in data:\n    if v > threshold:\n        print('Warning:', v)"
-    },
-    {
-      "id": 19,
-      "task": "1. Simulate distributed storage by splitting a dataset into multiple files (HDFS style block simulation).",
-      "code": "data = list(range(100))\nchunk_size = 20\n\nfor i in range(0, len(data), chunk_size):\n    with open(f'block_{i//chunk_size}.txt', 'w') as f:\n        f.write(str(data[i:i+chunk_size]))"
-    },
-    {
-      "id": 20,
-      "task": "2. Simulate MapReduce word count using Python (map phase + reduce phase).",
-      "code": "text = 'map reduce map example text map'\n\nwords = text.split()\n\nmapped = [(w, 1) for w in words]\n\nreduced = {}\nfor w, c in mapped:\n    reduced[w] = reduced.get(w, 0) + c\n\nprint(reduced)"
-    },
-    {
-      "id": 21,
-      "task": "3. Simulate Spark-like in-memory processing by loading a dataset and performing aggregation.",
-      "code": "data = [10, 20, 30, 40]\n\nresult = sum(data)\nprint('Aggregation Result:', result)"
-    },
-    {
-      "id": 22,
-      "task": "4. Write a program that stores structured and unstructured data in separate categories (simulating Hadoop flexibility).",
-      "code": "data = [{'id': 1, 'value': 10}, 'raw_text', {'id': 2, 'value': 20}, 'log entry']\n\nstructured = []\nunstructured = []\n\nfor item in data:\n    if isinstance(item, dict):\n        structured.append(item)\n    else:\n        unstructured.append(item)\n\nprint(structured)\nprint(unstructured)"
-    },
-    {
-      "id": 23,
-      "task": "5. Write a program that simulates fault tolerance by creating data replicas.",
-      "code": "data = ['A', 'B', 'C']\nreplicas = {i: data[:] for i in range(3)}\n\nprint(replicas)"
-    }
-  ],
-  "fill_in_the_blank": [
-    {
-      "id": 1,
-      "question": "The continuous generation of massive real-time data from ________ devices is a primary driver of the data explosion.",
-      "answer": "IoT"
-    },
-    {
-      "id": 2,
-      "question": "In the context of the Big Data 'Vs', the term ________ refers specifically to the amount or scale of the data.",
-      "answer": "Volume"
-    },
-    {
-      "id": 3,
-      "question": "The ________ layer is responsible for collecting and importing data into the system from various sources.",
-      "answer": "Ingestion"
-    },
-    {
-      "id": 4,
-      "question": "Social media images are classified as ________ data because they do not follow a predefined schema.",
-      "answer": "unstructured"
-    },
-    {
-      "id": 5,
-      "question": "Unlike modern distributed systems, traditional systems are typically built on ________ architecture.",
-      "answer": "single-server"
-    },
-    {
-      "id": 6,
-      "question": "In Big Data, the term ________ refers to the speed at which data is generated and processed.",
-      "answer": "Velocity"
-    },
-    {
-      "id": 7,
-      "question": "The ________ industry uses Big Data analytics extensively to detect fraudulent activities.",
-      "answer": "finance"
-    },
-    {
-      "id": 8,
-      "question": "________ is the 'V' that refers to the accuracy and reliability of the data.",
-      "answer": "Veracity"
-    },
-    {
-      "id": 9,
-      "question": "By spreading workloads across multiple nodes, ________ computing significantly improves system scalability.",
-      "answer": "distributed"
-    },
-    {
-      "id": 10,
-      "question": "Data security is considered a major challenge in Big Data due to the large and sensitive nature of the ________.",
-      "answer": "datasets"
-    },
-    {
-      "id": 11,
-      "question": "Hadoop uses ________ as its primary distributed storage system.",
-      "answer": "HDFS"
-    },
-    {
-      "id": 12,
-      "question": "________ is a popular tool widely used for real-time data streaming and ingestion.",
-      "answer": "Apache Kafka"
-    },
-    {
-      "id": 13,
-      "question": "In the ________ process, data is loaded into the system first and then transformed, unlike the traditional ETL process.",
-      "answer": "ELT"
-    },
-    {
-      "id": 14,
-      "question": "The ________ layer in a Big Data architecture is where machine learning models are typically developed.",
-      "answer": "analytics"
-    },
-    {
-      "id": 15,
-      "question": "________ is a NoSQL database that is document-oriented and used for flexible data storage.",
-      "answer": "MongoDB"
-    },
-    {
-      "id": 16,
-      "question": "To distribute data across multiple nodes, the ________ technique utilizes partition keys.",
-      "answer": "Sharding"
-    },
-    {
-      "id": 17,
-      "question": "________ replication ensures that data is written to all replicas before a success acknowledgment is sent.",
-      "answer": "Synchronous"
-    },
-    {
-      "id": 18,
-      "question": "A ________ is a storage repository that can hold structured, semi-structured, and unstructured data.",
-      "answer": "Data Lake"
-    },
-    {
-      "id": 19,
-      "question": "The primary goal of ________ is to explore and understand data patterns, often using histograms.",
-      "answer": "EDA"
-    },
-    {
-      "id": 20,
-      "question": "________ is an open-source tool commonly used for monitoring system metrics and performance.",
-      "answer": "Prometheus"
-    },
-    {
-      "id": 21,
-      "question": "________ Statistics summarizes observations from data.",
-      "answer": "Descriptive"
-    },
-    {
-      "id": 22,
-      "question": "________ Statistics uses samples to make predictions.",
-      "answer": "Inferential"
-    },
-    {
-      "id": 23,
-      "question": "The ________ is the average value.",
-      "answer": "Mean"
-    },
-    {
-      "id": 24,
-      "question": "The ________ is the most common value.",
-      "answer": "Mode"
-    },
-    {
-      "id": 25,
-      "question": "The ________ is the middle value.",
-      "answer": "Median"
-    },
-    {
-      "id": 26,
-      "question": "________ are values outside the normal pattern.",
-      "answer": "Outliers"
-    },
-    {
-      "id": 27,
-      "question": "________ measures spread around mean.",
-      "answer": "Standard Deviation"
-    },
-    {
-      "id": 28,
-      "question": "________ measures asymmetry.",
-      "answer": "Skewness"
-    },
-    {
-      "id": 29,
-      "question": "________ measures tail heaviness.",
-      "answer": "Kurtosis"
-    },
-    {
-      "id": 30,
-      "question": "________ equals max − min.",
-      "answer": "Range"
+      "task": "Privacy checklist script that flags sensitive data collection, missing retention period, and missing access control statement.",
+      "code": "def privacy_check(config):\n    issues = []\n\n    sensitive_fields = {\"location\", \"video\", \"audio\"}\n\n    collected = set(config.get(\"collected_data\", []))\n    missing_sensitive = collected.intersection(sensitive_fields)\n\n    if missing_sensitive:\n        issues.append(f\"Sensitive data collected: {missing_sensitive}\")\n\n    if \"retention_days\" not in config:\n        issues.append(\"Missing retention period\")\n\n    if not config.get(\"access_control_defined\", False):\n        issues.append(\"Missing access control statement\")\n\n    if not issues:\n        print(\"Privacy check passed\")\n    else:\n        print(\"Privacy issues detected:\")\n        for i in issues:\n            print(\"-\", i)\n\n\n# Example usage:\n# config = {\n#     \"collected_data\": [\"temperature\", \"location\"],\n#     \"access_control_defined\": False\n# }\n# privacy_check(config)"
     }
   ]
 }
