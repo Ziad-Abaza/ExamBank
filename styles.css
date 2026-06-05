@@ -4000,3 +4000,75 @@ html[dir="rtl"] .keyword-highlight {
   gap: 8px !important;
 }
 
+/* ===== ADVANCED ROBOTICS UNIFIED PAGE & COLLAPSIBLE SECTIONS ===== */
+.ar-sub-section {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.ar-sub-section:hover {
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.05), 0 4px 6px -2px rgba(99, 102, 241, 0.03);
+  border-color: var(--color-accent);
+}
+
+.ar-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-primary);
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ar-section-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ar-section-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.ar-collapse-icon {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+  color: var(--color-text-secondary);
+}
+
+.ar-sub-section.collapsed .ar-collapse-icon {
+  transform: rotate(-90deg);
+}
+
+body.rtl .ar-sub-section.collapsed .ar-collapse-icon {
+  transform: rotate(90deg);
+}
+
+.ar-sub-section.collapsed .ar-section-header {
+  border-bottom-color: transparent;
+}
+
+.ar-sub-section-content {
+  padding: 1.5rem;
+}
+
+.ar-sub-section.collapsed .ar-sub-section-content {
+  display: none;
+}
+
+.ar-section-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+

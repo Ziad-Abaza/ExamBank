@@ -152,28 +152,13 @@
       <span class="tab-label" data-en="Fill in the Blank" data-ar="املأ الفراغ">Fill in the Blank</span>
       <span class="tab-count" id="fibCount">0</span>
     </button>
-    <button class="nav-tab" data-category="visual_identify">
+    <button class="nav-tab" data-category="advanced_robotics">
       <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-        <polyline points="21 15 16 10 5 21"/>
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 3v18M3 12h18"/>
       </svg>
-      <span class="tab-label" data-en="Visual" data-ar="بصري">Visual</span>
-      <span class="tab-count" id="viCount">0</span>
-    </button>
-    <button class="nav-tab" data-category="matrix_written">
-      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-        <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
-      </svg>
-      <span class="tab-label" data-en="Matrix" data-ar="مصفوفات">Matrix</span>
-      <span class="tab-count" id="mwCount">0</span>
-    </button>
-    <button class="nav-tab" data-category="diagram_label">
-      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>
-      <span class="tab-label" data-en="Diagram" data-ar="مخططات">Diagram</span>
-      <span class="tab-count" id="dlCount">0</span>
+      <span class="tab-label" data-en="Advanced Robotics" data-ar="الروبوتات المتقدمة">Advanced Robotics</span>
+      <span class="tab-count" id="arCount">0</span>
     </button>
   </nav>
 
@@ -308,40 +293,9 @@
       <div class="questions-container" id="fibQuestions"></div>
     </section>
 
-    <!-- Visual Identify Section -->
-    <section class="question-section hidden" id="visualIdentifySection">
-      <div class="section-header">
-        <h2 class="section-title" data-en="Visual Identification Questions" data-ar="أسئلة التعرف البصري">Visual Identification Questions</h2>
-        <div class="section-controls">
-          <button class="btn btn-secondary" id="viShuffleBtn" data-en="Shuffle" data-ar="خلط">Shuffle</button>
-          <button class="btn btn-secondary" id="viResetBtn" data-en="Reset" data-ar="إعادة تعيين">Reset</button>
-        </div>
-      </div>
-      <div class="questions-container" id="viQuestions"></div>
-    </section>
-
-    <!-- Matrix Written Section -->
-    <section class="question-section hidden" id="matrixWrittenSection">
-      <div class="section-header">
-        <h2 class="section-title" data-en="Matrix & Equation Questions" data-ar="أسئلة المصفوفات والمعادلات">Matrix & Equation Questions</h2>
-        <div class="section-controls">
-          <button class="btn btn-secondary" id="mwShuffleBtn" data-en="Shuffle" data-ar="خلط">Shuffle</button>
-          <button class="btn btn-secondary" id="mwResetBtn" data-en="Reset" data-ar="إعادة تعيين">Reset</button>
-        </div>
-      </div>
-      <div class="questions-container" id="mwQuestions"></div>
-    </section>
-
-    <!-- Diagram Label Section -->
-    <section class="question-section hidden" id="diagramLabelSection">
-      <div class="section-header">
-        <h2 class="section-title" data-en="Diagram & Drawing Questions" data-ar="أسئلة الرسم والمخططات">Diagram & Drawing Questions</h2>
-        <div class="section-controls">
-          <button class="btn btn-secondary" id="dlShuffleBtn" data-en="Shuffle" data-ar="خلط">Shuffle</button>
-          <button class="btn btn-secondary" id="dlResetBtn" data-en="Reset" data-ar="إعادة تعيين">Reset</button>
-        </div>
-      </div>
-      <div class="questions-container" id="dlQuestions"></div>
+    <!-- Advanced Robotics Section -->
+    <section class="question-section hidden" id="advancedRoboticsSection">
+      <div id="advancedRoboticsContainer" class="advanced-robotics-container"></div>
     </section>
   </main>
 
@@ -432,43 +386,17 @@
               <p class="card-stats"><span id="fibAnswered">0</span> / <span id="fibTotal">0</span></p>
             </div>
           </div>
-          <div class="dashboard-card" id="dashboardCardVI">
-            <h4 class="card-title" data-en="Visual" data-ar="بصري">Visual</h4>
+          <div class="dashboard-card" id="dashboardCardAR">
+            <h4 class="card-title" data-en="Advanced Robotics" data-ar="الروبوتات المتقدمة">Advanced Robotics</h4>
             <div class="card-progress">
               <div class="progress-ring">
                 <svg viewBox="0 0 36 36">
                   <path class="progress-ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  <path class="progress-ring-fill" id="viRing" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="progress-ring-fill" id="arRing" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                 </svg>
-                <span class="ring-text" id="viRingText">0%</span>
+                <span class="ring-text" id="arRingText">0%</span>
               </div>
-              <p class="card-stats"><span id="viAnswered">0</span> / <span id="viTotal">0</span></p>
-            </div>
-          </div>
-          <div class="dashboard-card" id="dashboardCardMW">
-            <h4 class="card-title" data-en="Matrix" data-ar="مصفوفات">Matrix</h4>
-            <div class="card-progress">
-              <div class="progress-ring">
-                <svg viewBox="0 0 36 36">
-                  <path class="progress-ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  <path class="progress-ring-fill" id="mwRing" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                </svg>
-                <span class="ring-text" id="mwRingText">0%</span>
-              </div>
-              <p class="card-stats"><span id="mwAnswered">0</span> / <span id="mwTotal">0</span></p>
-            </div>
-          </div>
-          <div class="dashboard-card" id="dashboardCardDL">
-            <h4 class="card-title" data-en="Diagram" data-ar="مخططات">Diagram</h4>
-            <div class="card-progress">
-              <div class="progress-ring">
-                <svg viewBox="0 0 36 36">
-                  <path class="progress-ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  <path class="progress-ring-fill" id="dlRing" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                </svg>
-                <span class="ring-text" id="dlRingText">0%</span>
-              </div>
-              <p class="card-stats"><span id="dlAnswered">0</span> / <span id="dlTotal">0</span></p>
+              <p class="card-stats"><span id="arAnswered">0</span> / <span id="arTotal">0</span></p>
             </div>
           </div>
         </div>

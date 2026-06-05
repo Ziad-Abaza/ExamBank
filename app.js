@@ -794,13 +794,27 @@ const ProgressManager = (() => {
 
     const categories = [
       'true_false', 'mcq', 'short_answer', 'code', 'code_analysis', 'fill_in_the_blank',
-      'visual_identify', 'matrix_written', 'diagram_label'
+      'advanced_robotics'
     ];
 
     categories.forEach(cat => {
-      const questions = state.questions[cat] || [];
-      const progress = AppState.getProgress(cat);
-      const answered = Object.keys(progress).length;
+      let questions = [];
+      let answered = 0;
+
+      if (cat === 'advanced_robotics') {
+        questions = [
+          ...(state.questions.visual_identify || []),
+          ...(state.questions.matrix_written || []),
+          ...(state.questions.diagram_label || [])
+        ];
+        answered = Object.keys(AppState.getProgress('visual_identify')).length +
+                   Object.keys(AppState.getProgress('matrix_written')).length +
+                   Object.keys(AppState.getProgress('diagram_label')).length;
+      } else {
+        questions = state.questions[cat] || [];
+        const progress = AppState.getProgress(cat);
+        answered = Object.keys(progress).length;
+      }
 
       // Update dashboard rings (only if category has questions)
       if (questions.length > 0) {
@@ -809,9 +823,7 @@ const ProgressManager = (() => {
                        cat === 'short_answer' ? 'sa' :
                        cat === 'code' ? 'code' :
                        cat === 'code_analysis' ? 'ca' :
-                       cat === 'fill_in_the_blank' ? 'fib' :
-                       cat === 'visual_identify' ? 'vi' :
-                       cat === 'matrix_written' ? 'mw' : 'dl';
+                       cat === 'fill_in_the_blank' ? 'fib' : 'ar';
         const ringEl = document.getElementById(`${ringId}Ring`);
         const ringTextEl = document.getElementById(`${ringId}RingText`);
         const answeredEl = document.getElementById(`${ringId}Answered`);
@@ -1387,6 +1399,50 @@ const VisualIdentifyModule = (() => {
   const render = (questions) => {
     verifyImages(questions);
 
+    const parentContainer = document.getElementById('advancedRoboticsContainer');
+    if (!parentContainer) return;
+
+    let subSection = document.getElementById('viSubSection');
+    if (!subSection) {
+      subSection = document.createElement('div');
+      subSection.className = 'ar-sub-section';
+      subSection.id = 'viSubSection';
+
+      subSection.innerHTML = `
+        <div class="ar-section-header" id="viHeader">
+          <div class="ar-section-header-left">
+            <span class="ar-collapse-icon">▼</span>
+            <h2 class="ar-section-title" data-en="Visual Identification" data-ar="التعرف البصري">Visual Identification</h2>
+          </div>
+          <div class="ar-section-controls">
+            <button class="btn btn-secondary" id="viShuffleBtn" data-en="Shuffle" data-ar="خلط">Shuffle</button>
+            <button class="btn btn-secondary" id="viResetBtn" data-en="Reset" data-ar="إعادة تعيين">Reset</button>
+          </div>
+        </div>
+        <div class="ar-sub-section-content">
+          <div class="questions-container" id="viQuestions"></div>
+        </div>
+      `;
+
+      parentContainer.appendChild(subSection);
+
+      // Bind header collapse toggler
+      subSection.querySelector('.ar-section-header').addEventListener('click', (e) => {
+        if (e.target.closest('.ar-section-controls')) return;
+        subSection.classList.toggle('collapsed');
+      });
+
+      // Bind controls
+      subSection.querySelector('#viShuffleBtn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        VisualIdentifyModule.shuffle();
+      });
+      subSection.querySelector('#viResetBtn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        VisualIdentifyModule.reset();
+      });
+    }
+
     const container = document.getElementById('viQuestions');
     container.innerHTML = '';
     const state = AppState.get();
@@ -1508,7 +1564,9 @@ const VisualIdentifyModule = (() => {
 
   const shuffle = () => {
     const container = document.getElementById('viQuestions');
-    Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+    if (container) {
+      Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+    }
   };
 
   return { render, reset, shuffle };
@@ -1535,6 +1593,50 @@ const MatrixWrittenModule = (() => {
   };
 
   const render = (questions) => {
+    const parentContainer = document.getElementById('advancedRoboticsContainer');
+    if (!parentContainer) return;
+
+    let subSection = document.getElementById('mwSubSection');
+    if (!subSection) {
+      subSection = document.createElement('div');
+      subSection.className = 'ar-sub-section';
+      subSection.id = 'mwSubSection';
+
+      subSection.innerHTML = `
+        <div class="ar-section-header" id="mwHeader">
+          <div class="ar-section-header-left">
+            <span class="ar-collapse-icon">▼</span>
+            <h2 class="ar-section-title" data-en="Matrix & Equation Questions" data-ar="أسئلة المصفوفات والمعادلات">Matrix & Equation Questions</h2>
+          </div>
+          <div class="ar-section-controls">
+            <button class="btn btn-secondary" id="mwShuffleBtn" data-en="Shuffle" data-ar="خلط">Shuffle</button>
+            <button class="btn btn-secondary" id="mwResetBtn" data-en="Reset" data-ar="إعادة تعيين">Reset</button>
+          </div>
+        </div>
+        <div class="ar-sub-section-content">
+          <div class="questions-container" id="mwQuestions"></div>
+        </div>
+      `;
+
+      parentContainer.appendChild(subSection);
+
+      // Bind header collapse toggler
+      subSection.querySelector('.ar-section-header').addEventListener('click', (e) => {
+        if (e.target.closest('.ar-section-controls')) return;
+        subSection.classList.toggle('collapsed');
+      });
+
+      // Bind controls
+      subSection.querySelector('#mwShuffleBtn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        MatrixWrittenModule.shuffle();
+      });
+      subSection.querySelector('#mwResetBtn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        MatrixWrittenModule.reset();
+      });
+    }
+
     const container = document.getElementById('mwQuestions');
     container.innerHTML = '';
     const state = AppState.get();
@@ -1615,7 +1717,9 @@ const MatrixWrittenModule = (() => {
 
   const shuffle = () => {
     const container = document.getElementById('mwQuestions');
-    Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+    if (container) {
+      Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+    }
   };
 
   return { render, reset, shuffle };
@@ -1623,6 +1727,50 @@ const MatrixWrittenModule = (() => {
 
 const DiagramLabelModule = (() => {
   const render = (questions) => {
+    const parentContainer = document.getElementById('advancedRoboticsContainer');
+    if (!parentContainer) return;
+
+    let subSection = document.getElementById('dlSubSection');
+    if (!subSection) {
+      subSection = document.createElement('div');
+      subSection.className = 'ar-sub-section';
+      subSection.id = 'dlSubSection';
+
+      subSection.innerHTML = `
+        <div class="ar-section-header" id="dlHeader">
+          <div class="ar-section-header-left">
+            <span class="ar-collapse-icon">▼</span>
+            <h2 class="ar-section-title" data-en="Diagram & Drawing Questions" data-ar="أسئلة الرسم والمخططات">Diagram & Drawing Questions</h2>
+          </div>
+          <div class="ar-section-controls">
+            <button class="btn btn-secondary" id="dlShuffleBtn" data-en="Shuffle" data-ar="خلط">Shuffle</button>
+            <button class="btn btn-secondary" id="dlResetBtn" data-en="Reset" data-ar="إعادة تعيين">Reset</button>
+          </div>
+        </div>
+        <div class="ar-sub-section-content">
+          <div class="questions-container" id="dlQuestions"></div>
+        </div>
+      `;
+
+      parentContainer.appendChild(subSection);
+
+      // Bind header collapse toggler
+      subSection.querySelector('.ar-section-header').addEventListener('click', (e) => {
+        if (e.target.closest('.ar-section-controls')) return;
+        subSection.classList.toggle('collapsed');
+      });
+
+      // Bind controls
+      subSection.querySelector('#dlShuffleBtn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        DiagramLabelModule.shuffle();
+      });
+      subSection.querySelector('#dlResetBtn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        DiagramLabelModule.reset();
+      });
+    }
+
     const container = document.getElementById('dlQuestions');
     container.innerHTML = '';
     const state = AppState.get();
@@ -1699,7 +1847,9 @@ const DiagramLabelModule = (() => {
 
   const shuffle = () => {
     const container = document.getElementById('dlQuestions');
-    Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+    if (container) {
+      Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+    }
   };
 
   return { render, reset, shuffle };
@@ -2856,7 +3006,15 @@ const NavigationManager = (() => {
     const state = AppState.get();
     
     // Don't switch to a category with no questions
-    if (!state.questions[category] || state.questions[category].length === 0) {
+    let questions = state.questions[category];
+    if (category === 'advanced_robotics') {
+      questions = [
+        ...(state.questions.visual_identify || []),
+        ...(state.questions.matrix_written || []),
+        ...(state.questions.diagram_label || [])
+      ];
+    }
+    if (!questions || questions.length === 0) {
       console.warn(`[NavigationManager] Cannot switch to empty category: ${category}`);
       return;
     }
@@ -2881,9 +3039,7 @@ const NavigationManager = (() => {
       code: 'codeSection',
       code_analysis: 'codeAnalysisSection',
       fill_in_the_blank: 'fibSection',
-      visual_identify: 'visualIdentifySection',
-      matrix_written: 'matrixWrittenSection',
-      diagram_label: 'diagramLabelSection'
+      advanced_robotics: 'advancedRoboticsSection'
     };
 
     const sectionId = sectionMap[category];
@@ -2894,7 +3050,14 @@ const NavigationManager = (() => {
 
   const renderCategory = (category) => {
     const state = AppState.get();
-    const questions = state.questions[category];
+    let questions = state.questions[category];
+    if (category === 'advanced_robotics') {
+      questions = [
+        ...(state.questions.visual_identify || []),
+        ...(state.questions.matrix_written || []),
+        ...(state.questions.diagram_label || [])
+      ];
+    }
 
     // Don't render if no questions exist for this category
     if (!questions || questions.length === 0) {
@@ -2921,14 +3084,12 @@ const NavigationManager = (() => {
       case 'fill_in_the_blank':
         FillInTheBlankModule.render(questions);
         break;
-      case 'visual_identify':
-        VisualIdentifyModule.render(questions);
-        break;
-      case 'matrix_written':
-        MatrixWrittenModule.render(questions);
-        break;
-      case 'diagram_label':
-        DiagramLabelModule.render(questions);
+      case 'advanced_robotics':
+        const arContainer = document.getElementById('advancedRoboticsContainer');
+        if (arContainer) arContainer.innerHTML = '';
+        VisualIdentifyModule.render(state.questions.visual_identify);
+        MatrixWrittenModule.render(state.questions.matrix_written);
+        DiagramLabelModule.render(state.questions.diagram_label);
         break;
     }
 
@@ -3140,30 +3301,27 @@ const App = (() => {
         dashboardCardId: 'dashboardCardFIB',
         sectionId: 'fibSection'
       },
-      visual_identify: {
-        countId: 'viCount',
-        tabSelector: '[data-category="visual_identify"]',
-        dashboardCardId: 'dashboardCardVI',
-        sectionId: 'visualIdentifySection'
-      },
-      matrix_written: {
-        countId: 'mwCount',
-        tabSelector: '[data-category="matrix_written"]',
-        dashboardCardId: 'dashboardCardMW',
-        sectionId: 'matrixWrittenSection'
-      },
-      diagram_label: {
-        countId: 'dlCount',
-        tabSelector: '[data-category="diagram_label"]',
-        dashboardCardId: 'dashboardCardDL',
-        sectionId: 'diagramLabelSection'
+      advanced_robotics: { 
+        countId: 'arCount', 
+        tabSelector: '[data-category="advanced_robotics"]',
+        dashboardCardId: 'dashboardCardAR',
+        sectionId: 'advancedRoboticsSection'
       }
     };
 
     const availableCategories = [];
 
     Object.entries(categoryMap).forEach(([category, ids]) => {
-      const questions = state.questions[category] || [];
+      let questions = [];
+      if (category === 'advanced_robotics') {
+        questions = [
+          ...(state.questions.visual_identify || []),
+          ...(state.questions.matrix_written || []),
+          ...(state.questions.diagram_label || [])
+        ];
+      } else {
+        questions = state.questions[category] || [];
+      }
       const countEl = document.getElementById(ids.countId);
       const tabEl = document.querySelector(ids.tabSelector);
       const dashboardCard = document.getElementById(ids.dashboardCardId);
@@ -3194,7 +3352,14 @@ const App = (() => {
     });
 
     // Force current category to first available if it's empty or doesn't exist
-    const currentQuestions = state.questions[state.currentCategory] || [];
+    let currentQuestions = state.questions[state.currentCategory] || [];
+    if (state.currentCategory === 'advanced_robotics') {
+      currentQuestions = [
+        ...(state.questions.visual_identify || []),
+        ...(state.questions.matrix_written || []),
+        ...(state.questions.diagram_label || [])
+      ];
+    }
     if (currentQuestions.length === 0 && availableCategories.length > 0) {
       const oldCategory = state.currentCategory;
       state.currentCategory = availableCategories[0];
@@ -3315,17 +3480,6 @@ const App = (() => {
     document.getElementById('caShuffleBtn').addEventListener('click', CodeAnalysisModule.shuffle);
     document.getElementById('caResetBtn').addEventListener('click', CodeAnalysisModule.reset);
 
-    // Visual Identify controls
-    document.getElementById('viShuffleBtn')?.addEventListener('click', VisualIdentifyModule.shuffle);
-    document.getElementById('viResetBtn')?.addEventListener('click', VisualIdentifyModule.reset);
-
-    // Matrix Written controls
-    document.getElementById('mwShuffleBtn')?.addEventListener('click', MatrixWrittenModule.shuffle);
-    document.getElementById('mwResetBtn')?.addEventListener('click', MatrixWrittenModule.reset);
-
-    // Diagram Label controls
-    document.getElementById('dlShuffleBtn')?.addEventListener('click', DiagramLabelModule.shuffle);
-    document.getElementById('dlResetBtn')?.addEventListener('click', DiagramLabelModule.reset);
 
     // Code Help Button
     const codeHelpBtn = document.getElementById('codeHelpBtn');
