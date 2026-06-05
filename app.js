@@ -794,14 +794,14 @@ const ProgressManager = (() => {
 
     const categories = [
       'true_false', 'mcq', 'short_answer', 'code', 'code_analysis', 'fill_in_the_blank',
-      'advanced_robotics'
+      'questions'
     ];
 
     categories.forEach(cat => {
       let questions = [];
       let answered = 0;
 
-      if (cat === 'advanced_robotics') {
+      if (cat === 'questions') {
         questions = [
           ...(state.questions.visual_identify || []),
           ...(state.questions.matrix_written || []),
@@ -3007,7 +3007,7 @@ const NavigationManager = (() => {
     
     // Don't switch to a category with no questions
     let questions = state.questions[category];
-    if (category === 'advanced_robotics') {
+    if (category === 'questions') {
       questions = [
         ...(state.questions.visual_identify || []),
         ...(state.questions.matrix_written || []),
@@ -3039,7 +3039,7 @@ const NavigationManager = (() => {
       code: 'codeSection',
       code_analysis: 'codeAnalysisSection',
       fill_in_the_blank: 'fibSection',
-      advanced_robotics: 'advancedRoboticsSection'
+      questions: 'advancedRoboticsSection'
     };
 
     const sectionId = sectionMap[category];
@@ -3051,7 +3051,7 @@ const NavigationManager = (() => {
   const renderCategory = (category) => {
     const state = AppState.get();
     let questions = state.questions[category];
-    if (category === 'advanced_robotics') {
+    if (category === 'questions') {
       questions = [
         ...(state.questions.visual_identify || []),
         ...(state.questions.matrix_written || []),
@@ -3084,7 +3084,7 @@ const NavigationManager = (() => {
       case 'fill_in_the_blank':
         FillInTheBlankModule.render(questions);
         break;
-      case 'advanced_robotics':
+      case 'questions':
         const arContainer = document.getElementById('advancedRoboticsContainer');
         if (arContainer) arContainer.innerHTML = '';
         VisualIdentifyModule.render(state.questions.visual_identify);
@@ -3301,9 +3301,9 @@ const App = (() => {
         dashboardCardId: 'dashboardCardFIB',
         sectionId: 'fibSection'
       },
-      advanced_robotics: { 
+      questions: { 
         countId: 'arCount', 
-        tabSelector: '[data-category="advanced_robotics"]',
+        tabSelector: '[data-category="questions"]',
         dashboardCardId: 'dashboardCardAR',
         sectionId: 'advancedRoboticsSection'
       }
@@ -3313,7 +3313,7 @@ const App = (() => {
 
     Object.entries(categoryMap).forEach(([category, ids]) => {
       let questions = [];
-      if (category === 'advanced_robotics') {
+      if (category === 'questions') {
         questions = [
           ...(state.questions.visual_identify || []),
           ...(state.questions.matrix_written || []),
@@ -3353,7 +3353,7 @@ const App = (() => {
 
     // Force current category to first available if it's empty or doesn't exist
     let currentQuestions = state.questions[state.currentCategory] || [];
-    if (state.currentCategory === 'advanced_robotics') {
+    if (state.currentCategory === 'questions') {
       currentQuestions = [
         ...(state.questions.visual_identify || []),
         ...(state.questions.matrix_written || []),
