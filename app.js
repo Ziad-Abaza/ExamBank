@@ -28,7 +28,8 @@ const AppState = (() => {
     preferences: {
       theme: 'light',
       language: 'en',
-      mcqDisableShuffle: false
+      mcqDisableShuffle: false,
+      showWarningBanner: false
     }
   };
 
@@ -2618,27 +2619,39 @@ const DataLoader = (() => {
 // 12.5 WARNING BANNER
 // ========================================
 const WarningBanner = (() => {
-  const BANNER_KEY = 'exambank_warning_dismissed';
-
   const init = () => {
     const banner = document.getElementById('topWarningBanner');
     const closeBtn = document.getElementById('closeBannerBtn');
 
     if (!banner || !closeBtn) return;
 
-    // Check if already dismissed
-    const isDismissed = localStorage.getItem(BANNER_KEY);
-    if (!isDismissed) {
-      banner.classList.remove('hidden');
-    }
+    updateVisibility();
 
     closeBtn.addEventListener('click', () => {
-      banner.classList.add('hidden');
-      localStorage.setItem(BANNER_KEY, 'true');
+      AppState.setPreference('showWarningBanner', false);
+      updateVisibility();
+      
+      // Sync toggle if dashboard is open
+      const prefShowBannerToggle = document.getElementById('prefShowBanner');
+      if (prefShowBannerToggle) {
+        prefShowBannerToggle.checked = false;
+      }
     });
   };
 
-  return { init };
+  const updateVisibility = () => {
+    const banner = document.getElementById('topWarningBanner');
+    if (!banner) return;
+
+    const prefs = AppState.get().preferences;
+    if (prefs.showWarningBanner) {
+      banner.classList.remove('hidden');
+    } else {
+      banner.classList.add('hidden');
+    }
+  };
+
+  return { init, updateVisibility };
 })();
 
 // ========================================
@@ -2850,6 +2863,16 @@ const App = (() => {
     // Sync toggle with stored preference
     const state = AppState.get();
     mcqDisableShuffleToggle.checked = state.preferences.mcqDisableShuffle;
+
+    // Show Warning Banner Toggle
+    const prefShowBannerToggle = document.getElementById('prefShowBanner');
+    if (prefShowBannerToggle) {
+      prefShowBannerToggle.checked = state.preferences.showWarningBanner;
+      prefShowBannerToggle.addEventListener('change', (e) => {
+        AppState.setPreference('showWarningBanner', e.target.checked);
+        WarningBanner.updateVisibility();
+      });
+    }
 
     // Short Answer controls
     document.getElementById('saShuffleBtn').addEventListener('click', ShortAnswerModule.shuffle);
