@@ -1176,6 +1176,44 @@
         }
       ],
       "explanation": "The 4×4 homogeneous transformation matrix combines a 3×3 rotation matrix and a 3×1 translation vector into a single transformation representation."
+    },
+    {
+      "id": 75,
+      "question_en": "Write the angular velocity vector ωB and its corresponding skew-symmetric matrix (ωB)×.",
+      "question_ar": "اكتب متجه السرعة الزاوية ωB ومصفوفته المضادة للتناظر (ωB)×.",
+      "sub_parts": [
+        {
+          "label": "a",
+          "question_en": "Write the angular velocity vector ωB.",
+          "question_ar": "اكتب متجه السرعة الزاوية ωB.",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} \\omega_x \\\\ \\omega_y \\\\ \\omega_z \\end{pmatrix}",
+          "answer_json": {
+            "type": "vector",
+            "rows": 3,
+            "cols": 1,
+            "values": [["ωx"], ["ωy"], ["ωz"]]
+          }
+        },
+        {
+          "label": "b",
+          "question_en": "Write the skew-symmetric matrix (ωB)×.",
+          "question_ar": "اكتب المصفوفة المضادة للتناظر (ωB)×.",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} 0 & -\\omega_z & \\omega_y \\\\ \\omega_z & 0 & -\\omega_x \\\\ -\\omega_y & \\omega_x & 0 \\end{pmatrix}",
+          "answer_json": {
+            "type": "matrix",
+            "rows": 3,
+            "cols": 3,
+            "values": [
+              ["0", "-ωz", "ωy"],
+              ["ωz", "0", "-ωx"],
+              ["-ωy", "ωx", "0"]
+            ]
+          }
+        }
+      ],
+      "explanation": "The angular velocity vector contains the rotational rates about the x, y, and z axes. Its skew-symmetric matrix form is commonly used in rotation kinematics and matrix differential equations."
     }
   ],
   "diagram_label": [
