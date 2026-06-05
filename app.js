@@ -14,7 +14,10 @@ const AppState = (() => {
       short_answer: [],
       code: [],
       code_analysis: [],
-      fill_in_the_blank: []
+      fill_in_the_blank: [],
+      visual_identify: [],
+      matrix_written: [],
+      diagram_label: []
     },
     currentCategory: 'true_false',
     progress: {
@@ -23,7 +26,10 @@ const AppState = (() => {
       short_answer: {},
       code: {},
       code_analysis: {},
-      fill_in_the_blank: {}
+      fill_in_the_blank: {},
+      visual_identify: {},
+      matrix_written: {},
+      diagram_label: {}
     },
     preferences: {
       theme: 'light',
@@ -87,7 +93,10 @@ const AppState = (() => {
       short_answer: {},
       code: {},
       code_analysis: {},
-      fill_in_the_blank: {}
+      fill_in_the_blank: {},
+      visual_identify: {},
+      matrix_written: {},
+      diagram_label: {}
     };
     saveToStorage();
     
@@ -464,6 +473,45 @@ const Utils = {
    */
   getAlternateText: (arText, enText, isArabic) => {
     return isArabic ? (enText || '') : (arText || '');
+  },
+
+  /**
+   * Parses inline matrix markup: [[ [a, b], [c, d] ]] and replaces it with HTML tables.
+   * Falls back to original text if no matrix notation is matched.
+   * @param {string} text - Escaped text containing matrix markup
+   * @returns {string} - Formatted HTML
+   */
+  parseInlineMatrices: (text) => {
+    if (!text) return '';
+    
+    // Regular expression matching [[ [row1], [row2], ... ]]
+    const matrixRegex = /\[\[\s*(\[\s*[^\]]+?\s*\](?:\s*,\s*\[\s*[^\]]+?\s*\])*)\s*\]\]/g;
+    
+    return text.replace(matrixRegex, (match, innerContent) => {
+      const rowRegex = /\[\s*([^\]]+?)\s*\]/g;
+      let rowMatch;
+      const rows = [];
+      
+      while ((rowMatch = rowRegex.exec(innerContent)) !== null) {
+        const cells = rowMatch[1].split(',').map(cell => cell.trim());
+        rows.push(cells);
+      }
+      
+      if (rows.length === 0) return match;
+      
+      // Map rows to HTML table cells
+      const tableRows = rows.map(row => 
+        `<tr>${row.map(cell => `<td class="matrix-cell">${Utils.escapeHtml(cell)}</td>`).join('')}</tr>`
+      ).join('');
+      
+      return `
+        <span class="matrix-wrapper inline-matrix">
+          <span class="matrix-bracket matrix-bracket-left">[</span>
+          <table class="matrix-table">${tableRows}</table>
+          <span class="matrix-bracket matrix-bracket-right">]</span>
+        </span>
+      `;
+    });
   }
 };
 
@@ -731,7 +779,10 @@ const ProgressManager = (() => {
   const updateProgress = () => {
     const state = AppState.get();
 
-    const categories = ['true_false', 'mcq', 'short_answer', 'code', 'code_analysis', 'fill_in_the_blank'];
+    const categories = [
+      'true_false', 'mcq', 'short_answer', 'code', 'code_analysis', 'fill_in_the_blank',
+      'visual_identify', 'matrix_written', 'diagram_label'
+    ];
 
     categories.forEach(cat => {
       const questions = state.questions[cat] || [];
@@ -740,7 +791,14 @@ const ProgressManager = (() => {
 
       // Update dashboard rings (only if category has questions)
       if (questions.length > 0) {
-        const ringId = cat === 'true_false' ? 'tf' : cat === 'mcq' ? 'mcq' : cat === 'short_answer' ? 'sa' : cat === 'code' ? 'code' : cat === 'code_analysis' ? 'ca' : 'fib';
+        const ringId = cat === 'true_false' ? 'tf' :
+                       cat === 'mcq' ? 'mcq' :
+                       cat === 'short_answer' ? 'sa' :
+                       cat === 'code' ? 'code' :
+                       cat === 'code_analysis' ? 'ca' :
+                       cat === 'fill_in_the_blank' ? 'fib' :
+                       cat === 'visual_identify' ? 'vi' :
+                       cat === 'matrix_written' ? 'mw' : 'dl';
         const ringEl = document.getElementById(`${ringId}Ring`);
         const ringTextEl = document.getElementById(`${ringId}RingText`);
         const answeredEl = document.getElementById(`${ringId}Answered`);
@@ -928,13 +986,17 @@ const MCQModule = (() => {
       let optionsHTML = shuffledOptions.map(([key, value], optIndex) => {
         const letter = String.fromCharCode(65 + optIndex);
         const originalKey = key;
+        const parsedOptionText = Utils.parseInlineMatrices(Utils.escapeHtml(value));
         return `
           <button class="mcq-option" data-key="${originalKey}" ${answered ? 'disabled' : ''}>
             <span class="option-letter">${letter}</span>
-            <span class="option-text">${Utils.escapeHtml(value)}</span>
+            <span class="option-text">${parsedOptionText}</span>
           </button>
         `;
       }).join('');
+
+      const parsedQuestionHTML = Utils.highlightKeywords(Utils.parseInlineMatrices(Utils.escapeHtml(questionText)));
+      const parsedAlternateHTML = Utils.parseInlineMatrices(Utils.escapeHtml(alternateText));
 
       card.innerHTML = `
         <div class="question-header">
@@ -945,11 +1007,11 @@ const MCQModule = (() => {
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
-              <span class="translate-tooltip">${Utils.escapeHtml(alternateText)}</span>
+              <span class="translate-tooltip">${parsedAlternateHTML}</span>
             </span>
           ` : ''}
         </div>
-        <p class="question-text">${Utils.highlightKeywords(Utils.escapeHtml(questionText))}</p>
+        <p class="question-text">${parsedQuestionHTML}</p>
         <div class="mcq-options">
           ${optionsHTML}
         </div>
@@ -1284,6 +1346,350 @@ const FillInTheBlankModule = (() => {
   };
 
   return { render, shuffle, reset };
+})();
+
+// ========================================
+// 7.5 NEW MULTI-MODAL RENDER MODULES
+// ========================================
+
+const VisualIdentifyModule = (() => {
+  const verifyImages = async (questions) => {
+    const missing = [];
+    for (const q of questions) {
+      if (q.image_ref) {
+        try {
+          const res = await fetch(q.image_ref, { method: 'HEAD' });
+          if (!res.ok) missing.push({ id: q.id, path: q.image_ref });
+        } catch (e) {
+          missing.push({ id: q.id, path: q.image_ref });
+        }
+      }
+    }
+    if (missing.length > 0) {
+      console.warn('[VisualIdentifyModule] Missing images:', missing);
+    }
+    return missing;
+  };
+
+  const render = (questions) => {
+    verifyImages(questions);
+
+    const container = document.getElementById('viQuestions');
+    container.innerHTML = '';
+    const state = AppState.get();
+    const isArabic = state.preferences.language === 'ar';
+
+    questions.forEach((q, index) => {
+      const progress = AppState.getProgress('visual_identify');
+      const answered = progress[q.id];
+      const questionText = Utils.getLocalizedText(q.question_ar, q.question_en, isArabic);
+
+      const card = document.createElement('div');
+      card.className = `question-card${answered ? ' answered' : ''}`;
+      card.id = `vi-${q.id}`;
+
+      // ✅ Image renderer
+      const imageHtml = q.image_ref
+        ? `<div class="question-image-container">
+             <img
+               src="${q.image_ref}"
+               alt="${isArabic ? (q.image_alt_ar || '') : (q.image_alt_en || '')}"
+               class="question-image"
+               loading="lazy"
+               onerror="this.parentElement.innerHTML='<div class=\\'image-error\\'>⚠️ Image not found: ${q.image_ref}</div>'"
+             />
+           </div>`
+        : '';
+
+      // ✅ Structured answer renderer
+      const answerHtml = answered
+        ? `<div class="feedback feedback-correct">
+             ✓ ${isArabic
+               ? (q.answer_display_ar || (q.correct_answer?.axis + ' ' + q.correct_answer?.angle_deg + '°'))
+               : (q.answer_display_en || ('Axis: ' + q.correct_answer?.axis + ', Angle: ' + q.correct_answer?.angle_deg + '°'))}
+           </div>`
+        : '';
+
+      card.innerHTML = `
+        <div class="question-header">
+          <span class="question-number">Question ${index + 1}</span>
+        </div>
+        <p class="question-text">${Utils.escapeHtml(questionText)}</p>
+        ${imageHtml}
+        <div class="vi-answer-area">
+          ${!answered ? `
+            <div class="vi-input-group">
+              <select class="vi-axis-select" aria-label="Axis of rotation">
+                <option value="">${isArabic ? 'اختر المحور' : 'Select Axis'}</option>
+                <option value="x">x</option>
+                <option value="y">y</option>
+                <option value="z">z</option>
+              </select>
+              <select class="vi-angle-select" aria-label="Angle of rotation">
+                <option value="">°</option>
+                <option value="90">+90°</option>
+                <option value="-90">-90°</option>
+                <option value="180">180°</option>
+              </select>
+              <button class="btn btn-primary vi-submit-btn">
+                ${isArabic ? 'تحقق' : 'Check'}
+              </button>
+            </div>
+          ` : ''}
+          <div class="feedback-container">${answerHtml}</div>
+        </div>
+        <div class="explanation-container" style="display:${answered ? 'block' : 'none'}">
+          <div class="explanation">
+            <div class="explanation-label">${isArabic ? 'الشرح' : 'Explanation'}</div>
+            <div class="explanation-text">${Utils.escapeHtml(q.explanation || '')}</div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+
+      if (!answered) {
+        const submitBtn = card.querySelector('.vi-submit-btn');
+        submitBtn?.addEventListener('click', () => {
+          const axis = card.querySelector('.vi-axis-select').value;
+          const angle = card.querySelector('.vi-angle-select').value;
+
+          if (!axis || !angle) return;
+
+          const isCorrect =
+            axis === String(q.correct_answer?.axis) &&
+            parseInt(angle) === q.correct_answer?.angle_deg;
+
+          AppState.setProgress('visual_identify', q.id, {
+            correct: isCorrect,
+            userAnswer: { axis, angle_deg: parseInt(angle) }
+          });
+
+          card.classList.add('answered');
+          const feedbackContainer = card.querySelector('.feedback-container');
+          feedbackContainer.innerHTML = `
+            <div class="feedback ${isCorrect ? 'feedback-correct' : 'feedback-incorrect'}">
+              ${isCorrect
+                ? (isArabic ? '✓ إجابة صحيحة!' : '✓ Correct!')
+                : `${isArabic ? '✗ الإجابة الصحيحة: ' : '✗ Correct answer: '}
+                   ${q.answer_display_en || (q.correct_answer?.axis + ', ' + q.correct_answer?.angle_deg + '°')}`}
+            </div>
+          `;
+
+          card.querySelector('.explanation-container').style.display = 'block';
+          const inputGroup = card.querySelector('.vi-input-group');
+          if (inputGroup) inputGroup.remove();
+          ProgressManager.updateProgress();
+        });
+      }
+    });
+
+    Utils.initKeywordTooltips(container);
+  };
+
+  const reset = () => {
+    AppState.resetProgress('visual_identify');
+    render(AppState.get().questions.visual_identify);
+    ProgressManager.updateProgress();
+  };
+
+  const shuffle = () => {
+    const container = document.getElementById('viQuestions');
+    Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+  };
+
+  return { render, reset, shuffle };
+})();
+
+const MatrixWrittenModule = (() => {
+  const renderMatrixTable = (matrixJson) => {
+    if (!matrixJson || (matrixJson.type !== 'matrix' && matrixJson.type !== 'vector')) {
+      return '';
+    }
+
+    const values = matrixJson.values;
+    const rows = values.map(row =>
+      `<tr>${row.map(cell => `<td class="matrix-cell">${Utils.escapeHtml(cell)}</td>`).join('')}</tr>`
+    ).join('');
+
+    return `
+      <div class="matrix-wrapper">
+        <span class="matrix-bracket matrix-bracket-left">[</span>
+        <table class="matrix-table">${rows}</table>
+        <span class="matrix-bracket matrix-bracket-right">]</span>
+      </div>
+    `;
+  };
+
+  const render = (questions) => {
+    const container = document.getElementById('mwQuestions');
+    container.innerHTML = '';
+    const state = AppState.get();
+    const isArabic = state.preferences.language === 'ar';
+
+    questions.forEach((q, index) => {
+      const progress = AppState.getProgress('matrix_written');
+      const answered = progress[q.id];
+      const questionText = Utils.getLocalizedText(q.question_ar, q.question_en, isArabic);
+
+      const card = document.createElement('div');
+      card.className = `question-card${answered ? ' answered' : ''}`;
+      card.id = `mw-${q.id}`;
+
+      // ✅ Render sub-parts
+      const subPartsHtml = (q.sub_parts || []).map((part, pi) => {
+        const partQuestion = Utils.getLocalizedText(
+          part.question_ar || '', part.question_en || '', isArabic
+        );
+        const matrixHtml = answered && part.answer_json
+          ? renderMatrixTable(part.answer_json)
+          : '';
+
+        return `
+          <div class="matrix-sub-part">
+            <div class="sub-part-label">(${part.label || String.fromCharCode(97 + pi)})</div>
+            <p class="sub-part-question">${Utils.escapeHtml(partQuestion)}</p>
+            ${answered ? `
+              <div class="matrix-answer-reveal">
+                ${matrixHtml}
+                <div class="matrix-latex-display">${Utils.escapeHtml(part.answer_latex || '')}</div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
+
+      card.innerHTML = `
+        <div class="question-header">
+          <span class="question-number">Question ${index + 1}</span>
+          <span class="question-badge-matrix">${isArabic ? 'مصفوفة' : 'Matrix'}</span>
+        </div>
+        <p class="question-text">${Utils.escapeHtml(questionText)}</p>
+        <div class="matrix-sub-parts">${subPartsHtml}</div>
+        ${!answered ? `
+          <button class="btn btn-secondary mw-reveal-btn">
+            ${isArabic ? 'عرض الإجابة النموذجية' : 'Show Model Answer'}
+          </button>
+        ` : ''}
+        <div class="explanation-container" style="display:${answered ? 'block' : 'none'}">
+          <div class="explanation">
+            <div class="explanation-label">${isArabic ? 'الشرح' : 'Explanation'}</div>
+            <div class="explanation-text">${Utils.escapeHtml(q.explanation || '')}</div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+
+      if (!answered) {
+        card.querySelector('.mw-reveal-btn')?.addEventListener('click', () => {
+          AppState.setProgress('matrix_written', q.id, { viewed: true, correct: true });
+          card.classList.add('answered');
+          ProgressManager.updateProgress();
+          render(state.questions.matrix_written);
+        });
+      }
+    });
+
+    Utils.initKeywordTooltips(container);
+  };
+
+  const reset = () => {
+    AppState.resetProgress('matrix_written');
+    render(AppState.get().questions.matrix_written);
+    ProgressManager.updateProgress();
+  };
+
+  const shuffle = () => {
+    const container = document.getElementById('mwQuestions');
+    Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+  };
+
+  return { render, reset, shuffle };
+})();
+
+const DiagramLabelModule = (() => {
+  const render = (questions) => {
+    const container = document.getElementById('dlQuestions');
+    container.innerHTML = '';
+    const state = AppState.get();
+    const isArabic = state.preferences.language === 'ar';
+
+    questions.forEach((q, index) => {
+      const progress = AppState.getProgress('diagram_label');
+      const answered = progress[q.id];
+      const questionText = Utils.getLocalizedText(q.question_ar, q.question_en, isArabic);
+      const answerText = isArabic ? (q.answer_text_ar || q.answer_text_en) : q.answer_text_en;
+
+      const card = document.createElement('div');
+      card.className = `question-card${answered ? ' answered' : ''}`;
+      card.id = `dl-${q.id}`;
+
+      const refImageHtml = answered && q.reference_image
+        ? `<div class="diagram-reference-image">
+             <p class="diagram-ref-label">${isArabic ? 'المخطط المرجعي:' : 'Reference Diagram:'}</p>
+             <img src="${q.reference_image}" alt="Reference diagram"
+               class="question-image"
+               onerror="this.style.display='none'"
+             />
+           </div>`
+        : '';
+
+      card.innerHTML = `
+        <div class="question-header">
+          <span class="question-number">Question ${index + 1}</span>
+          <span class="question-badge-diagram">${isArabic ? 'مخطط' : 'Diagram'}</span>
+        </div>
+        <p class="question-text">${Utils.escapeHtml(questionText)}</p>
+        ${!answered ? `
+          <div class="diagram-self-check-area">
+            <p class="self-check-instruction">${isArabic
+              ? 'قم برسم المخطط على ورقة، ثم تحقق من إجابتك.'
+              : 'Draw the diagram on paper, then check your answer.'}</p>
+            <button class="btn btn-secondary dl-reveal-btn">
+              ${isArabic ? 'عرض الإجابة' : 'Reveal Answer'}
+            </button>
+          </div>
+        ` : `
+          <div class="feedback feedback-correct">
+            ${isArabic ? '✓ الإجابة النموذجية:' : '✓ Model Answer:'}
+            <div class="diagram-answer-text">${Utils.escapeHtml(answerText || '')}</div>
+          </div>
+          ${refImageHtml}
+        `}
+        <div class="explanation-container" style="display:${answered ? 'block' : 'none'}">
+          <div class="explanation">
+            <div class="explanation-label">${isArabic ? 'الشرح' : 'Explanation'}</div>
+            <div class="explanation-text">${Utils.escapeHtml(q.explanation || '')}</div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+
+      if (!answered) {
+        card.querySelector('.dl-reveal-btn')?.addEventListener('click', () => {
+          AppState.setProgress('diagram_label', q.id, { viewed: true, correct: true });
+          card.classList.add('answered');
+          ProgressManager.updateProgress();
+          render(state.questions.diagram_label);
+        });
+      }
+    });
+  };
+
+  const reset = () => {
+    AppState.resetProgress('diagram_label');
+    render(AppState.get().questions.diagram_label);
+    ProgressManager.updateProgress();
+  };
+
+  const shuffle = () => {
+    const container = document.getElementById('dlQuestions');
+    Utils.shuffle(Array.from(container.children)).forEach(c => container.appendChild(c));
+  };
+
+  return { render, reset, shuffle };
 })();
 
 // ========================================
@@ -2461,7 +2867,10 @@ const NavigationManager = (() => {
       short_answer: 'shortAnswerSection',
       code: 'codeSection',
       code_analysis: 'codeAnalysisSection',
-      fill_in_the_blank: 'fibSection'
+      fill_in_the_blank: 'fibSection',
+      visual_identify: 'visualIdentifySection',
+      matrix_written: 'matrixWrittenSection',
+      diagram_label: 'diagramLabelSection'
     };
 
     const sectionId = sectionMap[category];
@@ -2498,6 +2907,15 @@ const NavigationManager = (() => {
         break;
       case 'fill_in_the_blank':
         FillInTheBlankModule.render(questions);
+        break;
+      case 'visual_identify':
+        VisualIdentifyModule.render(questions);
+        break;
+      case 'matrix_written':
+        MatrixWrittenModule.render(questions);
+        break;
+      case 'diagram_label':
+        DiagramLabelModule.render(questions);
         break;
     }
 
@@ -2646,8 +3064,8 @@ const WarningBanner = (() => {
 // ========================================
 const App = (() => {
   const init = async () => {
-    // Initialize Warning Banner
-    WarningBanner.init();
+    // Initialize Warning Banner (Disabled)
+    // WarningBanner.init();
 
     // Load keywords first
     await KeywordManager.load();
@@ -2667,6 +3085,9 @@ const App = (() => {
     state.questions.code = data.code || [];
     state.questions.code_analysis = data.code_analysis || [];
     state.questions.fill_in_the_blank = data.fill_in_the_blank || [];
+    state.questions.visual_identify = data.visual_identify || [];
+    state.questions.matrix_written = data.matrix_written || [];
+    state.questions.diagram_label = data.diagram_label || [];
 
     // Update counts and hide empty question type tabs, dashboard cards, and sections
     const categoryMap = {
@@ -2705,6 +3126,24 @@ const App = (() => {
         tabSelector: '[data-category="fill_in_the_blank"]',
         dashboardCardId: 'dashboardCardFIB',
         sectionId: 'fibSection'
+      },
+      visual_identify: {
+        countId: 'viCount',
+        tabSelector: '[data-category="visual_identify"]',
+        dashboardCardId: 'dashboardCardVI',
+        sectionId: 'visualIdentifySection'
+      },
+      matrix_written: {
+        countId: 'mwCount',
+        tabSelector: '[data-category="matrix_written"]',
+        dashboardCardId: 'dashboardCardMW',
+        sectionId: 'matrixWrittenSection'
+      },
+      diagram_label: {
+        countId: 'dlCount',
+        tabSelector: '[data-category="diagram_label"]',
+        dashboardCardId: 'dashboardCardDL',
+        sectionId: 'diagramLabelSection'
       }
     };
 
@@ -2862,6 +3301,18 @@ const App = (() => {
     // Code Analysis controls
     document.getElementById('caShuffleBtn').addEventListener('click', CodeAnalysisModule.shuffle);
     document.getElementById('caResetBtn').addEventListener('click', CodeAnalysisModule.reset);
+
+    // Visual Identify controls
+    document.getElementById('viShuffleBtn')?.addEventListener('click', VisualIdentifyModule.shuffle);
+    document.getElementById('viResetBtn')?.addEventListener('click', VisualIdentifyModule.reset);
+
+    // Matrix Written controls
+    document.getElementById('mwShuffleBtn')?.addEventListener('click', MatrixWrittenModule.shuffle);
+    document.getElementById('mwResetBtn')?.addEventListener('click', MatrixWrittenModule.reset);
+
+    // Diagram Label controls
+    document.getElementById('dlShuffleBtn')?.addEventListener('click', DiagramLabelModule.shuffle);
+    document.getElementById('dlResetBtn')?.addEventListener('click', DiagramLabelModule.reset);
 
     // Code Help Button
     const codeHelpBtn = document.getElementById('codeHelpBtn');

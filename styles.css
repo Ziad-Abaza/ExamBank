@@ -3777,3 +3777,178 @@ html[dir="rtl"] .keyword-highlight {
   }
 }
 
+/* ===== MULTI-MODAL COMPATIBILITY VARS ===== */
+:root {
+  --color-surface: var(--color-bg-secondary);
+  --color-accent-soft: var(--color-accent-light);
+}
+
+/* ===== VISUAL QUESTION TYPES ===== */
+.question-image-container {
+  margin: 1rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.question-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.image-error {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-error);
+  font-size: 0.875rem;
+}
+
+/* ===== MATRIX DISPLAY ===== */
+.matrix-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.matrix-bracket {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.matrix-table {
+  border-collapse: separate;
+  border-spacing: 8px 4px;
+}
+
+.matrix-cell {
+  text-align: center;
+  min-width: 48px;
+  padding: 2px 6px;
+  font-size: 0.875rem;
+}
+
+.matrix-sub-part {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
+  margin: 0.75rem 0;
+}
+
+.sub-part-label {
+  font-weight: 600;
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.matrix-latex-display {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  padding: 0.5rem;
+  background: var(--color-surface);
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.question-badge-matrix,
+.question-badge-diagram {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* ===== VISUAL IDENTIFY INPUT ===== */
+.vi-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.vi-axis-select,
+.vi-angle-select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+}
+
+/* ===== DIAGRAM SELF-CHECK ===== */
+.self-check-instruction {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.diagram-reference-image {
+  margin-top: 1rem;
+}
+
+.diagram-ref-label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.diagram-answer-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: var(--color-surface);
+  border-radius: 4px;
+}
+
+/* ===== INLINE MATRIX ALIGNMENT (MCQ) ===== */
+.inline-matrix {
+  display: inline-flex !important;
+  vertical-align: middle;
+  margin: 0 0.25rem;
+}
+
+.inline-matrix .matrix-bracket {
+  font-size: 1.6rem;         /* Slightly smaller scale to fit line height */
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+
+.inline-matrix .matrix-table {
+  border-spacing: 4px 1px;   /* Tight space for inline display */
+  border-collapse: separate;
+}
+
+.inline-matrix .matrix-cell {
+  min-width: unset;          /* Shrink cells dynamically based on length */
+  padding: 1px 3px;
+  font-size: 0.825rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+}
+
+/* Ensure matrices wrap nicely on small viewports */
+@media (max-width: 480px) {
+  .inline-matrix .matrix-cell {
+    font-size: 0.75rem;
+    padding: 0px 2px;
+  }
+  .inline-matrix .matrix-bracket {
+    font-size: 1.35rem;
+  }
+}
+
