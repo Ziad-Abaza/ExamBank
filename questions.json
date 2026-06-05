@@ -1,13 +1,4 @@
 {
-  "true_false": [
-    {
-      "id": 1,
-      "question_en": "The growth of IoT devices is one of the main causes of the data explosion.",
-      "question_ar": "هل نمو أجهزة إنترنت الأشياء هو أحد الأسباب الرئيسية لانفجار البيانات؟",
-      "answer": true,
-      "explanation": "IoT devices continuously generate massive amounts of data, contributing to data explosion."
-    }
-  ],
   "mcq": [
     {
       "id": 1,
@@ -985,36 +976,206 @@
   ],
   "matrix_written": [
     {
-      "id": 1,
-      "question_en": "Write the homogeneous transformation matrix ᴬTᴮ in 2D.",
-      "question_ar": "اكتب مصفوفة التحويل المتجانسة ᴬTᴮ في الفضاء ثنائي الأبعاد.",
+      "id": 72,
+      "question_en": "Write the homogeneous transformation matrix in 2D for the transformation from frame {B} to frame {A}, denoted as ATB.",
+      "question_ar": "اكتب مصفوفة التحويل المتجانسة ثنائية الأبعاد للتحويل من الإطار {B} إلى الإطار {A} والمشار إليها بالرمز ATB.",
       "sub_parts": [
         {
           "label": "a",
-          "question_en": "Write the 2×2 rotation matrix ᴬRᴮ",
-          "question_ar": "اكتب مصفوفة الدوران 2×2",
+          "question_en": "Write the 2×2 rotation matrix ARB.",
+          "question_ar": "اكتب مصفوفة الدوران 2×2 ARB.",
           "answer_type": "latex",
-          "answer_latex": "\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}",
+          "answer_latex": "\\begin{pmatrix} r_{11} & r_{12} \\\\ r_{21} & r_{22} \\end{pmatrix}",
           "answer_json": {
             "type": "matrix",
-            "rows": 2, "cols": 2,
-            "values": [["cos θ", "-sin θ"], ["sin θ", "cos θ"]]
+            "rows": 2,
+            "cols": 2,
+            "values": [["r11", "r12"], ["r21", "r22"]]
           }
         },
         {
           "label": "b",
-          "question_en": "Write the 2×1 translation vector ᴬtᴮ",
-          "question_ar": "اكتب متجه الإزاحة 2×1",
+          "question_en": "Write the 2×1 translation vector AtB.",
+          "question_ar": "اكتب متجه الإزاحة 2×1 AtB.",
           "answer_type": "latex",
           "answer_latex": "\\begin{pmatrix} t_x \\\\ t_y \\end{pmatrix}",
           "answer_json": {
             "type": "vector",
-            "rows": 2, "cols": 1,
-            "values": [["tₓ"], ["tᵧ"]]
+            "rows": 2,
+            "cols": 1,
+            "values": [["tx"], ["ty"]]
+          }
+        },
+        {
+          "label": "c",
+          "question_en": "Combine them into the full 3×3 homogeneous transformation matrix ATB.",
+          "question_ar": "ادمج العناصر السابقة لتكوين مصفوفة التحويل المتجانسة 3×3 ATB.",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} r_{11} & r_{12} & t_x \\\\ r_{21} & r_{22} & t_y \\\\ 0 & 0 & 1 \\end{pmatrix}",
+          "answer_json": {
+            "type": "matrix",
+            "rows": 3,
+            "cols": 3,
+            "values": [
+              ["r11", "r12", "tx"],
+              ["r21", "r22", "ty"],
+              ["0", "0", "1"]
+            ]
+          }
+        },
+        {
+          "label": "d",
+          "question_en": "Write the equation that transforms a point Bp into Ap.",
+          "question_ar": "اكتب المعادلة التي تحول النقطة Bp إلى Ap.",
+          "answer_type": "latex",
+          "answer_latex": "{}^{A}p = {}^{A}T_{B}\\,{}^{B}p",
+          "answer_json": {
+            "type": "equation",
+            "rows": 0,
+            "cols": 0,
+            "values": [
+              ["Ap = ATB * Bp"]
+            ]
           }
         }
       ],
-      "explanation": "The 3×3 homogeneous matrix combines rotation and translation using augmented coordinates."
+      "explanation": "The homogeneous transformation matrix combines rotation and translation into a single 3×3 matrix used to transform points between coordinate frames in 2D."
+    },
+    {
+      "id": 73,
+      "question_en": "Using the standard rotation matrices in 3D, write the general forms of Rx(φ), Ry(θ), and Rz(ψ), then identify which axis remains unchanged in each case.",
+      "question_ar": "باستخدام مصفوفات الدوران القياسية في الفضاء ثلاثي الأبعاد، اكتب الصيغ العامة لـ Rx(φ) و Ry(θ) و Rz(ψ)، ثم حدد المحور الذي يبقى ثابتاً في كل حالة.",
+      "sub_parts": [
+        {
+          "label": "a",
+          "question_en": "Write the rotation matrix about the x-axis Rx(φ).",
+          "question_ar": "اكتب مصفوفة الدوران حول المحور x وهي Rx(φ).",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \\cos\\phi & -\\sin\\phi \\\\ 0 & \\sin\\phi & \\cos\\phi \\end{pmatrix}",
+          "answer_json": {
+            "type": "matrix",
+            "rows": 3,
+            "cols": 3,
+            "values": [
+              ["1", "0", "0"],
+              ["0", "cos φ", "-sin φ"],
+              ["0", "sin φ", "cos φ"]
+            ]
+          }
+        },
+        {
+          "label": "b",
+          "question_en": "Write the rotation matrix about the y-axis Ry(θ).",
+          "question_ar": "اكتب مصفوفة الدوران حول المحور y وهي Ry(θ).",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} \\cos\\theta & 0 & \\sin\\theta \\\\ 0 & 1 & 0 \\\\ -\\sin\\theta & 0 & \\cos\\theta \\end{pmatrix}",
+          "answer_json": {
+            "type": "matrix",
+            "rows": 3,
+            "cols": 3,
+            "values": [
+              ["cos θ", "0", "sin θ"],
+              ["0", "1", "0"],
+              ["-sin θ", "0", "cos θ"]
+            ]
+          }
+        },
+        {
+          "label": "c",
+          "question_en": "Write the rotation matrix about the z-axis Rz(ψ).",
+          "question_ar": "اكتب مصفوفة الدوران حول المحور z وهي Rz(ψ).",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} \\cos\\psi & -\\sin\\psi & 0 \\\\ \\sin\\psi & \\cos\\psi & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}",
+          "answer_json": {
+            "type": "matrix",
+            "rows": 3,
+            "cols": 3,
+            "values": [
+              ["cos ψ", "-sin ψ", "0"],
+              ["sin ψ", "cos ψ", "0"],
+              ["0", "0", "1"]
+            ]
+          }
+        },
+        {
+          "label": "d",
+          "question_en": "State which axis remains unchanged for each rotation.",
+          "question_ar": "اذكر المحور الذي يبقى ثابتاً في كل دوران.",
+          "answer_type": "text",
+          "answer_latex": "",
+          "answer_json": {
+            "type": "list",
+            "rows": 3,
+            "cols": 1,
+            "values": [
+              ["Rx → x-axis unchanged"],
+              ["Ry → y-axis unchanged"],
+              ["Rz → z-axis unchanged"]
+            ]
+          }
+        }
+      ],
+      "explanation": "For a rotation about an axis, that axis remains fixed while the other two axes rotate."
+    },
+    {
+      "id": 74,
+      "question_en": "Write the general homogeneous transformation matrix for the transformation from frame {B} to frame {A} in 3D, denoted as ATB.",
+      "question_ar": "اكتب مصفوفة التحويل المتجانسة العامة للتحويل من الإطار {B} إلى الإطار {A} في الفضاء ثلاثي الأبعاد والمشار إليها بالرمز ATB.",
+      "sub_parts": [
+        {
+          "label": "a",
+          "question_en": "Write the 3×3 rotation matrix ARB.",
+          "question_ar": "اكتب مصفوفة الدوران 3×3 ARB.",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} r_{11} & r_{12} & r_{13} \\\\ r_{21} & r_{22} & r_{23} \\\\ r_{31} & r_{32} & r_{33} \\end{pmatrix}",
+          "answer_json": {
+            "type": "matrix",
+            "rows": 3,
+            "cols": 3,
+            "values": [
+              ["r11", "r12", "r13"],
+              ["r21", "r22", "r23"],
+              ["r31", "r32", "r33"]
+            ]
+          }
+        },
+        {
+          "label": "b",
+          "question_en": "Write the 3×1 translation vector AtB.",
+          "question_ar": "اكتب متجه الإزاحة 3×1 AtB.",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} t_x \\\\ t_y \\\\ t_z \\end{pmatrix}",
+          "answer_json": {
+            "type": "vector",
+            "rows": 3,
+            "cols": 1,
+            "values": [
+              ["tx"],
+              ["ty"],
+              ["tz"]
+            ]
+          }
+        },
+        {
+          "label": "c",
+          "question_en": "Combine the rotation matrix and translation vector into the 4×4 homogeneous transformation matrix ATB.",
+          "question_ar": "ادمج مصفوفة الدوران ومتجه الإزاحة لتكوين مصفوفة التحويل المتجانسة 4×4 ATB.",
+          "answer_type": "latex",
+          "answer_latex": "\\begin{pmatrix} r_{11} & r_{12} & r_{13} & t_x \\\\ r_{21} & r_{22} & r_{23} & t_y \\\\ r_{31} & r_{32} & r_{33} & t_z \\\\ 0 & 0 & 0 & 1 \\end{pmatrix}",
+          "answer_json": {
+            "type": "matrix",
+            "rows": 4,
+            "cols": 4,
+            "values": [
+              ["r11", "r12", "r13", "tx"],
+              ["r21", "r22", "r23", "ty"],
+              ["r31", "r32", "r33", "tz"],
+              ["0", "0", "0", "1"]
+            ]
+          }
+        }
+      ],
+      "explanation": "The 4×4 homogeneous transformation matrix combines a 3×3 rotation matrix and a 3×1 translation vector into a single transformation representation."
     }
   ],
   "diagram_label": [

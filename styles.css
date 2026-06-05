@@ -3914,41 +3914,89 @@ html[dir="rtl"] .keyword-highlight {
   border-radius: 4px;
 }
 
+/* ===== GENERAL MATRIX STYLE ENFORCEMENT ===== */
+.matrix-table {
+  display: table !important;
+  border-collapse: separate !important;
+  border-spacing: 8px 4px !important;
+  width: auto !important;
+}
+
+.matrix-table tr {
+  display: table-row !important;
+}
+
+.matrix-table td.matrix-cell {
+  display: table-cell !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
 /* ===== INLINE MATRIX ALIGNMENT (MCQ) ===== */
 .inline-matrix {
   display: inline-flex !important;
   vertical-align: middle;
+  align-items: center;
+  gap: 2px;
   margin: 0 0.25rem;
 }
 
 .inline-matrix .matrix-bracket {
-  font-size: 1.6rem;         /* Slightly smaller scale to fit line height */
+  display: inline-block !important;
+  vertical-align: middle;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1;
   color: var(--color-text-primary);
 }
 
 .inline-matrix .matrix-table {
-  border-spacing: 4px 1px;   /* Tight space for inline display */
-  border-collapse: separate;
+  display: inline-table !important;
+  vertical-align: middle;
+  border-spacing: 4px 1px !important;
+  border-collapse: separate !important;
+  width: auto !important;
 }
 
-.inline-matrix .matrix-cell {
-  min-width: unset;          /* Shrink cells dynamically based on length */
-  padding: 1px 3px;
+.inline-matrix .matrix-table tr {
+  display: table-row !important;
+}
+
+.inline-matrix .matrix-table td.matrix-cell {
+  display: table-cell !important;
+  min-width: unset !important;
+  padding: 1px 3px !important;
   font-size: 0.825rem;
   font-family: 'JetBrains Mono', monospace;
-  text-align: center;
+  text-align: center !important;
+  vertical-align: middle !important;
 }
 
 /* Ensure matrices wrap nicely on small viewports */
 @media (max-width: 480px) {
   .inline-matrix .matrix-cell {
-    font-size: 0.75rem;
-    padding: 0px 2px;
+    font-size: 0.75rem !important;
+    padding: 0px 2px !important;
   }
   .inline-matrix .matrix-bracket {
-    font-size: 1.35rem;
+    font-size: 1.35rem !important;
   }
+}
+
+/* ===== BLOCK MATRIX LAYOUT ===== */
+.matrix-block-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 1.25rem 0 !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  padding: 0.5rem 0 !important;
+}
+
+.matrix-block-container .block-matrix {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
 }
 

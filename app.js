@@ -484,33 +484,46 @@ const Utils = {
   parseInlineMatrices: (text) => {
     if (!text) return '';
     
-    // Regular expression matching [[ [row1], [row2], ... ]]
-    const matrixRegex = /\[\[\s*(\[\s*[^\]]+?\s*\](?:\s*,\s*\[\s*[^\]]+?\s*\])*)\s*\]\]/g;
-    
-    return text.replace(matrixRegex, (match, innerContent) => {
+    // Helper to parse the inner content of a matrix [a,b],[c,d] into row arrays
+    const parseMatrixRows = (innerContent) => {
       const rowRegex = /\[\s*([^\]]+?)\s*\]/g;
       let rowMatch;
       const rows = [];
-      
       while ((rowMatch = rowRegex.exec(innerContent)) !== null) {
         const cells = rowMatch[1].split(',').map(cell => cell.trim());
         rows.push(cells);
       }
-      
-      if (rows.length === 0) return match;
-      
-      // Map rows to HTML table cells
+      return rows;
+    };
+
+    // Helper to render HTML for rows
+    const renderTableHTML = (rows, isBlock) => {
       const tableRows = rows.map(row => 
         `<tr>${row.map(cell => `<td class="matrix-cell">${Utils.escapeHtml(cell)}</td>`).join('')}</tr>`
       ).join('');
       
-      return `
-        <span class="matrix-wrapper inline-matrix">
-          <span class="matrix-bracket matrix-bracket-left">[</span>
-          <table class="matrix-table">${tableRows}</table>
-          <span class="matrix-bracket matrix-bracket-right">]</span>
-        </span>
-      `;
+      const wrapperClass = isBlock ? 'matrix-wrapper block-matrix' : 'matrix-wrapper inline-matrix';
+      return `<span class="${wrapperClass}"><span class="matrix-bracket matrix-bracket-left">[</span><table class="matrix-table">${tableRows}</table><span class="matrix-bracket matrix-bracket-right">]</span></span>`;
+    };
+
+    // 1. Process Block Matrices: $$ [[ row_data ]] $$
+    const blockRegex = /\$\$\s*\[\[\s*(\[\s*[^\]]+?\s*\](?:\s*,\s*\[\s*[^\]]+?\s*\])*)\s*\]\]\s*\$\$/g;
+    let processedText = text.replace(blockRegex, (match, innerContent) => {
+      const rows = parseMatrixRows(innerContent);
+      console.log('[Matrix Debug] Detected Block Matrix innerContent:', innerContent);
+      console.log('[Matrix Debug] Parsed Block Matrix rows:', rows);
+      if (rows.length === 0) return match;
+      return `<div class="matrix-block-container">${renderTableHTML(rows, true)}</div>`;
+    });
+
+    // 2. Process Inline Matrices: [[ row_data ]]
+    const inlineRegex = /\[\[\s*(\[\s*[^\]]+?\s*\](?:\s*,\s*\[\s*[^\]]+?\s*\])*)\s*\]\]/g;
+    return processedText.replace(inlineRegex, (match, innerContent) => {
+      const rows = parseMatrixRows(innerContent);
+      console.log('[Matrix Debug] Detected Inline Matrix innerContent:', innerContent);
+      console.log('[Matrix Debug] Parsed Inline Matrix rows:', rows);
+      if (rows.length === 0) return match;
+      return renderTableHTML(rows, false);
     });
   }
 };
@@ -995,7 +1008,7 @@ const MCQModule = (() => {
         `;
       }).join('');
 
-      const parsedQuestionHTML = Utils.highlightKeywords(Utils.parseInlineMatrices(Utils.escapeHtml(questionText)));
+      const parsedQuestionHTML = Utils.parseInlineMatrices(Utils.highlightKeywords(Utils.escapeHtml(questionText)));
       const parsedAlternateHTML = Utils.parseInlineMatrices(Utils.escapeHtml(alternateText));
 
       card.innerHTML = `
