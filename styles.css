@@ -1170,6 +1170,12 @@ html[dir="rtl"] .translate-tooltip {
   color: var(--color-text-tertiary);
 }
 
+.short-answer-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
 /* --- Code Analysis --- */
 .code-analysis-card {
   border-left: 4px solid var(--color-accent);

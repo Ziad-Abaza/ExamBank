@@ -1091,11 +1091,13 @@ const ShortAnswerModule = (() => {
         <textarea
           class="short-answer-area"
           placeholder="${isArabic ? 'اكتب إجابتك هنا...' : 'Type your answer here...'}"
-          ${answered ? 'disabled' : ''}
         >${answered ? Utils.escapeHtml(answered.userAnswer || '') : ''}</textarea>
         <div class="short-answer-actions">
-          <button class="btn btn-primary show-answer-btn" ${answered ? 'style="display:none"' : ''}>
+          <button class="btn btn-primary show-answer-btn" ${answered && answered.revealed ? 'style="display:none"' : ''}>
             ${isArabic ? 'إظهار الإجابة' : 'Show Answer'}
+          </button>
+          <button class="btn btn-outline reset-q-btn" style="${answered && answered.revealed ? 'display:inline-block' : 'display:none'}">
+            ${isArabic ? 'إعادة المحاولة' : 'Try Again'}
           </button>
         </div>
         <div class="model-answer-container" style="display:none">
@@ -1110,37 +1112,53 @@ const ShortAnswerModule = (() => {
 
       // Show answer button
       const showBtn = card.querySelector('.show-answer-btn');
+      const resetQBtn = card.querySelector('.reset-q-btn');
       const modelAnswerContainer = card.querySelector('.model-answer-container');
       const textarea = card.querySelector('.short-answer-area');
 
       if (answered && answered.revealed) {
         modelAnswerContainer.style.display = 'block';
-        textarea.disabled = true;
       }
 
       showBtn?.addEventListener('click', () => {
         const userAnswer = textarea.value.trim();
         
-        // Mark as answered
-        if (!answered) {
-          AppState.setProgress('short_answer', q.id, {
-            revealed: true,
-            userAnswer
-          });
-          card.classList.add('answered');
-        } else {
-          AppState.setProgress('short_answer', q.id, {
-            ...answered,
-            revealed: true,
-            userAnswer
-          });
-        }
+        AppState.setProgress('short_answer', q.id, {
+          revealed: true,
+          userAnswer
+        });
+        card.classList.add('answered');
 
         modelAnswerContainer.style.display = 'block';
-        textarea.disabled = true;
         showBtn.style.display = 'none';
+        resetQBtn.style.display = 'inline-block';
 
         ProgressManager.updateProgress();
+      });
+
+      resetQBtn?.addEventListener('click', () => {
+        // Clear progress for this question
+        const state = AppState.get();
+        if (state.progress.short_answer[q.id]) {
+          delete state.progress.short_answer[q.id];
+          AppState.saveToStorage();
+        }
+
+        card.classList.remove('answered');
+        modelAnswerContainer.style.display = 'none';
+        textarea.value = '';
+        showBtn.style.display = 'inline-block';
+        resetQBtn.style.display = 'none';
+
+        ProgressManager.updateProgress();
+      });
+
+      textarea.addEventListener('input', () => {
+        const currentProgress = AppState.getProgress('short_answer')[q.id] || { revealed: false };
+        AppState.setProgress('short_answer', q.id, {
+          ...currentProgress,
+          userAnswer: textarea.value
+        });
       });
     });
 
