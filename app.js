@@ -1835,6 +1835,12 @@ const CodeModule = (() => {
               </svg>
               ${isArabic ? 'جرّب بنفسك' : 'Try it yourself'}
             </button>
+            <button class="code-action-btn practice-btn" title="Practice writing this code from scratch">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+              ${isArabic ? 'تمرين الكتابة' : 'Mastery Practice'}
+            </button>
           </div>
           <div class="code-display-body">
             <div class="code-line-numbers">${lineNumbersHtml}</div>
@@ -1852,6 +1858,13 @@ const CodeModule = (() => {
             </div>
             <span class="code-lang-label">${lang}</span>
             <div class="code-panel-actions">
+              <div class="accuracy-container"></div>
+              <button class="code-action-btn check-accuracy-btn" style="display:none" title="Compare with solution">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                ${isArabic ? 'تحقق' : 'Check'}
+              </button>
               <button class="code-action-btn reset-code-btn" title="Reset to original">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="1 4 1 10 7 10"/>
@@ -1931,6 +1944,9 @@ const CodeModule = (() => {
   /** Bind all event listeners for a card */
   const bindCardEvents = (card, question, isArabic, lang) => {
     const tryItBtn = card.querySelector('.try-it-btn');
+    const practiceBtn = card.querySelector('.practice-btn');
+    const checkAccuracyBtn = card.querySelector('.check-accuracy-btn');
+    const accuracyContainer = card.querySelector('.accuracy-container');
     const displayPanel = card.querySelector('.code-display-panel');
     const editorPanel = card.querySelector('.code-editor-panel');
     const textarea = card.querySelector('.code-textarea');
@@ -1943,7 +1959,7 @@ const CodeModule = (() => {
     const runtimeText = card.querySelector('.runtime-text');
     const runtimeSpinner = card.querySelector('.runtime-spinner');
 
-    // --- Toggle editor view ---
+    // --- Toggle editor view (Normal Mode) ---
     tryItBtn.addEventListener('click', () => {
       const isEditorVisible = editorPanel.style.display !== 'none';
       if (isEditorVisible) {
@@ -1952,8 +1968,21 @@ const CodeModule = (() => {
       } else {
         displayPanel.style.display = 'none';
         editorPanel.style.display = '';
+        checkAccuracyBtn.style.display = 'none';
+        accuracyContainer.innerHTML = '';
         setTimeout(() => textarea.focus(), 50);
       }
+    });
+
+    // --- Toggle Practice Mode (Mastery) ---
+    practiceBtn.addEventListener('click', () => {
+      displayPanel.style.display = 'none';
+      editorPanel.style.display = '';
+      textarea.value = ''; // Start from scratch
+      checkAccuracyBtn.style.display = 'inline-block';
+      accuracyContainer.innerHTML = '';
+      updateLineNumbers();
+      setTimeout(() => textarea.focus(), 50);
     });
 
     // --- Sync line numbers ---
@@ -1969,17 +1998,86 @@ const CodeModule = (() => {
       editorLineNums.scrollTop = textarea.scrollTop;
     });
 
-    // Tab key → 4 spaces
+    // --- Enhanced Keyboard Interaction ---
     textarea.addEventListener('keydown', (e) => {
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const value = textarea.value;
+
+      // 1. Tab key → 4 spaces
       if (e.key === 'Tab') {
         e.preventDefault();
-        const start = textarea.selectionStart;
-        const end = textarea.selectionEnd;
-        textarea.value = textarea.value.substring(0, start) + '    ' + textarea.value.substring(end);
+        textarea.value = value.substring(0, start) + '    ' + value.substring(end);
         textarea.selectionStart = textarea.selectionEnd = start + 4;
         updateLineNumbers();
       }
+      
+      // 2. Auto-indent on Enter
+      else if (e.key === 'Enter') {
+        e.preventDefault();
+        // Find current line's indentation
+        const beforeCursor = value.substring(0, start);
+        const lastNewLine = beforeCursor.lastIndexOf('\n');
+        const currentLine = beforeCursor.substring(lastNewLine + 1);
+        const indentMatch = currentLine.match(/^\s*/);
+        const indent = indentMatch ? indentMatch[0] : '';
+        
+        // Add newline + indent
+        textarea.value = value.substring(0, start) + '\n' + indent + value.substring(end);
+        textarea.selectionStart = textarea.selectionEnd = start + 1 + indent.length;
+        updateLineNumbers();
+      }
+
+      // 3. Bracket / Quote Pairing
+      const pairs = { '(': ')', '[': ']', '{': '}', '"': '"', "'": "'" };
+      if (pairs[e.key]) {
+        e.preventDefault();
+        const closing = pairs[e.key];
+        textarea.value = value.substring(0, start) + e.key + closing + value.substring(end);
+        textarea.selectionStart = textarea.selectionEnd = start + 1;
+      }
     });
+
+    // --- Check Accuracy (The "Professional" feedback) ---
+    checkAccuracyBtn.addEventListener('click', () => {
+      const userCode = textarea.value.trim();
+      const originalCode = textarea.dataset.original.trim();
+      
+      const similarity = calculateSimilarity(userCode, originalCode);
+      const percent = Math.round(similarity * 100);
+      
+      let cls = 'accuracy-low';
+      if (percent > 90) cls = 'accuracy-high';
+      else if (percent > 60) cls = 'accuracy-medium';
+      
+      accuracyContainer.innerHTML = `
+        <div class="accuracy-display ${cls}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span>${isArabic ? 'الدقة' : 'Accuracy'}: ${percent}%</span>
+        </div>
+      `;
+    });
+
+    const calculateSimilarity = (s1, s2) => {
+      // Normalize: Remove carriage returns and trailing spaces on each line
+      const n1 = s1.replace(/\r/g, '').split('\n').map(l => l.trimEnd()).join('\n');
+      const n2 = s2.replace(/\r/g, '').split('\n').map(l => l.trimEnd()).join('\n');
+      
+      if (n1 === n2) return 1.0;
+      
+      // Use Utils.getStringSimilarity for fuzzy matching
+      // But first, let's remove ALL whitespace for a "logic match" vs "formatting match"
+      const logic1 = n1.replace(/\s+/g, '');
+      const logic2 = n2.replace(/\s+/g, '');
+      
+      const logicSimilarity = Utils.getStringSimilarity(logic1, logic2);
+      const formatSimilarity = Utils.getStringSimilarity(n1, n2);
+      
+      // Weight logic more than format
+      return (logicSimilarity * 0.7) + (formatSimilarity * 0.3);
+    };
 
     // --- Set run button state based on Python runtime ---
     const updateRunButton = () => {

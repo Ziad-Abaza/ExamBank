@@ -3811,3 +3811,46 @@ html[dir="rtl"] .keyword-highlight {
   }
 }
 
+/* --- Practice Mode & Editor Enhancements --- */
+.practice-btn {
+  background: var(--color-accent-soft) !important;
+  color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+}
+
+.practice-btn:hover {
+  background: var(--color-accent) !important;
+  color: white !important;
+}
+
+.check-accuracy-btn {
+  background: var(--color-success-soft) !important;
+  color: var(--color-success) !important;
+  border-color: var(--color-success) !important;
+}
+
+.accuracy-display {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-right: var(--space-3);
+}
+
+.accuracy-high { color: var(--color-success); background: var(--color-success-soft); }
+.accuracy-medium { color: var(--color-warning); background: var(--color-warning-soft); }
+.accuracy-low { color: var(--color-error); background: var(--color-error-soft); }
+
+.code-textarea {
+  tab-size: 4;
+  caret-color: var(--color-accent);
+}
+
+.has-error .code-line-numbers {
+  border-right-color: var(--color-error);
+}
+
+
