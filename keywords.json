@@ -845,6 +845,78 @@
       "translation_ar": "إرسال النموذج",
       "definition": "Process of sending form data to server.",
       "details": "Usually triggered by submit button."
+    },
+    {
+      "term": "Segments",
+      "translation_ar": "أجزاء / مقاطع",
+      "definition": "Separate parts that make up a structure or value.",
+      "details": "Used in query strings and URLs to organize data into sections."
+    },
+    {
+      "term": "According",
+      "translation_ar": "وفقًا لـ",
+      "definition": "Used to show reference to a source or rule.",
+      "details": "Common in exam questions like 'according to the document'."
+    },
+    {
+      "term": "Mentioned",
+      "translation_ar": "مذكور",
+      "definition": "Something that was stated or written before.",
+      "details": "Used when referring back to previous information."
+    },
+    {
+      "term": "Significance",
+      "translation_ar": "الأهمية",
+      "definition": "The importance or value of something.",
+      "details": "Used to explain why a concept matters in a system."
+    },
+    {
+      "term": "Indicate",
+      "translation_ar": "يشير إلى",
+      "definition": "To show or represent something.",
+      "details": "Used in HTTP status codes and system responses."
+    },
+    {
+      "term": "Differ",
+      "translation_ar": "يختلف",
+      "definition": "To be not the same as something else.",
+      "details": "Used when comparing two concepts like Model and ViewModel."
+    },
+    {
+      "term": "Approaches",
+      "translation_ar": "طرق / أساليب",
+      "definition": "Different methods used to solve a problem.",
+      "details": "Example: Database First and Code First approaches."
+    },
+    {
+      "term": "Ensured",
+      "translation_ar": "تم التأكد من",
+      "definition": "To make certain that something is correct or safe.",
+      "details": "Used when validating data or system rules."
+    },
+    {
+      "term": "ViewModel",
+      "translation_ar": "نموذج العرض",
+      "definition": "Object used to pass data from controller to view.",
+      "details": "Combines multiple data sources into one model."
+    },
+    {
+      "term": "Scenario",
+      "translation_ar": "سيناريو / حالة استخدام",
+      "definition": "A specific situation or case.",
+      "details": "Used to describe request flow in MVC applications."
+    },
+    {
+      "term": "Contained",
+      "translation_ar": "يحتوي على",
+      "definition": "To include or hold something inside.",
+      "details": "Used for query strings and data structures."
+    },
+    {
+      "term": "Interacting",
+      "translation_ar": "التفاعل",
+      "definition": "Communication or working between systems.",
+      "details": "Used in APIs and client-server communication."
     }
   ]
 }
