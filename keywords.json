@@ -1,1708 +1,850 @@
 {
   "keywords": [
     {
-      "term": "ABAC",
-      "translation_ar": "التحكم في الوصول القائم على السمات",
-      "definition": "نظام متطور لمنح الصلاحيات بناءً على خصائص (سمات) المستخدم والبيئة والبيانات.",
-      "details": "يرمز إلى Attribute-Based Access Control. يوفر مرونة أكبر من RBAC، حيث يمكن وضع شروط مثل: (السماح بالوصول فقط إذا كان المستخدم في القسم المالي وبشرط أن يكون الوقت خلال ساعات العمل ومن داخل المكتب)."
+      "term": "HTTP",
+      "translation_ar": "بروتوكول نقل النصوص التشعبية",
+      "definition": "Protocol used for communication between browser and server.",
+      "details": "Used to transfer web pages and data over the internet."
     },
     {
-      "term": "access control",
-      "translation_ar": "التحكم في الوصول",
-      "definition": "تحديد من يمكنه الوصول إلى البيانات أو النظام.",
-      "details": "يتم عبر الصلاحيات والأدوار (roles)."
+      "term": "Hypertext Transfer Protocol",
+      "translation_ar": "بروتوكول نقل النصوص التشعبية",
+      "definition": "Full name of HTTP used in web communication.",
+      "details": "Standard protocol for loading websites and sending requests."
     },
     {
-      "term": "accessible",
-      "translation_ar": "قابل للوصول",
-      "definition": "يمكن استخدامه أو الوصول إليه بسهولة.",
-      "details": "في الأمن: يجب أن تكون الأنظمة متاحة للمستخدمين المصرح لهم فقط."
+      "term": "ASP.NET Core",
+      "translation_ar": "إطار عمل ويب من مايكروسوفت",
+      "definition": "Web framework for building modern web applications.",
+      "details": "Cross-platform, high performance, used for APIs and websites."
     },
     {
-      "term": "Accountability",
-      "translation_ar": "المساءلة / المسؤولية",
-      "definition": "التزام المؤسسة بإثبات امتثالها لمبادئ حماية البيانات والأمن.",
-      "details": "لا يكفي اتباع القواعد، بل يجب أن تكون هناك سجلات وأدلة تثبت أن المؤسسة تقوم بعملها بشكل صحيح."
+      "term": "Web Framework",
+      "translation_ar": "إطار عمل ويب",
+      "definition": "Software framework used to build web applications.",
+      "details": "Provides tools and structure for web development."
     },
     {
-      "term": "actuator",
-      "translation_ar": "مشغّل",
-      "definition": "جهاز ينفذ أوامر ويؤثر على العالم الفيزيائي.",
-      "details": "مثل القفل الذكي أو المحرك أو الإنذار، حيث يستقبل أوامر ويحولها إلى أفعال."
+      "term": "API",
+      "translation_ar": "واجهة برمجة التطبيقات",
+      "definition": "System that allows software to communicate with each other.",
+      "details": "Used to connect different applications and services."
     },
     {
-      "term": "Alert",
-      "translation_ar": "تنبيه",
-      "definition": "إخطار يتم إرساله للمسؤولين عند اكتشاف نشاط مشبوه أو فشل في النظام.",
-      "details": "يجب أن يكون التنبيه دقيقاً (High signal) ليتجنب إزعاج الفريق بتنبيهات كاذبة كثيرة (Noise)."
+      "term": "Application Programming Interface",
+      "translation_ar": "واجهة برمجة التطبيقات",
+      "definition": "Full form of API.",
+      "details": "Defines rules for communication between software systems."
     },
     {
-      "term": "Anomaly",
-      "translation_ar": "نشاط شاذ / غير طبيعي",
-      "definition": "سلوك ينحرف عن النمط المعتاد والمتوقع للنظام.",
-      "details": "مثل جهاز يرسل بيانات فجأة في وقت متأخر من الليل، أو يستهلك كمية ضخمة من البيانات غير المعتادة، مما قد يدل على اختراقه."
+      "term": "HTTP Status Code",
+      "translation_ar": "رمز حالة HTTP",
+      "definition": "Code that shows result of a web request.",
+      "details": "Examples: 200 success, 404 not found, 500 server error."
     },
     {
-      "term": "application bug",
-      "translation_ar": "خطأ برمجي",
-      "definition": "مشكلة أو خلل في البرنامج.",
-      "details": "قد يؤدي إلى ثغرات أمنية يمكن استغلالها."
+      "term": "JSON",
+      "translation_ar": "صيغة جافاسكربت للكائنات",
+      "definition": "Lightweight format for data exchange.",
+      "details": "Easy to read and used in APIs."
     },
     {
-      "term": "Assessment",
-      "translation_ar": "تقييم / تقدير",
-      "definition": "عملية فحص شاملة لتحديد حالة أو قيمة شيء ما.",
-      "details": "تقييم المخاطر هو عملية تحديد وتحليل التهديدات التي تواجه النظام."
+      "term": "JavaScript Object Notation",
+      "translation_ar": "ترميز كائنات جافاسكربت",
+      "definition": "Full name of JSON.",
+      "details": "Used to structure data in web applications."
     },
     {
-      "term": "Asset",
-      "translation_ar": "أصل (مورد مهم)",
-      "definition": "أي شيء ذو قيمة يحتاج إلى الحماية.",
-      "details": "يمكن أن يكون بيانات، جهاز، خدمة، أو حتى سمعة النظام."
+      "term": "MVC",
+      "translation_ar": "نموذج-عرض-متحكم",
+      "definition": "Architecture pattern for web applications.",
+      "details": "Separates application into Model, View, Controller."
     },
     {
-      "term": "Asymmetric cryptography",
-      "translation_ar": "التشفير غير المتماثل",
-      "definition": "نوع من التشفير يعتمد على مفتاحين مختلفين: مفتاح عام للتشفير ومفتاح خاص لفك التشفير.",
-      "details": "يستخدم هذا النوع في الأنظمة الآمنة مثل HTTPS. المفتاح العام يمكن مشاركته مع الجميع، بينما المفتاح الخاص يجب أن يبقى سريًا. يتيح هذا الأسلوب التحقق من الهوية وتأمين الاتصال دون الحاجة لمشاركة مفتاح سري مسبقًا."
+      "term": "Model",
+      "translation_ar": "النموذج",
+      "definition": "Represents data and business logic.",
+      "details": "Handles database structure and operations."
     },
     {
-      "term": "Asymmetric Encryption",
-      "translation_ar": "التشفير غير المتماثل",
-      "definition": "نوع من التشفير يستخدم زوجاً من المفاتيح: مفتاح عام للتشفير ومفتاح خاص لفك التشفير.",
-      "details": "يوفر أماناً أعلى في تبادل المفاتيح وتوثيق الهويات، وهو الأساس لشهادات SSL/TLS."
+      "term": "View",
+      "translation_ar": "واجهة العرض",
+      "definition": "Part that displays data to user.",
+      "details": "Usually HTML pages."
     },
     {
-      "term": "attack path",
-      "translation_ar": "مسار الهجوم",
-      "definition": "الطريقة أو المسار الذي يستخدمه المهاجم للوصول إلى النظام.",
-      "details": "قد يكون عبر الشبكة أو الجهاز أو المستخدم. تقليل هذه المسارات يقلل فرص الاختراق."
+      "term": "Controller",
+      "translation_ar": "المتحكم",
+      "definition": "Handles requests and sends data to view.",
+      "details": "Connects Model and View."
     },
     {
-      "term": "Attack Surface",
-      "translation_ar": "سطح الهجوم",
-      "definition": "مجموع كل نقاط الضعف والمنافذ التي يمكن للمهاجم استغلالها للدخول للنظام.",
-      "details": "كلما زاد عدد الميزات والمنافذ المفتوحة، زاد سطح الهجوم. الهدف هو تقليله قدر الإمكان لزيادة الأمان."
+      "term": "Razor Engine",
+      "translation_ar": "محرك رايزور",
+      "definition": "Tool for mixing C# with HTML in views.",
+      "details": "Generates dynamic web pages."
     },
     {
-      "term": "Attestation",
-      "translation_ar": "التصديق / الشهادة",
-      "definition": "عملية يثبت فيها الجهاز هويته وسلامة برنامجه لطرف آخر.",
-      "details": "في IoT، يرسل الجهاز (تقرير تصديق) للخادم ليثبت أنه يعمل بالبرنامج الأصلي ولم يتم العبث به، وبناءً عليه يتم السماح له بالوصول للشبكة."
+      "term": "Routing",
+      "translation_ar": "التوجيه",
+      "definition": "Maps URL to controller actions.",
+      "details": "Controls how requests are handled in MVC."
     },
     {
-      "term": "Audit",
-      "translation_ar": "التدقيق",
-      "definition": "عملية فحص وتقييم مستقلة للنظام للتأكد من اتباع السياسات والضوابط.",
-      "details": "يساعد التدقيق في اكتشاف الفجوات الأمنية والتأكد من أن الضوابط الأمنية تعمل بفعالية."
+      "term": "DB Context",
+      "translation_ar": "سياق قاعدة البيانات",
+      "definition": "Class that manages database connection.",
+      "details": "Used in Entity Framework for database operations."
     },
     {
-      "term": "audit trail",
-      "translation_ar": "سجل تدقيق",
-      "definition": "سجل يوضح تسلسل الأحداث والأنشطة في النظام.",
-      "details": "يُستخدم كدليل لمعرفة من قام بماذا ومتى، مهم جدًا في التحقيقات."
+      "term": "Entity Framework",
+      "translation_ar": "إطار عمل الكيانات",
+      "definition": "Tool for working with databases in .NET.",
+      "details": "Supports Code First and Database First approaches."
     },
     {
-      "term": "Authentication",
-      "translation_ar": "المصادقة",
-      "definition": "عملية التحقق من هوية المستخدم أو الجهاز.",
-      "details": "تتم باستخدام كلمات المرور، المفاتيح، أو الشهادات الرقمية للتأكد من أن الطرف هو فعلاً من يدعي."
+      "term": "ViewBag",
+      "translation_ar": "حاوية بيانات ديناميكية",
+      "definition": "Used to send data from controller to view.",
+      "details": "Does not require strict type definition."
     },
     {
-      "term": "authenticity",
-      "translation_ar": "الأصالة",
-      "definition": "التأكد أن الشيء حقيقي ومن المصدر الصحيح.",
-      "details": "مهم في التحديثات (firmware) للتأكد أنها من الشركة المصنعة وليست مزيفة."
+      "term": "ViewData",
+      "translation_ar": "بيانات العرض",
+      "definition": "Dictionary used to pass data to views.",
+      "details": "Requires casting in Razor pages."
     },
     {
-      "term": "authorization",
-      "translation_ar": "التفويض",
-      "definition": "تحديد ما يُسمح للمستخدم بفعله بعد التحقق من هويته.",
-      "details": "يختلف عن authentication، حيث يحدد الصلاحيات وليس الهوية."
+      "term": "ViewImports",
+      "translation_ar": "ملف الاستيراد العام للـ Views",
+      "definition": "File that shares settings across all views.",
+      "details": "Includes namespaces and directives."
     },
     {
-      "term": "authorized",
-      "translation_ar": "مصرح له",
-      "definition": "لديه إذن رسمي للوصول أو الاستخدام.",
-      "details": "يستخدم في الأمن لتحديد من يمكنه الوصول إلى البيانات أو الأنظمة."
+      "term": "Model Binding",
+      "translation_ar": "ربط البيانات بالنموذج",
+      "definition": "Process of sending form data to backend model.",
+      "details": "Used in login, registration, CRUD operations."
     },
     {
-      "term": "Availability",
-      "translation_ar": "التوافر",
-      "definition": "قدرة النظام على البقاء متاحًا وقابلًا للاستخدام.",
-      "details": "يُعد أحد أهداف الأمن الأساسية، خاصة في مواجهة هجمات مثل DoS التي تحاول تعطيل الخدمة."
+      "term": "GET Request",
+      "translation_ar": "طلب جلب البيانات",
+      "definition": "Request used to retrieve data from server.",
+      "details": "Data sent in URL as query string."
     },
     {
-      "term": "avalanche effect",
-      "translation_ar": "تأثير الانهيار",
-      "definition": "خاصية في دوال التجزئة حيث يؤدي تغيير بسيط إلى تغيير كبير في الناتج.",
-      "details": "ميزة أمنية مهمة تجعل من الصعب التنبؤ أو التلاعب بالنتائج."
+      "term": "POST Request",
+      "translation_ar": "طلب إرسال البيانات",
+      "definition": "Request used to send data to server.",
+      "details": "Data sent in request body."
     },
     {
-      "term": "Avoid",
-      "translation_ar": "تجنب",
-      "definition": "الابتعاد عن فعل شيء أو استخدامه لمنع وقوع ضرر.",
-      "details": "مثل تجنب استخدام كلمات مرور ضعيفة أو تجنب ترك منافذ التصحيح مفتوحة."
+      "term": "Query String",
+      "translation_ar": "سلسلة الاستعلام",
+      "definition": "Data sent in URL parameters.",
+      "details": "Contains Class, Method, and ID."
     },
     {
-      "term": "baseline control",
-      "translation_ar": "إجراء أمني أساسي",
-      "definition": "إجراء أمني أساسي يجب تطبيقه كحد أدنى للحماية.",
-      "details": "مثل secure boot أو التشفير. يمثل الحد الأدنى المقبول من الأمان في أي نظام."
+      "term": "Primitive Data",
+      "translation_ar": "بيانات بسيطة",
+      "definition": "Basic data types like int, string.",
+      "details": "Used in simple form inputs."
     },
     {
-      "term": "BLE",
-      "translation_ar": "بلوتوث منخفض الطاقة",
-      "definition": "تقنية اتصال لاسلكي قصيرة المدى منخفضة استهلاك الطاقة.",
-      "details": "تُستخدم في أجهزة IoT مثل الساعات الذكية وأجهزة الاستشعار، خاصة في عمليات الربط الأولي (onboarding)."
+      "term": "Custom Class",
+      "translation_ar": "فئة مخصصة",
+      "definition": "User-defined data structure.",
+      "details": "Used to group related data."
     },
     {
-      "term": "Breach",
-      "translation_ar": "اختراق / حادثة تسريب",
-      "definition": "وصول غير مصرح به يؤدي إلى كشف أو سرقة بيانات حساسة.",
-      "details": "يحدث الاختراق عندما ينجح المهاجم في تجاوز الدفاعات والوصول للهدف."
+      "term": "Data Collection",
+      "translation_ar": "مجموعة بيانات",
+      "definition": "Collection of multiple values.",
+      "details": "Like lists or arrays."
     },
     {
-      "term": "broker",
-      "translation_ar": "وسيط (في MQTT)",
-      "definition": "خادم مركزي يستقبل الرسائل ويوجهها بين الأجهزة.",
-      "details": "هو قلب نظام MQTT، حيث لا تتواصل الأجهزة مباشرة بل عبر هذا الوسيط."
+      "term": "Primary Key",
+      "translation_ar": "المفتاح الأساسي",
+      "definition": "Unique identifier for database table.",
+      "details": "Used to distinguish records."
     },
     {
-      "term": "buffer size",
-      "translation_ar": "حجم المخزن المؤقت",
-      "definition": "عدد البايتات التي يتم قراءتها أو معالجتها في كل مرة.",
-      "details": "اختيار حجم مناسب (مثل 4096) يوازن بين الأداء واستهلاك الذاكرة."
+      "term": "Foreign Key",
+      "translation_ar": "المفتاح الخارجي",
+      "definition": "Links two database tables.",
+      "details": "Represents relationships between tables."
     },
     {
-      "term": "bypass",
-      "translation_ar": "يتجاوز",
-      "definition": "تخطي نظام أو حماية دون الالتزام بها.",
-      "details": "في الأمن، يعني أن المهاجم تمكن من المرور حول آلية الحماية بدلاً من كسرها مباشرة."
+      "term": "Static Page",
+      "translation_ar": "صفحة ثابتة",
+      "definition": "Web page that does not change dynamically.",
+      "details": "Built using HTML and CSS only."
     },
     {
-      "term": "callback function",
-      "translation_ar": "دالة رد نداء",
-      "definition": "دالة يتم استدعاؤها تلقائيًا عند حدوث حدث معين.",
-      "details": "مثل on_message في MQTT التي يتم تنفيذها عند استقبال رسالة."
+      "term": "Dynamic Page",
+      "translation_ar": "صفحة ديناميكية",
+      "definition": "Web page that changes based on user input.",
+      "details": "Uses server-side or client-side logic."
     },
     {
-      "term": "Capstone",
-      "translation_ar": "مشروع التخرج / المشروع الختامي",
-      "definition": "مشروع نهائي يجمع كل ما تعلمه الطالب في المقرر وتطبيقه بشكل عملي.",
-      "details": "في هذا المقرر، يركز مشروع الـ Capstone على تصميم نظام IoT آمن من الطرف إلى الطرف (End-to-End)."
+      "term": "Active Server Pages (ASP)",
+      "translation_ar": "صفحات خادم نشطة",
+      "definition": "Technology for generating dynamic web pages.",
+      "details": "Executed on server before sending response."
     },
     {
-      "term": "categorization",
-      "translation_ar": "تصنيف",
-      "definition": "تقسيم القيم إلى فئات محددة.",
-      "details": "مثل تصنيف المخاطر إلى Low / Medium / High بناءً على النتيجة."
+      "term": "Hypertext",
+      "translation_ar": "نص تشعبي",
+      "definition": "Text that contains links to other pages or resources.",
+      "details": "Used in web pages to connect documents together."
     },
     {
-      "term": "certificate",
-      "translation_ar": "شهادة رقمية",
-      "definition": "ملف يستخدم لإثبات الهوية في الاتصالات الآمنة.",
-      "details": "يحتوي على مفتاح عام ومعلومات عن الجهة المالكة ويُستخدم في TLS."
+      "term": "Protocol",
+      "translation_ar": "بروتوكول",
+      "definition": "Set of rules for communication between systems.",
+      "details": "Defines how data is sent and received over networks."
     },
     {
-      "term": "certificate authority (CA)",
-      "translation_ar": "جهة إصدار الشهادات",
-      "definition": "جهة موثوقة تصدر الشهادات الرقمية.",
-      "details": "تُستخدم للتحقق من صحة الشهادات أثناء الاتصال الآمن."
+      "term": "Web Communication",
+      "translation_ar": "التواصل عبر الويب",
+      "definition": "Exchange of data between browser and server.",
+      "details": "Happens using protocols like HTTP."
     },
     {
-      "term": "Chain of Trust",
-      "translation_ar": "سلسلة الثقة",
-      "definition": "عملية يقوم فيها كل جزء من النظام بالتحقق من الجزء التالي قبل تشغيله.",
-      "details": "تبدأ من (Root of Trust) وتستمر حتى تشغيل نظام التشغيل والتطبيقات، لضمان عدم وجود كود خبيث في أي مرحلة."
+      "term": "Cross-Platform",
+      "translation_ar": "متعدد الأنظمة",
+      "definition": "Software that works on different operating systems.",
+      "details": "Example: Windows, Linux, macOS support."
     },
     {
-      "term": "chunking",
-      "translation_ar": "المعالجة على أجزاء",
-      "definition": "تقنية لقراءة أو معالجة البيانات على دفعات صغيرة.",
-      "details": "تُستخدم لتقليل استهلاك الذاكرة عند التعامل مع ملفات كبيرة، مثل قراءة 4096 بايت في كل مرة."
+      "term": "High Performance",
+      "translation_ar": "أداء عالي",
+      "definition": "Ability of system to run fast and efficiently.",
+      "details": "Important for scalable web applications."
     },
     {
-      "term": "Cipher",
-      "translation_ar": "شيفرة",
-      "definition": "الخوارزمية المستخدمة للتشفير أو فك التشفير.",
-      "details": "هي الخطوات الرياضية والمنطقية التي تحول النص الواضح إلى نص مشفر والعكس."
+      "term": "API Communication",
+      "translation_ar": "التواصل عبر API",
+      "definition": "Data exchange between different software systems.",
+      "details": "Used to integrate services like payment or login systems."
     },
     {
-      "term": "client authentication",
-      "translation_ar": "مصادقة العميل",
-      "definition": "عملية التحقق من هوية العميل قبل السماح له بالاتصال.",
-      "details": "تتم باستخدام username/password أو certificates."
+      "term": "Server Error",
+      "translation_ar": "خطأ في الخادم",
+      "definition": "Error that occurs on the server side.",
+      "details": "Example: HTTP 500 error."
     },
     {
-      "term": "client certificate",
-      "translation_ar": "شهادة العميل",
-      "definition": "شهادة رقمية تثبت هوية العميل.",
-      "details": "تُستخدم في المصادقة المتبادلة (mutual TLS)."
+      "term": "Not Found",
+      "translation_ar": "غير موجود",
+      "definition": "Resource cannot be found on server.",
+      "details": "Example: HTTP 404 error."
     },
     {
-      "term": "cloud API",
-      "translation_ar": "واجهة برمجة التطبيقات السحابية",
-      "definition": "واجهة تسمح للتطبيقات بالتواصل مع الخوادم السحابية.",
-      "details": "تُستخدم لإرسال واستقبال البيانات بين التطبيق والجهاز."
+      "term": "Success Status",
+      "translation_ar": "حالة نجاح",
+      "definition": "Indicates request completed successfully.",
+      "details": "Example: HTTP 200."
     },
     {
-      "term": "Cloud Isolation",
-      "translation_ar": "العزل السحابي",
-      "definition": "تقنيات تضمن بقاء بيانات وعمليات كل عميل منفصلة تماماً في السحابة.",
-      "details": "يحمي من هجمات تسريب البيانات بين المستأجرين المختلفين الذين يتشاركون نفس البنية التحتية."
+      "term": "Data Interchange",
+      "translation_ar": "تبادل البيانات",
+      "definition": "Process of transferring data between systems.",
+      "details": "JSON is commonly used for this."
     },
     {
-      "term": "command",
-      "translation_ar": "أمر",
-      "definition": "تعليمة يتم إرسالها لتنفيذ إجراء معين.",
-      "details": "في IoT: مثل تشغيل جهاز أو إيقافه من التطبيق."
+      "term": "Architecture Pattern",
+      "translation_ar": "نمط معماري",
+      "definition": "Design structure for organizing software.",
+      "details": "MVC is an example."
     },
     {
-      "term": "Compliance",
-      "translation_ar": "الامتثال",
-      "definition": "الالتزام بالقوانين واللوائح والمعايير الأمنية المحددة.",
-      "details": "مثل الامتثال لقوانين حماية البيانات المحلية أو المعايير الدولية مثل ISO 27001."
+      "term": "Separation of Concerns",
+      "translation_ar": "فصل المسؤوليات",
+      "definition": "Dividing application into independent parts.",
+      "details": "Improves maintainability and readability."
     },
     {
-      "term": "compromise",
-      "translation_ar": "اختراق / إفساد",
-      "definition": "جعل النظام أو البيانات غير آمنة.",
-      "details": "إذا تم اختراق جزء واحد، يمكن أن يتم compromise للنظام بالكامل."
+      "term": "Database Table",
+      "translation_ar": "جدول قاعدة البيانات",
+      "definition": "Structure used to store data in rows and columns.",
+      "details": "Each table represents an entity."
     },
     {
-      "term": "conditional logic",
-      "translation_ar": "منطق شرطي",
-      "definition": "استخدام شروط لتحديد مسار التنفيذ.",
-      "details": "مثل if / elif / else، ويستخدم لاتخاذ قرارات بناءً على القيم مثل تحديد مستوى الخطر."
+      "term": "Entity",
+      "translation_ar": "كيان",
+      "definition": "Object representing a real-world data item.",
+      "details": "Used in ORM systems like Entity Framework."
     },
     {
-      "term": "Confidentiality",
-      "translation_ar": "السرية",
-      "definition": "حماية البيانات من الوصول غير المصرح به.",
-      "details": "تتحقق باستخدام التشفير، حيث لا يمكن قراءة البيانات إلا من قبل الأطراف المصرح لها."
+      "term": "ORM",
+      "translation_ar": "ربط الكائنات بقاعدة البيانات",
+      "definition": "Technique to map objects to database tables.",
+      "details": "Entity Framework is an example."
     },
     {
-      "term": "config file",
-      "translation_ar": "ملف إعدادات",
-      "definition": "ملف يحتوي على إعدادات النظام.",
-      "details": "يتم تحميله عند بدء التشغيل، ويجب التعامل مع فشله بشكل آمن."
+      "term": "Migration",
+      "translation_ar": "ترحيل قاعدة البيانات",
+      "definition": "Process of updating database structure.",
+      "details": "Used in Code First approach."
     },
     {
-      "term": "configuration file",
-      "translation_ar": "ملف إعدادات",
-      "definition": "ملف يحتوي على إعدادات النظام.",
-      "details": "يجب حمايته لأنه قد يحتوي على معلومات حساسة."
+      "term": "Validation",
+      "translation_ar": "التحقق من صحة البيانات",
+      "definition": "Checking if data is correct before saving.",
+      "details": "Prevents invalid data entry."
     },
     {
-      "term": "Consent",
-      "translation_ar": "الموافقة / الرضا",
-      "definition": "إذن صريح من المستخدم لجمع ومعالجة بياناته.",
-      "details": "يجب أن تكون الموافقة اختيارية وواضحة، ويحق للمستخدم سحبها في أي وقت."
+      "term": "Form Submission",
+      "translation_ar": "إرسال النموذج",
+      "definition": "Process of sending form data to server.",
+      "details": "Usually done using POST method."
     },
     {
-      "term": "Constraint",
-      "translation_ar": "قيد / عائق",
-      "definition": "حدود أو قيود يجب العمل ضمنها أثناء تصميم النظام.",
-      "details": "في IoT، القيود تشمل: سعة البطارية المحدودة، حجم الذاكرة الصغير، وضعف قدرة المعالج."
+      "term": "Query Parameter",
+      "translation_ar": "معامل استعلام",
+      "definition": "Data passed in URL after ? symbol.",
+      "details": "Used in GET requests."
     },
     {
-      "term": "Contain",
-      "translation_ar": "يحتوي",
-      "definition": "السيطرة على شيء ومنع انتشاره.",
-      "details": "في الأمن: احتواء الاختراق يعني منعه من الوصول لأجهزة أخرى في الشبكة."
+      "term": "Route",
+      "translation_ar": "مسار",
+      "definition": "URL pattern that maps to controller action.",
+      "details": "Used in MVC routing system."
     },
     {
-      "term": "Containment",
-      "translation_ar": "الاحتواء",
-      "definition": "إجراءات تهدف للحد من انتشار الهجوم وتقليل الضرر.",
-      "details": "مثل فصل الجهاز المخترق عن الشبكة فوراً لمنع المهاجم من الوصول لأجهزة أخرى."
+      "term": "Action Method",
+      "translation_ar": "دالة تنفيذ في المتحكم",
+      "definition": "Method inside controller that handles request.",
+      "details": "Returns view or data response."
     },
     {
-      "term": "copy method",
-      "translation_ar": "نسخ البيانات",
-      "definition": "إنشاء نسخة مستقلة من البيانات.",
-      "details": "يُستخدم لمنع تعديل القيم الأصلية مثل SAFE_DEFAULTS.copy()."
+      "term": "Controller Action",
+      "translation_ar": "إجراء في المتحكم",
+      "definition": "Function that processes user request.",
+      "details": "Part of MVC controller layer."
     },
     {
-      "term": "credentials",
-      "translation_ar": "بيانات الاعتماد",
-      "definition": "معلومات تستخدم لإثبات الهوية.",
-      "details": "مثل username وpassword أو المفاتيح والشهادات."
+      "term": "Dependency Injection",
+      "translation_ar": "حقن الاعتماديات",
+      "definition": "Technique to provide dependencies to classes.",
+      "details": "Improves code flexibility and testing."
     },
     {
-      "term": "Crypto",
-      "translation_ar": "تشفير / عملات مشفرة",
-      "definition": "اختصار لمصطلح Cryptography أو العملات المشفرة.",
-      "details": "في هذا السياق، يُستخدم للإشارة إلى التقنيات المستخدمة لتأمين البيانات."
+      "term": "Modular",
+      "translation_ar": "قابل للتقسيم",
+      "definition": "System built from independent modules.",
+      "details": "Each module handles a specific feature."
     },
     {
-      "term": "Cryptography",
-      "translation_ar": "علم التشفير",
-      "definition": "علم حماية المعلومات عن طريق تحويلها إلى تنسيقات لا يمكن قراءتها إلا لمن يملك المفتاح.",
-      "details": "يشمل تقنيات مثل التشفير وفك التشفير والتوقيعات الرقمية. يهدف إلى تحقيق السرية والسلامة والمصادقة."
+      "term": "Cloud-Based Application",
+      "translation_ar": "تطبيق سحابي",
+      "definition": "Application hosted on cloud servers.",
+      "details": "Accessible from anywhere via internet."
     },
     {
-      "term": "Data Retention",
-      "translation_ar": "الاحتفاظ بالبيانات",
-      "definition": "تخزين البيانات لفترة زمنية محددة وفقاً لسياسات المؤسسة والقانون.",
-      "details": "يجب أن تكون المدة محددة بوضوح، وبعد انتهائها يجب مسح البيانات بشكل آمن."
+      "term": "Frontend",
+      "translation_ar": "الواجهة الأمامية",
+      "definition": "Part of application user interacts with.",
+      "details": "Includes UI, HTML, CSS, JavaScript."
     },
     {
-      "term": "DDoS",
-      "translation_ar": "هجوم حجب الخدمة الموزع",
-      "definition": "هجوم حجب خدمة يتم شنه من مصادر متعددة في وقت واحد.",
-      "details": "يرمز إلى Distributed Denial of Service. يتم عبر استغلال شبكة من الأجهزة المخترقة (Botnet) لإغراق الهدف ببيانات ضخمة، مما يجعل من الصعب إيقاف الهجوم لأنه يأتي من آلاف العناوين المختلفة."
+      "term": "Backend",
+      "translation_ar": "الواجهة الخلفية",
+      "definition": "Server-side logic and database handling.",
+      "details": "Processes requests and returns responses."
     },
     {
-      "term": "Decryption",
-      "translation_ar": "فك التشفير",
-      "definition": "عملية تحويل البيانات المشفرة مرة أخرى إلى شكلها الأصلي القابل للقراءة.",
-      "details": "تتطلب هذه العملية مفتاحاً خاصاً أو سرياً، وهي العملية العكسية للتشفير."
+      "term": "Request",
+      "translation_ar": "طلب",
+      "definition": "Message sent from client to server.",
+      "details": "Can be GET or POST."
     },
     {
-      "term": "default value",
-      "translation_ar": "قيمة افتراضية",
-      "definition": "قيمة يتم استخدامها عند عدم توفر قيمة صحيحة.",
-      "details": "في الأمن تُستخدم كإجراء آمن عند إدخال بيانات غير صحيحة."
+      "term": "Response",
+      "translation_ar": "استجابة",
+      "definition": "Reply from server to client.",
+      "details": "Usually contains HTML or data."
     },
     {
-      "term": "defense in depth",
-      "translation_ar": "الدفاع متعدد الطبقات",
-      "definition": "استخدام عدة طبقات من الحماية بدلاً من طبقة واحدة.",
-      "details": "إذا فشلت طبقة، تبقى الطبقات الأخرى تحمي النظام."
+      "term": "Session",
+      "translation_ar": "جلسة",
+      "definition": "Temporary storage for user data.",
+      "details": "Used to track user activity."
     },
     {
-      "term": "Denial of Service (DoS)",
-      "translation_ar": "هجوم حجب الخدمة",
-      "definition": "هجوم يهدف إلى تعطيل الخدمة وجعلها غير متاحة.",
-      "details": "يحدث عبر إغراق النظام بطلبات كثيرة، مما يؤدي إلى استهلاك الموارد ومنع المستخدمين الحقيقيين من الوصول."
+      "term": "Cookie",
+      "translation_ar": "ملف تعريف الارتباط",
+      "definition": "Small data stored in browser.",
+      "details": "Used for user preferences and login state."
     },
     {
-      "term": "deny by default",
-      "translation_ar": "المنع الافتراضي",
-      "definition": "سياسة أمنية تمنع كل شيء إلا ما يتم السماح به صراحة.",
-      "details": "تُعتبر من أقوى مبادئ الأمان، حيث يتم تقليل الهجمات عبر تقليل السلوك المسموح."
+      "term": "List",
+      "translation_ar": "قائمة",
+      "definition": "Collection of multiple items.",
+      "details": "Used to store multiple records."
     },
     {
-      "term": "Deploy",
-      "translation_ar": "ينشر / يثبّت",
-      "definition": "عملية نقل البرنامج أو الجهاز من مرحلة التطوير إلى مرحلة الاستخدام الفعلي.",
-      "details": "تتضمن إعداد البيئة والتأكد من جاهزية النظام للعمل."
+      "term": "Object",
+      "translation_ar": "كائن",
+      "definition": "Instance of a class containing data and behavior.",
+      "details": "Core concept in object-oriented programming."
     },
     {
-      "term": "deployed",
-      "translation_ar": "تم نشره",
-      "definition": "تم تثبيته أو تشغيله في بيئة العمل.",
-      "details": "أجهزة IoT غالبًا تبقى deployed لفترات طويلة مما يزيد صعوبة تحديثها."
+      "term": "Class",
+      "translation_ar": "فئة",
+      "definition": "Blueprint for creating objects.",
+      "details": "Defines properties and methods."
     },
     {
-      "term": "Deployment",
-      "translation_ar": "النشر / التثبيت الميداني",
-      "definition": "مرحلة وضع الأجهزة في بيئة عملها الفعلية وبدء تشغيلها.",
-      "details": "تتطلب هذه المرحلة إعدادات أمان دقيقة للتأكد من أن الأجهزة محمية في بيئتها الجديدة."
+      "term": "Property",
+      "translation_ar": "خاصية",
+      "definition": "Variable inside a class.",
+      "details": "Represents data of an object."
     },
     {
-      "term": "descending order",
-      "translation_ar": "ترتيب تنازلي",
-      "definition": "ترتيب من الأكبر إلى الأصغر.",
-      "details": "يُستخدم لعرض أعلى المخاطر أولاً."
+      "term": "Method",
+      "translation_ar": "دالة",
+      "definition": "Function inside a class.",
+      "details": "Defines behavior of objects."
     },
     {
-      "term": "Detection",
-      "translation_ar": "الاكتشاف",
-      "definition": "التعرف على وجود تهديد أو هجوم في الوقت المناسب.",
-      "details": "تتم عبر أنظمة المراقبة (Monitoring) وتحليل السجلات (Logs) لاكتشاف أي اختراق بأسرع وقت ممكن."
-    },
-    {
-      "term": "Device Identity",
-      "translation_ar": "هوية الجهاز",
-      "definition": "معرف فريد وموثوق يستخدم لتمييز كل جهاز في شبكة IoT.",
-      "details": "تساعد هوية الجهاز في ضمان أن الأجهزة المصرح لها فقط هي من تتصل بالسحابة وتتلقى التحديثات."
-    },
-    {
-      "term": "diagram",
-      "translation_ar": "مخطط",
-      "definition": "رسم يوضح مكونات النظام وعلاقاتها.",
-      "details": "يُستخدم لتوضيح بنية الأنظمة مثل IoT architecture."
-    },
-    {
-      "term": "Digital signature",
-      "translation_ar": "التوقيع الرقمي",
-      "definition": "آلية تستخدم للتحقق من هوية المرسل وضمان عدم تعديل البيانات.",
-      "details": "يتم إنشاء التوقيع باستخدام المفتاح الخاص، ويمكن التحقق منه باستخدام المفتاح العام. يضمن سلامة البيانات (Integrity) وهوية المرسل (Authentication)."
-    },
-    {
-      "term": "downgrade",
-      "translation_ar": "تخفيض الإصدار",
-      "definition": "الانتقال إلى إصدار أقدم من البرنامج.",
-      "details": "غالبًا ما يكون هذا الإصدار أقل أمانًا، لذلك يتم منعه عبر rollback protection."
-    },
-    {
-      "term": "embedded",
-      "translation_ar": "مضمّن",
-      "definition": "موجود داخل شيء آخر كجزء منه.",
-      "details": "مثل 'embedded system' أو 'embedded code' أي كود داخل جهاز."
-    },
-    {
-      "term": "Enable",
-      "translation_ar": "تفعيل / تمكين",
-      "definition": "تشغيل ميزة أو خاصية معينة في النظام.",
-      "details": "مثل تفعيل التنبيهات الأمنية أو تفعيل التشفير."
-    },
-    {
-      "term": "encoding",
-      "translation_ar": "ترميز",
-      "definition": "تحويل البيانات إلى صيغة معينة.",
-      "details": "مثل تحويل النص إلى bytes باستخدام UTF-8 قبل تطبيق hashing."
-    },
-    {
-      "term": "encryption",
-      "translation_ar": "التشفير",
-      "definition": "تحويل البيانات إلى شكل غير مفهوم لحمايتها.",
-      "details": "لا يمكن قراءة البيانات المشفرة إلا باستخدام مفتاح لفك التشفير. الهدف الأساسي هو الحفاظ على السرية."
-    },
-    {
-      "term": "Enforce",
-      "translation_ar": "يفرض / يطبّق بالقوة",
-      "definition": "التأكد من أن القواعد والسياسات تُنفذ ولا يمكن تجاوزها.",
-      "details": "مثل فرض استخدام كلمات مرور معقدة أو فرض استخدام التشفير في جميع الاتصالات."
-    },
-    {
-      "term": "ensure",
-      "translation_ar": "يضمن",
-      "definition": "التأكد من أن شيئًا ما يحدث أو يتم بشكل صحيح.",
-      "details": "تستخدم كثيرًا في السياق الأمني مثل 'ensure integrity' أي ضمان سلامة البيانات. تعني اتخاذ إجراءات تجعل النتيجة مؤكدة وليست مجرد احتمال."
-    },
-    {
-      "term": "environment",
-      "translation_ar": "البيئة",
-      "definition": "المحيط الذي يعمل فيه الجهاز.",
-      "details": "في IoT تشمل البيئة العالم الحقيقي مثل الهواء، الضوء، أو الموقع."
-    },
-    {
-      "term": "error resilience",
-      "translation_ar": "القدرة على تحمل الأخطاء",
-      "definition": "قدرة النظام على الاستمرار رغم الأخطاء.",
-      "details": "تتحقق باستخدام try/except وتوفير قيم افتراضية."
-    },
-    {
-      "term": "Essential",
-      "translation_ar": "أساسي / ضروري جداً",
-      "definition": "شيء لا يمكن الاستغناء عنه لعمل النظام أو أمانه.",
-      "details": "مثل التشفير الذي يعتبر مكوناً أساسياً لحماية الخصوصية."
-    },
-    {
-      "term": "Evaluation",
-      "translation_ar": "تقييم",
-      "definition": "عملية قياس وفحص النظام للتأكد من مدى نجاحه في تحقيق أهدافه.",
-      "details": "يتم تقييم الحلول الأمنية لمعرفة ما إذا كانت فعالة في منع الهجمات أم لا."
-    },
-    {
-      "term": "Event Correlation",
-      "translation_ar": "ربط الأحداث",
-      "definition": "عملية تحليل العلاقة بين أحداث مختلفة لاكتشاف هجوم معقد.",
-      "details": "بدلاً من النظر لكل حدث وحده، يتم ربط عدة أحداث (مثل: محاولات دخول فاشلة من مكان، متبوعة بتغيير في إعدادات ملف) لاكتشاف الهجوم."
-    },
-    {
-      "term": "event-driven programming",
-      "translation_ar": "برمجة قائمة على الأحداث",
-      "definition": "نمط برمجي يعتمد على الأحداث لتشغيل الكود.",
-      "details": "يتم تنفيذ الكود عند حدوث حدث مثل وصول رسالة أو اتصال."
-    },
-    {
-      "term": "exception handling",
-      "translation_ar": "معالجة الاستثناءات",
-      "definition": "آلية للتعامل مع الأخطاء أثناء تنفيذ البرنامج.",
-      "details": "تُستخدم لمنع توقف البرنامج عند حدوث خطأ، مثل استخدام try/except في Python لمعالجة المدخلات غير الصحيحة."
-    },
-    {
-      "term": "execute",
-      "translation_ar": "ينفذ",
-      "definition": "تشغيل أمر أو برنامج.",
-      "details": "في الأمن: منع تنفيذ كود غير موثوق يعتبر أمرًا حاسمًا."
-    },
-    {
-      "term": "explicitly",
-      "translation_ar": "بشكل صريح",
-      "definition": "بوضوح وبدون أي غموض.",
-      "details": "في الأمن: يعني أن السماح يجب أن يكون محددًا وواضحًا، وليس ضمنيًا أو تلقائيًا."
-    },
-    {
-      "term": "exploit",
-      "translation_ar": "يستغل",
-      "definition": "استخدام ثغرة لتحقيق هجوم.",
-      "details": "المهاجم يستغل vulnerability للوصول غير المصرح به أو تنفيذ هجوم."
-    },
-    {
-      "term": "Exploitation",
-      "translation_ar": "استغلال",
-      "definition": "عملية استخدام ثغرة أمنية للوصول غير المصرح به أو إلحاق الضرر.",
-      "details": "المهاجم يقوم بالاستغلال (Exploitation) لتحقيق أهدافه بعد اكتشاف الثغرة."
-    },
-    {
-      "term": "exposure",
-      "translation_ar": "تعرض",
-      "definition": "وجود شيء في بيئة يمكن الوصول إليه أو التأثير عليه.",
-      "details": "الأجهزة المعرضة (exposed) تكون أكثر عرضة للهجمات."
-    },
-    {
-      "term": "extract",
-      "translation_ar": "يستخرج",
-      "definition": "الحصول على بيانات من مصدر معين.",
-      "details": "في الهجمات: استخراج مفاتيح أو كلمات مرور من الذاكرة."
-    },
-    {
-      "term": "Fail-safe behavior",
-      "translation_ar": "سلوك الفشل الآمن",
-      "definition": "تصميم يجعل النظام ينتقل إلى حالة آمنة عند حدوث خطأ.",
-      "details": "بدلاً من الاستمرار في العمل بشكل غير آمن، يقوم النظام بإيقاف العمليات الخطرة أو استخدام إعدادات آمنة افتراضيًا."
-    },
-    {
-      "term": "Failure",
-      "translation_ar": "فشل / عطل",
-      "definition": "توقف النظام أو أحد مكوناته عن أداء الوظيفة المطلوبة.",
-      "details": "في الأمن، قد يكون الفشل نتيجة هجوم (مثل DoS) أو نتيجة خطأ تقني غير مقصود."
-    },
-    {
-      "term": "fallback mechanism",
-      "translation_ar": "آلية بديلة",
-      "definition": "استخدام بديل عند فشل العملية الأساسية.",
-      "details": "مثل الرجوع إلى SAFE_DEFAULTS عند فشل تحميل الإعدادات."
-    },
-    {
-      "term": "file handling",
-      "translation_ar": "التعامل مع الملفات",
-      "definition": "قراءة وكتابة الملفات في النظام.",
-      "details": "يجب أن يتم بشكل آمن لتجنب تسريب البيانات أو التلاعب بها."
-    },
-    {
-      "term": "fingerprint",
-      "translation_ar": "بصمة رقمية",
-      "definition": "قيمة فريدة تمثل البيانات.",
-      "details": "في hashing: أي تغيير في البيانات ينتج بصمة مختلفة."
-    },
-    {
-      "term": "Firmware",
-      "translation_ar": "البرنامج الثابت",
-      "definition": "برنامج مدمج داخل الجهاز يتحكم في عمله.",
-      "details": "يكون مخزنًا في ذاكرة غير متطايرة (Flash). مسؤول عن تشغيل الجهاز والتفاعل مع العتاد (Hardware)."
-    },
-    {
-      "term": "Firmware Update",
-      "translation_ar": "تحديث البرنامج الثابت",
-      "definition": "عملية استبدال نسخة البرنامج المخزن في ذاكرة الجهاز بنسخة أحدث.",
-      "details": "يجب أن يكون التحديث موثقاً وموقعاً رقمياً لضمان عدم تثبيت برامج خبيثة."
-    },
-    {
-      "term": "flash memory",
-      "translation_ar": "ذاكرة فلاش",
-      "definition": "نوع من الذاكرة غير المتطايرة لتخزين البيانات.",
-      "details": "تُستخدم في الأجهزة لتخزين firmware والبيانات، ويمكن قراءتها في الهجمات الفيزيائية."
-    },
-    {
-      "term": "forensic",
-      "translation_ar": "تحليل جنائي رقمي",
-      "definition": "تحليل الأدلة الرقمية بعد وقوع حادث أمني.",
-      "details": "يستخدم لمعرفة كيفية حدوث الهجوم ومن المسؤول عنه."
-    },
-    {
-      "term": "format",
-      "translation_ar": "تنسيق",
-      "definition": "الشكل أو البنية التي يجب أن تكون عليها البيانات.",
-      "details": "مثل email format أو رقم هاتف، ويجب التحقق منه."
+      "term": "Interface",
+      "translation_ar": "واجهة برمجية",
+      "definition": "Contract that defines methods without implementation.",
+      "details": "Used for abstraction in programming."
     },
     {
       "term": "Framework",
       "translation_ar": "إطار عمل",
-      "definition": "مجموعة من القواعد والأدوات الجاهزة التي تساعد في بناء الأنظمة بشكل منظم.",
-      "details": "يوفر إطار العمل بنية أساسية توفر الوقت وتضمن اتباع أفضل الممارسات."
+      "definition": "Pre-built structure for software development.",
+      "details": "Provides reusable components and tools."
     },
     {
-      "term": "Governance",
-      "translation_ar": "الحوكمة",
-      "definition": "مجموعة من القواعد والسياسات التي توجه وتتحكم في أمن المعلومات بالمؤسسة.",
-      "details": "تضمن أن استراتيجية الأمن تتماشى مع أهداف العمل وأن المخاطر تُدار بشكل صحيح."
+      "term": "Loosely Typed Helper",
+      "translation_ar": "مساعد غير مُقيد النوع",
+      "definition": "Type of helper that does not require strict data types.",
+      "details": "Used in views where data type is dynamic and flexible."
     },
     {
-      "term": "Hardcoded secret",
-      "translation_ar": "سر مضمّن داخل الكود",
-      "definition": "مفتاح أو كلمة مرور مكتوبة مباشرة داخل الشيفرة المصدرية.",
-      "details": "يعد خطأ أمني خطير لأنه يمكن اكتشافه بسهولة إذا تم الوصول إلى الكود، مما يعرض النظام للاختراق."
+      "term": "Strong Typed Helper",
+      "translation_ar": "مساعد مُقيد النوع",
+      "definition": "Helper that requires a defined model type.",
+      "details": "Provides compile-time checking in MVC views."
     },
     {
-      "term": "Hardware Root of Trust",
-      "translation_ar": "جذر الثقة في العتاد",
-      "definition": "مكون مادي (هاردوير) موثوق به تمامًا يُستخدم كأساس لأمان النظام.",
-      "details": "هو الجزء الذي تبدأ منه عملية الإقلاع الآمن، حيث يكون الكود الموجود فيه غير قابل للتعديل (مثل ROM) ويقوم بالتحقق من باقي أجزاء النظام."
+      "term": "TModel",
+      "translation_ar": "نوع النموذج العام",
+      "definition": "Generic type used in strongly typed helpers.",
+      "details": "Represents the model structure in Razor views."
     },
     {
-      "term": "hardware tampering",
-      "translation_ar": "العبث بالعتاد",
-      "definition": "تعديل الجهاز ماديًا للتأثير على سلوكه.",
-      "details": "مثل تغيير إشارات الحساسات أو فتح الجهاز للوصول إلى مكوناته."
+      "term": "@class",
+      "translation_ar": "سمة الكلاس في Razor",
+      "definition": "Razor syntax used to avoid conflict with C# keyword.",
+      "details": "Used when assigning CSS class in strong typed helpers."
     },
     {
-      "term": "hash digest",
-      "translation_ar": "ناتج التجزئة",
-      "definition": "القيمة الناتجة من دالة التجزئة.",
-      "details": "تكون عادة سلسلة نصية ثابتة الطول تمثل البيانات الأصلية بشكل غير قابل للعكس."
+      "term": "asp-",
+      "translation_ar": "بادئة سمات السيرفر",
+      "definition": "Prefix used for server-side attributes in ASP.NET Core.",
+      "details": "Used in tag helpers like asp-controller and asp-action."
     },
     {
-      "term": "Hash function",
-      "translation_ar": "دالة التجزئة",
-      "definition": "دالة تحول البيانات إلى قيمة ثابتة الطول.",
-      "details": "أي تغيير بسيط في البيانات يؤدي إلى تغيير كبير في الناتج، لذلك تُستخدم للتحقق من سلامة البيانات."
+      "term": "C#",
+      "translation_ar": "لغة سي شارب",
+      "definition": "Programming language used in .NET development.",
+      "details": "Used in Razor views and backend logic."
     },
     {
-      "term": "Hashing",
-      "translation_ar": "التجزئة",
-      "definition": "عملية تحويل البيانات إلى بصمة رقمية ثابتة الطول ولا يمكن عكسها.",
-      "details": "تُستخدم للتأكد من سلامة البيانات (Integrity). أي تغيير في البيانات سيؤدي إلى تغيير ناتج التجزئة بالكامل."
+      "term": "Routing Map",
+      "translation_ar": "خريطة التوجيه",
+      "definition": "System that maps URLs to controller actions.",
+      "details": "Directs request to correct controller and method."
     },
     {
-      "term": "hex encoding",
-      "translation_ar": "ترميز ست عشري",
-      "definition": "تحويل البيانات الثنائية إلى تمثيل نصي باستخدام نظام base16.",
-      "details": "يُستخدم لعرض القيم مثل hash أو HMAC بشكل قابل للقراءة."
+      "term": "Action Method",
+      "translation_ar": "دالة الإجراء",
+      "definition": "Method inside controller that handles requests.",
+      "details": "Returns views or processes data."
     },
     {
-      "term": "HMAC",
-      "translation_ar": "خوارزمية HMAC",
-      "definition": "آلية تستخدم مفتاحًا سريًا مع دالة تجزئة للتحقق من سلامة وأصالة البيانات.",
-      "details": "تجمع بين hashing ومفتاح سري لضمان أن الرسالة لم تتغير وأنها من مصدر موثوق."
+      "term": "DB Context",
+      "translation_ar": "سياق قاعدة البيانات",
+      "definition": "Class that manages database connection and tables.",
+      "details": "Core part of Entity Framework."
     },
     {
-      "term": "hmac tag",
-      "translation_ar": "وسم HMAC",
-      "definition": "قيمة تحقق تنتج من HMAC لضمان سلامة وأصالة الرسالة.",
-      "details": "تُستخدم للتحقق من أن الرسالة لم تتغير وأنها من مصدر موثوق."
+      "term": "Code First",
+      "translation_ar": "البدء بالكود",
+      "definition": "Approach where classes are created before database.",
+      "details": "Database is generated from code models."
     },
     {
-      "term": "IAM",
-      "translation_ar": "إدارة الهوية والوصول",
-      "definition": "نظام لإدارة هويات المستخدمين وصلاحيات وصولهم للموارد.",
-      "details": "يرمز إلى Identity and Access Management. يضمن أن الشخص الصحيح (أو الجهاز الصحيح) لديه الوصول للموارد الصحيحة في الوقت الصحيح وللأسباب الصحيحة."
+      "term": "Database First",
+      "translation_ar": "البدء بقاعدة البيانات",
+      "definition": "Approach where database is created first.",
+      "details": "Code is generated from existing database."
     },
     {
-      "term": "IDS",
-      "translation_ar": "نظام كشف التسلل",
-      "definition": "نظام يراقب حركة الشبكة أو الجهاز لاكتشاف الأنشطة المشبوهة.",
-      "details": "يرمز إلى Intrusion Detection System. وظيفته هي المراقبة وإرسال تنبيهات عند اكتشاف محاولة اختراق، لكنه عادة لا يوقف الهجوم تلقائيًا."
+      "term": "ViewData",
+      "translation_ar": "بيانات العرض",
+      "definition": "Dictionary used to pass data from controller to view.",
+      "details": "Requires type casting when retrieving data."
     },
     {
-      "term": "impact",
-      "translation_ar": "التأثير",
-      "definition": "مدى الضرر الناتج عن حدث معين.",
-      "details": "قد يكون التأثير مالي، أمني، أو تشغيلي. يستخدم مع likelihood لتحديد مستوى المخاطر."
+      "term": "GET Request",
+      "translation_ar": "طلب جلب البيانات",
+      "definition": "HTTP request used to retrieve data.",
+      "details": "Data is sent in URL query string."
     },
     {
-      "term": "in transit",
-      "translation_ar": "أثناء النقل",
-      "definition": "البيانات أثناء انتقالها عبر الشبكة.",
-      "details": "تكون معرضة للاعتراض، لذلك يجب تأمينها باستخدام التشفير."
+      "term": "POST Request",
+      "translation_ar": "طلب إرسال البيانات",
+      "definition": "HTTP request used to send data to server.",
+      "details": "Data is sent in request body."
     },
     {
-      "term": "Incident",
-      "translation_ar": "حادث أمني",
-      "definition": "حدث يشير إلى احتمال اختراق الأمان أو فشل الضوابط الأمنية.",
-      "details": "يتطلب التعامل مع الحادث استجابة سريعة (Incident Response) لاحتواء الضرر وإصلاح النظام."
+      "term": "RedirectToAction",
+      "translation_ar": "إعادة التوجيه إلى Action",
+      "definition": "Method used to redirect to another action.",
+      "details": "Used after saving or updating data."
     },
     {
-      "term": "incremental hashing",
-      "translation_ar": "التجزئة التدريجية",
-      "definition": "تحديث قيمة الهاش بشكل تدريجي مع كل جزء من البيانات.",
-      "details": "يتم باستخدام update() بدلاً من حساب الهاش مرة واحدة."
+      "term": "Select Tag",
+      "translation_ar": "وسم القائمة المنسدلة",
+      "definition": "HTML tag used to create dropdown lists.",
+      "details": "Often combined with asp-items in ASP.NET Core."
     },
     {
-      "term": "infinite loop",
-      "translation_ar": "حلقة لا نهائية",
-      "definition": "حلقة تستمر في التنفيذ بدون توقف.",
-      "details": "مثل loop_forever() في MQTT التي تجعل البرنامج يستمر في الاستماع للرسائل."
+      "term": "Model Binding",
+      "translation_ar": "ربط النموذج",
+      "definition": "Process of sending form data to backend model.",
+      "details": "Used in form submissions like login and register."
     },
     {
-      "term": "information disclosure",
-      "translation_ar": "كشف المعلومات",
-      "definition": "وصول غير مصرح به إلى البيانات.",
-      "details": "أحد تهديدات STRIDE ويعني تسريب بيانات حساسة."
+      "term": "Frontend",
+      "translation_ar": "الواجهة الأمامية",
+      "definition": "Client-side part of the application.",
+      "details": "Includes UI and user interactions."
     },
     {
-      "term": "input sanitization",
-      "translation_ar": "تنقية المدخلات",
-      "definition": "تنظيف المدخلات من القيم الضارة أو غير المتوقعة.",
-      "details": "تُستخدم لمنع الهجمات مثل injection والتأكد من أن البيانات آمنة قبل معالجتها."
+      "term": "Backend",
+      "translation_ar": "الواجهة الخلفية",
+      "definition": "Server-side logic of application.",
+      "details": "Handles data processing and database operations."
     },
     {
-      "term": "input validation",
-      "translation_ar": "التحقق من المدخلات",
-      "definition": "فحص البيانات قبل استخدامها للتأكد من صحتها.",
-      "details": "يحمي من هجمات مثل injection عبر التأكد من النوع والشكل والقيم."
+      "term": "Server-side Attribute",
+      "translation_ar": "سمة جهة السيرفر",
+      "definition": "Attributes processed on server before rendering.",
+      "details": "All start with asp- prefix in ASP.NET Core."
     },
     {
-      "term": "insecure connection",
-      "translation_ar": "اتصال غير آمن",
-      "definition": "اتصال لا يتم فيه التحقق من الهوية أو التشفير بشكل صحيح.",
-      "details": "يحدث عند تعطيل التحقق من TLS أو استخدام إعدادات ضعيفة."
+      "term": "Dropdown List",
+      "translation_ar": "قائمة منسدلة",
+      "definition": "UI element that allows selecting one option.",
+      "details": "Commonly created using select tag."
     },
     {
-      "term": "Integrity",
-      "translation_ar": "سلامة البيانات",
-      "definition": "ضمان أن البيانات لم يتم تعديلها أو العبث بها.",
-      "details": "يتم تحقيقها باستخدام تقنيات مثل Hashing والتوقيعات الرقمية. أي تغيير في البيانات يؤدي إلى تغيير قيمة الهاش."
+      "term": "Form Data",
+      "translation_ar": "بيانات النموذج",
+      "definition": "Data sent from user input forms.",
+      "details": "Usually sent using POST request."
     },
     {
-      "term": "interact",
-      "translation_ar": "يتفاعل",
-      "definition": "يتعامل أو يتواصل مع شيء آخر.",
-      "details": "في IoT الأجهزة تتفاعل مع العالم الحقيقي (حساسات، محركات...)."
+      "term": "Query String",
+      "translation_ar": "سلسلة الاستعلام",
+      "definition": "Data appended to URL in GET request.",
+      "details": "Used for passing simple values."
     },
     {
-      "term": "interception",
-      "translation_ar": "اعتراض",
-      "definition": "التقاط البيانات أثناء انتقالها دون إذن.",
-      "details": "هجوم شائع في الشبكات، خاصة إذا لم يتم استخدام تشفير."
+      "term": "Validation",
+      "translation_ar": "التحقق من صحة البيانات",
+      "definition": "Process of checking input correctness.",
+      "details": "Prevents invalid data from being saved."
     },
     {
-      "term": "invade privacy",
-      "translation_ar": "انتهاك الخصوصية",
-      "definition": "الدخول إلى معلومات شخصية بدون إذن.",
-      "details": "يُعد من أخطر أهداف الهجمات خاصة في IoT بسبب وجود حساسات وكاميرات."
+      "term": "Cross-Platform",
+      "translation_ar": "متعدد الأنظمة",
+      "definition": "Software that works on multiple operating systems.",
+      "details": "Example: Windows, Linux, and macOS support in ASP.NET Core."
     },
     {
-      "term": "IPS",
-      "translation_ar": "نظام منع التسلل",
-      "definition": "نظام يكتشف التسلل ويقوم بإجراءات فورية لإيقاف الهجوم.",
-      "details": "يرمز إلى Intrusion Prevention System. هو تطور للـ IDS، حيث يمكنه قطع الاتصال المشبوه أو إغلاق المنافذ لمنع المهاجم من النجاح."
+      "term": "Modern Web Application",
+      "translation_ar": "تطبيق ويب حديث",
+      "definition": "Web application built with current technologies and standards.",
+      "details": "Often includes APIs, cloud support, and responsive UI."
     },
     {
-      "term": "ISO format",
-      "translation_ar": "تنسيق ISO",
-      "definition": "تنسيق قياسي لتمثيل التاريخ والوقت.",
-      "details": "مثل 2026-04-08T12:00:00Z ويُستخدم في الأنظمة لضمان التوافق."
+      "term": "HTTP Status Code",
+      "translation_ar": "رمز حالة HTTP",
+      "definition": "Numeric code returned by server to indicate request result.",
+      "details": "Examples include success, error, or not found responses."
     },
     {
-      "term": "Isolate",
-      "translation_ar": "يعزل",
-      "definition": "وضع شيء في مكان منفصل بعيداً عن الآخرين.",
-      "details": "يتم عزل الأجهزة المصابة لحماية بقية الشبكة."
+      "term": "Data Interchange",
+      "translation_ar": "تبادل البيانات",
+      "definition": "Process of exchanging data between systems.",
+      "details": "JSON is commonly used for this purpose."
     },
     {
-      "term": "Isolation",
-      "translation_ar": "العزل",
-      "definition": "فصل المكونات أو البيانات عن بعضها لمنع التأثير المتبادل.",
-      "details": "في الأمان، يتم عزل الأجزاء الحساسة بحيث إذا تم اختراق جزء واحد، لا يتمكن المهاجم من الوصول لبقية الأجزاء."
+      "term": "Server",
+      "translation_ar": "الخادم",
+      "definition": "System that provides data or services to clients.",
+      "details": "Handles requests from browsers or applications."
     },
     {
-      "term": "json serialization",
-      "translation_ar": "تحويل إلى JSON",
-      "definition": "تحويل البيانات إلى صيغة JSON.",
-      "details": "يُستخدم لحفظ البيانات أو إرسالها عبر الشبكة بشكل منظم."
+      "term": "Browser",
+      "translation_ar": "المتصفح",
+      "definition": "Software used to access web pages.",
+      "details": "Examples: Chrome, Firefox, Edge."
     },
     {
-      "term": "JTAG",
-      "translation_ar": "واجهة JTAG",
-      "definition": "واجهة تستخدم لاختبار وتصحيح الأجهزة.",
-      "details": "تتيح الوصول المباشر للمعالج، ويمكن استغلالها لتجاوز الحماية."
+      "term": "Web Page",
+      "translation_ar": "صفحة ويب",
+      "definition": "Document displayed in a web browser.",
+      "details": "Can be static or dynamic."
     },
     {
-      "term": "keepalive",
-      "translation_ar": "إبقاء الاتصال نشط",
-      "definition": "فترة زمنية للحفاظ على الاتصال بين العميل والخادم.",
-      "details": "في MQTT، يحدد الزمن الذي يتم فيه إرسال إشارات للحفاظ على الاتصال."
+      "term": "Dynamic Content",
+      "translation_ar": "محتوى ديناميكي",
+      "definition": "Content that changes based on user or server data.",
+      "details": "Generated at runtime using server-side code."
     },
     {
-      "term": "Key Exchange",
-      "translation_ar": "تبادل المفاتيح",
-      "definition": "عملية يتبادل فيها طرفان مفاتيح التشفير بشكل آمن عبر قناة غير آمنة.",
-      "details": "مهمة جدًا في بدء الاتصالات الآمنة مثل TLS، حيث يحتاج الطرفان لاتفاق على مفتاح سري دون أن يتمكن المتجسس من معرفته."
+      "term": "Static Content",
+      "translation_ar": "محتوى ثابت",
+      "definition": "Content that does not change automatically.",
+      "details": "Usually HTML files without backend processing."
     },
     {
-      "term": "key function",
-      "translation_ar": "دالة المفتاح",
-      "definition": "دالة تحدد القيمة المستخدمة في الفرز.",
-      "details": "مثل اختيار 'score' من كل عنصر للمقارنة."
+      "term": "Server-side Processing",
+      "translation_ar": "معالجة على الخادم",
+      "definition": "Execution of code on the server before sending response.",
+      "details": "Used in ASP.NET Core applications."
     },
     {
-      "term": "lambda function",
-      "translation_ar": "دالة لامبدا",
-      "definition": "دالة صغيرة مجهولة بدون اسم.",
-      "details": "تُستخدم داخل sort لتحديد معيار الترتيب."
+      "term": "Client-side",
+      "translation_ar": "جهة العميل",
+      "definition": "Processing that happens in the user's browser.",
+      "details": "Includes JavaScript execution."
     },
     {
-      "term": "least privilege",
-      "translation_ar": "أقل صلاحية",
-      "definition": "إعطاء كل كيان أقل قدر من الصلاحيات اللازمة.",
-      "details": "يقلل من تأثير الاختراق، لأن المهاجم يحصل على صلاحيات محدودة فقط."
+      "term": "Framework",
+      "translation_ar": "إطار عمل",
+      "definition": "Pre-built structure for building applications.",
+      "details": "Provides reusable components and architecture rules."
     },
     {
-      "term": "Lifecycle",
-      "translation_ar": "دورة حياة",
-      "definition": "المراحل التي يمر بها النظام من البداية وحتى النهاية.",
-      "details": "في IoT، تشمل دورة حياة كل شيء من التصميم والبرمجة حتى التخلص الآمن من الجهاز."
+      "term": "Scalability",
+      "translation_ar": "قابلية التوسع",
+      "definition": "Ability of a system to handle increased load.",
+      "details": "Important in modern web applications."
     },
     {
-      "term": "Lifecycle Management",
-      "translation_ar": "إدارة دورة حياة الجهاز",
-      "definition": "متابعة الجهاز منذ مرحلة التصنيع وحتى التخلص منه النهائي.",
-      "details": "تشمل مراحل: التصميم، التصنيع، النشر، التشغيل، التحديث، وفي النهاية مسح البيانات وإلغاء الاعتمادات عند خروج الجهاز من الخدمة."
+      "term": "Performance",
+      "translation_ar": "الأداء",
+      "definition": "Speed and efficiency of a system.",
+      "details": "ASP.NET Core is known for high performance."
     },
     {
-      "term": "likelihood",
-      "translation_ar": "احتمالية الحدوث",
-      "definition": "مدى احتمال وقوع حدث معين.",
-      "details": "يُستخدم في حساب المخاطر مع التأثير (impact)، وكلما زادت الاحتمالية زاد الخطر."
+      "term": "API Endpoint",
+      "translation_ar": "نقطة نهاية API",
+      "definition": "URL where API can be accessed.",
+      "details": "Used to send and receive data between systems."
     },
     {
-      "term": "logging",
-      "translation_ar": "تسجيل الأحداث",
-      "definition": "عملية حفظ الأحداث والأنشطة التي تحدث داخل النظام.",
-      "details": "تستخدم في التحليل الأمني ومعرفة ما حدث أثناء الهجوم."
+      "term": "Data Sharing",
+      "translation_ar": "مشاركة البيانات",
+      "definition": "Process of sending data between applications.",
+      "details": "Common in distributed systems."
     },
     {
-      "term": "Maintain",
-      "translation_ar": "يحافظ على / يصون",
-      "definition": "القيام بالأعمال اللازمة لبقاء النظام يعمل بكفاءة وأمان.",
-      "details": "تشمل الصيانة تحديث البرامج بانتظام ومراقبة الأداء وإصلاح الأعطال."
+      "term": "Request Handling",
+      "translation_ar": "معالجة الطلبات",
+      "definition": "Process of receiving and processing client requests.",
+      "details": "Handled by controllers in MVC."
     },
     {
-      "term": "malicious",
-      "translation_ar": "خبيث",
-      "definition": "شيء مصمم لإلحاق الضرر أو الاختراق.",
-      "details": "يستخدم لوصف البرمجيات أو الأنشطة الضارة مثل malware أو malicious firmware."
+      "term": "Response",
+      "translation_ar": "استجابة",
+      "definition": "Output sent from server to client.",
+      "details": "Can be HTML, JSON, or error messages."
     },
     {
-      "term": "measurement",
-      "translation_ar": "قياس",
-      "definition": "قيمة يتم جمعها من جهاز أو نظام.",
-      "details": "في IoT مثل درجة الحرارة أو الضغط أو الموقع."
+      "term": "Request Lifecycle",
+      "translation_ar": "دورة حياة الطلب",
+      "definition": "Steps a request goes through in a web application.",
+      "details": "From client request to server response."
     },
     {
-      "term": "memory overhead",
-      "translation_ar": "استهلاك الذاكرة الزائد",
-      "definition": "استخدام ذاكرة أكبر من اللازم أثناء التنفيذ.",
-      "details": "يحدث عند تحميل ملفات كبيرة دفعة واحدة بدلاً من تقسيمها."
+      "term": "ViewData",
+      "translation_ar": "بيانات العرض",
+      "definition": "Dictionary used to pass data from controller to view.",
+      "details": "Requires manual casting when retrieving values."
     },
     {
-      "term": "message authentication code",
-      "translation_ar": "رمز توثيق الرسالة",
-      "definition": "قيمة تُستخدم للتحقق من سلامة وأصالة الرسالة.",
-      "details": "HMAC هو نوع من MAC يستخدم مفتاحًا سريًا مع دالة تجزئة."
+      "term": "Custom Class",
+      "translation_ar": "فئة مخصصة",
+      "definition": "User-defined structure used to group related data.",
+      "details": "Used to pass multiple data types to a single view."
     },
     {
-      "term": "message integrity check",
-      "translation_ar": "التحقق من سلامة الرسالة",
-      "definition": "عملية التأكد من أن الرسالة لم يتم تغييرها.",
-      "details": "يتم ذلك باستخدام hashing أو HMAC، حيث يتم مقارنة القيم للتحقق من عدم التلاعب."
+      "term": "Controller Action",
+      "translation_ar": "إجراء في المتحكم",
+      "definition": "Method that handles incoming HTTP requests.",
+      "details": "Returns views or data responses like HTML or JSON."
     },
     {
-      "term": "metadata",
-      "translation_ar": "بيانات وصفية",
-      "definition": "بيانات تصف بيانات أخرى.",
-      "details": "مثل معلومات الجهاز (device_id، نوع التوثيق) داخل ملف JSON."
+      "term": "Action Result",
+      "translation_ar": "نتيجة الإجراء",
+      "definition": "Output returned from a controller action.",
+      "details": "Can be View, Redirect, or JSON response."
     },
     {
-      "term": "Methodology",
-      "translation_ar": "منهجية",
-      "definition": "أسلوب منظم ومنهج محدد لإنجاز مهمة أو مشروع.",
-      "details": "مثل اتباع خطوات محددة في تحليل المخاطر أو تطوير البرمجيات."
+      "term": "ViewModel Namespace",
+      "translation_ar": "مساحة أسماء ViewModel",
+      "definition": "Logical container for ViewModel classes.",
+      "details": "Made available to all views using ViewImports."
     },
     {
-      "term": "MFA",
-      "translation_ar": "المصادقة متعددة العوامل",
-      "definition": "طريقة للتحقق من الهوية تتطلب أكثر من دليل واحد.",
-      "details": "يرمز إلى Multi-Factor Authentication. يتطلب عادة شيئين أو أكثر من: (شيء تعرفه مثل كلمة المرور، شيء تملكه مثل الهاتف، شيء فيك مثل البصمة). هذا يزيد الأمان بشكل كبير لأنه حتى لو سرق المهاجم كلمة المرور، فلن يستطيع الدخول بدون العامل الثاني."
+      "term": "Namespace",
+      "translation_ar": "مساحة أسماء",
+      "definition": "Logical grouping of related classes in code.",
+      "details": "Helps organize and manage large applications."
     },
     {
-      "term": "Misconfiguration",
-      "translation_ar": "سوء الإعداد",
-      "definition": "إعداد النظام بشكل غير صحيح مما يترك ثغرات أمنية.",
-      "details": "مثل ترك كلمات مرور افتراضية، أو فتح منافذ غير ضرورية في جدار الحماية، أو جعل قاعدة البيانات عامة على الإنترنت."
+      "term": "Binding Types",
+      "translation_ar": "أنواع الربط",
+      "definition": "Ways of sending data to backend models.",
+      "details": "Includes primitive, collection, and custom class binding."
     },
     {
-      "term": "Mitigate",
-      "translation_ar": "تخفيف / تقليل",
-      "definition": "اتخاذ إجراءات لتقليل احتمالية حدوث الخطر أو شدة تأثيره.",
-      "details": "بدلاً من تجاهل الخطر، نقوم بوضع ضوابط (مثل التشفير) لجعله أقل ضرراً."
+      "term": "Primitive Data",
+      "translation_ar": "بيانات أولية",
+      "definition": "Basic data types like string, int, bool.",
+      "details": "Used for simple form inputs."
     },
     {
-      "term": "mitigation",
-      "translation_ar": "تخفيف المخاطر",
-      "definition": "إجراءات لتقليل أو الحد من المخاطر.",
-      "details": "لا تعني إزالة الخطر بالكامل، بل تقليل تأثيره أو احتماله."
+      "term": "Data Collection",
+      "translation_ar": "مجموعة بيانات",
+      "definition": "Group of multiple values like lists or arrays.",
+      "details": "Used when sending multiple items together."
     },
     {
-      "term": "mobile app",
-      "translation_ar": "تطبيق الهاتف",
-      "definition": "برنامج يعمل على الهاتف الذكي.",
-      "details": "يستخدم للتحكم في أجهزة IoT وعرض البيانات."
+      "term": "Query String Root Values",
+      "translation_ar": "قيم الجذر في سلسلة الاستعلام",
+      "definition": "Core components inside a URL query string.",
+      "details": "Includes Class, Method, and ID."
     },
     {
-      "term": "modified",
-      "translation_ar": "تم تعديله",
-      "definition": "تم تغيير شيء من حالته الأصلية.",
-      "details": "في الأمن السيبراني، يشير إلى أن البيانات أو الملفات قد تم العبث بها، وهو أمر خطير لأنه قد يعني اختراقًا."
+      "term": "Frontend",
+      "translation_ar": "الواجهة الأمامية",
+      "definition": "Client-side part of the application.",
+      "details": "Handles user interaction and input forms."
     },
     {
-      "term": "monitoring",
-      "translation_ar": "المراقبة",
-      "definition": "متابعة النظام بشكل مستمر لاكتشاف أي نشاط غير طبيعي.",
-      "details": "تستخدم لاكتشاف الهجمات مبكرًا وتحليل الأداء والسلوك."
+      "term": "Backend",
+      "translation_ar": "الواجهة الخلفية",
+      "definition": "Server-side processing system.",
+      "details": "Handles logic, database, and requests."
     },
     {
-      "term": "motivation",
-      "translation_ar": "دافع",
-      "definition": "السبب الذي يدفع المهاجم للقيام بالهجوم.",
-      "details": "قد يكون مالي، تجسس، تخريب، أو لأغراض سياسية."
+      "term": "Form",
+      "translation_ar": "نموذج إدخال",
+      "definition": "HTML structure used to collect user data.",
+      "details": "Can use GET or POST methods."
     },
     {
-      "term": "MQTT",
-      "translation_ar": "بروتوكول MQTT",
-      "definition": "بروتوكول اتصال خفيف الوزن يستخدم في إنترنت الأشياء.",
-      "details": "يعتمد على نموذج publish/subscribe، حيث يقوم الجهاز بإرسال البيانات إلى وسيط (broker) بدلاً من الاتصال المباشر مع الأجهزة الأخرى."
+      "term": "GET Method",
+      "translation_ar": "طريقة GET",
+      "definition": "HTTP method used to retrieve data.",
+      "details": "Sends data in URL parameters."
     },
     {
-      "term": "mqtt client",
-      "translation_ar": "عميل MQTT",
-      "definition": "برنامج يتصل بوسيط MQTT لإرسال أو استقبال الرسائل.",
-      "details": "يمكن أن يكون publisher أو subscriber ويتواصل مع broker عبر الشبكة."
+      "term": "POST Method",
+      "translation_ar": "طريقة POST",
+      "definition": "HTTP method used to send data.",
+      "details": "Sends data in request body."
     },
     {
-      "term": "mqtt publish",
-      "translation_ar": "نشر MQTT",
-      "definition": "إرسال رسالة إلى topic معين في MQTT.",
-      "details": "يتم عبر client.publish(topic, payload) لإرسال البيانات إلى المشتركين."
+      "term": "Edit View",
+      "translation_ar": "صفحة التعديل",
+      "definition": "UI page used to modify existing data.",
+      "details": "Includes form for updating records."
     },
     {
-      "term": "Multi-tenancy",
-      "translation_ar": "تعدد المستأجرين",
-      "definition": "بنية برمجية تخدم عدة عملاء (مستأجرين) باستخدام نظام واحد وقاعدة بيانات مشتركة.",
-      "details": "تستخدم في السحابة لتقليل التكاليف، ولكنها تتطلب عزلًا قويًا جدًا للبيانات لضمان عدم اطلاع مستأجر على بيانات مستأجر آخر."
+      "term": "Index View",
+      "translation_ar": "الصفحة الرئيسية للقائمة",
+      "definition": "Main page that displays list of records.",
+      "details": "Acts as entry point for CRUD operations."
     },
     {
-      "term": "network segmentation",
-      "translation_ar": "تقسيم الشبكة",
-      "definition": "تقسيم الشبكة إلى أجزاء أو مناطق منفصلة.",
-      "details": "يساعد في تقليل انتشار الهجمات، بحيث إذا تم اختراق جزء لا يتمكن المهاجم من الوصول لباقي الأجزاء بسهولة."
+      "term": "CRUD",
+      "translation_ar": "إنشاء وقراءة وتحديث وحذف",
+      "definition": "Basic database operations.",
+      "details": "Create, Read, Update, Delete operations."
     },
     {
-      "term": "Objective",
-      "translation_ar": "هدف / غاية",
-      "definition": "النتيجة التي يسعى النظام أو المشروع لتحقيقها.",
-      "details": "الأهداف الأمنية تحدد ما نريد حمايته وكيف."
+      "term": "HTML Helper",
+      "translation_ar": "مساعد HTML",
+      "definition": "Tool that helps generate HTML elements in MVC.",
+      "details": "Used to simplify form creation."
     },
     {
-      "term": "one-way function",
-      "translation_ar": "دالة أحادية الاتجاه",
-      "definition": "دالة لا يمكن عكسها لاسترجاع المدخلات.",
-      "details": "خاصية أساسية في hashing حيث لا يمكن استرجاع البيانات الأصلية."
+      "term": "Strong Type Helper",
+      "translation_ar": "مساعد مضبوط النوع",
+      "definition": "Helper tied to a specific model type.",
+      "details": "Provides compile-time safety."
     },
     {
-      "term": "OTA",
-      "translation_ar": "التحديث عبر الهواء",
-      "definition": "عملية تحديث البرامج والأجهزة لاسلكيًا عبر الشبكة.",
-      "details": "يرمز إلى Over-The-Air. ضروري جدًا في IoT لإصلاح الثغرات الأمنية (Patching) بعد نشر الأجهزة في مواقع يصعب الوصول إليها ماديًا."
+      "term": "TModel",
+      "translation_ar": "نوع النموذج العام",
+      "definition": "Generic type representing model in Razor.",
+      "details": "Used in strongly typed views."
     },
     {
-      "term": "OTA Update",
-      "translation_ar": "تحديث عبر الهواء",
-      "definition": "إرسال تحديثات البرامج للأجهزة لاسلكياً عبر الإنترنت.",
-      "details": "يسمح للمطورين بإضافة ميزات جديدة أو إصلاح ثغرات أمنية دون الحاجة لاستدعاء الأجهزة ماديًا."
+      "term": "ImageURL",
+      "translation_ar": "رابط الصورة",
+      "definition": "Field used to store image path or file.",
+      "details": "Can be string URL or uploaded file."
     },
     {
-      "term": "overload",
-      "translation_ar": "تحميل زائد",
-      "definition": "زيادة في الاستخدام تتجاوز قدرة النظام.",
-      "details": "قد يؤدي إلى توقف النظام أو بطئه، ويستغل في هجمات DoS."
+      "term": "Validation",
+      "translation_ar": "التحقق من صحة البيانات",
+      "definition": "Process of checking input before saving.",
+      "details": "Prevents invalid or empty data."
     },
     {
-      "term": "pair",
-      "translation_ar": "زوج",
-      "definition": "شيئان مرتبطان معًا ويعملان كواحد.",
-      "details": "في التشفير، يشير إلى public key + private key، أي مفتاحين مرتبطين."
+      "term": "RedirectToAction",
+      "translation_ar": "إعادة التوجيه إلى إجراء",
+      "definition": "Method to navigate to another controller action.",
+      "details": "Used after saving or updating data."
     },
     {
-      "term": "Patch",
-      "translation_ar": "رقعة / تحديث إصلاحي",
-      "definition": "قطعة صغيرة من البرمجيات مصممة لإصلاح مشكلة أو ثغرة معينة.",
-      "details": "تطبيق الرقع (Patching) هو جزء أساسي من الصيانة الأمنية المستمرة."
+      "term": "Route Values",
+      "translation_ar": "قيم التوجيه",
+      "definition": "Parameters passed in URL routing.",
+      "details": "Used to pass data between actions."
     },
     {
-      "term": "patchability",
-      "translation_ar": "قابلية التحديث",
-      "definition": "إمكانية إصلاح النظام عبر تحديثات.",
-      "details": "مهم لإغلاق الثغرات بعد اكتشافها."
+      "term": "Dropdown List",
+      "translation_ar": "قائمة منسدلة",
+      "definition": "UI element for selecting one option.",
+      "details": "Created using select tag with asp-items."
     },
     {
-      "term": "Patching",
-      "translation_ar": "إصلاح الثغرات / الترقيع",
-      "definition": "عملية تطبيق تحديثات برمجية لإصلاح أخطاء أو ثغرات أمنية.",
-      "details": "هي عملية مستمرة لمواجهة التهديدات الجديدة التي تُكتشف بمرور الوقت."
+      "term": "asp-items",
+      "translation_ar": "خاصية ربط العناصر",
+      "definition": "ASP.NET Core attribute for binding dropdown data.",
+      "details": "Used with select tag for dynamic lists."
     },
     {
-      "term": "payload",
-      "translation_ar": "الحمولة",
-      "definition": "البيانات الفعلية التي يتم إرسالها في الرسالة.",
-      "details": "في MQTT تكون payload غالبًا JSON يحتوي على telemetry أو أوامر."
-    },
-    {
-      "term": "permissions",
-      "translation_ar": "صلاحيات",
-      "definition": "الحقوق الممنوحة للوصول أو التنفيذ.",
-      "details": "تحدد ما يمكن للمستخدم أو النظام فعله."
-    },
-    {
-      "term": "persistent",
-      "translation_ar": "مستمر / دائم",
-      "definition": "يستمر لفترة طويلة دون انقطاع.",
-      "details": "في الأمن: يعني أن الكود الخبيث يبقى حتى بعد إعادة التشغيل، وهو أخطر أنواع الهجمات."
-    },
-    {
-      "term": "physical access",
-      "translation_ar": "الوصول الفيزيائي",
-      "definition": "القدرة على الوصول المباشر إلى الجهاز بشكل مادي.",
-      "details": "يُعد من أخطر أنواع الوصول لأن المهاجم يمكنه تجاوز الحماية البرمجية مثل كلمات المرور أو التشفير عبر التعامل المباشر مع العتاد."
-    },
-    {
-      "term": "physical world",
-      "translation_ar": "العالم الفيزيائي",
-      "definition": "العالم الحقيقي خارج الأنظمة الرقمية.",
-      "details": "مثل الحرارة، الحركة، الضوء—وهي أشياء تتعامل معها أجهزة IoT."
-    },
-    {
-      "term": "PKI",
-      "translation_ar": "بنية المفاتيح العامة",
-      "definition": "نظام متكامل لإدارة المفاتيح الرقمية والشهادات وتوثيق الهويات.",
-      "details": "يرمز إلى Public Key Infrastructure. هو الإطار الذي يدعم التشفير غير المتماثل، ويشمل القواعد والجهات (مثل CA) التي تضمن أن المفتاح العام ينتمي فعلاً لصاحبه."
-    },
-    {
-      "term": "Policy",
-      "translation_ar": "سياسة",
-      "definition": "وثيقة رسمية تحدد القواعد والمتطلبات الأمنية للمؤسسة.",
-      "details": "مثل سياسة كلمات المرور، أو سياسة استخدام الأجهزة الشخصية (BYOD)."
-    },
-    {
-      "term": "prevent",
-      "translation_ar": "يمنع",
-      "definition": "إيقاف حدوث شيء قبل أن يحدث.",
-      "details": "في الأمن: الهدف هو منع الهجمات بدلاً من التعامل معها بعد وقوعها."
-    },
-    {
-      "term": "Privacy",
-      "translation_ar": "الخصوصية",
-      "definition": "حق الأفراد في التحكم في بياناتهم الشخصية وحمايتها من الاطلاع غير المصرح به.",
-      "details": "في IoT، الخصوصية مهمة جداً لأن الأجهزة تجمع بيانات حساسة من داخل منازل وحياة المستخدمين."
-    },
-    {
-      "term": "private data",
-      "translation_ar": "بيانات خاصة",
-      "definition": "بيانات حساسة لا يجب أن يطلع عليها إلا أصحاب الصلاحية.",
-      "details": "مثل الموقع، الفيديو، والبيانات الصحية، ويجب حمايتها عبر confidentiality."
-    },
-    {
-      "term": "Private key",
-      "translation_ar": "المفتاح الخاص",
-      "definition": "مفتاح سري يُستخدم لفك تشفير البيانات أو إنشاء توقيع رقمي.",
-      "details": "يجب الحفاظ عليه بسرية تامة. إذا تم تسريبه، يمكن للمهاجم فك تشفير البيانات أو انتحال هوية المالك."
-    },
-    {
-      "term": "private key file",
-      "translation_ar": "ملف المفتاح الخاص",
-      "definition": "ملف يحتوي على المفتاح الخاص المستخدم في التشفير.",
-      "details": "يجب حمايته لأنه يسمح بفك التشفير أو التوقيع."
-    },
-    {
-      "term": "protect",
-      "translation_ar": "يحمي",
-      "definition": "يمنع الضرر أو الوصول غير المصرح به.",
-      "details": "هو الهدف الأساسي للأمن السيبراني."
-    },
-    {
-      "term": "Prototype",
-      "translation_ar": "نموذج أولي",
-      "definition": "نسخة تجريبية أولية من النظام لاختبار الأفكار والوظائف.",
-      "details": "يُستخدم للتأكد من أن التصميم يعمل قبل البدء في الإنتاج الفعلي على نطاق واسع."
-    },
-    {
-      "term": "Provisioning",
-      "translation_ar": "التجهيز / الإعداد الأولي",
-      "definition": "عملية إعداد الجهاز بالمعلومات والشهادات والمفاتيح اللازمة ليبدأ العمل في الشبكة.",
-      "details": "في IoT، تشمل هذه المرحلة إعطاء الجهاز هوية فريدة وربطه بالسحابة (Cloud) بشكل آمن."
-    },
-    {
-      "term": "psk",
-      "translation_ar": "مفتاح مشترك مسبقًا",
-      "definition": "مفتاح سري يتم الاتفاق عليه مسبقًا بين الأطراف.",
-      "details": "يُستخدم في بعض أنظمة التوثيق بدلاً من الشهادات."
-    },
-    {
-      "term": "Public key",
-      "translation_ar": "المفتاح العام",
-      "definition": "مفتاح يُستخدم لتشفير البيانات ويمكن مشاركته مع أي طرف.",
-      "details": "يُستخدم لإرسال بيانات مشفرة إلى صاحب المفتاح الخاص. لا يمكن فك التشفير باستخدامه، بل فقط باستخدام المفتاح الخاص المرتبط به."
-    },
-    {
-      "term": "Publish/Subscribe",
-      "translation_ar": "النشر/الاشتراك",
-      "definition": "نمط اتصال يتم فيه نشر الرسائل إلى موضوعات ويشترك الآخرون لاستلامها.",
-      "details": "يفصل بين المرسل والمستقبل، مما يجعل النظام أكثر مرونة وقابلية للتوسع."
-    },
-    {
-      "term": "range",
-      "translation_ar": "نطاق",
-      "definition": "مجموعة القيم المسموح بها.",
-      "details": "مثلاً: رقم يجب أن يكون بين 0 و100، وهذا جزء من التحقق من المدخلات."
-    },
-    {
-      "term": "RBAC",
-      "translation_ar": "التحكم في الوصول القائم على الأدوار",
-      "definition": "نظام لمنح الصلاحيات بناءً على دور المستخدم في النظام.",
-      "details": "يرمز إلى Role-Based Access Control. بدلاً من إعطاء صلاحيات لكل مستخدم بشكل فردي، يتم إنشاء أدوار (مثل مدير، مستخدم، مراقب) وإعطاء الصلاحيات لهذه الأدوار، ثم ربط المستخدمين بها."
-    },
-    {
-      "term": "real-world impact",
-      "translation_ar": "تأثير على العالم الحقيقي",
-      "definition": "نتيجة تؤثر على الواقع الفيزيائي.",
-      "details": "مثل فتح باب أو تشغيل جهاز، وليس فقط تأثير رقمي."
-    },
-    {
-      "term": "refuse",
-      "translation_ar": "يرفض",
-      "definition": "عدم السماح أو عدم القبول.",
-      "details": "في الأمن: النظام يجب أن يرفض العمليات غير الآمنة."
-    },
-    {
-      "term": "Regulation",
-      "translation_ar": "لوائح / تشريعات",
-      "definition": "قوانين تفرضها جهات حكومية لحماية البيانات والأمن السيبراني.",
-      "details": "عدم الالتزام بها قد يؤدي إلى غرامات مالية كبيرة ومساءلة قانونية."
-    },
-    {
-      "term": "rely on",
-      "translation_ar": "يعتمد على",
-      "definition": "الاعتماد على شيء ليعمل أو ينجح.",
-      "details": "مثال: 'cryptography relies on keys' أي أن التشفير يعتمد على المفاتيح."
-    },
-    {
-      "term": "replay attack",
-      "translation_ar": "هجوم إعادة الإرسال",
-      "definition": "إعادة إرسال رسالة صحيحة تم التقاطها مسبقًا لخداع النظام.",
-      "details": "لا يحتاج المهاجم لفك التشفير، فقط يعيد إرسال نفس الرسالة."
-    },
-    {
-      "term": "Requirement",
-      "translation_ar": "متطلب",
-      "definition": "وصف لميزة أو وظيفة يجب أن يوفرها النظام.",
-      "details": "المتطلبات الأمنية تحدد ما يجب فعله لحماية النظام (مثل: يجب تشفير جميع البيانات المخزنة)."
-    },
-    {
-      "term": "reset",
-      "translation_ar": "إعادة ضبط",
-      "definition": "إرجاع الجهاز إلى حالته الأصلية.",
-      "details": "قد يستخدمه المهاجم لإزالة الحماية أو إعادة إعدادات ضعيفة."
-    },
-    {
-      "term": "resource",
-      "translation_ar": "مورد",
-      "definition": "شيء يمكن استخدامه أو له قيمة.",
-      "details": "في الحوسبة: CPU، الذاكرة، الشبكة كلها موارد."
-    },
-    {
-      "term": "Resource Isolation",
-      "translation_ar": "عزل الموارد",
-      "definition": "ضمان أن كل مستأجر يحصل على حصته من الموارد دون التأثير على الآخرين.",
-      "details": "يمنع هجمات حجب الخدمة (DoS) الداخلية، حيث لا يمكن لمستأجر واحد استهلاك كل الذاكرة أو المعالج وتعطيل الآخرين."
-    },
-    {
-      "term": "Retention",
-      "translation_ar": "الاحتفاظ بالبيانات",
-      "definition": "السياسة التي تحدد مدة تخزين البيانات قبل حذفها.",
-      "details": "مهمة للخصوصية والامتثال للقوانين، حيث يجب عدم الاحتفاظ بالبيانات لفترة أطول مما هو ضروري للغرض الذي جُمعت من أجله."
-    },
-    {
-      "term": "retransmit",
-      "translation_ar": "إعادة الإرسال",
-      "definition": "إرسال البيانات مرة أخرى.",
-      "details": "في الهجمات، يتم استخدام بيانات قديمة لإيهام النظام أنها جديدة."
-    },
-    {
-      "term": "revocation",
-      "translation_ar": "إلغاء الصلاحية",
-      "definition": "إلغاء صلاحية شهادة أو مفتاح.",
-      "details": "يُستخدم عند اكتشاف اختراق لمنع استخدام الهوية المسروقة."
-    },
-    {
-      "term": "Risk",
-      "translation_ar": "المخاطر",
-      "definition": "احتمالية حدوث تهديد وتأثيره على النظام.",
-      "details": "يتم حسابه بناءً على عاملين: احتمال الحدوث (Likelihood) وشدة التأثير (Impact)."
-    },
-    {
-      "term": "risk score",
-      "translation_ar": "درجة المخاطر",
-      "definition": "قيمة رقمية تمثل مستوى الخطر.",
-      "details": "عادة يتم حسابها عبر: likelihood × impact، وتستخدم لتحديد أولويات المعالجة."
-    },
-    {
-      "term": "rollback",
-      "translation_ar": "الرجوع للإصدار السابق",
-      "definition": "إعادة النظام إلى نسخة أقدم.",
-      "details": "قد يستخدمه المهاجم لتثبيت نسخة قديمة تحتوي على ثغرات."
-    },
-    {
-      "term": "Rollout",
-      "translation_ar": "نشر التحديثات",
-      "definition": "عملية توزيع وإصدار نسخة جديدة من البرنامج لمجموعة من المستخدمين أو الأجهزة.",
-      "details": "يتم عادة بشكل تدريجي (Staged Rollout) للتأكد من عدم وجود مشاكل قبل تعميم التحديث على الجميع."
-    },
-    {
-      "term": "Root of Trust",
-      "translation_ar": "جذر الثقة",
-      "definition": "المصدر الأساسي والموثوق الذي تبدأ منه جميع عمليات التحقق في النظام.",
-      "details": "غالباً ما يكون مضمناً في العتاد (Hardware) لضمان عدم قابليته للتعديل أو الاختراق."
-    },
-    {
-      "term": "route",
-      "translation_ar": "يوجّه",
-      "definition": "إرسال البيانات إلى الوجهة الصحيحة.",
-      "details": "في الشبكات: يتم تحديد المسار الذي ستسلكه البيانات للوصول إلى الهدف."
-    },
-    {
-      "term": "router",
-      "translation_ar": "موجّه الشبكة",
-      "definition": "جهاز يربط الشبكات ويوجه البيانات بينها.",
-      "details": "ينقل البيانات من الأجهزة إلى الإنترنت والعكس."
-    },
-    {
-      "term": "sabotage",
-      "translation_ar": "تخريب",
-      "definition": "إلحاق الضرر بالنظام أو تعطيله عمدًا.",
-      "details": "يهدف إلى تقليل كفاءة النظام أو إيقافه بالكامل."
-    },
-    {
-      "term": "safe default",
-      "translation_ar": "إعداد آمن افتراضي",
-      "definition": "مبدأ أمني يجعل النظام يبدأ بإعدادات آمنة تلقائيًا.",
-      "details": "يعني أن النظام يمنع أي سلوك خطير بشكل افتراضي، ولا يسمح به إلا إذا تم التصريح به صراحة."
-    },
-    {
-      "term": "safe loading",
-      "translation_ar": "تحميل آمن",
-      "definition": "قراءة البيانات مع التعامل مع الأخطاء المحتملة.",
-      "details": "يمنع توقف البرنامج عند وجود ملف تالف أو مفقود."
-    },
-    {
-      "term": "SBOM",
-      "translation_ar": "قائمة مواد البرمجيات",
-      "definition": "قائمة جرد مفصلة لجميع المكونات والمكتبات المستخدمة في برنامج معين.",
-      "details": "يرمز إلى Software Bill of Materials. مهم جدًا للأمن لأنه يسمح للمؤسسة بمعرفة ما إذا كان برنامجها يحتوي على مكتبة معينة اكتشفت فيها ثغرة أمنية مؤخرًا."
-    },
-    {
-      "term": "secure boot",
-      "translation_ar": "الإقلاع الآمن",
-      "definition": "آلية تضمن تشغيل برمجيات موثوقة فقط عند بدء تشغيل الجهاز.",
-      "details": "تتحقق من التوقيع الرقمي للـ firmware قبل تشغيله، مما يمنع تشغيل كود خبيث."
-    },
-    {
-      "term": "secure channel",
-      "translation_ar": "قناة آمنة",
-      "definition": "وسيلة اتصال محمية ضد التجسس أو التلاعب.",
-      "details": "تستخدم بروتوكولات مثل TLS لضمان سرية وسلامة البيانات أثناء النقل."
-    },
-    {
-      "term": "secure storage",
-      "translation_ar": "تخزين آمن",
-      "definition": "حماية البيانات أثناء تخزينها.",
-      "details": "يشمل السرية، السلامة، والتحكم في الوصول."
-    },
-    {
-      "term": "Secure-by-Design",
-      "translation_ar": "الأمن منذ التصميم",
-      "definition": "نهج يعني بناء الأمان في النظام منذ بداية مرحلة التصميم وليس كمرحلة لاحقة.",
-      "details": "يعني التفكير في التهديدات المحتملة ووضع حلول لها أثناء كتابة الكود وتصميم البنية التحتية، بدلاً من محاولة إصلاح الثغرات بعد انتهاء المشروع."
-    },
-    {
-      "term": "Segmentation",
-      "translation_ar": "التقسيم",
-      "definition": "تقسيم النظام أو الشبكة إلى أجزاء معزولة لزيادة الأمان.",
-      "details": "الهدف هو منع المهاجم من التنقل بسهولة داخل النظام إذا نجح في اختراق جزء واحد."
-    },
-    {
-      "term": "sense",
-      "translation_ar": "يستشعر",
-      "definition": "جمع بيانات من البيئة المحيطة.",
-      "details": "الأجهزة تستخدم حساسات (sensors) لقراءة القيم مثل الحرارة أو الحركة."
-    },
-    {
-      "term": "sensor readings",
-      "translation_ar": "قراءات الحساسات",
-      "definition": "القيم التي تقيسها الحساسات.",
-      "details": "مثل درجة الحرارة أو الحركة، ويمكن تزويرها في الهجمات."
-    },
-    {
-      "term": "serialization",
-      "translation_ar": "تسلسل البيانات",
-      "definition": "تحويل البيانات إلى صيغة قابلة للإرسال أو التخزين.",
-      "details": "مثل تحويل dictionary إلى JSON باستخدام json.dumps()."
-    },
-    {
-      "term": "SHA-256",
-      "translation_ar": "خوارزمية SHA-256",
-      "definition": "خوارزمية تجزئة تنتج قيمة ثابتة الطول (256 بت).",
-      "details": "تستخدم في التحقق من سلامة البيانات والتوقيعات الرقمية. أي تغيير بسيط في المدخلات ينتج قيمة مختلفة تمامًا."
-    },
-    {
-      "term": "Shared Infrastructure",
-      "translation_ar": "بنية تحتية مشتركة",
-      "definition": "موارد تقنية (مثل السيرفرات والشبكات) يتشارك فيها أكثر من مستخدم أو مؤسسة.",
-      "details": "تُعد جوهر الحوسبة السحابية، وتتطلب تقنيات عزل قوية لمنع الهجمات العابرة للمستأجرين."
-    },
-    {
-      "term": "shared key",
-      "translation_ar": "مفتاح مشترك",
-      "definition": "مفتاح سري يستخدمه طرفان للتشفير وفك التشفير.",
-      "details": "يجب أن يكون معروفًا فقط للطرفين، وأي تسريب له يؤدي إلى اختراق كامل."
-    },
-    {
-      "term": "SIEM",
-      "translation_ar": "إدارة المعلومات والأحداث الأمنية",
-      "definition": "نظام يجمع ويحلل سجلات الأحداث من مختلف المصادر لاكتشاف التهديدات.",
-      "details": "يرمز إلى Security Information and Event Management. يساعد الفرق الأمنية في مراقبة الشبكة بالكامل في مكان واحد واكتشاف الهجمات المعقدة عبر ربط الأحداث المختلفة (Event Correlation)."
-    },
-    {
-      "term": "Signed firmware",
-      "translation_ar": "برنامج ثابت موقّع",
-      "definition": "Firmware يحتوي على توقيع رقمي للتحقق من مصدره وسلامته.",
-      "details": "يمنع تثبيت تحديثات مزيفة أو معدلة. إذا لم يكن التوقيع صحيحًا، يتم رفض التحديث."
-    },
-    {
-      "term": "smart lock",
-      "translation_ar": "قفل ذكي",
-      "definition": "جهاز قفل يمكن التحكم فيه إلكترونيًا عبر الشبكة.",
-      "details": "يُستخدم كمثال شائع في IoT حيث يمكن فتحه أو إغلاقه عبر تطبيق."
-    },
-    {
-      "term": "sorting",
-      "translation_ar": "الفرز",
-      "definition": "ترتيب البيانات بناءً على معيار معين.",
-      "details": "يُستخدم لترتيب التهديدات حسب درجة الخطورة."
-    },
-    {
-      "term": "span",
-      "translation_ar": "يمتد عبر",
-      "definition": "يغطي نطاقًا أو عدة أجزاء.",
-      "details": "في IoT: النظام يمتد عبر device → network → cloud، أي يشمل عدة طبقات."
-    },
-    {
-      "term": "spoofing",
-      "translation_ar": "انتحال الهوية",
-      "definition": "محاولة التظاهر بأن المهاجم هو كيان موثوق.",
-      "details": "مثل انتحال IP أو المستخدم، ويعد من أشهر الهجمات في نموذج STRIDE."
-    },
-    {
-      "term": "spying",
-      "translation_ar": "تجسس",
-      "definition": "محاولة جمع معلومات سرية دون علم صاحبها.",
-      "details": "يتم عبر الكاميرات، الميكروفونات، أو البيانات الحساسة."
-    },
-    {
-      "term": "SSL",
-      "translation_ar": "طبقة المقابس الآمنة",
-      "definition": "بروتوكول قديم لتأمين الاتصال عبر الإنترنت، وهو سلف بروتوكول TLS.",
-      "details": "يرمز إلى Secure Sockets Layer. رغم أنه تم استبداله بـ TLS، إلا أن الكثيرين لا يزالون يستخدمون المصطلح للإشارة إلى شهادات الأمان والاتصال المشفر."
-    },
-    {
-      "term": "Staged Rollout",
-      "translation_ar": "النشر التدريجي",
-      "definition": "إصدار التحديث لمجموعة صغيرة من الأجهزة أولاً قبل تعميمه.",
-      "details": "يقلل من مخاطر فشل التحديث على مستوى النظام بالكامل، حيث يمكن إيقافه إذا ظهرت مشاكل في المجموعة الصغيرة."
-    },
-    {
-      "term": "Standard",
-      "translation_ar": "معيار",
-      "definition": "مواصفات فنية أو قواعد متفق عليها عالمياً لضمان الجودة والتوافق.",
-      "details": "مثل معايير ISO أو بروتوكولات الشبكة الموحدة التي تضمن تواصل الأجهزة من شركات مختلفة مع بعضها."
-    },
-    {
-      "term": "stream processing",
-      "translation_ar": "المعالجة التدفقية",
-      "definition": "معالجة البيانات أثناء تدفقها بدلاً من تحميلها بالكامل.",
-      "details": "مهم في hashing للملفات الكبيرة لتجنب استهلاك الذاكرة بالكامل."
-    },
-    {
-      "term": "STRIDE",
-      "translation_ar": "نموذج STRIDE",
-      "definition": "نموذج يستخدم لتصنيف التهديدات الأمنية.",
-      "details": "يتضمن: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege."
-    },
-    {
-      "term": "subscriber",
-      "translation_ar": "مشترك",
-      "definition": "كيان يستقبل الرسائل من topic معين.",
-      "details": "في MQTT، يشترك في topic معين ويستقبل أي رسائل يتم نشرها عليه."
-    },
-    {
-      "term": "symmetric cryptography",
-      "translation_ar": "التشفير المتماثل",
-      "definition": "تشفير يستخدم نفس المفتاح للتشفير وفك التشفير.",
-      "details": "أسرع من التشفير غير المتماثل لكنه يتطلب حماية قوية للمفتاح."
-    },
-    {
-      "term": "Symmetric Encryption",
-      "translation_ar": "التشفير المتماثل",
-      "definition": "نوع من التشفير يستخدم نفس المفتاح لكل من التشفير وفك التشفير.",
-      "details": "يتميز بالسرعة، ولكنه يتطلب وسيلة آمنة لمشاركة المفتاح بين الطرفين."
-    },
-    {
-      "term": "tampered with",
-      "translation_ar": "تم العبث به",
-      "definition": "تم التلاعب بشيء بطريقة غير مصرح بها.",
-      "details": "غالبًا تُستخدم مع البيانات أو الأنظمة. الفرق بينها وبين 'modified' أن 'tampered' تحمل معنى خبيث أو غير قانوني."
-    },
-    {
-      "term": "Telemetry",
-      "translation_ar": "القياسات المرسلة",
-      "definition": "البيانات التي يرسلها الجهاز إلى الخادم مثل القراءات والحالة.",
-      "details": "تشمل معلومات مثل درجة الحرارة، الموقع، أو حالة الجهاز. تُستخدم للمراقبة والتحليل."
-    },
-    {
-      "term": "temperature sensor",
-      "translation_ar": "مستشعر درجة الحرارة",
-      "definition": "جهاز يقيس درجة الحرارة.",
-      "details": "يرسل البيانات (telemetry) إلى الخادم مثل 25°C."
-    },
-    {
-      "term": "Tenant",
-      "translation_ar": "مستأجر / عميل سحابي",
-      "definition": "مجموعة من المستخدمين أو مؤسسة تشترك في وصول مشترك لبرنامج سحابي.",
-      "details": "كل مستأجر له بياناته الخاصة وإعداداته التي يجب أن تكون معزولة تماماً عن الآخرين."
-    },
-    {
-      "term": "theft",
-      "translation_ar": "سرقة",
-      "definition": "أخذ شيء بدون إذن.",
-      "details": "في IoT قد يتم سرقة الجهاز نفسه أو البيانات المخزنة عليه."
-    },
-    {
-      "term": "threat",
-      "translation_ar": "تهديد",
-      "definition": "حدث أو فعل محتمل قد يسبب ضررًا.",
-      "details": "يستغل الثغرات لتحقيق الهجوم."
-    },
-    {
-      "term": "Threat modeling",
-      "translation_ar": "نمذجة التهديدات",
-      "definition": "عملية تحليل النظام لتحديد التهديدات الأمنية المحتملة.",
-      "details": "تشمل تحديد الأصول (Assets)، التهديدات، نقاط الضعف، ووضع استراتيجيات للحماية."
-    },
-    {
-      "term": "timestamp",
-      "translation_ar": "ختم زمني",
-      "definition": "تسجيل وقت حدوث حدث معين.",
-      "details": "يُستخدم لتتبع العمليات ومعرفة متى تم إنشاء البيانات."
-    },
-    {
-      "term": "TLS",
-      "translation_ar": "بروتوكول TLS",
-      "definition": "بروتوكول لتأمين الاتصالات عبر الشبكة.",
-      "details": "يوفر التشفير، سلامة البيانات، والمصادقة. يُستخدم في HTTPS لحماية نقل البيانات."
-    },
-    {
-      "term": "tls configuration",
-      "translation_ar": "إعدادات TLS",
-      "definition": "تحديد معلمات الأمان للاتصال باستخدام TLS.",
-      "details": "تشمل الشهادات، المفاتيح، وإصدار البروتوكول المستخدم."
-    },
-    {
-      "term": "tls verification",
-      "translation_ar": "التحقق من TLS",
-      "definition": "عملية التأكد من صحة الشهادات أثناء الاتصال.",
-      "details": "تعطيلها (insecure) يعرض الاتصال لهجمات MITM."
-    },
-    {
-      "term": "topic",
-      "translation_ar": "موضوع (في MQTT)",
-      "definition": "قناة يتم نشر الرسائل عليها.",
-      "details": "يُستخدم لتنظيم الرسائل مثل lab/device7/telemetry بحيث يشترك فيه الأجهزة المهتمة."
-    },
-    {
-      "term": "traceability",
-      "translation_ar": "قابلية التتبع",
-      "definition": "القدرة على تتبع الأحداث أو العمليات عبر الزمن.",
-      "details": "تمكن من معرفة مصدر المشكلة أو الهجوم عبر السجلات."
-    },
-    {
-      "term": "Transparency",
-      "translation_ar": "الشفافية",
-      "definition": "إعلام المستخدمين بوضوح عن ماهية البيانات التي تُجمع وكيفية استخدامها.",
-      "details": "تُبنى الثقة من خلال الشفافية، وهي متطلب قانوني في العديد من قوانين حماية البيانات مثل GDPR."
-    },
-    {
-      "term": "trigger",
-      "translation_ar": "يحفّز / يطلق",
-      "definition": "يبدأ تنفيذ عملية.",
-      "details": "الأوامر تقوم بtrigger لأفعال داخل الجهاز."
-    },
-    {
-      "term": "Truly",
-      "translation_ar": "حقاً / فعلياً",
-      "definition": "كلمة تستخدم للتأكيد على ضرورة أو صحة شيء ما.",
-      "details": "تستخدم في سياق الأذونات المطلوبة فعلياً للتأكيد على مبدأ أقل الصلاحيات."
-    },
-    {
-      "term": "Trust Anchor",
-      "translation_ar": "مرتكز الثقة",
-      "definition": "مفتاح عام أو شهادة موثوقة تُستخدم كبداية للتحقق من سلسلة الشهادات.",
-      "details": "في المتصفحات مثلاً، شهادات الجهات (Root CAs) هي مرتكزات الثقة التي نعتمد عليها للتأكد من صحة المواقع."
-    },
-    {
-      "term": "Trust boundary",
-      "translation_ar": "حد الثقة",
-      "definition": "نقطة في النظام يتغير عندها مستوى الثقة.",
-      "details": "عند عبور هذه النقطة، يجب التحقق من البيانات أو المستخدم لأن المصدر قد لا يكون موثوقًا."
-    },
-    {
-      "term": "trusted",
-      "translation_ar": "موثوق",
-      "definition": "يمكن الاعتماد عليه من ناحية الأمان.",
-      "details": "يجب التحقق من أن البرامج أو الأجهزة trusted قبل استخدامها."
-    },
-    {
-      "term": "Trusted Execution Environment (TEE)",
-      "translation_ar": "بيئة التنفيذ الموثوقة",
-      "definition": "منطقة معزولة داخل المعالج تضمن حماية الكود والبيانات الحساسة.",
-      "details": "تُستخدم لتنفيذ العمليات الحرجة مثل معالجة الدفع أو إدارة مفاتيح التشفير بعيدًا عن نظام التشغيل الرئيسي الذي قد يكون عرضة للاختراق."
-    },
-    {
-      "term": "type casting",
-      "translation_ar": "تحويل النوع",
-      "definition": "تحويل قيمة من نوع إلى آخر.",
-      "details": "مثل تحويل النص إلى عدد باستخدام int()، ويجب التحقق من نجاح العملية."
-    },
-    {
-      "term": "UART",
-      "translation_ar": "واجهة UART",
-      "definition": "بروتوكول اتصال تسلسلي بسيط بين الأجهزة.",
-      "details": "يُستخدم في debugging، لكن يمكن استغلاله للوصول إلى الجهاز."
-    },
-    {
-      "term": "unauthorized",
-      "translation_ar": "غير مصرح له",
-      "definition": "ليس لديه إذن للوصول أو الاستخدام.",
-      "details": "أي وصول غير مصرح به يعتبر تهديدًا أمنيًا."
-    },
-    {
-      "term": "unique identifier",
-      "translation_ar": "معرف فريد",
-      "definition": "قيمة تميز عنصرًا بشكل فريد.",
-      "details": "تُستخدم لتحديد الأجهزة أو المستخدمين دون تكرار."
-    },
-    {
-      "term": "unlock",
-      "translation_ar": "فتح القفل",
-      "definition": "إزالة القفل أو السماح بالوصول.",
-      "details": "يُستخدم كأمر في IoT، مثل إرسال أمر من التطبيق لفتح الباب."
-    },
-    {
-      "term": "update module",
-      "translation_ar": "وحدة التحديث",
-      "definition": "جزء من النظام مسؤول عن التحديثات.",
-      "details": "يجب أن يكون له صلاحيات محدودة ومحمية."
-    },
-    {
-      "term": "utf-8",
-      "translation_ar": "ترميز UTF-8",
-      "definition": "معيار لترميز النصوص.",
-      "details": "يُستخدم لتحويل النصوص إلى bytes، وهو ضروري قبل استخدام دوال مثل SHA-256."
-    },
-    {
-      "term": "uuid",
-      "translation_ar": "معرف فريد عالمي",
-      "definition": "قيمة فريدة تُستخدم لتمييز الكيانات.",
-      "details": "تُستخدم لتوليد device_id بحيث لا يتكرر بين الأجهزة."
-    },
-    {
-      "term": "Validate",
-      "translation_ar": "يتحقق من الصحة",
-      "definition": "التأكد من أن البيانات أو العمليات تتبع القواعد الصحيحة والمطلوبة.",
-      "details": "مثل التحقق من أن القيمة المدخلة هي رقم وليس نصاً، أو التأكد من أن التوقيع الرقمي صحيح."
-    },
-    {
-      "term": "valuable",
-      "translation_ar": "ذو قيمة",
-      "definition": "شيء مهم ويستحق الحماية.",
-      "details": "مثل البيانات الحساسة أو الأنظمة الحيوية."
-    },
-    {
-      "term": "ValueError",
-      "translation_ar": "خطأ قيمة",
-      "definition": "نوع من الأخطاء يحدث عند إدخال قيمة غير مناسبة.",
-      "details": "يظهر عند محاولة تحويل نص إلى رقم مثل int(\"abc\")، ويجب التعامل معه لتجنب انهيار البرنامج."
-    },
-    {
-      "term": "verify",
-      "translation_ar": "يتحقق من",
-      "definition": "التأكد من صحة أو دقة شيء ما.",
-      "details": "عملية أساسية في الأمن مثل التحقق من الهوية أو التوقيع الرقمي."
-    },
-    {
-      "term": "Versioning",
-      "translation_ar": "إدارة الإصدارات",
-      "definition": "تخصيص أرقام أو أسماء فريدة لكل حالة جديدة من البرنامج.",
-      "details": "مهمة جداً في تتبع التحديثات ومنع هجمات الـ Rollback، حيث يتم التحقق من أن الإصدار الجديد أحدث من الحالي."
-    },
-    {
-      "term": "Virtualization",
-      "translation_ar": "المحاكاة الافتراضية",
-      "definition": "تقنية تتيح تشغيل عدة أنظمة تشغيل وهمية على جهاز فيزيائي واحد.",
-      "details": "هي الأساس الذي تقوم عليه السحابة، حيث تتيح عزل المستخدمين عن بعضهم وعن العتاد الأصلي."
-    },
-    {
-      "term": "VPN",
-      "translation_ar": "الشبكة الخاصة الافتراضية",
-      "definition": "قناة مشفرة وآمنة عبر شبكة عامة (مثل الإنترنت).",
-      "details": "يرمز إلى Virtual Private Network. تتيح للمستخدمين أو الأجهزة الاتصال بالشبكة الداخلية للمؤسسة بشكل آمن وكأنهم متصلون بها مباشرة، مما يحمي البيانات من التجسس في الشبكات العامة."
-    },
-    {
-      "term": "vulnerability",
-      "translation_ar": "ثغرة أمنية",
-      "definition": "نقطة ضعف يمكن استغلالها لاختراق النظام.",
-      "details": "ليست هجومًا بحد ذاته، لكنها تفتح الباب أمام التهديدات."
-    },
-    {
-      "term": "vulnerable",
-      "translation_ar": "قابل للاختراق / ضعيف",
-      "definition": "يمكن استغلاله أو مهاجمته بسهولة.",
-      "details": "يستخدم لوصف الأنظمة أو الكود الذي يحتوي على ثغرات أمنية."
-    },
-    {
-      "term": "weak passwords",
-      "translation_ar": "كلمات مرور ضعيفة",
-      "definition": "كلمات مرور سهلة التخمين.",
-      "details": "مثل 123456، وهي سبب شائع للاختراق."
-    },
-    {
-      "term": "Weakness",
-      "translation_ar": "نقطة ضعف",
-      "definition": "خلل أو قصور في النظام قد يؤدي إلى ظهور ثغرة أمنية.",
-      "details": "قد تكون نقطة الضعف في الكود، في التصميم، أو حتى في إجراءات العمل البشرية."
-    },
-    {
-      "term": "Wi-Fi",
-      "translation_ar": "واي فاي",
-      "definition": "تقنية اتصال لاسلكي بالشبكة.",
-      "details": "تُستخدم لربط أجهزة IoT بالإنترنت."
-    },
-    {
-      "term": "write operation",
-      "translation_ar": "عملية كتابة",
-      "definition": "حفظ البيانات في ملف أو نظام تخزين.",
-      "details": "يجب التحكم فيها عبر صلاحيات لمنع التعديل غير المصرح به."
-    },
-    {
-      "term": "zone",
-      "translation_ar": "منطقة (في الشبكة)",
-      "definition": "جزء محدد من الشبكة له مستوى أمان معين.",
-      "details": "يمكن أن تكون شبكة داخلية، خارجية، أو منطقة معزولة (DMZ)، وكل منها له سياسات أمان مختلفة."
+      "term": "Form Submission",
+      "translation_ar": "إرسال النموذج",
+      "definition": "Process of sending form data to server.",
+      "details": "Usually triggered by submit button."
     }
   ]
 }
