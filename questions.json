@@ -599,8 +599,8 @@
   "code": [
     {
       "id": 1,
-      "task": "Read a file in chunks of 4096 bytes and update SHA-256 hash to avoid memory overload.",
-      "code": "chunk = f.read(4096)\nif not chunk:\n    break\nsha.update(chunk)"
+      "task": "The best way to create a dropdown list is by using the <select> tag combined with the asp-items helper.",
+      "code": "// 1. In your Controller, create a SelectList and pass it via ViewBag or ViewModel:\nSelectList deptOptions = new SelectList(ViewBag.DeptList, \"Id\", \"Name\");\n\n// 2. In your View, use the <select> tag helper bound to the model:\n<select class=\"form-control\"\n        asp-items=\"@deptOptions\"\n        asp-for=\"DepartmentID\">\n    <option value=\"0\">--Select Department--</option>\n</select>"
     }
   ]
 }
