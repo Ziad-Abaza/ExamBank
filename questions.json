@@ -413,7 +413,7 @@
       "id": 5,
       "question_en": "Define JSON and its role in data interchange between web applications.",
       "question_ar": "عرّف JSON وما دوره في تبادل البيانات بين تطبيقات الويب.",
-      "answer": "JSON is JavaScript Object Notation. It is used to exchange data between servers and web applications."
+      "answer": "JSON is JavaScript Object Notation. is a lightweight data interchange format that is easy for humans to read and write, used to transmit data between a server and a client."
     },
     {
       "id": 6,
@@ -431,7 +431,7 @@
       "id": 8,
       "question_en": "What are the advantages of using web applications over desktop applications?",
       "question_ar": "ما مميزات تطبيقات الويب مقارنة بتطبيقات سطح المكتب؟",
-      "answer": "Web applications are easy to update and can be accessed from any device with internet."
+      "answer": "Web applications are easy to update and can be accessed from any device with internet, ability to receive updates without requiring user intervention."
     },
     {
       "id": 9,
@@ -442,8 +442,8 @@
     {
       "id": 10,
       "question_en": "What is the significance of the routing map in MVC architecture?",
-      "question_ar": "ما أهمية Routing Map في MVC؟",
-      "answer": "Routing maps URLs to the correct controller and action method."
+      "question_ar": "ما أهمية Routing Map في MVC？",
+      "answer": "Routing maps URLs to the correct controller and action method, enabling clean and user-friendly URLs, making it easier for developers to manage and navigate the application."
     },
     {
       "id": 11,
